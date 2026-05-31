@@ -8,6 +8,10 @@ related:
   - concepts/prediction-markets-crossover.md
   - concepts/gambling-wiki-scope.md
   - concepts/favorite-longshot-bias.md
+  - concepts/world-cup-prediction-market-types.md
+  - concepts/world-cup-books-vs-pm-divergence.md
+  - entities/sports/world-cup-2026-betting.md
+  - sources/osint-cross-wiki-wc2026-retail-synthesis-2026-05-31.md
   - entities/tools/momentum-odds.md
   - entities/tools/odds-jam.md
 maturity: draft
@@ -27,6 +31,10 @@ Crypto-based prediction market (CLOB). Consumer angle here; automation in @osint
 ## Narrative
 
 Polymarket uses **USDC on-chain** settlement with off-chain order book. Sports, politics, crypto, and macro markets. Retail: wallet setup, fees, withdrawal friction, FLB vs Kalshi.
+
+### World Cup 2026
+
+Sports menu includes **advance to knockout**, **group winner**, **match fixtures**, and **outright winner** — see `@concepts/world-cup-prediction-market-types.md` and `@entities/sports/world-cup-2026-betting.md`. Taker fees on sports scale with price; read settlement sources (FIFA + credible reporting) before sizing.
 
 For copy-trading, LP farming, agent frameworks: `@osint-wiki/entities/platforms/polymarket.md`.
 

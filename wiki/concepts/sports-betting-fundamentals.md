@@ -13,6 +13,8 @@ related:
   - concepts/favorite-longshot-bias.md
   - entities/sports/nfl-betting.md
   - entities/sports/nba-betting.md
+  - entities/sports/world-cup-2026-betting.md
+  - concepts/world-cup-knockout-phase-betting.md
   - entities/platforms/draftkings.md
   - entities/platforms/fanduel.md
 maturity: draft

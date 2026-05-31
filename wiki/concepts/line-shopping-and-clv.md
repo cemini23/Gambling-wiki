@@ -9,6 +9,8 @@ related:
   - concepts/vig-and-hold.md
   - entities/platforms/pinnacle.md
   - entities/tools/momentum-odds.md
+  - concepts/world-cup-books-vs-pm-divergence.md
+  - entities/sports/world-cup-2026-betting.md
 maturity: draft
 created: 2026-05-31
 updated: 2026-05-31

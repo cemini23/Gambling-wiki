@@ -20,6 +20,11 @@ Catalog of all wiki pages. Updated on each ingest.
 | [poker-strategy-overview](concepts/poker-strategy-overview.md) | draft | Cash, MTT, study stack |
 | [casino-game-house-edge](concepts/casino-game-house-edge.md) | draft | Edge by game |
 | [prediction-markets-crossover](concepts/prediction-markets-crossover.md) | validated | Kalshi/Polymarket retail lens |
+| [world-cup-2026-format](concepts/world-cup-2026-format.md) | validated | 48-team structure, calendar |
+| [world-cup-prediction-market-types](concepts/world-cup-prediction-market-types.md) | validated | Advance vs ML vs outright |
+| [world-cup-books-vs-pm-divergence](concepts/world-cup-books-vs-pm-divergence.md) | validated | Sportsbook vs PM/Kalshi gaps |
+| [world-cup-third-place-advancement-betting](concepts/world-cup-third-place-advancement-betting.md) | validated | Eight-best-thirds, GD bubbles |
+| [world-cup-knockout-phase-betting](concepts/world-cup-knockout-phase-betting.md) | validated | KO phases, 90-min vs ET |
 
 ## Entities — Platforms
 
@@ -53,12 +58,14 @@ Catalog of all wiki pages. Updated on each ingest.
 |------|----------|
 | [nfl-betting](entities/sports/nfl-betting.md) | draft |
 | [nba-betting](entities/sports/nba-betting.md) | draft |
+| [world-cup-2026-betting](entities/sports/world-cup-2026-betting.md) | validated |
 
 ## Sources
 
 | Page | Read status |
 |------|-------------|
 | [gemini-github-sports-betting-landscape-2026-05-30](sources/gemini-github-sports-betting-landscape-2026-05-30.md) | unread-stub |
+| [osint-cross-wiki-wc2026-retail-synthesis-2026-05-31](sources/osint-cross-wiki-wc2026-retail-synthesis-2026-05-31.md) | deep-read |
 
 ## Meta
 

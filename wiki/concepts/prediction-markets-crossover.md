@@ -13,6 +13,9 @@ related:
   - entities/platforms/polymarket.md
   - entities/tools/momentum-odds.md
   - entities/tools/odds-jam.md
+  - entities/sports/world-cup-2026-betting.md
+  - concepts/world-cup-prediction-market-types.md
+  - sources/osint-cross-wiki-wc2026-retail-synthesis-2026-05-31.md
   - sources/gemini-github-sports-betting-landscape-2026-05-30.md
 maturity: validated
 created: 2026-05-31
@@ -60,6 +63,10 @@ How Kalshi and Polymarket fit the **wagering** knowledge base vs the **trading s
 ### When to stay in traditional books
 
 Better liquidity on mainstream spreads; PM shines on **niche events**, **political/macroeconomic** contracts, and **cross-venue** mispricings (advanced).
+
+### World Cup 2026
+
+Expanded tournament + host nations (USA/Mexico/Canada) create **books vs PM/Kalshi divergence** on advance and futures — `@entities/sports/world-cup-2026-betting.md`, `@concepts/world-cup-books-vs-pm-divergence.md`. Contract-type cheat sheet: `@concepts/world-cup-prediction-market-types.md`.
 
 ## Snippets
 

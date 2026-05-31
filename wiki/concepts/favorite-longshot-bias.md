@@ -11,6 +11,8 @@ related:
   - concepts/parlay-and-correlated-bets.md
   - entities/platforms/kalshi.md
   - entities/platforms/polymarket.md
+  - entities/sports/world-cup-2026-betting.md
+  - concepts/world-cup-books-vs-pm-divergence.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-05-31

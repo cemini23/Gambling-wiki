@@ -8,6 +8,10 @@ related:
   - concepts/prediction-markets-crossover.md
   - concepts/gambling-wiki-scope.md
   - concepts/favorite-longshot-bias.md
+  - concepts/world-cup-prediction-market-types.md
+  - concepts/world-cup-books-vs-pm-divergence.md
+  - entities/sports/world-cup-2026-betting.md
+  - sources/osint-cross-wiki-wc2026-retail-synthesis-2026-05-31.md
   - entities/tools/momentum-odds.md
 maturity: draft
 created: 2026-05-31
@@ -27,6 +31,10 @@ CFTC-regulated prediction market (DCM). **Consumer/strategy** entity here; execu
 ## Narrative
 
 Kalshi lists **event contracts** (sports, economics, weather, politics). Retail considerations: fee schedule, contract specs, FLB on sports lines, geoblocking.
+
+### World Cup 2026
+
+**Group qualifiers** (advance), **group winner**, **match games**, and **outright** series — cross-walk to Polymarket in `@concepts/world-cup-prediction-market-types.md`. Kalshi resolves many sports via **ESPN/Fox/WSJ/Reuters** consensus — may differ from FIFA-only PM paths on edge cases [TENTATIVE]. Hub: `@entities/sports/world-cup-2026-betting.md`.
 
 For bot architecture, LP, logit pricing, regulatory preemption: `@osint-wiki/entities/platforms/kalshi.md`.
 

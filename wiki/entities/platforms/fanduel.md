@@ -8,6 +8,8 @@ related:
   - concepts/sports-betting-fundamentals.md
   - concepts/dfs-strategy-overview.md
   - concepts/sharp-vs-soft-books.md
+  - concepts/world-cup-books-vs-pm-divergence.md
+  - entities/sports/world-cup-2026-betting.md
 maturity: draft
 created: 2026-05-31
 updated: 2026-05-31

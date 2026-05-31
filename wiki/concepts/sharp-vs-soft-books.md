@@ -11,6 +11,7 @@ related:
   - entities/platforms/draftkings.md
   - entities/platforms/fanduel.md
   - concepts/prediction-markets-crossover.md
+  - concepts/world-cup-books-vs-pm-divergence.md
   - sources/gemini-github-sports-betting-landscape-2026-05-30.md
 maturity: draft
 created: 2026-05-31

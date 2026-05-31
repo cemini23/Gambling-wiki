@@ -8,7 +8,7 @@ Active workstreams, open decisions, and done log. Read at session start; update 
 
 ### W1 — Repo bootstrap + seed corpus
 
-**Status:** In progress 2026-05-31.
+**Status:** In progress 2026-05-31 — WC retail batch landed; YouTube ingest queued.
 
 Steps:
 - [x] Scaffold from Cemini wiki template (Cybersecurity-wiki pattern)
@@ -16,9 +16,10 @@ Steps:
 - [x] Seed core concept pages (bankroll, Kelly, vig, FLB, sports betting, DFS, poker, casino edge)
 - [x] Seed platform/tool stubs (DraftKings, FanDuel, Pinnacle, Kalshi, Polymarket cross-refs)
 - [x] Wire cross-wiki links to `@osint-wiki`
-- [ ] Operator research drop: ingest first batch from `research to be indexed/`
-- [ ] Deep-read migrated OSINT sources (Gemini sports-betting landscape, Kelly primary source)
-- [ ] Push to `Gambling-wiki` GitHub + optional librarian rsync
+- [x] **WC 2026 retail batch** — cross-wiki synthesis from osint Gemini/YouTube research (7 new pages)
+- [ ] Operator YouTube drop — next session
+- [ ] Deep-read migrated OSINT sources (Gemini sports-betting landscape primary docx)
+- [x] Push to `Gambling-wiki` GitHub + librarian rsync via OSINT sync script
 
 ### W2 — Domain expansion (queued)
 
@@ -55,4 +56,5 @@ Priority ingest lanes once sources arrive:
 
 | Date | Item |
 |------|------|
+| 2026-05-31 | WC 2026 retail ingest — 1 source, 1 sport entity, 5 concepts, 8 page updates |
 | 2026-05-31 | Initial repo scaffold, seed concepts/entities, osint-wiki federation stubs |
