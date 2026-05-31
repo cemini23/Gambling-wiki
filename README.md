@@ -45,6 +45,8 @@ Gambling-wiki/
 
 ## Cemini wiki federation
 
+**Seven** wikis + private **Cemini Financial Suite**. Cross-links: `@<alias>/path/to/page.md` (`CLAUDE.md` → Related Wikis).
+
 | Alias | Repository | Focus |
 |-------|------------|--------|
 | **`gambling-wiki`** | **This repo** | Sports betting, casino, poker, DFS, best ball |

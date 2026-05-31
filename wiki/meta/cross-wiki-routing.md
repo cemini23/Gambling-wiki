@@ -39,9 +39,11 @@ Ingest routing checklist when a source touches both wagering strategy and Cemini
 - Kelly, FLB, cross-venue PM — write general here, link implementation there
 - MomentumOdds, Odds Jam — tool entity in both with split narrative
 
-### Command
+### Bulk URL evaluation (Gemini DR)
 
-When working from OSINT workspace: `python3 scripts/cross_wiki_route.py` (if source is off-topic for OSINT → gambling stub).
+Use `@ccc-wiki/concepts/deep-research-evaluation-prompt.md` (v6) — eight surfaces; **gambling-wiki** = surface 3. OSINT workspace: `python3 scripts/cross_wiki_route.py --target-wiki gambling-wiki` when routing off-topic from OSINT ingest.
+
+### Command
 
 ## Snippets
 
