@@ -14,6 +14,8 @@ related:
   - concepts/casino-game-house-edge.md
   - concepts/parlay-and-correlated-bets.md
   - entities/tools/odds-jam.md
+  - concepts/pm-copy-trading-retail-risks.md
+  - sources/kelly-1956-information-rate.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-05-31
@@ -58,7 +60,7 @@ Track: date, sport/market, line, odds, stake, result, closing line (for CLV). Wi
 
 - Wager only where legal for your jurisdiction
 - Pre-commit loss limits; use sportsbook deposit limits when available
-- Treat marketing bonuses as **+EV only after full TOS math** — see `@entities/tools/odds-jam.md` experiment notes in `@osint-wiki`
+- Treat marketing bonuses as **+EV only after full TOS math** — `@entities/tools/odds-jam.md` + `@concepts/pm-copy-trading-retail-risks.md`
 
 ## Snippets
 

@@ -10,7 +10,11 @@ related:
   - entities/platforms/pinnacle.md
   - entities/tools/momentum-odds.md
   - concepts/world-cup-books-vs-pm-divergence.md
+  - concepts/sportsbook-pm-line-divergence.md
   - entities/sports/world-cup-2026-betting.md
+  - sources/youtube-sports-pm-retail-batch-2026-05-29.md
+  - entities/sports/nfl-betting.md
+  - entities/sports/nba-betting.md
 maturity: draft
 created: 2026-05-31
 updated: 2026-05-31
@@ -49,8 +53,8 @@ CLV ≈ (your_implied_prob − closing_implied_prob) × stake_equivalent
 
 ### PM analog
 
-Cross-venue price vs Kalshi close — see `@osint-wiki/concepts/cross-venue-arbitrage-pattern.md` for bot context; retail angle is **price shopping** before entry.
+Cross-venue price vs Kalshi/Polymarket — `@concepts/sportsbook-pm-line-divergence.md` (retail); `@osint-wiki/concepts/cross-venue-arbitrage-pattern.md` (automation).
 
 ## Snippets
 
-*(populate from ingested CLV methodology sources)*
+> Positive CLV over large sample → strong skill signal even if short-term P&L is negative. [TENTATIVE — standard sharp betting literature]

@@ -18,6 +18,8 @@ related:
   - entities/platforms/fanduel.md
   - concepts/line-shopping-and-clv.md
   - sources/osint-cross-wiki-wc2026-retail-synthesis-2026-05-31.md
+  - entities/sports/nfl-betting.md
+  - sources/gemini-github-sports-betting-landscape-2026-05-30.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-05-31

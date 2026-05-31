@@ -12,6 +12,7 @@ related:
   - concepts/favorite-longshot-bias.md
   - concepts/parlay-and-correlated-bets.md
   - entities/platforms/pinnacle.md
+  - sources/kelly-1956-information-rate.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-05-31

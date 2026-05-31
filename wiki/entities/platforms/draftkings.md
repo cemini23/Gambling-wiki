@@ -11,6 +11,10 @@ related:
   - concepts/sharp-vs-soft-books.md
   - concepts/world-cup-books-vs-pm-divergence.md
   - entities/sports/world-cup-2026-betting.md
+  - concepts/sportsbook-pm-line-divergence.md
+  - entities/sports/nfl-betting.md
+  - entities/sports/nba-betting.md
+  - entities/tools/pydfs-lineup-optimizer.md
 maturity: draft
 created: 2026-05-31
 updated: 2026-05-31

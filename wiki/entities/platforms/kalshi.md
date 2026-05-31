@@ -13,6 +13,8 @@ related:
   - entities/sports/world-cup-2026-betting.md
   - sources/osint-cross-wiki-wc2026-retail-synthesis-2026-05-31.md
   - entities/tools/momentum-odds.md
+  - concepts/sportsbook-pm-line-divergence.md
+  - sources/youtube-sports-pm-retail-batch-2026-05-29.md
 maturity: draft
 created: 2026-05-31
 updated: 2026-05-31

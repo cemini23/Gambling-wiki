@@ -15,6 +15,7 @@ related:
   - entities/platforms/draftkings.md
   - concepts/world-cup-third-place-advancement-betting.md
   - sources/osint-cross-wiki-wc2026-retail-synthesis-2026-05-31.md
+  - concepts/sportsbook-pm-line-divergence.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-05-31

@@ -10,6 +10,7 @@ related:
   - concepts/sports-betting-fundamentals.md
   - concepts/parlay-and-correlated-bets.md
   - concepts/prediction-markets-crossover.md
+  - sources/kelly-1956-information-rate.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-05-31
@@ -70,4 +71,6 @@ For Cemini **prediction-market bots**, the house default is quarter-Kelly — se
 
 ## Snippets
 
-> Kelly, J. L. (1956). A New Interpretation of Information Rate — see @osint-wiki/sources/kelly-1956-information-rate.md
+> Kelly, J. L. (1956). A New Interpretation of Information Rate — @sources/kelly-1956-information-rate.md
+
+> "the gambler ignores the posted odds in placing his bets!" when odds are fair — Kelly 1956 p.922 [Source: @sources/kelly-1956-information-rate.md]

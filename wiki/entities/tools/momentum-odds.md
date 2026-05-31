@@ -6,9 +6,12 @@ keywords: [momentum-odds, momentumods, sportsbook-signals, webhook]
 related:
   - concepts/prediction-markets-crossover.md
   - concepts/line-shopping-and-clv.md
+  - concepts/sportsbook-pm-line-divergence.md
   - entities/platforms/kalshi.md
   - entities/platforms/polymarket.md
   - sources/gemini-github-sports-betting-landscape-2026-05-30.md
+  - sources/youtube-sports-pm-retail-batch-2026-05-29.md
+  - entities/sports/nba-betting.md
 maturity: draft
 created: 2026-05-31
 updated: 2026-05-31
@@ -16,21 +19,38 @@ updated: 2026-05-31
 
 ## Relations
 
-- @concepts/prediction-markets-crossover.md — PM execution use case
-- @osint-wiki/entities/tools/momentum-odds.md — Kalshi executor bot tutorial (K80)
+- @concepts/sportsbook-pm-line-divergence.md — primary retail use case
+- @sources/youtube-sports-pm-retail-batch-2026-05-29.md — Odds channel tutorial (qPRY5ws3h60)
+- @osint-wiki/entities/tools/momentum-odds.md — Kalshi executor bot architecture
 
 ## Raw Concept
 
-Commercial sportsbook **signal feed** (60+ books) with webhook/API — used to trigger prediction-market executors. Detailed architecture in @osint-wiki.
+Commercial sportsbook **signal feed** (**momentumods.com**) — 60+ book correlation with webhook/API. YouTube workflow: signals → local filter → Kalshi orders.
 
 ## Narrative
 
-Subscription terminal (**momentumods.com**) delivering correlated sportsbook signals. YouTube workflow (2026-05): API → local filter/risk → Kalshi orders.
+### Product surface
 
-**Retail angle:** understand signal latency, false positives, and that execution on PM still requires fee/CLV checks. **Bot angle:** `@osint-wiki/entities/tools/momentum-odds.md`.
+- Subscription terminal surfacing when many sportsbooks align on a side
+- Webhook/API for automation (closed source — no repo Phase-0)
+- Tutorial maps signals to **Kalshi** NBA/playoff-style contracts
 
-Phase-0 before subscribe: pricing, TOS, track record.
+### Retail evaluation checklist
+
+| Question | Why |
+|----------|-----|
+| Latency vs line move | Gap may close before you click |
+| False positives | Correlation ≠ causation; injury news breaks signals |
+| PM/Kalshi fees | Must beat taker fee + spread |
+| Track record | Require **your own** log — not creator PnL screenshots |
+| TOS | Commercial SaaS — no redistribution |
+
+### Verdict
+
+**Reference / competitive intel** — useful for understanding `@concepts/sportsbook-pm-line-divergence.md`; **CONDITIONAL-GO subscribe** only after personal paper log. Bot executor patterns on `@osint-wiki`.
 
 ## Snippets
 
-*(see @osint-wiki for tutorial architecture)*
+> "Go to momentumods.com … webhook … vibe code you a bot to run and hold your Kalshi wallet." [Source: qPRY5ws3h60 via @sources/youtube-sports-pm-retail-batch-2026-05-29.md]
+
+> "Sportsbook correlation … over 60 plus sports books … directions they are hitting on certain games." [Source: same]

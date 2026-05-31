@@ -17,6 +17,8 @@ related:
   - concepts/world-cup-knockout-phase-betting.md
   - entities/platforms/draftkings.md
   - entities/platforms/fanduel.md
+  - concepts/sportsbook-pm-line-divergence.md
+  - sources/kelly-1956-information-rate.md
 maturity: draft
 created: 2026-05-31
 updated: 2026-05-31

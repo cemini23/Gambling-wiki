@@ -2,6 +2,14 @@
 
 Append-only chronological log.
 
+## [2026-05-31] ingest | Core gambling corpus (cross-wiki from @osint-wiki)
+
+- **Sources** — Kelly 1956 paper, Gemini GitHub sports-betting landscape (full read), YouTube sports/PM retail batch (11 videos)
+- **New concepts** — sportsbook–PM line divergence, PM copy-trading retail risks
+- **New entities** — pydfs-lineup-optimizer, Alex Monahan
+- **Expanded** — Kelly, sharp/soft, DFS, CLV, MomentumOdds, Odds Jam, NFL/NBA, Kalshi/Polymarket, bankroll, prediction-markets crossover
+- **Note** — `research to be indexed/` was empty; synthesized from osint deep-reads. Operator YouTube batch next.
+
 ## [2026-05-31] ingest | WC 2026 retail synthesis (cross-wiki from @osint-wiki)
 
 - **Source** — `sources/osint-cross-wiki-wc2026-retail-synthesis-2026-05-31.md` (no inbox file; synthesized from osint K82–K85 Gemini + YouTube compilation)

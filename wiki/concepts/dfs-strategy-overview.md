@@ -11,6 +11,7 @@ related:
   - entities/platforms/fanduel.md
   - entities/sports/nfl-betting.md
   - entities/sports/nba-betting.md
+  - entities/tools/pydfs-lineup-optimizer.md
   - sources/gemini-github-sports-betting-landscape-2026-05-30.md
 maturity: draft
 created: 2026-05-31
@@ -46,7 +47,11 @@ Daily fantasy sports (DFS) — GPP vs cash, stacking, ownership leverage, bankro
 
 ### Tools
 
-Lineup optimizers (e.g. pydfs-lineup-optimizer — Phase-0 before adoption), projection sites, late-swap workflows. `@osint-wiki/sources/gemini-github-sports-betting-repos-landscape-2026-05-30.md` flags classical ML DFS repos as **Reject for PM bots** but **reference for DFS modeling**.
+- **pydfs-lineup-optimizer** — open-source lineup generation (`@entities/tools/pydfs-lineup-optimizer.md`); Phase-0 license check before install
+- Paid optimizers — ownership leverage, late swap, contest sims
+- Projection sites — model quality dominates optimizer output
+
+Gemini landscape flags classical ML DFS repos as **reference for DFS modeling**, not spread-betting edge [Source: @sources/gemini-github-sports-betting-landscape-2026-05-30.md].
 
 ### Not prediction markets
 
@@ -54,4 +59,4 @@ DFS is **contest vs field**, not against the house line (though rake exists). Di
 
 ## Snippets
 
-*(populate from ingested DFS sources)*
+> `pydfs-lineup-optimizer` — CONDITIONAL-GO Phase-0 for DFS lane. [Source: @sources/gemini-github-sports-betting-landscape-2026-05-30.md]

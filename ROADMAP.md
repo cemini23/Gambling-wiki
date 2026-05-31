@@ -56,5 +56,6 @@ Priority ingest lanes once sources arrive:
 
 | Date | Item |
 |------|------|
+| 2026-05-31 | Core corpus ingest — Kelly, Gemini landscape, YouTube retail, DFS/tools, NFL/NBA, PM divergence, copy-trading risks |
 | 2026-05-31 | WC 2026 retail ingest — 1 source, 1 sport entity, 5 concepts, 8 page updates |
 | 2026-05-31 | Initial repo scaffold, seed concepts/entities, osint-wiki federation stubs |

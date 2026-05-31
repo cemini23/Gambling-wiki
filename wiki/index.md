@@ -14,6 +14,8 @@ Catalog of all wiki pages. Updated on each ingest.
 | [sports-betting-fundamentals](concepts/sports-betting-fundamentals.md) | draft | Spreads, ML, totals, props |
 | [line-shopping-and-clv](concepts/line-shopping-and-clv.md) | draft | CLV, steam, shopping |
 | [sharp-vs-soft-books](concepts/sharp-vs-soft-books.md) | draft | Pinnacle vs DK/FD |
+| [sportsbook-pm-line-divergence](concepts/sportsbook-pm-line-divergence.md) | validated | Books vs Kalshi/PM gaps |
+| [pm-copy-trading-retail-risks](concepts/pm-copy-trading-retail-risks.md) | validated | Whale-copy discipline |
 | [parlay-and-correlated-bets](concepts/parlay-and-correlated-bets.md) | draft | Parlays, SGP, correlation |
 | [dfs-strategy-overview](concepts/dfs-strategy-overview.md) | draft | GPP, cash, stacking |
 | [best-ball-strategy](concepts/best-ball-strategy.md) | draft | Draft-and-hold portfolio |
@@ -43,6 +45,13 @@ Catalog of all wiki pages. Updated on each ingest.
 |------|----------|
 | [momentum-odds](entities/tools/momentum-odds.md) | draft |
 | [odds-jam](entities/tools/odds-jam.md) | draft |
+| [pydfs-lineup-optimizer](entities/tools/pydfs-lineup-optimizer.md) | draft |
+
+## Entities — People
+
+| Page | Maturity |
+|------|----------|
+| [alex-monahan](entities/people/alex-monahan.md) | draft |
 
 ## Entities — Games
 
@@ -64,7 +73,9 @@ Catalog of all wiki pages. Updated on each ingest.
 
 | Page | Read status |
 |------|-------------|
-| [gemini-github-sports-betting-landscape-2026-05-30](sources/gemini-github-sports-betting-landscape-2026-05-30.md) | unread-stub |
+| [kelly-1956-information-rate](sources/kelly-1956-information-rate.md) | deep-read |
+| [gemini-github-sports-betting-landscape-2026-05-30](sources/gemini-github-sports-betting-landscape-2026-05-30.md) | deep-read |
+| [youtube-sports-pm-retail-batch-2026-05-29](sources/youtube-sports-pm-retail-batch-2026-05-29.md) | deep-read |
 | [osint-cross-wiki-wc2026-retail-synthesis-2026-05-31](sources/osint-cross-wiki-wc2026-retail-synthesis-2026-05-31.md) | deep-read |
 
 ## Meta

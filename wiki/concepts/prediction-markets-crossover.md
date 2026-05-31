@@ -13,10 +13,13 @@ related:
   - entities/platforms/polymarket.md
   - entities/tools/momentum-odds.md
   - entities/tools/odds-jam.md
+  - concepts/sportsbook-pm-line-divergence.md
+  - concepts/pm-copy-trading-retail-risks.md
   - entities/sports/world-cup-2026-betting.md
   - concepts/world-cup-prediction-market-types.md
-  - sources/osint-cross-wiki-wc2026-retail-synthesis-2026-05-31.md
+  - sources/youtube-sports-pm-retail-batch-2026-05-29.md
   - sources/gemini-github-sports-betting-landscape-2026-05-30.md
+  - sources/osint-cross-wiki-wc2026-retail-synthesis-2026-05-31.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-05-31
@@ -67,6 +70,11 @@ Better liquidity on mainstream spreads; PM shines on **niche events**, **politic
 ### World Cup 2026
 
 Expanded tournament + host nations (USA/Mexico/Canada) create **books vs PM/Kalshi divergence** on advance and futures — `@entities/sports/world-cup-2026-betting.md`, `@concepts/world-cup-books-vs-pm-divergence.md`. Contract-type cheat sheet: `@concepts/world-cup-prediction-market-types.md`.
+
+### Signal products
+
+- **MomentumOdds** — `@entities/tools/momentum-odds.md` + `@concepts/sportsbook-pm-line-divergence.md`
+- **Odds Jam / Prediction Insiders** — `@entities/tools/odds-jam.md` + `@concepts/pm-copy-trading-retail-risks.md`
 
 ## Snippets
 
