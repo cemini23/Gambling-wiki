@@ -7,6 +7,7 @@ related:
   - concepts/sharp-vs-soft-books.md
   - concepts/line-shopping-and-clv.md
   - concepts/vig-and-hold.md
+  - entities/tools/sports-betting-georgedouzas.md
 maturity: draft
 created: 2026-05-31
 updated: 2026-05-31

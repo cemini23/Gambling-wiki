@@ -15,6 +15,7 @@ related:
   - sources/youtube-sports-pm-retail-batch-2026-05-29.md
   - entities/sports/nfl-betting.md
   - entities/sports/nba-betting.md
+  - entities/tools/sports-betting-georgedouzas.md
 maturity: draft
 created: 2026-05-31
 updated: 2026-05-31

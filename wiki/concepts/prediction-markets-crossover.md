@@ -20,6 +20,7 @@ related:
   - sources/youtube-sports-pm-retail-batch-2026-05-29.md
   - sources/gemini-github-sports-betting-landscape-2026-05-30.md
   - sources/osint-cross-wiki-wc2026-retail-synthesis-2026-05-31.md
+  - concepts/polymarket-weather-wagering-retail.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-05-31

@@ -16,6 +16,7 @@ related:
   - entities/tools/odds-jam.md
   - concepts/sportsbook-pm-line-divergence.md
   - sources/youtube-sports-pm-retail-batch-2026-05-29.md
+  - concepts/polymarket-weather-wagering-retail.md
 maturity: draft
 created: 2026-05-31
 updated: 2026-05-31

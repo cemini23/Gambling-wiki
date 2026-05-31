@@ -19,6 +19,9 @@ related:
   - entities/platforms/fanduel.md
   - concepts/sportsbook-pm-line-divergence.md
   - sources/kelly-1956-information-rate.md
+  - entities/tools/sports-betting-georgedouzas.md
+  - entities/tools/fredbet.md
+  - sources/multi-wiki-tool-eval-v6-k90-2026-05-31.md
 maturity: draft
 created: 2026-05-31
 updated: 2026-05-31

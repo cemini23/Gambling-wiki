@@ -12,6 +12,7 @@ related:
   - sources/youtube-sports-pm-retail-batch-2026-05-29.md
   - concepts/sportsbook-pm-line-divergence.md
   - sources/gemini-github-sports-betting-landscape-2026-05-30.md
+  - concepts/polymarket-weather-wagering-retail.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-05-31
@@ -22,6 +23,7 @@ updated: 2026-05-31
 - @entities/tools/odds-jam.md — Prediction Insiders product
 - @sources/youtube-sports-pm-retail-batch-2026-05-29.md — Financial Wolf experiment
 - @osint-wiki/concepts/polymarket-copy-trading-strategy.md — bot/DIY wallet pipeline
+- @concepts/polymarket-weather-wagering-retail.md — weather PM wallet-copy pitch (K90 Post 15)
 
 ## Raw Concept
 

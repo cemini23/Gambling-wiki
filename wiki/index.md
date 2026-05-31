@@ -27,6 +27,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [world-cup-books-vs-pm-divergence](concepts/world-cup-books-vs-pm-divergence.md) | validated | Sportsbook vs PM/Kalshi gaps |
 | [world-cup-third-place-advancement-betting](concepts/world-cup-third-place-advancement-betting.md) | validated | Eight-best-thirds, GD bubbles |
 | [world-cup-knockout-phase-betting](concepts/world-cup-knockout-phase-betting.md) | validated | KO phases, 90-min vs ET |
+| [polymarket-weather-wagering-retail](concepts/polymarket-weather-wagering-retail.md) | draft | Weather PM retail copy-trading posture |
 
 ## Entities — Platforms
 
@@ -46,6 +47,8 @@ Catalog of all wiki pages. Updated on each ingest.
 | [momentum-odds](entities/tools/momentum-odds.md) | draft |
 | [odds-jam](entities/tools/odds-jam.md) | draft |
 | [pydfs-lineup-optimizer](entities/tools/pydfs-lineup-optimizer.md) | draft |
+| [sports-betting-georgedouzas](entities/tools/sports-betting-georgedouzas.md) | draft |
+| [fredbet](entities/tools/fredbet.md) | draft |
 
 ## Entities — People
 
@@ -77,6 +80,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [gemini-github-sports-betting-landscape-2026-05-30](sources/gemini-github-sports-betting-landscape-2026-05-30.md) | deep-read |
 | [youtube-sports-pm-retail-batch-2026-05-29](sources/youtube-sports-pm-retail-batch-2026-05-29.md) | deep-read |
 | [osint-cross-wiki-wc2026-retail-synthesis-2026-05-31](sources/osint-cross-wiki-wc2026-retail-synthesis-2026-05-31.md) | deep-read |
+| [multi-wiki-tool-eval-v6-k90-2026-05-31](sources/multi-wiki-tool-eval-v6-k90-2026-05-31.md) | deep-read |
 
 ## Meta
 
