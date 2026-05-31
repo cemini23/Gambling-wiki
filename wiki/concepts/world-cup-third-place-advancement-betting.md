@@ -9,6 +9,7 @@ related:
   - concepts/world-cup-prediction-market-types.md
   - concepts/world-cup-books-vs-pm-divergence.md
   - sources/osint-cross-wiki-wc2026-retail-synthesis-2026-05-31.md
+  - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-05-31

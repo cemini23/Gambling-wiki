@@ -21,6 +21,8 @@ related:
   - sources/gemini-github-sports-betting-landscape-2026-05-30.md
   - sources/osint-cross-wiki-wc2026-retail-synthesis-2026-05-31.md
   - concepts/polymarket-weather-wagering-retail.md
+  - entities/people/rufus-peabody.md
+  - sources/youtube-operator-batch-sports-betting-research-2026-05-31.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-05-31
@@ -64,6 +66,18 @@ How Kalshi and Polymarket fit the **wagering** knowledge base vs the **trading s
 - **MomentumOdds** — sportsbook signal feed; tutorials target Kalshi execution (`@entities/tools/momentum-odds.md`, `@osint-wiki/entities/tools/momentum-odds.md`)
 - **Odds Jam / Prediction Insiders** — Polymarket copy alerts (`@entities/tools/odds-jam.md`)
 
+### Sports prediction markets (Novig and peers)
+
+Wharton interview with `@entities/people/rufus-peabody.md` frames **sports-focused prediction markets** (Novig cited) as an alternative when **DK/FD limit sharp winners**. Tradeoffs vs books:
+
+| Factor | Traditional book | Sports PM venue |
+|--------|------------------|-----------------|
+| Limits | Low for winners at soft US books | Liquidity caps `[TENTATIVE]` |
+| Pricing | Embedded vig (-110) | Bid-ask + fees |
+| Reference | Pinnacle close | Often still benchmark vs Pinnacle |
+
+Retail: same checklist as Kalshi/PM — fees, settlement, bankroll. Bot arb → `@osint-wiki`.
+
 ### When to stay in traditional books
 
 Better liquidity on mainstream spreads; PM shines on **niche events**, **political/macroeconomic** contracts, and **cross-venue** mispricings (advanced).
@@ -78,5 +92,7 @@ Expanded tournament + host nations (USA/Mexico/Canada) create **books vs PM/Kals
 - **Odds Jam / Prediction Insiders** — `@entities/tools/odds-jam.md` + `@concepts/pm-copy-trading-retail-risks.md`
 
 ## Snippets
+
+> Rufus Peabody on prediction markets vs books: sharp limits at major US sportsbooks push flow to Pinnacle or PM venues with different liquidity/fee profiles. [Source: M1T0OlG3XEU via @sources/youtube-operator-batch-sports-betting-research-2026-05-31.md]
 
 *(cross-wiki — deep bot snippets live in @osint-wiki)*

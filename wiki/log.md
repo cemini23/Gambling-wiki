@@ -2,6 +2,22 @@
 
 Append-only chronological log.
 
+## [2026-05-31] ingest | Operator YouTube batch 2 — sports betting research (13 videos)
+
+- **Source** — `sources/youtube-operator-batch-sports-betting-research-2026-05-31.md`
+- **New entities** — Unabated, PickFinder (tools); Rufus Peabody (people)
+- **Expanded** — sports-betting-fundamentals (validated), line-shopping-and-clv (validated), odds-jam model tutorial, kelly, vig/devig, sharp-vs-soft, prediction-markets-crossover (Novig), pinnacle
+- **Themes** — EV process, CLV, Kelly, Pinnacle benchmark, devig, research workflows, PM vs books limits
+
+## [2026-05-31] ingest | Operator YouTube batch — WC 2026 + BBM7 (17 videos)
+
+- **Source** — `sources/youtube-operator-batch-wc-bbm-2026-05-31.md` (auto-caption via yt-dlp)
+- **New entity** — `entities/platforms/underdog-fantasy.md`
+- **Expanded** — best-ball-strategy (validated), world-cup-2026-betting, bankroll-management, nfl-betting, draftkings, dfs-strategy-overview, world-cup-third-place-advancement
+- **WC cluster (7)** — value-over-teams, logic-over-heart, futures line moves, third-place paths
+- **BBM7 cluster (10)** — winner roster archetypes, ADP deltas, TE mispricing, portfolio drafting
+- **ROADMAP** — operator YouTube drop complete
+
 ## [2026-05-31] ingest | K90 tool eval + weather retail (cross-wiki brief)
 
 - **Brief** — `briefs/2026-05-31_k90-gambling-tool-eval-from-osint.md`

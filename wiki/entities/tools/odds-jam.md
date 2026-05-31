@@ -11,6 +11,9 @@ related:
   - entities/people/alex-monahan.md
   - sources/youtube-sports-pm-retail-batch-2026-05-29.md
   - sources/gemini-github-sports-betting-landscape-2026-05-30.md
+  - sources/youtube-operator-batch-sports-betting-research-2026-05-31.md
+  - concepts/sports-betting-fundamentals.md
+  - entities/tools/pickfinder.md
 maturity: draft
 created: 2026-05-31
 updated: 2026-05-31
@@ -46,9 +49,19 @@ updated: 2026-05-31
 
 **Retail read:** small edge possible vs random after fees; **underperforms** headline product stats; high variance.
 
-### Traditional Odds Jam (+EV scanner, promos)
+### Traditional Odds Jam (+EV scanner, promos, model tools)
 
-Separate product line for **sportsbook** promos and +EV — Phase-0 on dedicated ingest (pricing, state availability, TOS).
+Separate product line for **sportsbook** promos and +EV — Phase-0 on pricing, state availability, TOS.
+
+**Model-building tutorial (6HN-d9mC0DI)** [TENTATIVE — creator content]:
+
+1. Build on **market prices**, not naive public stats books already embed
+2. Benchmark fair probability vs **Pinnacle/Circa** sharp lines
+3. **Devig** juice from sharp two-way markets before comparing soft-book offers
+4. **Kelly criterion** for bankroll sizing after edge estimate
+5. **Crossed markets** = arb alert pattern (verify latency and ToS)
+
+See `@sources/youtube-operator-batch-sports-betting-research-2026-05-31.md`.
 
 ### Verdict
 
@@ -59,3 +72,5 @@ Separate product line for **sportsbook** promos and +EV — Phase-0 on dedicated
 > "We profited $224.10 … marking a 22% gain versus an 18.7% expected loss if we just randomly place bets." [Source: gSGI82Ej76M via @sources/youtube-sports-pm-retail-batch-2026-05-29.md]
 
 > "375 trades placed so far, our win rate is only 54%." [Source: same]
+
+> "You can devig the market … remove the juice from Pinnacle." [Source: 6HN-d9mC0DI via @sources/youtube-operator-batch-sports-betting-research-2026-05-31.md]

@@ -17,7 +17,7 @@ Steps:
 - [x] Seed platform/tool stubs (DraftKings, FanDuel, Pinnacle, Kalshi, Polymarket cross-refs)
 - [x] Wire cross-wiki links to `@osint-wiki`
 - [x] **WC 2026 retail batch** — cross-wiki synthesis from osint Gemini/YouTube research (7 new pages)
-- [ ] Operator YouTube drop — next session
+- [x] Operator YouTube drop — 17 videos (WC + BBM7) ingested 2026-05-31
 - [ ] Deep-read migrated OSINT sources (Gemini sports-betting landscape primary docx)
 - [x] Push to `Gambling-wiki` GitHub + librarian rsync via OSINT sync script
 

@@ -15,6 +15,8 @@ related:
   - entities/platforms/fanduel.md
   - sources/gemini-github-sports-betting-landscape-2026-05-30.md
   - entities/tools/pydfs-lineup-optimizer.md
+  - entities/platforms/underdog-fantasy.md
+  - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
 maturity: draft
 created: 2026-05-31
 updated: 2026-05-31

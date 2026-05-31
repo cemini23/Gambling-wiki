@@ -15,6 +15,9 @@ related:
   - sources/gemini-github-sports-betting-landscape-2026-05-30.md
   - concepts/sportsbook-pm-line-divergence.md
   - entities/sports/nfl-betting.md
+  - entities/people/rufus-peabody.md
+  - sources/youtube-operator-batch-sports-betting-research-2026-05-31.md
+  - entities/tools/unabated.md
 maturity: draft
 created: 2026-05-31
 updated: 2026-05-31
@@ -52,6 +55,8 @@ Classic pattern: sharp line (Pinnacle) moves; soft book lag → short-window arb
 ### Prediction market analog
 
 Kalshi (regulated DCM) vs Polymarket (CLOB) — efficiency gradient similar to sharp/soft; see `@concepts/prediction-markets-crossover.md` and `@concepts/sportsbook-pm-line-divergence.md`.
+
+**Sports PM venues (Novig, etc.)** — Rufus Peabody notes US books limit winners, pushing flow to **Pinnacle** or prediction markets with different liquidity/fee profiles [Source: M1T0OlG3XEU via `@entities/people/rufus-peabody.md`]. Capper workflow (DubClub): **Pinnacle/Bookmaker** as hard-to-ban sharp execution [Source: 3FpV-iOXvQo].
 
 ## Snippets
 

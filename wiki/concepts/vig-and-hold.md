@@ -13,6 +13,7 @@ related:
   - concepts/parlay-and-correlated-bets.md
   - entities/platforms/pinnacle.md
   - sources/kelly-1956-information-rate.md
+  - sources/youtube-operator-batch-sports-betting-research-2026-05-31.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-05-31
@@ -49,6 +50,10 @@ Breakeven win rate at -110: **52.38%** — you need >52.38% to be +EV before acc
 
 Kalshi and Polymarket charge **fees** instead of traditional vig — effective hold depends on fee schedule + spread. Compare in `@concepts/prediction-markets-crossover.md`. Weather/sports PM fee caps differ by venue [NEEDS VERIFICATION 2026-05-31 — verify current fee pages before sizing].
 
+### Devig sharp lines (model input)
+
+To estimate fair probability from a two-way market, **remove juice** from sharp books (Pinnacle, Circa) before comparing soft-book offers. OddsJam tutorial walks devig on a Pinnacle spread (~16¢ juice example) [Source: 6HN-d9mC0DI]. Pair with `@entities/tools/odds-jam.md` and `@concepts/line-shopping-and-clv.md`.
+
 ### Reducing effective vig
 
 1. **Line shopping** — best available price across books
@@ -58,4 +63,6 @@ Kalshi and Polymarket charge **fees** instead of traditional vig — effective h
 
 ## Snippets
 
-*(populate from ingested sources)*
+> "You can devig the market … remove the juice from Pinnacle." [Source: 6HN-d9mC0DI via @sources/youtube-operator-batch-sports-betting-research-2026-05-31.md]
+
+> "Lack of pricing knowledge … keep cranking the vig up where a 50/50 coin flip isn't plus 100." [Source: XZvXWVztJoY via @sources/youtube-operator-batch-sports-betting-research-2026-05-31.md]

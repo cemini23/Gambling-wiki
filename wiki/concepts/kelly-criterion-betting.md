@@ -10,8 +10,12 @@ related:
   - concepts/sports-betting-fundamentals.md
   - concepts/parlay-and-correlated-bets.md
   - concepts/prediction-markets-crossover.md
+  - sources/youtube-operator-batch-sports-betting-research-2026-05-31.md
+  - entities/tools/unabated.md
   - sources/kelly-1956-information-rate.md
 maturity: validated
+created: 2026-05-31
+updated: 2026-05-31
 created: 2026-05-31
 updated: 2026-05-31
 ---
@@ -74,3 +78,5 @@ For Cemini **prediction-market bots**, the house default is quarter-Kelly — se
 > Kelly, J. L. (1956). A New Interpretation of Information Rate — @sources/kelly-1956-information-rate.md
 
 > "the gambler ignores the posted odds in placing his bets!" when odds are fair — Kelly 1956 p.922 [Source: @sources/kelly-1956-information-rate.md]
+
+> "This full Kelly Criterion is very risky … bet a fraction of Kelly such as a quarter Kelly." [Source: EQt2sq0_s64 via @sources/youtube-operator-batch-sports-betting-research-2026-05-31.md]

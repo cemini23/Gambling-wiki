@@ -22,7 +22,13 @@ related:
   - entities/tools/sports-betting-georgedouzas.md
   - entities/tools/fredbet.md
   - sources/multi-wiki-tool-eval-v6-k90-2026-05-31.md
-maturity: draft
+  - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
+  - sources/youtube-operator-batch-sports-betting-research-2026-05-31.md
+  - entities/tools/unabated.md
+  - entities/tools/odds-jam.md
+  - entities/tools/pickfinder.md
+  - entities/people/rufus-peabody.md
+maturity: validated
 created: 2026-05-31
 updated: 2026-05-31
 ---
@@ -64,10 +70,25 @@ Orientation page for mainstream US sports betting market types and odds formats.
 3. Understand **push** rules (PK, half-points)
 4. Know **void** rules (pitcher changes, postponements)
 
+### Research workflow (operator YouTube batch)
+
+| Step | Practice | Sources |
+|------|----------|---------|
+| 1 | **Specialize** — one sport/market type (spreads vs props) | youngkardi, Unabated |
+| 2 | **Filter slate** — line movement on ML/spread/total | LINEMAKER |
+| 3 | **Game checklist** — offense/defense/ST, key spread numbers | wtE5aXrUHzQ |
+| 4 | **Stats stack** — ATS logs, props (Action, StatMuse), DFS DvP | Goon, Calling Our Shot |
+| 5 | **Price check** — compare to **Pinnacle/sharp**; log **CLV** | Unabated, OddsJam, Extranet Shaquille |
+| 6 | **Size** — fractional **Kelly** on verified edge | Unabated, OddsJam |
+
+Tools: `@entities/tools/unabated.md`, `@entities/tools/odds-jam.md`, `@entities/tools/pickfinder.md` — Phase-0 each before subscribe.
+
 ### Overlap with prediction markets
 
 Some sporting outcomes trade on Kalshi/Polymarket as event contracts — see `@concepts/prediction-markets-crossover.md` for when to use books vs PM venues.
 
 ## Snippets
 
-*(populate from ingested sports-betting primers)*
+> "Good sports betting is pricing knowledge." [Source: XZvXWVztJoY via @sources/youtube-operator-batch-sports-betting-research-2026-05-31.md]
+
+> "Sports betting isn't about picking winners … finding the small edges." [Source: EQt2sq0_s64 via @sources/youtube-operator-batch-sports-betting-research-2026-05-31.md]

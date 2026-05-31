@@ -16,7 +16,10 @@ related:
   - entities/sports/nfl-betting.md
   - entities/sports/nba-betting.md
   - entities/tools/sports-betting-georgedouzas.md
-maturity: draft
+  - entities/tools/unabated.md
+  - sources/youtube-operator-batch-sports-betting-research-2026-05-31.md
+  - entities/tools/pickfinder.md
+maturity: validated
 created: 2026-05-31
 updated: 2026-05-31
 ---
@@ -51,6 +54,12 @@ CLV ≈ (your_implied_prob − closing_implied_prob) × stake_equivalent
 
 - **Steam move**: rapid line movement across books (often sharp action)
 - **Reverse line movement (RLM)**: line moves opposite public bet % — potential sharp fade signal [NEEDS VERIFICATION 2026-05-31 — model-specific]
+- **Opening vs current line** — compare to spot possible sharp action before betting [Source: u3VEGPWwKHc]
+- **Line-movement filter** — narrow slate to games with ML/total/spread moves, then research [Source: nimjqe3P5lA, wtE5aXrUHzQ]
+
+### CLV in practice
+
+Extranet Shaquille example: bet +150 promo side but **CLV −300** vs close — positive short-term result can still be −EV process [Source: XZvXWVztJoY]. Log CLV, not just W/L.
 
 ### PM analog
 
@@ -59,3 +68,5 @@ Cross-venue price vs Kalshi/Polymarket — `@concepts/sportsbook-pm-line-diverge
 ## Snippets
 
 > Positive CLV over large sample → strong skill signal even if short-term P&L is negative. [TENTATIVE — standard sharp betting literature]
+
+> "Closing line value or CLV … good deal at plus 150 and the CLV was minus 300." [Source: XZvXWVztJoY via @sources/youtube-operator-batch-sports-betting-research-2026-05-31.md]

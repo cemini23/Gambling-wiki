@@ -11,14 +11,14 @@ Catalog of all wiki pages. Updated on each ingest.
 | [kelly-criterion-betting](concepts/kelly-criterion-betting.md) | validated | Kelly math + fractional Kelly |
 | [vig-and-hold](concepts/vig-and-hold.md) | validated | Juice, overround, breakeven |
 | [favorite-longshot-bias](concepts/favorite-longshot-bias.md) | validated | FLB general + PM cross-ref |
-| [sports-betting-fundamentals](concepts/sports-betting-fundamentals.md) | draft | Spreads, ML, totals, props |
-| [line-shopping-and-clv](concepts/line-shopping-and-clv.md) | draft | CLV, steam, shopping |
+| [sports-betting-fundamentals](concepts/sports-betting-fundamentals.md) | validated | Spreads, ML, totals, research workflow |
+| [line-shopping-and-clv](concepts/line-shopping-and-clv.md) | validated | CLV, steam, shopping |
 | [sharp-vs-soft-books](concepts/sharp-vs-soft-books.md) | draft | Pinnacle vs DK/FD |
 | [sportsbook-pm-line-divergence](concepts/sportsbook-pm-line-divergence.md) | validated | Books vs Kalshi/PM gaps |
 | [pm-copy-trading-retail-risks](concepts/pm-copy-trading-retail-risks.md) | validated | Whale-copy discipline |
 | [parlay-and-correlated-bets](concepts/parlay-and-correlated-bets.md) | draft | Parlays, SGP, correlation |
 | [dfs-strategy-overview](concepts/dfs-strategy-overview.md) | draft | GPP, cash, stacking |
-| [best-ball-strategy](concepts/best-ball-strategy.md) | draft | Draft-and-hold portfolio |
+| [best-ball-strategy](concepts/best-ball-strategy.md) | validated | GPP, cash, stacking, BBM7 |
 | [poker-strategy-overview](concepts/poker-strategy-overview.md) | draft | Cash, MTT, study stack |
 | [casino-game-house-edge](concepts/casino-game-house-edge.md) | draft | Edge by game |
 | [prediction-markets-crossover](concepts/prediction-markets-crossover.md) | validated | Kalshi/Polymarket retail lens |
@@ -34,6 +34,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | Page | Maturity |
 |------|----------|
 | [draftkings](entities/platforms/draftkings.md) | draft |
+| [underdog-fantasy](entities/platforms/underdog-fantasy.md) | draft |
 | [fanduel](entities/platforms/fanduel.md) | draft |
 | [pinnacle](entities/platforms/pinnacle.md) | draft |
 | [kalshi](entities/platforms/kalshi.md) | draft |
@@ -49,12 +50,15 @@ Catalog of all wiki pages. Updated on each ingest.
 | [pydfs-lineup-optimizer](entities/tools/pydfs-lineup-optimizer.md) | draft |
 | [sports-betting-georgedouzas](entities/tools/sports-betting-georgedouzas.md) | draft |
 | [fredbet](entities/tools/fredbet.md) | draft |
+| [unabated](entities/tools/unabated.md) | draft |
+| [pickfinder](entities/tools/pickfinder.md) | draft |
 
 ## Entities — People
 
 | Page | Maturity |
 |------|----------|
 | [alex-monahan](entities/people/alex-monahan.md) | draft |
+| [rufus-peabody](entities/people/rufus-peabody.md) | draft |
 
 ## Entities — Games
 
@@ -81,6 +85,8 @@ Catalog of all wiki pages. Updated on each ingest.
 | [youtube-sports-pm-retail-batch-2026-05-29](sources/youtube-sports-pm-retail-batch-2026-05-29.md) | deep-read |
 | [osint-cross-wiki-wc2026-retail-synthesis-2026-05-31](sources/osint-cross-wiki-wc2026-retail-synthesis-2026-05-31.md) | deep-read |
 | [multi-wiki-tool-eval-v6-k90-2026-05-31](sources/multi-wiki-tool-eval-v6-k90-2026-05-31.md) | deep-read |
+| [youtube-operator-batch-wc-bbm-2026-05-31](sources/youtube-operator-batch-wc-bbm-2026-05-31.md) | deep-read |
+| [youtube-operator-batch-sports-betting-research-2026-05-31](sources/youtube-operator-batch-sports-betting-research-2026-05-31.md) | deep-read |
 
 ## Meta
 

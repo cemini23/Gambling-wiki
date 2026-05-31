@@ -20,6 +20,7 @@ related:
   - sources/osint-cross-wiki-wc2026-retail-synthesis-2026-05-31.md
   - entities/sports/nfl-betting.md
   - sources/gemini-github-sports-betting-landscape-2026-05-30.md
+  - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-05-31
@@ -67,6 +68,17 @@ Entity hub for **2026 FIFA World Cup** wagering across sportsbooks, Kalshi, and 
 
 YouTube group previews (DeadBall TV, B Wade Picks, etc.) catalogued in `@osint-wiki/sources/world-cup-youtube-research-compilation-2026-05-29.md`. Treat as **hypothesis**, not line — e.g. DeadBall modeled USA **4th in Group D** vs other sources showing ~44–45% advance [TENTATIVE disagreement].
 
+**Operator YouTube batch (May 2026)** — `@sources/youtube-operator-batch-wc-bbm-2026-05-31.md` (7 WC videos):
+
+| Theme | Source | Retail rule |
+|-------|--------|-------------|
+| Value over teams | Grandstand Sports Data (`k0-aRZ1oC6s`) | Casual WC money inflates favorites; find mispriced lines, not “better teams” |
+| Logic over heart | Action Network (`7r_r2VpPO30`) | 104 games — skip matchday 1 if unsure; risk management > patriotism |
+| Futures line moves | WagerTalk (`pskTx9vjZ-Q`) | France/Argentina “value gone” after public betting — **bad number = pass** |
+| Outright snapshot | Picks & Parlays (`z-HUi7r1hQY`) | Spain ~+475 favorite on DK at upload — anchor only, re-shop live |
+| Third-place paths | Action Network | Eight best thirds → minnow advance angles — tie `@concepts/world-cup-third-place-advancement-betting.md` |
+| Bracket entertainment | Tactical Manager TV (`7Rt7bG-8hEo`) | **Dead end** for +EV — simulation content, not market edge |
+
 ### Discipline
 
 - Size with `@concepts/bankroll-management.md` and fractional Kelly — `@concepts/kelly-criterion-betting.md`.
@@ -76,3 +88,5 @@ YouTube group previews (DeadBall TV, B Wade Picks, etc.) catalogued in `@osint-w
 ## Snippets
 
 > Elite nations often trade at 97–98¢ to advance pre-kickoff — poor directional bets for retail unless you have a specific fade thesis. [Source: @osint-wiki/sources/gemini-world-cup-market-structure-research-2026-05-29.md]
+
+> "Try to bet using logic over odds. Do not bet with your heart … There are 104 games … You do not need to bet on match day one." [Source: 7r_r2VpPO30 via @sources/youtube-operator-batch-wc-bbm-2026-05-31.md]

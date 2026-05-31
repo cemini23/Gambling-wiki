@@ -15,6 +15,9 @@ related:
   - entities/sports/nfl-betting.md
   - entities/sports/nba-betting.md
   - entities/tools/pydfs-lineup-optimizer.md
+  - entities/platforms/underdog-fantasy.md
+  - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
+  - entities/people/rufus-peabody.md
 maturity: draft
 created: 2026-05-31
 updated: 2026-05-31
