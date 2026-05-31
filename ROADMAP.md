@@ -1,0 +1,58 @@
+# Gambling Wiki — ROADMAP
+
+Active workstreams, open decisions, and done log. Read at session start; update at session end.
+
+---
+
+## Active workstreams
+
+### W1 — Repo bootstrap + seed corpus
+
+**Status:** In progress 2026-05-31.
+
+Steps:
+- [x] Scaffold from Cemini wiki template (Cybersecurity-wiki pattern)
+- [x] Adapt `CLAUDE.md` for gambling vertical + osint-wiki boundary
+- [x] Seed core concept pages (bankroll, Kelly, vig, FLB, sports betting, DFS, poker, casino edge)
+- [x] Seed platform/tool stubs (DraftKings, FanDuel, Pinnacle, Kalshi, Polymarket cross-refs)
+- [x] Wire cross-wiki links to `@osint-wiki`
+- [ ] Operator research drop: ingest first batch from `research to be indexed/`
+- [ ] Deep-read migrated OSINT sources (Gemini sports-betting landscape, Kelly primary source)
+- [ ] Push to `Gambling-wiki` GitHub + optional librarian rsync
+
+### W2 — Domain expansion (queued)
+
+Priority ingest lanes once sources arrive:
+
+| Lane | Target pages |
+|------|----------------|
+| **Sports betting** | CLV, steam moves, closing line value, props correlation, live betting |
+| **DFS / best ball** | roster construction, ownership, stack rules, late swap, Underdog/Best Ball Mania |
+| **Poker** | preflop charts, ICM, bankroll by stake, solver study workflow |
+| **Casino** | basic strategy, comp optimization, table selection |
+| **Prediction markets (retail)** | fee math, FLB on Kalshi vs PM, cross-venue shopping |
+
+### W3 — Public polish
+
+- [x] MIT LICENSE
+- [x] README for federation table
+- [ ] Initial GitHub publish
+- [ ] Add `wiki_gap_detect.py` (copy from sibling wiki when page count > ~50)
+
+---
+
+## Open decisions
+
+| ID | Question | Options | Status |
+|----|----------|---------|--------|
+| D1 | Librarian sync cadence | Manual rsync vs hourly LaunchAgent like osint-wiki | **Open** — defer until page count justifies RAG |
+| D2 | Raw source home | Laptop `raw-sources/` only vs also push to cemini-librarian bulk | **Open** — follow operator preference on next ingest |
+| D3 | DFS optimizer tooling | Document pydfs-lineup-optimizer vs paid optimizers | **Open** — Phase-0 when DFS ingest batch lands |
+
+---
+
+## Done log
+
+| Date | Item |
+|------|------|
+| 2026-05-31 | Initial repo scaffold, seed concepts/entities, osint-wiki federation stubs |

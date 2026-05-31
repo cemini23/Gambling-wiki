@@ -1,0 +1,66 @@
+---
+title: Prediction markets crossover (Kalshi, Polymarket)
+type: concept
+tags: [concept, prediction-markets, kalshi, polymarket, crossover]
+keywords: [prediction-markets, event-contracts, kalshi, polymarket, fees, crossover]
+related:
+  - concepts/gambling-wiki-scope.md
+  - concepts/favorite-longshot-bias.md
+  - concepts/kelly-criterion-betting.md
+  - concepts/sharp-vs-soft-books.md
+  - concepts/best-ball-strategy.md
+  - entities/platforms/kalshi.md
+  - entities/platforms/polymarket.md
+  - entities/tools/momentum-odds.md
+  - entities/tools/odds-jam.md
+  - sources/gemini-github-sports-betting-landscape-2026-05-30.md
+maturity: validated
+created: 2026-05-31
+updated: 2026-05-31
+---
+
+## Relations
+
+- @concepts/gambling-wiki-scope.md — scope split
+- @entities/platforms/kalshi.md — regulated event contracts
+- @entities/platforms/polymarket.md — crypto CLOB PM
+- @osint-wiki/entities/platforms/kalshi.md — Cemini execution context
+- @osint-wiki/entities/platforms/polymarket.md — bot/LP context
+- @osint-wiki/concepts/cross-venue-arbitrage-pattern.md — automated arb
+- @osint-wiki/concepts/sports-prediction-consensus-agent.md — sports PM entry signals
+
+## Raw Concept
+
+How Kalshi and Polymarket fit the **wagering** knowledge base vs the **trading stack** in osint-wiki.
+
+## Narrative
+
+### Same activity, two lenses
+
+| Lens | gambling-wiki | osint-wiki |
+|------|---------------|------------|
+| Question | "Is this contract +EV for my bankroll?" | "How does the bot quote/farm/arbitrage it?" |
+| Fees | Retail fee math, withdrawal costs | Fee APIs in orchestrator |
+| Sports | Consensus agents, MomentumOdds signals | Executor bots, WC LP |
+| Regulation | Consumer rules, state gaming vs DCM | CFTC, compliance briefs |
+
+### Retail checklist before betting PM sports
+
+1. Read **settlement rules** (void conditions, data sources)
+2. Model **fees** + spread — effective hold in `@concepts/vig-and-hold.md`
+3. Compare price vs **sportsbook line** (CLV analog)
+4. Size with **fractional Kelly** — `@concepts/kelly-criterion-betting.md` + `@osint-wiki/concepts/kelly-sizing-quarter.md`
+5. Know **jurisdiction** — geoblocks, KYC
+
+### Tools spanning both wikis
+
+- **MomentumOdds** — sportsbook signal feed; tutorials target Kalshi execution (`@entities/tools/momentum-odds.md`, `@osint-wiki/entities/tools/momentum-odds.md`)
+- **Odds Jam / Prediction Insiders** — Polymarket copy alerts (`@entities/tools/odds-jam.md`)
+
+### When to stay in traditional books
+
+Better liquidity on mainstream spreads; PM shines on **niche events**, **political/macroeconomic** contracts, and **cross-venue** mispricings (advanced).
+
+## Snippets
+
+*(cross-wiki — deep bot snippets live in @osint-wiki)*

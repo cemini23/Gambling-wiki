@@ -1,0 +1,35 @@
+---
+title: DraftKings
+type: entity
+tags: [entity, platform, sportsbook, dfs, us-legal]
+keywords: [draftkings, dk, sportsbook, dfs, best-ball]
+related:
+  - entities/platforms/fanduel.md
+  - concepts/sports-betting-fundamentals.md
+  - concepts/dfs-strategy-overview.md
+  - concepts/best-ball-strategy.md
+  - concepts/sharp-vs-soft-books.md
+maturity: draft
+created: 2026-05-31
+updated: 2026-05-31
+---
+
+## Relations
+
+- @entities/platforms/fanduel.md — primary US competitor
+- @concepts/dfs-strategy-overview.md — DFS product
+- @concepts/sharp-vs-soft-books.md — retail/soft book classification
+
+## Raw Concept
+
+Major US legal operator — sportsbook + DFS + casino (+ best ball). Stub pending deep ingest.
+
+## Narrative
+
+DraftKings operates **sports betting**, **DFS**, **iCasino**, and **best ball** in licensed US states. Classified as **soft/rec retail** for sharp betting purposes — strong promos, account limits for winners possible.
+
+Expand on ingest: state availability, SGP product, rewards program, typical hold vs Pinnacle.
+
+## Snippets
+
+*(pending ingest)*
