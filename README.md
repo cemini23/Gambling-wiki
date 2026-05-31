@@ -69,6 +69,7 @@ git clone https://github.com/cemini23/Gambling-wiki.git
 ## Related
 
 - Wiki federation hub: [cemini-claude-code-CCC](https://github.com/cemini23/cemini-claude-code-CCC)
+- **World Cup LP bot (automation):** [world-cup-bot](https://github.com/cemini23/world-cup-bot) — shadow-first Polymarket LP + Kalshi gap alerts; pairs with `@gambling-wiki/entities/sports/world-cup-2026-betting.md`
 - Tooling: [wikilint](https://github.com/cemini23/wikilint) · [vet](https://github.com/cemini23/vet)
 
 ## License
