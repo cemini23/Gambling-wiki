@@ -10,8 +10,6 @@ This workspace is a **librarian** for betting and gambling research. It:
 - **Curates** them into an interlinked wiki under `wiki/` — platforms, tools, games, sports, and strategy concepts
 - **Applies** them via briefs in `briefs/` for slate prep, study plans, and bankroll frameworks
 
-**Not in scope here:** CeminiSuite trading bots, Polymarket LP infrastructure, and quant OSINT — those live in the private [OSINT workspace](https://github.com/cemini23) (`osint-wiki`). This wiki covers *how to bet*; OSINT covers *how to automate prediction-market trading*.
-
 ## Quick start
 
 1. Read `CLAUDE.md` — schema the LLM follows each session
