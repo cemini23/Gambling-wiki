@@ -1,13 +1,14 @@
 ---
 title: Poker strategy overview
 type: concept
-tags: [concept, poker, cash-game, tournament, gto]
-keywords: [poker, texas-holdem, icm, gto, solver, bankroll]
+tags: [concept, poker, cash-game, tournament, gto, math]
+keywords: [poker, texas-holdem, icm, position, pot-odds, tournament, rake, bots]
 related:
   - concepts/bankroll-management.md
   - concepts/casino-game-house-edge.md
   - entities/games/poker.md
   - entities/platforms/pokerstars.md
+  - sources/youtube-operator-batch-casino-2026-05-31.md
 maturity: draft
 created: 2026-05-31
 updated: 2026-05-31
@@ -17,11 +18,11 @@ updated: 2026-05-31
 
 - @entities/games/poker.md — game entity
 - @entities/platforms/pokerstars.md — major online room
-- @concepts/casino-game-house-edge.md — contrast: poker is player-vs-player with rake
+- @sources/youtube-operator-batch-casino-2026-05-31.md — operator YouTube poker cluster
 
 ## Raw Concept
 
-Poker as skill game — cash vs MTT, bankroll, study workflow (solvers, ranges).
+Poker as **skill game** — cash vs MTT, bankroll, math-first decision making, study workflow.
 
 ## Narrative
 
@@ -33,6 +34,14 @@ Poker as skill game — cash vs MTT, bankroll, study workflow (solvers, ranges).
 | Edge expression | bb/100 | ROI % over large sample |
 | Bankroll rule | 20–40 BI | 100+ BI [TENTATIVE] |
 | Key extra skill | Table select | ICM |
+
+### Core skills (operator batch)
+
+1. **Math** — pot odds, equity, implied odds; "math every pro knows" [Source: QqXzTxxMzjU]
+2. **Position** — "Position is to poker what location is to real estate" [Source: zH45e91Nk8E]
+3. **Triple threat framework** — position + controlled aggression + fundamentals; win by **fewest mistakes** [Source: zH45e91Nk8E]
+4. **Beginner foundations** — starting hand discipline, bet sizing basics [Source: Ix4QxqCtUCs]
+5. **MTT survival** — preserve stack early, respect blind escalation [Source: k0tKWIrHpMk]
 
 ### Rake as "house edge"
 
@@ -50,4 +59,10 @@ Different variance profile and bankroll math — do not mix bankrolls without tr
 
 ## Snippets
 
-*(populate from ingested poker sources)*
+> "Position is to poker what location is to real estate." [Source: zH45e91Nk8E via @sources/youtube-operator-batch-casino-2026-05-31.md]
+
+## Dead Ends
+
+- **3+ hour tip compilations** (Galfond `GE8BGWjUDYs`) — link-only; defer deep extract
+- **Online bot/collusion** (`CIYODgIqqhU`) — opponent integrity issue, not exploitable edge for retail
+- **Casino bot podcasts** — awareness only; no +EV playbook

@@ -2,6 +2,14 @@
 
 Append-only chronological log.
 
+## [2026-05-31] ingest | Operator YouTube batch 3 — casino + AI sports (27 videos)
+
+- **Source** — `sources/youtube-operator-batch-casino-2026-05-31.md` (25/27 VTT)
+- **Expanded** — blackjack (validated), casino-game-house-edge (validated), poker-strategy-overview, roulette, odds-jam AI experiment
+- **Blackjack cluster** — basic strategy 0.5% edge, misplayed hands, counting prerequisites, rule checklist
+- **Poker cluster** — math, position, triple threat, MTT beginner tips
+- **Dead ends** — Martingale, slot pickers, bot/collusion awareness, Galfond 3h defer
+
 ## [2026-05-31] ingest | Operator YouTube batch 2 — sports betting research (13 videos)
 
 - **Source** — `sources/youtube-operator-batch-sports-betting-research-2026-05-31.md`

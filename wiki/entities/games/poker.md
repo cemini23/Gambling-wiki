@@ -7,6 +7,7 @@ related:
   - concepts/poker-strategy-overview.md
   - concepts/casino-game-house-edge.md
   - entities/platforms/pokerstars.md
+  - sources/youtube-operator-batch-casino-2026-05-31.md
 maturity: draft
 created: 2026-05-31
 updated: 2026-05-31

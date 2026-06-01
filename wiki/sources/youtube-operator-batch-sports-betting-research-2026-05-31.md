@@ -17,6 +17,7 @@ related:
   - entities/people/rufus-peabody.md
   - entities/platforms/pinnacle.md
   - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
+  - sources/youtube-operator-batch-casino-2026-05-31.md
 maturity: validated
 read_status: deep-read
 created: 2026-05-31
@@ -26,6 +27,7 @@ updated: 2026-05-31
 ## Relations
 
 - @sources/youtube-operator-batch-wc-bbm-2026-05-31.md — prior operator batch (WC + BBM7)
+- @sources/youtube-operator-batch-casino-2026-05-31.md — companion casino + OddsJam batch
 - @entities/tools/unabated.md — Unabated cluster (2 videos)
 - @entities/tools/odds-jam.md — model-building tutorial
 - @entities/people/rufus-peabody.md — Wharton PM interview

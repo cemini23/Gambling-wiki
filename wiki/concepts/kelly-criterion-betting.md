@@ -11,11 +11,10 @@ related:
   - concepts/parlay-and-correlated-bets.md
   - concepts/prediction-markets-crossover.md
   - sources/youtube-operator-batch-sports-betting-research-2026-05-31.md
+  - sources/youtube-operator-batch-casino-2026-05-31.md
   - entities/tools/unabated.md
   - sources/kelly-1956-information-rate.md
 maturity: validated
-created: 2026-05-31
-updated: 2026-05-31
 created: 2026-05-31
 updated: 2026-05-31
 ---

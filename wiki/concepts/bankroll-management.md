@@ -20,6 +20,8 @@ related:
   - sources/youtube-operator-batch-sports-betting-research-2026-05-31.md
   - entities/tools/unabated.md
   - entities/platforms/underdog-fantasy.md
+  - sources/youtube-operator-batch-casino-2026-05-31.md
+  - entities/games/blackjack.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-05-31

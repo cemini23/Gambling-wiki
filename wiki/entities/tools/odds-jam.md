@@ -14,6 +14,7 @@ related:
   - sources/youtube-operator-batch-sports-betting-research-2026-05-31.md
   - concepts/sports-betting-fundamentals.md
   - entities/tools/pickfinder.md
+  - sources/youtube-operator-batch-casino-2026-05-31.md
 maturity: draft
 created: 2026-05-31
 updated: 2026-05-31
@@ -63,6 +64,14 @@ Separate product line for **sportsbook** promos and +EV — Phase-0 on pricing, 
 
 See `@sources/youtube-operator-batch-sports-betting-research-2026-05-31.md`.
 
+**AI experiment (pgTc2OQN60U)** [TENTATIVE — OddsJam promo]:
+
+- Creator tests **ChatGPT** for +EV sports betting guidance vs disciplined process
+- Reinforces **positive EV**, **bankroll management**, **Kelly** mention, multi-book line shopping
+- Verdict: mixed good/bad AI advice — **not** a replacement for OddsJam +EV scanner or sharp-line devig; useful as cautionary retail content
+
+See `@sources/youtube-operator-batch-casino-2026-05-31.md`.
+
 ### Verdict
 
 **Reference** — calibrate copy-trading expectations; subscribe only with `@concepts/pm-copy-trading-retail-risks.md` checklist.
@@ -74,3 +83,5 @@ See `@sources/youtube-operator-batch-sports-betting-research-2026-05-31.md`.
 > "375 trades placed so far, our win rate is only 54%." [Source: same]
 
 > "You can devig the market … remove the juice from Pinnacle." [Source: 6HN-d9mC0DI via @sources/youtube-operator-batch-sports-betting-research-2026-05-31.md]
+
+> "…positive expected value betting… bankroll management is non-negotiable… the Kelly…" [Source: pgTc2OQN60U via @sources/youtube-operator-batch-casino-2026-05-31.md]

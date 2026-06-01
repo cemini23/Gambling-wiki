@@ -28,6 +28,7 @@ related:
   - entities/tools/odds-jam.md
   - entities/tools/pickfinder.md
   - entities/people/rufus-peabody.md
+  - sources/youtube-operator-batch-casino-2026-05-31.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-05-31
