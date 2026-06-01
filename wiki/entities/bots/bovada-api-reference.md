@@ -7,6 +7,8 @@ related:
   - concepts/gambling-bot-architecture.md
   - sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md
   - entities/bots/wagerbrain.md
+  - entities/bots/bovada-hand-history-converter.md
+  - entities/bots/README.md
 maturity: draft
 created: 2026-06-01
 updated: 2026-06-01

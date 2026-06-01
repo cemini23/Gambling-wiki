@@ -21,6 +21,9 @@ related:
   - sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md
   - entities/bots/wagerbrain.md
   - entities/bots/bovada-api-reference.md
+  - entities/bots/bovada-hand-history-converter.md
+  - entities/bots/poker-bot-tooling.md
+  - entities/bots/stake-engine-client.md
 maturity: core
 created: 2026-05-31
 updated: 2026-06-01

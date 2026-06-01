@@ -16,6 +16,7 @@ related:
   - entities/sports/nfl-betting.md
   - entities/sports/nba-betting.md
   - entities/tools/sports-betting-georgedouzas.md
+  - entities/bots/bovada-hand-history-converter.md
   - entities/tools/unabated.md
   - sources/youtube-operator-batch-sports-betting-research-2026-05-31.md
   - entities/tools/pickfinder.md

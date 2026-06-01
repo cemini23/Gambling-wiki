@@ -9,6 +9,7 @@ related:
   - concepts/sports-betting-fundamentals.md
   - entities/tools/fredbet.md
   - entities/tools/sports-betting-georgedouzas.md
+  - sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md
 maturity: draft
 read_status: deep-read
 created: 2026-05-31

@@ -6,8 +6,8 @@ keywords: [wagerbrain, sedemmler, quoter, bankroll, k92]
 related:
   - concepts/gambling-bot-architecture.md
   - sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md
-  - "@osint-wiki/sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md"
-  - "@osint-wiki/concepts/sequential-optimal-execution-quoting.md"
+  - entities/bots/README.md
+  - entities/bots/bovada-api-reference.md
 maturity: draft
 created: 2026-06-01
 updated: 2026-06-01
@@ -17,6 +17,9 @@ updated: 2026-06-01
 
 - @sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md — K92 eval Steal-from
 - @concepts/gambling-bot-architecture.md — quoter module pattern
+- @entities/bots/README.md — bot namespace
+- @entities/bots/bovada-api-reference.md — sportsbook API lane
+- @osint-wiki/concepts/sequential-optimal-execution-quoting.md — prod quoter implementation (cross-wiki)
 
 ## Raw Concept
 

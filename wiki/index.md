@@ -54,6 +54,16 @@ Catalog of all wiki pages. Updated on each ingest.
 | [unabated](entities/tools/unabated.md) | draft |
 | [pickfinder](entities/tools/pickfinder.md) | draft |
 
+## Entities — Bots
+
+| Page | Maturity |
+|------|----------|
+| [wagerbrain](entities/bots/wagerbrain.md) | draft |
+| [bovada-api-reference](entities/bots/bovada-api-reference.md) | draft |
+| [bovada-hand-history-converter](entities/bots/bovada-hand-history-converter.md) | draft |
+| [poker-bot-tooling](entities/bots/poker-bot-tooling.md) | draft |
+| [stake-engine-client](entities/bots/stake-engine-client.md) | draft |
+
 ## Entities — People
 
 | Page | Maturity |
@@ -90,6 +100,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [youtube-operator-batch-sports-betting-research-2026-05-31](sources/youtube-operator-batch-sports-betting-research-2026-05-31.md) | deep-read |
 | [youtube-operator-batch-casino-2026-05-31](sources/youtube-operator-batch-casino-2026-05-31.md) | deep-read |
 | [youtube-raise-your-edge-10k-bankroll-2026-05-31](sources/youtube-raise-your-edge-10k-bankroll-2026-05-31.md) | deep-read |
+| [multi-wiki-tool-eval-v7-k92-2026-06-01](sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md) | deep-read |
 
 ## Meta
 

@@ -2,6 +2,13 @@
 
 Append-only chronological log.
 
+## [2026-06-01] ingest | K92 completion — bot entity stubs + index
+
+- **Expanded** — `sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md` (validated, deep-read)
+- **New bots** — bovada-hand-history-converter, poker-bot-tooling, stake-engine-client
+- **Index** — Entities — Bots section; K92 source row
+- **Briefs** — no new briefs; K90 already ingested
+
 ## [2026-06-01] ingest | K92 — casino/poker/stake eval slice from OSINT
 
 - **Source** — `sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md` (90 URLs, gambling-primary)

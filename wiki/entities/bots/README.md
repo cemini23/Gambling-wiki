@@ -9,6 +9,9 @@ related:
   - meta/gambling-bot-ingest-rubric.md
   - entities/bots/wagerbrain.md
   - entities/bots/bovada-api-reference.md
+  - entities/bots/bovada-hand-history-converter.md
+  - entities/bots/poker-bot-tooling.md
+  - entities/bots/stake-engine-client.md
   - sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md
 maturity: core
 created: 2026-05-31
@@ -32,6 +35,9 @@ Placeholder namespace for **platform-specific gambling bot** entity pages (`enti
 |------|------|-------|
 | @entities/bots/wagerbrain.md | Quoter / bankroll | Steal-from K92 eval |
 | @entities/bots/bovada-api-reference.md | Sportsbook API | Reference-only + hand-history |
+| @entities/bots/bovada-hand-history-converter.md | Analytics / CLV | Steal-from K92 |
+| @entities/bots/poker-bot-tooling.md | Poker RL / equity | rlcard Adopt + engines |
+| @entities/bots/stake-engine-client.md | Stake engine API | Steal-from; high ToS risk |
 
 ### Planned stubs (create on first ingest)
 

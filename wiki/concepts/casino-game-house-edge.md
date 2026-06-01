@@ -10,6 +10,7 @@ related:
   - entities/games/roulette.md
   - entities/games/poker.md
   - sources/youtube-operator-batch-casino-2026-05-31.md
+  - entities/bots/stake-engine-client.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-05-31
