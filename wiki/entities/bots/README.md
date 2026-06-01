@@ -34,7 +34,9 @@ Placeholder namespace for **platform-specific gambling bot** entity pages (`enti
 | Page | Lane | Notes |
 |------|------|-------|
 | @entities/bots/wagerbrain.md | Quoter / bankroll | Steal-from K92 eval |
-| @entities/bots/bovada-api-reference.md | Sportsbook API | Reference-only + hand-history |
+| @entities/bots/bovada-api-reference.md | Sportsbook API | **NO-GO** Phase-0 (no license) |
+| @entities/tools/rlcard.md | Poker RL sim | CONDITIONAL-GO research |
+| @entities/bots/stake-engine-client.md | Stake client | **NO-GO** Phase-0 |
 | @entities/bots/bovada-hand-history-converter.md | Analytics / CLV | Steal-from K92 |
 | @entities/bots/poker-bot-tooling.md | Poker RL / equity | rlcard Adopt + engines |
 | @entities/bots/stake-engine-client.md | Stake engine API | Steal-from; high ToS risk |

@@ -1,7 +1,7 @@
 ---
 title: "furic/stake-engine-client"
 type: entity
-tags: [entity, bot, crypto-casino, steal-from, k92, tos-risk]
+tags: [entity, bot, crypto-casino, reject, k92, tos-risk]
 keywords: [stake, stake-engine, crypto-casino, k92]
 related:
   - concepts/gambling-bot-architecture.md
@@ -20,26 +20,20 @@ updated: 2026-06-01
 
 ## Raw Concept
 
-K92 **Steal-from** — API client for **Stake.com** engine. Distinct from **Stake predictor scam repos** (Reject cluster).
+K92 **Steal-from** — API client for **Stake.com** engine.
 
 ## Narrative
 
-### Caution
+### Phase-0 audit (2026-06-01)
 
-- **Crypto casino** — jurisdiction, KYC, and **ToS** are blockers before any automation
-- Not the same as **sportsbook +EV** or **PM divergence** lanes
-- K92 **Reject** cluster includes many Stake "predictor" forks — do not conflate
+| Check | Result |
+|-------|--------|
+| License | **No LICENSE file** |
+| Maturity | 19★ / push 2026-05-04 |
+| ToS | Stake automation — account-ban risk |
 
-### Phase-0 [NEEDS VERIFICATION 2026-06-01]
-
-1. License via `gh api`
-2. Operator legal review
-3. Confirm API still maintained vs site changes
-
-### Verdict
-
-**CONDITIONAL-GO** — document only until Phase-0 complete; default **NO-GO** for gambling-bot fleet v1.
+**Verdict: NO-GO** — do not adopt into gambling-bot fleet v1.
 
 ## Snippets
 
-> K92 Steal-from — Stake.com engine client; ToS / jurisdiction review required. [Source: @sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md]
+> K92 Steal-from — rejected after Phase-0 (no SPDX). [Source: @sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md]

@@ -5,9 +5,12 @@ tags: [entity, bot, sportsbook, automation, steal-from]
 keywords: [wagerbrain, sedemmler, quoter, bankroll, k92]
 related:
   - concepts/gambling-bot-architecture.md
+  - concepts/bankroll-management.md
+  - concepts/kelly-criterion-betting.md
   - sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md
   - entities/bots/README.md
   - entities/bots/bovada-api-reference.md
+  - concepts/sequential-optimal-execution-quoting.md
 maturity: draft
 created: 2026-06-01
 updated: 2026-06-01
@@ -17,25 +20,31 @@ updated: 2026-06-01
 
 - @sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md — K92 eval Steal-from
 - @concepts/gambling-bot-architecture.md — quoter module pattern
-- @entities/bots/README.md — bot namespace
 - @entities/bots/bovada-api-reference.md — sportsbook API lane
-- @osint-wiki/concepts/sequential-optimal-execution-quoting.md — prod quoter implementation (cross-wiki)
 
 ## Raw Concept
 
-K92 tool eval flagged **sedemmler/WagerBrain** as Steal-from for Cemini financial / world-cup-bot **module 3 (quoter)**. Gambling-wiki captures **wagering automation requirements**; prod code stays @osint-wiki.
+- **Repo**: `github.com/sedemmler/WagerBrain`
+- **Eval**: K92 Steal-from — world-cup-bot module 3 (quoter) overlap (OSINT)
 
 ## Narrative
 
-**Phase-0:** **CONDITIONAL-GO** — pending `gh api` license verification and repo activity check before clone.
+Python library for **sports-betting math** after odds scrape: `bankroll.py`, `odds.py`, `probs.py`, `payouts.py`. Not a live bot — **requirements reference** for bankroll/Kelly-style sizing on gambling-bot fleet.
 
-**Strip-mine targets (requirements only):**
+### Phase-0 audit (2026-06-01)
 
-- Bankroll-aware quote/sizing logic for sportsbook-style markets
-- Signal → stake mapping discipline (align with @concepts/kelly-criterion-betting.md)
+Clone: `/tmp/k92-phase0/WagerBrain`
 
-**Not in scope:** Treating as production dependency without license + ToS review.
+| Check | Result |
+|-------|--------|
+| License | **MIT** (`LICENSE` + `gh api` SPDX) |
+| Maturity | 304★ / 41 forks / 3 open issues |
+| Activity | **Stale** — last push **2020-05-02** |
+| Failure mode | Unmaintained API assumptions; not a deployment stack |
+| Cemini overlap | Math only — strip bankroll/odds helpers; prod quoter stays Python-native on @osint-wiki |
+
+**Verdict: CONDITIONAL-GO (steal-from, gambling-wiki requirements only)** — port **ideas** (bankroll, implied prob, payout math) into bot specs; **do not** pip-install as prod dependency without maintenance fork. Pair with @osint-wiki/concepts/sequential-optimal-execution-quoting.md for LOB quoter theory.
 
 ## Snippets
 
-> Eval overlap: "Extends module 3 (quoter)." [Source: GitHub Repo Evaluation for Cemini.docx, K92]
+> "A package containing the essential math and tools required for sports betting and gambling." [Source: WagerBrain README]

@@ -7,8 +7,6 @@ related:
   - concepts/gambling-bot-architecture.md
   - sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md
   - entities/bots/wagerbrain.md
-  - entities/bots/bovada-hand-history-converter.md
-  - entities/bots/README.md
 maturity: draft
 created: 2026-06-01
 updated: 2026-06-01
@@ -20,14 +18,22 @@ updated: 2026-06-01
 
 ## Raw Concept
 
-K92 eval lists **ctrlaltdylan/bovadaAPI** and **jkol36/bovadaAPI** as Reference-only (scanner duplicate of existing module 1). **matt57225/bovada-hand-history-converter** — Steal-from for CLV / journal ingest.
+K92 eval: **ctrlaltdylan/bovadaAPI**, **jkol36/bovadaAPI** (scanner duplicate); **matt57225/bovada-hand-history-converter** (hand-history).
 
 ## Narrative
 
-**Sportsbook bot lane** — API-shaped access to Bovada lines/accounts. **ToS and jurisdiction** are first-class risks; gambling-wiki documents patterns only.
+### Phase-0 audit (2026-06-01)
 
-**Verdict:** Reference-only for API shape; **no Adopt** without operator legal review. Hand-history converter worth strip-mine for **analytics bot** (not auto-bet).
+| Repo | License | Stars | Pushed | Verdict |
+|------|---------|-------|--------|---------|
+| ctrlaltdylan/bovadaAPI | **None** (404 on license API) | 9 | 2015-12 | **NO-GO** |
+| jkol36/bovadaAPI | (same class) | — | — | **NO-GO** |
+| matt57225/bovada-hand-history-converter | **None** | 32 | 2020-06 | **NO-GO** (archived) |
+
+**Sportsbook bot lane** — documents **pattern only** (unofficial API + hand-history ingest). **ToS/jurisdiction** block production use.
+
+**Verdict: NO-GO for adopt** — reference for manual research only; no clone into Cemini or gambling-bot prod paths without written legal review + maintained fork.
 
 ## Snippets
 
-> "Duplicates module 1 (scanner)" — bovadaAPI pair. [Source: K92 eval via @osint-wiki/sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md]
+> Eval: "Duplicates module 1 (scanner)" — bovadaAPI pair. [Source: K92 eval]

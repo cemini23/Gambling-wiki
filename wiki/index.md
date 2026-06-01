@@ -53,6 +53,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [fredbet](entities/tools/fredbet.md) | draft |
 | [unabated](entities/tools/unabated.md) | draft |
 | [pickfinder](entities/tools/pickfinder.md) | draft |
+| [rlcard](entities/tools/rlcard.md) | draft |
 
 ## Entities — Bots
 

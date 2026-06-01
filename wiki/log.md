@@ -9,6 +9,15 @@ Append-only chronological log.
 - **Index** — Entities — Bots section; K92 source row
 - **Briefs** — no new briefs; K90 already ingested
 
+## [2026-06-01] phase0 | K92 eval repos — gh api + clone audits
+
+- **WagerBrain** — CONDITIONAL-GO steal-from (MIT, stale 2020)
+- **rlcard** — CONDITIONAL-GO poker sim research
+- **bovadaAPI / hand-history** — NO-GO (no license / archived)
+- **stake-engine-client** — NO-GO (no LICENSE)
+- **claude-trading-skills** — GO (CCC); **obsidian-second-brain** — GO laptop-only
+- **dickreuter/Poker** — NO-GO GPL-3.0
+
 ## [2026-06-01] ingest | K92 — casino/poker/stake eval slice from OSINT
 
 - **Source** — `sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md` (90 URLs, gambling-primary)
