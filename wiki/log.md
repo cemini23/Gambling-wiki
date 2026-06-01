@@ -2,6 +2,14 @@
 
 Append-only chronological log.
 
+## [2026-06-01] ingest | Daily digest arXiv batch (4 papers)
+
+- **Source** — `sources/daily-digest-arxiv-batch-2026-06-01.md` (sweep `2026-06-01-daily.md`)
+- **New** — `live-betting-match-integrity`, `pm-commitment-grounded-language`, `entities/tools/pokerskill.md`
+- **Expanded** — sports-betting-fundamentals, poker-strategy, polymarket, poker-bot-tooling, PM crossover, copy-trading risks
+- **Archived** — 4 PDFs → `raw-sources/`
+- **Not ingested** — 12 news rows from sweep (manual fetch if needed)
+
 ## [2026-06-01] ops | First daily digest run + LaunchAgent active
 
 - **Report** — `wiki/sweeps/2026-06-01-daily.md` (4 arXiv PDFs → inbox)

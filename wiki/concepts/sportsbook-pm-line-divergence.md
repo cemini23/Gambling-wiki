@@ -8,6 +8,7 @@ related:
   - concepts/line-shopping-and-clv.md
   - concepts/pm-copy-trading-retail-risks.md
   - concepts/prediction-markets-crossover.md
+  - concepts/pm-commitment-grounded-language.md
   - concepts/sharp-vs-soft-books.md
   - concepts/sports-betting-fundamentals.md
   - concepts/world-cup-books-vs-pm-divergence.md

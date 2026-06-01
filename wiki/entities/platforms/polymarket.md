@@ -9,6 +9,7 @@ related:
   - concepts/gambling-wiki-scope.md
   - concepts/polymarket-weather-wagering-retail.md
   - concepts/prediction-markets-crossover.md
+  - concepts/pm-commitment-grounded-language.md
   - concepts/sportsbook-pm-line-divergence.md
   - concepts/world-cup-books-vs-pm-divergence.md
   - concepts/world-cup-prediction-market-types.md
@@ -18,12 +19,15 @@ related:
   - entities/tools/odds-jam.md
   - sources/osint-cross-wiki-wc2026-retail-synthesis-2026-05-31.md
   - sources/youtube-sports-pm-retail-batch-2026-05-29.md
+  - sources/daily-digest-arxiv-batch-2026-06-01.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-06-01
 ---
 
 ## Relations
+
+- @concepts/pm-commitment-grounded-language.md — StakeBench commitment vs sentiment
 
 - @entities/platforms/kalshi.md — cross-venue comparison
 - @osint-wiki/entities/platforms/polymarket.md — bots, LP rewards, CeminiSuite

@@ -9,6 +9,7 @@ related:
   - concepts/gambling-bot-architecture.md
   - meta/daily-research-digest-cadence.md
   - sources/brief-k93-federated-digest-2026-06-01.md
+  - sources/daily-digest-arxiv-batch-2026-06-01.md
   - meta/cross-wiki-routing.md
 maturity: validated
 created: 2026-06-01

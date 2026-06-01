@@ -5,6 +5,7 @@ tags: [concept, clv, line-shopping, sharp-betting]
 keywords: [clv, closing-line-value, line-shopping, steam, reverse-line-movement]
 related:
   - concepts/sports-betting-fundamentals.md
+  - concepts/live-betting-match-integrity.md
   - concepts/sharp-vs-soft-books.md
   - concepts/vig-and-hold.md
   - entities/platforms/pinnacle.md

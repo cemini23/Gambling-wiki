@@ -8,6 +8,7 @@ related:
   - concepts/gambling-bot-architecture.md
   - concepts/gambling-wiki-scope.md
   - concepts/prediction-markets-crossover.md
+  - concepts/pm-commitment-grounded-language.md
   - concepts/sportsbook-pm-line-divergence.md
   - concepts/world-cup-books-vs-pm-divergence.md
   - concepts/world-cup-prediction-market-types.md

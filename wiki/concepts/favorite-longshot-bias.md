@@ -8,6 +8,7 @@ related:
   - concepts/vig-and-hold.md
   - concepts/sports-betting-fundamentals.md
   - concepts/prediction-markets-crossover.md
+  - concepts/live-betting-match-integrity.md
   - concepts/parlay-and-correlated-bets.md
   - entities/platforms/kalshi.md
   - entities/platforms/polymarket.md

@@ -9,7 +9,9 @@ related:
   - entities/platforms/pokerstars.md
   - sources/youtube-operator-batch-casino-2026-05-31.md
   - sources/youtube-raise-your-edge-10k-bankroll-2026-05-31.md
+  - entities/tools/pokerskill.md
   - entities/bots/poker-bot-tooling.md
+  - sources/daily-digest-arxiv-batch-2026-06-01.md
 maturity: draft
 created: 2026-05-31
 updated: 2026-05-31

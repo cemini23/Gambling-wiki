@@ -9,7 +9,9 @@ related:
   - entities/bots/README.md
   - concepts/gambling-bot-architecture.md
   - sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md
+  - entities/tools/pokerskill.md
   - entities/tools/rlcard.md
+  - sources/daily-digest-arxiv-batch-2026-06-01.md
 maturity: draft
 created: 2026-06-01
 updated: 2026-06-01
@@ -36,6 +38,10 @@ K92 eval **poker engine / RL** cluster — **research and evaluation** lane for 
 | andrewprock/pokerstove | Steal-from | Equity calculator |
 | fedden/poker_ai | Steal-from | Deep CFR / research |
 | ishikota/PyPokerEngine | Defer | Engine |
+
+### Daily digest note (2026-06-01)
+
+**Big 2** self-play RL (arxiv:2605.28863): PPO beats value methods in 4-player imperfect-info card game — **research sim only**, not online poker. Complements **rlcard** (poker variants) and **PokerSkill** (LLM + skills, `@entities/tools/pokerskill.md`).
 
 ### Gambling-bot program fit
 

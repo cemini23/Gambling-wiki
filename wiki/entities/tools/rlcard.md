@@ -8,6 +8,7 @@ related:
   - concepts/gambling-bot-architecture.md
   - sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md
   - entities/bots/poker-bot-tooling.md
+  - entities/tools/pokerskill.md
   - entities/bots/wagerbrain.md
   - entities/bots/README.md
 maturity: validated

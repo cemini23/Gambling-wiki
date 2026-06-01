@@ -7,6 +7,7 @@ related:
   - concepts/line-shopping-and-clv.md
   - concepts/vig-and-hold.md
   - concepts/sports-betting-fundamentals.md
+  - concepts/live-betting-match-integrity.md
   - entities/platforms/pinnacle.md
   - entities/platforms/draftkings.md
   - entities/platforms/fanduel.md

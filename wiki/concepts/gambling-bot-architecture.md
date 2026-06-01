@@ -22,10 +22,10 @@ related:
   - entities/bots/wagerbrain.md
   - entities/bots/bovada-api-reference.md
   - entities/bots/bovada-hand-history-converter.md
-  - entities/bots/bovada-hand-history-converter.md
   - entities/bots/poker-bot-tooling.md
   - entities/bots/stake-engine-client.md
   - entities/tools/rlcard.md
+  - entities/tools/pokerskill.md
   - meta/daily-research-digest-cadence.md
 maturity: core
 created: 2026-05-31

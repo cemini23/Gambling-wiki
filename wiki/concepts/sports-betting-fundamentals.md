@@ -7,6 +7,7 @@ related:
   - concepts/vig-and-hold.md
   - concepts/bankroll-management.md
   - concepts/line-shopping-and-clv.md
+  - concepts/live-betting-match-integrity.md
   - concepts/sharp-vs-soft-books.md
   - concepts/parlay-and-correlated-bets.md
   - concepts/kelly-criterion-betting.md
@@ -24,6 +25,8 @@ related:
   - sources/multi-wiki-tool-eval-v6-k90-2026-05-31.md
   - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
   - sources/youtube-operator-batch-sports-betting-research-2026-05-31.md
+  - concepts/live-betting-match-integrity.md
+  - sources/daily-digest-arxiv-batch-2026-06-01.md
   - entities/tools/unabated.md
   - entities/tools/odds-jam.md
   - entities/tools/pickfinder.md

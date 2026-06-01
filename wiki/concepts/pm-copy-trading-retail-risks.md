@@ -8,7 +8,7 @@ related:
   - concepts/gambling-bot-architecture.md
   - concepts/polymarket-weather-wagering-retail.md
   - concepts/prediction-markets-crossover.md
-  - concepts/sportsbook-pm-line-divergence.md
+  - concepts/pm-commitment-grounded-language.md
   - concepts/sportsbook-pm-line-divergence.md
   - entities/people/alex-monahan.md
   - entities/tools/odds-jam.md

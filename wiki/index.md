@@ -28,7 +28,9 @@ Catalog of all wiki pages. Updated on each ingest.
 | [world-cup-books-vs-pm-divergence](concepts/world-cup-books-vs-pm-divergence.md) | validated | Sportsbook vs PM/Kalshi gaps |
 | [world-cup-third-place-advancement-betting](concepts/world-cup-third-place-advancement-betting.md) | validated | Eight-best-thirds, GD bubbles |
 | [world-cup-knockout-phase-betting](concepts/world-cup-knockout-phase-betting.md) | validated | KO phases, 90-min vs ET |
-| [polymarket-weather-wagering-retail](concepts/polymarket-weather-wagering-retail.md) | draft | Weather PM retail copy-trading posture |
+| [polymarket-weather-wagering-retail](concepts/polymarket-weather-wagering-retail.md) | draft |
+| [live-betting-match-integrity](concepts/live-betting-match-integrity.md) | draft |
+| [pm-commitment-grounded-language](concepts/pm-commitment-grounded-language.md) | draft | Weather PM retail copy-trading posture |
 
 ## Entities — Platforms
 
@@ -53,6 +55,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [fredbet](entities/tools/fredbet.md) | draft |
 | [unabated](entities/tools/unabated.md) | draft |
 | [pickfinder](entities/tools/pickfinder.md) | draft |
+| [pokerskill](entities/tools/pokerskill.md) | draft |
 | [rlcard](entities/tools/rlcard.md) | draft |
 
 ## Entities — Bots
@@ -103,6 +106,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [youtube-raise-your-edge-10k-bankroll-2026-05-31](sources/youtube-raise-your-edge-10k-bankroll-2026-05-31.md) | deep-read |
 | [multi-wiki-tool-eval-v7-k92-2026-06-01](sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md) | deep-read |
 | [brief-k93-federated-digest-2026-06-01](sources/brief-k93-federated-digest-2026-06-01.md) | deep-read |
+| [daily-digest-arxiv-batch-2026-06-01](sources/daily-digest-arxiv-batch-2026-06-01.md) | deep-read |
 
 ## Meta
 
