@@ -2,6 +2,13 @@
 
 Append-only chronological log.
 
+## [2026-06-01] cross-wiki | PolyGnosis osint stub + R3 WSJ transcript
+
+- **@osint-wiki** — `entities/tools/polygnosis.md` + `sources/polygnosis-2-polymarket-osint-2026-06-01.md` (REFERENCE harness; Cemini map)
+- **R3** — `sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md` (yt-dlp en captions)
+- **Updated** — Kalshi/Polymarket regulation sections, prediction-markets-crossover, sharp-vs-soft-books, daily-digest-news R3 row
+- **Archived** — `raw-sources/youtube-wsj-S2g0TwfecJE.en.vtt`
+
 ## [2026-06-01] ingest | Sweep news R1–R12 + PolyGnosis 2.0
 
 - **News** — `sources/daily-digest-news-r1-r12-2026-06-01.md` (Brave/curl; R3 YouTube title-only)

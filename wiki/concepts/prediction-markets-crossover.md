@@ -17,6 +17,7 @@ related:
   - concepts/pm-copy-trading-retail-risks.md
   - concepts/pm-commitment-grounded-language.md
   - concepts/pm-perspective-mismatch-trading.md
+  - sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md
   - sources/polygnosis-2-polymarket-osint-2026-06-01.md
   - entities/sports/world-cup-2026-betting.md
   - concepts/world-cup-prediction-market-types.md
@@ -29,10 +30,12 @@ related:
   - concepts/gambling-bot-architecture.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-06-01
 ---
 
 ## Relations
+
+- @sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md — R3 regulatory explainer
 
 - @concepts/gambling-wiki-scope.md — scope split
 - @entities/platforms/kalshi.md — regulated event contracts
@@ -55,7 +58,7 @@ How Kalshi and Polymarket fit the **wagering** knowledge base vs the **trading s
 | Question | "Is this contract +EV for my bankroll?" | "How does the bot quote/farm/arbitrage it?" |
 | Fees | Retail fee math, withdrawal costs | Fee APIs in orchestrator |
 | Sports | Consensus agents, MomentumOdds signals | Executor bots, WC LP |
-| Regulation | Consumer rules, state gaming vs DCM | CFTC, compliance briefs |
+| Regulation | Consumer rules, state gaming vs DCM; WSJ R3 state-fight timeline | CFTC, compliance briefs, `@osint-wiki/entities/tools/polygnosis.md` |
 
 ### Retail checklist before betting PM sports
 
@@ -63,7 +66,7 @@ How Kalshi and Polymarket fit the **wagering** knowledge base vs the **trading s
 2. Model **fees** + spread — effective hold in `@concepts/vig-and-hold.md`
 3. Compare price vs **sportsbook line** (CLV analog)
 4. Size with **fractional Kelly** — `@concepts/kelly-criterion-betting.md` + `@osint-wiki/concepts/kelly-sizing-quarter.md`
-5. Know **jurisdiction** — geoblocks, KYC
+5. Know **jurisdiction** — geoblocks, KYC; state **gambling-license** fights may restrict sports contracts (`@sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md`)
 
 ### Tools spanning both wikis
 

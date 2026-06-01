@@ -110,6 +110,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [daily-digest-arxiv-batch-2026-06-01](sources/daily-digest-arxiv-batch-2026-06-01.md) | deep-read |
 | [daily-digest-news-r1-r12-2026-06-01](sources/daily-digest-news-r1-r12-2026-06-01.md) | read |
 | [polygnosis-2-polymarket-osint-2026-06-01](sources/polygnosis-2-polymarket-osint-2026-06-01.md) | deep-read |
+| [youtube-wsj-kalshi-polymarket-valuations-2026-06-01](sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md) | deep-read |
 
 ## Meta
 

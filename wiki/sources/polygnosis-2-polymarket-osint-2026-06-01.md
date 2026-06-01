@@ -12,11 +12,12 @@ related:
   - sources/daily-digest-news-r1-r12-2026-06-01.md
   - sources/daily-digest-arxiv-batch-2026-06-01.md
   - meta/daily-research-digest-cadence.md
+  - sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md
 maturity: validated
 read_status: deep-read
 created: 2026-06-01
 updated: 2026-06-01
-cross-wiki-implementation: @osint-wiki
+cross-wiki-implementation: @osint-wiki/entities/tools/polygnosis.md
 ---
 
 ## Relations
@@ -24,6 +25,7 @@ cross-wiki-implementation: @osint-wiki
 - @entities/platforms/polymarket.md — primary market surface
 - @concepts/pm-perspective-mismatch-trading.md — retail framing of “Perspective Mismatch”
 - @osint-wiki — prod harness / Cemini execution (do not duplicate code here)
+- @osint-wiki/entities/tools/polygnosis.md — PolyGnosis 2.0 implementation stub
 
 ## Raw Concept
 

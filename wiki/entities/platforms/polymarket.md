@@ -22,6 +22,7 @@ related:
   - sources/youtube-sports-pm-retail-batch-2026-05-29.md
   - sources/daily-digest-arxiv-batch-2026-06-01.md
   - sources/daily-digest-news-r1-r12-2026-06-01.md
+  - sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md
   - sources/polygnosis-2-polymarket-osint-2026-06-01.md
 maturity: draft
 created: 2026-05-31
@@ -57,6 +58,15 @@ Probability-based **taker fee** on sports (per SI.com ingest): peak **~0.75%** e
 Sports menu includes **advance to knockout**, **group winner**, **match fixtures**, and **outright winner** — see `@concepts/world-cup-prediction-market-types.md` and `@entities/sports/world-cup-2026-betting.md`. Taker fees on sports scale with price; read settlement sources (FIFA + credible reporting) before sizing.
 
 For copy-trading, LP farming, agent frameworks: `@osint-wiki/entities/platforms/polymarket.md`.
+
+### Regulation and positioning (R3 WSJ, 2026-06-01) [TENTATIVE]
+
+- **Offshore main platform** vs **CFTC-compliant US** rollout (2026, per WSJ).
+- **Insider trading** — platform rule updates (stolen info, illegal tips, outcome influence); high-profile enforcement examples cited in video.
+- **“Information market”** — company-reported **>90%** of audience engages without trading; median loss **<$10** for traders [TENTATIVE — company via WSJ].
+- **Political/regulatory** — Don Jr. adviser role to Kalshi and Polymarket noted; CFTC asserts DCM authority vs state gambling framing.
+
+Hub source: `@sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md`. Prod harness: `@osint-wiki/entities/tools/polygnosis.md`.
 
 ## Snippets
 

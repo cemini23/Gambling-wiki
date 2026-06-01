@@ -18,10 +18,12 @@ related:
   - entities/sports/nfl-betting.md
   - entities/people/rufus-peabody.md
   - sources/youtube-operator-batch-sports-betting-research-2026-05-31.md
+  - entities/platforms/kalshi.md
   - entities/tools/unabated.md
+  - sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-06-01
 ---
 
 ## Relations
@@ -56,6 +58,8 @@ Classic pattern: sharp line (Pinnacle) moves; soft book lag → short-window arb
 ### Prediction market analog
 
 Kalshi (regulated DCM) vs Polymarket (CLOB) — efficiency gradient similar to sharp/soft; see `@concepts/prediction-markets-crossover.md` and `@concepts/sportsbook-pm-line-divergence.md`.
+
+**Limits:** WSJ (R3) profiles pros moving volume to Kalshi because books **cap or ban** winning accounts while PMs seek fee volume — not identical to “sharp book” pricing, but similar **account-risk** tradeoff for high-stake bettors [TENTATIVE]. Source: `@sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md`.
 
 **Sports PM venues (Novig, etc.)** — Rufus Peabody notes US books limit winners, pushing flow to **Pinnacle** or prediction markets with different liquidity/fee profiles [Source: M1T0OlG3XEU via `@entities/people/rufus-peabody.md`]. Capper workflow (DubClub): **Pinnacle/Bookmaker** as hard-to-ban sharp execution [Source: 3FpV-iOXvQo].
 

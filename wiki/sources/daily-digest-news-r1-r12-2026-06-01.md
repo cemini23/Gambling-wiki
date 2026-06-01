@@ -7,6 +7,7 @@ related:
   - meta/daily-research-digest-cadence.md
   - sources/daily-digest-arxiv-batch-2026-06-01.md
   - sources/polygnosis-2-polymarket-osint-2026-06-01.md
+  - sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md
   - entities/platforms/kalshi.md
   - entities/platforms/polymarket.md
   - entities/platforms/draftkings.md
@@ -44,7 +45,7 @@ updated: 2026-06-01
 |----|-----|-----------|
 | **R1** | [SI.com Kalshi vs Polymarket](https://www.si.com/prediction-markets/reviews/kalshi-vs-polymarket) | Kalshi: CFTC-regulated, USD, US retail onboarding. Polymarket: deeper global markets, crypto-native. **PM sports taker fee** (from Mar 30, 2026): probability-based, **peak ~0.75%** at 50¢, lower at extremes; makers pay on limit fills; sells no taker fee [TENTATIVE — SI/Brave]. |
 | **R2** | [Tech-Insider vig gap](https://tech-insider.org/prediction-markets-vs-sportsbooks/) | Structural **~4.5% sportsbook hold** vs **~0.5–1.5%** implied vig on flagship Kalshi sports vs **-110/-110** books. Worked example: Chiefs ML Kalshi 58.5% vs DK -135 → ~1.1¢ better effective on Kalshi [TENTATIVE]. Notes **Section 1256** tax treatment for Kalshi gains vs ordinary gambling income for books. Sharp limits at books vs no PM equivalent. |
-| **R3** | [WSJ YouTube](https://www.youtube.com/watch?v=S2g0TwfecJE) | **Not transcribed** — title: how Kalshi/Polymarket reach high valuations without traditional gambling licenses. Ingest as **regulatory/product** context only. |
+| **R3** | [WSJ YouTube](https://www.youtube.com/watch?v=S2g0TwfecJE) | **Transcript ingested** — `@sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md`: CFTC DCM vs offshore PM, sports >70% Kalshi volume, state license fight, Kalshi Trading LLC MM, sharp limits narrative, insider-trading tail risks. |
 
 ### Q2 — Sports betting +EV (R4–R6)
 
@@ -78,6 +79,6 @@ updated: 2026-06-01
 
 ## Dead Ends
 
-- R3 YouTube — no transcript ingested
+- R3 YouTube — ingested → `@sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md`
 - R6 — single-event blog, low structural value
 - R1/R2 — direct HTML fetch failed; rely on Brave/SI secondary snippets
