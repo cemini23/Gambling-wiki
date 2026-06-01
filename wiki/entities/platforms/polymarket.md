@@ -4,19 +4,20 @@ type: entity
 tags: [entity, platform, prediction-markets, crypto, sports]
 keywords: [polymarket, clob, usdc, sports-markets]
 related:
-  - entities/platforms/kalshi.md
-  - concepts/prediction-markets-crossover.md
-  - concepts/gambling-wiki-scope.md
   - concepts/favorite-longshot-bias.md
-  - concepts/world-cup-prediction-market-types.md
+  - concepts/gambling-bot-architecture.md
+  - concepts/gambling-wiki-scope.md
+  - concepts/polymarket-weather-wagering-retail.md
+  - concepts/prediction-markets-crossover.md
+  - concepts/sportsbook-pm-line-divergence.md
   - concepts/world-cup-books-vs-pm-divergence.md
+  - concepts/world-cup-prediction-market-types.md
+  - entities/platforms/kalshi.md
   - entities/sports/world-cup-2026-betting.md
-  - sources/osint-cross-wiki-wc2026-retail-synthesis-2026-05-31.md
   - entities/tools/momentum-odds.md
   - entities/tools/odds-jam.md
-  - concepts/sportsbook-pm-line-divergence.md
+  - sources/osint-cross-wiki-wc2026-retail-synthesis-2026-05-31.md
   - sources/youtube-sports-pm-retail-batch-2026-05-29.md
-  - concepts/polymarket-weather-wagering-retail.md
 maturity: draft
 created: 2026-05-31
 updated: 2026-05-31

@@ -4,10 +4,11 @@ type: source
 tags: [source, tool-eval, k90, cross-wiki, gemini-deep-research]
 keywords: [georgedouzas, fredbet, atpbetting, weather-bot-graveyard, steal-from, k90]
 related:
-  - entities/tools/sports-betting-georgedouzas.md
-  - entities/tools/fredbet.md
+  - concepts/gambling-bot-architecture.md
   - concepts/polymarket-weather-wagering-retail.md
   - concepts/sports-betting-fundamentals.md
+  - entities/tools/fredbet.md
+  - entities/tools/sports-betting-georgedouzas.md
 maturity: draft
 read_status: deep-read
 created: 2026-05-31

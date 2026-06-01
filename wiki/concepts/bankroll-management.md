@@ -4,25 +4,26 @@ type: concept
 tags: [concept, bankroll, risk-management, discipline]
 keywords: [bankroll, unit-sizing, stop-loss, session-limits, responsible-gambling]
 related:
-  - concepts/kelly-criterion-betting.md
-  - concepts/vig-and-hold.md
-  - concepts/gambling-wiki-scope.md
-  - concepts/sports-betting-fundamentals.md
-  - concepts/dfs-strategy-overview.md
   - concepts/best-ball-strategy.md
-  - concepts/poker-strategy-overview.md
   - concepts/casino-game-house-edge.md
+  - concepts/dfs-strategy-overview.md
+  - concepts/gambling-bot-architecture.md
+  - concepts/gambling-wiki-scope.md
+  - concepts/kelly-criterion-betting.md
   - concepts/parlay-and-correlated-bets.md
-  - entities/tools/odds-jam.md
   - concepts/pm-copy-trading-retail-risks.md
-  - sources/kelly-1956-information-rate.md
-  - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
-  - sources/youtube-operator-batch-sports-betting-research-2026-05-31.md
-  - entities/tools/unabated.md
-  - entities/platforms/underdog-fantasy.md
-  - sources/youtube-operator-batch-casino-2026-05-31.md
-  - sources/youtube-raise-your-edge-10k-bankroll-2026-05-31.md
+  - concepts/poker-strategy-overview.md
+  - concepts/sports-betting-fundamentals.md
+  - concepts/vig-and-hold.md
   - entities/games/blackjack.md
+  - entities/platforms/underdog-fantasy.md
+  - entities/tools/odds-jam.md
+  - entities/tools/unabated.md
+  - sources/kelly-1956-information-rate.md
+  - sources/youtube-operator-batch-casino-2026-05-31.md
+  - sources/youtube-operator-batch-sports-betting-research-2026-05-31.md
+  - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
+  - sources/youtube-raise-your-edge-10k-bankroll-2026-05-31.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-05-31
@@ -30,6 +31,7 @@ updated: 2026-05-31
 
 ## Relations
 
+- @concepts/gambling-bot-architecture.md — fleet bankroll caps
 - @concepts/kelly-criterion-betting.md — optimal growth sizing; bankroll caps Kelly in practice
 - @concepts/vig-and-hold.md — vig determines minimum edge to overcome
 - @concepts/sports-betting-fundamentals.md — unit betting in sports context

@@ -4,15 +4,16 @@ type: concept
 tags: [concept, polymarket, copy-trading, retail, behavioral]
 keywords: [copy-trading, whale-wallets, slippage, adverse-selection, odds-jam]
 related:
-  - entities/tools/odds-jam.md
   - concepts/bankroll-management.md
+  - concepts/gambling-bot-architecture.md
+  - concepts/polymarket-weather-wagering-retail.md
   - concepts/prediction-markets-crossover.md
   - concepts/sportsbook-pm-line-divergence.md
-  - entities/people/alex-monahan.md
-  - sources/youtube-sports-pm-retail-batch-2026-05-29.md
   - concepts/sportsbook-pm-line-divergence.md
+  - entities/people/alex-monahan.md
+  - entities/tools/odds-jam.md
   - sources/gemini-github-sports-betting-landscape-2026-05-30.md
-  - concepts/polymarket-weather-wagering-retail.md
+  - sources/youtube-sports-pm-retail-batch-2026-05-29.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-05-31
@@ -20,6 +21,7 @@ updated: 2026-05-31
 
 ## Relations
 
+- @concepts/gambling-bot-architecture.md — PM bot lane risks
 - @entities/tools/odds-jam.md — Prediction Insiders product
 - @sources/youtube-sports-pm-retail-batch-2026-05-29.md — Financial Wolf experiment
 - @osint-wiki/concepts/polymarket-copy-trading-strategy.md — bot/DIY wallet pipeline

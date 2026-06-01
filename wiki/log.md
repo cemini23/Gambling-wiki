@@ -2,6 +2,13 @@
 
 Append-only chronological log.
 
+## [2026-05-31] scope | Gambling bot program — wiki home for automation knowledge
+
+- **Operator direction** — eventual master bot or platform-specific bot fleet; save gambling-botting intel in this wiki
+- **New** — `concepts/gambling-bot-architecture.md`, `meta/gambling-bot-ingest-rubric.md`, `entities/bots/README.md`
+- **Updated** — `gambling-wiki-scope.md`, `meta/cross-wiki-routing.md`, `CLAUDE.md`, `ROADMAP.md` (W4, D4–D6)
+- **Split** — wagering bot design **here**; CeminiSuite prod code **@osint-wiki**
+
 ## [2026-05-31] ingest | Raise Your Edge — $10k MTT bankroll from zero (1 video)
 
 - **Source** — `sources/youtube-raise-your-edge-10k-bankroll-2026-05-31.md` (yrGExOmDRLk)

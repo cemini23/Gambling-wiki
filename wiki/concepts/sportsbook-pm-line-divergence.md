@@ -4,20 +4,21 @@ type: concept
 tags: [concept, line-shopping, kalshi, polymarket, sportsbooks]
 keywords: [line-divergence, consensus, totals, moneyline, cross-venue-shopping]
 related:
+  - concepts/gambling-bot-architecture.md
   - concepts/line-shopping-and-clv.md
-  - concepts/sharp-vs-soft-books.md
+  - concepts/pm-copy-trading-retail-risks.md
   - concepts/prediction-markets-crossover.md
-  - concepts/world-cup-books-vs-pm-divergence.md
+  - concepts/sharp-vs-soft-books.md
   - concepts/sports-betting-fundamentals.md
-  - entities/tools/momentum-odds.md
-  - entities/platforms/kalshi.md
-  - entities/platforms/polymarket.md
+  - concepts/world-cup-books-vs-pm-divergence.md
   - entities/platforms/draftkings.md
   - entities/platforms/fanduel.md
-  - sources/youtube-sports-pm-retail-batch-2026-05-29.md
-  - sources/gemini-github-sports-betting-landscape-2026-05-30.md
-  - concepts/pm-copy-trading-retail-risks.md
+  - entities/platforms/kalshi.md
+  - entities/platforms/polymarket.md
   - entities/sports/nba-betting.md
+  - entities/tools/momentum-odds.md
+  - sources/gemini-github-sports-betting-landscape-2026-05-30.md
+  - sources/youtube-sports-pm-retail-batch-2026-05-29.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-05-31
@@ -25,6 +26,7 @@ updated: 2026-05-31
 
 ## Relations
 
+- @concepts/gambling-bot-architecture.md — divergence bot lane
 - @concepts/line-shopping-and-clv.md — CLV on books; divergence is cross-venue CLV analog
 - @entities/tools/momentum-odds.md — commercial multi-book + PM routing feed
 - @concepts/world-cup-books-vs-pm-divergence.md — WC-specific nation-level gaps

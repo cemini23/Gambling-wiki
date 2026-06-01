@@ -9,8 +9,9 @@ Local knowledge hub for **betting, gambling, and wagering strategy** — scoped 
 1. **Sports betting** — spreads, totals, moneylines, props, live betting, line shopping, CLV, sharp vs soft books, arbitrage and middles (where legal).
 2. **Daily fantasy & season-long fantasy** — DFS (DraftKings/FanDuel), best ball, roster construction, ownership leverage, correlation stacks.
 3. **Casino games** — poker (cash + MTT), blackjack, craps, roulette, baccarat, slots; house edge, bankroll, table selection, basic strategy.
-4. **Prediction markets (consumer angle)** — Kalshi, Polymarket, and regulated event contracts **as wagering products**: fees, settlement, liquidity, behavioral edges. **Execution bots, CeminiSuite integration, and quant stack live in `@osint-wiki`** — cross-link, don't duplicate.
-5. **Cross-cutting math & discipline** — Kelly criterion, fractional Kelly, vig/overround, FLB, variance, record-keeping, responsible-gambling guardrails.
+4. **Prediction markets (consumer angle)** — Kalshi, Polymarket, and regulated event contracts **as wagering products**: fees, settlement, liquidity, behavioral edges.
+5. **Gambling bots (planned)** — architecture, per-platform automation requirements, FOSS evals, signal→execution design, ToS/latency/failure modes. Likely a **fleet of platform bots** (sportsbook, PM/Kalshi, DFS) plus optional master orchestrator. **Wagering bot knowledge lives here**; CeminiSuite **prod deployment and existing PM bot code** stay in `@osint-wiki` — cross-link, don't duplicate implementation.
+6. **Cross-cutting math & discipline** — Kelly criterion, fractional Kelly, vig/overround, FLB, variance, record-keeping, responsible-gambling guardrails.
 
 The wiki is a librarian that **manages, curates, and applies** that knowledge:
 
@@ -29,11 +30,14 @@ This is a laptop-first workspace. Raw sources archive locally in `raw-sources/` 
 | Sportsbook / casino / DFS strategy | **Primary home** | Cross-link only |
 | Kelly, FLB, vig (general theory) | **Primary home** | PM-specific implementations + bot code |
 | Kalshi / Polymarket **as products** (fees, rules, retail behavior) | **Primary home** | Regulatory + CeminiSuite execution |
-| PM/Kalshi **bots, LP, arb infrastructure** | Stub + cross-link | **Primary home** |
-| World Cup bot, Cemini trading stack | Cross-link | **Primary home** |
+| **Gambling bot program** (design, requirements, FOSS eval, per-platform lanes) | **Primary home** | Prod deploy + existing bot **code** |
+| PM/Kalshi **LP, maker, institutional arb** at Cemini depth | Summary + cross-link | **Primary home** |
+| World Cup bot, Cemini trading stack | Retail + bot requirements | **Implementation** |
 | OSINT / macro / equity research | Out of scope | Primary home |
 
-**Routing rule:** ingest here first when the source teaches *how to bet or gamble better*. Route to `@osint-wiki` when the source is primarily about *building or operating automated trading systems* on prediction markets.
+**Routing rule:** ingest here when the source teaches *how to bet or gamble better* **or what a gambling bot should automate* on a wagering platform (DraftKings, Kalshi, DFS, etc.). Route to `@osint-wiki` when the source is primarily *CeminiSuite prod deployment*, private credentials, or PM bot **codebase** operations — but still capture **wagering logic** on a gambling-wiki page or stub.
+
+**Bot ingest:** follow `wiki/meta/gambling-bot-ingest-rubric.md` and `wiki/concepts/gambling-bot-architecture.md`.
 
 ## Architecture — three layers
 
@@ -71,6 +75,7 @@ Gambling-wiki/
     entities/
       platforms/                    # DraftKings, FanDuel, Pinnacle, Kalshi, Polymarket, PokerStars, …
       tools/                        # OddsJam, Action Network, lineup optimizers, trackers
+      bots/                         # planned platform bots (requirements; code on @osint-wiki)
       games/                        # poker, blackjack, craps, roulette, slots, baccarat
       sports/                       # NFL, NBA, MLB, soccer, tennis, …
       people/                       # authors, coaches, notable sharp bettors

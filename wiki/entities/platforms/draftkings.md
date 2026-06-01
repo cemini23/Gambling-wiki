@@ -4,20 +4,21 @@ type: entity
 tags: [entity, platform, sportsbook, dfs, us-legal]
 keywords: [draftkings, dk, sportsbook, dfs, best-ball]
 related:
-  - entities/platforms/fanduel.md
-  - concepts/sports-betting-fundamentals.md
-  - concepts/dfs-strategy-overview.md
   - concepts/best-ball-strategy.md
+  - concepts/dfs-strategy-overview.md
+  - concepts/gambling-bot-architecture.md
   - concepts/sharp-vs-soft-books.md
-  - concepts/world-cup-books-vs-pm-divergence.md
-  - entities/sports/world-cup-2026-betting.md
+  - concepts/sports-betting-fundamentals.md
   - concepts/sportsbook-pm-line-divergence.md
-  - entities/sports/nfl-betting.md
-  - entities/sports/nba-betting.md
-  - entities/tools/pydfs-lineup-optimizer.md
-  - entities/platforms/underdog-fantasy.md
-  - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
+  - concepts/world-cup-books-vs-pm-divergence.md
   - entities/people/rufus-peabody.md
+  - entities/platforms/fanduel.md
+  - entities/platforms/underdog-fantasy.md
+  - entities/sports/nba-betting.md
+  - entities/sports/nfl-betting.md
+  - entities/sports/world-cup-2026-betting.md
+  - entities/tools/pydfs-lineup-optimizer.md
+  - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
 maturity: draft
 created: 2026-05-31
 updated: 2026-05-31

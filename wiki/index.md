@@ -7,6 +7,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | Page | Maturity | Summary |
 |------|----------|---------|
 | [gambling-wiki-scope](concepts/gambling-wiki-scope.md) | core | Scope vs @osint-wiki |
+| [gambling-bot-architecture](concepts/gambling-bot-architecture.md) | core | Planned bot fleet / master orchestrator |
 | [bankroll-management](concepts/bankroll-management.md) | validated | Units, pools, discipline |
 | [kelly-criterion-betting](concepts/kelly-criterion-betting.md) | validated | Kelly math + fractional Kelly |
 | [vig-and-hold](concepts/vig-and-hold.md) | validated | Juice, overround, breakeven |
@@ -95,3 +96,4 @@ Catalog of all wiki pages. Updated on each ingest.
 | Page | Purpose |
 |------|---------|
 | [cross-wiki-routing](meta/cross-wiki-routing.md) | Ingest routing vs osint-wiki |
+| [gambling-bot-ingest-rubric](meta/gambling-bot-ingest-rubric.md) | Bot-related source ingest |

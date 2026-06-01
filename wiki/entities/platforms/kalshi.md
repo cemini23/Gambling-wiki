@@ -4,16 +4,17 @@ type: entity
 tags: [entity, platform, prediction-markets, regulated, sports]
 keywords: [kalshi, event-contracts, cftc, dcm, sports-markets]
 related:
-  - entities/platforms/polymarket.md
-  - concepts/prediction-markets-crossover.md
-  - concepts/gambling-wiki-scope.md
   - concepts/favorite-longshot-bias.md
-  - concepts/world-cup-prediction-market-types.md
-  - concepts/world-cup-books-vs-pm-divergence.md
-  - entities/sports/world-cup-2026-betting.md
-  - sources/osint-cross-wiki-wc2026-retail-synthesis-2026-05-31.md
-  - entities/tools/momentum-odds.md
+  - concepts/gambling-bot-architecture.md
+  - concepts/gambling-wiki-scope.md
+  - concepts/prediction-markets-crossover.md
   - concepts/sportsbook-pm-line-divergence.md
+  - concepts/world-cup-books-vs-pm-divergence.md
+  - concepts/world-cup-prediction-market-types.md
+  - entities/platforms/polymarket.md
+  - entities/sports/world-cup-2026-betting.md
+  - entities/tools/momentum-odds.md
+  - sources/osint-cross-wiki-wc2026-retail-synthesis-2026-05-31.md
   - sources/youtube-sports-pm-retail-batch-2026-05-29.md
 maturity: draft
 created: 2026-05-31

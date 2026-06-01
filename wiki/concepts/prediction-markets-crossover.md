@@ -23,6 +23,7 @@ related:
   - concepts/polymarket-weather-wagering-retail.md
   - entities/people/rufus-peabody.md
   - sources/youtube-operator-batch-sports-betting-research-2026-05-31.md
+  - concepts/gambling-bot-architecture.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-05-31
@@ -76,7 +77,7 @@ Wharton interview with `@entities/people/rufus-peabody.md` frames **sports-focus
 | Pricing | Embedded vig (-110) | Bid-ask + fees |
 | Reference | Pinnacle close | Often still benchmark vs Pinnacle |
 
-Retail: same checklist as Kalshi/PM — fees, settlement, bankroll. Bot arb → `@osint-wiki`.
+Retail: same checklist as Kalshi/PM — fees, settlement, bankroll. **Bot execution** — requirements on `@concepts/gambling-bot-architecture.md`; prod code on `@osint-wiki`.
 
 ### When to stay in traditional books
 

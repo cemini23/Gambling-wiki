@@ -33,6 +33,19 @@ Priority ingest lanes once sources arrive:
 | **Casino** | basic strategy, comp optimization, table selection |
 | **Prediction markets (retail)** | fee math, FLB on Kalshi vs PM, cross-venue shopping |
 
+### W4 — Gambling bot program (planned)
+
+**Status:** Scoping 2026-05-31 — knowledge base first; implementation TBD.
+
+**Intent:** Build either one **master gambling bot** or (more likely) **multiple platform-specific bots** (sportsbook, PM/Kalshi, DFS) sharing bankroll/logging core.
+
+Steps:
+- [x] Document scope split — `wiki/concepts/gambling-bot-architecture.md`, ingest rubric, `entities/bots/` namespace
+- [ ] Prioritize first automation lane (see D5)
+- [ ] Ingest FOSS bot repos into `entities/bots/` with Phase-0 verdicts
+- [ ] Cross-link existing @osint-wiki bot entities (polybot, Harrier, WC bot) bidirectionally
+- [ ] Decide code repo home (see D6)
+
 ### W3 — Public polish
 
 - [x] MIT LICENSE
@@ -49,6 +62,9 @@ Priority ingest lanes once sources arrive:
 | D1 | Librarian sync cadence | Manual rsync vs hourly LaunchAgent like osint-wiki | **Open** — defer until page count justifies RAG |
 | D2 | Raw source home | Laptop `raw-sources/` only vs also push to cemini-librarian bulk | **Open** — follow operator preference on next ingest |
 | D3 | DFS optimizer tooling | Document pydfs-lineup-optimizer vs paid optimizers | **Open** — Phase-0 when DFS ingest batch lands |
+| D4 | Bot topology | Single master orchestrator vs independent platform bots | **Open** — lean fleet |
+| D5 | First bot lane | Sportsbook +EV vs PM divergence vs DFS slate | **Open** |
+| D6 | Code repo home | Gambling-wiki scripts vs CeminiSuite vs new repo | **Open** |
 
 ---
 

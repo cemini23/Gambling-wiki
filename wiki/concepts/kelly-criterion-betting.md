@@ -6,14 +6,15 @@ keywords: [kelly, fractional-kelly, edge, growth-rate, binary-bets]
 related:
   - concepts/bankroll-management.md
   - concepts/favorite-longshot-bias.md
-  - concepts/vig-and-hold.md
-  - concepts/sports-betting-fundamentals.md
+  - concepts/gambling-bot-architecture.md
   - concepts/parlay-and-correlated-bets.md
   - concepts/prediction-markets-crossover.md
-  - sources/youtube-operator-batch-sports-betting-research-2026-05-31.md
-  - sources/youtube-operator-batch-casino-2026-05-31.md
+  - concepts/sports-betting-fundamentals.md
+  - concepts/vig-and-hold.md
   - entities/tools/unabated.md
   - sources/kelly-1956-information-rate.md
+  - sources/youtube-operator-batch-casino-2026-05-31.md
+  - sources/youtube-operator-batch-sports-betting-research-2026-05-31.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-05-31
@@ -21,6 +22,7 @@ updated: 2026-05-31
 
 ## Relations
 
+- @concepts/gambling-bot-architecture.md — sizing for automated lanes
 - @concepts/bankroll-management.md — Kelly informs unit size; bankroll rules cap Kelly
 - @concepts/favorite-longshot-bias.md — mis-estimated `p` breaks full-Kelly
 - @concepts/vig-and-hold.md — edge must exceed vig before Kelly applies

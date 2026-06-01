@@ -5,16 +5,17 @@ tags: [source, gemini-deep-research, github, sports-betting, dfs, phase-0]
 keywords: [open-source, pydfs, sharp-soft-arb, copy-trading, landscape]
 related:
   - concepts/dfs-strategy-overview.md
-  - concepts/sharp-vs-soft-books.md
-  - concepts/prediction-markets-crossover.md
+  - concepts/gambling-bot-architecture.md
   - concepts/pm-copy-trading-retail-risks.md
+  - concepts/prediction-markets-crossover.md
+  - concepts/sharp-vs-soft-books.md
   - concepts/sportsbook-pm-line-divergence.md
-  - entities/tools/momentum-odds.md
-  - entities/tools/pydfs-lineup-optimizer.md
-  - entities/tools/odds-jam.md
-  - entities/sports/nfl-betting.md
   - entities/sports/nba-betting.md
+  - entities/sports/nfl-betting.md
   - entities/sports/world-cup-2026-betting.md
+  - entities/tools/momentum-odds.md
+  - entities/tools/odds-jam.md
+  - entities/tools/pydfs-lineup-optimizer.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-05-31
