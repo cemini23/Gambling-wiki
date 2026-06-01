@@ -9,7 +9,8 @@ related:
   - entities/games/poker.md
   - entities/platforms/pokerstars.md
   - sources/youtube-operator-batch-casino-2026-05-31.md
-maturity: draft
+  - sources/youtube-raise-your-edge-10k-bankroll-2026-05-31.md
+maturity: validated
 created: 2026-05-31
 updated: 2026-05-31
 ---
@@ -32,8 +33,21 @@ Poker as **skill game** — cash vs MTT, bankroll, math-first decision making, s
 |---|------|-----|
 | Stack depth | Fixed rebuy | Shrinking vs field |
 | Edge expression | bb/100 | ROI % over large sample |
-| Bankroll rule | 20–40 BI | 100+ BI [TENTATIVE] |
+| Bankroll rule | 20–40 BI | **100+ BI** (200 cautious; ~300 hyper) [Source: yrGExOmDRLk] |
 | Key extra skill | Table select | ICM |
+
+### MTT zero → $10k grind (Raise Your Edge) [TENTATIVE]
+
+Creator 10-step path for **online MTTs** [Source: @sources/youtube-raise-your-edge-10k-bankroll-2026-05-31.md]:
+
+1. **Variance first** — short-run results ≠ skill; 100-buy-in floor before moving stakes
+2. **Preflop literacy** — understand opens by position; don't memorize charts blindly
+3. **Micro stakes** — play smallest available even with $500 roll; session review (Hand2Note optional)
+4. **Value-first postflop** at low stakes — bet big with strong hands; avoid bluff wars vs stations
+5. **ICM** — near money, chip EV is non-linear; study before moving up in buy-in
+6. **Mindset** — tilt and "know vs do" gap; river curiosity calls flagged as **gambling behavior**
+
+**Move-up rule:** never promote stake after **one big score** — require large-sample results.
 
 ### Core skills (operator batch)
 
@@ -60,6 +74,8 @@ Different variance profile and bankroll math — do not mix bankrolls without tr
 ## Snippets
 
 > "Position is to poker what location is to real estate." [Source: zH45e91Nk8E via @sources/youtube-operator-batch-casino-2026-05-31.md]
+
+> "ICM means that tournament chips are not worth real money in a linear way." [Source: yrGExOmDRLk via @sources/youtube-raise-your-edge-10k-bankroll-2026-05-31.md]
 
 ## Dead Ends
 

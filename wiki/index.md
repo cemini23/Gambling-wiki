@@ -19,7 +19,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [parlay-and-correlated-bets](concepts/parlay-and-correlated-bets.md) | draft | Parlays, SGP, correlation |
 | [dfs-strategy-overview](concepts/dfs-strategy-overview.md) | draft | GPP, cash, stacking |
 | [best-ball-strategy](concepts/best-ball-strategy.md) | validated | GPP, cash, stacking, BBM7 |
-| [poker-strategy-overview](concepts/poker-strategy-overview.md) | draft | Cash, MTT, math, position |
+| [poker-strategy-overview](concepts/poker-strategy-overview.md) | validated | Cash, MTT, ICM, zero-to-10k path |
 | [casino-game-house-edge](concepts/casino-game-house-edge.md) | validated | Edge by game, smart-bet ranking |
 | [prediction-markets-crossover](concepts/prediction-markets-crossover.md) | validated | Kalshi/Polymarket retail lens |
 | [world-cup-2026-format](concepts/world-cup-2026-format.md) | validated | 48-team structure, calendar |
@@ -88,6 +88,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [youtube-operator-batch-wc-bbm-2026-05-31](sources/youtube-operator-batch-wc-bbm-2026-05-31.md) | deep-read |
 | [youtube-operator-batch-sports-betting-research-2026-05-31](sources/youtube-operator-batch-sports-betting-research-2026-05-31.md) | deep-read |
 | [youtube-operator-batch-casino-2026-05-31](sources/youtube-operator-batch-casino-2026-05-31.md) | deep-read |
+| [youtube-raise-your-edge-10k-bankroll-2026-05-31](sources/youtube-raise-your-edge-10k-bankroll-2026-05-31.md) | deep-read |
 
 ## Meta
 

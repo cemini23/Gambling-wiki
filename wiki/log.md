@@ -2,6 +2,12 @@
 
 Append-only chronological log.
 
+## [2026-05-31] ingest | Raise Your Edge — $10k MTT bankroll from zero (1 video)
+
+- **Source** — `sources/youtube-raise-your-edge-10k-bankroll-2026-05-31.md` (yrGExOmDRLk)
+- **Expanded** — poker-strategy-overview (validated), bankroll-management (100-BI MTT ladder, variance)
+- **Themes** — 10-step MTT grind, ICM, value-heavy micro postflop, anti-gambling on quick-score chase
+
 ## [2026-05-31] ingest | Operator YouTube batch 3 — casino + AI sports (27 videos)
 
 - **Source** — `sources/youtube-operator-batch-casino-2026-05-31.md` (25/27 VTT)

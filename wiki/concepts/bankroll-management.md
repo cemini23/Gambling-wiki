@@ -21,6 +21,7 @@ related:
   - entities/tools/unabated.md
   - entities/platforms/underdog-fantasy.md
   - sources/youtube-operator-batch-casino-2026-05-31.md
+  - sources/youtube-raise-your-edge-10k-bankroll-2026-05-31.md
   - entities/games/blackjack.md
 maturity: validated
 created: 2026-05-31
@@ -50,7 +51,7 @@ Keep **distinct pools** for unrelated verticals (sports vs poker vs casino vs DF
 |----------|----------------------|-------|
 | Sports betting | 1–3% of bankroll per bet ("unit") | Scale down during losing streaks or model uncertainty |
 | Poker (cash) | 20–40 buy-ins for stake level | Move down at 20 BI; move up at 40+ BI [TENTATIVE — standard poker literature] |
-| Poker (MTT) | 100+ buy-ins for stake | Higher variance than cash |
+| Poker (MTT) | **100+ buy-ins** for stake | $100 → $1 MTTs; move to $2 at $200; step down at $100; don't move up on one score [Source: yrGExOmDRLk] |
 | Casino (table games) | Session bankroll = acceptable loss | Never chase; pre-set stop-win/stop-loss |
 | DFS (GPP) | 10–20% of weekly DFS bankroll per slate | Correlation across entries still counts as one slate exposure |
 
@@ -67,7 +68,10 @@ Track: date, sport/market, line, odds, stake, result, closing line (for CLV). Wi
 - Wager only where legal for your jurisdiction
 - Pre-commit loss limits; use sportsbook deposit limits when available
 - Treat marketing bonuses as **+EV only after full TOS math** — `@entities/tools/odds-jam.md` + `@concepts/pm-copy-trading-retail-risks.md`
+- **Poker MTT:** chasing stakes above BRM for a "quick score" is **gambling**, not grind [Source: yrGExOmDRLk]
 
 ## Snippets
 
-*(populate from ingested bankroll-management sources)*
+> "You have $100, you play $1 tournaments, period." [Source: yrGExOmDRLk via @sources/youtube-raise-your-edge-10k-bankroll-2026-05-31.md]
+
+> "Do not move up if you have one big score. Ignore it. You likely got lucky." [Source: yrGExOmDRLk via @sources/youtube-raise-your-edge-10k-bankroll-2026-05-31.md]

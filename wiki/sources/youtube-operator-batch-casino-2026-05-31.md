@@ -14,6 +14,7 @@ related:
   - concepts/sports-betting-fundamentals.md
   - concepts/kelly-criterion-betting.md
   - sources/youtube-operator-batch-sports-betting-research-2026-05-31.md
+  - sources/youtube-raise-your-edge-10k-bankroll-2026-05-31.md
 maturity: validated
 read_status: deep-read
 created: 2026-05-31
