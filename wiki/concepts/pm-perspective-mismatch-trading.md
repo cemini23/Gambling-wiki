@@ -8,10 +8,8 @@ related:
   - sources/polygnosis-2-polymarket-osint-2026-06-01.md
   - concepts/prediction-markets-crossover.md
   - concepts/sportsbook-pm-line-divergence.md
-  - concepts/prediction-markets-crossover.md
   - concepts/pm-copy-trading-retail-risks.md
   - entities/platforms/polymarket.md
-  - sources/polygnosis-2-polymarket-osint-2026-06-01.md
 maturity: draft
 created: 2026-06-01
 updated: 2026-06-01

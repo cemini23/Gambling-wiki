@@ -12,6 +12,7 @@ related:
   - entities/platforms/draftkings.md
   - entities/platforms/underdog-fantasy.md
   - concepts/sportsbook-pm-line-divergence.md
+  - concepts/pm-commitment-grounded-language.md
   - concepts/sports-betting-fundamentals.md
   - concepts/line-shopping-and-clv.md
   - concepts/best-ball-strategy.md
