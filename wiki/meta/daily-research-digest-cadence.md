@@ -31,7 +31,9 @@ K93 federated install: morning **discovery-only** loop for sports betting, PM re
 |-------|-------|
 | **Cadence** | Daily @ 08:15 local (`com.cemini.daily-research-digest.gambling`) |
 | **Installed** | 2026-06-01 (K93 brief) |
+| **Last run** | 2026-06-01 — 4 papers fetched; see `wiki/sweeps/2026-06-01-daily.md` |
 | **Script** | `~/bin/cemini-daily-research-digest-gambling` → `scripts/daily_research_digest_run.py` |
+| **Deps** | `wiki_source_index.py` (required alongside digest runner) |
 | **Config** | `scripts/daily_research_config.yaml` |
 | **Report** | `wiki/sweeps/YYYY-MM-DD-daily.md` |
 | **Template** | `wiki/sweeps/_daily-template.md` |

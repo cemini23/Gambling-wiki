@@ -2,6 +2,12 @@
 
 Append-only chronological log.
 
+## [2026-06-01] ops | First daily digest run + LaunchAgent active
+
+- **Report** — `wiki/sweeps/2026-06-01-daily.md` (4 arXiv PDFs → inbox)
+- **Fix** — `scripts/wiki_source_index.py` (missing from federated install copy)
+- **LaunchAgent** — `com.cemini.daily-research-digest.gambling` loaded @ 08:15
+
 ## [2026-06-01] ingest | K93 federated daily digest install
 
 - **Brief** — `briefs/2026-06-01_k93-gambling-digest-from-osint.md`
