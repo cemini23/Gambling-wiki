@@ -13,6 +13,8 @@ related:
   - entities/platforms/polymarket.md
   - concepts/sports-betting-fundamentals.md
   - entities/games/poker.md
+  - sources/daily-digest-news-r1-r12-2026-06-01.md
+  - sources/polygnosis-2-polymarket-osint-2026-06-01.md
 maturity: validated
 read_status: deep-read
 created: 2026-06-01
@@ -59,7 +61,7 @@ First **full ingest** from gambling-wiki daily digest. Four arXiv papers spannin
 
 ### Not ingested from sweep news rows
 
-Digest listed Kalshi/PM retail URLs (R1–R3), +EV articles (R4–R6), WC futures (R7–R9), DFS BBM (R10–R12) — **news only**, no auto-download. Fetch manually if operator wants.
+Digest listed Kalshi/PM retail URLs (R1–R3), +EV articles (R4–R6), WC futures (R7–R9), DFS BBM (R10–R12) — ingested `@sources/daily-digest-news-r1-r12-2026-06-01.md`.
 
 ## Snippets
 
@@ -72,4 +74,4 @@ Digest listed Kalshi/PM retail URLs (R1–R3), +EV articles (R4–R6), WC future
 ## Dead Ends
 
 - **Big 2 RL** — academic sim; no retail sportsbook/PM edge path
-- **PolyGnosis 2.0** (2605.25958) — fetch failed (HTTP 429) on digest run; retry later → @osint-wiki if agent-harness focus
+- **PolyGnosis 2.0** (2605.25958) — ingested `@sources/polygnosis-2-polymarket-osint-2026-06-01.md`

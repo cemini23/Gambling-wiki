@@ -7,10 +7,10 @@ related:
   - meta/cross-wiki-routing.md
   - concepts/gambling-wiki-scope.md
   - concepts/gambling-bot-architecture.md
-  - meta/daily-research-digest-cadence.md
   - sources/brief-k93-federated-digest-2026-06-01.md
   - sources/daily-digest-arxiv-batch-2026-06-01.md
-  - meta/cross-wiki-routing.md
+  - sources/daily-digest-news-r1-r12-2026-06-01.md
+  - sources/polygnosis-2-polymarket-osint-2026-06-01.md
 maturity: validated
 created: 2026-06-01
 updated: 2026-06-01

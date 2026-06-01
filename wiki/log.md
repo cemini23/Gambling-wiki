@@ -2,6 +2,13 @@
 
 Append-only chronological log.
 
+## [2026-06-01] ingest | Sweep news R1–R12 + PolyGnosis 2.0
+
+- **News** — `sources/daily-digest-news-r1-r12-2026-06-01.md` (Brave/curl; R3 YouTube title-only)
+- **Paper** — `sources/polygnosis-2-polymarket-osint-2026-06-01.md` + `concepts/pm-perspective-mismatch-trading.md`
+- **Updated** — Kalshi/Polymarket fees, sportsbook–PM vig gap, +EV/CLV refs, WC 2026, DK/Underdog best ball
+- **Archived** — `arxiv-2605.25958-polygnosis-2-0.pdf` → `raw-sources/`
+
 ## [2026-06-01] ingest | Daily digest arXiv batch (4 papers)
 
 - **Source** — `sources/daily-digest-arxiv-batch-2026-06-01.md` (sweep `2026-06-01-daily.md`)

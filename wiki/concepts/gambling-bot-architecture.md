@@ -27,6 +27,7 @@ related:
   - entities/tools/rlcard.md
   - entities/tools/pokerskill.md
   - meta/daily-research-digest-cadence.md
+  - sources/polygnosis-2-polymarket-osint-2026-06-01.md
 maturity: core
 created: 2026-05-31
 updated: 2026-06-01

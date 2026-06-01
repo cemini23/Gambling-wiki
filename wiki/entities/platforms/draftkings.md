@@ -19,6 +19,7 @@ related:
   - entities/sports/world-cup-2026-betting.md
   - entities/tools/pydfs-lineup-optimizer.md
   - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
+  - sources/daily-digest-news-r1-r12-2026-06-01.md
 maturity: draft
 created: 2026-05-31
 updated: 2026-05-31

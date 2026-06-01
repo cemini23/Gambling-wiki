@@ -21,9 +21,10 @@ related:
   - entities/sports/nfl-betting.md
   - sources/gemini-github-sports-betting-landscape-2026-05-30.md
   - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
+  - sources/daily-digest-news-r1-r12-2026-06-01.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-06-01
 ---
 
 ## Relations

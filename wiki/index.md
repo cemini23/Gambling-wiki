@@ -30,7 +30,8 @@ Catalog of all wiki pages. Updated on each ingest.
 | [world-cup-knockout-phase-betting](concepts/world-cup-knockout-phase-betting.md) | validated | KO phases, 90-min vs ET |
 | [polymarket-weather-wagering-retail](concepts/polymarket-weather-wagering-retail.md) | draft |
 | [live-betting-match-integrity](concepts/live-betting-match-integrity.md) | draft |
-| [pm-commitment-grounded-language](concepts/pm-commitment-grounded-language.md) | draft | Weather PM retail copy-trading posture |
+| [pm-perspective-mismatch-trading](concepts/pm-perspective-mismatch-trading.md) | draft |
+| [pm-commitment-grounded-language](concepts/pm-commitment-grounded-language.md) | draft |
 
 ## Entities — Platforms
 
@@ -107,6 +108,8 @@ Catalog of all wiki pages. Updated on each ingest.
 | [multi-wiki-tool-eval-v7-k92-2026-06-01](sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md) | deep-read |
 | [brief-k93-federated-digest-2026-06-01](sources/brief-k93-federated-digest-2026-06-01.md) | deep-read |
 | [daily-digest-arxiv-batch-2026-06-01](sources/daily-digest-arxiv-batch-2026-06-01.md) | deep-read |
+| [daily-digest-news-r1-r12-2026-06-01](sources/daily-digest-news-r1-r12-2026-06-01.md) | read |
+| [polygnosis-2-polymarket-osint-2026-06-01](sources/polygnosis-2-polymarket-osint-2026-06-01.md) | deep-read |
 
 ## Meta
 

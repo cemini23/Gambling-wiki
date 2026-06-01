@@ -26,6 +26,7 @@ related:
   - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
   - sources/youtube-operator-batch-sports-betting-research-2026-05-31.md
   - concepts/live-betting-match-integrity.md
+  - sources/daily-digest-news-r1-r12-2026-06-01.md
   - sources/daily-digest-arxiv-batch-2026-06-01.md
   - entities/tools/unabated.md
   - entities/tools/odds-jam.md

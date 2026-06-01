@@ -9,6 +9,7 @@ related:
   - concepts/polymarket-weather-wagering-retail.md
   - concepts/prediction-markets-crossover.md
   - concepts/pm-commitment-grounded-language.md
+  - concepts/pm-perspective-mismatch-trading.md
   - concepts/sportsbook-pm-line-divergence.md
   - entities/people/alex-monahan.md
   - entities/tools/odds-jam.md

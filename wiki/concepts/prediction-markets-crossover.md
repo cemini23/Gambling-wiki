@@ -16,6 +16,8 @@ related:
   - concepts/sportsbook-pm-line-divergence.md
   - concepts/pm-copy-trading-retail-risks.md
   - concepts/pm-commitment-grounded-language.md
+  - concepts/pm-perspective-mismatch-trading.md
+  - sources/polygnosis-2-polymarket-osint-2026-06-01.md
   - entities/sports/world-cup-2026-betting.md
   - concepts/world-cup-prediction-market-types.md
   - sources/youtube-sports-pm-retail-batch-2026-05-29.md

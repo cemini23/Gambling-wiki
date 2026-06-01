@@ -20,9 +20,11 @@ related:
   - entities/tools/momentum-odds.md
   - sources/gemini-github-sports-betting-landscape-2026-05-30.md
   - sources/youtube-sports-pm-retail-batch-2026-05-29.md
+  - sources/daily-digest-news-r1-r12-2026-06-01.md
+  - concepts/pm-perspective-mismatch-trading.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-06-01
 ---
 
 ## Relations
@@ -49,6 +51,10 @@ Kalshi / Polymarket contract mid
         ↓ if gap > fees + model uncertainty
 Consider bet on cheaper venue (or pass)
 ```
+
+### Structural vig gap (R2, 2026-06-01)
+
+Even when **prices align**, books embed **~4.5% hold** in -110/-110 markets vs **sub-2% fee blends** on Kalshi for comparable event contracts [TENTATIVE — Tech-Insider]. Divergence shopping must subtract **fee + tax + limit risk** on each side.
 
 ### Workflow
 
