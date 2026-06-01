@@ -7,9 +7,12 @@ related:
   - concepts/gambling-bot-architecture.md
   - concepts/gambling-wiki-scope.md
   - meta/gambling-bot-ingest-rubric.md
+  - entities/bots/wagerbrain.md
+  - entities/bots/bovada-api-reference.md
+  - sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md
 maturity: core
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-06-01
 ---
 
 ## Relations
@@ -22,6 +25,13 @@ updated: 2026-05-31
 Placeholder namespace for **platform-specific gambling bot** entity pages (`entities/bots/<slug>.md`). Create stubs as design notes or FOSS evals land — not for production code (see `@osint-wiki`).
 
 ## Narrative
+
+### Stubs (K92)
+
+| Page | Lane | Notes |
+|------|------|-------|
+| @entities/bots/wagerbrain.md | Quoter / bankroll | Steal-from K92 eval |
+| @entities/bots/bovada-api-reference.md | Sportsbook API | Reference-only + hand-history |
 
 ### Planned stubs (create on first ingest)
 

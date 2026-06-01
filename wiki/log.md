@@ -2,6 +2,13 @@
 
 Append-only chronological log.
 
+## [2026-06-01] ingest | K92 — casino/poker/stake eval slice from OSINT
+
+- **Source** — `sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md` (90 URLs, gambling-primary)
+- **Entities** — `entities/bots/wagerbrain.md`, `entities/bots/bovada-api-reference.md`
+- **Updated** — `gambling-bot-architecture.md` (iGaming dead-end), `entities/bots/README.md`
+- **Split** — @osint-wiki canonical eval; wagering requirements saved here
+
 ## [2026-05-31] scope | Gambling bot program — wiki home for automation knowledge
 
 - **Operator direction** — eventual master bot or platform-specific bot fleet; save gambling-botting intel in this wiki

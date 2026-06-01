@@ -18,9 +18,12 @@ related:
   - meta/gambling-bot-ingest-rubric.md
   - sources/gemini-github-sports-betting-landscape-2026-05-30.md
   - sources/multi-wiki-tool-eval-v6-k90-2026-05-31.md
+  - sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md
+  - entities/bots/wagerbrain.md
+  - entities/bots/bovada-api-reference.md
 maturity: core
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-06-01
 ---
 
 # Gambling bot architecture (planned)
@@ -76,9 +79,22 @@ Default assumption unless operator revises (see `ROADMAP.md` D4):
 | **Sportsbooks** | Line shop, +EV scanner hooks, steam/CLV logging, promo capture | `@entities/platforms/draftkings.md`, `@entities/platforms/fanduel.md`, `@entities/platforms/pinnacle.md` |
 | **Prediction markets** | Sports PM divergence, fee-aware sizing, settlement rule checks | `@entities/platforms/kalshi.md`, `@entities/platforms/polymarket.md`, `@concepts/sportsbook-pm-line-divergence.md` |
 | **DFS / best ball** | Slate import, exposure caps, correlation stacks — not in-play HFT | `@concepts/dfs-strategy-overview.md`, `@entities/tools/pydfs-lineup-optimizer.md` |
-| **Casino / poker** | **Low priority** for automation — table bots banned; online collusion/bot risk is -EV environment | Awareness only (`@sources/youtube-operator-batch-casino-2026-05-31.md` bot dead ends) |
+| **Casino / poker** | Poker engines + RL (**rlcard**, poker_ai) = research lane; **iGaming slot UI** = dead end | K92 eval: @sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md |
+| **Sportsbook API** | Bovada community APIs — reference-only, ToS risk | @entities/bots/bovada-api-reference.md |
 
 Create `wiki/entities/bots/<platform>-bot.md` stubs when a lane gets concrete design notes or repo evals.
+
+### iGaming casino UI — dead end (K92)
+
+K92 Gemini eval surfaced **~20+ Reject** repos: PixiJS slot clients, crypto-casino monoliths, Stake "predictor" forks, crash-gambling simulators. **Do not** spend Phase-0 cycles on these for the gambling-bot program:
+
+- No headless API suitable for Cemini-style automation
+- License often missing; scam-adjacent "predictor" repos
+- Wagering logic is RNG entertainment, not +EV retail sports/PM edge
+
+**Exception:** `egorfedorov/Slot-Casino-Game-Developer-Skills-for-Stake` → **CCC wiki** (prompt/skills craft), not prod trading.
+
+**Steal-from (OSINT only):** `floatinghotpot/casino-server` websocket→Redis reconciliation → world-cup-bot fill handler — document on @osint-wiki, not a gambling-bot adopt.
 
 ### What to save on ingest (gambling-bot lens)
 
