@@ -33,6 +33,17 @@ Priority ingest lanes once sources arrive:
 | **Casino** | basic strategy, comp optimization, table selection |
 | **Prediction markets (retail)** | fee math, FLB on Kalshi vs PM, cross-venue shopping |
 
+### W5 — Federated daily digest (K93)
+
+**Status:** Installed 2026-06-01.
+
+Steps:
+- [x] Run `install_federated_daily_digest.sh` for gambling-wiki
+- [x] Domain `daily_research_config.yaml` (sports betting, PM retail, WC, bots, bankroll, DFS, poker)
+- [x] `wiki/meta/daily-research-digest-cadence.md` + sweeps template
+- [ ] Operator: `launchctl load ~/Library/LaunchAgents/com.cemini.daily-research-digest.gambling.plist`
+- [ ] First morning sweep review + ingest session
+
 ### W4 — Gambling bot program (planned)
 
 **Status:** Scoping 2026-05-31 — knowledge base first; implementation TBD.
@@ -72,6 +83,7 @@ Steps:
 
 | Date | Item |
 |------|------|
-| 2026-05-31 | Core corpus ingest — Kelly, Gemini landscape, YouTube retail, DFS/tools, NFL/NBA, PM divergence, copy-trading risks |
+| 2026-06-01 | K93 federated daily digest — scripts, config, meta cadence, sweeps/ |
+| 2026-06-01 | K92 Phase-0 audits + WagerBrain/rlcard adopt notes |
 | 2026-05-31 | WC 2026 retail ingest — 1 source, 1 sport entity, 5 concepts, 8 page updates |
 | 2026-05-31 | Initial repo scaffold, seed concepts/entities, osint-wiki federation stubs |

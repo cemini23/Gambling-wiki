@@ -7,7 +7,9 @@ related:
   - concepts/poker-strategy-overview.md
   - concepts/gambling-bot-architecture.md
   - sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md
+  - entities/bots/poker-bot-tooling.md
   - entities/bots/wagerbrain.md
+  - entities/bots/README.md
 maturity: validated
 created: 2026-06-01
 updated: 2026-06-01

@@ -11,6 +11,7 @@ related:
   - sources/youtube-operator-batch-casino-2026-05-31.md
   - sources/youtube-raise-your-edge-10k-bankroll-2026-05-31.md
   - entities/bots/poker-bot-tooling.md
+  - entities/tools/rlcard.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-05-31

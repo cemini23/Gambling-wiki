@@ -10,7 +10,7 @@ related:
   - sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md
   - entities/bots/README.md
   - entities/bots/bovada-api-reference.md
-  - concepts/sequential-optimal-execution-quoting.md
+  - entities/tools/rlcard.md
 maturity: draft
 created: 2026-06-01
 updated: 2026-06-01
@@ -21,6 +21,7 @@ updated: 2026-06-01
 - @sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md — K92 eval Steal-from
 - @concepts/gambling-bot-architecture.md — quoter module pattern
 - @entities/bots/bovada-api-reference.md — sportsbook API lane
+- @osint-wiki/concepts/sequential-optimal-execution-quoting.md — prod quoter implementation (cross-wiki)
 
 ## Raw Concept
 

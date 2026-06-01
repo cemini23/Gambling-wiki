@@ -12,6 +12,7 @@ related:
   - entities/bots/bovada-hand-history-converter.md
   - entities/bots/poker-bot-tooling.md
   - entities/bots/stake-engine-client.md
+  - entities/tools/rlcard.md
 maturity: validated
 read_status: deep-read
 created: 2026-06-01

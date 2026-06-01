@@ -2,6 +2,14 @@
 
 Append-only chronological log.
 
+## [2026-06-01] ingest | K93 federated daily digest install
+
+- **Brief** — `briefs/2026-06-01_k93-gambling-digest-from-osint.md`
+- **Structural** — `scripts/daily_research_*.py`, `daily_research_config.yaml`, LaunchAgent `com.cemini.daily-research-digest.gambling`
+- **New** — `meta/daily-research-digest-cadence.md`, `sources/brief-k93-federated-digest-2026-06-01.md`, `wiki/sweeps/_daily-template.md`
+- **Lint** — `wiki_lint.py` sweeps/ orphan exemption
+- **K93 tool eval** — no gambling-surface Adopts (OSINT-only: harness, netviz, deptry)
+
 ## [2026-06-01] ingest | K92 completion — bot entity stubs + index
 
 - **Expanded** — `sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md` (validated, deep-read)

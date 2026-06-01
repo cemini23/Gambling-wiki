@@ -9,6 +9,7 @@ related:
   - entities/bots/README.md
   - concepts/gambling-bot-architecture.md
   - sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md
+  - entities/tools/rlcard.md
 maturity: draft
 created: 2026-06-01
 updated: 2026-06-01

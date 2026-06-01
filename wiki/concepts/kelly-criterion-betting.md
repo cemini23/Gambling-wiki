@@ -15,6 +15,7 @@ related:
   - sources/kelly-1956-information-rate.md
   - sources/youtube-operator-batch-casino-2026-05-31.md
   - sources/youtube-operator-batch-sports-betting-research-2026-05-31.md
+  - entities/bots/wagerbrain.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-05-31

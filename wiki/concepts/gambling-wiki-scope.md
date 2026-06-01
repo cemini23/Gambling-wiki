@@ -12,6 +12,8 @@ related:
   - entities/platforms/polymarket.md
   - meta/cross-wiki-routing.md
   - meta/gambling-bot-ingest-rubric.md
+  - meta/daily-research-digest-cadence.md
+  - sources/brief-k93-federated-digest-2026-06-01.md
 maturity: core
 created: 2026-05-31
 updated: 2026-05-31

@@ -7,9 +7,11 @@ related:
   - concepts/gambling-wiki-scope.md
   - concepts/gambling-bot-architecture.md
   - meta/gambling-bot-ingest-rubric.md
+  - meta/daily-research-digest-cadence.md
+  - sources/brief-k93-federated-digest-2026-06-01.md
 maturity: core
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-06-01
 ---
 
 ## Relations
@@ -17,6 +19,7 @@ updated: 2026-05-31
 - @concepts/gambling-wiki-scope.md — full boundary table
 - @concepts/gambling-bot-architecture.md — planned automation program
 - @meta/gambling-bot-ingest-rubric.md — bot ingest checklist
+- @meta/daily-research-digest-cadence.md — K93 federated morning digest
 
 ## Raw Concept
 

@@ -81,7 +81,8 @@ Gambling-wiki/
       people/                       # authors, coaches, notable sharp bettors
     concepts/                       # bankroll, Kelly, FLB, DFS, best ball, house edge, …
     meta/                           # cadence pages, ingest rubrics
-  scripts/                          # wiki_lint.py, preingest_check.py, wiki_gap_detect.py (future)
+    sweeps/                         # daily research digest reports (discovery-only)
+  scripts/                          # wiki_lint.py, daily_research_digest_run.py, preingest_check.py
   prompts/
 ```
 

@@ -1,0 +1,76 @@
+# Daily research digest — gambling-wiki (K93 federated install)
+#
+# Reference: @osint-wiki/scripts/daily_research_config.yaml
+# Read by: scripts/daily_research_digest_run.py
+# Report: wiki/sweeps/YYYY-MM-DD-daily.md
+#
+# Update active_topics when ROADMAP.md workstreams shift.
+
+loop:
+  recency_window_days: 7
+  max_results_per_query: 3
+
+fetch:
+  enabled: true
+  max_downloads: 5
+  fetch_likely: false
+  max_results_per_paper_query: 5
+
+active_topics:
+  - "Sports betting — +EV process, CLV, line shopping, sharp vs soft books"
+  - "Prediction markets retail — Kalshi/Polymarket fees, FLB, cross-venue vs books"
+  - "World Cup 2026 — retail wagering, books vs PM divergence (@osint-wiki WC bot cross-ref)"
+  - "Gambling bot program — FOSS evals, API/ToS, per-platform lanes (W4)"
+  - "Bankroll & Kelly — fractional sizing, variance, responsible-gambling guardrails"
+  - "DFS / best ball — BBM7, Underdog, roster construction, ownership leverage"
+  - "Poker & casino — MTT bankroll, basic strategy, house edge (study lane)"
+
+paper_queries:
+  - cluster: sports-betting-paper
+    query: "research paper sports betting closing line value market efficiency prediction"
+    category: research paper
+
+  - cluster: prediction-markets-retail-paper
+    query: "research paper prediction market retail trading Polymarket Kalshi event contract"
+    category: research paper
+
+  - cluster: poker-rl-paper
+    query: "research paper poker reinforcement learning game theory optimal betting"
+    category: research paper
+
+queries:
+  - cluster: kalshi-pm-retail
+    query: '"Kalshi" OR "Polymarket" sports betting OR event contract retail OR prediction market fees'
+    category: news
+
+  - cluster: sports-betting-ev
+    query: '"sports betting" closing line value OR positive EV OR line shopping OR sharp money'
+    category: news
+
+  - cluster: world-cup-2026-wagering
+    query: '"World Cup 2026" betting odds OR prediction market OR advance market futures'
+    category: news
+
+  - cluster: dfs-best-ball
+    query: '"best ball" OR Underdog fantasy OR DraftKings best ball roster construction ADP'
+    category: news
+
+monokern_pipeline:
+  enabled: true
+  cadence: weekly
+  default_deliverable: none
+  source_modules:
+    - yt-dlp
+    - inbox_pdf
+    - web_url
+  ingest_hook: "After weekly digest, one NotebookLM pass on top ROADMAP topic (W2 lane or W4 bot eval)"
+
+social:
+  manual_pass:
+    - tool: opencli-reader
+      prompt: "Reddit r/sportsbook + r/sportsbetting + HN for betting/PM headlines last 24h"
+    - tool: twitter-reader
+      prompt: "Search for Kalshi, Polymarket sports, CLV, +EV betting discourse last 24h"
+
+output:
+  path_template: "wiki/sweeps/{date}-daily.md"

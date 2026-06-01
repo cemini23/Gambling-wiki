@@ -102,6 +102,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [youtube-operator-batch-casino-2026-05-31](sources/youtube-operator-batch-casino-2026-05-31.md) | deep-read |
 | [youtube-raise-your-edge-10k-bankroll-2026-05-31](sources/youtube-raise-your-edge-10k-bankroll-2026-05-31.md) | deep-read |
 | [multi-wiki-tool-eval-v7-k92-2026-06-01](sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md) | deep-read |
+| [brief-k93-federated-digest-2026-06-01](sources/brief-k93-federated-digest-2026-06-01.md) | deep-read |
 
 ## Meta
 
@@ -109,3 +110,4 @@ Catalog of all wiki pages. Updated on each ingest.
 |------|---------|
 | [cross-wiki-routing](meta/cross-wiki-routing.md) | Ingest routing vs osint-wiki |
 | [gambling-bot-ingest-rubric](meta/gambling-bot-ingest-rubric.md) | Bot-related source ingest |
+| [daily-research-digest-cadence](meta/daily-research-digest-cadence.md) | K93 federated morning digest |

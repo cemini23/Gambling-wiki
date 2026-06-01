@@ -164,8 +164,13 @@ for src, fm in pages.items():
                 # local path, not found
                 dangling.append((src, tgt_raw))
 
-# orphans: pages with zero inbound edges (excluding index/log already excluded)
-orphans = sorted(p for p in all_paths if p not in inbound)
+# orphans: pages with zero inbound edges (excluding index/log already excluded).
+# sweeps/ holds daily digest reports — append-only, like log.md; exempt from orphan check.
+_NAV_EXEMPT = frozenset({"index.md", "log.md", "dashboard.md"})
+orphans = sorted(
+    p for p in all_paths
+    if p not in inbound and not p.startswith("sweeps/") and p not in _NAV_EXEMPT
+)
 
 # bidirectional gaps: src→tgt without tgt→src
 gaps = []
@@ -242,7 +247,10 @@ cited_unread.sort(key=lambda x: -x[1])
 
 # -- 6: frontmatter quality ----------------------------------------------
 
-no_frontmatter = sorted(p for p, fm in pages.items() if fm.get("_no_frontmatter"))
+no_frontmatter = sorted(
+    p for p, fm in pages.items()
+    if fm.get("_no_frontmatter") and not p.startswith("sweeps/")
+)
 no_type = sorted(p for p, fm in pages.items()
                  if not fm.get("_no_frontmatter") and not fm.get("type"))
 no_maturity = sorted(p for p, fm in pages.items()
