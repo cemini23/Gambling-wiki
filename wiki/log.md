@@ -9,6 +9,11 @@ Append-only chronological log.
 - **Index** — Entities — Bots section; K92 source row
 - **Briefs** — no new briefs; K90 already ingested
 
+## [2026-06-01] adopt | K92 Phase-0 steal-from + rlcard venv
+
+- WagerBrain math map → `concepts/bankroll-management.md`
+- rlcard → OSINT `.local/venv-gambling-research` (research lane)
+
 ## [2026-06-01] phase0 | K92 eval repos — gh api + clone audits
 
 - **WagerBrain** — CONDITIONAL-GO steal-from (MIT, stale 2020)

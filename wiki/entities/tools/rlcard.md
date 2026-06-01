@@ -8,9 +8,10 @@ related:
   - concepts/gambling-bot-architecture.md
   - sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md
   - entities/bots/wagerbrain.md
-maturity: draft
+maturity: validated
 created: 2026-06-01
 updated: 2026-06-01
+laptop_install: VERIFIED 2026-06-01 — OSINT `.local/venv-gambling-research` (rlcard 1.2.0); run `gambling_research_venv.sh` in OSINT repo
 ---
 
 ## Relations
@@ -40,6 +41,10 @@ Clone: `/tmp/k92-phase0/rlcard`
 | Cemini prod | **NO** default prod adopt — use for offline sim only unless explicit poker-bot workstream |
 
 **Verdict: CONDITIONAL-GO** — laptop research installs OK; document env deps; no prod deploy without separate brief.
+
+### Adoption status [ADOPTED 2026-06-01]
+
+Isolated venv on OSINT laptop: `bash scripts/gambling_research_venv.sh` (from OSINT workspace). Activate: `.local/venv-gambling-research/bin/activate`. Poker-bot fleet specs reference this for offline policy eval only.
 
 ## Snippets
 

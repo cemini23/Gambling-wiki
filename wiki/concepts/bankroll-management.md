@@ -24,9 +24,10 @@ related:
   - sources/youtube-operator-batch-sports-betting-research-2026-05-31.md
   - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
   - sources/youtube-raise-your-edge-10k-bankroll-2026-05-31.md
+  - entities/bots/wagerbrain.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-06-01
 ---
 
 ## Relations
@@ -38,6 +39,7 @@ updated: 2026-05-31
 - @concepts/dfs-strategy-overview.md — DFS bankroll as % of GPP entries
 - @concepts/poker-strategy-overview.md — poker-specific buy-in rules (20–40 BI)
 - @concepts/casino-game-house-edge.md — session bankroll vs house edge
+- @entities/bots/wagerbrain.md — K92 steal-from math reference (MIT, stale repo)
 
 ## Raw Concept
 
@@ -71,6 +73,18 @@ Track: date, sport/market, line, odds, stake, result, closing line (for CLV). Wi
 - Pre-commit loss limits; use sportsbook deposit limits when available
 - Treat marketing bonuses as **+EV only after full TOS math** — `@entities/tools/odds-jam.md` + `@concepts/pm-copy-trading-retail-risks.md`
 - **Poker MTT:** chasing stakes above BRM for a "quick score" is **gambling**, not grind [Source: yrGExOmDRLk]
+
+### WagerBrain reference map (K92 steal-from — not a dependency)
+
+`sedemmler/WagerBrain` (MIT, stale 2020) — use as **requirements vocabulary** for gambling-bot sizing modules; re-implement in fleet code, do not `pip install` unmaintained package.
+
+| WagerBrain module | Fleet use |
+|-------------------|-----------|
+| `odds.py` | American / decimal / fractional conversion |
+| `probs.py` | Implied probability ↔ odds |
+| `payouts.py` | Profit, parlay payout, EV |
+| `bankroll.py` | Kelly criterion, unit sizing caps |
+| Phase 2 | Vig, arb detection — spec only until sportsbook API lane is licensed |
 
 ## Snippets
 

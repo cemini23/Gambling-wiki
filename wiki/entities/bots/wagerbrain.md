@@ -45,6 +45,10 @@ Clone: `/tmp/k92-phase0/WagerBrain`
 
 **Verdict: CONDITIONAL-GO (steal-from, gambling-wiki requirements only)** — port **ideas** (bankroll, implied prob, payout math) into bot specs; **do not** pip-install as prod dependency without maintenance fork. Pair with @osint-wiki/concepts/sequential-optimal-execution-quoting.md for LOB quoter theory.
 
+### Adoption status [ADOPTED 2026-06-01 steal-from]
+
+Patterns ported to @concepts/bankroll-management.md § WagerBrain reference map (no pip dependency). Modules: `bankroll.py`, `odds.py`, `probs.py`, `payouts.py` — Kelly, EV, parlay, vig, arbitrage checks.
+
 ## Snippets
 
 > "A package containing the essential math and tools required for sports betting and gambling." [Source: WagerBrain README]
