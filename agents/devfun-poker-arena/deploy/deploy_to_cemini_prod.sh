@@ -26,6 +26,7 @@ echo "==> Rsync agent tree (exclude venv/creds/state)"
 rsync -avz --delete \
   --exclude '.venv/' \
   --exclude 'venv/' \
+  --exclude 'venv-pokerskill/' \
   --exclude '.git/' \
   --exclude '__pycache__/' \
   --exclude '.arena-credentials' \

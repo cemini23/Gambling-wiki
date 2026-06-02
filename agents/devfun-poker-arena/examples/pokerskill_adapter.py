@@ -11,6 +11,9 @@ Wire: `retrieve_pokerskill_hints(table)` from `cemini_decide.retrieve_solver_con
 """
 from __future__ import annotations
 
+import json
+import os
+import subprocess
 import sys
 from pathlib import Path
 from typing import Any, Optional
@@ -187,18 +190,67 @@ def _stub_postflop_hint(street: str, texture: str, in_position: bool) -> dict[st
     }
 
 
+def _pokerskill_python() -> Path:
+    return Path(os.environ.get(
+        "POKERSKILL_PYTHON",
+        "/opt/devfun-poker-arena/venv-pokerskill/bin/python",
+    ))
+
+
+def _try_library_prompt_subprocess(state: dict) -> Optional[dict[str, str]]:
+    """Py3.9 sidecar on prod — cp39 .so cannot load in the main Py3.11 venv."""
+    py = _pokerskill_python()
+    worker = _EXAMPLES / "pokerskill_worker.py"
+    if not py.is_file() or not worker.is_file():
+        return None
+    try:
+        proc = subprocess.run(
+            [str(py), str(worker)],
+            input=json.dumps(state),
+            capture_output=True,
+            text=True,
+            timeout=3.0,
+        )
+        if proc.returncode != 0:
+            return None
+        data = json.loads(proc.stdout or "{}")
+        if not data.get("ok"):
+            return None
+        return {
+            "system_prompt": data.get("system_prompt") or "",
+            "user_prompt": data.get("user_prompt") or "",
+        }
+    except Exception:
+        return None
+
+
 def _try_library_prompt(state: dict) -> Optional[dict[str, str]]:
-    """Return {system_prompt, user_prompt} if pokerskill_agent is installed."""
+    """Return {system_prompt, user_prompt} if pokerskill_agent is available."""
     try:
         from pokerskill_agent.schema import validate_game_state  # type: ignore
         from pokerskill_agent._core import generate_prompt  # type: ignore
-    except ImportError:
-        return None
-    try:
+
         validated = validate_game_state(state)
         return generate_prompt(validated)
+    except ImportError:
+        pass
     except Exception:
-        return None
+        pass
+    return _try_library_prompt_subprocess(state)
+
+
+def _bias_from_prompt(user_prompt: str) -> Optional[str]:
+    """Coarse action nudge from PokerSkill prompt text (no LLM at runtime)."""
+    low = user_prompt.lower()
+    if "fold" in low and "recommended" in low:
+        return "fold"
+    if "check" in low and "preferred" in low:
+        return "check"
+    if "raise" in low or ("bet" in low and "value" in low):
+        return "raise"
+    if "call" in low and "defend" in low:
+        return "call"
+    return None
 
 
 def retrieve_pokerskill_hints(table: dict) -> dict[str, Any]:
@@ -229,12 +281,19 @@ def retrieve_pokerskill_hints(table: dict) -> dict[str, Any]:
         if prompts:
             out["mode"] = "library"
             out["prompt_chars"] = len(prompts.get("user_prompt") or "")
+            out["layer"] = "PokerSkill"
+            bias = _bias_from_prompt(prompts.get("user_prompt") or "")
+            if bias:
+                out["bias"] = bias
         if street == "preflop":
-            hint = _stub_hu_preflop_hint(ps_state, hc)
-            if call_chips > 0 and hint.get("bias") == "raise":
-                hint = {"scenario": "hu_facing_raise", "bias": "call", "layer": "P2-stub"}
-            out.update(hint)
-        else:
+            if out.get("mode") != "library":
+                hint = _stub_hu_preflop_hint(ps_state, hc)
+                if call_chips > 0 and hint.get("bias") == "raise":
+                    hint = {"scenario": "hu_facing_raise", "bias": "call", "layer": "P2-stub"}
+                out.update(hint)
+            elif "scenario" not in out:
+                out["scenario"] = "hu_preflop_ps"
+        elif out.get("mode") != "library":
             out.update(_stub_postflop_hint(street, out["board_texture"], in_position))
     else:
         out["pokerskill_state_ok"] = False
