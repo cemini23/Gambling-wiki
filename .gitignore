@@ -48,6 +48,12 @@ __pycache__/
 venv/
 .pytest_cache/
 
+# --- Agent secrets (dev.fun arena) -------------------------------------------
+agents/**/.arena-credentials
+agents/**/.arena-credentials.*
+agents/**/.arena-poker-state
+agents/**/.env
+
 # --- Temp scratch ------------------------------------------------------------
 /tmp_*.txt
 /tmp_*.md

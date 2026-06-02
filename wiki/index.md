@@ -43,6 +43,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [pinnacle](entities/platforms/pinnacle.md) | draft |
 | [kalshi](entities/platforms/kalshi.md) | draft |
 | [polymarket](entities/platforms/polymarket.md) | draft |
+| [devfun-poker-arena](entities/platforms/devfun-poker-arena.md) | draft |
 | [pokerstars](entities/platforms/pokerstars.md) | draft |
 
 ## Entities — Tools
@@ -64,6 +65,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | Page | Maturity |
 |------|----------|
 | [wagerbrain](entities/bots/wagerbrain.md) | draft |
+| [cemini-devfun-poker-agent](entities/bots/cemini-devfun-poker-agent.md) | draft |
 | [bovada-api-reference](entities/bots/bovada-api-reference.md) | draft |
 | [bovada-hand-history-converter](entities/bots/bovada-hand-history-converter.md) | draft |
 | [poker-bot-tooling](entities/bots/poker-bot-tooling.md) | draft |
@@ -111,6 +113,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [daily-digest-news-r1-r12-2026-06-01](sources/daily-digest-news-r1-r12-2026-06-01.md) | read |
 | [polygnosis-2-polymarket-osint-2026-06-01](sources/polygnosis-2-polymarket-osint-2026-06-01.md) | deep-read |
 | [youtube-wsj-kalshi-polymarket-valuations-2026-06-01](sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md) | deep-read |
+| [devfun-poker-arena-phase0-2026-06-01](sources/devfun-poker-arena-phase0-2026-06-01.md) | read |
 
 ## Meta
 

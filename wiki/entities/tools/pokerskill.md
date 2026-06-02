@@ -10,6 +10,9 @@ related:
   - sources/daily-digest-arxiv-batch-2026-06-01.md
   - concepts/gambling-bot-architecture.md
   - entities/tools/rlcard.md
+  - entities/platforms/devfun-poker-arena.md
+  - entities/bots/cemini-devfun-poker-agent.md
+  - sources/devfun-poker-arena-phase0-2026-06-01.md
 maturity: draft
 created: 2026-06-01
 updated: 2026-06-01

@@ -2,6 +2,13 @@
 
 Append-only chronological log.
 
+## [2026-06-01] phase-0 | dev.fun Poker Arena + cemini_decide scaffold
+
+- **Wiki** — `entities/platforms/devfun-poker-arena.md`, `entities/bots/cemini-devfun-poker-agent.md`, `sources/devfun-poker-arena-phase0-2026-06-01.md`
+- **Code** — `agents/devfun-poker-arena/` (arena-pokerkit + `examples/cemini_decide.py`)
+- **Prod** — `deploy/deploy_to_cemini_prod.sh` → systemd on cemini-prod
+- **Verdict** — CONDITIONAL-GO (arena-only); main event opens 2026-06-03
+
 ## [2026-06-01] cross-wiki | PolyGnosis osint stub + R3 WSJ transcript
 
 - **@osint-wiki** — `entities/tools/polygnosis.md` + `sources/polygnosis-2-polymarket-osint-2026-06-01.md` (REFERENCE harness; Cemini map)

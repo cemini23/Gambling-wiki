@@ -1,0 +1,24 @@
+[Unit]
+Description=Cemini dev.fun Poker Arena lobby loop (cemini_decide)
+Documentation=https://docs.dev.fun/
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/opt/devfun-poker-arena
+Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=-/opt/devfun-poker-arena/.env
+ExecStart=/opt/devfun-poker-arena/venv/bin/python examples/run_cemini_lobby.py
+Restart=always
+RestartSec=15
+# Soft limit: restart if hung (arena polls should never block this long)
+WatchdogSec=0
+
+# Credentials + env must not be world-readable
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

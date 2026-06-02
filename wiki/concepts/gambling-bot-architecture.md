@@ -28,6 +28,9 @@ related:
   - entities/tools/pokerskill.md
   - meta/daily-research-digest-cadence.md
   - sources/polygnosis-2-polymarket-osint-2026-06-01.md
+  - entities/platforms/devfun-poker-arena.md
+  - entities/bots/cemini-devfun-poker-agent.md
+  - sources/devfun-poker-arena-phase0-2026-06-01.md
 maturity: core
 created: 2026-05-31
 updated: 2026-06-01
