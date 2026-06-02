@@ -68,9 +68,22 @@ git clone https://github.com/cemini23/Gambling-wiki.git
 
 ## Related
 
+- Methodology newsletter: [Outlier Weekly](https://outlierweekly.substack.com)
+- YouTube: [@Cemini23](https://www.youtube.com/@Cemini23)
 - Wiki federation hub: [cemini-claude-code-CCC](https://github.com/cemini23/cemini-claude-code-CCC)
 - **World Cup LP bot (automation):** [world-cup-bot](https://github.com/cemini23/world-cup-bot) — shadow-first Polymarket LP + Kalshi gap alerts; pairs with `@gambling-wiki/entities/sports/world-cup-2026-betting.md`
 - Tooling: [wikilint](https://github.com/cemini23/wikilint) · [vet](https://github.com/cemini23/vet)
+
+
+## Support
+
+Voluntary tips fund open research and tooling. **Donation-only addresses** — not trading or production wallets.
+
+| Chain family | Address |
+|--------------|---------|
+| **EVM** (Ethereum, Polygon, Base, Arbitrum, …) | `0x444C5C2eC439E0382aa5a17F70313c536BcC5D58` |
+| **Solana / SVM** | `J4zNn4hK9jTrKBFY8sbAGJHLoZvXvQf4B9pQSbSrocZE` |
+
 
 ## License
 
