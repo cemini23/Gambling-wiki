@@ -38,6 +38,7 @@ uv run examples/run_cemini.py --max-hands 50
 | Eval benchmark | `examples/run_cemini.py` |
 | Custom logic | `examples/cemini_decide.py` |
 | Preflop research | `examples/research_static_chart.py` |
+| PokerSkill stub | `examples/pokerskill_adapter.py` (HU; full lib = Linux) |
 | Wiki Phase-0 | `@wiki/entities/bots/cemini-devfun-poker-agent.md` |
 
 ## Production (cemini-prod)

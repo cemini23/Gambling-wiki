@@ -27,11 +27,12 @@ from agent import (  # noqa: E402
     estimate_equity,
 )
 from position_utils import hero_is_in_position  # noqa: E402
+from pokerskill_adapter import retrieve_pokerskill_hints  # noqa: E402
 from research_static_chart import research_static_chart  # noqa: E402
 
 # Preflop trash facing a raise — fold unless equity clearly covers price.
 _WEAK_FACING_RAISE = frozenset({
-    "A2o", "A3o", "A4o", "A5o",
+    "A2o", "A3o", "A4o", "A5o", "A6o", "A7o", "A8o", "A9o",
     "K9o", "K8o", "K7o", "K6o", "K5o", "K4o", "K3o", "K2o",
     "Q9o", "Q8o", "Q7o", "Q6o", "Q5o", "Q4o", "Q3o", "Q2o",
     "J9o", "J8o", "J7o", "J6o", "T9o", "T8o", "T7o", "98o", "97o", "87o",
@@ -40,8 +41,9 @@ _WEAK_FACING_RAISE = frozenset({
 
 
 def retrieve_solver_context(table: dict) -> dict:
-    """Preflop chart + PokerSkill-style binding labels for decide()."""
+    """Preflop chart + PokerSkill hints + skill-binding labels for decide()."""
     chart = research_static_chart(table)
+    ps = retrieve_pokerskill_hints(table)
     self_seat_num = table.get("selfSeatNumber")
     seats = table.get("seats") or []
     self_seat = next((s for s in seats if s.get("seatNumber") == self_seat_num), {})
@@ -49,6 +51,7 @@ def retrieve_solver_context(table: dict) -> dict:
     board = list(table.get("boardCards") or [])
     street = (table.get("street") or "Preflop").lower()
     hc = _hand_class(hole) or chart.get("hand_class") or ""
+    scenario = ps.get("scenario") or _scenario_label(street, board, hc)
 
     ctx: dict[str, Any] = {
         "preflop_chart": {
@@ -56,11 +59,12 @@ def retrieve_solver_context(table: dict) -> dict:
             "hand_class": hc or chart.get("hand_class"),
             "position": chart.get("position"),
         },
+        "pokerskill": ps,
         "skill_binding": {
             "street": street,
             "hand_class": hc or "unknown",
             "board_len": len(board),
-            "scenario": _scenario_label(street, board, hc),
+            "scenario": scenario,
         },
     }
     if chart:
@@ -110,27 +114,36 @@ def decide(
 
     chart = ctx.get("preflop_chart") or {}
     suggested = chart.get("suggested_action") or ctx.get("preflop_action")
+    ps = ctx.get("pokerskill") or {}
     binding = (ctx.get("skill_binding") or {}).get("scenario", "unknown")
     in_position = hero_is_in_position(table)
+    pot_control = bool(ps.get("pot_control"))
 
     action_name: str
     amount: Optional[int] = None
 
+    # PokerSkill HU stub: clear fold bias before chart/equity paths.
+    if ps.get("bias") == "fold" and call_chips > 0 and "fold" in available:
+        action_name, amount = "fold", None
     # Chart drives opens only — facing a bet, use equity + position margins.
-    if street == "Preflop" and call_chips == 0 and suggested:
+    elif street == "Preflop" and call_chips == 0 and suggested:
         action_name, amount = _preflop_open(
-            suggested, allowed, available, pot, equity)
+            suggested, allowed, available, pot, equity,
+            hand_class=chart.get("hand_class") or "",
+            position=chart.get("position") or "")
     elif street == "Preflop" and call_chips > 0:
         action_name, amount = _preflop_vs_bet(
             chart, allowed, available, equity, pot_odds, call_chips, pot,
             in_position=in_position)
     elif call_chips == 0:
         action_name, amount = _postflop_free(
-            equity, allowed, available, pot)
+            equity, allowed, available, pot, pot_control=pot_control,
+            ps_bias=ps.get("bias"), hand_class=chart.get("hand_class") or "")
     else:
         action_name, amount = _postflop_facing_bet(
             equity, pot_odds, allowed, available, call_chips, pot,
-            in_position=in_position)
+            in_position=in_position, pot_control=pot_control,
+            hand_class=chart.get("hand_class") or "")
 
     if action_name in ("fold", "check", "call"):
         amount = None
@@ -138,12 +151,16 @@ def decide(
     msg = _message(action_name, equity, pot_odds, binding, suggested)
     out = _build(action_name, amount, table, allowed, eq=equity, po=pot_odds, msg=msg)
     out["reasoning"] = _skill_reasoning(
-        out.get("reasoning", ""), binding, suggested, chart)
+        out.get("reasoning", ""), binding, suggested, chart, ps)
     return out
 
 
 def _preflop_open(suggested: str, allowed: dict, available: list,
-                  pot: int, equity: float) -> tuple[str, Optional[int]]:
+                  pot: int, equity: float,
+                  hand_class: str = "", position: str = "") -> tuple[str, Optional[int]]:
+    if (position == "SB" and _weak_ace_offsuit(hand_class)
+            and suggested == "raise" and "check" in available):
+        return "check", None
     if suggested == "raise" and allowed.get("canBet") and "bet" in available:
         br = allowed.get("betRange") or {}
         min_bet = int(br.get("min") or max(int(pot * 0.5), 1))
@@ -190,9 +207,18 @@ def _should_fold_weak_preflop(hc: str, equity: float, pot_odds: float) -> bool:
     return equity < pot_odds + 0.05
 
 
+def _weak_ace_offsuit(hc: str) -> bool:
+    return len(hc) == 3 and hc[0] == "A" and hc[2] == "o"
+
+
 def _postflop_free(equity: float, allowed: dict, available: list,
-                   pot: int) -> tuple[str, Optional[int]]:
-    if equity > 0.72 and allowed.get("canBet") and "bet" in available:
+                   pot: int, *, pot_control: bool = False,
+                   ps_bias: Optional[str] = None,
+                   hand_class: str = "") -> tuple[str, Optional[int]]:
+    bet_bar = 0.78 if pot_control else 0.72
+    if ps_bias == "probe_small" and allowed.get("canBet") and "bet" in available:
+        bet_bar = 0.58
+    if equity > bet_bar and allowed.get("canBet") and "bet" in available:
         br = allowed.get("betRange") or {}
         min_bet = int(br.get("min") or max(int(pot * 0.33), 1))
         max_bet = int(br.get("max") or min_bet)
@@ -205,9 +231,20 @@ def _postflop_free(equity: float, allowed: dict, available: list,
 
 def _postflop_facing_bet(equity: float, pot_odds: float, allowed: dict,
                          available: list, call_chips: int,
-                         pot: int, *, in_position: bool) -> tuple[str, Optional[int]]:
+                         pot: int, *, in_position: bool,
+                         pot_control: bool = False,
+                         hand_class: str = "") -> tuple[str, Optional[int]]:
+    # Live leak: weak ace-high folds cheaply on later streets (Ad3c-type spots).
+    if _weak_ace_offsuit(hand_class) and equity < 0.38 and "fold" in available:
+        return "fold", None
+    if _weak_ace_offsuit(hand_class) and not in_position and equity < 0.45:
+        if equity < pot_odds and "fold" in available:
+            return "fold", None
     fold_slack = 0.06 if in_position else 0.04
     call_margin = 0.04 if in_position else 0.07
+    if pot_control:
+        call_margin += 0.03
+        fold_slack -= 0.01
     if equity < pot_odds - fold_slack and "fold" in available:
         return "fold", None
     raise_bar = 0.82 if in_position else 0.86
@@ -239,10 +276,11 @@ def _message(action: str, equity: float, pot_odds: float,
 
 
 def _skill_reasoning(base: str, binding: str, suggested: Optional[str],
-                     chart: dict) -> str:
+                     chart: dict, ps: Optional[dict] = None) -> str:
     """Append skill tag within 150-char YAML cap."""
     pos = chart.get("position") or "?"
-    tag = f'sk: "{binding}@{pos}"'
+    layer = (ps or {}).get("layer", "stub")
+    tag = f'sk: "{binding}@{pos}|{layer}"'
     if suggested:
         tag = f'sk: "{binding}|{suggested}@{pos}"'
     if len(base) + len(tag) + 2 <= 150:

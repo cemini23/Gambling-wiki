@@ -34,9 +34,18 @@ from typing import Optional
 
 from dotenv import load_dotenv
 
+_EXAMPLES = Path(__file__).resolve().parent
+if str(_EXAMPLES) not in sys.path:
+    sys.path.insert(0, str(_EXAMPLES))
+
 from arena_client import ArenaClient, ArenaError, DEFAULT_BASE, CREDS_PATH
 
-# 6-max seat → approximate position label (heuristic, not authoritative)
+try:
+    from position_utils import hero_position_label
+except ImportError:
+    hero_position_label = None  # type: ignore
+
+# Legacy fallback when position_utils unavailable
 _SEAT_POS = {1: "BTN", 2: "SB", 3: "BB", 4: "UTG", 5: "MP", 6: "CO"}
 
 
@@ -86,6 +95,20 @@ def _fetch_replays(client: ArenaClient, agent_id: str, limit: int) -> dict[str, 
         if tid is not None:
             out[tid] = int(r.get("chipDelta") or 0)
     return out
+
+
+def _pos_label(table_row: dict, seat_num: int) -> str:
+    """Position label for a seat in a settled table row."""
+    if hero_position_label is not None and seat_num:
+        stub = {
+            "selfSeatNumber": seat_num,
+            "seats": table_row.get("seats") or [],
+            "buttonSeatNumber": table_row.get("buttonSeatNumber"),
+            "smallBlindChips": table_row.get("smallBlindChips"),
+            "bigBlindChips": table_row.get("bigBlindChips"),
+        }
+        return hero_position_label(stub)
+    return _SEAT_POS.get(seat_num, f"seat{seat_num}")
 
 
 def _resolve_latest_competition(tables: list[dict]) -> Optional[str]:
@@ -150,6 +173,7 @@ def analyze(tables: list[dict], chip_deltas: dict[str, int],
             "stack_end": stack_end,
             "winner": winner_handle,
             "winner_hand": winner_hand,
+            "_table": t,
         })
 
     if not rows:
@@ -177,19 +201,24 @@ def analyze(tables: list[dict], chip_deltas: dict[str, int],
         "",
     ]
 
-    # Position breakdown
+    # Position breakdown (rotated labels when button field present)
+    by_pos: dict[str, dict] = {}
+    for r in rows:
+        pl = _pos_label(r.get("_table") or {}, r["seat"])
+        rec = by_pos.setdefault(pl, {"pos": pl, "total": 0, "delta_sum": 0})
+        rec["total"] += 1
+        rec["delta_sum"] += r["delta"]
+
     lines.append("POSITION BREAKDOWN  (worst → best avg chip delta):")
-    seat_rows = sorted(
-        by_seat.values(),
+    pos_rows = sorted(
+        by_pos.values(),
         key=lambda r: r["delta_sum"] / max(r["total"], 1),
     )
-    for r in seat_rows:
-        pos = _SEAT_POS.get(r["seat"], f"seat{r['seat']}")
+    for r in pos_rows:
         avg = r["delta_sum"] / max(r["total"], 1)
         bar = "▼" if avg < 0 else "▲"
         lines.append(
-            f"  {bar} Seat {r['seat']} ({pos:3})  {avg:+.0f} chips avg"
-            f"  ({r['total']} hands)"
+            f"  {bar} {r['pos']:4s}  {avg:+.0f} chips avg  ({r['total']} hands)"
         )
     lines.append("")
 
@@ -197,7 +226,7 @@ def analyze(tables: list[dict], chip_deltas: dict[str, int],
     n = min(top_n, len(rows))
     lines.append(f"WORST {n} HANDS (by chip delta):")
     for i, h in enumerate(rows[:n], 1):
-        pos = _SEAT_POS.get(h["seat"], f"s{h['seat']}")
+        pos = _pos_label(h.get("_table") or {}, h["seat"])
         hole_str = " ".join(h["hole"]) if h["hole"] else "??"
         lines.append(
             f"  #{i:02d}  {hole_str:7s}  {pos:3}  "
@@ -210,7 +239,7 @@ def analyze(tables: list[dict], chip_deltas: dict[str, int],
     best = sorted(rows, key=lambda x: x["delta"], reverse=True)[:min(3, len(rows))]
     lines.append("BEST 3 HANDS (for contrast):")
     for i, h in enumerate(best, 1):
-        pos = _SEAT_POS.get(h["seat"], f"s{h['seat']}")
+        pos = _pos_label(h.get("_table") or {}, h["seat"])
         hole_str = " ".join(h["hole"]) if h["hole"] else "??"
         lines.append(
             f"  #{i}  {hole_str:7s}  {pos:3}  delta={h['delta']:+d}"
