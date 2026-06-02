@@ -151,6 +151,7 @@ def main() -> int:
             for seat in player_sizes
         }
         summary_path = out_dir / "by_profile.jsonl"
+        out_dir.mkdir(parents=True, exist_ok=True)
         with summary_path.open("a", encoding="utf-8") as f:
             f.write(json.dumps({
                 "profile": profile.name,

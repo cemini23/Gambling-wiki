@@ -36,6 +36,8 @@ rsync -avz --delete \
   --exclude 'venv-pokerskill/' \
   --exclude '.git/' \
   --exclude '__pycache__/' \
+  --exclude 'reports/' \
+  --exclude '.pytest_cache/' \
   --exclude '.arena-credentials' \
   --exclude '.arena-credentials.*' \
   --exclude '.arena-poker-state' \
@@ -52,6 +54,7 @@ chmod +x "\${REMOTE_DIR}/examples/run_train_batch.sh"
 chmod +x "\${REMOTE_DIR}/examples/run_train_sweep.sh"
 chmod +x "\${REMOTE_DIR}/examples/run_train_sweep_mixed.sh"
 chmod +x "\${REMOTE_DIR}/examples/wait_then_run_mixed_sweep.sh"
+chmod +x "\${REMOTE_DIR}/examples/wait_then_run_latest_sweep.sh"
 chmod +x "\${REMOTE_DIR}/examples/run_train_cemini.sh"
 
 if [[ ! -x "\${REMOTE_DIR}/venv/bin/python" ]]; then
@@ -70,6 +73,8 @@ install -m 644 "\${REMOTE_DIR}/deploy/cemini-poker-train-mixed.service" \
   /etc/systemd/system/cemini-poker-train-mixed.service
 install -m 644 "\${REMOTE_DIR}/deploy/cemini-poker-train-followup.service" \
   /etc/systemd/system/cemini-poker-train-followup.service
+install -m 644 "\${REMOTE_DIR}/deploy/cemini-poker-train-latest-followup.service" \
+  /etc/systemd/system/cemini-poker-train-latest-followup.service
 install -m 644 "\${REMOTE_DIR}/deploy/cemini-poker-train.timer" \
   /etc/systemd/system/cemini-poker-train.timer
 
@@ -78,11 +83,21 @@ systemctl enable cemini-poker-train.timer
 systemctl start cemini-poker-train.timer
 systemctl --no-pager status cemini-poker-train.timer || true
 
-# If primary sweep is in-flight (started before OnSuccess was installed), queue mixed.
-PRIMARY_STATE="\$(systemctl show cemini-poker-train.service -p ActiveState --value 2>/dev/null || echo inactive)"
-if [[ "\${PRIMARY_STATE}" == "activating" ]]; then
-  echo "Primary sweep in flight — queueing mixed followup after it finishes"
-  systemctl start --no-block cemini-poker-train-followup.service
+# Queue latest pipeline after any in-flight sweep (or start immediately if idle).
+if pgrep -f 'run_train_sweep' >/dev/null 2>&1; then
+  echo "Sweep process in flight — queueing latest followup"
+  systemctl start --no-block cemini-poker-train-latest-followup.service
+else
+  for u in cemini-poker-train.service cemini-poker-train-mixed.service; do
+    st="\$(systemctl show "\$u" -p ActiveState --value 2>/dev/null || echo inactive)"
+    if [[ "\$st" == "activating" || "\$st" == "active" ]]; then
+      echo "Sweep unit \$u active — queueing latest followup"
+      systemctl start --no-block cemini-poker-train-latest-followup.service
+      exit 0
+    fi
+  done
+  echo "No sweep running — starting latest pipeline now"
+  systemctl start --no-block cemini-poker-train.service
 fi
 REMOTE
 
@@ -99,4 +114,5 @@ fi
 echo ""
 echo "6-max leaderboard:  ssh ${HOST} cat ${REMOTE_DIR}/reports/sweep/latest/leaderboard.txt"
 echo "Mixed leaderboard:  ssh ${HOST} cat ${REMOTE_DIR}/reports/sweep-mixed/latest/leaderboard.txt"
-echo "Mixed-only manual:  ssh ${HOST} systemctl start --no-block cemini-poker-train-mixed.service"
+echo "Mixed-only manual:  ssh ${HOST} systemctl start --no-block cemini-poker-train-mixed.service
+Queue after current: ssh ${HOST} systemctl start --no-block cemini-poker-train-latest-followup.service"

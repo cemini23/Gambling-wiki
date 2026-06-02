@@ -1,0 +1,16 @@
+[Unit]
+Description=Queue latest training pipeline after in-flight sweeps finish
+Documentation=file:///opt/devfun-poker-arena-train/README-CEMINI.md
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+Group=root
+WorkingDirectory=/opt/devfun-poker-arena-train
+ExecStart=/opt/devfun-poker-arena-train/examples/wait_then_run_latest_sweep.sh
+Nice=10
+IOSchedulingClass=idle
+
+[Install]
+WantedBy=multi-user.target
