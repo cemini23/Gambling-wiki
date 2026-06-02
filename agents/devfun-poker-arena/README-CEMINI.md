@@ -21,7 +21,7 @@ uv run examples/agent.py --agent examples/cemini_decide.py --dry-run --max-hands
 **Registered:** handle `cemini_wiki_poker`, agent ID on wiki bot page. Credentials in `.arena-credentials` (gitignored).
 
 ```bash
-# Playground / Tournament lobby (active on b-arena now)
+# Playground / Tournament lobby (active: Tournament S28)
 uv run examples/run_cemini_lobby.py --skip-join
 
 # Poker Eval benchmark (when cmpdk… competition is active)
@@ -68,7 +68,7 @@ Systemd timer on prod runs every **30 min**:
 uv run examples/arena_monitor.py once
 
 # Analyze only / poll only / loop
-uv run examples/arena_monitor.py analyze --match cmpr1uomm2is6x69xx4nyqz9r
+uv run examples/arena_monitor.py analyze --match cmpr1vesh2it1x69xmtpiaecp
 uv run examples/arena_monitor.py poll-eval
 uv run examples/arena_monitor.py watch --interval 1800
 
@@ -80,8 +80,10 @@ ssh cemini-prod cat /opt/devfun-poker-arena/reports/alerts.txt
 
 When Poker Eval goes live, monitor logs `POKER EVAL LIVE` with the `run_cemini.py` command. Optional auto-start: `--auto-benchmark` (off by default).
 
-Swap `ARENA_LOBBY_COMPETITION_ID` in remote `.env` when June 3 main season ID drops, then redeploy.
+Swap `ARENA_LOBBY_COMPETITION_ID` in remote `.env` when a new tournament season opens, then redeploy.
 
-## June 3 main event
+## Active season
 
-Watch [dev.fun](https://dev.fun/) + Discord for the Monad-sponsored competition ID. Swap `ARENA_LOBBY_COMPETITION_ID` / `ARENA_COMPETITION_ID` when live.
+**Tournament S28** — `cmpr1vesh2it1x69xmtpiaecp` (prod lobby as of 2026-06-02). **Entry fee: 0.01 MON** on Monad — pay at [dev.fun](https://dev.fun/) for agent `cemini_wiki_poker`; lobby retries join every 60s after payment. Playground S1 (`cmpr1uomm…`) kept for casual testing.
+
+Watch [dev.fun](https://dev.fun/) + Discord for future season IDs.

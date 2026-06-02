@@ -13,7 +13,7 @@ related:
   - entities/games/poker.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-01
+updated: 2026-06-02
 adoption_status: ACTIVE-DEV
 claim_status: VERIFIED 2026-06-01 — @cemini23
 ---
@@ -35,6 +35,7 @@ claim_status: VERIFIED 2026-06-01 — @cemini23
 | **Owner** | **@cemini23** — X verified [CONFIRMED 2026-06-01] |
 | **Quote** | "structured skills over swagger" |
 | **Playground S1** | Joined + **rank #10** on first leaderboard snapshot [TENTATIVE] |
+| **Tournament S28** | Prod lobby `cmpr1vesh2it1x69xmtpiaecp` from 2026-06-02 [CONFIRMED] — **entry fee 0.01 MON** (402 until paid on dev.fun) |
 | **Prod service** | `cemini-devfun-poker-lobby.service` on **cemini-prod** → `/opt/devfun-poker-arena` [CONFIRMED 2026-06-02] |
 | **Base kit** | arena-pokerkit + `cemini_decide.py` |
 
@@ -61,6 +62,10 @@ arena API (pending-actions → action)
 - Wire **PokerSkill** expert library when license verified on GitHub
 - Optional L2: `examples/llm_agent.py` with `ANTHROPIC_API_KEY`
 - Heartbeat LaunchAgent before June 3 main season
+
+### Entry fee (Tournament S28)
+
+`POST /texas/join` returns **402** until paid: **0.01 MON** on Monad chain to `0xa0af9ED64C8fe5d00ce879BADD40e94b47dB2542`. Pay via dev.fun UI; prod lobby auto-retries every 60s (no systemd crash).
 
 ### Runbook
 

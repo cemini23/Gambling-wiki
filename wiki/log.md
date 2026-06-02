@@ -152,3 +152,10 @@ Cross-wiki stub routed from `@osint-wiki/sources/trading-posts-compilation-16-20
 
 Cross-wiki stub routed from `@osint-wiki/sources/multi-wiki-tool-eval-v6-k90-2026-05-31.md`.
 - Created wiki/sources/multi-wiki-tool-eval-v6-k90-2026-05-31.md (stub)
+
+## [2026-06-02] ops | Tournament S28 lobby + entry-fee retry
+
+- **Prod** — `ARENA_LOBBY_COMPETITION_ID=cmpr1vesh2it1x69xmtpiaecp` (Tournament S28)
+- **Fee** — 0.01 MON on Monad (402 until paid on dev.fun); lobby retries join every 60s
+- **Code** — `run_cemini_lobby.py` no longer exits on 402; monitor defaults updated
+- **Wiki** — devfun-poker-arena + cemini-devfun-poker-agent entry-fee notes

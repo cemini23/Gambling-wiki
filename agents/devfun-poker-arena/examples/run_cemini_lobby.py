@@ -52,7 +52,7 @@ def run_lobby(args: argparse.Namespace) -> int:
     )
     competition_id = (
         args.competition_id or os.environ.get("ARENA_LOBBY_COMPETITION_ID")
-        or "cmpr1uomm2is6x69xx4nyqz9r"
+        or "cmpr1vesh2it1x69xmtpiaecp"
     )
     decide_fn = cemini_decide.decide
     retrieve_fn = cemini_decide.retrieve_solver_context
@@ -76,9 +76,18 @@ def run_lobby(args: argparse.Namespace) -> int:
                 print(f"[cemini-lobby] join: {json.dumps(join_resp, sort_keys=True)[:500]}")
             except ArenaError as e:
                 if e.status == 402:
-                    print("[cemini-lobby] entry fee required — see docs.dev.fun quickstart",
-                          file=sys.stderr)
-                    raise SystemExit(3) from e
+                    pay = (e.body or {}).get("paymentRequirements") or {}
+                    amt = pay.get("amount", "?")
+                    cur = pay.get("currency", "MON")
+                    chain = pay.get("chain", "monad")
+                    dest = pay.get("to", "?")
+                    print(
+                        f"[cemini-lobby] entry fee required: {amt} {cur} on {chain} "
+                        f"→ {dest} — pay via dev.fun then auto-retry",
+                        file=sys.stderr,
+                    )
+                    last_join_at = now
+                    return
                 if e.status == 403:
                     print("[cemini-lobby] X claim required — verify owner on dev.fun",
                           file=sys.stderr)

@@ -14,7 +14,7 @@ related:
   - entities/games/poker.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-01
+updated: 2026-06-02
 phase_0_verdict: CONDITIONAL-GO 2026-06-01 — sanctioned bot arena (not live poker room); enter via arena API; prize claim needs X verify + external payout wallet
 adoption_status: PHASE-0-COMPLETE
 ---
@@ -60,13 +60,13 @@ adoption_status: PHASE-0-COMPLETE
 
 **Verdict: CONDITIONAL-GO** — participate in **dev.fun arena only**; do not reuse stack against consumer poker sites.
 
-### Active beta competitions (2026-06-01 snapshot) [TENTATIVE]
+### Active beta competitions (2026-06-02) [CONFIRMED]
 
-| ID | Name |
-|----|------|
-| `cmpr1uomm2is6x69xx4nyqz9r` | [Poker] Playground S1 |
-| `cmpr1vesh2it1x69xmtpiaecp` | [Poker] Tournament S28 |
-| `cmpdk0pt00eawvcaf1es8plw2` | Poker Eval 500-hand (starter `.env.example`) |
+| ID | Name | Notes |
+|----|------|-------|
+| `cmpr1vesh2it1x69xmtpiaecp` | [Poker] Tournament S28 | **Prod lobby** — entry fee **0.01 MON** on Monad [CONFIRMED 2026-06-02] |
+| `cmpr1uomm2is6x69xx4nyqz9r` | [Poker] Playground S1 | Dev / casual |
+| `cmpdk0pt00eawvcaf1es8plw2` | Poker Eval 500-hand | Inactive until next eval window |
 
 Re-check `GET /competition/list-active` before each run.
 

@@ -265,7 +265,7 @@ def run_once(args: argparse.Namespace, client: ArenaClient, agent_id: str) -> in
     lobby_id = (
         args.match
         or os.environ.get("ARENA_LOBBY_COMPETITION_ID")
-        or "cmpr1uomm2is6x69xx4nyqz9r"
+        or "cmpr1vesh2it1x69xmtpiaecp"
     )
 
     if args.command in ("once", "analyze", None):
