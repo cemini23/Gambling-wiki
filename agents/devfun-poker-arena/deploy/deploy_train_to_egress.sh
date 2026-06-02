@@ -50,6 +50,8 @@ PY=/usr/bin/python3
 
 chmod +x "\${REMOTE_DIR}/examples/run_train_batch.sh"
 chmod +x "\${REMOTE_DIR}/examples/run_train_sweep.sh"
+chmod +x "\${REMOTE_DIR}/examples/run_train_sweep_mixed.sh"
+chmod +x "\${REMOTE_DIR}/examples/wait_then_run_mixed_sweep.sh"
 chmod +x "\${REMOTE_DIR}/examples/run_train_cemini.sh"
 
 if [[ ! -x "\${REMOTE_DIR}/venv/bin/python" ]]; then
@@ -60,10 +62,14 @@ fi
 "\${REMOTE_DIR}/venv/bin/pip" install -q --upgrade pip
 "\${REMOTE_DIR}/venv/bin/pip" install -q httpx python-dotenv treys pokerkit
 
-mkdir -p "\${REMOTE_DIR}/reports/train" "\${REMOTE_DIR}/reports/sweep"
+mkdir -p "\${REMOTE_DIR}/reports/train" "\${REMOTE_DIR}/reports/sweep" "\${REMOTE_DIR}/reports/sweep-mixed"
 
 install -m 644 "\${REMOTE_DIR}/deploy/cemini-poker-train.service" \
   /etc/systemd/system/cemini-poker-train.service
+install -m 644 "\${REMOTE_DIR}/deploy/cemini-poker-train-mixed.service" \
+  /etc/systemd/system/cemini-poker-train-mixed.service
+install -m 644 "\${REMOTE_DIR}/deploy/cemini-poker-train-followup.service" \
+  /etc/systemd/system/cemini-poker-train-followup.service
 install -m 644 "\${REMOTE_DIR}/deploy/cemini-poker-train.timer" \
   /etc/systemd/system/cemini-poker-train.timer
 
@@ -71,6 +77,13 @@ systemctl daemon-reload
 systemctl enable cemini-poker-train.timer
 systemctl start cemini-poker-train.timer
 systemctl --no-pager status cemini-poker-train.timer || true
+
+# If primary sweep is in-flight (started before OnSuccess was installed), queue mixed.
+PRIMARY_STATE="\$(systemctl show cemini-poker-train.service -p ActiveState --value 2>/dev/null || echo inactive)"
+if [[ "\${PRIMARY_STATE}" == "activating" ]]; then
+  echo "Primary sweep in flight — queueing mixed followup after it finishes"
+  systemctl start --no-block cemini-poker-train-followup.service
+fi
 REMOTE
 
 if [[ "$RUN_NOW" == true ]]; then
@@ -84,5 +97,6 @@ else
 fi
 
 echo ""
-echo "Sweep leaderboard: ssh ${HOST} cat ${REMOTE_DIR}/reports/sweep/latest/leaderboard.txt"
-echo "Single-profile batch (optional): SWEEP_PROFILES=default TRAIN_HANDS=5000 examples/run_train_batch.sh"
+echo "6-max leaderboard:  ssh ${HOST} cat ${REMOTE_DIR}/reports/sweep/latest/leaderboard.txt"
+echo "Mixed leaderboard:  ssh ${HOST} cat ${REMOTE_DIR}/reports/sweep-mixed/latest/leaderboard.txt"
+echo "Mixed-only manual:  ssh ${HOST} systemctl start --no-block cemini-poker-train-mixed.service"

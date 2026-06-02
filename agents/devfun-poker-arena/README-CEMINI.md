@@ -50,18 +50,26 @@ Opponent bots: `rock`, `maniac`, `tight`, `loose`, `random`, `call`, `mixed` via
 
 ### Overnight parameter sweep on cemini-egress-fi
 
-Idle egress runs a **grid of decision profiles** (steal margins, maniac call tightness, paired-board folds, trash folds) × **rock + maniac** at **03:00 UTC**. Output is a ranked leaderboard — pick the best profile for the next code deploy.
+Idle egress runs a **two-phase nightly pipeline** at **03:00 UTC**:
+
+1. **Primary** — full profile grid @ **6-max** (`reports/sweep/`)
+2. **Mixed** — same grid @ **6/4/2-max**, 1500 hands/combo, tournament-weighted ranking (`reports/sweep-mixed/`)
+
+Phase 2 starts automatically when phase 1 exits successfully (`OnSuccess=` in systemd).
 
 ```bash
 # Deploy + enable nightly timer (requires private/opponent_hud_exploit.py locally)
 ./deploy/deploy_train_to_egress.sh
 
-# Deploy and run immediately
-./deploy/deploy_train_to_egress.sh --run-now
-
-# Leaderboard after a run
+# Leaderboards
 ssh cemini-egress-fi cat /opt/devfun-poker-arena-train/reports/sweep/latest/leaderboard.txt
-ssh cemini-egress-fi cat /opt/devfun-poker-arena-train/reports/sweep/latest/best.json
+ssh cemini-egress-fi cat /opt/devfun-poker-arena-train/reports/sweep-mixed/latest/leaderboard.txt
+
+# Manual: mixed only (e.g. after primary already finished)
+ssh cemini-egress-fi systemctl start --no-block cemini-poker-train-mixed.service
+
+# Manual: wait for in-flight primary then mixed
+ssh cemini-egress-fi systemctl start --no-block cemini-poker-train-followup.service
 ```
 
 | Env (systemd / shell) | Default | Meaning |
