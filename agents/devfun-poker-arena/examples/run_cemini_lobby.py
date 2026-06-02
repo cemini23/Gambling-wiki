@@ -211,6 +211,8 @@ def run_lobby(args: argparse.Namespace) -> int:
 
             if tables:
                 table = tables[0]
+                if not table.get("competitionId"):
+                    table = {**table, "competitionId": competition_id}
                 deadline_ms = table.get("actionDeadlineAt") or 0
                 deadline_s = (
                     max(0.0, (deadline_ms / 1000.0) - time.time()) if deadline_ms else 10.0
