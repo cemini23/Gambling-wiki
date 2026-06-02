@@ -30,6 +30,10 @@ fi
 if [[ ! -d "\${POKERSKILL_SRC}/.git" ]]; then
   echo "Cloning PokerSkill to \${POKERSKILL_SRC}..."
   git clone --depth 1 https://github.com/lbn187/PokerSkill.git "\${POKERSKILL_SRC}"
+else
+  echo "Updating PokerSkill at \${POKERSKILL_SRC}..."
+  git -C "\${POKERSKILL_SRC}" fetch --depth 1 origin main
+  git -C "\${POKERSKILL_SRC}" reset --hard origin/main
 fi
 
 if [[ ! -x "\${VENV}/bin/python" ]]; then
@@ -42,7 +46,7 @@ fi
 # Upstream repo ships no pokerskill_agent/__init__.py — find_packages() installs metadata only.
 if [[ ! -f "\${POKERSKILL_SRC}/pokerskill_agent/__init__.py" ]]; then
   echo "Adding missing pokerskill_agent/__init__.py (upstream packaging gap)..."
-  printf '# PokerSkill package\\n' > "\${POKERSKILL_SRC}/pokerskill_agent/__init__.py"
+  printf '# PokerSkill package\n' > "\${POKERSKILL_SRC}/pokerskill_agent/__init__.py"
 fi
 
 "\${VENV}/bin/pip" install -q --force-reinstall --no-cache-dir -e "\${POKERSKILL_SRC}"
@@ -70,3 +74,6 @@ REMOTE
 
 echo ""
 echo "Restart lobby to pick up bridge: ssh ${HOST} systemctl restart cemini-devfun-poker-lobby"
+ssh "${HOST}" systemctl restart cemini-devfun-poker-lobby.service
+sleep 2
+ssh "${HOST}" systemctl is-active cemini-devfun-poker-lobby.service
