@@ -26,6 +26,7 @@ from agent import (  # noqa: E402
     _hand_class,
     estimate_equity,
 )
+from position_utils import hero_is_in_position  # noqa: E402
 from research_static_chart import research_static_chart  # noqa: E402
 
 # Preflop trash facing a raise — fold unless equity clearly covers price.
@@ -110,22 +111,26 @@ def decide(
     chart = ctx.get("preflop_chart") or {}
     suggested = chart.get("suggested_action") or ctx.get("preflop_action")
     binding = (ctx.get("skill_binding") or {}).get("scenario", "unknown")
+    in_position = hero_is_in_position(table)
 
     action_name: str
     amount: Optional[int] = None
 
-    if street == "Preflop" and suggested and call_chips == 0:
+    # Chart drives opens only — facing a bet, use equity + position margins.
+    if street == "Preflop" and call_chips == 0 and suggested:
         action_name, amount = _preflop_open(
             suggested, allowed, available, pot, equity)
-    elif street == "Preflop" and suggested and call_chips > 0:
+    elif street == "Preflop" and call_chips > 0:
         action_name, amount = _preflop_vs_bet(
-            suggested, chart, allowed, available, equity, pot_odds, call_chips, pot)
+            chart, allowed, available, equity, pot_odds, call_chips, pot,
+            in_position=in_position)
     elif call_chips == 0:
         action_name, amount = _postflop_free(
             equity, allowed, available, pot)
     else:
         action_name, amount = _postflop_facing_bet(
-            equity, pot_odds, allowed, available, call_chips, pot)
+            equity, pot_odds, allowed, available, call_chips, pot,
+            in_position=in_position)
 
     if action_name in ("fold", "check", "call"):
         amount = None
@@ -152,23 +157,26 @@ def _preflop_open(suggested: str, allowed: dict, available: list,
     return ("call" if "call" in available else "fold"), None
 
 
-def _preflop_vs_bet(suggested: str, chart: dict, allowed: dict, available: list,
+def _preflop_vs_bet(chart: dict, allowed: dict, available: list,
                     equity: float, pot_odds: float, call_chips: int,
-                    pot: int) -> tuple[str, Optional[int]]:
+                    pot: int, *, in_position: bool) -> tuple[str, Optional[int]]:
     hc = chart.get("hand_class") or ""
     if _should_fold_weak_preflop(hc, equity, pot_odds) and "fold" in available:
         return "fold", None
-    premium = hc in {"AA", "KK", "QQ", "AKs", "AKo"}
-    if suggested == "raise" and premium and allowed.get("canRaise"):
+    premium = hc in {"AA", "KK", "QQ", "JJ", "AKs", "AKo"}
+    strong_3bet = premium or (in_position and hc in {"AQs", "AQo", "TT"})
+    if strong_3bet and equity > 0.52 and allowed.get("canRaise") and "raise" in available:
         rr = allowed.get("raiseRange") or {}
         min_r = int(rr.get("min") or call_chips * 2)
         max_r = int(rr.get("max") or min_r)
         target = max(min_r, min(int(pot * 0.75 + call_chips * 2.5), max_r))
         return "raise", target
-    if equity >= pot_odds + 0.03 and "call" in available:
+    call_margin = 0.03 if in_position else 0.06
+    fold_margin = 0.08 if in_position else 0.05
+    if equity >= pot_odds + call_margin and "call" in available:
         return "call", None
-    if suggested == "fold" or equity < pot_odds - 0.08:
-        return ("fold" if "fold" in available else "call"), None
+    if equity < pot_odds - fold_margin and "fold" in available:
+        return "fold", None
     return ("call" if "call" in available else "fold"), None
 
 
@@ -197,16 +205,19 @@ def _postflop_free(equity: float, allowed: dict, available: list,
 
 def _postflop_facing_bet(equity: float, pot_odds: float, allowed: dict,
                          available: list, call_chips: int,
-                         pot: int) -> tuple[str, Optional[int]]:
-    if equity < pot_odds - 0.06 and "fold" in available:
+                         pot: int, *, in_position: bool) -> tuple[str, Optional[int]]:
+    fold_slack = 0.06 if in_position else 0.04
+    call_margin = 0.04 if in_position else 0.07
+    if equity < pot_odds - fold_slack and "fold" in available:
         return "fold", None
-    if equity > 0.82 and allowed.get("canRaise") and "raise" in available:
+    raise_bar = 0.82 if in_position else 0.86
+    if equity > raise_bar and allowed.get("canRaise") and "raise" in available:
         rr = allowed.get("raiseRange") or {}
         min_r = int(rr.get("min") or call_chips * 2)
         max_r = int(rr.get("max") or min_r)
         target = max(min_r, min(int(pot * 0.75 + call_chips * 2), max_r))
         return "raise", target
-    if equity >= pot_odds + 0.04 and "call" in available:
+    if equity >= pot_odds + call_margin and "call" in available:
         return "call", None
     if "check" in available:
         return "check", None

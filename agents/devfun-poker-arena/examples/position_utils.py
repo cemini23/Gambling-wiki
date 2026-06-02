@@ -108,3 +108,8 @@ def hero_position_label(table: dict) -> str:
     if dist < len(labels):
         return labels[dist]
     return "MP"
+
+
+def hero_is_in_position(table: dict) -> bool:
+    """True when hero has a late-seat / button-adjacent label (IP heuristic)."""
+    return hero_position_label(table) in {"BTN", "CO"}
