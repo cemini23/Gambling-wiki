@@ -11,6 +11,7 @@ WorkingDirectory=/opt/devfun-poker-arena-train
 Environment=PYTHONUNBUFFERED=1
 Environment=SWEEP_HANDS=2500
 Environment=SWEEP_PROFILES=named+grid
+Environment=SWEEP_PLAYER_SIZES=6
 Environment=SWEEP_SEED=
 Environment=REPORT_DIR=/opt/devfun-poker-arena-train/reports/sweep
 ExecStart=/opt/devfun-poker-arena-train/examples/run_train_sweep.sh

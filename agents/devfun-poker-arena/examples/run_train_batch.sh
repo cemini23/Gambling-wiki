@@ -2,7 +2,8 @@
 # Overnight batch: rock + maniac self-play with HUD (offline, no Arena API).
 #
 # Env:
-#   TRAIN_HANDS   — hands per archetype (default 5000)
+#   TRAIN_HANDS    — hands per archetype (default 5000)
+#   TRAIN_PLAYERS  — seats at table 2–6 (default 6 for tournament tables)
 #   TRAIN_SEED     — RNG seed (default YYYYMMDD UTC)
 #   REPORT_DIR     — output directory (default reports/train)
 set -euo pipefail
@@ -10,6 +11,7 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
 HANDS="${TRAIN_HANDS:-5000}"
+PLAYERS="${TRAIN_PLAYERS:-6}"
 SEED="${TRAIN_SEED:-$(date -u +%Y%m%d)}"
 REPORT_DIR="${REPORT_DIR:-reports/train}"
 PYTHON="${PYTHON:-./venv/bin/python}"
@@ -26,10 +28,11 @@ run_one() {
   local opp="$1"
   export TRAINING_OPPONENT_MODE="$opp"
   echo ""
-  echo "========== $opp × $HANDS hands (seed=$SEED) =========="
+  echo "========== $opp × $HANDS hands @ ${PLAYERS}-max (seed=$SEED) =========="
   $PYTHON examples/selfplay.py \
     --agent examples/cemini_decide.py \
     --opponent "$opp" \
+    --players "$PLAYERS" \
     --hands "$HANDS" \
     --training-hud \
     --seed "$SEED"
@@ -39,6 +42,7 @@ run_one() {
   echo "cemini train batch — $STAMP"
   echo "host: $(hostname)"
   echo "hands_per_archetype: $HANDS"
+  echo "table_size: ${PLAYERS}-max"
   echo "seed: $SEED"
   echo ""
   run_one rock

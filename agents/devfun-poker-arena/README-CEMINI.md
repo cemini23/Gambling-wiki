@@ -33,15 +33,18 @@ Train on the **arena-pokerkit** local loop. Zero network, nothing on the public 
 **Recommended loop:** train locally until self-play bb/100 is stable vs `rock` and `maniac`, then deploy to prod for S28 only.
 
 ```bash
-# ~500 hands in ~2–3 seconds — rock (River Shark shape)
+# 6-max (default) — matches S28 full tables
 ./examples/run_train_cemini.sh rock 500
 
 # maniac (CallMeMummy shape)
 ./examples/run_train_cemini.sh maniac 500
 
-# Reproducible regression
-./examples/run_train_cemini.sh rock 1000 --seed 42
+# HU or mixed sizes
+TRAIN_PLAYERS=2 ./examples/run_train_cemini.sh rock 500
+uv run examples/selfplay.py --agent examples/cemini_decide.py --players 4 --opponent rock --hands 500 --training-hud
 ```
+
+**Table size:** Tournament allows **2–6** seats; tables typically open **6-max**. Self-play defaults were HU (`--players 2`); training/sweep now default to **`TRAIN_PLAYERS=6`** / `SWEEP_PLAYER_SIZES=6`. For variety without re-running the full grid on every size, use `SWEEP_PLAYER_SIZES=6,4,2` (runtime × number of sizes).
 
 Opponent bots: `rock`, `maniac`, `tight`, `loose`, `random`, `call`, `mixed` via `pokerkit selfplay` / `selfplay.py`.
 
@@ -63,8 +66,10 @@ ssh cemini-egress-fi cat /opt/devfun-poker-arena-train/reports/sweep/latest/best
 
 | Env (systemd / shell) | Default | Meaning |
 |-----------------------|---------|---------|
-| `SWEEP_HANDS` | 2500 | Hands per profile per opponent |
+| `SWEEP_HANDS` | 2500 | Hands per profile per opponent **per table size** |
 | `SWEEP_PROFILES` | `named+grid` | ~12 named corners + 54 grid combos (~66 total) |
+| `SWEEP_PLAYER_SIZES` | `6` | Comma list: `6`, or `6,4,2` for mixed-size |
+| `SWEEP_PLAYER_WEIGHTS` | (auto) | Ranking weights, e.g. `6:0.55,4:0.25,2:0.20` |
 | `SWEEP_SEED` | UTC date | Reproducible base seed |
 
 Local quick sweep:

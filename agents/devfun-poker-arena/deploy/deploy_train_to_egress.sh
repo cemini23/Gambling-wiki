@@ -75,12 +75,12 @@ REMOTE
 
 if [[ "$RUN_NOW" == true ]]; then
   echo "==> Starting parameter sweep now (may take 1–3 hours on egress)..."
-  ssh "${HOST}" "systemctl start cemini-poker-train.service"
+  ssh "${HOST}" "systemctl start --no-block cemini-poker-train.service"
   echo "Tail: ssh ${HOST} journalctl -u cemini-poker-train.service -f"
 else
   echo ""
   echo "Timer enabled (03:00 UTC daily). To run immediately:"
-  echo "  ssh ${HOST} systemctl start cemini-poker-train.service"
+  echo "  ssh ${HOST} systemctl start --no-block cemini-poker-train.service"
 fi
 
 echo ""

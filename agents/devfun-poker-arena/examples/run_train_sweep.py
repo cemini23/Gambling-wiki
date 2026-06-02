@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
-"""Overnight parameter sweep: many decision profiles × rock + maniac self-play.
+"""Overnight parameter sweep: profiles × opponents × table sizes.
 
 Writes ranked CSV + JSON under reports/sweep/<stamp>/.
 
 Env:
-  SWEEP_HANDS       — hands per profile per opponent (default 2500)
-  SWEEP_PROFILES   — named+grid | named | grid | default | comma names
-  SWEEP_SEED       — base RNG seed (default YYYYMMDD UTC)
-  SWEEP_OPPONENTS  — comma list (default rock,maniac)
-  REPORT_DIR       — base dir (default reports/sweep)
+  SWEEP_HANDS          — hands per (profile, opponent, table size) (default 2500)
+  SWEEP_PROFILES       — named+grid | named | grid | default | comma names
+  SWEEP_SEED           — base RNG seed (default YYYYMMDD UTC)
+  SWEEP_OPPONENTS      — comma list (default rock,maniac)
+  SWEEP_PLAYER_SIZES   — comma seat counts 2–6 (default 6 for S28 full tables)
+  SWEEP_PLAYER_WEIGHTS — optional N:weight for ranking, e.g. 6:0.55,4:0.25,2:0.20
+  REPORT_DIR           — base dir (default reports/sweep)
 """
 from __future__ import annotations
 
@@ -17,6 +19,7 @@ import json
 import os
 import sys
 import time
+from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -29,6 +32,7 @@ if str(_ROOT) not in sys.path:
 
 from selfplay import _load_decide_from_path, run_selfplay  # noqa: E402
 from train_profiles import resolve_profile_list  # noqa: E402
+from train_table_sizes import parse_player_sizes, parse_player_weights  # noqa: E402
 
 
 def _env_int(key: str, default: int) -> int:
@@ -36,14 +40,22 @@ def _env_int(key: str, default: int) -> int:
     return int(raw) if raw not in (None, "") else default
 
 
-def _combined_bb(rock_bb: float, maniac_bb: float, weights: dict[str, float]) -> float:
-    w_sum = sum(weights.values()) or 1.0
+def _weighted_bb(rows: list[dict], seat_weights: dict[int, float]) -> float:
+    """bb/100 averaged over rows, weighted by table size then opponent equally."""
+    if not rows:
+        return 0.0
+    by_seat: dict[int, list[float]] = defaultdict(list)
+    for r in rows:
+        by_seat[int(r["players"])].append(float(r["bb_per_100"]))
     total = 0.0
-    if "rock" in weights:
-        total += rock_bb * weights["rock"]
-    if "maniac" in weights:
-        total += maniac_bb * weights["maniac"]
-    return total / w_sum
+    w_sum = 0.0
+    for seat, w in seat_weights.items():
+        vals = by_seat.get(seat)
+        if not vals:
+            continue
+        total += w * (sum(vals) / len(vals))
+        w_sum += w
+    return total / w_sum if w_sum else 0.0
 
 
 def main() -> int:
@@ -53,6 +65,11 @@ def main() -> int:
     profile_spec = os.environ.get("SWEEP_PROFILES", "named+grid")
     opp_raw = os.environ.get("SWEEP_OPPONENTS", "rock,maniac")
     opponents = [o.strip() for o in opp_raw.split(",") if o.strip()]
+    player_sizes = parse_player_sizes(os.environ.get("SWEEP_PLAYER_SIZES", "6"))
+    seat_weights = parse_player_weights(
+        os.environ.get("SWEEP_PLAYER_WEIGHTS", ""),
+        player_sizes,
+    )
 
     stamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H%M%SZ")
     report_base = Path(os.environ.get("REPORT_DIR", "reports/sweep"))
@@ -65,8 +82,9 @@ def main() -> int:
 
     print(f"cemini train sweep — {stamp}")
     print(f"profiles: {len(profiles)} ({profile_spec})")
-    print(f"hands/profile/opponent: {hands}")
+    print(f"hands per (profile, opponent, seats): {hands}")
     print(f"opponents: {opponents}")
+    print(f"table sizes: {player_sizes}  weights={seat_weights}")
     print(f"output: {out_dir}")
     print("")
 
@@ -75,61 +93,70 @@ def main() -> int:
 
     for idx, profile in enumerate(profiles):
         profile.apply()
-        opp_stats: dict[str, dict] = {}
-        for opp_i, opp in enumerate(opponents):
-            seed = seed_base + idx * 1000 + opp_i
-            os.environ["TRAINING_OPPONENT_MODE"] = opp
-            stats = run_selfplay(
-                decide_fn,
-                hands,
-                opp,
-                n_players=2,
-                starting_stack=200,
-                small_blind=1,
-                big_blind=2,
-                seed=seed,
-                training_hud=True,
-            )
-            opp_stats[opp] = stats
-            row = {
-                "profile": profile.name,
-                "opponent": opp,
-                "hands": stats["hands"],
-                "bb_per_100": stats["bb_per_100"],
-                "net_chips": stats["net_chips"],
-                "wins": stats["wins"],
-                "losses": stats["losses"],
-                "elapsed_s": stats["elapsed_s"],
-                **profile.to_dict(),
-            }
-            rows.append(row)
-            print(
-                f"[{idx + 1}/{len(profiles)}] {profile.name:28} vs {opp:6} "
-                f"bb/100={stats['bb_per_100']:+.1f}  ({stats['hands_per_s']:.0f} h/s)"
-            )
+        profile_rows: list[dict] = []
+        for seat_i, n_players in enumerate(player_sizes):
+            for opp_i, opp in enumerate(opponents):
+                seed = seed_base + idx * 10000 + seat_i * 1000 + opp_i
+                os.environ["TRAINING_OPPONENT_MODE"] = opp
+                stats = run_selfplay(
+                    decide_fn,
+                    hands,
+                    opp,
+                    n_players=n_players,
+                    starting_stack=200,
+                    small_blind=1,
+                    big_blind=2,
+                    seed=seed,
+                    training_hud=True,
+                )
+                row = {
+                    "profile": profile.name,
+                    "opponent": opp,
+                    "players": stats["players"],
+                    "hands": stats["hands"],
+                    "bb_per_100": stats["bb_per_100"],
+                    "net_chips": stats["net_chips"],
+                    "wins": stats["wins"],
+                    "losses": stats["losses"],
+                    "elapsed_s": stats["elapsed_s"],
+                    **profile.to_dict(),
+                }
+                rows.append(row)
+                profile_rows.append(row)
+                print(
+                    f"[{idx + 1}/{len(profiles)}] {profile.name:28} "
+                    f"{n_players}-max vs {opp:6} "
+                    f"bb/100={stats['bb_per_100']:+.1f}  ({stats['hands_per_s']:.0f} h/s)"
+                )
 
-        rock_bb = opp_stats.get("rock", {}).get("bb_per_100", 0.0)
-        maniac_bb = opp_stats.get("maniac", {}).get("bb_per_100", 0.0)
-        weights = {o: 1.0 for o in opponents}
-        combo = _combined_bb(rock_bb, maniac_bb, weights)
+        combo = _weighted_bb(profile_rows, seat_weights)
+        by_seat = {
+            str(seat): round(
+                sum(r["bb_per_100"] for r in profile_rows if r["players"] == seat)
+                / max(1, sum(1 for r in profile_rows if r["players"] == seat)),
+                2,
+            )
+            for seat in player_sizes
+        }
         summary_path = out_dir / "by_profile.jsonl"
         with summary_path.open("a", encoding="utf-8") as f:
             f.write(json.dumps({
                 "profile": profile.name,
-                "bb_per_100_rock": rock_bb,
-                "bb_per_100_maniac": maniac_bb,
-                "bb_per_100_combined": combo,
+                "bb_per_100_weighted": round(combo, 2),
+                "bb_per_100_by_seats": by_seat,
+                "player_sizes": player_sizes,
+                "seat_weights": seat_weights,
                 "params": profile.to_dict(),
             }) + "\n")
 
-    # Rank by combined bb/100 (average across opponents run)
-    by_profile: dict[str, list[float]] = {}
+    by_profile: dict[str, list[dict]] = defaultdict(list)
     for r in rows:
-        by_profile.setdefault(r["profile"], []).append(r["bb_per_100"])
+        by_profile[r["profile"]].append(r)
+
     ranked = sorted(
         (
-            (name, sum(v) / len(v), len(v))
-            for name, v in by_profile.items()
+            (name, _weighted_bb(prows, seat_weights), len(prows))
+            for name, prows in by_profile.items()
         ),
         key=lambda x: x[1],
         reverse=True,
@@ -142,30 +169,35 @@ def main() -> int:
             writer.writeheader()
             writer.writerows(rows)
 
+    sizes_label = ",".join(str(s) for s in player_sizes)
     best_path = out_dir / "leaderboard.txt"
     lines = [
         f"cemini sweep leaderboard — {stamp}",
-        f"profiles={len(profiles)} hands={hands} seed={seed_base}",
+        f"profiles={len(profiles)} hands={hands}/combo seed={seed_base}",
+        f"table_sizes={sizes_label}  weights={seat_weights}",
         f"elapsed_total={time.time() - t_all:.0f}s",
         "",
-        "rank  profile                      combined_bb/100",
-        "────  ───────────────────────────  ───────────────",
+        "rank  profile                      weighted_bb/100",
+        "────  ───────────────────────────  ────────────────",
     ]
     for rank, (name, avg_bb, _) in enumerate(ranked, 1):
         lines.append(f"{rank:4}  {name:28}  {avg_bb:+.1f}")
     best_name, best_bb, _ = ranked[0]
     lines.extend([
         "",
-        f"BEST: {best_name} ({best_bb:+.1f} bb/100 avg)",
+        f"BEST: {best_name} ({best_bb:+.1f} bb/100 weighted)",
         "",
-        "Apply on egress: export CEMINI_PROFILE=<name> or copy env from best.json",
+        "Tournament S28 is 2–6 seats; default training is 6-max. "
+        "Use SWEEP_PLAYER_SIZES=6,4,2 for a mixed-size sweep.",
     ])
     best_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
     best_json = {
         "stamp": stamp,
+        "table_sizes": player_sizes,
+        "seat_weights": seat_weights,
         "best_profile": best_name,
-        "bb_per_100_combined": best_bb,
+        "bb_per_100_weighted": best_bb,
         "ranked": [{"rank": i + 1, "profile": n, "bb_per_100": b}
                    for i, (n, b, _) in enumerate(ranked)],
     }
@@ -175,8 +207,9 @@ def main() -> int:
 
     latest = report_base / "latest"
     latest.mkdir(parents=True, exist_ok=True)
-    (latest / "leaderboard.txt").write_text(best_path.read_text(encoding="utf-8"),
-                                            encoding="utf-8")
+    (latest / "leaderboard.txt").write_text(
+        best_path.read_text(encoding="utf-8"), encoding="utf-8"
+    )
     (latest / "best.json").write_text(
         (out_dir / "best.json").read_text(encoding="utf-8"), encoding="utf-8"
     )
