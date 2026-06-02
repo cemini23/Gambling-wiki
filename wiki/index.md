@@ -110,7 +110,9 @@ Catalog of all wiki pages. Updated on each ingest.
 | [multi-wiki-tool-eval-v7-k92-2026-06-01](sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md) | deep-read |
 | [brief-k93-federated-digest-2026-06-01](sources/brief-k93-federated-digest-2026-06-01.md) | deep-read |
 | [daily-digest-arxiv-batch-2026-06-01](sources/daily-digest-arxiv-batch-2026-06-01.md) | deep-read |
+| [daily-digest-arxiv-batch-2026-06-02](sources/daily-digest-arxiv-batch-2026-06-02.md) | read |
 | [daily-digest-news-r1-r12-2026-06-01](sources/daily-digest-news-r1-r12-2026-06-01.md) | read |
+| [daily-digest-news-r1-r12-2026-06-02](sources/daily-digest-news-r1-r12-2026-06-02.md) | read |
 | [polygnosis-2-polymarket-osint-2026-06-01](sources/polygnosis-2-polymarket-osint-2026-06-01.md) | deep-read |
 | [youtube-wsj-kalshi-polymarket-valuations-2026-06-01](sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md) | deep-read |
 | [devfun-poker-arena-phase0-2026-06-01](sources/devfun-poker-arena-phase0-2026-06-01.md) | read |

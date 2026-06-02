@@ -19,10 +19,12 @@ related:
   - sources/osint-cross-wiki-wc2026-retail-synthesis-2026-05-31.md
   - sources/youtube-sports-pm-retail-batch-2026-05-29.md
   - sources/daily-digest-news-r1-r12-2026-06-01.md
+  - sources/daily-digest-news-r1-r12-2026-06-02.md
+  - sources/daily-digest-arxiv-batch-2026-06-02.md
   - sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-06-01
+updated: 2026-06-02
 ---
 
 ## Relations
@@ -59,6 +61,24 @@ Hub source: `@sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md`.
 
 Tech-Insider comparison: flagship Kalshi sports contracts **~0.5–1.5%** implied vig vs **~4.5%** standard -110/-110 book hold. Example: Chiefs ML priced **1.1¢** better effective on Kalshi vs DraftKings in May 2026 test. High-volume bettors: fee gap compounds ($50k/yr ≈ $2.25k vig at books vs $500–1k fees on Kalshi per article math). **Tax:** Kalshi gains may qualify for **Section 1256** 60/40 treatment vs ordinary gambling income on books [NEEDS VERIFICATION 2026-06-01].
 
+### US volume share & NBA Finals stress test (R2, 2026-06-02) [TENTATIVE]
+
+DeFi Rate week ending **2026-05-24** (Fair Stake / digest R2):
+
+| Metric | Kalshi | Polymarket |
+|--------|--------|------------|
+| Weekly notional | **$3.99B** (+3% WoW) | **$1.65B** (-15% WoW) |
+| Combined US share | **70.8%** (record per article) | ~29.2% |
+| Sports notional | **$1.599B** (40% of Kalshi) | **$675.5M** |
+
+Structural drivers cited: **USD bank on-ramp** vs PM USDC friction, **order-book** liquidity from traditional derivatives desks, **parlay self-certification** (early 2026). **Politics** still PM-heavy; **sports** now Kalshi-led in US.
+
+**June 2026 watch:** NBA Finals from **2026-06-03** — game-level Kalshi prices reportedly tracked **Pinnacle** within **1–2¢** implied on NBA game contracts [TENTATIVE]. Thesis breaks if PM US sports product closes gap, sportsbook handle flat, or adverse **CFTC / state** rulings.
+
+Hub: `@sources/daily-digest-news-r1-r12-2026-06-02.md`.
+
 ## Snippets
 
 > "Kalshi priced KC YES at $0.585… DraftKings -135… Kalshi paid the better effective price by 1.1 cents." [Source: @sources/daily-digest-news-r1-r12-2026-06-01.md, R2]
+
+> "Kalshi took $3.99 billion of weekly notional volume… lifting… share… to 70.8% — its highest reading on record." [Source: @sources/daily-digest-news-r1-r12-2026-06-02.md, R2]

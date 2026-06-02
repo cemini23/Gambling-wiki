@@ -2,6 +2,13 @@
 
 Append-only chronological log.
 
+## [2026-06-02] ingest | AM digest batch (2 arXiv + news R1–R12 deltas)
+
+- **Sweep** — `wiki/sweeps/2026-06-02-daily.md` (manual digest run; LaunchAgent exit 2 on scheduled AM)
+- **Sources** — `daily-digest-arxiv-batch-2026-06-02.md` (GIMARL note; replicability PM dead end), `daily-digest-news-r1-r12-2026-06-02.md` (Kalshi 71% share, Predict.fun WC odds)
+- **Updated** — Kalshi, Polymarket, world-cup-2026-betting, poker-bot-tooling, daily-research-digest-cadence
+- **Archived** — 2 PDFs → `raw-sources/`
+
 ## [2026-06-01] phase-0 | dev.fun Poker Arena + cemini_decide scaffold
 
 - **Wiki** — `entities/platforms/devfun-poker-arena.md`, `entities/bots/cemini-devfun-poker-agent.md`, `sources/devfun-poker-arena-phase0-2026-06-01.md`

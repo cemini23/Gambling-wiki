@@ -22,9 +22,10 @@ related:
   - sources/gemini-github-sports-betting-landscape-2026-05-30.md
   - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
   - sources/daily-digest-news-r1-r12-2026-06-01.md
+  - sources/daily-digest-news-r1-r12-2026-06-02.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-06-01
+updated: 2026-06-02
 ---
 
 ## Relations
@@ -64,6 +65,12 @@ Entity hub for **2026 FIFA World Cup** wagering across sportsbooks, Kalshi, and 
 2. **Host-nation narrative** — USA/Mexico patriotic flow vs model paths (research flagged double-digit pp gaps vs PM/Kalshi) [TENTATIVE — verify live].
 3. **Third-place path** — eight of twelve third-place teams advance; GD-sensitive bubble — `@concepts/world-cup-third-place-advancement-betting.md`.
 4. **Cross-venue shopping** — compare FanDuel/DK implied % vs Kalshi/PM before sizing; see divergence concept page.
+
+### Outright odds snapshot — Predict.fun (R9, 2026-06-02) [TENTATIVE]
+
+Digest cites **Predict.fun** champion market (not DK/PM canonical): **Spain 18%**, **France 17%**, England **12%**, Portugal **11%**; **>$250M** reported event volume. Kickoff **2026-06-12**. Re-shop **Pinnacle / DK / Kalshi / Polymarket** before sizing — single-platform headline can lag books.
+
+Source: `@sources/daily-digest-news-r1-r12-2026-06-02.md`.
 
 ### Pundit / preview content
 

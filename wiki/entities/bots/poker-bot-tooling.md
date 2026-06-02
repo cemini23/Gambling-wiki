@@ -12,12 +12,13 @@ related:
   - entities/tools/pokerskill.md
   - entities/tools/rlcard.md
   - sources/daily-digest-arxiv-batch-2026-06-01.md
+  - sources/daily-digest-arxiv-batch-2026-06-02.md
   - entities/platforms/devfun-poker-arena.md
   - entities/bots/cemini-devfun-poker-agent.md
   - sources/devfun-poker-arena-phase0-2026-06-01.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-01
+updated: 2026-06-02
 ---
 
 ## Relations
@@ -45,6 +46,8 @@ K92 eval **poker engine / RL** cluster — **research and evaluation** lane for 
 ### Daily digest note (2026-06-01)
 
 **Big 2** self-play RL (arxiv:2605.28863): PPO beats value methods in 4-player imperfect-info card game — **research sim only**, not online poker. Complements **rlcard** (poker variants) and **PokerSkill** (LLM + skills, `@entities/tools/pokerskill.md`).
+
+**GIMARL** (arxiv:2605.31318, 2026-06-02 digest): **Generalized Intention Modeling** — mixture of task-specific opponent intent embeddings; one head maximizes MI with ego **returns**. [TENTATIVE] Useful design pattern for **sim bots** and Arena-style opponent modeling; benchmarks are general MARL, not NLHE. See `@sources/daily-digest-arxiv-batch-2026-06-02.md`.
 
 ### Gambling-bot program fit
 

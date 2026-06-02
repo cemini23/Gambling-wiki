@@ -22,11 +22,13 @@ related:
   - sources/youtube-sports-pm-retail-batch-2026-05-29.md
   - sources/daily-digest-arxiv-batch-2026-06-01.md
   - sources/daily-digest-news-r1-r12-2026-06-01.md
+  - sources/daily-digest-news-r1-r12-2026-06-02.md
+  - sources/daily-digest-arxiv-batch-2026-06-02.md
   - sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md
   - sources/polygnosis-2-polymarket-osint-2026-06-01.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-06-01
+updated: 2026-06-02
 ---
 
 ## Relations
@@ -67,6 +69,10 @@ For copy-trading, LP farming, agent frameworks: `@osint-wiki/entities/platforms/
 - **Political/regulatory** — Don Jr. adviser role to Kalshi and Polymarket noted; CFTC asserts DCM authority vs state gambling framing.
 
 Hub source: `@sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md`. Prod harness: `@osint-wiki/entities/tools/polygnosis.md`.
+
+### US volume vs Kalshi (R2, 2026-06-02) [TENTATIVE]
+
+Week ending **2026-05-24**: **~29%** of combined US PM notional on Polymarket (**$1.65B** vs Kalshi **$3.99B**); sports **$675.5M** vs Kalshi sports **$1.599B**. Politics category still PM-heavy; US sports onboarding (fiat, parlay parity) cited as gap vs Kalshi. `@sources/daily-digest-news-r1-r12-2026-06-02.md`.
 
 ## Snippets
 

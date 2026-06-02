@@ -21,6 +21,7 @@ related:
   - sources/gemini-github-sports-betting-landscape-2026-05-30.md
   - sources/youtube-sports-pm-retail-batch-2026-05-29.md
   - sources/daily-digest-news-r1-r12-2026-06-01.md
+  - sources/daily-digest-news-r1-r12-2026-06-02.md
   - concepts/pm-perspective-mismatch-trading.md
   - sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md
 maturity: validated

@@ -13,6 +13,7 @@ related:
   - sources/daily-digest-arxiv-batch-2026-06-01.md
   - sources/polygnosis-2-polymarket-osint-2026-06-01.md
   - sources/daily-digest-news-r1-r12-2026-06-01.md
+  - sources/daily-digest-arxiv-batch-2026-06-02.md
 maturity: draft
 created: 2026-06-01
 updated: 2026-06-01
