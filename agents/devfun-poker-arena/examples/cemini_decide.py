@@ -126,6 +126,7 @@ def decide(
     pot_control = bool(ps.get("pot_control"))
     ps_bias = ps.get("bias")
     ps_library = ps.get("mode") == "library"
+    ps_hand_eval = ps.get("hand_eval")
     position = chart.get("position") or ""
 
     action_name: str
@@ -151,13 +152,15 @@ def decide(
         action_name, amount = _postflop_free(
             equity, allowed, available, pot, pot_control=pot_control,
             ps_bias=ps_bias, ps_library=ps_library,
+            hand_eval=ps_hand_eval,
             hand_class=chart.get("hand_class") or "")
     else:
         action_name, amount = _postflop_facing_bet(
             equity, pot_odds, allowed, available, call_chips, pot,
             in_position=in_position, pot_control=pot_control,
             hand_class=chart.get("hand_class") or "",
-            hole=hole, board=board, ps_bias=ps_bias, ps_library=ps_library)
+            hole=hole, board=board, ps_bias=ps_bias, ps_library=ps_library,
+            hand_eval=ps_hand_eval)
 
     if action_name in ("fold", "check", "call"):
         amount = None
@@ -238,6 +241,10 @@ def _preflop_vs_bet(chart: dict, allowed: dict, available: list,
     if (_is_low_trash_offsuit(hc) and not in_position
             and equity < pot_odds + 0.06 and "fold" in available):
         return "fold", None
+    # BTN/IP: weak offsuit aces fold vs raises without a solid edge.
+    if (in_position and _weak_ace_offsuit(hc)
+            and equity < pot_odds + 0.08 and "fold" in available):
+        return "fold", None
     premium = hc in {"AA", "KK", "QQ", "JJ", "AKs", "AKo"}
     strong_3bet = premium or (in_position and hc in {"AQs", "AQo", "TT"})
     if strong_3bet and equity > 0.52 and allowed.get("canRaise") and "raise" in available:
@@ -285,7 +292,8 @@ def _is_sb_complete_trash(hc: str) -> bool:
         return True
     if _weak_ace_offsuit(hc):
         return True
-    return hc in {"K9o", "Q9o", "J9o", "T8o", "97o", "86o", "75o"}
+    return hc in {"K9o", "Q9o", "Q8o", "Q7o", "Q6o", "Q5o", "Q4o", "Q3o", "Q2o",
+                  "J9o", "T8o", "97o", "86o", "75o", "J8o", "T7o", "96o", "85o", "74o"}
 
 
 def _board_paired_hero_missed(hole: list[str], board: list[str]) -> bool:
@@ -300,11 +308,26 @@ def _board_paired_hero_missed(hole: list[str], board: list[str]) -> bool:
     return not any(bc.get(r, 0) >= 2 for r in hranks)
 
 
+def _hero_overcards_only(hole: list[str], board: list[str]) -> bool:
+    """Paired board, hero missed — only unpaired overcards (Kh4c on TTT)."""
+    if not _board_paired_hero_missed(hole, board) or len(hole) != 2:
+        return False
+    hranks = [c[0].upper() for c in hole]
+    if hranks[0] == hranks[1]:
+        return False
+    branks = [c[0].upper() for c in board]
+    return not any(r in branks for r in hranks)
+
+
 def _postflop_free(equity: float, allowed: dict, available: list,
                    pot: int, *, pot_control: bool = False,
                    ps_bias: Optional[str] = None,
                    ps_library: bool = False,
+                   hand_eval: Optional[str] = None,
                    hand_class: str = "") -> tuple[str, Optional[int]]:
+    # PokerSkill: nut-high + draw → pot control, don't lead.
+    if hand_eval == "nut_high_draw" and "check" in available:
+        return "check", None
     if ps_library and ps_bias == "check" and "check" in available:
         return "check", None
     bet_bar = 0.78 if pot_control else 0.72
@@ -331,7 +354,8 @@ def _postflop_facing_bet(equity: float, pot_odds: float, allowed: dict,
                          hole: Optional[list[str]] = None,
                          board: Optional[list[str]] = None,
                          ps_bias: Optional[str] = None,
-                         ps_library: bool = False) -> tuple[str, Optional[int]]:
+                         ps_library: bool = False,
+                         hand_eval: Optional[str] = None) -> tuple[str, Optional[int]]:
     hole = hole or []
     board = board or []
 
@@ -340,7 +364,27 @@ def _postflop_facing_bet(equity: float, pot_odds: float, allowed: dict,
                 or equity < pot_odds + 0.04):
             return "fold", None
 
+    # PokerSkill nut-high + draw: check-call line, avoid spewy raises.
+    if hand_eval == "nut_high_draw":
+        raise_bar = 0.88
+        call_margin = -0.02 if in_position else 0.01
+        if equity > raise_bar and allowed.get("canRaise") and "raise" in available:
+            rr = allowed.get("raiseRange") or {}
+            min_r = int(rr.get("min") or call_chips * 2)
+            max_r = int(rr.get("max") or min_r)
+            target = max(min_r, min(int(pot * 0.65 + call_chips * 2), max_r))
+            return "raise", target
+        if equity >= pot_odds + call_margin and "call" in available:
+            return "call", None
+        if equity < pot_odds - 0.03 and "fold" in available:
+            return "fold", None
+        if "check" in available:
+            return "check", None
+
     # Live leak: air on paired boards (Kh4c on TTT-type runouts).
+    if (_hero_overcards_only(hole, board) and not in_position
+            and equity < 0.48 and "fold" in available):
+        return "fold", None
     if (_board_paired_hero_missed(hole, board) and not in_position
             and equity < 0.44 and "fold" in available):
         return "fold", None

@@ -73,15 +73,21 @@ def _legal_actions_ps(allowed: dict) -> list[str]:
 
 
 def _hunl_position(table: dict) -> Optional[str]:
-    """Map hero to PokerSkill BTN/BB when exactly two active seats."""
-    if len(_active_seat_numbers(table)) != 2:
+    """Map hero to PokerSkill BTN/BB when exactly two active seats (incl. 6-max HU)."""
+    n_active = len(_active_seat_numbers(table))
+    if n_active != 2:
         return None
     pos = hero_position_label(table)
     if pos == "BTN":
         return "BTN"
-    if pos in {"BB", "SB"}:
-        # HU: SB acts as BTN in PokerSkill schema.
-        return "BB" if pos == "BB" else "BTN"
+    if pos == "BB":
+        return "BB"
+    if pos == "SB":
+        # HU / short-handed: SB is the button in PokerSkill schema.
+        return "BTN"
+    # 6-max HU fallback: non-BB active seat acts as BTN when labels lag.
+    if pos in {"CO", "UTG", "MP"}:
+        return "BTN"
     return None
 
 
@@ -271,6 +277,7 @@ def retrieve_pokerskill_hints(table: dict) -> dict[str, Any]:
     out: dict[str, Any] = {
         "mode": "stub",
         "players_active": n_active,
+        "heads_up": n_active == 2,
         "hand_class": hc,
         "board_texture": _board_texture(board),
     }
