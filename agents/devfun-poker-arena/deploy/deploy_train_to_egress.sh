@@ -83,21 +83,25 @@ systemctl enable cemini-poker-train.timer
 systemctl start cemini-poker-train.timer
 systemctl --no-pager status cemini-poker-train.timer || true
 
-# Queue latest pipeline after any in-flight sweep (or start immediately if idle).
-if pgrep -f 'run_train_sweep' >/dev/null 2>&1; then
-  echo "Sweep process in flight — queueing latest followup"
-  systemctl start --no-block cemini-poker-train-latest-followup.service
+# Optional: queue or start sweep only when operator passes --run-now locally.
+if [[ "${RUN_NOW}" == "true" ]]; then
+  if pgrep -f 'run_train_sweep' >/dev/null 2>&1; then
+    echo "Sweep process in flight — queueing latest followup"
+    systemctl start --no-block cemini-poker-train-latest-followup.service
+  else
+    for u in cemini-poker-train.service cemini-poker-train-mixed.service; do
+      st="\$(systemctl show "\$u" -p ActiveState --value 2>/dev/null || echo inactive)"
+      if [[ "\$st" == "activating" || "\$st" == "active" ]]; then
+        echo "Sweep unit \$u active — queueing latest followup"
+        systemctl start --no-block cemini-poker-train-latest-followup.service
+        exit 0
+      fi
+    done
+    echo "Starting latest sweep pipeline (--run-now)"
+    systemctl start --no-block cemini-poker-train.service
+  fi
 else
-  for u in cemini-poker-train.service cemini-poker-train-mixed.service; do
-    st="\$(systemctl show "\$u" -p ActiveState --value 2>/dev/null || echo inactive)"
-    if [[ "\$st" == "activating" || "\$st" == "active" ]]; then
-      echo "Sweep unit \$u active — queueing latest followup"
-      systemctl start --no-block cemini-poker-train-latest-followup.service
-      exit 0
-    fi
-  done
-  echo "No sweep running — starting latest pipeline now"
-  systemctl start --no-block cemini-poker-train.service
+  echo "Deploy only — no sweep started (pass --run-now to start on egress)."
 fi
 REMOTE
 
