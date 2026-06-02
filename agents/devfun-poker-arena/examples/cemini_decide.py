@@ -147,7 +147,7 @@ def decide(
     amount: Optional[int] = None
 
     # Live leak: never pay with bottom offsuit trash postflop (64o-type lines).
-    trash_eq = _train_threshold("trash_fold_eq", 0.32)
+    trash_eq = _train_threshold("trash_fold_eq", 0.30)
     garbage_margin = _train_threshold("garbage_postflop_margin", 0.04)
     if (street != "Preflop" and call_chips > 0 and "fold" in available
             and _is_garbage_offsuit(hc)
@@ -291,7 +291,7 @@ def _preflop_vs_bet(chart: dict, allowed: dict, available: list,
         return "fold", None
     # BTN/IP: 64o–98o trash — fold vs opens without a clear edge (S28 64o leak).
     if (in_position and _is_low_trash_offsuit(hc)
-            and equity < pot_odds + _train_threshold("ip_trash_margin", 0.05)
+            and equity < pot_odds + _train_threshold("ip_trash_margin", 0.06)
             and "fold" in available):
         return "fold", None
     # BTN/IP: weak offsuit aces fold vs raises without a solid edge.
@@ -327,7 +327,7 @@ def _should_fold_weak_preflop(hc: str, equity: float, pot_odds: float) -> bool:
     if hc not in _WEAK_FACING_RAISE:
         return False
     # Weak aces / broadways need a clear edge, not a marginal call.
-    return equity < pot_odds + _train_threshold("weak_preflop_margin", 0.05)
+    return equity < pot_odds + _train_threshold("weak_preflop_margin", 0.07)
 
 
 def _weak_ace_offsuit(hc: str) -> bool:
@@ -499,8 +499,8 @@ def _postflop_facing_bet(equity: float, pot_odds: float, allowed: dict,
     # S28 leak: AJo IP on paired boards — don't pay large bets with ace-high / weak pair.
     big_bet = call_chips >= max(int(pot * 0.42), 1)
     if (in_position and len(board) >= 3 and big_bet and "fold" in available):
-        paired_ip = _train_threshold("paired_ip_fold_eq", 0.44)
-        paired_vuln = _train_threshold("paired_vuln_fold_eq", 0.46)
+        paired_ip = _train_threshold("paired_ip_fold_eq", 0.42)
+        paired_vuln = _train_threshold("paired_vuln_fold_eq", 0.44)
         if (_hero_ace_high_on_paired_board(hole, board) and equity < paired_ip):
             return "fold", None
         if ((_hero_vulnerable_on_paired_board(hole, board)

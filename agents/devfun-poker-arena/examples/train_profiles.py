@@ -19,19 +19,19 @@ from train_seat_layouts import (
 class TrainProfile:
     name: str
     # HUD vs rock
-    rock_steal_eq: float = 0.36
+    rock_steal_eq: float = 0.34
     rock_bet_bar_delta: float = -0.10
     rock_preflop_fold_delta: float = 0.04
     # HUD vs maniac
-    maniac_call_margin_delta: float = -0.05
+    maniac_call_margin_delta: float = -0.06
     maniac_bet_bar_delta: float = 0.06
     # decide() thresholds
-    trash_fold_eq: float = 0.32
+    trash_fold_eq: float = 0.30
     garbage_postflop_margin: float = 0.04
-    paired_ip_fold_eq: float = 0.44
-    paired_vuln_fold_eq: float = 0.46
-    weak_preflop_margin: float = 0.05
-    ip_trash_margin: float = 0.05
+    paired_ip_fold_eq: float = 0.42
+    paired_vuln_fold_eq: float = 0.44
+    weak_preflop_margin: float = 0.07
+    ip_trash_margin: float = 0.06
     rock_oop_fold_eq: float = 0.40
     # Mixed table composition (uniform = homogeneous TRAINING_OPPONENT_MODE)
     seat_layout: Optional[str] = "uniform"
@@ -73,10 +73,25 @@ class TrainProfile:
         return d
 
 
-DEFAULT = TrainProfile(name="default")
+DEFAULT = TrainProfile(
+    name="default",
+    rock_steal_eq=0.34,
+    maniac_call_margin_delta=-0.06,
+    paired_ip_fold_eq=0.42,
+    paired_vuln_fold_eq=0.44,
+    trash_fold_eq=0.30,
+    weak_preflop_margin=0.07,
+    ip_trash_margin=0.06,
+)
+
+# Baked from egress sweep 2026-06-02 (g_s032_c-003_p042_t034 + preflop_tight).
+SWEEP_PRODUCTION = TrainProfile(name="sweep_production", **{
+    k: v for k, v in asdict(DEFAULT).items() if k != "name"
+})
 
 NAMED: dict[str, TrainProfile] = {
     "default": DEFAULT,
+    "sweep_production": SWEEP_PRODUCTION,
     "steal_wide": TrainProfile(
         name="steal_wide",
         rock_steal_eq=0.32,
