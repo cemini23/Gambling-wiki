@@ -178,6 +178,20 @@ BOT_POOL = {
 
 # ─── pokerkit state → arena table dict adapter ──────────────────────────────
 
+def _training_seat_archetypes(n_players: int) -> list[str]:
+    """Per-seat archetype tags for mixed training tables."""
+    default = (os.environ.get("TRAINING_OPPONENT_MODE") or "rock").lower()
+    raw = os.environ.get("TRAINING_SEAT_ARCHETYPES", "").strip()
+    if not raw:
+        return [default] * n_players
+    parts = [p.strip().lower() for p in raw.split(",") if p.strip()]
+    if not parts:
+        return [default] * n_players
+    if len(parts) >= n_players:
+        return parts[:n_players]
+    return parts + [parts[-1]] * (n_players - len(parts))
+
+
 def _street_label(state: State) -> str:
     # 0 cards → Preflop; 3 → Flop; 4 → Turn; 5 → River.
     n = len(state.board_cards)
@@ -203,11 +217,12 @@ def _build_table(state: State, hero_idx: int, table_id: str,
     pot_total += sum(bets)
 
     seats = []
+    train_tags = _training_seat_archetypes(len(starting_stacks)) if competition_id else None
     for i in range(len(starting_stacks)):
         hole = list(state.hole_cards[i]) if i < len(state.hole_cards) else []
         hole_strs = [repr(c) for c in hole] if (i == hero_idx and hole) else []
         street_bet = int(bets[i]) if i < len(bets) else 0
-        seats.append({
+        seat: dict = {
             "seatNumber": i + 1,
             "agentId": f"local_seat_{i+1}",
             "agentHandle": "hero" if i == hero_idx else f"bot_{i+1}",
@@ -215,7 +230,10 @@ def _build_table(state: State, hero_idx: int, table_id: str,
             "stackChips": int(state.stacks[i]),
             "currentBetChips": street_bet,
             "status": "Active",
-        })
+        }
+        if train_tags and i != hero_idx:
+            seat["trainingArchetype"] = train_tags[i]
+        seats.append(seat)
 
     table: dict = {
         "tableId": table_id,

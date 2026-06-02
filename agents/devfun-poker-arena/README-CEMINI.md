@@ -90,6 +90,28 @@ Single-profile batch (old behavior): `./examples/run_train_batch.sh` with `TRAIN
 
 Tunable knobs live in `examples/train_profiles.py` (named presets) and env overrides read by `cemini_decide.py` + `private/opponent_hud_exploit.py`.
 
+### Multi-way opponent targeting (4-max / 6-max)
+
+HUD no longer uses one table-wide villain for every decision:
+
+| Spot | Target | Margins |
+|------|--------|---------|
+| **Facing bet/raise** | **Last aggressor** on this street (actionHistory → max `currentBetChips`) | That villain's archetype (rock/maniac/…) |
+| **Unopened pot** (steal / open) | Softest remaining villain (rock in blinds) | Rock steal exploits |
+| **Fallback** | Table aggregate (maniac > rock > first) | Same as before |
+
+**Multi-way adjustment:** with 2+ active villains, call/fold margins tighten and bluff bars drop; unopened steals need slightly stronger equity.
+
+Training tags each bot seat via `TRAINING_SEAT_ARCHETYPES` (comma list, 6 seats):
+
+```bash
+# 6-max: 4 rocks + 1 maniac + 1 tight — tests aggressor-specific exploits
+TRAIN_PLAYERS=6 TRAINING_SEAT_ARCHETYPES=rock,rock,maniac,tight,rock,rock \
+  ./examples/run_train_cemini.sh rock 300
+```
+
+Live Arena: all seated `agentId`s are fetched; targeting uses the bettor's stats when you're facing action.
+
 ## Live play
 
 **Registered:** handle `cemini_wiki_poker`, agent ID on wiki bot page. Credentials in `.arena-credentials` (gitignored).
