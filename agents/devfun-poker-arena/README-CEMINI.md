@@ -51,6 +51,8 @@ Always-on lobby loop via systemd — laptop can stay off.
 
 Remote path: `/opt/devfun-poker-arena` · unit: `cemini-devfun-poker-lobby.service`
 
+**Prod-only HUD exploits** live in `private/opponent_hud_exploit.py` (gitignored). Public `examples/opponent_hud.py` is a neutral facade. Deploy rsyncs `private/` when present locally.
+
 ```bash
 ssh cemini-prod journalctl -u cemini-devfun-poker-lobby -f
 ssh cemini-prod systemctl restart cemini-devfun-poker-lobby

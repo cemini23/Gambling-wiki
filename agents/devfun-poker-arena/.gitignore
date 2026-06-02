@@ -15,6 +15,10 @@ replay.html
 reports/*
 !reports/.gitkeep
 
+# Prod-only exploit modules (see private/README.example.md)
+private/*
+!private/README.example.md
+
 # Python
 __pycache__/
 *.py[cod]

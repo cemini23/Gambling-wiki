@@ -22,6 +22,10 @@ if [[ ! -f "${CREDS}" ]]; then
   exit 1
 fi
 
+if [[ ! -f "${AGENT_DIR}/private/opponent_hud_exploit.py" ]]; then
+  echo "WARN: ${AGENT_DIR}/private/opponent_hud_exploit.py missing — prod HUD exploits disabled." >&2
+fi
+
 echo "==> Rsync agent tree (exclude venv/creds/state)"
 rsync -avz --delete \
   --exclude '.venv/' \

@@ -34,6 +34,8 @@ from arena_client import (  # noqa: E402
 POLL_INTERVAL = 2.0
 POLL_JITTER = 0.5
 JOIN_RETRY_S = 60.0
+IN_QUEUE_RETRY_S = 180.0
+LOBBY_LOG_INTERVAL_S = 120.0
 PAYMENT_CONFIRM_WAIT_S = 5.0
 PAYMENT_CONFIRM_ATTEMPTS = 24
 
@@ -97,6 +99,75 @@ def _pending(client: ArenaClient, competition_id: str) -> dict:
     return client.get(f"/texas/pending-actions?competitionId={competition_id}")
 
 
+def _lobby_status(client: ArenaClient, competition_id: str) -> dict:
+    try:
+        return client.get(f"/texas/lobby?competitionId={competition_id}")
+    except ArenaError:
+        return {}
+
+
+def _log_lobby_queue(client: ArenaClient, competition_id: str) -> None:
+    body = _lobby_status(client, competition_id)
+    lob = body.get("lobby") if isinstance(body, dict) else None
+    if not isinstance(lob, dict):
+        return
+    pos = lob.get("position")
+    total = lob.get("total")
+    if pos is not None:
+        print(f"[cemini-lobby] queue position {pos}/{total} — waiting for table")
+
+
+def _rebuy_with_payment(
+    client: ArenaClient,
+    competition_id: str,
+    payment: dict,
+) -> dict:
+    tx_hash = _pay_entry_fee(client, payment)
+    print(f"[cemini-lobby] rebuy tx={tx_hash}")
+    last_err: Optional[ArenaError] = None
+    for attempt in range(1, PAYMENT_CONFIRM_ATTEMPTS + 1):
+        time.sleep(PAYMENT_CONFIRM_WAIT_S)
+        try:
+            return client.post("/texas/rebuy", {
+                "competitionId": competition_id,
+                "txHash": tx_hash,
+            })
+        except ArenaError as e:
+            last_err = e
+            msg = str((e.body or {}).get("error") or e.body or "")
+            if e.status == 400 and "not yet mined" in msg.lower():
+                print(f"[cemini-lobby] rebuy waiting for tx ({attempt}/{PAYMENT_CONFIRM_ATTEMPTS})")
+                continue
+            raise
+    if last_err:
+        raise last_err
+    raise RuntimeError("rebuy with payment failed")
+
+
+def _try_rebuy(client: ArenaClient, competition_id: str) -> bool:
+    """Rebuy chips when table buy-in exceeds stack. Returns True if rebuy attempted."""
+    try:
+        resp = client.post("/texas/rebuy", {"competitionId": competition_id})
+        print(f"[cemini-lobby] rebuy: {json.dumps(resp, sort_keys=True)[:300]}")
+        return True
+    except ArenaError as e:
+        if e.status != 402:
+            print(f"[cemini-lobby] rebuy failed: {e.status} {e.body}", file=sys.stderr)
+            return False
+        pay = (e.body or {}).get("paymentRequirements") or {}
+        try:
+            resp = _rebuy_with_payment(client, competition_id, pay)
+            print(f"[cemini-lobby] rebuy after pay: {json.dumps(resp, sort_keys=True)[:300]}")
+            return True
+        except ArenaError as pay_err:
+            print(f"[cemini-lobby] rebuy pay failed: {pay_err.status} {pay_err.body}",
+                  file=sys.stderr)
+            return False
+        except Exception as exc:
+            print(f"[cemini-lobby] rebuy pay error: {exc}", file=sys.stderr)
+            return False
+
+
 def run_lobby(args: argparse.Namespace) -> int:
     load_dotenv()
     client = ArenaClient(
@@ -113,23 +184,31 @@ def run_lobby(args: argparse.Namespace) -> int:
     hands_acted = 0
     rng = random.Random()
     last_join_at = 0.0
+    last_lobby_log_at = 0.0
+    in_queue_only = False
 
     try:
         creds = load_or_register(client, args.handle, args.name, args.quote)
         print(f"[cemini-lobby] agent={creds.get('agentId')} competition={competition_id}")
 
         def ensure_joined(force: bool = False) -> None:
-            nonlocal last_join_at
+            nonlocal last_join_at, last_lobby_log_at, in_queue_only
             now = time.time()
-            if not force and (now - last_join_at) < JOIN_RETRY_S:
+            retry_s = IN_QUEUE_RETRY_S if in_queue_only else JOIN_RETRY_S
+            if not force and (now - last_join_at) < retry_s:
+                if in_queue_only and (now - last_lobby_log_at) >= LOBBY_LOG_INTERVAL_S:
+                    _log_lobby_queue(client, competition_id)
+                    last_lobby_log_at = now
                 return
             try:
                 join_resp = _join(client, competition_id)
                 last_join_at = now
+                in_queue_only = False
                 state.pop("entry_fee_tx_hash", None)
                 save_state(state)
                 print(f"[cemini-lobby] join: {json.dumps(join_resp, sort_keys=True)[:500]}")
             except ArenaError as e:
+                err_text = str((e.body or {}).get("error") or e.body or "").lower()
                 if e.status == 402:
                     pay = (e.body or {}).get("paymentRequirements") or {}
                     pending_tx = state.get("entry_fee_tx_hash")
@@ -188,7 +267,21 @@ def run_lobby(args: argparse.Namespace) -> int:
                     print("[cemini-lobby] X claim required — verify owner on dev.fun",
                           file=sys.stderr)
                     raise SystemExit(3) from e
-                # Already seated / idempotent re-join noise — log and continue
+                if e.status == 409 and "not enough chips" in err_text:
+                    if _try_rebuy(client, competition_id):
+                        last_join_at = 0.0
+                        in_queue_only = False
+                    else:
+                        last_join_at = now
+                    return
+                if e.status == 409 and "already in the matchmaking lobby" in err_text:
+                    in_queue_only = True
+                    last_join_at = now
+                    if (now - last_lobby_log_at) >= LOBBY_LOG_INTERVAL_S:
+                        _log_lobby_queue(client, competition_id)
+                        last_lobby_log_at = now
+                    return
+                in_queue_only = False
                 print(f"[cemini-lobby] join note: {e.status} {e.body}", file=sys.stderr)
                 last_join_at = now
 
@@ -210,6 +303,7 @@ def run_lobby(args: argparse.Namespace) -> int:
             tables = sorted(tables, key=lambda t: (t.get("actionDeadlineAt") or 0))
 
             if tables:
+                in_queue_only = False
                 table = tables[0]
                 if not table.get("competitionId"):
                     table = {**table, "competitionId": competition_id}
@@ -252,7 +346,10 @@ def run_lobby(args: argparse.Namespace) -> int:
                 return 0
 
             if not tables:
-                # Stay in queue / re-enter when busted
+                now = time.time()
+                if in_queue_only and (now - last_lobby_log_at) >= LOBBY_LOG_INTERVAL_S:
+                    _log_lobby_queue(client, competition_id)
+                    last_lobby_log_at = now
                 ensure_joined(force=False)
                 time.sleep(POLL_INTERVAL + rng.uniform(-POLL_JITTER, POLL_JITTER))
     finally:
