@@ -226,7 +226,9 @@ if WIKI_ALIASES:
             # Only treat as cross-wiki link if alias is in WIKI_ALIASES
             if alias not in WIKI_ALIASES:
                 continue  # skip local wiki links like @concepts/..., @entities/...
-            rel_path = m.group(2).lstrip("/")
+            rel_path = m.group(2).lstrip("/").rstrip(".,;:\\])}")
+            if "..." in rel_path:
+                continue  # prose placeholder, not a real path
             target = WIKI_ALIASES[alias] / rel_path
             if not target.exists():
                 cross_wiki_dangling.append((src, alias, rel_path, target))
