@@ -30,6 +30,12 @@ from agent import (  # noqa: E402
 from position_utils import hero_is_in_position  # noqa: E402
 from opponent_hud import build_opponent_hud, exploit_margins  # noqa: E402
 from pokerskill_adapter import retrieve_pokerskill_hints  # noqa: E402
+
+try:
+    from train_config import threshold as _train_threshold  # noqa: E402
+except ImportError:
+    def _train_threshold(_name: str, default: float) -> float:  # noqa: E402
+        return default
 from research_static_chart import research_static_chart  # noqa: E402
 
 # Preflop trash facing a raise — fold unless equity clearly covers price.
@@ -141,8 +147,11 @@ def decide(
     amount: Optional[int] = None
 
     # Live leak: never pay with bottom offsuit trash postflop (64o-type lines).
+    trash_eq = _train_threshold("trash_fold_eq", 0.32)
+    garbage_margin = _train_threshold("garbage_postflop_margin", 0.04)
     if (street != "Preflop" and call_chips > 0 and "fold" in available
-            and _is_garbage_offsuit(hc) and equity < max(pot_odds + 0.06, 0.28)):
+            and _is_garbage_offsuit(hc)
+            and equity < max(pot_odds + garbage_margin, trash_eq)):
         return _build("fold", None, table, allowed, eq=equity, po=pot_odds,
                       msg=f"{binding}: trash hand vs bet — fold")
 
@@ -280,6 +289,11 @@ def _preflop_vs_bet(chart: dict, allowed: dict, available: list,
     if (_is_low_trash_offsuit(hc) and not in_position
             and equity < pot_odds + 0.06 and "fold" in available):
         return "fold", None
+    # BTN/IP: 64o–98o trash — fold vs opens without a clear edge (S28 64o leak).
+    if (in_position and _is_low_trash_offsuit(hc)
+            and equity < pot_odds + _train_threshold("ip_trash_margin", 0.05)
+            and "fold" in available):
+        return "fold", None
     # BTN/IP: weak offsuit aces fold vs raises without a solid edge.
     if (in_position and _weak_ace_offsuit(hc)
             and equity < pot_odds + 0.08 and "fold" in available):
@@ -313,7 +327,7 @@ def _should_fold_weak_preflop(hc: str, equity: float, pot_odds: float) -> bool:
     if hc not in _WEAK_FACING_RAISE:
         return False
     # Weak aces / broadways need a clear edge, not a marginal call.
-    return equity < pot_odds + 0.05
+    return equity < pot_odds + _train_threshold("weak_preflop_margin", 0.05)
 
 
 def _weak_ace_offsuit(hc: str) -> bool:
@@ -350,6 +364,45 @@ def _board_paired_hero_missed(hole: list[str], board: list[str]) -> bool:
         return False
     hranks = {c[0].upper() for c in hole}
     return not any(bc.get(r, 0) >= 2 for r in hranks)
+
+
+def _board_is_paired(board: list[str]) -> bool:
+    if len(board) < 3:
+        return False
+    branks = [c[0].upper() for c in board]
+    return max(Counter(branks).values()) >= 2
+
+
+def _weak_broadway_offsuit(hc: str) -> bool:
+    return hc in {"AJo", "ATo", "A9o", "KJo", "KTo", "QJo", "QTo", "JTo"}
+
+
+def _hero_ace_high_on_paired_board(hole: list[str], board: list[str]) -> bool:
+    """Ace-high only on paired runouts (AJo on 55x — S28 -46 leak)."""
+    if not _board_is_paired(board) or len(hole) != 2:
+        return False
+    hranks = [c[0].upper() for c in hole]
+    if hranks[0] == hranks[1]:
+        return False
+    if "A" not in hranks:
+        return False
+    branks = [c[0].upper() for c in board]
+    return not any(r in branks for r in hranks)
+
+
+def _hero_vulnerable_on_paired_board(hole: list[str], board: list[str]) -> bool:
+    """Underpair / single non-boat pair on paired boards (fold vs big bets)."""
+    if not _board_is_paired(board) or len(hole) != 2:
+        return False
+    branks = [c[0].upper() for c in board]
+    bc = Counter(branks)
+    pair_rank = next(r for r, c in bc.items() if c >= 2)
+    hranks = [c[0].upper() for c in hole]
+    if hranks[0] == hranks[1]:
+        return _RANKS.index(hranks[0]) < _RANKS.index(pair_rank)
+    if any(r in branks and branks.count(r) >= 2 for r in hranks):
+        return False
+    return any(r in branks and branks.count(r) == 1 for r in hranks)
 
 
 def _hero_overcards_only(hole: list[str], board: list[str]) -> bool:
@@ -443,6 +496,18 @@ def _postflop_facing_bet(equity: float, pot_odds: float, allowed: dict,
             and equity < 0.50 and "fold" in available):
         return "fold", None
 
+    # S28 leak: AJo IP on paired boards — don't pay large bets with ace-high / weak pair.
+    big_bet = call_chips >= max(int(pot * 0.42), 1)
+    if (in_position and len(board) >= 3 and big_bet and "fold" in available):
+        paired_ip = _train_threshold("paired_ip_fold_eq", 0.44)
+        paired_vuln = _train_threshold("paired_vuln_fold_eq", 0.46)
+        if (_hero_ace_high_on_paired_board(hole, board) and equity < paired_ip):
+            return "fold", None
+        if ((_hero_vulnerable_on_paired_board(hole, board)
+             or _weak_broadway_offsuit(hand_class))
+                and equity < paired_vuln):
+            return "fold", None
+
     # Live leak: weak ace-high folds cheaply on later streets (Ad3c-type spots).
     if _weak_ace_offsuit(hand_class) and equity < 0.38 and "fold" in available:
         return "fold", None
@@ -456,8 +521,9 @@ def _postflop_facing_bet(equity: float, pot_odds: float, allowed: dict,
     if pot_control:
         call_margin += 0.03
         fold_slack -= 0.01
-    # vs rock: respect aggression — fold more without clear equity.
-    if hud_mode == "rock" and equity < 0.42 and "fold" in available:
+    # vs rock OOP: respect aggression — don't over-fold IP medium hands.
+    rock_oop_eq = _train_threshold("rock_oop_fold_eq", 0.40)
+    if hud_mode == "rock" and not in_position and equity < rock_oop_eq and "fold" in available:
         fold_slack += 0.02
     if equity < pot_odds - fold_slack and "fold" in available:
         return "fold", None

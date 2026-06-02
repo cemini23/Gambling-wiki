@@ -1,0 +1,21 @@
+[Unit]
+Description=Cemini poker overnight parameter sweep (profiles × rock/maniac)
+Documentation=file:///opt/devfun-poker-arena-train/README-CEMINI.md
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+Group=root
+WorkingDirectory=/opt/devfun-poker-arena-train
+Environment=PYTHONUNBUFFERED=1
+Environment=SWEEP_HANDS=2500
+Environment=SWEEP_PROFILES=named+grid
+Environment=SWEEP_SEED=
+Environment=REPORT_DIR=/opt/devfun-poker-arena-train/reports/sweep
+ExecStart=/opt/devfun-poker-arena-train/examples/run_train_sweep.sh
+Nice=10
+IOSchedulingClass=idle
+
+[Install]
+WantedBy=multi-user.target

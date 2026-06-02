@@ -25,6 +25,7 @@ from __future__ import annotations
 
 import argparse
 import importlib.util
+import os
 import random
 import sys
 import time
@@ -133,11 +134,45 @@ def bot_loose_passive(table: dict, **_: Any) -> dict:
     return {"action": "call"}
 
 
+def bot_rock(table: dict, **_: Any) -> dict:
+    """Ultra-tight passive — folds to pressure, rarely opens (River Shark shape)."""
+    return bot_tight_passive(table)
+
+
+def bot_maniac(table: dict, **_: Any) -> dict:
+    """Loose-aggressive — bets and raises often, calls wide (CallMeMummy shape)."""
+    allowed = table.get("allowedActions") or {}
+    avail = allowed.get("availableActions") or []
+    call_chips = int(allowed.get("callChips") or 0)
+    pot = int(table.get("potChips") or 0)
+
+    if call_chips == 0:
+        if "bet" in avail and random.random() < 0.72:
+            br = allowed.get("betRange") or {}
+            lo, hi = int(br.get("min") or 1), int(br.get("max") or 1)
+            target = max(lo, min(int(pot * 0.66), hi))
+            return {"action": "bet", "amount": target}
+        if "check" in avail:
+            return {"action": "check"}
+        return {"action": "fold"} if "fold" in avail else {"action": "check"}
+
+    if "raise" in avail and random.random() < 0.38:
+        rr = allowed.get("raiseRange") or {}
+        lo, hi = int(rr.get("min") or 1), int(rr.get("max") or 1)
+        target = max(lo, min(int(pot * 0.75 + call_chips * 2), hi))
+        return {"action": "raise", "amount": target}
+    if "call" in avail and random.random() < 0.78:
+        return {"action": "call"}
+    return {"action": "fold"} if "fold" in avail else {"action": "call"}
+
+
 BOT_POOL = {
     "tight": bot_tight_passive,
     "loose": bot_loose_passive,
     "random": bot_random,
     "call": bot_always_check_call,
+    "rock": bot_rock,
+    "maniac": bot_maniac,
 }
 
 
@@ -153,7 +188,9 @@ def _street_label(state: State) -> str:
 
 def _build_table(state: State, hero_idx: int, table_id: str,
                  starting_stacks: list[int], small_blind: int,
-                 big_blind: int) -> dict:
+                 big_blind: int,
+                 *,
+                 competition_id: Optional[str] = None) -> dict:
     """Convert a pokerkit State into the arena `table` dict shape that
     decide() expects. Only fields actually consumed by decide() are
     populated."""
@@ -190,6 +227,8 @@ def _build_table(state: State, hero_idx: int, table_id: str,
         "bigBlindChips": int(big_blind),
         "seats": seats,
     }
+    if competition_id:
+        table["competitionId"] = competition_id
 
     available: list[str] = []
     call_chips = 0
@@ -310,7 +349,9 @@ def _load_decide_from_path(path: str) -> Callable:
 def play_one_hand(decide_fn: Callable, opponents: list[Callable],
                   starting_stack: int, small_blind: int, big_blind: int,
                   hand_id: int, hero_idx: int = 0,
-                  max_actions: int = 200) -> int:
+                  max_actions: int = 200,
+                  *,
+                  training_hud: bool = False) -> int:
     """Play a single hand; return hero's chip delta (final stack -
     starting stack)."""
     n = 1 + len(opponents)
@@ -338,10 +379,14 @@ def play_one_hand(decide_fn: Callable, opponents: list[Callable],
     )
 
     table_id = f"local-{hand_id:05d}"
+    train_cid = "training-local" if training_hud else None
     steps = 0
     while state.status and state.actor_index is not None and steps < max_actions:
         actor = state.actor_index
-        table = _build_table(state, actor, table_id, stacks, small_blind, big_blind)
+        table = _build_table(
+            state, actor, table_id, stacks, small_blind, big_blind,
+            competition_id=train_cid,
+        )
         # Pick the deciding function for this seat.
         if actor == hero_idx:
             fn = decide_fn
@@ -363,7 +408,9 @@ def play_one_hand(decide_fn: Callable, opponents: list[Callable],
 
 def run_selfplay(decide_fn: Callable, n_hands: int, opponent_label: str,
                  n_players: int, starting_stack: int, small_blind: int,
-                 big_blind: int, seed: Optional[int] = None) -> dict:
+                 big_blind: int, seed: Optional[int] = None,
+                 *,
+                 training_hud: bool = False) -> dict:
     """Run N hands and return aggregate stats."""
     if seed is not None:
         random.seed(seed)
@@ -383,7 +430,8 @@ def run_selfplay(decide_fn: Callable, n_hands: int, opponent_label: str,
             d = play_one_hand(decide_fn, opponents,
                               starting_stack=starting_stack,
                               small_blind=small_blind, big_blind=big_blind,
-                              hand_id=i + 1)
+                              hand_id=i + 1,
+                              training_hud=training_hud)
         except Exception as e:
             print(f"  [selfplay] WARN: hand {i+1} failed ({e}); counted as 0",
                   file=sys.stderr)
@@ -426,7 +474,8 @@ def main(argv: Optional[list[str]] = None) -> int:
     parser.add_argument("--players", type=int, default=2,
                         help="Total players including hero, 2-6 (default 2 = HU)")
     parser.add_argument("--opponent", default="tight",
-                        choices=["tight", "loose", "random", "call", "mixed"],
+                        choices=["tight", "loose", "random", "call", "mixed",
+                                 "rock", "maniac"],
                         help="Opponent profile (default tight)")
     parser.add_argument("--agent", default=None,
                         help="Path to a Python file defining decide(); "
@@ -437,7 +486,13 @@ def main(argv: Optional[list[str]] = None) -> int:
     parser.add_argument("--big-blind", type=int, default=2)
     parser.add_argument("--seed", type=int, default=None,
                         help="RNG seed for reproducible runs")
+    parser.add_argument("--training-hud", action="store_true",
+                        help="Exercise cemini HUD path offline (competitionId=training-local; "
+                             "set TRAINING_OPPONENT_MODE or match --opponent rock/maniac)")
     args = parser.parse_args(argv)
+
+    if args.training_hud and args.opponent in ("rock", "maniac", "tight"):
+        os.environ.setdefault("TRAINING_OPPONENT_MODE", args.opponent)
 
     if args.players < 2 or args.players > 6:
         print("ERROR: --players must be between 2 and 6.", file=sys.stderr)
@@ -461,6 +516,9 @@ def main(argv: Optional[list[str]] = None) -> int:
           f"players={args.players}  stacks={args.starting_stack}  "
           f"blinds={args.small_blind}/{args.big_blind}  seed={args.seed}")
     print(f"[selfplay] playing {args.hands} hands ...")
+    if args.training_hud:
+        print(f"[selfplay] training HUD mode={os.environ.get('TRAINING_OPPONENT_MODE', '?')} "
+              f"(private opponent_hud_exploit required)")
 
     stats = run_selfplay(
         decide_fn=decide_fn,
@@ -471,6 +529,7 @@ def main(argv: Optional[list[str]] = None) -> int:
         small_blind=args.small_blind,
         big_blind=args.big_blind,
         seed=args.seed,
+        training_hud=args.training_hud,
     )
 
     sep = "─" * 56

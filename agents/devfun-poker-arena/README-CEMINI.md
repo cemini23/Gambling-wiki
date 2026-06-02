@@ -16,6 +16,67 @@ cp .env.example .env
 uv run examples/agent.py --agent examples/cemini_decide.py --dry-run --max-hands 20
 ```
 
+## Private training (starter kit — recommended before tournament)
+
+Train on the **arena-pokerkit** local loop. Zero network, nothing on the public leaderboard, full HUD exploit path via `private/opponent_hud_exploit.py`.
+
+| Mode | Command | Public? |
+|------|---------|---------|
+| **Unit scenarios** | `uv run python -m pytest tests/ -q` | No |
+| **Self-play vs rock/maniac** | `./examples/run_train_cemini.sh rock 500` | No |
+| **Self-play + HUD branch** | same script (`--training-hud` built in) | No |
+| **Dry-run mock API** | `uv run examples/run_cemini.py --dry-run --max-hands 20` | No |
+| **Poker Eval benchmark** | `uv run examples/run_cemini.py --max-hands 50` | Yes (Eval leaderboard) |
+| **Playground lobby** | `run_cemini_lobby.py` + Playground S1 | Yes (casual) |
+| **Tournament S28** | prod lobby | Yes (competition) |
+
+**Recommended loop:** train locally until self-play bb/100 is stable vs `rock` and `maniac`, then deploy to prod for S28 only.
+
+```bash
+# ~500 hands in ~2–3 seconds — rock (River Shark shape)
+./examples/run_train_cemini.sh rock 500
+
+# maniac (CallMeMummy shape)
+./examples/run_train_cemini.sh maniac 500
+
+# Reproducible regression
+./examples/run_train_cemini.sh rock 1000 --seed 42
+```
+
+Opponent bots: `rock`, `maniac`, `tight`, `loose`, `random`, `call`, `mixed` via `pokerkit selfplay` / `selfplay.py`.
+
+### Overnight parameter sweep on cemini-egress-fi
+
+Idle egress runs a **grid of decision profiles** (steal margins, maniac call tightness, paired-board folds, trash folds) × **rock + maniac** at **03:00 UTC**. Output is a ranked leaderboard — pick the best profile for the next code deploy.
+
+```bash
+# Deploy + enable nightly timer (requires private/opponent_hud_exploit.py locally)
+./deploy/deploy_train_to_egress.sh
+
+# Deploy and run immediately
+./deploy/deploy_train_to_egress.sh --run-now
+
+# Leaderboard after a run
+ssh cemini-egress-fi cat /opt/devfun-poker-arena-train/reports/sweep/latest/leaderboard.txt
+ssh cemini-egress-fi cat /opt/devfun-poker-arena-train/reports/sweep/latest/best.json
+```
+
+| Env (systemd / shell) | Default | Meaning |
+|-----------------------|---------|---------|
+| `SWEEP_HANDS` | 2500 | Hands per profile per opponent |
+| `SWEEP_PROFILES` | `named+grid` | ~12 named corners + 54 grid combos (~66 total) |
+| `SWEEP_SEED` | UTC date | Reproducible base seed |
+
+Local quick sweep:
+
+```bash
+SWEEP_PROFILES=named SWEEP_HANDS=1000 ./examples/run_train_sweep.sh
+```
+
+Single-profile batch (old behavior): `./examples/run_train_batch.sh` with `TRAIN_HANDS=5000`.
+
+Tunable knobs live in `examples/train_profiles.py` (named presets) and env overrides read by `cemini_decide.py` + `private/opponent_hud_exploit.py`.
+
 ## Live play
 
 **Registered:** handle `cemini_wiki_poker`, agent ID on wiki bot page. Credentials in `.arena-credentials` (gitignored).

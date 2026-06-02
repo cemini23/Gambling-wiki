@@ -1,0 +1,191 @@
+#!/usr/bin/env python3
+"""Overnight parameter sweep: many decision profiles × rock + maniac self-play.
+
+Writes ranked CSV + JSON under reports/sweep/<stamp>/.
+
+Env:
+  SWEEP_HANDS       — hands per profile per opponent (default 2500)
+  SWEEP_PROFILES   — named+grid | named | grid | default | comma names
+  SWEEP_SEED       — base RNG seed (default YYYYMMDD UTC)
+  SWEEP_OPPONENTS  — comma list (default rock,maniac)
+  REPORT_DIR       — base dir (default reports/sweep)
+"""
+from __future__ import annotations
+
+import csv
+import json
+import os
+import sys
+import time
+from datetime import datetime, timezone
+from pathlib import Path
+
+_EXAMPLES = Path(__file__).resolve().parent
+_ROOT = _EXAMPLES.parent
+if str(_EXAMPLES) not in sys.path:
+    sys.path.insert(0, str(_EXAMPLES))
+if str(_ROOT) not in sys.path:
+    sys.path.insert(0, str(_ROOT))
+
+from selfplay import _load_decide_from_path, run_selfplay  # noqa: E402
+from train_profiles import resolve_profile_list  # noqa: E402
+
+
+def _env_int(key: str, default: int) -> int:
+    raw = os.environ.get(key)
+    return int(raw) if raw not in (None, "") else default
+
+
+def _combined_bb(rock_bb: float, maniac_bb: float, weights: dict[str, float]) -> float:
+    w_sum = sum(weights.values()) or 1.0
+    total = 0.0
+    if "rock" in weights:
+        total += rock_bb * weights["rock"]
+    if "maniac" in weights:
+        total += maniac_bb * weights["maniac"]
+    return total / w_sum
+
+
+def main() -> int:
+    hands = _env_int("SWEEP_HANDS", 2500)
+    seed_base = os.environ.get("SWEEP_SEED") or datetime.now(timezone.utc).strftime("%Y%m%d")
+    seed_base = int(seed_base)
+    profile_spec = os.environ.get("SWEEP_PROFILES", "named+grid")
+    opp_raw = os.environ.get("SWEEP_OPPONENTS", "rock,maniac")
+    opponents = [o.strip() for o in opp_raw.split(",") if o.strip()]
+
+    stamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H%M%SZ")
+    report_base = Path(os.environ.get("REPORT_DIR", "reports/sweep"))
+    out_dir = report_base / stamp
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    agent_path = _EXAMPLES / "cemini_decide.py"
+    decide_fn = _load_decide_from_path(str(agent_path))
+    profiles = resolve_profile_list(profile_spec)
+
+    print(f"cemini train sweep — {stamp}")
+    print(f"profiles: {len(profiles)} ({profile_spec})")
+    print(f"hands/profile/opponent: {hands}")
+    print(f"opponents: {opponents}")
+    print(f"output: {out_dir}")
+    print("")
+
+    rows: list[dict] = []
+    t_all = time.time()
+
+    for idx, profile in enumerate(profiles):
+        profile.apply()
+        opp_stats: dict[str, dict] = {}
+        for opp_i, opp in enumerate(opponents):
+            seed = seed_base + idx * 1000 + opp_i
+            os.environ["TRAINING_OPPONENT_MODE"] = opp
+            stats = run_selfplay(
+                decide_fn,
+                hands,
+                opp,
+                n_players=2,
+                starting_stack=200,
+                small_blind=1,
+                big_blind=2,
+                seed=seed,
+                training_hud=True,
+            )
+            opp_stats[opp] = stats
+            row = {
+                "profile": profile.name,
+                "opponent": opp,
+                "hands": stats["hands"],
+                "bb_per_100": stats["bb_per_100"],
+                "net_chips": stats["net_chips"],
+                "wins": stats["wins"],
+                "losses": stats["losses"],
+                "elapsed_s": stats["elapsed_s"],
+                **profile.to_dict(),
+            }
+            rows.append(row)
+            print(
+                f"[{idx + 1}/{len(profiles)}] {profile.name:28} vs {opp:6} "
+                f"bb/100={stats['bb_per_100']:+.1f}  ({stats['hands_per_s']:.0f} h/s)"
+            )
+
+        rock_bb = opp_stats.get("rock", {}).get("bb_per_100", 0.0)
+        maniac_bb = opp_stats.get("maniac", {}).get("bb_per_100", 0.0)
+        weights = {o: 1.0 for o in opponents}
+        combo = _combined_bb(rock_bb, maniac_bb, weights)
+        summary_path = out_dir / "by_profile.jsonl"
+        with summary_path.open("a", encoding="utf-8") as f:
+            f.write(json.dumps({
+                "profile": profile.name,
+                "bb_per_100_rock": rock_bb,
+                "bb_per_100_maniac": maniac_bb,
+                "bb_per_100_combined": combo,
+                "params": profile.to_dict(),
+            }) + "\n")
+
+    # Rank by combined bb/100 (average across opponents run)
+    by_profile: dict[str, list[float]] = {}
+    for r in rows:
+        by_profile.setdefault(r["profile"], []).append(r["bb_per_100"])
+    ranked = sorted(
+        (
+            (name, sum(v) / len(v), len(v))
+            for name, v in by_profile.items()
+        ),
+        key=lambda x: x[1],
+        reverse=True,
+    )
+
+    csv_path = out_dir / "results.csv"
+    with csv_path.open("w", newline="", encoding="utf-8") as f:
+        if rows:
+            writer = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
+            writer.writeheader()
+            writer.writerows(rows)
+
+    best_path = out_dir / "leaderboard.txt"
+    lines = [
+        f"cemini sweep leaderboard — {stamp}",
+        f"profiles={len(profiles)} hands={hands} seed={seed_base}",
+        f"elapsed_total={time.time() - t_all:.0f}s",
+        "",
+        "rank  profile                      combined_bb/100",
+        "────  ───────────────────────────  ───────────────",
+    ]
+    for rank, (name, avg_bb, _) in enumerate(ranked, 1):
+        lines.append(f"{rank:4}  {name:28}  {avg_bb:+.1f}")
+    best_name, best_bb, _ = ranked[0]
+    lines.extend([
+        "",
+        f"BEST: {best_name} ({best_bb:+.1f} bb/100 avg)",
+        "",
+        "Apply on egress: export CEMINI_PROFILE=<name> or copy env from best.json",
+    ])
+    best_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+    best_json = {
+        "stamp": stamp,
+        "best_profile": best_name,
+        "bb_per_100_combined": best_bb,
+        "ranked": [{"rank": i + 1, "profile": n, "bb_per_100": b}
+                   for i, (n, b, _) in enumerate(ranked)],
+    }
+    (out_dir / "best.json").write_text(
+        json.dumps(best_json, indent=2) + "\n", encoding="utf-8"
+    )
+
+    latest = report_base / "latest"
+    latest.mkdir(parents=True, exist_ok=True)
+    (latest / "leaderboard.txt").write_text(best_path.read_text(encoding="utf-8"),
+                                            encoding="utf-8")
+    (latest / "best.json").write_text(
+        (out_dir / "best.json").read_text(encoding="utf-8"), encoding="utf-8"
+    )
+
+    print("")
+    print(best_path.read_text(encoding="utf-8"))
+    print(f"[sweep] wrote {csv_path}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
