@@ -34,10 +34,63 @@ from arena_client import (  # noqa: E402
 POLL_INTERVAL = 2.0
 POLL_JITTER = 0.5
 JOIN_RETRY_S = 60.0
+PAYMENT_CONFIRM_WAIT_S = 5.0
+PAYMENT_CONFIRM_ATTEMPTS = 24
 
 
-def _join(client: ArenaClient, competition_id: str) -> dict:
-    return client.post("/texas/join", {"competitionId": competition_id})
+def _join(client: ArenaClient, competition_id: str, tx_hash: Optional[str] = None) -> dict:
+    body: dict = {"competitionId": competition_id}
+    if tx_hash:
+        body["txHash"] = tx_hash
+    return client.post("/texas/join", body)
+
+
+def _pay_entry_fee(client: ArenaClient, payment: dict) -> str:
+    """Pay competition entry from agent wallet; return txHash."""
+    dest = payment.get("to")
+    amt = payment.get("amount")
+    if not dest or not amt:
+        raise ValueError(f"invalid payment requirements: {payment}")
+    resp = client.post("/agent/wallet/transfer/native", {
+        "chain": payment.get("chain") or "monad",
+        "to": dest,
+        "amount": str(amt),
+    })
+    tx_hash = resp.get("txHash")
+    if not tx_hash:
+        raise ValueError(f"transfer returned no txHash: {resp}")
+    return tx_hash
+
+
+def _join_with_entry_fee(
+    client: ArenaClient,
+    competition_id: str,
+    payment: dict,
+    state: Optional[dict] = None,
+    save_state_fn=None,
+) -> dict:
+    """Transfer entry fee, then join with txHash (poll until mined)."""
+    tx_hash = _pay_entry_fee(client, payment)
+    print(f"[cemini-lobby] entry fee tx={tx_hash}")
+    if state is not None:
+        state["entry_fee_tx_hash"] = tx_hash
+        if save_state_fn:
+            save_state_fn(state)
+    last_err: Optional[ArenaError] = None
+    for attempt in range(1, PAYMENT_CONFIRM_ATTEMPTS + 1):
+        time.sleep(PAYMENT_CONFIRM_WAIT_S)
+        try:
+            return _join(client, competition_id, tx_hash=tx_hash)
+        except ArenaError as e:
+            last_err = e
+            msg = str((e.body or {}).get("error") or e.body or "")
+            if e.status == 400 and "not yet mined" in msg.lower():
+                print(f"[cemini-lobby] waiting for tx confirm ({attempt}/{PAYMENT_CONFIRM_ATTEMPTS})")
+                continue
+            raise
+    if last_err:
+        raise last_err
+    raise RuntimeError("join with payment failed")
 
 
 def _pending(client: ArenaClient, competition_id: str) -> dict:
@@ -73,20 +126,63 @@ def run_lobby(args: argparse.Namespace) -> int:
             try:
                 join_resp = _join(client, competition_id)
                 last_join_at = now
+                state.pop("entry_fee_tx_hash", None)
+                save_state(state)
                 print(f"[cemini-lobby] join: {json.dumps(join_resp, sort_keys=True)[:500]}")
             except ArenaError as e:
                 if e.status == 402:
                     pay = (e.body or {}).get("paymentRequirements") or {}
+                    pending_tx = state.get("entry_fee_tx_hash")
+                    if pending_tx:
+                        print(f"[cemini-lobby] retrying join with pending tx {pending_tx}",
+                              file=sys.stderr)
+                        try:
+                            join_resp = _join(client, competition_id, tx_hash=pending_tx)
+                            last_join_at = now
+                            state.pop("entry_fee_tx_hash", None)
+                            save_state(state)
+                            print(f"[cemini-lobby] join after pending tx: "
+                                  f"{json.dumps(join_resp, sort_keys=True)[:500]}")
+                            return
+                        except ArenaError as pend_err:
+                            msg = str((pend_err.body or {}).get("error") or "")
+                            if pend_err.status == 400 and "not yet mined" in msg.lower():
+                                print("[cemini-lobby] tx still indexing on Arena…", file=sys.stderr)
+                                last_join_at = now
+                                return
+                            if pend_err.status != 402:
+                                print(f"[cemini-lobby] pending tx join failed: "
+                                      f"{pend_err.status} {pend_err.body}", file=sys.stderr)
+                                last_join_at = now
+                                return
                     amt = pay.get("amount", "?")
                     cur = pay.get("currency", "MON")
-                    chain = pay.get("chain", "monad")
-                    dest = pay.get("to", "?")
+                    w = client.get("/agent/wallet?chain=monad")
+                    bal = (w.get("nativeBalance") or {}).get("formatted", "?")
                     print(
-                        f"[cemini-lobby] entry fee required: {amt} {cur} on {chain} "
-                        f"→ {dest} — pay via dev.fun then auto-retry",
+                        f"[cemini-lobby] entry fee {amt} {cur} — agent balance {bal} MON",
                         file=sys.stderr,
                     )
-                    last_join_at = now
+                    try:
+                        join_resp = _join_with_entry_fee(
+                            client, competition_id, pay, state=state, save_state_fn=save_state)
+                        last_join_at = now
+                        state.pop("entry_fee_tx_hash", None)
+                        save_state(state)
+                        print(f"[cemini-lobby] join after pay: "
+                              f"{json.dumps(join_resp, sort_keys=True)[:500]}")
+                    except ArenaError as pay_err:
+                        msg = str((pay_err.body or {}).get("error") or "")
+                        if pay_err.status == 400 and "not yet mined" in msg.lower():
+                            # _join_with_entry_fee raises before storing — handled below
+                            pass
+                        print(f"[cemini-lobby] entry pay/join failed: {pay_err.status} "
+                              f"{pay_err.body}", file=sys.stderr)
+                        last_join_at = now
+                    except Exception as pay_exc:
+                        print(f"[cemini-lobby] entry pay/join error: {pay_exc}",
+                              file=sys.stderr)
+                        last_join_at = now
                     return
                 if e.status == 403:
                     print("[cemini-lobby] X claim required — verify owner on dev.fun",
