@@ -119,23 +119,13 @@ def _resolve_latest_competition(tables: list[dict]) -> Optional[str]:
     return None
 
 
-def analyze(tables: list[dict], chip_deltas: dict[str, int],
-            self_agent_id: str, top_n: int = 10) -> str:
-    """Build a plain-text failure report from recent-tables + replays."""
-    if not tables:
-        return (
-            "No completed tables found.\n"
-            "Run `pokerkit run --max-hands 50` first, then re-run\n"
-            "`pokerkit analyze`.\n"
-        )
-
-    by_seat: dict[int, dict] = {}
+def _collect_hand_rows(tables: list[dict], chip_deltas: dict[str, int],
+                       self_agent_id: str) -> list[dict]:
+    """Join recent-tables with replay chip deltas for our agent."""
     rows: list[dict] = []
-
     for t in tables:
         tid = t.get("id") or t.get("tableId")
         seats = t.get("seats") or []
-        # Find OUR seat in this table.
         my_seat = next(
             (s for s in seats if s.get("agentId") == self_agent_id), None)
         if not my_seat:
@@ -146,41 +136,76 @@ def analyze(tables: list[dict], chip_deltas: dict[str, int],
         payout = int(my_seat.get("payoutChips") or 0)
         stack_end = int(my_seat.get("stackChips") or 0)
 
-        # Prefer chipDelta from /replays (precise); else infer from payout.
         delta = chip_deltas.get(tid)
         if delta is None:
-            # Fall back to "did we get any payout this hand?". Coarse.
-            delta = payout - 100  # rough proxy: assume 100 BB committed avg
+            delta = payout - 100
 
         winner = (t.get("winners") or [{}])[0]
-        winner_handle = winner.get("agentName") or winner.get("agentId") or "?"
-        winner_hand = winner.get("handName") or ""
-        board = " ".join(t.get("boardCards") or [])
-
-        if seat_num:
-            rec = by_seat.setdefault(seat_num,
-                                     {"seat": seat_num, "total": 0, "delta_sum": 0})
-            rec["total"] += 1
-            rec["delta_sum"] += delta
-
         rows.append({
             "table_id": tid,
             "delta": delta,
             "seat": seat_num,
             "hole": hole,
-            "board": board,
+            "board": " ".join(t.get("boardCards") or []),
             "payout": payout,
             "stack_end": stack_end,
-            "winner": winner_handle,
-            "winner_hand": winner_hand,
+            "winner": winner.get("agentName") or winner.get("agentId") or "?",
+            "winner_hand": winner.get("handName") or "",
             "_table": t,
         })
+    rows.sort(key=lambda x: x["delta"])
+    return rows
 
+
+def analyze_metrics(rows: list[dict]) -> dict:
+    """Summary stats for monitor history / dashboards."""
+    if not rows:
+        return {"hands": 0, "wins": 0, "losses": 0, "pushes": 0, "positions": {}}
+
+    total = len(rows)
+    wins = sum(1 for r in rows if r["delta"] > 0)
+    losses = sum(1 for r in rows if r["delta"] < 0)
+    pushes = total - wins - losses
+
+    by_pos: dict[str, dict] = {}
+    for r in rows:
+        pl = _pos_label(r.get("_table") or {}, r["seat"])
+        rec = by_pos.setdefault(pl, {"hands": 0, "delta_sum": 0})
+        rec["hands"] += 1
+        rec["delta_sum"] += r["delta"]
+
+    positions = {
+        pos: {
+            "hands": rec["hands"],
+            "avg_delta": round(rec["delta_sum"] / max(rec["hands"], 1), 2),
+            "total_delta": rec["delta_sum"],
+        }
+        for pos, rec in by_pos.items()
+    }
+    return {
+        "hands": total,
+        "wins": wins,
+        "losses": losses,
+        "pushes": pushes,
+        "net_delta": sum(r["delta"] for r in rows),
+        "positions": positions,
+    }
+
+
+def analyze(tables: list[dict], chip_deltas: dict[str, int],
+            self_agent_id: str, top_n: int = 10) -> str:
+    """Build a plain-text failure report from recent-tables + replays."""
+    if not tables:
+        return (
+            "No completed tables found.\n"
+            "Run `pokerkit run --max-hands 50` first, then re-run\n"
+            "`pokerkit analyze`.\n"
+        )
+
+    rows = _collect_hand_rows(tables, chip_deltas, self_agent_id)
     if not rows:
         return ("No hands found where you were seated.\n"
                 "Check that --match competitionId matches a comp you played.\n")
-
-    rows.sort(key=lambda x: x["delta"])
 
     total = len(rows)
     wins = sum(1 for r in rows if r["delta"] > 0)
@@ -201,24 +226,17 @@ def analyze(tables: list[dict], chip_deltas: dict[str, int],
         "",
     ]
 
-    # Position breakdown (rotated labels when button field present)
-    by_pos: dict[str, dict] = {}
-    for r in rows:
-        pl = _pos_label(r.get("_table") or {}, r["seat"])
-        rec = by_pos.setdefault(pl, {"pos": pl, "total": 0, "delta_sum": 0})
-        rec["total"] += 1
-        rec["delta_sum"] += r["delta"]
-
+    metrics = analyze_metrics(rows)
     lines.append("POSITION BREAKDOWN  (worst → best avg chip delta):")
     pos_rows = sorted(
-        by_pos.values(),
-        key=lambda r: r["delta_sum"] / max(r["total"], 1),
+        metrics["positions"].items(),
+        key=lambda kv: kv[1]["avg_delta"],
     )
-    for r in pos_rows:
-        avg = r["delta_sum"] / max(r["total"], 1)
+    for pos, rec in pos_rows:
+        avg = rec["avg_delta"]
         bar = "▼" if avg < 0 else "▲"
         lines.append(
-            f"  {bar} {r['pos']:4s}  {avg:+.0f} chips avg  ({r['total']} hands)"
+            f"  {bar} {pos:4s}  {avg:+.0f} chips avg  ({rec['hands']} hands)"
         )
     lines.append("")
 

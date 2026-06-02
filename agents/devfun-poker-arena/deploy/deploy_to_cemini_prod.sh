@@ -61,13 +61,25 @@ fi
 
 install -m 644 "${REMOTE_DIR}/deploy/cemini-devfun-poker-lobby.service" \
   /etc/systemd/system/cemini-devfun-poker-lobby.service
+install -m 644 "${REMOTE_DIR}/deploy/cemini-devfun-poker-monitor.service" \
+  /etc/systemd/system/cemini-devfun-poker-monitor.service
+install -m 644 "${REMOTE_DIR}/deploy/cemini-devfun-poker-monitor.timer" \
+  /etc/systemd/system/cemini-devfun-poker-monitor.timer
+
+mkdir -p "${REMOTE_DIR}/reports/analyze"
 
 systemctl daemon-reload
 systemctl enable cemini-devfun-poker-lobby.service
+systemctl enable cemini-devfun-poker-monitor.timer
 systemctl restart cemini-devfun-poker-lobby.service
+systemctl start cemini-devfun-poker-monitor.service
 sleep 2
 systemctl --no-pager status cemini-devfun-poker-lobby.service || true
+systemctl --no-pager status cemini-devfun-poker-monitor.timer || true
 REMOTE
 
 echo ""
-echo "Done. Tail logs: ssh ${HOST} journalctl -u ${SERVICE} -f"
+echo "Done. Tail logs:"
+echo "  ssh ${HOST} journalctl -u ${SERVICE} -f"
+echo "  ssh ${HOST} journalctl -u cemini-devfun-poker-monitor.service -f"
+echo "  ssh ${HOST} ls -lt ${REMOTE_DIR}/reports/analyze/ | head"

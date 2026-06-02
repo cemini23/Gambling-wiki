@@ -1,0 +1,18 @@
+[Unit]
+Description=Cemini dev.fun Poker Arena monitor (analyze + eval poll)
+Documentation=https://docs.dev.fun/
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+Group=root
+WorkingDirectory=/opt/devfun-poker-arena
+Environment=PYTHONUNBUFFERED=1
+Environment=ARENA_MONITOR_REPORTS_DIR=/opt/devfun-poker-arena/reports
+EnvironmentFile=-/opt/devfun-poker-arena/.env
+ExecStart=/opt/devfun-poker-arena/venv/bin/python examples/arena_monitor.py once
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

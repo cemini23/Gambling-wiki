@@ -11,6 +11,10 @@
 # Replay viewer output (regenerate with `pokerkit replay`)
 replay.html
 
+# Monitor reports (generated on prod / local runs)
+reports/*
+!reports/.gitkeep
+
 # Python
 __pycache__/
 *.py[cod]
