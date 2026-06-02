@@ -28,20 +28,42 @@ from agent import (  # noqa: E402
 )
 from research_static_chart import research_static_chart  # noqa: E402
 
+# Preflop trash facing a raise — fold unless equity clearly covers price.
+_WEAK_FACING_RAISE = frozenset({
+    "A2o", "A3o", "A4o", "A5o",
+    "K9o", "K8o", "K7o", "K6o", "K5o", "K4o", "K3o", "K2o",
+    "Q9o", "Q8o", "Q7o", "Q6o", "Q5o", "Q4o", "Q3o", "Q2o",
+    "J9o", "J8o", "J7o", "J6o", "T9o", "T8o", "T7o", "98o", "97o", "87o",
+    "KJo", "QJo", "JTo", "KTo", "QTo",
+})
+
 
 def retrieve_solver_context(table: dict) -> dict:
     """Preflop chart + PokerSkill-style binding labels for decide()."""
-    ctx = research_static_chart(table)
-    hole = ctx.get("hole") or []
+    chart = research_static_chart(table)
+    self_seat_num = table.get("selfSeatNumber")
+    seats = table.get("seats") or []
+    self_seat = next((s for s in seats if s.get("seatNumber") == self_seat_num), {})
+    hole = list(self_seat.get("holeCards") or [])
     board = list(table.get("boardCards") or [])
     street = (table.get("street") or "Preflop").lower()
-    hc = _hand_class(hole)
-    ctx["skill_binding"] = {
-        "street": street,
-        "hand_class": hc or "unknown",
-        "board_len": len(board),
-        "scenario": _scenario_label(street, board, hc),
+    hc = _hand_class(hole) or chart.get("hand_class") or ""
+
+    ctx: dict[str, Any] = {
+        "preflop_chart": {
+            "suggested_action": chart.get("preflop_action"),
+            "hand_class": hc or chart.get("hand_class"),
+            "position": chart.get("position"),
+        },
+        "skill_binding": {
+            "street": street,
+            "hand_class": hc or "unknown",
+            "board_len": len(board),
+            "scenario": _scenario_label(street, board, hc),
+        },
     }
+    if chart:
+        ctx.update(chart)
     return ctx
 
 
@@ -62,7 +84,9 @@ def decide(
 ) -> dict:
     allowed = table.get("allowedActions") or {}
     available = allowed.get("availableActions") or []
-    ctx = research_context or {}
+    if research_context is None:
+        research_context = retrieve_solver_context(table)
+    ctx = research_context
 
     if deadline_s < 2.0:
         if allowed.get("canCheck"):
@@ -84,7 +108,7 @@ def decide(
     equity = estimate_equity(hole, board, sims=300, deadline_s=deadline_s)
 
     chart = ctx.get("preflop_chart") or {}
-    suggested = chart.get("suggested_action")
+    suggested = chart.get("suggested_action") or ctx.get("preflop_action")
     binding = (ctx.get("skill_binding") or {}).get("scenario", "unknown")
 
     action_name: str
@@ -132,6 +156,8 @@ def _preflop_vs_bet(suggested: str, chart: dict, allowed: dict, available: list,
                     equity: float, pot_odds: float, call_chips: int,
                     pot: int) -> tuple[str, Optional[int]]:
     hc = chart.get("hand_class") or ""
+    if _should_fold_weak_preflop(hc, equity, pot_odds) and "fold" in available:
+        return "fold", None
     premium = hc in {"AA", "KK", "QQ", "AKs", "AKo"}
     if suggested == "raise" and premium and allowed.get("canRaise"):
         rr = allowed.get("raiseRange") or {}
@@ -144,6 +170,16 @@ def _preflop_vs_bet(suggested: str, chart: dict, allowed: dict, available: list,
     if suggested == "fold" or equity < pot_odds - 0.08:
         return ("fold" if "fold" in available else "call"), None
     return ("call" if "call" in available else "fold"), None
+
+
+def _should_fold_weak_preflop(hc: str, equity: float, pot_odds: float) -> bool:
+    """Fold dominated trash preflop unless MC equity clears price with margin."""
+    if not hc:
+        return False
+    if hc not in _WEAK_FACING_RAISE:
+        return False
+    # Weak aces / broadways need a clear edge, not a marginal call.
+    return equity < pot_odds + 0.05
 
 
 def _postflop_free(equity: float, allowed: dict, available: list,

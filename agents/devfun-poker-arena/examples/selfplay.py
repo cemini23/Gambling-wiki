@@ -169,15 +169,28 @@ def _build_table(state: State, hero_idx: int, table_id: str,
     for i in range(len(starting_stacks)):
         hole = list(state.hole_cards[i]) if i < len(state.hole_cards) else []
         hole_strs = [repr(c) for c in hole] if (i == hero_idx and hole) else []
+        street_bet = int(bets[i]) if i < len(bets) else 0
         seats.append({
             "seatNumber": i + 1,
             "agentId": f"local_seat_{i+1}",
             "agentHandle": "hero" if i == hero_idx else f"bot_{i+1}",
             "holeCards": hole_strs,
             "stackChips": int(state.stacks[i]),
+            "currentBetChips": street_bet,
+            "status": "Active",
         })
 
-    # Decide what actions are legal.
+    table: dict = {
+        "tableId": table_id,
+        "potChips": int(pot_total),
+        "street": _street_label(state),
+        "boardCards": [repr(c) for c in state.board_cards],
+        "selfSeatNumber": hero_idx + 1,
+        "smallBlindChips": int(small_blind),
+        "bigBlindChips": int(big_blind),
+        "seats": seats,
+    }
+
     available: list[str] = []
     call_chips = 0
     call_to_amount = 0
@@ -212,25 +225,36 @@ def _build_table(state: State, hero_idx: int, table_id: str,
                 available.append("bet")
                 can_bet, bet_min, bet_max = True, rmin, rmax
 
-    return {
-        "tableId": table_id,
-        "potChips": int(pot_total),
-        "street": _street_label(state),
-        "boardCards": [repr(c) for c in state.board_cards],
-        "selfSeatNumber": hero_idx + 1,
-        "seats": seats,
-        "allowedActions": {
-            "availableActions": available,
-            "callChips": int(call_chips),
-            "callToAmount": int(call_to_amount),
-            "canCheck": bool(can_check),
-            "canBet": bool(can_bet),
-            "canRaise": bool(can_raise),
-            "betRange": {"min": int(bet_min), "max": int(bet_max)},
-            "raiseRange": {"min": int(raise_min), "max": int(raise_max)},
-        },
-        "secondsUntilDeadline": 10.0,
+    # Button seat — stable for the whole hand (opener_index works all streets).
+    n_players = len(starting_stacks)
+    if state.opener_index is not None and n_players >= 2:
+        offset = {6: 3, 5: 2, 4: 1, 3: 0, 2: 0}.get(n_players, 3)
+        btn_idx = (int(state.opener_index) - offset) % n_players
+        table["buttonSeatNumber"] = btn_idx + 1
+    else:
+        try:
+            _examples = Path(__file__).resolve().parent
+            if str(_examples) not in sys.path:
+                sys.path.insert(0, str(_examples))
+            from position_utils import infer_button_seat  # noqa: WPS433
+            btn = infer_button_seat(table)
+            if btn is not None:
+                table["buttonSeatNumber"] = btn
+        except Exception:
+            pass
+
+    table["allowedActions"] = {
+        "availableActions": available,
+        "callChips": int(call_chips),
+        "callToAmount": int(call_to_amount),
+        "canCheck": bool(can_check),
+        "canBet": bool(can_bet),
+        "canRaise": bool(can_raise),
+        "betRange": {"min": int(bet_min), "max": int(bet_max)},
+        "raiseRange": {"min": int(raise_min), "max": int(raise_max)},
     }
+    table["secondsUntilDeadline"] = 10.0
+    return table
 
 
 def _apply_action(state: State, action: dict, big_blind: int) -> None:

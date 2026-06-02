@@ -21,6 +21,8 @@ from __future__ import annotations
 
 from typing import Optional
 
+from position_utils import hero_position_label
+
 
 # 6-max NLHE opening ranges, position × hand class → suggested action.
 # This is a coarse caricature of a real preflop chart — good enough to
@@ -71,12 +73,6 @@ _OPEN_CHART = {
     },
 }
 
-# 6-max seat → position label heuristic. Live Arena tables typically
-# rotate the button so this is only correct for the canonical seating —
-# real implementations should read seat.position once that field lands.
-_SEAT_TO_POS_6MAX = {1: "BTN", 2: "SB", 3: "BB", 4: "UTG", 5: "MP", 6: "CO"}
-
-
 def _hand_class(hole: list[str]) -> str:
     """Convert ['As', 'Ks'] -> 'AKs'. Returns '' if unparseable."""
     ranks = "23456789TJQKA"
@@ -92,11 +88,6 @@ def _hand_class(hole: list[str]) -> str:
     if r1 == r2:
         return r1 + r2
     return f"{r1}{r2}{'s' if s1 == s2 else 'o'}"
-
-
-def _position_label(table: dict) -> str:
-    self_seat = table.get("selfSeatNumber") or 0
-    return _SEAT_TO_POS_6MAX.get(self_seat, "MP")
 
 
 def research_static_chart(table: dict) -> dict:
@@ -124,7 +115,7 @@ def research_static_chart(table: dict) -> dict:
     if not cls:
         return {}
 
-    pos = _position_label(table)
+    pos = hero_position_label(table)
     rules = _OPEN_CHART.get(pos) or {}
     if cls in rules.get("raise", set()):
         action = "raise"
