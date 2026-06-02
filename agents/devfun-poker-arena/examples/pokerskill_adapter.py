@@ -25,6 +25,7 @@ if str(_EXAMPLES) not in sys.path:
 from agent import _hand_class  # noqa: E402
 
 from position_utils import _active_seat_numbers, hero_position_label  # noqa: E402
+from pokerskill_prompt import merge_prompt_hints  # noqa: E402
 
 # PokerSkill legal action codes
 _PS_FOLD, _PS_CHECK, _PS_CALL, _PS_BET = "f", "k", "c", "b"
@@ -280,11 +281,13 @@ def retrieve_pokerskill_hints(table: dict) -> dict[str, Any]:
         prompts = _try_library_prompt(ps_state)
         if prompts:
             out["mode"] = "library"
-            out["prompt_chars"] = len(prompts.get("user_prompt") or "")
+            user_p = prompts.get("user_prompt") or ""
+            out["prompt_chars"] = len(user_p)
             out["layer"] = "PokerSkill"
-            bias = _bias_from_prompt(prompts.get("user_prompt") or "")
+            bias = _bias_from_prompt(user_p)
             if bias:
                 out["bias"] = bias
+            out = merge_prompt_hints(out, user_p)
         if street == "preflop":
             if out.get("mode") != "library":
                 hint = _stub_hu_preflop_hint(ps_state, hc)

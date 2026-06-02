@@ -13,6 +13,7 @@ Run:
 from __future__ import annotations
 
 import sys
+from collections import Counter
 from pathlib import Path
 from typing import Any, Optional
 
@@ -37,7 +38,11 @@ _WEAK_FACING_RAISE = frozenset({
     "Q9o", "Q8o", "Q7o", "Q6o", "Q5o", "Q4o", "Q3o", "Q2o",
     "J9o", "J8o", "J7o", "J6o", "T9o", "T8o", "T7o", "98o", "97o", "87o",
     "KJo", "QJo", "JTo", "KTo", "QTo",
+    "84o", "83o", "82o", "74o", "73o", "72o", "64o", "63o", "62o",
+    "54o", "53o", "52o", "43o", "42o", "32o",
 })
+
+_RANKS = "23456789TJQKA"
 
 
 def retrieve_solver_context(table: dict) -> dict:
@@ -110,7 +115,8 @@ def decide(
     pot = int(table.get("potChips") or 0)
     call_chips = int(allowed.get("callChips") or 0)
     pot_odds = call_chips / max(pot + call_chips, 1) if call_chips else 0.0
-    equity = estimate_equity(hole, board, sims=300, deadline_s=deadline_s)
+    sims = 500 if deadline_s > 5 else (350 if deadline_s > 3 else 200)
+    equity = estimate_equity(hole, board, sims=sims, deadline_s=deadline_s)
 
     chart = ctx.get("preflop_chart") or {}
     suggested = chart.get("suggested_action") or ctx.get("preflop_action")
@@ -118,32 +124,40 @@ def decide(
     binding = (ctx.get("skill_binding") or {}).get("scenario", "unknown")
     in_position = hero_is_in_position(table)
     pot_control = bool(ps.get("pot_control"))
+    ps_bias = ps.get("bias")
+    ps_library = ps.get("mode") == "library"
+    position = chart.get("position") or ""
 
     action_name: str
     amount: Optional[int] = None
 
-    # PokerSkill HU stub: clear fold bias before chart/equity paths.
-    if ps.get("bias") == "fold" and call_chips > 0 and "fold" in available:
+    # PokerSkill library / stub: explicit fold when facing a bet (weak hands only).
+    if (ps_bias == "fold" and call_chips > 0 and "fold" in available
+            and (_should_fold_weak_preflop(chart.get("hand_class") or "", equity, pot_odds)
+                 or equity < pot_odds + 0.04)):
         action_name, amount = "fold", None
-    # Chart drives opens only — facing a bet, use equity + position margins.
-    elif street == "Preflop" and call_chips == 0 and suggested:
+    # Chart drives opens — library bias can nudge HU opens/checks.
+    elif street == "Preflop" and call_chips == 0:
+        eff = _effective_preflop_open(suggested, ps_library, ps_bias, equity)
         action_name, amount = _preflop_open(
-            suggested, allowed, available, pot, equity,
+            eff, allowed, available, pot, equity,
             hand_class=chart.get("hand_class") or "",
-            position=chart.get("position") or "")
+            position=position, ps_bias=ps_bias, ps_library=ps_library)
     elif street == "Preflop" and call_chips > 0:
         action_name, amount = _preflop_vs_bet(
             chart, allowed, available, equity, pot_odds, call_chips, pot,
-            in_position=in_position)
+            in_position=in_position, ps_bias=ps_bias, ps_library=ps_library)
     elif call_chips == 0:
         action_name, amount = _postflop_free(
             equity, allowed, available, pot, pot_control=pot_control,
-            ps_bias=ps.get("bias"), hand_class=chart.get("hand_class") or "")
+            ps_bias=ps_bias, ps_library=ps_library,
+            hand_class=chart.get("hand_class") or "")
     else:
         action_name, amount = _postflop_facing_bet(
             equity, pot_odds, allowed, available, call_chips, pot,
             in_position=in_position, pot_control=pot_control,
-            hand_class=chart.get("hand_class") or "")
+            hand_class=chart.get("hand_class") or "",
+            hole=hole, board=board, ps_bias=ps_bias, ps_library=ps_library)
 
     if action_name in ("fold", "check", "call"):
         amount = None
@@ -155,11 +169,37 @@ def decide(
     return out
 
 
+def _effective_preflop_open(
+    suggested: Optional[str],
+    ps_library: bool,
+    ps_bias: Optional[str],
+    equity: float,
+) -> str:
+    """Merge chart open with PokerSkill library nudges (HU priority)."""
+    base = suggested or "check"
+    if not ps_library or not ps_bias:
+        return base
+    if ps_bias == "check":
+        return "check"
+    if ps_bias == "raise" and equity > 0.45:
+        return "raise"
+    if ps_bias == "fold":
+        return "fold"
+    return base
+
+
 def _preflop_open(suggested: str, allowed: dict, available: list,
                   pot: int, equity: float,
-                  hand_class: str = "", position: str = "") -> tuple[str, Optional[int]]:
+                  hand_class: str = "", position: str = "",
+                  ps_bias: Optional[str] = None,
+                  ps_library: bool = False) -> tuple[str, Optional[int]]:
     if (position == "SB" and _weak_ace_offsuit(hand_class)
             and suggested == "raise" and "check" in available):
+        return "check", None
+    if (position == "SB" and _is_sb_complete_trash(hand_class)
+            and "check" in available):
+        return "check", None
+    if ps_library and ps_bias == "check" and "check" in available:
         return "check", None
     if suggested == "raise" and allowed.get("canBet") and "bet" in available:
         br = allowed.get("betRange") or {}
@@ -176,9 +216,27 @@ def _preflop_open(suggested: str, allowed: dict, available: list,
 
 def _preflop_vs_bet(chart: dict, allowed: dict, available: list,
                     equity: float, pot_odds: float, call_chips: int,
-                    pot: int, *, in_position: bool) -> tuple[str, Optional[int]]:
+                    pot: int, *, in_position: bool,
+                    ps_bias: Optional[str] = None,
+                    ps_library: bool = False) -> tuple[str, Optional[int]]:
     hc = chart.get("hand_class") or ""
+    position = chart.get("position") or ""
+    suggested = chart.get("suggested_action") or "fold"
+
+    if ps_library and ps_bias == "fold" and "fold" in available:
+        if _should_fold_weak_preflop(hc, equity, pot_odds) or equity < pot_odds + 0.04:
+            return "fold", None
+    if ps_library and ps_bias == "call" and equity >= pot_odds and "call" in available:
+        return "call", None
+
     if _should_fold_weak_preflop(hc, equity, pot_odds) and "fold" in available:
+        return "fold", None
+    # SB OOP: don't defend chart-fold trash without a clear price edge.
+    if (position == "SB" and suggested == "fold"
+            and equity < pot_odds + 0.08 and "fold" in available):
+        return "fold", None
+    if (_is_low_trash_offsuit(hc) and not in_position
+            and equity < pot_odds + 0.06 and "fold" in available):
         return "fold", None
     premium = hc in {"AA", "KK", "QQ", "JJ", "AKs", "AKo"}
     strong_3bet = premium or (in_position and hc in {"AQs", "AQo", "TT"})
@@ -211,13 +269,49 @@ def _weak_ace_offsuit(hc: str) -> bool:
     return len(hc) == 3 and hc[0] == "A" and hc[2] == "o"
 
 
+def _is_low_trash_offsuit(hc: str) -> bool:
+    """Both ranks below T, offsuit, unpaired — live SB leak hands."""
+    if len(hc) != 3 or hc[2] != "o" or hc[0] == hc[1]:
+        return False
+    i1, i2 = _RANKS.index(hc[0]), _RANKS.index(hc[1])
+    return i1 < 8 and i2 < 8
+
+
+def _is_sb_complete_trash(hc: str) -> bool:
+    """Hands SB should never open — complete or fold only."""
+    if not hc:
+        return False
+    if hc in _WEAK_FACING_RAISE or _is_low_trash_offsuit(hc):
+        return True
+    if _weak_ace_offsuit(hc):
+        return True
+    return hc in {"K9o", "Q9o", "J9o", "T8o", "97o", "86o", "75o"}
+
+
+def _board_paired_hero_missed(hole: list[str], board: list[str]) -> bool:
+    """True when board is paired/trips and hero did not connect."""
+    if len(board) < 3 or len(hole) != 2:
+        return False
+    branks = [c[0].upper() for c in board]
+    bc = Counter(branks)
+    if not any(v >= 2 for v in bc.values()):
+        return False
+    hranks = {c[0].upper() for c in hole}
+    return not any(bc.get(r, 0) >= 2 for r in hranks)
+
+
 def _postflop_free(equity: float, allowed: dict, available: list,
                    pot: int, *, pot_control: bool = False,
                    ps_bias: Optional[str] = None,
+                   ps_library: bool = False,
                    hand_class: str = "") -> tuple[str, Optional[int]]:
+    if ps_library and ps_bias == "check" and "check" in available:
+        return "check", None
     bet_bar = 0.78 if pot_control else 0.72
     if ps_bias == "probe_small" and allowed.get("canBet") and "bet" in available:
         bet_bar = 0.58
+    if ps_library and ps_bias == "raise" and equity > 0.62:
+        bet_bar = 0.55
     if equity > bet_bar and allowed.get("canBet") and "bet" in available:
         br = allowed.get("betRange") or {}
         min_bet = int(br.get("min") or max(int(pot * 0.33), 1))
@@ -233,7 +327,27 @@ def _postflop_facing_bet(equity: float, pot_odds: float, allowed: dict,
                          available: list, call_chips: int,
                          pot: int, *, in_position: bool,
                          pot_control: bool = False,
-                         hand_class: str = "") -> tuple[str, Optional[int]]:
+                         hand_class: str = "",
+                         hole: Optional[list[str]] = None,
+                         board: Optional[list[str]] = None,
+                         ps_bias: Optional[str] = None,
+                         ps_library: bool = False) -> tuple[str, Optional[int]]:
+    hole = hole or []
+    board = board or []
+
+    if ps_library and ps_bias == "fold" and "fold" in available:
+        if (_should_fold_weak_preflop(hand_class, equity, pot_odds)
+                or equity < pot_odds + 0.04):
+            return "fold", None
+
+    # Live leak: air on paired boards (Kh4c on TTT-type runouts).
+    if (_board_paired_hero_missed(hole, board) and not in_position
+            and equity < 0.44 and "fold" in available):
+        return "fold", None
+    if (_board_paired_hero_missed(hole, board) and pot_control
+            and equity < 0.50 and "fold" in available):
+        return "fold", None
+
     # Live leak: weak ace-high folds cheaply on later streets (Ad3c-type spots).
     if _weak_ace_offsuit(hand_class) and equity < 0.38 and "fold" in available:
         return "fold", None
