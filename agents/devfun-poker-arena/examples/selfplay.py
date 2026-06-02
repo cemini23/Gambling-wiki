@@ -192,6 +192,24 @@ def _training_seat_archetypes(n_players: int) -> list[str]:
     return parts + [parts[-1]] * (n_players - len(parts))
 
 
+def _opponents_for_selfplay(n_players: int, opponent_label: str) -> list[Callable]:
+    """Build villain bot list — per-seat when TRAINING_SEAT_ARCHETYPES is set."""
+    if os.environ.get("TRAINING_SEAT_ARCHETYPES", "").strip():
+        tags = _training_seat_archetypes(n_players)
+        default = (os.environ.get("TRAINING_OPPONENT_MODE") or opponent_label or "rock").lower()
+        fns: list[Callable] = []
+        for i in range(1, n_players):
+            arch = tags[i] if i < len(tags) else default
+            fns.append(BOT_POOL.get(arch) or BOT_POOL.get(default) or bot_tight_passive)
+        return fns
+    if opponent_label == "mixed":
+        rotation = [bot_tight_passive, bot_loose_passive, bot_random,
+                    bot_always_check_call, bot_tight_passive]
+        return rotation[: n_players - 1]
+    bot = BOT_POOL.get(opponent_label) or bot_tight_passive
+    return [bot] * (n_players - 1)
+
+
 def _street_label(state: State) -> str:
     # 0 cards → Preflop; 3 → Flop; 4 → Turn; 5 → River.
     n = len(state.board_cards)
@@ -433,13 +451,7 @@ def run_selfplay(decide_fn: Callable, n_hands: int, opponent_label: str,
     if seed is not None:
         random.seed(seed)
     # Build opponents list (length = n_players - 1).
-    if opponent_label == "mixed":
-        rotation = [bot_tight_passive, bot_loose_passive, bot_random,
-                    bot_always_check_call, bot_tight_passive]
-        opponents = rotation[: n_players - 1]
-    else:
-        bot = BOT_POOL.get(opponent_label) or bot_tight_passive
-        opponents = [bot] * (n_players - 1)
+    opponents = _opponents_for_selfplay(n_players, opponent_label)
 
     deltas: list[int] = []
     t0 = time.time()

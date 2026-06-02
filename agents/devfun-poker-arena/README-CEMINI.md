@@ -44,7 +44,9 @@ TRAIN_PLAYERS=2 ./examples/run_train_cemini.sh rock 500
 uv run examples/selfplay.py --agent examples/cemini_decide.py --players 4 --opponent rock --hands 500 --training-hud
 ```
 
-**Table size:** Tournament allows **2–6** seats; tables typically open **6-max**. Self-play defaults were HU (`--players 2`); training/sweep now default to **`TRAIN_PLAYERS=6`** / `SWEEP_PLAYER_SIZES=6`. For variety without re-running the full grid on every size, use `SWEEP_PLAYER_SIZES=6,4,2` (runtime × number of sizes).
+**Grid seat layouts** (`uniform`, `one_maniac_mp`, `btn_maniac`): mixed layouts run **once** per profile (per-seat bots + HUD); `uniform` still runs rock + maniac homogeneous tables.
+
+Use `SWEEP_PROFILES=named+grid` for the smaller grid without seat layouts (~48 profiles).
 
 Opponent bots: `rock`, `maniac`, `tight`, `loose`, `random`, `call`, `mixed` via `pokerkit selfplay` / `selfplay.py`.
 
@@ -75,7 +77,7 @@ ssh cemini-egress-fi systemctl start --no-block cemini-poker-train-followup.serv
 | Env (systemd / shell) | Default | Meaning |
 |-----------------------|---------|---------|
 | `SWEEP_HANDS` | 2500 | Hands per profile per opponent **per table size** |
-| `SWEEP_PROFILES` | `named+grid` | ~12 named corners + 54 grid combos (~66 total) |
+| `SWEEP_PROFILES` | `named+grid+seats` | ~16 named + 108 grid (params × seat layout) |
 | `SWEEP_PLAYER_SIZES` | `6` | Comma list: `6`, or `6,4,2` for mixed-size |
 | `SWEEP_PLAYER_WEIGHTS` | (auto) | Ranking weights, e.g. `6:0.55,4:0.25,2:0.20` |
 | `SWEEP_SEED` | UTC date | Reproducible base seed |

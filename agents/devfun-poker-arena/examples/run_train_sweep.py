@@ -62,7 +62,7 @@ def main() -> int:
     hands = _env_int("SWEEP_HANDS", 2500)
     seed_base = os.environ.get("SWEEP_SEED") or datetime.now(timezone.utc).strftime("%Y%m%d")
     seed_base = int(seed_base)
-    profile_spec = os.environ.get("SWEEP_PROFILES", "named+grid")
+    profile_spec = os.environ.get("SWEEP_PROFILES", "named+grid+seats")
     opp_raw = os.environ.get("SWEEP_OPPONENTS", "rock,maniac")
     opponents = [o.strip() for o in opp_raw.split(",") if o.strip()]
     player_sizes = parse_player_sizes(os.environ.get("SWEEP_PLAYER_SIZES", "6"))
@@ -92,16 +92,20 @@ def main() -> int:
     t_all = time.time()
 
     for idx, profile in enumerate(profiles):
-        profile.apply()
         profile_rows: list[dict] = []
         for seat_i, n_players in enumerate(player_sizes):
-            for opp_i, opp in enumerate(opponents):
+            profile.apply(n_players=n_players)
+            run_labels = profile.training_run_labels(opponents)
+            for opp_i, run_label in enumerate(run_labels):
                 seed = seed_base + idx * 10000 + seat_i * 1000 + opp_i
-                os.environ["TRAINING_OPPONENT_MODE"] = opp
+                if profile.is_homogeneous_seats():
+                    os.environ["TRAINING_OPPONENT_MODE"] = run_label
+                else:
+                    os.environ.pop("TRAINING_OPPONENT_MODE", None)
                 stats = run_selfplay(
                     decide_fn,
                     hands,
-                    opp,
+                    run_label,
                     n_players=n_players,
                     starting_stack=200,
                     small_blind=1,
@@ -111,7 +115,9 @@ def main() -> int:
                 )
                 row = {
                     "profile": profile.name,
-                    "opponent": opp,
+                    "opponent": run_label,
+                    "seat_layout": profile.seat_layout or "uniform",
+                    "seat_archetypes": os.environ.get("TRAINING_SEAT_ARCHETYPES", ""),
                     "players": stats["players"],
                     "hands": stats["hands"],
                     "bb_per_100": stats["bb_per_100"],
@@ -119,14 +125,20 @@ def main() -> int:
                     "wins": stats["wins"],
                     "losses": stats["losses"],
                     "elapsed_s": stats["elapsed_s"],
-                    **profile.to_dict(),
+                    **{k: v for k, v in profile.to_dict().items()
+                       if k != "seat_archetypes_applied"},
                 }
                 rows.append(row)
                 profile_rows.append(row)
+                layout_note = (
+                    f" seats={row['seat_archetypes']}"
+                    if row["seat_archetypes"] else ""
+                )
                 print(
-                    f"[{idx + 1}/{len(profiles)}] {profile.name:28} "
-                    f"{n_players}-max vs {opp:6} "
+                    f"[{idx + 1}/{len(profiles)}] {profile.name:32} "
+                    f"{n_players}-max vs {run_label:14} "
                     f"bb/100={stats['bb_per_100']:+.1f}  ({stats['hands_per_s']:.0f} h/s)"
+                    f"{layout_note}"
                 )
 
         combo = _weighted_bb(profile_rows, seat_weights)

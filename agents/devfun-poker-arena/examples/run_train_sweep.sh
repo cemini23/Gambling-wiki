@@ -18,7 +18,7 @@ if [[ ! -x "$PYTHON" ]]; then
 fi
 
 export SWEEP_HANDS="${SWEEP_HANDS:-2500}"
-export SWEEP_PROFILES="${SWEEP_PROFILES:-named+grid}"
+export SWEEP_PROFILES="${SWEEP_PROFILES:-named+grid+seats}"
 export SWEEP_SEED="${SWEEP_SEED:-$(date -u +%Y%m%d)}"
 export SWEEP_PLAYER_SIZES="${SWEEP_PLAYER_SIZES:-6}"
 export REPORT_DIR="${REPORT_DIR:-reports/sweep}"

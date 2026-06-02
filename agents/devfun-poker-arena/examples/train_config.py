@@ -69,7 +69,7 @@ def profile_snapshot() -> dict[str, Any]:
 
 
 def clear_profile_env() -> None:
-    keys = ["CEMINI_PROFILE", *(
+    keys = ["CEMINI_PROFILE", "TRAINING_SEAT_ARCHETYPES", *(
         f"CEMINI_{s}" for s in _THRESHOLD_KEYS.values()
     ), *(
         f"CEMINI_{m}_{s}"
