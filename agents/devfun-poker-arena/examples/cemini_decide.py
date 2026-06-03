@@ -27,9 +27,10 @@ from agent import (  # noqa: E402
     _hand_class,
     estimate_equity,
 )
-from position_utils import hero_is_in_position  # noqa: E402
+from position_utils import hero_is_in_position, hero_position_label  # noqa: E402
 from opponent_hud import build_opponent_hud, exploit_margins  # noqa: E402
 from pokerskill_adapter import retrieve_pokerskill_hints  # noqa: E402
+from session_memory import exploit_from_memory  # noqa: E402
 
 try:
     from train_config import threshold as _train_threshold  # noqa: E402
@@ -50,6 +51,20 @@ _WEAK_FACING_RAISE = frozenset({
 })
 
 _RANKS = "23456789TJQKA"
+_SURVIVAL_STACK_CHIPS = 1200  # below ~buy-in — preserve stack for qualification
+
+
+def _survival_mode(self_seat: dict) -> bool:
+    stack = int(self_seat.get("stackChips") or 99999)
+    return stack < _SURVIVAL_STACK_CHIPS
+
+
+def _merge_margins(base: dict, *extras: dict) -> dict:
+    out = dict(base)
+    for extra in extras:
+        for key, delta in extra.items():
+            out[key] = out.get(key, 0.0) + float(delta)
+    return out
 
 
 def retrieve_solver_context(table: dict) -> dict:
@@ -137,12 +152,20 @@ def decide(
     ps_bias = ps.get("bias")
     ps_library = ps.get("mode") == "library"
     ps_hand_eval = ps.get("hand_eval")
-    position = chart.get("position") or ""
+    position = chart.get("position") or ctx.get("position") or hero_position_label(table)
     hud = ctx.get("opponent_hud") or {}
     hud_mode = hud.get("mode") or "unknown"
     margins = hud.get("margins") or exploit_margins(hud_mode)
+    villain_mem = ctx.get("session_villain_memory") or {}
+    mem_margins = exploit_from_memory(villain_mem) if villain_mem else {}
+    margins = _merge_margins(margins, mem_margins)
+    survival = _survival_mode(self_seat) or bool(ctx.get("survival_mode"))
+    if survival:
+        margins = _merge_margins(margins, {"fold_slack_delta": 0.04, "call_margin_delta": 0.05})
+    if deadline_s < 4.0:
+        margins = _merge_margins(margins, {"fold_slack_delta": 0.03})
     cold_start = bool(hud.get("coldStart"))
-    hc = chart.get("hand_class") or ""
+    hc = chart.get("hand_class") or _hand_class(hole) or ""
 
     action_name: str
     amount: Optional[int] = None
@@ -158,6 +181,13 @@ def decide(
             and _overcommit_should_fold(table, hc, equity, call_chips)):
         return _build("fold", None, table, allowed, eq=equity, po=pot_odds,
                       msg=f"{binding}: stack cap — fold overcommit")
+
+    if (street != "Preflop" and call_chips > 0 and "fold" in available
+            and position == "SB" and not in_position
+            and _hero_underpair_on_paired_board(hc, board)
+            and call_chips >= max(int(pot * 0.32), 1)):
+        return _build("fold", None, table, allowed, eq=equity, po=pot_odds,
+                      msg=f"{binding}: SB underpair on paired board — fold")
 
     # Live leak: never pay with bottom offsuit trash postflop (64o-type lines).
     trash_eq = _train_threshold("trash_fold_eq", 0.30)
@@ -204,7 +234,10 @@ def decide(
     if action_name in ("fold", "check", "call"):
         amount = None
 
-    msg = _message(action_name, equity, pot_odds, binding, suggested, hud_mode=hud_mode)
+    msg = _message(
+        action_name, equity, pot_odds, binding, suggested, hud_mode=hud_mode,
+        survival=survival, deadline_s=deadline_s, villain_mem=villain_mem,
+        candor_fold=(action_name == "fold"))
     out = _build(action_name, amount, table, allowed, eq=equity, po=pot_odds, msg=msg)
     out["reasoning"] = _skill_reasoning(
         out.get("reasoning", ""), binding, suggested, chart, ps, hud_mode=hud_mode)
@@ -316,6 +349,12 @@ def _preflop_vs_bet(chart: dict, allowed: dict, available: list,
     hc = chart.get("hand_class") or ""
     position = chart.get("position") or ""
     suggested = chart.get("suggested_action") or "fold"
+
+    # SB: never complete/call/defend with chart trash (83o/37o −100 preflop leaks).
+    _sb_defend_premium = frozenset({"AA", "KK", "QQ", "JJ", "TT", "AKs", "AKo", "AQs"})
+    if (position == "SB" and _is_sb_complete_trash(hc) and hc not in _sb_defend_premium
+            and "fold" in available):
+        return "fold", None
 
     if ps_library and ps_bias == "fold" and "fold" in available:
         if _should_fold_weak_preflop(hc, equity, pot_odds) or equity < pot_odds + 0.04:
@@ -454,6 +493,8 @@ def _overcommit_should_fold(
         return True
     if ratio >= 0.22 and equity < 0.45:
         return True
+    if ratio >= 0.22 and _hero_underpair_on_paired_board(hand_class, list(table.get("boardCards") or [])):
+        return True
     if ratio >= 0.18 and (
         hand_class in _WEAK_FACING_RAISE or _is_low_trash_offsuit(hand_class)
     ) and equity < 0.40:
@@ -468,8 +509,25 @@ def _board_is_paired(board: list[str]) -> bool:
     return max(Counter(branks).values()) >= 2
 
 
+def _hero_underpair_on_paired_board(hand_class: str, board: list[str]) -> bool:
+    """Pocket pair below the top board rank on a paired runout (JJ on Kxx22)."""
+    if len(hand_class) != 2 or hand_class[0] != hand_class[1]:
+        return False
+    if not _board_is_paired(board) or len(board) < 3:
+        return False
+    branks = [c[0].upper() for c in board]
+    top = max(branks, key=lambda r: _RANKS.index(r))
+    return _RANKS.index(top) > _RANKS.index(hand_class[0])
+
+
+def _weak_top_pair_offsuit(hc: str) -> bool:
+    """Top-pair-weak-kicker hands that bleed OOP (KQ MP −100 leak)."""
+    return hc in {"KQo", "KJo", "QJo", "KTo", "QTo", "JTo", "AJo", "ATo"}
+
+
 def _weak_broadway_offsuit(hc: str) -> bool:
     return hc in {"AJo", "ATo", "A9o", "KJo", "KTo", "QJo", "QTo", "JTo"}
+
 
 
 def _hero_ace_high_on_paired_board(hole: list[str], board: list[str]) -> bool:
@@ -570,6 +628,19 @@ def _postflop_facing_bet(equity: float, pot_odds: float, allowed: dict,
             and "fold" in available):
         return "fold", None
 
+    # OOP weak top-pair offsuit vs pot-sized bets (KQo MP −100).
+    if (not in_position and _weak_top_pair_offsuit(hand_class)
+            and call_chips >= max(int(pot * 0.40), 1)
+            and "fold" in available):
+        return "fold", None
+
+    # SB OOP medium pair under top board card on paired runouts (JJ SB −101).
+    if (position == "SB" and not in_position
+            and _hero_underpair_on_paired_board(hand_class, board)
+            and call_chips >= max(int(pot * 0.32), 1)
+            and "fold" in available):
+        return "fold", None
+
     if ps_library and ps_bias == "fold" and "fold" in available:
         if (_should_fold_weak_preflop(hand_class, equity, pot_odds)
                 or equity < pot_odds + 0.04):
@@ -655,18 +726,33 @@ def _postflop_facing_bet(equity: float, pot_odds: float, allowed: dict,
 
 def _message(action: str, equity: float, pot_odds: float,
              binding: str, suggested: Optional[str],
-             hud_mode: str = "unknown") -> str:
+             hud_mode: str = "unknown",
+             survival: bool = False,
+             deadline_s: float = 10.0,
+             villain_mem: Optional[dict] = None,
+             candor_fold: bool = False) -> str:
     eq = int(round(equity * 100))
+    po = int(round(pot_odds * 100))
     hud = f" vs {hud_mode}" if hud_mode not in ("unknown", "") else ""
+    mem_note = ""
+    villains = (villain_mem or {}).get("villains") or {}
+    if deadline_s > 8 and villains:
+        labels = {v.get("label") for v in villains.values() if v.get("confidence") != "low"}
+        if labels:
+            mem_note = f" [session: {','.join(sorted(labels))}]"
     if action == "fold":
-        return f"{binding}{hud}: equity {eq}% short of price, folding"
+        if candor_fold and equity < pot_odds - 0.08:
+            base = f"{binding}{hud}: honest fold — {eq}% vs {po}% price{mem_note}"
+        else:
+            base = f"{binding}{hud}: equity {eq}% short of price, folding{mem_note}"
+        return base + (" (survival)" if survival else "")
     if action == "check":
-        return f"{binding}: free card, equity {eq}%"
+        return f"{binding}: free card, equity {eq}%{mem_note}"
     if action == "call":
-        return f"{binding}: calling — equity covers pot odds"
+        return f"{binding}: calling — equity covers pot odds{mem_note}"
     if suggested and action in ("bet", "raise"):
-        return f"chart says {suggested}; executing {action} for value"
-    return f"{binding}: {action} with {eq}% equity"
+        return f"chart says {suggested}; executing {action} for value{mem_note}"
+    return f"{binding}: {action} with {eq}% equity{mem_note}"
 
 
 def _skill_reasoning(base: str, binding: str, suggested: Optional[str],

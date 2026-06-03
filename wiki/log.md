@@ -2,6 +2,13 @@
 
 Append-only chronological log.
 
+## [2026-06-03] workflow | Poker HL analyst loop — analyze → patch → preflight → deploy
+
+- **Concept** — `concepts/poker-hl-analyst-loop.md` (validated)
+- **Code** — `examples/cemini_hl_loop.sh`, `examples/cemini_hl_brief.py`, `prompts/cemini_hl_analyst_prompt.md`
+- **Updated** — `cemini-devfun-poker-agent.md`, `gambling-bot-architecture.md`, `README-CEMINI.md`, `TESTING-CEMINI.md`
+- **Pattern** — OSINT brief shape + @osint-wiki knowledge-application loop; self-play as gate only
+
 ## [2026-06-03] ingest | K95 — opponent modeling + tournament brief
 
 - **Source** — `arxiv-2508.17671-consistent-opponent-modeling.md`

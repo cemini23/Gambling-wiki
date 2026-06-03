@@ -9,11 +9,12 @@ related:
   - entities/bots/poker-bot-tooling.md
   - concepts/poker-strategy-overview.md
   - concepts/gambling-bot-architecture.md
+  - concepts/poker-hl-analyst-loop.md
   - sources/devfun-poker-arena-phase0-2026-06-01.md
   - entities/games/poker.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-02
+updated: 2026-06-03
 adoption_status: ACTIVE-DEV
 claim_status: VERIFIED 2026-06-01 — @cemini23
 ---
@@ -22,6 +23,8 @@ claim_status: VERIFIED 2026-06-01 — @cemini23
 
 - @entities/platforms/devfun-poker-arena.md — venue + Phase-0
 - @entities/tools/pokerskill.md — skill-binding pattern (full PokerSkill repo not wired yet)
+- @concepts/poker-hl-analyst-loop.md — **HL analyst loop** (analyze → patch → preflight → deploy)
+- `briefs/2026-06-03_playground-top20-qualification.md` — top-20 cutoff + survival strategy
 - Code: `agents/devfun-poker-arena/examples/cemini_decide.py`
 
 ## Raw Concept
@@ -30,11 +33,11 @@ claim_status: VERIFIED 2026-06-01 — @cemini23
 |-------|-------|
 | **Name** | Cemini Wiki Poker |
 | **Handle** | `cemini_wiki_poker` |
-| **Agent ID** | `cmpvvczea0iyndve98srkcwwq` [CONFIRMED 2026-06-01] |
-| **Arena agent #** | **2865** (claim card S1) [CONFIRMED 2026-06-01] |
-| **Owner** | **@cemini23** — X verified [CONFIRMED 2026-06-01] |
+| **Agent ID** | `cmpy4lcyi001y11vnekn1zlo3` [CONFIRMED 2026-06-03] — was `cmpvvczea…` (retired) |
+| **Playground S1 rank** | **#219 @ 540 chips** (Jun 3); **bestRank #4** same day [CONFIRMED] |
+| **Qualification** | Top **20** agents per playground window (Jun 3–7, Jun 7–11) → tournament KO |
+| **Owner** | **@cemini23** — X verified [CONFIRMED] |
 | **Quote** | "structured skills over swagger" |
-| **Playground S1** | Joined + **rank #10** on first leaderboard snapshot [TENTATIVE] |
 | **Tournament S28** | Prod lobby `cmpr1vesh2it1x69xmtpiaecp` from 2026-06-02 [CONFIRMED] — **entry fee 0.01 MON** (402 until paid on dev.fun) |
 | **Prod service** | `cemini-devfun-poker-lobby.service` on **cemini-prod** → `/opt/devfun-poker-arena` [CONFIRMED 2026-06-02] |
 | **Base kit** | arena-pokerkit + `cemini_decide.py` |
@@ -71,8 +74,30 @@ arena API (pending-actions → action)
 
 See `agents/devfun-poker-arena/README-CEMINI.md`.
 
+**Chip bleed — run HL loop first:**
+
+```bash
+./examples/cemini_hl_loop.sh --from-prod    # analyze + brief → patch in Cursor
+./examples/cemini_hl_loop.sh --preflight-only
+./examples/cemini_hl_loop.sh --deploy        # does NOT overwrite prod creds by default
+./scripts/cemini_playground_status.sh      # rank vs top-20 floor
+```
+
+**Qualification:** top **20** agents (not 25%) per playground stage → tournament. Monitor cutoff with `cemini_playground_status.sh`. **Do not bust** — Playground S1 rebuy API disabled; buy-in = 1000 chips.
+
+### Wallet (MON) — beta vs official [CONFIRMED 2026-06-03]
+
+| Environment | Agent ID | Wallet | MON (Jun 3) |
+|-------------|----------|--------|-------------|
+| **Official** | `cmpy4lcyi001y11vnekn1zlo3` | `0x7d2a755dfa58e70eFde21d5e88b23632AfeF0bEF` | 0 |
+| Beta (retired) | `cmpvvczea0iyndve98srkcwwq` | `0x3fB1933ee94635e2cb8aFfbC0B62ac683b80c40D` | ~648 |
+
+MON on beta **does not** appear on official. API blocks agent-to-agent transfer (`403`). Fund official via MoonPay / external send; `./scripts/cemini_wallet_check.sh`. See `LESSONS.md` L4.
+
 | Script | Use |
 |--------|-----|
+| `scripts/cemini_wallet_check.sh` | Beta vs official MON balances + MoonPay link |
+| `examples/cemini_hl_loop.sh` | **HL analyst loop** — analyze → brief → preflight → deploy |
 | `examples/run_cemini.py` | Poker **Eval benchmark** (`benchmark/start`) |
 | `examples/run_cemini_lobby.py` | **Playground / Tournament** lobby (`texas/join`) |
 

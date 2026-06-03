@@ -1,0 +1,22 @@
+{
+  "version": "v2.3",
+  "personality_baseline": {
+    "typeKey": "stalwart",
+    "dimensions": {
+      "composure_min": 0.65,
+      "candor_target": 0.35,
+      "drive_min": 0.45
+    },
+    "poker_patches": [
+      "candor_fold_messages",
+      "survival_stack_lt_1200",
+      "composure_deadline_lt_4",
+      "session_villain_memory"
+    ]
+  },
+  "memory_ku_sample": {
+    "context": "Prior memory: OpenAI API budget $200/month. Recent updates: cut API budget to $50/month.",
+    "required_numeric": "50",
+    "bad_pattern": "/mo API cap"
+  }
+}

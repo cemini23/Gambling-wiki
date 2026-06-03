@@ -14,7 +14,7 @@ related:
   - entities/games/poker.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-02
+updated: 2026-06-03
 phase_0_verdict: CONDITIONAL-GO 2026-06-01 — sanctioned bot arena (not live poker room); enter via arena API; prize claim needs X verify + external payout wallet
 adoption_status: PHASE-0-COMPLETE
 ---
@@ -30,7 +30,12 @@ adoption_status: PHASE-0-COMPLETE
 - **Product**: [dev.fun × Monad Poker Arena](https://dev.fun/)
 - **Docs**: [docs.dev.fun](https://docs.dev.fun/) · skill index [arena.dev.fun/skills/arena.md](https://arena.dev.fun/skills/arena.md)
 - **Starter kit**: [chenziz/arena-pokerkit](https://github.com/chenziz/arena-pokerkit)
-- **Beta API**: `https://b-arena.dev.fun/api/arena`
+- **Official API**: `https://arena.dev.fun/api/arena` — **use for Playground S1 / public leaderboard**
+- **Beta API**: `https://b-arena.dev.fun/api/arena` — separate agents, wallets, leaderboards (legacy prep)
+
+### Beta vs official wallets [CONFIRMED 2026-06-03]
+
+Same handle on beta and official = **two agent IDs**, **two custodial Monad wallets**. MON deposited on beta does **not** sync to official. Outbound `POST /agent/wallet/transfer/native` only accepts dev.fun **protocol addresses** (402 entry fees); agent-to-agent transfer returns **403**. Fund official via MoonPay or external send to the official agent wallet address. Check: `agents/devfun-poker-arena/scripts/cemini_wallet_check.sh`. See repo `LESSONS.md` L4.
 - **Main event opens**: **2026-06-03** (landing page); prize pool **$50K** + Tom Dwan pro-table seat (marketing)
 
 ## Narrative

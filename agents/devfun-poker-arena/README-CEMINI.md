@@ -25,6 +25,26 @@ The starter kit's default tests exercise **`agent.py`**, not `cemini_decide.py`,
 ./scripts/cemini_preflight.sh --full   # longer self-play sample
 ```
 
+## HL analyst loop (fix live leaks — use this when bleeding chips)
+
+**Not RL.** Self-play is a **gate** (EP VPIP, regression spots), not the trainer.
+
+```bash
+chmod +x examples/cemini_hl_loop.sh    # once
+
+# 1. Analyze + build OSINT-shaped brief (stop; patch in Cursor)
+./examples/cemini_hl_loop.sh --from-prod          # prod Playground hands
+# or: ./examples/cemini_hl_loop.sh                # local .arena-credentials
+
+# 2. Open reports/hl-loop/latest_brief.md — patch ONE leak in cemini_decide.py
+
+# 3. Gate + deploy
+./examples/cemini_hl_loop.sh --preflight-only
+./examples/cemini_hl_loop.sh --deploy             # rsync + systemctl restart
+```
+
+Wiki: `@wiki/concepts/poker-hl-analyst-loop.md` · Prompt: `prompts/cemini_hl_analyst_prompt.md`
+
 See **`docs/TESTING-CEMINI.md`** for the full postmortem and end-of-session workflow (analyze → regression spot → preflight → deploy).
 
 ## Private training (starter kit — recommended before tournament)
@@ -207,3 +227,37 @@ Swap `ARENA_LOBBY_COMPETITION_ID` in remote `.env` when a new Playground or tour
 After switching to official, re-claim X at `/auth/claim/status` → `claimUrl` (new token per environment).
 
 Watch [arena.dev.fun](https://arena.dev.fun/) + Discord for new season IDs.
+
+## Agent wallet (MON) — beta vs official
+
+Beta and official are **separate registrations** → **separate custodial wallets**. MON on beta does **not** transfer to official.
+
+```bash
+./scripts/cemini_wallet_check.sh   # balances + MoonPay link for official wallet
+```
+
+| Wallet | Agent | Address (Jun 3) | MON |
+|--------|-------|-----------------|-----|
+| **Official** (use this) | `cmpy4lcyi001y11vnekn1zlo3` | `0x7d2a755dfa58e70eFde21d5e88b23632AfeF0bEF` | 0 |
+| Beta (archive only) | `cmpvvczea0iyndve98srkcwwq` | `0x3fB1933ee94635e2cb8aFfbC0B62ac683b80c40D` | ~648 |
+
+**Cannot** move beta → official via API (`403` — outbound transfers only go to dev.fun protocol addresses for 402 entry fees). To fund official: MoonPay or send MON to the official address above. For large beta balances, contact dev.fun support. See `LESSONS.md` L4.
+
+Playground S1 uses **chips** (409 if stack &lt; buy-in), not MON entry. MON on official is for paid competitions (e.g. Tournament entry 0.01 MON) and transfer gas.
+
+## dev.fun Agent Scans (personality / roast / memory)
+
+Optional eval tools from dev.fun — results inform agent chat tone + session memory wiring.
+
+```bash
+# Results saved after manual/API submit:
+cat reports/scan_results_submit.json
+```
+
+| Scan | Result (2026-06-03) | URL |
+|------|---------------------|-----|
+| Personality | 🧱 **Stalwart** — Composure 70%, Candor 35%, Drive 50% | https://arena.dev.fun/scan/agent-personality/d2fd12e9747d |
+| Roast (you) | 🎰 **Degenerate** | https://arena.dev.fun/scan/agent-roast/d2fd12e9747d |
+| Memory v2.3 | **90/100** (KU miss: numeric budget in summary) | https://arena.dev.fun/scan/agent-memory/d2fd12e9747d |
+
+**Poker patches from scans:** candor fold messages, survival stack mode (&lt;1200 chips), session villain memory in lobby, composure tightens margins when `deadline_s &lt; 4`.

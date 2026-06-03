@@ -285,6 +285,54 @@ def ep_oop_postflop_weak(
     )
 
 
+def sb_facing_open(hero_hole: list[str], *, raise_to: int = 60) -> dict:
+    """SB facing BTN open — 83o complete/call leak."""
+    return six_max_table(
+        name="sb_facing_open",
+        hero_seat=2,
+        button_seat=1,
+        street="Preflop",
+        board=[],
+        pot=30 + raise_to,
+        hero_hole=hero_hole,
+        hero_stack=990,
+        hero_bet=10,
+        villain_bets={1: raise_to},
+        stacks={2: 990},
+        allowed=_allowed(
+            can_call=True,
+            can_raise=True,
+            call_chips=raise_to - 10,
+            call_to=raise_to,
+            raise_range={"min": raise_to * 2, "max": 990},
+        ),
+    )
+
+
+def sb_jj_paired_river(*, river_bet: int = 120, pot: int = 280) -> dict:
+    """JJ SB OOP on paired runout — analyze #01 leak."""
+    return six_max_table(
+        name="sb_jj_paired_river",
+        hero_seat=2,
+        button_seat=1,
+        street="River",
+        board=["Ks", "6d", "2c", "Ts", "2s"],
+        pot=pot,
+        hero_hole=["Js", "Jc"],
+        hero_stack=400,
+        hero_bet=0,
+        villain_bets={1: river_bet},
+        stacks={2: 400},
+        allowed=_allowed(
+            can_call=True,
+            can_raise=True,
+            call_chips=river_bet,
+            call_to=river_bet,
+            raise_range={"min": river_bet * 2, "max": 400},
+        ),
+    )
+
+
 def overcommit_spot(hero_hole: list[str], *, call_chips: int = 200) -> dict:
     """Short stack, large call vs weak hand (board misses hero)."""
     return six_max_table(

@@ -40,7 +40,13 @@ rsync -avz --delete \
   "${AGENT_DIR}/" "${HOST}:${REMOTE_DIR}/"
 
 echo "==> Copy credentials + env"
-scp -q "${CREDS}" "${HOST}:${REMOTE_DIR}/.arena-credentials"
+if [[ "${CEMINI_FORCE_CREDS:-0}" == "1" ]]; then
+  scp -q "${CREDS}" "${HOST}:${REMOTE_DIR}/.arena-credentials"
+  echo "    (CEMINI_FORCE_CREDS=1 — overwrote remote .arena-credentials)"
+else
+  echo "    SKIP creds copy (default) — keeps prod claimed-agent key."
+  echo "    To overwrite: CEMINI_FORCE_CREDS=1 $0"
+fi
 if [[ -f "${AGENT_DIR}/.env" ]]; then
   scp -q "${AGENT_DIR}/.env" "${HOST}:${REMOTE_DIR}/.env"
 else

@@ -5,6 +5,7 @@ tags: [concept, poker, opponent-modeling, game-theory, bots, devfun]
 keywords: [opponent modeling, BBR, consistency, sequence-form, Bayesian exploitation, HUD, repeated games]
 related:
   - concepts/poker-strategy-overview.md
+  - concepts/poker-hl-analyst-loop.md
   - concepts/gambling-bot-architecture.md
   - entities/bots/poker-bot-tooling.md
   - entities/bots/cemini-devfun-poker-agent.md

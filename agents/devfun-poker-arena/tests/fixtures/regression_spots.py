@@ -13,6 +13,8 @@ from tests.helpers.cemini_tables import (
     mp_unopened,
     mp_facing_raise,
     overcommit_spot,
+    sb_facing_open,
+    sb_jj_paired_river,
     utg_facing_raise,
     utg_unopened,
 )
@@ -81,5 +83,33 @@ def regression_spots() -> list[RegressionSpot]:
             table=mp_unopened(["Ah", "Ad"]),
             forbidden=frozenset({"fold", "check"}),
             notes="AA MP must raise or call, never pass.",
+        ),
+        RegressionSpot(
+            id="prod_83o_sb_vs_open",
+            source="Playground 2026-06-03 analyze #02 — 83o SB −100 preflop",
+            table=sb_facing_open(["8s", "3h"]),
+            forbidden=frozenset({"call", "raise", "all-in"}),
+            required=frozenset({"fold"}),
+            notes="SB trash vs open — fold, never complete/call.",
+        ),
+        RegressionSpot(
+            id="prod_jj_sb_paired_river",
+            source="Playground 2026-06-03 analyze #01 — JJ SB −101 on K662T2",
+            table=sb_jj_paired_river(),
+            forbidden=frozenset({"call", "raise", "all-in"}),
+            notes="SB underpair on paired runout vs river bet — fold.",
+        ),
+        RegressionSpot(
+            id="prod_kqo_mp_oop_turn",
+            source="Playground analyze #07 — KQo MP −100 OOP",
+            table=ep_oop_postflop_weak(
+                ["Kc", "Qh"],
+                ["9c", "Ks", "6d", "8s"],
+                hero_seat=5,
+                villain_bet=160,
+                pot=320,
+            ),
+            forbidden=frozenset({"call", "raise", "all-in"}),
+            notes="Weak top pair OOP vs big turn bet — fold.",
         ),
     ]

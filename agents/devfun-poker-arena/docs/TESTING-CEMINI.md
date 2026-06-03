@@ -32,8 +32,10 @@
 ### Layer 1 — Unit guards (fast, ~1s)
 
 ```bash
-uv run python -m pytest tests/test_cemini_preflop_guards.py tests/test_cold_start_hud.py -q
+uv run python -m pytest tests/test_cemini_preflop_guards.py tests/test_cold_start_hud.py tests/test_session_memory.py tests/test_devfun_scan_behaviors.py -q
 ```
+
+**dev.fun scan behaviors** (`tests/test_devfun_scan_behaviors.py`) — offline locks for personality/memory-inspired patches: candor fold chat, survival stack, composure deadline, session memory abstention. Baseline fixture: `tests/fixtures/devfun_scan_baselines.json`.
 
 ### Layer 2 — Regression spots (~1s)
 
@@ -74,6 +76,17 @@ chmod +x scripts/cemini_preflight.sh   # once
 
 ## End-of-session workflow (next Playground round)
 
+**Preferred:** HL analyst loop (one command to start):
+
+```bash
+./examples/cemini_hl_loop.sh --from-prod
+# → patch cemini_decide.py from reports/hl-loop/latest_brief.md
+./examples/cemini_hl_loop.sh --preflight-only
+./examples/cemini_hl_loop.sh --deploy
+```
+
+Manual steps (same pipeline):
+
 1. **Analyze** — `arena_monitor.py analyze --match <new-id> --top 15`
 2. **Freeze leaks** — add regression spots for top 3–5 worst hands
 3. **Fix decide / chart / HUD**
@@ -100,4 +113,10 @@ Treat local tests as **necessary, not sufficient**. Eval benchmark is the confir
 | `tests/test_cemini_scenarios.py` | cemini × 20 starter scenarios |
 | `examples/cemini_selfplay_audit.py` | VPIP / bb100 gate |
 | `scripts/cemini_preflight.sh` | One-shot pre-deploy |
+| `scripts/cemini_wallet_check.sh` | Beta vs official MON balances (ops) |
+| `tests/test_devfun_scan_behaviors.py` | Scan-inspired decide() behavior locks |
+| `tests/fixtures/devfun_scan_baselines.json` | Frozen scan baseline metadata |
+| `examples/cemini_hl_loop.sh` | HL analyst loop (analyze → brief → preflight → deploy) |
+| `examples/cemini_hl_brief.py` | Build OSINT-shaped brief from analyze report |
+| `prompts/cemini_hl_analyst_prompt.md` | Cursor patch prompt (cemini_decide only) |
 | `examples/export_regression_spots.py` | Analyze → spot stubs |

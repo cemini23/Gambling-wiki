@@ -304,6 +304,12 @@ def load_or_register(client: ArenaClient, handle: str, name: str, quote: str) ->
                     return creds
             except ArenaError as e:
                 if e.status in (401, 403):
+                    if os.environ.get("ARENA_NO_AUTO_REGISTER", "").lower() in ("1", "true", "yes"):
+                        raise ArenaError(
+                            e.status,
+                            {"error": "Cached API key invalid and ARENA_NO_AUTO_REGISTER set — "
+                             "restore .arena-credentials manually; do not spawn duplicate agents."},
+                        ) from e
                     print(f"[arena-pokerkit] cached key rejected ({e.status}); re-registering",
                           file=sys.stderr)
                     client.api_key = None

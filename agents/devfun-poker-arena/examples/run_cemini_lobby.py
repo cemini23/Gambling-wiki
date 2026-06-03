@@ -22,6 +22,11 @@ if str(_EXAMPLES) not in sys.path:
 
 import cemini_decide  # noqa: E402
 from agent import _normalize_action_name, _safe_research_context  # noqa: E402
+from session_memory import (  # noqa: E402
+    exploit_from_memory,
+    update_session_memory,
+    villain_memory_for_table,
+)
 from arena_client import (  # noqa: E402
     ArenaClient,
     ArenaError,
@@ -328,6 +333,16 @@ def run_lobby(args: argparse.Namespace) -> int:
                     max(0.0, (deadline_ms / 1000.0) - time.time()) if deadline_ms else 10.0
                 )
                 ctx = _safe_research_context(table, retrieve_fn)
+                villain_mem = villain_memory_for_table(state, table)
+                if villain_mem:
+                    ctx["session_villain_memory"] = villain_mem
+                    mem_margins = exploit_from_memory(villain_mem)
+                    if mem_margins:
+                        hud = ctx.setdefault("opponent_hud", {})
+                        base = hud.get("margins") or {}
+                        hud["margins"] = {**base, **{
+                            k: base.get(k, 0.0) + v for k, v in mem_margins.items()
+                        }}
                 try:
                     action = decide_fn(table, deadline_s=deadline_s, research_context=ctx)
                 except TypeError:
@@ -338,6 +353,7 @@ def run_lobby(args: argparse.Namespace) -> int:
                     client.post("/texas/action", payload)
                     hands_acted += 1
                     state["hands_played"] = state.get("hands_played", 0) + 1
+                    update_session_memory(state, table)
                     save_state(state)
                     print(f"[cemini-lobby] action={action.get('action')} hands_acted={hands_acted}")
                 except ArenaError as e:
