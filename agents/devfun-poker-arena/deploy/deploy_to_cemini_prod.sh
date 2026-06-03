@@ -80,21 +80,31 @@ install -m 644 "${REMOTE_DIR}/deploy/cemini-devfun-poker-monitor.service" \
   /etc/systemd/system/cemini-devfun-poker-monitor.service
 install -m 644 "${REMOTE_DIR}/deploy/cemini-devfun-poker-monitor.timer" \
   /etc/systemd/system/cemini-devfun-poker-monitor.timer
+install -m 644 "${REMOTE_DIR}/deploy/cemini-devfun-poker-export.service" \
+  /etc/systemd/system/cemini-devfun-poker-export.service
+install -m 644 "${REMOTE_DIR}/deploy/cemini-devfun-poker-export.timer" \
+  /etc/systemd/system/cemini-devfun-poker-export.timer
 
 mkdir -p "${REMOTE_DIR}/reports/analyze"
+mkdir -p "${REMOTE_DIR}/reports/exports/playground-s1-live"
 
 systemctl daemon-reload
 systemctl enable cemini-devfun-poker-lobby.service
 systemctl enable cemini-devfun-poker-monitor.timer
+systemctl enable cemini-devfun-poker-export.timer
 systemctl restart cemini-devfun-poker-lobby.service
 systemctl start cemini-devfun-poker-monitor.service
+systemctl start cemini-devfun-poker-export.service
 sleep 2
 systemctl --no-pager status cemini-devfun-poker-lobby.service || true
 systemctl --no-pager status cemini-devfun-poker-monitor.timer || true
+systemctl --no-pager status cemini-devfun-poker-export.timer || true
 REMOTE
 
 echo ""
 echo "Done. Tail logs:"
 echo "  ssh ${HOST} journalctl -u ${SERVICE} -f"
 echo "  ssh ${HOST} journalctl -u cemini-devfun-poker-monitor.service -f"
+echo "  ssh ${HOST} journalctl -u cemini-devfun-poker-export.service -f"
 echo "  ssh ${HOST} ls -lt ${REMOTE_DIR}/reports/analyze/ | head"
+echo "  ssh ${HOST} wc -l ${REMOTE_DIR}/reports/exports/playground-s1-live/*.jsonl"

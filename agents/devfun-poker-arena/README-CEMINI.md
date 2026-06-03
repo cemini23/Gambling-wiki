@@ -271,14 +271,48 @@ cat reports/scan_results_submit.json
 
 Lobby refreshes every 10 min. Override: `CEMINI_QUAL_BUFFER_CHIPS`, `CEMINI_LEAD_BUFFER_CHIPS`, `CEMINI_LEAD_RANK`.
 
+**Play pacing (auto when protect is ON):** join retry slows so you take fewer new tables while safely ahead — normal **60s**, qualification **5 min** (`CEMINI_QUAL_JOIN_RETRY_S`), lead **15 min** (`CEMINI_LEAD_JOIN_RETRY_S`). Still act immediately when seated; throttle only affects *new* table intake. Falls back to 60s the moment protect turns OFF.
+
 ```bash
 ./scripts/cemini_playground_status.sh
 # prod: [cemini-lobby] LEAD protect ON rank=3 chips=9114 buffer=+7104
+# prod: [cemini-lobby] pace throttle (lead): join retry 900s — fewer tables, preserve buffer
 ```
 
 **At ~9000 chips / rank ~3 (Jun 2026):** lead protect ON — preserve stack, do not chase #1.
 
 **Blind decay (10/20, 6-max):** ~**5 chips/hand** if you never enter pots (~30 chips/orbit). A +7000 buffer ≈ **1400 passive hands** before erosion — but the #20 floor also rises, so keep **chart steals live** (BTN/CO min-steals still fire under lead protect) and stay seated; pure nit-ting bleeds ~500 chips per 100 hands.
+
+## Competition hand export (training + opponent research)
+
+Download field hand data via API (no browser scrape):
+
+```bash
+# Fast: recent ~200 tables (all 6 seats' hole cards) + top-30 rival submissions + agent stats
+uv run python examples/export_competition_hands.py
+pokerkit export --match cmpy2qy65002ud9ej6b7jjq0l
+
+# Full archive: every agent's submission history (~373 agents, slow — run overnight)
+pokerkit export --mode full --out-dir reports/exports/playground-s1-full
+
+# Prod: hourly systemd timer (deploy installs cemini-devfun-poker-export.timer)
+pokerkit export --append --out-dir reports/exports/playground-s1-live
+
+# Manual prod one-shot
+ssh cemini-prod systemctl start cemini-devfun-poker-export.service
+ssh cemini-prod wc -l /opt/devfun-poker-arena/reports/exports/playground-s1-live/*.jsonl
+```
+
+Output under `reports/exports/<compId>/<timestamp>/`:
+
+| File | Use |
+|------|-----|
+| `tables.jsonl` | Multi-way showdown records — villain hole cards + board + winners |
+| `submissions.jsonl` | Per-agent hero perspective (full history when `--mode full`) |
+| `agents.jsonl` | Leaderboard + VPIP/PFR from `/texas/agent-stats` |
+| `summary.json` | Quick showdown win-rate / payout aggregates |
+
+**Limits:** no street-by-street action log in API; `recent-tables` is a rolling window (~200 tables). For complete history use `--mode full` or cron `--append`. Feed JSONL into self-play calibration, HL analyst, or wiki opponent notes.
 
 ## Next Playground — multi-agent probe (claim late)
 

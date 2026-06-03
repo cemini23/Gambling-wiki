@@ -1,0 +1,18 @@
+[Unit]
+Description=Cemini dev.fun Poker Arena competition hand export (append JSONL)
+Documentation=https://docs.dev.fun/
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+Group=root
+WorkingDirectory=/opt/devfun-poker-arena
+Environment=PYTHONUNBUFFERED=1
+Environment=CEMINI_EXPORT_DIR=/opt/devfun-poker-arena/reports/exports/playground-s1-live
+EnvironmentFile=-/opt/devfun-poker-arena/.env
+ExecStart=/opt/devfun-poker-arena/venv/bin/python examples/export_competition_hands.py --append --top-agents 50 --stats-top 50 --out-dir /opt/devfun-poker-arena/reports/exports/playground-s1-live
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

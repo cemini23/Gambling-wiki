@@ -29,6 +29,7 @@ from session_memory import (  # noqa: E402
 )
 from qualification_guard import fetch_qualification_status  # noqa: E402
 from blind_pressure import avg_blind_tax_per_hand, hands_to_erosion  # noqa: E402
+from pace_control import join_retry_seconds  # noqa: E402
 from arena_client import (  # noqa: E402
     ArenaClient,
     ArenaError,
@@ -40,8 +41,6 @@ from arena_client import (  # noqa: E402
 
 POLL_INTERVAL = 2.0
 POLL_JITTER = 0.5
-JOIN_RETRY_S = 60.0
-IN_QUEUE_RETRY_S = 180.0
 LOBBY_LOG_INTERVAL_S = 120.0
 QUAL_STATUS_INTERVAL_S = 600.0
 PAYMENT_CONFIRM_WAIT_S = 5.0
@@ -208,15 +207,29 @@ def run_lobby(args: argparse.Namespace) -> int:
     qual_protect = False
     lead_protect = False
     in_queue_only = False
+    last_pace_log_at = 0.0
 
     try:
         creds = load_or_register(client, args.handle, args.name, args.quote)
         print(f"[cemini-lobby] agent={creds.get('agentId')} competition={competition_id}")
 
         def ensure_joined(force: bool = False) -> None:
-            nonlocal last_join_at, last_lobby_log_at, in_queue_only
+            nonlocal last_join_at, last_lobby_log_at, in_queue_only, last_pace_log_at
             now = time.time()
-            retry_s = IN_QUEUE_RETRY_S if in_queue_only else JOIN_RETRY_S
+            retry_s = join_retry_seconds(
+                lead_protect=lead_protect,
+                qual_protect=qual_protect,
+                in_queue_only=in_queue_only,
+            )
+            if (lead_protect or qual_protect) and (
+                now - last_pace_log_at
+            ) >= LOBBY_LOG_INTERVAL_S:
+                tier = "lead" if lead_protect else "qualification"
+                print(
+                    f"[cemini-lobby] pace throttle ({tier}): "
+                    f"join retry {retry_s:.0f}s — fewer tables, preserve buffer"
+                )
+                last_pace_log_at = now
             if not force and (now - last_join_at) < retry_s:
                 if in_queue_only and (now - last_lobby_log_at) >= LOBBY_LOG_INTERVAL_S:
                     _log_lobby_queue(client, competition_id)

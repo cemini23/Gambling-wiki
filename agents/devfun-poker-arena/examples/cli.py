@@ -48,6 +48,7 @@ commands:
   selfplay    LOCAL headless self-play vs simple bots — fast decide() loop
   replay      render a self-contained HTML viewer for past matches
   analyze     failure analysis report for the Heuristic Learning loop
+  export      download competition hand data (JSONL for training / opponent research)
   test        run the pytest smoke suite
   version     print version + git commit
 
@@ -61,6 +62,8 @@ examples:
   pokerkit replay --latest                 # writes replay.html
   pokerkit analyze                         # failure report → paste into Claude Code
   pokerkit analyze --out report.txt        # save to file
+  pokerkit export --match <compId>         # JSONL hand dump for training
+  pokerkit export --mode full              # all agent submissions (slow)
 """)
 
 
@@ -93,6 +96,10 @@ def main(argv: Optional[list[str]] = None) -> int:
     if cmd == "analyze":
         import analyze as analyze_mod  # noqa: WPS433
         return analyze_mod.main(rest)
+
+    if cmd == "export":
+        import export_competition_hands as export_mod  # noqa: WPS433
+        return export_mod.main(rest)
 
     if cmd == "test":
         repo_root = Path(__file__).resolve().parent.parent
