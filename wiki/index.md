@@ -21,6 +21,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [dfs-strategy-overview](concepts/dfs-strategy-overview.md) | draft | GPP, cash, stacking |
 | [best-ball-strategy](concepts/best-ball-strategy.md) | validated | GPP, cash, stacking, BBM7 |
 | [poker-strategy-overview](concepts/poker-strategy-overview.md) | validated | Cash, MTT, ICM, zero-to-10k path |
+| [opponent-modeling-imperfect-info](concepts/opponent-modeling-imperfect-info.md) | draft | K95 BBR/consistency — dev.fun arena exploit lane |
 | [casino-game-house-edge](concepts/casino-game-house-edge.md) | validated | Edge by game, smart-bet ranking |
 | [prediction-markets-crossover](concepts/prediction-markets-crossover.md) | validated | Kalshi/Polymarket retail lens |
 | [world-cup-2026-format](concepts/world-cup-2026-format.md) | validated | 48-team structure, calendar |
@@ -98,6 +99,7 @@ Catalog of all wiki pages. Updated on each ingest.
 
 | Page | Read status |
 |------|-------------|
+| [arxiv-2508-17671-consistent-opponent-modeling](sources/arxiv-2508-17671-consistent-opponent-modeling.md) | read |
 | [kelly-1956-information-rate](sources/kelly-1956-information-rate.md) | deep-read |
 | [gemini-github-sports-betting-landscape-2026-05-30](sources/gemini-github-sports-betting-landscape-2026-05-30.md) | deep-read |
 | [youtube-sports-pm-retail-batch-2026-05-29](sources/youtube-sports-pm-retail-batch-2026-05-29.md) | deep-read |

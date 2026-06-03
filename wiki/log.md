@@ -2,6 +2,13 @@
 
 Append-only chronological log.
 
+## [2026-06-03] ingest | K95 — opponent modeling + tournament brief
+
+- **Source** — `arxiv-2508.17671-consistent-opponent-modeling.md`
+- **Concept** — `opponent-modeling-imperfect-info.md`
+- **Brief** — `agents/devfun-poker-arena/briefs/2026-06-03_k95-opponent-modeling-tournament-notes.md` (S28 tournament day)
+- **PDF** → librarian; inbox cleared
+
 ## [2026-06-02] ingest | AM digest batch (2 arXiv + news R1–R12 deltas)
 
 - **Sweep** — `wiki/sweeps/2026-06-02-daily.md` (manual digest run; LaunchAgent exit 2 on scheduled AM)
