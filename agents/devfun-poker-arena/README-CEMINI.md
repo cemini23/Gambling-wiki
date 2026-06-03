@@ -16,6 +16,17 @@ cp .env.example .env
 uv run examples/agent.py --agent examples/cemini_decide.py --dry-run --max-hands 20
 ```
 
+## Pre-deploy test gate (run before prod rsync)
+
+The starter kit's default tests exercise **`agent.py`**, not `cemini_decide.py`, and use HU tables — they will **not** catch 6-max EP/HUD leaks. Use:
+
+```bash
+./scripts/cemini_preflight.sh          # pytest + KPI audit + dry-run (~45s)
+./scripts/cemini_preflight.sh --full   # longer self-play sample
+```
+
+See **`docs/TESTING-CEMINI.md`** for the full postmortem and end-of-session workflow (analyze → regression spot → preflight → deploy).
+
 ## Private training (starter kit — recommended before tournament)
 
 Train on the **arena-pokerkit** local loop. Zero network, nothing on the public leaderboard, full HUD exploit path via `private/opponent_hud_exploit.py`.
