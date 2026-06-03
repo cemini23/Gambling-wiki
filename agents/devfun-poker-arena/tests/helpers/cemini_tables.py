@@ -405,6 +405,35 @@ def btn_qto_flush_river(*, villain_bet: int = 130, pot: int = 300) -> dict:
     )
 
 
+def mp_t6o_paired_river(*, villain_bet: int = 180, pot: int = 520) -> dict:
+    """T6o MP OOP on paired runout — analyze round 3 #01 (−290)."""
+    return six_max_table(
+        name="mp_t6o_paired_river",
+        hero_seat=5,
+        button_seat=1,
+        street="River",
+        board=["5h", "Th", "4s", "7h", "4d"],
+        pot=pot,
+        hero_hole=["Td", "6s"],
+        hero_stack=400,
+        hero_bet=0,
+        villain_bets={3: villain_bet},
+        stacks={5: 400},
+        allowed=_allowed(
+            can_call=True,
+            can_raise=True,
+            call_chips=villain_bet,
+            call_to=villain_bet,
+            raise_range={"min": villain_bet * 2, "max": 400},
+        ),
+    )
+
+
+def sb_43s_facing_open(*, raise_to: int = 60) -> dict:
+    """43s SB vs open — analyze round 3 #08."""
+    return sb_facing_open(["4s", "3s"], raise_to=raise_to)
+
+
 def bb_a6o_paired_river(*, villain_bet: int = 100, pot: int = 280) -> dict:
     """A6o BB OOP weak ace on paired board — analyze #07."""
     return six_max_table(

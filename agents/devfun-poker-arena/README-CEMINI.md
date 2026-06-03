@@ -262,6 +262,17 @@ cat reports/scan_results_submit.json
 
 **Poker patches from scans:** candor fold messages, survival stack mode (&lt;1200 chips), session villain memory in lobby, composure tightens margins when `deadline_s &lt; 4`.
 
+## Qualification protection (top-20 ticket)
+
+When rank **≤ 20** and chips are **≥ #20 floor + 1000**, the lobby passes `qualification_protect` + `survival_mode` into `decide()` every 10 minutes (tighter folds, extra preflop discipline). Override buffer: `CEMINI_QUAL_BUFFER_CHIPS=1000`.
+
+```bash
+./scripts/cemini_playground_status.sh   # rank vs cutoff
+# prod log: [cemini-lobby] qualification protect ON rank=10 chips=4538 buffer=+2528
+```
+
+**Playbook at ~4500 chips / rank ~10 (Jun 2026):** keep lobby running at normal volume; do not chase #1; treat bankroll &lt; 2000 as yellow, &lt; 1000 as season-ending; HL patch only on new analyze leaks.
+
 ## Next Playground — multi-agent probe (claim late)
 
 Competitors often register **5–10 agents unclaimed**, tune strategy privately, then **claim X on the best chip rank** once confident. We claimed `cemini_wiki_poker` on day one and locked one public trajectory (bestRank #4 → ~#215).

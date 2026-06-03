@@ -69,6 +69,22 @@ def test_survival_mode_folds_marginal_postflop():
         assert "survival" in msg or "honest fold" in msg
 
 
+def test_qualification_protect_activates_survival_margins():
+    """Top-20 ticket protect → survival_mode tightens marginal calls."""
+    table = ep_oop_postflop_weak(
+        ["Qc", "Jd"],
+        ["Ah", "8s", "3c"],
+        hero_seat=5,
+        villain_bet=80,
+        pot=160,
+    )
+    ctx = retrieve_solver_context(table)
+    ctx["qualification_protect"] = True
+    ctx["survival_mode"] = True
+    out = decide(table, deadline_s=10.0, research_context=ctx)
+    assert out["action"] in ("fold", "check")
+
+
 def test_composure_tightens_under_deadline():
     """Composure 70% → short clock, no hero call with weak equity."""
     table = ep_oop_postflop_weak(

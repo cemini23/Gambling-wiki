@@ -39,4 +39,4 @@ def test_all_regression_spots():
 def test_regression_count_grows_with_analyze():
     """Guardrail: we should keep adding spots after each analyze cycle."""
     n = len(regression_spots())
-    assert n >= 14, f"expected ≥14 regression spots, got {n}"
+    assert n >= 16, f"expected ≥16 regression spots, got {n}"

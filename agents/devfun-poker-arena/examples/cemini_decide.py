@@ -159,9 +159,16 @@ def decide(
     villain_mem = ctx.get("session_villain_memory") or {}
     mem_margins = exploit_from_memory(villain_mem) if villain_mem else {}
     margins = _merge_margins(margins, mem_margins)
-    survival = _survival_mode(self_seat) or bool(ctx.get("survival_mode"))
+    qual_protect = bool(ctx.get("qualification_protect"))
+    survival = (
+        _survival_mode(self_seat)
+        or bool(ctx.get("survival_mode"))
+        or qual_protect
+    )
     if survival:
         margins = _merge_margins(margins, {"fold_slack_delta": 0.04, "call_margin_delta": 0.05})
+    if qual_protect:
+        margins = _merge_margins(margins, {"preflop_fold_margin_delta": 0.03})
     if deadline_s < 4.0:
         margins = _merge_margins(margins, {"fold_slack_delta": 0.03})
     cold_start = bool(hud.get("coldStart"))
@@ -188,6 +195,15 @@ def decide(
             and call_chips >= max(int(pot * 0.32), 1)):
         return _build("fold", None, table, allowed, eq=equity, po=pot_odds,
                       msg=f"{binding}: SB underpair on paired board — fold")
+
+    # EP OOP marginal top pair on paired runouts — T6o MP −290 (analyze #01).
+    if (street != "Preflop" and call_chips > 0 and "fold" in available
+            and position in ("UTG", "MP") and not in_position
+            and _board_is_paired(board)
+            and _marginal_offsuit_top_pair(hc)
+            and call_chips >= max(int(pot * 0.28), 1)):
+        return _build("fold", None, table, allowed, eq=equity, po=pot_odds,
+                      msg=f"{binding}: EP weak top pair on paired board — fold")
 
     # Live leak: never pay with bottom offsuit trash postflop (64o-type lines).
     trash_eq = _train_threshold("trash_fold_eq", 0.30)
@@ -308,6 +324,8 @@ def _preflop_open(suggested: str, allowed: dict, available: list,
     if ps_library and ps_bias == "check" and "check" in available:
         return "check", None
     # EP: chart-only — no HUD steals (74o MP -916 leak).
+    if position in ("UTG", "MP") and hand_class in _WEAK_FACING_RAISE and "fold" in available:
+        return "fold", None
     if position in ("UTG", "MP") and suggested != "raise":
         if "fold" in available:
             return "fold", None
@@ -435,13 +453,31 @@ def _is_low_trash_offsuit(hc: str) -> bool:
     return i1 < 8 and i2 < 8
 
 
+def _marginal_offsuit_top_pair(hc: str) -> bool:
+    """T6o/K6o-style top pair weak kicker (MP −290 on paired runout)."""
+    if _weak_top_pair_offsuit(hc):
+        return True
+    if len(hc) != 3 or hc[2] != "o" or hc[0] == hc[1]:
+        return False
+    hi, lo = _RANKS.index(hc[0]), _RANKS.index(hc[1])
+    return hi <= 9 and lo <= 7
+
+
+def _is_sb_suited_trash(hc: str) -> bool:
+    """Low suited junk SB completes (43s −100 preflop leak)."""
+    if len(hc) != 3 or hc[2] != "s" or hc[0] == hc[1]:
+        return False
+    hi, lo = _RANKS.index(hc[0]), _RANKS.index(hc[1])
+    return hi <= 6 and lo <= 4
+
+
 def _is_sb_complete_trash(hc: str) -> bool:
     """Hands SB should never open — complete or fold only."""
     if not hc:
         return False
     if hc in _WEAK_FACING_RAISE or _is_low_trash_offsuit(hc):
         return True
-    if _weak_ace_offsuit(hc):
+    if _weak_ace_offsuit(hc) or _is_sb_suited_trash(hc):
         return True
     return hc in {"K9o", "Q9o", "Q8o", "Q7o", "Q6o", "Q5o", "Q4o", "Q3o", "Q2o",
                   "J9o", "T8o", "97o", "86o", "75o", "J8o", "T7o", "96o", "85o", "74o"}
@@ -494,6 +530,10 @@ def _overcommit_should_fold(
     if ratio >= 0.22 and equity < 0.45:
         return True
     if ratio >= 0.22 and _hero_underpair_on_paired_board(hand_class, list(table.get("boardCards") or [])):
+        return True
+    board = list(table.get("boardCards") or [])
+    if (ratio >= 0.15 and _board_is_paired(board)
+            and _marginal_offsuit_top_pair(hand_class) and equity < 0.62):
         return True
     if ratio >= 0.18 and (
         hand_class in _WEAK_FACING_RAISE or _is_low_trash_offsuit(hand_class)
@@ -713,6 +753,14 @@ def _postflop_facing_bet(equity: float, pot_odds: float, allowed: dict,
             and _board_is_paired(board)
             and call_chips >= max(int(pot * 0.32), 1)
             and equity < 0.48 and "fold" in available):
+        return "fold", None
+
+    # EP OOP marginal top pair on paired boards — T6o MP −290 (analyze #01).
+    if (position in ("UTG", "MP") and not in_position
+            and _board_is_paired(board)
+            and _marginal_offsuit_top_pair(hand_class)
+            and call_chips >= max(int(pot * 0.28), 1)
+            and "fold" in available):
         return "fold", None
 
     if ps_library and ps_bias == "fold" and "fold" in available:

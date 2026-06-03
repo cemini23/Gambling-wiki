@@ -27,6 +27,7 @@ from session_memory import (  # noqa: E402
     update_session_memory,
     villain_memory_for_table,
 )
+from qualification_guard import fetch_qualification_status  # noqa: E402
 from arena_client import (  # noqa: E402
     ArenaClient,
     ArenaError,
@@ -41,6 +42,7 @@ POLL_JITTER = 0.5
 JOIN_RETRY_S = 60.0
 IN_QUEUE_RETRY_S = 180.0
 LOBBY_LOG_INTERVAL_S = 120.0
+QUAL_STATUS_INTERVAL_S = 600.0
 PAYMENT_CONFIRM_WAIT_S = 5.0
 PAYMENT_CONFIRM_ATTEMPTS = 24
 
@@ -201,6 +203,8 @@ def run_lobby(args: argparse.Namespace) -> int:
     rng = random.Random()
     last_join_at = 0.0
     last_lobby_log_at = 0.0
+    last_qual_check_at = 0.0
+    qual_protect = False
     in_queue_only = False
 
     try:
@@ -309,6 +313,26 @@ def run_lobby(args: argparse.Namespace) -> int:
         if not args.skip_join:
             ensure_joined(force=True)
 
+        def refresh_qualification(force: bool = False) -> None:
+            nonlocal last_qual_check_at, qual_protect
+            now = time.time()
+            if not force and (now - last_qual_check_at) < QUAL_STATUS_INTERVAL_S:
+                return
+            last_qual_check_at = now
+            try:
+                st = fetch_qualification_status(client, competition_id)
+                qual_protect = bool(st.get("qualification_protect"))
+                if qual_protect:
+                    print(
+                        f"[cemini-lobby] qualification protect ON "
+                        f"rank={st.get('rank')} chips={st.get('chips')} "
+                        f"buffer=+{st.get('buffer_chips')} vs #{st.get('cutoff_chips')}"
+                    )
+            except Exception as exc:
+                print(f"[cemini-lobby] qual status skip: {exc}", file=sys.stderr)
+
+        refresh_qualification(force=True)
+
         while True:
             try:
                 pending = _pending(client, competition_id)
@@ -333,6 +357,9 @@ def run_lobby(args: argparse.Namespace) -> int:
                     max(0.0, (deadline_ms / 1000.0) - time.time()) if deadline_ms else 10.0
                 )
                 ctx = _safe_research_context(table, retrieve_fn)
+                if qual_protect:
+                    ctx["qualification_protect"] = True
+                    ctx["survival_mode"] = True
                 villain_mem = villain_memory_for_table(state, table)
                 if villain_mem:
                     ctx["session_villain_memory"] = villain_mem
@@ -379,6 +406,7 @@ def run_lobby(args: argparse.Namespace) -> int:
 
             if not tables:
                 now = time.time()
+                refresh_qualification()
                 if in_queue_only and (now - last_lobby_log_at) >= LOBBY_LOG_INTERVAL_S:
                     _log_lobby_queue(client, competition_id)
                     last_lobby_log_at = now
