@@ -8,11 +8,15 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 from tests.helpers.cemini_tables import (
+    bb_a6o_paired_river,
+    btn_qto_flush_river,
     co_unopened_steal_vs_rock,
     ep_oop_postflop_weak,
     mp_unopened,
     mp_facing_raise,
     overcommit_spot,
+    sb_a8o_tptk_flop,
+    sb_22_overcard_turn,
     sb_facing_open,
     sb_jj_paired_river,
     utg_facing_raise,
@@ -111,5 +115,33 @@ def regression_spots() -> list[RegressionSpot]:
             ),
             forbidden=frozenset({"call", "raise", "all-in"}),
             notes="Weak top pair OOP vs big turn bet — fold.",
+        ),
+        RegressionSpot(
+            id="prod_a8o_sb_tptk_flop",
+            source="Playground 2026-06-03 analyze #03 — A8o SB −100",
+            table=sb_a8o_tptk_flop(),
+            forbidden=frozenset({"call", "raise", "all-in"}),
+            notes="SB weak ace top pair OOP vs ~33% pot — fold.",
+        ),
+        RegressionSpot(
+            id="prod_22_sb_overcard_turn",
+            source="Playground analyze #09 — 22 SB −100",
+            table=sb_22_overcard_turn(),
+            forbidden=frozenset({"call", "raise", "all-in"}),
+            notes="SB small pair OOP under overcards — fold.",
+        ),
+        RegressionSpot(
+            id="prod_qto_btn_flush_river",
+            source="Playground analyze #01 — QTo BTN −100 flush board",
+            table=btn_qto_flush_river(),
+            forbidden=frozenset({"call", "raise", "all-in"}),
+            notes="BTN second pair on three-diamond runout vs big bet — fold.",
+        ),
+        RegressionSpot(
+            id="prod_a6o_bb_paired_river",
+            source="Playground analyze #07 — A6o BB −100 paired board",
+            table=bb_a6o_paired_river(),
+            forbidden=frozenset({"call", "raise", "all-in"}),
+            notes="OOP weak ace on paired runout — fold.",
         ),
     ]

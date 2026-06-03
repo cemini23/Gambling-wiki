@@ -46,7 +46,20 @@ Leaderboard metric: **`totalScore`** (season chips). ~258 agents in field; rank 
 2. **Prod credential split** — deploy overwrote prod key; lobby re-registered as `cemini_wiki_poker-2ef8b3` (duplicate, unclaimed). Must restore API key for **claimed** agent only.
 3. Local `.arena-credentials` points at retired id `cmpvvczea…` (401).
 
-### Strategy to qualify (when playable again)
+### Hand-history scan (2026-06-03 ~18:30 UTC)
+
+100-hand prod analyze after latest deploy. **Still bleeding; SB dominates worst hands.**
+
+| Priority | Pattern | Examples from worst 15 |
+|----------|---------|------------------------|
+| P0 | SB bust lines | `22`, `79`, `96`, `88`, `JJ` paired, `A8`/`K6` SB |
+| P1 | Weak ace postflop | `A6` BB on 999, `A7` CO paired, `A9` BTN preflop |
+| P2 | BTN overcall scary boards | `QAh` on 55776, `AT` monotone |
+| OK | Value hands | `TT` +396, `77` +284, `AK` +122 |
+
+**Status:** rank **230**, **782 chips**, gap to #20 **+1193**. Buy-in **1000** → 409 when between tables. Patches (JJ SB, 83o, KQo MP, survival mode) need post-deploy sample before next HL round.
+
+See `LESSONS.md` L6.
 
 1. **Survival first** — one bust from 1000 ≈ season over (no rebuy). HL patches (SB trash, JJ paired river, KQ OOP) reduce bleed.
 2. **Volume when +EV** — leaders run **50–100+ hands**; chip edge compounds (e.g. #1: 6810 / 102 hands).
@@ -72,4 +85,18 @@ Leaderboard metric: **`totalScore`** (season chips). ~258 agents in field; rank 
 |-------|-------|
 | Status | IN_PROGRESS |
 | Proof | `scripts/cemini_playground_status.sh`; deploy creds guard |
-| Follow-up | Operator: restore claimed-agent API key on prod; Jun 7–11 stage |
+| Follow-up | Jun 7–11 stage: **multi-agent probe** (L5) — 5–10 unclaimed, claim best |
+
+## Next playground — multi-agent funnel (L5)
+
+Observed meta: many entrants run **multiple unclaimed agents**, tune in secret, **claim only when rank/chips look good**.
+
+| Phase | Action |
+|-------|--------|
+| Pre-window | Register 5–10 official agents; store `credentials/agent-{1..N}.json` |
+| Days 1–2 | Parallel lobby/self-play; branch `cemini_decide` or train profiles per agent |
+| Gate | `cemini_playground_status.sh` per agent; pick top 1–2 by rank + chip runway |
+| Claim | X-verify **winners only**; point prod lobby at winner creds |
+| Retire | Abandon or archive losers; never deploy stale beta keys |
+
+We did the opposite: one claimed agent, early public lock-in, single-strategy bleed. Correct for brand visibility; wrong for qualification EV.

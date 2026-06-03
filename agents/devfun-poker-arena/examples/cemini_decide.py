@@ -47,7 +47,7 @@ _WEAK_FACING_RAISE = frozenset({
     "J9o", "J8o", "J7o", "J6o", "T9o", "T8o", "T7o", "98o", "97o", "87o",
     "KJo", "QJo", "JTo", "KTo", "QTo",
     "84o", "83o", "82o", "74o", "73o", "72o", "64o", "63o", "62o",
-    "54o", "53o", "52o", "43o", "42o", "32o",
+    "54o", "53o", "52o", "43o", "42o", "32o", "96o", "79o",
 })
 
 _RANKS = "23456789TJQKA"
@@ -521,13 +521,61 @@ def _hero_underpair_on_paired_board(hand_class: str, board: list[str]) -> bool:
 
 
 def _weak_top_pair_offsuit(hc: str) -> bool:
-    """Top-pair-weak-kicker hands that bleed OOP (KQ MP −100 leak)."""
+    """Top-pair-weak-kicker hands that bleed OOP (KQ MP, A8 SB −100 leaks)."""
+    if _weak_ace_offsuit(hc):
+        return True
     return hc in {"KQo", "KJo", "QJo", "KTo", "QTo", "JTo", "AJo", "ATo"}
+
+
+def _small_pocket_pair(hc: str) -> bool:
+    if len(hc) != 2 or hc[0] != hc[1]:
+        return False
+    return _RANKS.index(hc[0]) <= _RANKS.index("9")
+
+
+def _board_has_three_flush(board: list[str]) -> bool:
+    if len(board) < 3:
+        return False
+    suits = [c[-1].lower() for c in board]
+    return max(Counter(suits).values()) >= 3
+
+
+def _board_overcard_to_pocket(hc: str, board: list[str]) -> bool:
+    if not _small_pocket_pair(hc) or len(board) < 3:
+        return False
+    pr = _RANKS.index(hc[0])
+    branks = [c[0].upper() for c in board]
+    return max(_RANKS.index(r) for r in branks) > pr
 
 
 def _weak_broadway_offsuit(hc: str) -> bool:
     return hc in {"AJo", "ATo", "A9o", "KJo", "KTo", "QJo", "QTo", "JTo"}
 
+
+def _hero_has_flush(hole: list[str], board: list[str]) -> bool:
+    if len(hole) != 2 or len(board) < 3:
+        return False
+    for suit in {c[-1].lower() for c in hole}:
+        if sum(1 for c in hole + board if c[-1].lower() == suit) >= 5:
+            return True
+    return False
+
+
+def _hero_second_pair_or_worse(hole: list[str], board: list[str]) -> bool:
+    """Hero pairs below the top board rank (QTo on K-high — analyze #01)."""
+    if len(hole) != 2 or len(board) < 3:
+        return False
+    hranks = [c[0].upper() for c in hole]
+    branks = [c[0].upper() for c in board]
+    if hranks[0] == hranks[1]:
+        top_board = max(branks, key=lambda r: _RANKS.index(r))
+        return _RANKS.index(hranks[0]) < _RANKS.index(top_board)
+    paired = [r for r in hranks if r in branks]
+    if not paired:
+        return True
+    best = max(paired, key=lambda r: _RANKS.index(r))
+    top_board = max(branks, key=lambda r: _RANKS.index(r))
+    return _RANKS.index(best) < _RANKS.index(top_board)
 
 
 def _hero_ace_high_on_paired_board(hole: list[str], board: list[str]) -> bool:
@@ -641,6 +689,32 @@ def _postflop_facing_bet(equity: float, pot_odds: float, allowed: dict,
             and "fold" in available):
         return "fold", None
 
+    # SB OOP small pair vs overcard board — 22/88 −100 lines (analyze #09, #14).
+    if (position == "SB" and not in_position
+            and _small_pocket_pair(hand_class)
+            and _board_overcard_to_pocket(hand_class, board)
+            and call_chips >= max(int(pot * 0.32), 1)
+            and equity < 0.52 and "fold" in available):
+        return "fold", None
+
+    # SB OOP weak ace top-pair — A8 on J86 monotone (analyze #03).
+    if (position == "SB" and not in_position
+            and _weak_ace_offsuit(hand_class)
+            and len(board) >= 3
+            and call_chips >= max(int(pot * 0.30), 1)
+            and "fold" in available):
+        wet = _board_has_three_flush(board)
+        eq_cap = 0.68 if wet else 0.62
+        if equity < eq_cap:
+            return "fold", None
+
+    # OOP weak ace on paired boards — A6 BB, A7 CO (analyze #07, #11).
+    if (not in_position and _weak_ace_offsuit(hand_class)
+            and _board_is_paired(board)
+            and call_chips >= max(int(pot * 0.32), 1)
+            and equity < 0.48 and "fold" in available):
+        return "fold", None
+
     if ps_library and ps_bias == "fold" and "fold" in available:
         if (_should_fold_weak_preflop(hand_class, equity, pot_odds)
                 or equity < pot_odds + 0.04):
@@ -684,6 +758,12 @@ def _postflop_facing_bet(equity: float, pot_odds: float, allowed: dict,
     if (in_position and len(board) >= 3 and big_bet and "fold" in available):
         paired_ip = _train_threshold("paired_ip_fold_eq", 0.42)
         paired_vuln = _train_threshold("paired_vuln_fold_eq", 0.44)
+        # QTo BTN on three-flush — MC equity overstates vs value (analyze #01).
+        if (_board_has_three_flush(board)
+                and not _hero_has_flush(hole, board)
+                and (_weak_broadway_offsuit(hand_class)
+                     or _hero_second_pair_or_worse(hole, board))):
+            return "fold", None
         if (_hero_ace_high_on_paired_board(hole, board) and equity < paired_ip):
             return "fold", None
         if ((_hero_vulnerable_on_paired_board(hole, board)

@@ -40,12 +40,17 @@ rsync -avz --delete \
   "${AGENT_DIR}/" "${HOST}:${REMOTE_DIR}/"
 
 echo "==> Copy credentials + env"
-if [[ "${CEMINI_FORCE_CREDS:-0}" == "1" ]]; then
-  scp -q "${CREDS}" "${HOST}:${REMOTE_DIR}/.arena-credentials"
-  echo "    (CEMINI_FORCE_CREDS=1 — overwrote remote .arena-credentials)"
+LOCAL_ID="$(python3 -c "import json; print(json.load(open('${CREDS}'))['agentId'])")"
+REMOTE_ID="$(ssh -q "${HOST}" python3 -c "import json; print(json.load(open('${REMOTE_DIR}/.arena-credentials'))['agentId'])" 2>/dev/null || echo "")"
+
+if [[ -n "${REMOTE_ID}" && "${LOCAL_ID}" != "${REMOTE_ID}" && "${CEMINI_FORCE_CREDS:-0}" != "1" ]]; then
+  echo "    SKIP creds copy — agentId mismatch (local=${LOCAL_ID} prod=${REMOTE_ID})."
+  echo "    Prod key kept. To overwrite anyway: CEMINI_FORCE_CREDS=1 $0"
+elif [[ "${CEMINI_SKIP_CREDS:-0}" == "1" ]]; then
+  echo "    SKIP creds copy (CEMINI_SKIP_CREDS=1) — prod key unchanged."
 else
-  echo "    SKIP creds copy (default) — keeps prod claimed-agent key."
-  echo "    To overwrite: CEMINI_FORCE_CREDS=1 $0"
+  scp -q "${CREDS}" "${HOST}:${REMOTE_DIR}/.arena-credentials"
+  echo "    Copied .arena-credentials (agentId=${LOCAL_ID})"
 fi
 if [[ -f "${AGENT_DIR}/.env" ]]; then
   scp -q "${AGENT_DIR}/.env" "${HOST}:${REMOTE_DIR}/.env"

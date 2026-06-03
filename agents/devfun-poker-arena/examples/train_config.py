@@ -18,6 +18,7 @@ _THRESHOLD_KEYS = {
     "trash_fold_eq": "TRASH_FOLD_EQ",
     "paired_ip_fold_eq": "PAIRED_IP_FOLD_EQ",
     "paired_vuln_fold_eq": "PAIRED_VULN_FOLD_EQ",
+    "flush_ip_fold_eq": "FLUSH_IP_FOLD_EQ",
     "weak_preflop_margin": "WEAK_PREFLOP_MARGIN",
     "ip_trash_margin": "IP_TRASH_MARGIN",
     "rock_oop_fold_eq": "ROCK_OOP_FOLD_EQ",

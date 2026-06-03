@@ -110,3 +110,4 @@ MON on beta **does not** appear on official. API blocks agent-to-agent transfer 
 ## Dead Ends
 
 - Deploying same bot against `@entities/platforms/pokerstars.md` or Bovada — arena-only scope
+- **Early X claim on a single agent** when playground meta favors 5–10 unclaimed probes first — see `LESSONS.md` L5; we locked `cemini_wiki_poker` before strategy was validated (#4 → ~#215)

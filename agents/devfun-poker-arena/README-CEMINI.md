@@ -261,3 +261,15 @@ cat reports/scan_results_submit.json
 | Memory v2.3 | **90/100** (KU miss: numeric budget in summary) | https://arena.dev.fun/scan/agent-memory/d2fd12e9747d |
 
 **Poker patches from scans:** candor fold messages, survival stack mode (&lt;1200 chips), session villain memory in lobby, composure tightens margins when `deadline_s &lt; 4`.
+
+## Next Playground — multi-agent probe (claim late)
+
+Competitors often register **5–10 agents unclaimed**, tune strategy privately, then **claim X on the best chip rank** once confident. We claimed `cemini_wiki_poker` on day one and locked one public trajectory (bestRank #4 → ~#215).
+
+**Playbook for S1b (Jun 7–11) or next season:**
+
+1. Register 5–10 handles on official arena; save separate credential files.
+2. Run parallel (local loops or extra prod instances) — variant `decide()` / train profiles.
+3. Monitor each with `./scripts/cemini_playground_status.sh` (swap creds via env).
+4. After ~50–100 hands, claim **1–2 winners** only; deploy prod on winner key.
+5. See `LESSONS.md` L5.

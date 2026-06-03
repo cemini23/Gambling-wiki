@@ -333,6 +333,102 @@ def sb_jj_paired_river(*, river_bet: int = 120, pot: int = 280) -> dict:
     )
 
 
+def sb_a8o_tptk_flop(*, villain_bet: int = 40, pot: int = 120) -> dict:
+    """A8o SB OOP top pair weak kicker — analyze #03."""
+    return six_max_table(
+        name="sb_a8o_tptk_flop",
+        hero_seat=2,
+        button_seat=1,
+        street="Flop",
+        board=["6h", "Jh", "8h"],
+        pot=pot,
+        hero_hole=["8c", "Ad"],
+        hero_stack=900,
+        hero_bet=0,
+        villain_bets={1: villain_bet},
+        stacks={2: 900},
+        allowed=_allowed(
+            can_call=True,
+            can_raise=True,
+            call_chips=villain_bet,
+            call_to=villain_bet,
+            raise_range={"min": villain_bet * 2, "max": 900},
+        ),
+    )
+
+
+def sb_22_overcard_turn(*, villain_bet: int = 70, pot: int = 200) -> dict:
+    """22 SB OOP under overcards — analyze #09."""
+    return six_max_table(
+        name="sb_22_overcard_turn",
+        hero_seat=2,
+        button_seat=1,
+        street="Turn",
+        board=["7d", "Ac", "4c", "8s"],
+        pot=pot,
+        hero_hole=["2s", "2d"],
+        hero_stack=800,
+        hero_bet=0,
+        villain_bets={1: villain_bet},
+        stacks={2: 800},
+        allowed=_allowed(
+            can_call=True,
+            can_raise=True,
+            call_chips=villain_bet,
+            call_to=villain_bet,
+            raise_range={"min": villain_bet * 2, "max": 800},
+        ),
+    )
+
+
+def btn_qto_flush_river(*, villain_bet: int = 130, pot: int = 300) -> dict:
+    """QTo BTN IP second pair on three-flush runout — analyze #01."""
+    return six_max_table(
+        name="btn_qto_flush_river",
+        hero_seat=1,
+        button_seat=1,
+        street="River",
+        board=["2s", "Kd", "Qd", "6h", "5d"],
+        pot=pot,
+        hero_hole=["Td", "Qs"],
+        hero_stack=700,
+        hero_bet=0,
+        villain_bets={3: villain_bet},
+        stacks={1: 700},
+        allowed=_allowed(
+            can_call=True,
+            can_raise=True,
+            call_chips=villain_bet,
+            call_to=villain_bet,
+            raise_range={"min": villain_bet * 2, "max": 700},
+        ),
+    )
+
+
+def bb_a6o_paired_river(*, villain_bet: int = 100, pot: int = 280) -> dict:
+    """A6o BB OOP weak ace on paired board — analyze #07."""
+    return six_max_table(
+        name="bb_a6o_paired_river",
+        hero_seat=3,
+        button_seat=1,
+        street="River",
+        board=["9s", "9c", "3c", "Jh", "4c"],
+        pot=pot,
+        hero_hole=["Ad", "6h"],
+        hero_stack=600,
+        hero_bet=0,
+        villain_bets={1: villain_bet},
+        stacks={3: 600},
+        allowed=_allowed(
+            can_call=True,
+            can_raise=True,
+            call_chips=villain_bet,
+            call_to=villain_bet,
+            raise_range={"min": villain_bet * 2, "max": 600},
+        ),
+    )
+
+
 def overcommit_spot(hero_hole: list[str], *, call_chips: int = 200) -> dict:
     """Short stack, large call vs weak hand (board misses hero)."""
     return six_max_table(
