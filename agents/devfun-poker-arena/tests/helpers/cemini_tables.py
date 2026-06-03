@@ -309,6 +309,54 @@ def sb_facing_open(hero_hole: list[str], *, raise_to: int = 60) -> dict:
     )
 
 
+def bb_facing_raise(hero_hole: list[str], *, raise_to: int = 60) -> dict:
+    """BB facing CO/BTN open — Q6o defend leak (analyze round 4 #02)."""
+    return six_max_table(
+        name="bb_facing_raise",
+        hero_seat=3,
+        button_seat=1,
+        street="Preflop",
+        board=[],
+        pot=30 + raise_to,
+        hero_hole=hero_hole,
+        hero_stack=940,
+        hero_bet=20,
+        villain_bets={5: raise_to},
+        stacks={3: 940},
+        allowed=_allowed(
+            can_fold=True,
+            can_call=True,
+            can_raise=True,
+            call_chips=raise_to - 20,
+            call_to=raise_to,
+            raise_range={"min": raise_to * 2, "max": 940},
+        ),
+    )
+
+
+def co_t5o_river(*, villain_bet: int = 100, pot: int = 200) -> dict:
+    """T5o CO OOP weak top pair vs river bet — analyze round 4 #12."""
+    return six_max_table(
+        name="co_t5o_river",
+        hero_seat=5,
+        button_seat=1,
+        street="River",
+        board=["Tc", "2s", "6h", "Qs", "7h"],
+        pot=pot,
+        hero_hole=["Ts", "5h"],
+        hero_stack=800,
+        hero_bet=0,
+        villain_bets={4: villain_bet},
+        stacks={5: 800},
+        allowed=_allowed(
+            can_fold=True,
+            can_call=True,
+            call_chips=villain_bet,
+            call_to=villain_bet,
+        ),
+    )
+
+
 def sb_jj_paired_river(*, river_bet: int = 120, pot: int = 280) -> dict:
     """JJ SB OOP on paired runout — analyze #01 leak."""
     return six_max_table(

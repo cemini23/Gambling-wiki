@@ -238,12 +238,13 @@ def decide(
             hand_class=hc,
             position=position, ps_bias=ps_bias, ps_library=ps_library,
             hud_mode=hud_mode, margins=margins, cold_start=cold_start,
-            lead_protect=lead_protect)
+            lead_protect=lead_protect, qual_protect=qual_protect)
     elif street == "Preflop" and call_chips > 0:
         action_name, amount = _preflop_vs_bet(
             chart, allowed, available, equity, pot_odds, call_chips, pot,
             in_position=in_position, ps_bias=ps_bias, ps_library=ps_library,
-            hud_mode=hud_mode, margins=margins, lead_protect=lead_protect)
+            hud_mode=hud_mode, margins=margins, lead_protect=lead_protect,
+            qual_protect=qual_protect)
     elif call_chips == 0:
         action_name, amount = _postflop_free(
             equity, allowed, available, pot, pot_control=pot_control,
@@ -298,6 +299,27 @@ def _is_garbage_offsuit(hc: str) -> bool:
     return hc in _WEAK_FACING_RAISE or _is_low_trash_offsuit(hc)
 
 
+def _should_block_chart_open(
+    hand_class: str,
+    position: str,
+    *,
+    lead_protect: bool = False,
+) -> bool:
+    """Block chart-suggested opens for trash (KTo UTG, K8o CO chart bypass)."""
+    if position in ("UTG", "MP"):
+        return hand_class in _WEAK_FACING_RAISE
+    if position in ("CO", "BTN"):
+        if hand_class in _WEAK_FACING_RAISE:
+            if lead_protect and lead_blind_steal(hand_class, position):
+                return False
+            return True
+    if position == "SB" and (
+        hand_class in _WEAK_FACING_RAISE or _is_sb_complete_trash(hand_class)
+    ):
+        return True
+    return _blocks_open_steal(hand_class, position) and position in ("CO", "BTN")
+
+
 def _blocks_open_steal(hand_class: str, position: str) -> bool:
     """Chart-fold trash — never open-steal (J2o CO leak vs rock HUD)."""
     if position in ("UTG", "MP"):
@@ -326,7 +348,8 @@ def _preflop_open(suggested: str, allowed: dict, available: list,
                   hud_mode: str = "unknown",
                   margins: Optional[dict] = None,
                   cold_start: bool = False,
-                  lead_protect: bool = False) -> tuple[str, Optional[int]]:
+                  lead_protect: bool = False,
+                  qual_protect: bool = False) -> tuple[str, Optional[int]]:
     margins = margins or exploit_margins(hud_mode)
     if (position == "SB" and _weak_ace_offsuit(hand_class)
             and suggested == "raise" and "check" in available):
@@ -344,10 +367,9 @@ def _preflop_open(suggested: str, allowed: dict, available: list,
             return "fold", None
         if "check" in available:
             return "check", None
-    # Lead protect: CO/BTN chart-only — no HUD steals while holding a top-5 cushion.
-    if lead_protect and position in ("CO", "BTN") and suggested != "raise":
-        # Still min-steal chart-tight opens to offset blind-orbit decay (~5 chips/hand).
-        if (lead_blind_steal(hand_class, position)
+    # Qual/lead protect: CO/BTN chart-only — no HUD steals (K8o/T7o CO −100 leaks).
+    if (qual_protect or lead_protect) and position in ("CO", "BTN") and suggested != "raise":
+        if (lead_protect and lead_blind_steal(hand_class, position)
                 and allowed.get("canBet") and "bet" in available):
             br = allowed.get("betRange") or {}
             min_bet = int(br.get("min") or max(int(pot * 0.5), 1))
@@ -360,7 +382,7 @@ def _preflop_open(suggested: str, allowed: dict, available: list,
             return "check", None
     # vs rock: steal when chart is passive but equity supports an open (CO/BTN only).
     steal_eq = float(margins.get("open_steal_equity", 0.99))
-    if (not lead_protect and not cold_start and hud_mode == "rock"
+    if (not lead_protect and not qual_protect and not cold_start and hud_mode == "rock"
             and suggested in ("check", "fold")
             and position in ("CO", "BTN")
             and equity >= steal_eq and allowed.get("canBet") and "bet" in available
@@ -371,7 +393,8 @@ def _preflop_open(suggested: str, allowed: dict, available: list,
         max_bet = int(br.get("max") or min_bet)
         target = max(min_bet, min(int(pot * 0.5), max_bet))
         return "bet", target
-    if suggested == "raise" and allowed.get("canBet") and "bet" in available:
+    if (suggested == "raise" and allowed.get("canBet") and "bet" in available
+            and not _should_block_chart_open(hand_class, position, lead_protect=lead_protect)):
         br = allowed.get("betRange") or {}
         min_bet = int(br.get("min") or max(int(pot * 0.5), 1))
         max_bet = int(br.get("max") or min_bet)
@@ -391,11 +414,18 @@ def _preflop_vs_bet(chart: dict, allowed: dict, available: list,
                     ps_library: bool = False,
                     hud_mode: str = "unknown",
                     margins: Optional[dict] = None,
-                    lead_protect: bool = False) -> tuple[str, Optional[int]]:
+                    lead_protect: bool = False,
+                    qual_protect: bool = False) -> tuple[str, Optional[int]]:
     margins = margins or exploit_margins(hud_mode)
     hc = chart.get("hand_class") or ""
     position = chart.get("position") or ""
     suggested = chart.get("suggested_action") or "fold"
+
+    # BB: never defend chart-trash vs raises (Q6o BB −100 — IP preflop pricing leak).
+    if (position == "BB" and call_chips > 0 and hc in _WEAK_FACING_RAISE
+            and hc not in {"AA", "KK", "QQ", "JJ", "TT", "AKs", "AKo", "AQs", "AQo"}
+            and "fold" in available):
+        return "fold", None
 
     # Lead protect: no wide CO/BTN defends — chart + premiums only.
     if (lead_protect and position in ("CO", "BTN")
@@ -604,6 +634,21 @@ def _hero_underpair_on_paired_board(hand_class: str, board: list[str]) -> bool:
     return _RANKS.index(top) > _RANKS.index(hand_class[0])
 
 
+def _weak_kicker_top_pair(hole: list[str], board: list[str]) -> bool:
+    """Top pair with kicker 7 or lower (T5o on T-high — MC overestimates)."""
+    if len(hole) != 2 or len(board) < 3:
+        return False
+    hranks = [c[0].upper() for c in hole]
+    if hranks[0] == hranks[1]:
+        return False
+    branks = [c[0].upper() for c in board]
+    paired_rank = next((r for r in hranks if r in branks), None)
+    if not paired_rank:
+        return False
+    kicker = hranks[1] if hranks[0] == paired_rank else hranks[0]
+    return _RANKS.index(kicker) <= _RANKS.index("7")
+
+
 def _weak_top_pair_offsuit(hc: str) -> bool:
     """Top-pair-weak-kicker hands that bleed OOP (KQ MP, A8 SB −100 leaks)."""
     if _weak_ace_offsuit(hc):
@@ -758,6 +803,14 @@ def _postflop_facing_bet(equity: float, pot_odds: float, allowed: dict,
     # Lead protect: fold IP weak broadway vs medium+ bets (preserve chip stack).
     if (lead_protect and in_position and len(board) >= 3
             and _weak_broadway_offsuit(hand_class)
+            and call_chips >= max(int(pot * 0.33), 1)
+            and "fold" in available):
+        return "fold", None
+
+    # CO/EP OOP weak top pair on later streets (T5o CO −100 analyze #12).
+    if (position in ("CO", "MP", "UTG")
+            and len(board) >= 4
+            and _weak_kicker_top_pair(hole, board)
             and call_chips >= max(int(pot * 0.33), 1)
             and "fold" in available):
         return "fold", None
