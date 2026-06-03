@@ -17,6 +17,8 @@ from collections import Counter
 from pathlib import Path
 from typing import Any, Optional
 
+from blind_pressure import lead_blind_steal
+
 _EXAMPLES = Path(__file__).resolve().parent
 if str(_EXAMPLES) not in sys.path:
     sys.path.insert(0, str(_EXAMPLES))
@@ -342,8 +344,16 @@ def _preflop_open(suggested: str, allowed: dict, available: list,
             return "fold", None
         if "check" in available:
             return "check", None
-    # Lead protect: CO/BTN chart-only — no steal opens while holding a top-5 cushion.
+    # Lead protect: CO/BTN chart-only — no HUD steals while holding a top-5 cushion.
     if lead_protect and position in ("CO", "BTN") and suggested != "raise":
+        # Still min-steal chart-tight opens to offset blind-orbit decay (~5 chips/hand).
+        if (lead_blind_steal(hand_class, position)
+                and allowed.get("canBet") and "bet" in available):
+            br = allowed.get("betRange") or {}
+            min_bet = int(br.get("min") or max(int(pot * 0.5), 1))
+            max_bet = int(br.get("max") or min_bet)
+            target = max(min_bet, min(int(pot * 0.5), max_bet))
+            return "bet", target
         if "fold" in available:
             return "fold", None
         if "check" in available:
@@ -392,6 +402,10 @@ def _preflop_vs_bet(chart: dict, allowed: dict, available: list,
             and hc not in {"AA", "KK", "QQ", "JJ", "TT", "AKs", "AKo", "AQs", "AQo"}
             and suggested == "fold" and "fold" in available):
         return "fold", None
+    # BB: defend blinds at price when chart implies call (fight blind bleed OOP).
+    if (lead_protect and position == "BB" and suggested != "fold"
+            and equity >= pot_odds + 0.02 and "call" in available):
+        return "call", None
 
     # SB: never complete/call/defend with chart trash (83o/37o −100 preflop leaks).
     _sb_defend_premium = frozenset({"AA", "KK", "QQ", "JJ", "TT", "AKs", "AKo", "AQs"})

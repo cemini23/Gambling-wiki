@@ -276,7 +276,9 @@ Lobby refreshes every 10 min. Override: `CEMINI_QUAL_BUFFER_CHIPS`, `CEMINI_LEAD
 # prod: [cemini-lobby] LEAD protect ON rank=3 chips=9114 buffer=+7104
 ```
 
-**At ~9000 chips / rank ~3 (Jun 2026):** lead protect should be ON — preserve stack, do not chase #1; yellow zone if bankroll &lt; 3000.
+**At ~9000 chips / rank ~3 (Jun 2026):** lead protect ON — preserve stack, do not chase #1.
+
+**Blind decay (10/20, 6-max):** ~**5 chips/hand** if you never enter pots (~30 chips/orbit). A +7000 buffer ≈ **1400 passive hands** before erosion — but the #20 floor also rises, so keep **chart steals live** (BTN/CO min-steals still fire under lead protect) and stay seated; pure nit-ting bleeds ~500 chips per 100 hands.
 
 ## Next Playground — multi-agent probe (claim late)
 

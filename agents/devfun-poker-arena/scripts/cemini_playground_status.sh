@@ -30,6 +30,7 @@ from dotenv import load_dotenv
 load_dotenv(root / ".env")
 
 from arena_client import ArenaClient, ArenaError, CREDS_PATH, DEFAULT_BASE
+from blind_pressure import avg_blind_tax_per_hand, hands_to_erosion
 
 def load_key() -> str | None:
     if os.environ.get("ARENA_API_KEY"):
@@ -91,6 +92,11 @@ if ours:
         print(f"    GAP to top-{cutoff_rank}: +{gap} chips needed")
     elif cutoff:
         print(f"    IN ZONE (top {cutoff_rank}) — keep playing, don't bust")
+    if cutoff:
+        buf = int(ours["totalScore"]) - int(cutoff["totalScore"])
+        tax = avg_blind_tax_per_hand()
+        print(f"    BLIND DECAY: ~{tax:.1f} chips/hand if passive; "
+              f"~{hands_to_erosion(buf)} hands folds to erase +{buf} buffer @ 10/20")
     if me and ag.get("id") and me.get("id") != ag.get("id"):
         print(f"    WARN: creds agent {me.get('id')} != leaderboard {ag.get('id')}")
 else:

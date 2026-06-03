@@ -28,6 +28,7 @@ from session_memory import (  # noqa: E402
     villain_memory_for_table,
 )
 from qualification_guard import fetch_qualification_status  # noqa: E402
+from blind_pressure import avg_blind_tax_per_hand, hands_to_erosion  # noqa: E402
 from arena_client import (  # noqa: E402
     ArenaClient,
     ArenaError,
@@ -328,7 +329,9 @@ def run_lobby(args: argparse.Namespace) -> int:
                     print(
                         f"[cemini-lobby] LEAD protect ON "
                         f"rank={st.get('rank')} chips={st.get('chips')} "
-                        f"buffer=+{st.get('buffer_chips')} vs #{st.get('cutoff_chips')}"
+                        f"buffer=+{st.get('buffer_chips')} vs #{st.get('cutoff_chips')} "
+                        f"(blind tax ~{avg_blind_tax_per_hand():.1f}/hand, "
+                        f"~{hands_to_erosion(int(st.get('buffer_chips') or 0))} passive hands to erase buffer)"
                     )
                 elif qual_protect:
                     print(
