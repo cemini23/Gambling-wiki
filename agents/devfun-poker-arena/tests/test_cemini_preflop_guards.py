@@ -27,3 +27,24 @@ def test_j2o_chart_fold_not_open_stolen_vs_rock():
     )
     assert action in ("fold", "check")
     assert action != "bet"
+
+
+def test_ep_no_steal_74o_mp():
+    from cemini_decide import _preflop_open
+
+    allowed = {"canBet": True, "betRange": {"min": 20, "max": 100}}
+    available = ["fold", "check", "bet"]
+    margins = {"open_steal_equity": 0.34}
+    action, _ = _preflop_open(
+        "fold", allowed, available, pot=40, equity=0.60,
+        hand_class="74o", position="MP", hud_mode="rock", margins=margins,
+    )
+    assert action == "fold"
+
+
+def test_overcommit_fold_weak_hand():
+    from cemini_decide import _overcommit_should_fold
+
+    table = {"selfSeatNumber": 1, "seats": [{"seatNumber": 1, "stackChips": 500}]}
+    assert _overcommit_should_fold(table, "74o", 0.35, 200) is True
+    assert _overcommit_should_fold(table, "AKs", 0.60, 200) is False

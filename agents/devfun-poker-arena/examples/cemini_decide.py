@@ -154,6 +154,11 @@ def decide(
         return _build("fold", None, table, allowed, eq=equity, po=pot_odds,
                       msg=f"{binding}: cold-start — fold marginal spot")
 
+    if (street != "Preflop" and call_chips > 0 and "fold" in available
+            and _overcommit_should_fold(table, hc, equity, call_chips)):
+        return _build("fold", None, table, allowed, eq=equity, po=pot_odds,
+                      msg=f"{binding}: stack cap — fold overcommit")
+
     # Live leak: never pay with bottom offsuit trash postflop (64o-type lines).
     trash_eq = _train_threshold("trash_fold_eq", 0.30)
     garbage_margin = _train_threshold("garbage_postflop_margin", 0.04)
@@ -193,7 +198,8 @@ def decide(
             in_position=in_position, pot_control=pot_control,
             hand_class=hc,
             hole=hole, board=board, ps_bias=ps_bias, ps_library=ps_library,
-            hand_eval=ps_hand_eval, hud_mode=hud_mode, margins=margins)
+            hand_eval=ps_hand_eval, hud_mode=hud_mode, margins=margins,
+            table=table, position=position)
 
     if action_name in ("fold", "check", "call"):
         amount = None
@@ -233,6 +239,8 @@ def _is_garbage_offsuit(hc: str) -> bool:
 
 def _blocks_open_steal(hand_class: str, position: str) -> bool:
     """Chart-fold trash — never open-steal (J2o CO leak vs rock HUD)."""
+    if position in ("UTG", "MP"):
+        return True
     if not hand_class:
         return True
     if hand_class in _WEAK_FACING_RAISE or _is_low_trash_offsuit(hand_class):
@@ -266,9 +274,16 @@ def _preflop_open(suggested: str, allowed: dict, available: list,
         return "check", None
     if ps_library and ps_bias == "check" and "check" in available:
         return "check", None
-    # vs rock: steal when chart is passive but equity supports an open.
+    # EP: chart-only — no HUD steals (74o MP -916 leak).
+    if position in ("UTG", "MP") and suggested != "raise":
+        if "fold" in available:
+            return "fold", None
+        if "check" in available:
+            return "check", None
+    # vs rock: steal when chart is passive but equity supports an open (CO/BTN only).
     steal_eq = float(margins.get("open_steal_equity", 0.99))
     if (not cold_start and hud_mode == "rock" and suggested in ("check", "fold")
+            and position in ("CO", "BTN")
             and equity >= steal_eq and allowed.get("canBet") and "bet" in available
             and not _is_sb_complete_trash(hand_class)
             and not _blocks_open_steal(hand_class, position)):
@@ -310,6 +325,14 @@ def _preflop_vs_bet(chart: dict, allowed: dict, available: list,
 
     if _should_fold_weak_preflop(hc, equity, pot_odds) and "fold" in available:
         return "fold", None
+    # EP facing raise: strict chart — no wide defends (MP/UTG VPIP leak).
+    if (position in ("UTG", "MP") and suggested == "fold"
+            and hc not in {"AA", "KK", "QQ", "JJ", "AKs", "AKo"}
+            and "fold" in available):
+        return "fold", None
+    if (position in ("UTG", "MP") and suggested == "fold"
+            and equity < pot_odds + 0.10 and "fold" in available):
+        return "fold", None
     # SB OOP: don't defend chart-fold trash without a clear price edge.
     if (position == "SB" and suggested == "fold"
             and equity < pot_odds + 0.08 and "fold" in available):
@@ -336,6 +359,9 @@ def _preflop_vs_bet(chart: dict, allowed: dict, available: list,
         return "raise", target
     call_margin = 0.03 if in_position else 0.06
     fold_margin = 0.08 if in_position else 0.05
+    if position in ("UTG", "MP"):
+        call_margin += 0.05
+        fold_margin -= 0.03
     call_margin += float(margins.get("call_margin_delta", 0))
     fold_margin += float(margins.get("preflop_fold_margin_delta", 0))
     # vs rock: their raise is polarized — fold more marginal opens.
@@ -392,6 +418,47 @@ def _board_paired_hero_missed(hole: list[str], board: list[str]) -> bool:
         return False
     hranks = {c[0].upper() for c in hole}
     return not any(bc.get(r, 0) >= 2 for r in hranks)
+
+
+def _hero_stack_chips(table: dict) -> int:
+    sn = table.get("selfSeatNumber")
+    for seat in table.get("seats") or []:
+        if seat.get("seatNumber") == sn:
+            return int(seat.get("stackChips") or 0)
+    return 0
+
+
+def _is_strong_continue(hc: str) -> bool:
+    return hc in {
+        "AA", "KK", "QQ", "JJ", "TT", "99", "88",
+        "AKs", "AKo", "AQs", "AQo", "AJs", "KQs",
+    }
+
+
+def _overcommit_should_fold(
+    table: dict,
+    hand_class: str,
+    equity: float,
+    call_chips: int,
+) -> bool:
+    """Cap stack commitment with marginal hands (74o MP -916 style disasters)."""
+    stack = _hero_stack_chips(table)
+    if stack <= 0 or call_chips <= 0:
+        return False
+    if _is_strong_continue(hand_class):
+        return False
+    ratio = call_chips / stack
+    if ratio < 0.18:
+        return False
+    if ratio >= 0.35 and equity < 0.55:
+        return True
+    if ratio >= 0.22 and equity < 0.45:
+        return True
+    if ratio >= 0.18 and (
+        hand_class in _WEAK_FACING_RAISE or _is_low_trash_offsuit(hand_class)
+    ) and equity < 0.40:
+        return True
+    return False
 
 
 def _board_is_paired(board: list[str]) -> bool:
@@ -486,10 +553,22 @@ def _postflop_facing_bet(equity: float, pot_odds: float, allowed: dict,
                          ps_library: bool = False,
                          hand_eval: Optional[str] = None,
                          hud_mode: str = "unknown",
-                         margins: Optional[dict] = None) -> tuple[str, Optional[int]]:
+                         margins: Optional[dict] = None,
+                         table: Optional[dict] = None,
+                         position: str = "") -> tuple[str, Optional[int]]:
     margins = margins or exploit_margins(hud_mode)
     hole = hole or []
     board = board or []
+
+    if table and _overcommit_should_fold(table, hand_class, equity, call_chips):
+        return "fold", None
+
+    # EP OOP: fold weak hands vs significant bets without strong equity.
+    if (position in ("UTG", "MP") and not in_position and call_chips > 0
+            and not _is_strong_continue(hand_class)
+            and equity < 0.50 and call_chips >= max(int(pot * 0.35), 1)
+            and "fold" in available):
+        return "fold", None
 
     if ps_library and ps_bias == "fold" and "fold" in available:
         if (_should_fold_weak_preflop(hand_class, equity, pot_odds)
