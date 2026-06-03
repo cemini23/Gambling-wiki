@@ -27,10 +27,10 @@ Train on the **arena-pokerkit** local loop. Zero network, nothing on the public 
 | **Self-play + HUD branch** | same script (`--training-hud` built in) | No |
 | **Dry-run mock API** | `uv run examples/run_cemini.py --dry-run --max-hands 20` | No |
 | **Poker Eval benchmark** | `uv run examples/run_cemini.py --max-hands 50` | Yes (Eval leaderboard) |
-| **Playground lobby** | `run_cemini_lobby.py` + Playground S1 | Yes (casual) |
-| **Tournament S28** | prod lobby | Yes (competition) |
+| **Playground lobby** | `run_cemini_lobby.py` + official Playground S1 | Yes (casual) |
+| **Tournament S28** | swap `ARENA_LOBBY_COMPETITION_ID` | Yes (competition) |
 
-**Recommended loop:** train locally until self-play bb/100 is stable vs `rock` and `maniac`, then deploy to prod for S28 only.
+**Recommended loop:** train locally until self-play bb/100 is stable vs `rock` and `maniac`, then deploy to prod for live Playground / tournament seasons.
 
 ```bash
 # 6-max (default) — matches S28 full tables
@@ -119,8 +119,8 @@ Live Arena: all seated `agentId`s are fetched; targeting uses the bettor's stats
 **Registered:** handle `cemini_wiki_poker`, agent ID on wiki bot page. Credentials in `.arena-credentials` (gitignored).
 
 ```bash
-# Playground / Tournament lobby (active: Tournament S28)
-uv run examples/run_cemini_lobby.py --skip-join
+# Official Playground S1 (prod lobby)
+uv run examples/run_cemini_lobby.py --competition-id cmpy2qy65002ud9ej6b7jjq0l
 
 # Poker Eval benchmark (when cmpdk… competition is active)
 uv run examples/run_cemini.py --max-hands 50
@@ -168,7 +168,7 @@ Systemd timer on prod runs every **30 min**:
 uv run examples/arena_monitor.py once
 
 # Analyze only / poll only / loop
-uv run examples/arena_monitor.py analyze --match cmpr1vesh2it1x69xmtpiaecp
+uv run examples/arena_monitor.py analyze --match cmpy2qy65002ud9ej6b7jjq0l
 uv run examples/arena_monitor.py poll-eval
 uv run examples/arena_monitor.py watch --interval 1800
 
@@ -180,10 +180,19 @@ ssh cemini-prod cat /opt/devfun-poker-arena/reports/alerts.txt
 
 When Poker Eval goes live, monitor logs `POKER EVAL LIVE` with the `run_cemini.py` command. Optional auto-start: `--auto-benchmark` (off by default).
 
-Swap `ARENA_LOBBY_COMPETITION_ID` in remote `.env` when a new tournament season opens, then redeploy.
+Swap `ARENA_LOBBY_COMPETITION_ID` in remote `.env` when a new Playground or tournament season opens, then `systemctl restart cemini-devfun-poker-lobby`.
 
-## Active season
+## Active seasons
 
-**Tournament S28** — `cmpr1vesh2it1x69xmtpiaecp` (prod lobby as of 2026-06-02). **Entry fee: 0.01 MON** on Monad — pay at [dev.fun](https://dev.fun/) for agent `cemini_wiki_poker`; lobby retries join every 60s after payment. Playground S1 (`cmpr1uomm…`) kept for casual testing.
+**Use official arena only:** `https://arena.dev.fun/api/arena` — **not** `b-arena.dev.fun` (beta; separate agents/leaderboards).
 
-Watch [dev.fun](https://dev.fun/) + Discord for future season IDs.
+| Competition | ID | Environment | Notes |
+|-------------|-----|-------------|-------|
+| **Playground S1** | `cmpy2qy65002ud9ej6b7jjq0l` | **Official** (prod) | Featured on [arena.dev.fun](https://arena.dev.fun/) |
+| Playground S2 | `cmpy1onq3088b8beendm27r1h` | Beta only | Old prod target — do not use for public leaderboard |
+| Playground S1 (legacy) | `cmpr1uomm2is6x69xx4nyqz9r` | Beta only | |
+| Tournament S28 | `cmpr1vesh2it1x69xmtpiaecp` | Beta only | 0.01 MON entry on beta |
+
+After switching to official, re-claim X at `/auth/claim/status` → `claimUrl` (new token per environment).
+
+Watch [arena.dev.fun](https://arena.dev.fun/) + Discord for new season IDs.

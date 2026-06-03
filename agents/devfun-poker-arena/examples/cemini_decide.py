@@ -141,10 +141,18 @@ def decide(
     hud = ctx.get("opponent_hud") or {}
     hud_mode = hud.get("mode") or "unknown"
     margins = hud.get("margins") or exploit_margins(hud_mode)
+    cold_start = bool(hud.get("coldStart"))
     hc = chart.get("hand_class") or ""
 
     action_name: str
     amount: Optional[int] = None
+
+    # Cold start: chart-first — no marginal postflop calls until HUD reads land.
+    if (cold_start and street != "Preflop" and call_chips > 0 and "fold" in available
+            and hc not in {"AA", "KK", "QQ", "JJ", "TT", "AKs", "AKo", "AQs"}
+            and equity < pot_odds + 0.08):
+        return _build("fold", None, table, allowed, eq=equity, po=pot_odds,
+                      msg=f"{binding}: cold-start — fold marginal spot")
 
     # Live leak: never pay with bottom offsuit trash postflop (64o-type lines).
     trash_eq = _train_threshold("trash_fold_eq", 0.30)
@@ -167,7 +175,7 @@ def decide(
             eff, allowed, available, pot, equity,
             hand_class=hc,
             position=position, ps_bias=ps_bias, ps_library=ps_library,
-            hud_mode=hud_mode, margins=margins)
+            hud_mode=hud_mode, margins=margins, cold_start=cold_start)
     elif street == "Preflop" and call_chips > 0:
         action_name, amount = _preflop_vs_bet(
             chart, allowed, available, equity, pot_odds, call_chips, pot,
@@ -223,13 +231,32 @@ def _is_garbage_offsuit(hc: str) -> bool:
     return hc in _WEAK_FACING_RAISE or _is_low_trash_offsuit(hc)
 
 
+def _blocks_open_steal(hand_class: str, position: str) -> bool:
+    """Chart-fold trash — never open-steal (J2o CO leak vs rock HUD)."""
+    if not hand_class:
+        return True
+    if hand_class in _WEAK_FACING_RAISE or _is_low_trash_offsuit(hand_class):
+        return True
+    if _is_sb_complete_trash(hand_class):
+        return True
+    # CO/BTN: block wheel + low broadway offsuit steals (J4o, T3o, …).
+    if position in ("CO", "BTN") and len(hand_class) == 3 and hand_class[2] == "o":
+        if hand_class[0] == hand_class[1]:
+            return False
+        hi, lo = _RANKS.index(hand_class[0]), _RANKS.index(hand_class[1])
+        if hi <= 9 and lo <= 4:
+            return True
+    return False
+
+
 def _preflop_open(suggested: str, allowed: dict, available: list,
                   pot: int, equity: float,
                   hand_class: str = "", position: str = "",
                   ps_bias: Optional[str] = None,
                   ps_library: bool = False,
                   hud_mode: str = "unknown",
-                  margins: Optional[dict] = None) -> tuple[str, Optional[int]]:
+                  margins: Optional[dict] = None,
+                  cold_start: bool = False) -> tuple[str, Optional[int]]:
     margins = margins or exploit_margins(hud_mode)
     if (position == "SB" and _weak_ace_offsuit(hand_class)
             and suggested == "raise" and "check" in available):
@@ -239,11 +266,12 @@ def _preflop_open(suggested: str, allowed: dict, available: list,
         return "check", None
     if ps_library and ps_bias == "check" and "check" in available:
         return "check", None
-    # vs rock: steal when chart is passive but equity supports a open.
+    # vs rock: steal when chart is passive but equity supports an open.
     steal_eq = float(margins.get("open_steal_equity", 0.99))
-    if (hud_mode == "rock" and suggested in ("check", "fold")
+    if (not cold_start and hud_mode == "rock" and suggested in ("check", "fold")
             and equity >= steal_eq and allowed.get("canBet") and "bet" in available
-            and not _is_sb_complete_trash(hand_class)):
+            and not _is_sb_complete_trash(hand_class)
+            and not _blocks_open_steal(hand_class, position)):
         br = allowed.get("betRange") or {}
         min_bet = int(br.get("min") or max(int(pot * 0.5), 1))
         max_bet = int(br.get("max") or min_bet)
@@ -467,6 +495,11 @@ def _postflop_facing_bet(equity: float, pot_odds: float, allowed: dict,
         if (_should_fold_weak_preflop(hand_class, equity, pot_odds)
                 or equity < pot_odds + 0.04):
             return "fold", None
+
+    # J2o-type trash: fold vs bets on paired boards (662A2 runouts).
+    if (hand_class in _WEAK_FACING_RAISE and _board_is_paired(board)
+            and call_chips > 0 and equity < 0.48 and "fold" in available):
+        return "fold", None
 
     # PokerSkill nut-high + draw: check-call line, avoid spewy raises.
     if hand_eval == "nut_high_draw":

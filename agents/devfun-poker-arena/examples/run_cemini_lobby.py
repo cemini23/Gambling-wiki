@@ -12,7 +12,7 @@ import random
 import sys
 import time
 from pathlib import Path
-from typing import Optional
+from typing import Any, Optional
 
 from dotenv import load_dotenv
 
@@ -38,6 +38,17 @@ IN_QUEUE_RETRY_S = 180.0
 LOBBY_LOG_INTERVAL_S = 120.0
 PAYMENT_CONFIRM_WAIT_S = 5.0
 PAYMENT_CONFIRM_ATTEMPTS = 24
+
+
+def _arena_error_text(body: Any) -> str:
+    """Normalize Arena error bodies (dict JSON or Cloudflare HTML) to text."""
+    if isinstance(body, dict):
+        for key in ("error", "message", "detail"):
+            val = body.get(key)
+            if val:
+                return str(val)
+        return str(body)
+    return str(body or "")
 
 
 def _join(client: ArenaClient, competition_id: str, tx_hash: Optional[str] = None) -> dict:
@@ -85,7 +96,7 @@ def _join_with_entry_fee(
             return _join(client, competition_id, tx_hash=tx_hash)
         except ArenaError as e:
             last_err = e
-            msg = str((e.body or {}).get("error") or e.body or "")
+            msg = _arena_error_text(e.body)
             if e.status == 400 and "not yet mined" in msg.lower():
                 print(f"[cemini-lobby] waiting for tx confirm ({attempt}/{PAYMENT_CONFIRM_ATTEMPTS})")
                 continue
@@ -134,7 +145,7 @@ def _rebuy_with_payment(
             })
         except ArenaError as e:
             last_err = e
-            msg = str((e.body or {}).get("error") or e.body or "")
+            msg = _arena_error_text(e.body)
             if e.status == 400 and "not yet mined" in msg.lower():
                 print(f"[cemini-lobby] rebuy waiting for tx ({attempt}/{PAYMENT_CONFIRM_ATTEMPTS})")
                 continue
@@ -154,7 +165,7 @@ def _try_rebuy(client: ArenaClient, competition_id: str) -> bool:
         if e.status != 402:
             print(f"[cemini-lobby] rebuy failed: {e.status} {e.body}", file=sys.stderr)
             return False
-        pay = (e.body or {}).get("paymentRequirements") or {}
+        pay = e.body.get("paymentRequirements") or {} if isinstance(e.body, dict) else {}
         try:
             resp = _rebuy_with_payment(client, competition_id, pay)
             print(f"[cemini-lobby] rebuy after pay: {json.dumps(resp, sort_keys=True)[:300]}")
@@ -208,9 +219,14 @@ def run_lobby(args: argparse.Namespace) -> int:
                 save_state(state)
                 print(f"[cemini-lobby] join: {json.dumps(join_resp, sort_keys=True)[:500]}")
             except ArenaError as e:
-                err_text = str((e.body or {}).get("error") or e.body or "").lower()
+                err_text = _arena_error_text(e.body).lower()
+                if e.status >= 500:
+                    print(f"[cemini-lobby] join server error {e.status}, retry later",
+                          file=sys.stderr)
+                    last_join_at = now
+                    return
                 if e.status == 402:
-                    pay = (e.body or {}).get("paymentRequirements") or {}
+                    pay = e.body.get("paymentRequirements") or {} if isinstance(e.body, dict) else {}
                     pending_tx = state.get("entry_fee_tx_hash")
                     if pending_tx:
                         print(f"[cemini-lobby] retrying join with pending tx {pending_tx}",
@@ -224,7 +240,7 @@ def run_lobby(args: argparse.Namespace) -> int:
                                   f"{json.dumps(join_resp, sort_keys=True)[:500]}")
                             return
                         except ArenaError as pend_err:
-                            msg = str((pend_err.body or {}).get("error") or "")
+                            msg = _arena_error_text(pend_err.body)
                             if pend_err.status == 400 and "not yet mined" in msg.lower():
                                 print("[cemini-lobby] tx still indexing on Arena…", file=sys.stderr)
                                 last_join_at = now
@@ -251,7 +267,7 @@ def run_lobby(args: argparse.Namespace) -> int:
                         print(f"[cemini-lobby] join after pay: "
                               f"{json.dumps(join_resp, sort_keys=True)[:500]}")
                     except ArenaError as pay_err:
-                        msg = str((pay_err.body or {}).get("error") or "")
+                        msg = _arena_error_text(pay_err.body)
                         if pay_err.status == 400 and "not yet mined" in msg.lower():
                             # _join_with_entry_fee raises before storing — handled below
                             pass
