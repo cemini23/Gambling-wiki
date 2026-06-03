@@ -95,6 +95,7 @@ systemctl enable cemini-devfun-poker-export.timer
 systemctl restart cemini-devfun-poker-lobby.service
 systemctl start cemini-devfun-poker-monitor.service
 systemctl start cemini-devfun-poker-export.service
+systemctl start cemini-devfun-poker-export.timer
 sleep 2
 systemctl --no-pager status cemini-devfun-poker-lobby.service || true
 systemctl --no-pager status cemini-devfun-poker-monitor.timer || true
