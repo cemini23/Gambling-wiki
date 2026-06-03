@@ -262,16 +262,21 @@ cat reports/scan_results_submit.json
 
 **Poker patches from scans:** candor fold messages, survival stack mode (&lt;1200 chips), session villain memory in lobby, composure tightens margins when `deadline_s &lt; 4`.
 
-## Qualification protection (top-20 ticket)
+## Qualification + lead protection (top-20 ticket)
 
-When rank **≤ 20** and chips are **≥ #20 floor + 1000**, the lobby passes `qualification_protect` + `survival_mode` into `decide()` every 10 minutes (tighter folds, extra preflop discipline). Override buffer: `CEMINI_QUAL_BUFFER_CHIPS=1000`.
+| Mode | Trigger | Effect |
+|------|---------|--------|
+| **Qualification protect** | rank ≤ 20, buffer ≥ floor + **1000** | `survival_mode` + tighter preflop folds |
+| **Lead protect** | rank ≤ **5**, buffer ≥ floor + **3000** | Above + CO/BTN chart-only (no steals), stricter stack caps |
+
+Lobby refreshes every 10 min. Override: `CEMINI_QUAL_BUFFER_CHIPS`, `CEMINI_LEAD_BUFFER_CHIPS`, `CEMINI_LEAD_RANK`.
 
 ```bash
-./scripts/cemini_playground_status.sh   # rank vs cutoff
-# prod log: [cemini-lobby] qualification protect ON rank=10 chips=4538 buffer=+2528
+./scripts/cemini_playground_status.sh
+# prod: [cemini-lobby] LEAD protect ON rank=3 chips=9114 buffer=+7104
 ```
 
-**Playbook at ~4500 chips / rank ~10 (Jun 2026):** keep lobby running at normal volume; do not chase #1; treat bankroll &lt; 2000 as yellow, &lt; 1000 as season-ending; HL patch only on new analyze leaks.
+**At ~9000 chips / rank ~3 (Jun 2026):** lead protect should be ON — preserve stack, do not chase #1; yellow zone if bankroll &lt; 3000.
 
 ## Next Playground — multi-agent probe (claim late)
 

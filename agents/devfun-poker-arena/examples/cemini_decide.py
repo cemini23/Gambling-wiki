@@ -160,15 +160,24 @@ def decide(
     mem_margins = exploit_from_memory(villain_mem) if villain_mem else {}
     margins = _merge_margins(margins, mem_margins)
     qual_protect = bool(ctx.get("qualification_protect"))
+    lead_protect = bool(ctx.get("lead_protect"))
     survival = (
         _survival_mode(self_seat)
         or bool(ctx.get("survival_mode"))
         or qual_protect
+        or lead_protect
     )
     if survival:
         margins = _merge_margins(margins, {"fold_slack_delta": 0.04, "call_margin_delta": 0.05})
     if qual_protect:
         margins = _merge_margins(margins, {"preflop_fold_margin_delta": 0.03})
+    if lead_protect:
+        margins = _merge_margins(margins, {
+            "fold_slack_delta": 0.03,
+            "call_margin_delta": 0.04,
+            "bet_bar_delta": -0.06,
+            "preflop_fold_margin_delta": 0.02,
+        })
     if deadline_s < 4.0:
         margins = _merge_margins(margins, {"fold_slack_delta": 0.03})
     cold_start = bool(hud.get("coldStart"))
@@ -185,7 +194,7 @@ def decide(
                       msg=f"{binding}: cold-start — fold marginal spot")
 
     if (street != "Preflop" and call_chips > 0 and "fold" in available
-            and _overcommit_should_fold(table, hc, equity, call_chips)):
+            and _overcommit_should_fold(table, hc, equity, call_chips, lead_protect=lead_protect)):
         return _build("fold", None, table, allowed, eq=equity, po=pot_odds,
                       msg=f"{binding}: stack cap — fold overcommit")
 
@@ -226,12 +235,13 @@ def decide(
             eff, allowed, available, pot, equity,
             hand_class=hc,
             position=position, ps_bias=ps_bias, ps_library=ps_library,
-            hud_mode=hud_mode, margins=margins, cold_start=cold_start)
+            hud_mode=hud_mode, margins=margins, cold_start=cold_start,
+            lead_protect=lead_protect)
     elif street == "Preflop" and call_chips > 0:
         action_name, amount = _preflop_vs_bet(
             chart, allowed, available, equity, pot_odds, call_chips, pot,
             in_position=in_position, ps_bias=ps_bias, ps_library=ps_library,
-            hud_mode=hud_mode, margins=margins)
+            hud_mode=hud_mode, margins=margins, lead_protect=lead_protect)
     elif call_chips == 0:
         action_name, amount = _postflop_free(
             equity, allowed, available, pot, pot_control=pot_control,
@@ -245,7 +255,7 @@ def decide(
             hand_class=hc,
             hole=hole, board=board, ps_bias=ps_bias, ps_library=ps_library,
             hand_eval=ps_hand_eval, hud_mode=hud_mode, margins=margins,
-            table=table, position=position)
+            table=table, position=position, lead_protect=lead_protect)
 
     if action_name in ("fold", "check", "call"):
         amount = None
@@ -313,7 +323,8 @@ def _preflop_open(suggested: str, allowed: dict, available: list,
                   ps_library: bool = False,
                   hud_mode: str = "unknown",
                   margins: Optional[dict] = None,
-                  cold_start: bool = False) -> tuple[str, Optional[int]]:
+                  cold_start: bool = False,
+                  lead_protect: bool = False) -> tuple[str, Optional[int]]:
     margins = margins or exploit_margins(hud_mode)
     if (position == "SB" and _weak_ace_offsuit(hand_class)
             and suggested == "raise" and "check" in available):
@@ -331,9 +342,16 @@ def _preflop_open(suggested: str, allowed: dict, available: list,
             return "fold", None
         if "check" in available:
             return "check", None
+    # Lead protect: CO/BTN chart-only — no steal opens while holding a top-5 cushion.
+    if lead_protect and position in ("CO", "BTN") and suggested != "raise":
+        if "fold" in available:
+            return "fold", None
+        if "check" in available:
+            return "check", None
     # vs rock: steal when chart is passive but equity supports an open (CO/BTN only).
     steal_eq = float(margins.get("open_steal_equity", 0.99))
-    if (not cold_start and hud_mode == "rock" and suggested in ("check", "fold")
+    if (not lead_protect and not cold_start and hud_mode == "rock"
+            and suggested in ("check", "fold")
             and position in ("CO", "BTN")
             and equity >= steal_eq and allowed.get("canBet") and "bet" in available
             and not _is_sb_complete_trash(hand_class)
@@ -362,11 +380,18 @@ def _preflop_vs_bet(chart: dict, allowed: dict, available: list,
                     ps_bias: Optional[str] = None,
                     ps_library: bool = False,
                     hud_mode: str = "unknown",
-                    margins: Optional[dict] = None) -> tuple[str, Optional[int]]:
+                    margins: Optional[dict] = None,
+                    lead_protect: bool = False) -> tuple[str, Optional[int]]:
     margins = margins or exploit_margins(hud_mode)
     hc = chart.get("hand_class") or ""
     position = chart.get("position") or ""
     suggested = chart.get("suggested_action") or "fold"
+
+    # Lead protect: no wide CO/BTN defends — chart + premiums only.
+    if (lead_protect and position in ("CO", "BTN")
+            and hc not in {"AA", "KK", "QQ", "JJ", "TT", "AKs", "AKo", "AQs", "AQo"}
+            and suggested == "fold" and "fold" in available):
+        return "fold", None
 
     # SB: never complete/call/defend with chart trash (83o/37o −100 preflop leaks).
     _sb_defend_premium = frozenset({"AA", "KK", "QQ", "JJ", "TT", "AKs", "AKo", "AQs"})
@@ -515,6 +540,8 @@ def _overcommit_should_fold(
     hand_class: str,
     equity: float,
     call_chips: int,
+    *,
+    lead_protect: bool = False,
 ) -> bool:
     """Cap stack commitment with marginal hands (74o MP -916 style disasters)."""
     stack = _hero_stack_chips(table)
@@ -523,8 +550,11 @@ def _overcommit_should_fold(
     if _is_strong_continue(hand_class):
         return False
     ratio = call_chips / stack
-    if ratio < 0.18:
+    min_ratio = 0.12 if lead_protect else 0.18
+    if ratio < min_ratio:
         return False
+    if lead_protect and ratio >= 0.12 and equity < 0.52:
+        return True
     if ratio >= 0.35 and equity < 0.55:
         return True
     if ratio >= 0.22 and equity < 0.45:
@@ -701,12 +731,21 @@ def _postflop_facing_bet(equity: float, pot_odds: float, allowed: dict,
                          hud_mode: str = "unknown",
                          margins: Optional[dict] = None,
                          table: Optional[dict] = None,
-                         position: str = "") -> tuple[str, Optional[int]]:
+                         position: str = "",
+                         lead_protect: bool = False) -> tuple[str, Optional[int]]:
     margins = margins or exploit_margins(hud_mode)
     hole = hole or []
     board = board or []
 
-    if table and _overcommit_should_fold(table, hand_class, equity, call_chips):
+    if table and _overcommit_should_fold(
+            table, hand_class, equity, call_chips, lead_protect=lead_protect):
+        return "fold", None
+
+    # Lead protect: fold IP weak broadway vs medium+ bets (preserve chip stack).
+    if (lead_protect and in_position and len(board) >= 3
+            and _weak_broadway_offsuit(hand_class)
+            and call_chips >= max(int(pot * 0.33), 1)
+            and "fold" in available):
         return "fold", None
 
     # EP OOP: fold weak hands vs significant bets without strong equity.

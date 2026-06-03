@@ -1,7 +1,11 @@
-"""Qualification protection — rank + chip buffer gates for lobby decide()."""
+"""Qualification + lead protection gates for lobby decide()."""
 from __future__ import annotations
 
-from qualification_guard import DEFAULT_BUFFER_CHIPS, fetch_qualification_status
+from qualification_guard import (
+    DEFAULT_BUFFER_CHIPS,
+    DEFAULT_LEAD_BUFFER_CHIPS,
+    fetch_qualification_status,
+)
 
 
 class _FakeClient:
@@ -24,7 +28,29 @@ def test_protect_when_rank_in_zone_and_buffer_ge_1000():
     )
     st = fetch_qualification_status(client, "comp1", buffer_chips=1000)
     assert st["qualification_protect"] is True
+    assert st["lead_protect"] is False
     assert st["buffer_chips"] == 2528
+
+
+def test_lead_protect_top5_large_cushion():
+    client = _FakeClient(
+        {"leaderboard": [{"arenaId": "comp1", "rank": 3, "totalScore": 9114}]},
+        cutoff_score=2010,
+    )
+    st = fetch_qualification_status(client, "comp1")
+    assert st["qualification_protect"] is True
+    assert st["lead_protect"] is True
+    assert st["buffer_chips"] == 7104
+
+
+def test_no_lead_protect_when_buffer_below_3000():
+    client = _FakeClient(
+        {"leaderboard": [{"arenaId": "comp1", "rank": 8, "totalScore": 4500}]},
+        cutoff_score=2010,
+    )
+    st = fetch_qualification_status(client, "comp1")
+    assert st["qualification_protect"] is True
+    assert st["lead_protect"] is False
 
 
 def test_no_protect_when_buffer_below_threshold():
@@ -34,6 +60,7 @@ def test_no_protect_when_buffer_below_threshold():
     )
     st = fetch_qualification_status(client, "comp1", buffer_chips=1000)
     assert st["qualification_protect"] is False
+    assert st["lead_protect"] is False
     assert st["buffer_chips"] == 790
 
 
@@ -44,7 +71,9 @@ def test_no_protect_when_rank_outside_top_20():
     )
     st = fetch_qualification_status(client, "comp1", buffer_chips=1000)
     assert st["qualification_protect"] is False
+    assert st["lead_protect"] is False
 
 
-def test_default_buffer_is_1000():
+def test_default_thresholds():
     assert DEFAULT_BUFFER_CHIPS == 1000
+    assert DEFAULT_LEAD_BUFFER_CHIPS == 3000

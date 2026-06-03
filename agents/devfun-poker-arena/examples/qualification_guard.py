@@ -1,4 +1,4 @@
-"""Playground qualification status — tighten decide() when safely in top 20."""
+"""Playground qualification + lead protection — tighten decide() when safely ahead."""
 from __future__ import annotations
 
 import os
@@ -6,6 +6,8 @@ from typing import Any
 
 DEFAULT_CUTOFF_RANK = 20
 DEFAULT_BUFFER_CHIPS = 1000  # chips above rank-20 floor before protect mode
+DEFAULT_LEAD_RANK = 5
+DEFAULT_LEAD_BUFFER_CHIPS = 3000  # extra cushion before lead-protect tier
 
 
 def _buffer_threshold() -> int:
@@ -15,22 +17,44 @@ def _buffer_threshold() -> int:
     return int(raw)
 
 
+def _lead_buffer_threshold() -> int:
+    raw = os.environ.get("CEMINI_LEAD_BUFFER_CHIPS")
+    if raw is None or raw == "":
+        return DEFAULT_LEAD_BUFFER_CHIPS
+    return int(raw)
+
+
+def _lead_rank_threshold() -> int:
+    raw = os.environ.get("CEMINI_LEAD_RANK")
+    if raw is None or raw == "":
+        return DEFAULT_LEAD_RANK
+    return int(raw)
+
+
 def fetch_qualification_status(
     client: Any,
     competition_id: str,
     *,
     cutoff_rank: int = DEFAULT_CUTOFF_RANK,
     buffer_chips: int | None = None,
+    lead_rank: int | None = None,
+    lead_buffer_chips: int | None = None,
 ) -> dict[str, Any]:
-    """Return rank/chips and whether to enable qualification_protect in decide().
+    """Return rank/chips and protection flags for decide().
 
-    Protect when: rank <= cutoff_rank AND chips >= cutoff_chips + buffer_chips.
-    Default buffer is 1000 chips above the #20 floor.
+    qualification_protect: rank <= cutoff_rank AND chips >= floor + buffer_chips
+    lead_protect: rank <= lead_rank AND chips >= floor + lead_buffer_chips
     """
     if buffer_chips is None:
         buffer_chips = _buffer_threshold()
+    if lead_rank is None:
+        lead_rank = _lead_rank_threshold()
+    if lead_buffer_chips is None:
+        lead_buffer_chips = _lead_buffer_threshold()
+
     out: dict[str, Any] = {
         "qualification_protect": False,
+        "lead_protect": False,
         "rank": None,
         "chips": None,
         "cutoff_chips": None,
@@ -69,6 +93,8 @@ def fetch_qualification_status(
 
     buffer = int(chips) - int(cutoff_chips)
     out["buffer_chips"] = buffer
-    if int(rank) <= cutoff_rank and buffer >= buffer_chips:
+    if buffer >= buffer_chips and int(rank) <= cutoff_rank:
         out["qualification_protect"] = True
+    if buffer >= lead_buffer_chips and int(rank) <= lead_rank:
+        out["lead_protect"] = True
     return out

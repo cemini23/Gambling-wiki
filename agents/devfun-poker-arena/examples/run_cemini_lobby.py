@@ -205,6 +205,7 @@ def run_lobby(args: argparse.Namespace) -> int:
     last_lobby_log_at = 0.0
     last_qual_check_at = 0.0
     qual_protect = False
+    lead_protect = False
     in_queue_only = False
 
     try:
@@ -314,7 +315,7 @@ def run_lobby(args: argparse.Namespace) -> int:
             ensure_joined(force=True)
 
         def refresh_qualification(force: bool = False) -> None:
-            nonlocal last_qual_check_at, qual_protect
+            nonlocal last_qual_check_at, qual_protect, lead_protect
             now = time.time()
             if not force and (now - last_qual_check_at) < QUAL_STATUS_INTERVAL_S:
                 return
@@ -322,11 +323,23 @@ def run_lobby(args: argparse.Namespace) -> int:
             try:
                 st = fetch_qualification_status(client, competition_id)
                 qual_protect = bool(st.get("qualification_protect"))
-                if qual_protect:
+                lead_protect = bool(st.get("lead_protect"))
+                if lead_protect:
+                    print(
+                        f"[cemini-lobby] LEAD protect ON "
+                        f"rank={st.get('rank')} chips={st.get('chips')} "
+                        f"buffer=+{st.get('buffer_chips')} vs #{st.get('cutoff_chips')}"
+                    )
+                elif qual_protect:
                     print(
                         f"[cemini-lobby] qualification protect ON "
                         f"rank={st.get('rank')} chips={st.get('chips')} "
                         f"buffer=+{st.get('buffer_chips')} vs #{st.get('cutoff_chips')}"
+                    )
+                elif st.get("rank") is not None:
+                    print(
+                        f"[cemini-lobby] protect OFF "
+                        f"rank={st.get('rank')} buffer=+{st.get('buffer_chips')}"
                     )
             except Exception as exc:
                 print(f"[cemini-lobby] qual status skip: {exc}", file=sys.stderr)
@@ -357,9 +370,11 @@ def run_lobby(args: argparse.Namespace) -> int:
                     max(0.0, (deadline_ms / 1000.0) - time.time()) if deadline_ms else 10.0
                 )
                 ctx = _safe_research_context(table, retrieve_fn)
-                if qual_protect:
-                    ctx["qualification_protect"] = True
+                if qual_protect or lead_protect:
+                    ctx["qualification_protect"] = qual_protect
                     ctx["survival_mode"] = True
+                if lead_protect:
+                    ctx["lead_protect"] = True
                 villain_mem = villain_memory_for_table(state, table)
                 if villain_mem:
                     ctx["session_villain_memory"] = villain_mem
