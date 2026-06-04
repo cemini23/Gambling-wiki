@@ -38,6 +38,7 @@ from arena_client import (  # noqa: E402
     load_state,
     save_state,
 )
+from output_sanitize import maybe_sanitize_action  # noqa: E402
 
 POLL_INTERVAL = 2.0
 POLL_JITTER = 0.5
@@ -406,6 +407,7 @@ def run_lobby(args: argparse.Namespace) -> int:
                 except TypeError:
                     action = decide_fn(table, deadline_s=deadline_s)
                 action = _normalize_action_name(action)
+                action = maybe_sanitize_action(action)
                 payload = {"tableId": table["tableId"], **action}
                 try:
                     client.post("/texas/action", payload)
@@ -447,7 +449,14 @@ def run_lobby(args: argparse.Namespace) -> int:
         client.close()
 
 
+def _apply_prod_defense_defaults() -> None:
+    """Enable anti-profiling defaults for live lobby unless operator overrides."""
+    os.environ.setdefault("CEMINI_SANITIZE_OUTPUT", "1")
+    os.environ.setdefault("CEMINI_MIX_POSTFLOP", "1")
+
+
 def main(argv: Optional[list[str]] = None) -> int:
+    _apply_prod_defense_defaults()
     p = argparse.ArgumentParser(description="Cemini dev.fun texas lobby loop")
     p.add_argument("--competition-id", default=None)
     p.add_argument("--max-actions", type=int, default=0,

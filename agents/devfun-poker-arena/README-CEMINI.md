@@ -271,6 +271,15 @@ cat reports/scan_results_submit.json
 
 Lobby refreshes every 10 min. Override: `CEMINI_QUAL_BUFFER_CHIPS`, `CEMINI_LEAD_BUFFER_CHIPS`, `CEMINI_LEAD_RANK`.
 
+## Anti-profiling (prod lobby defaults)
+
+| Env | Default (lobby) | Effect |
+|-----|-----------------|--------|
+| `CEMINI_SANITIZE_OUTPUT` | `1` | Generic `message` + `{vr: "std", ke: "legal", pp: "pot control"}` reasoning on submit |
+| `CEMINI_MIX_POSTFLOP` | `1` | Hand-stable mixed call/fold in marginal postflop equity bands |
+
+Set either to `0` for local debug / regression. `run_cemini_lobby.py` uses `setdefault` — explicit `0` in `.env` overrides. Systemd unit sets both to `1`.
+
 **Play pacing (auto when protect is ON):** join retry slows so you take fewer new tables while safely ahead — normal **60s**, qualification **5 min** (`CEMINI_QUAL_JOIN_RETRY_S`), lead **15 min** (`CEMINI_LEAD_JOIN_RETRY_S`). Still act immediately when seated; throttle only affects *new* table intake. Falls back to 60s the moment protect turns OFF.
 
 ```bash

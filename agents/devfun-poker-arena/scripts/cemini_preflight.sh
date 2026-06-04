@@ -18,7 +18,11 @@ echo "==> [1/3] pytest (unit + cemini regression + scenarios)"
 uv run python -m pytest tests/ -q --tb=short
 
 echo ""
-echo "==> [2/3] cemini self-play KPI audit (report)"
+echo "==> [2/4] anti-profiling deep audit (mix+s sanitize ON)"
+uv run python examples/cemini_anti_profiling_audit.py --gate --hands 400 --seed 42
+
+echo ""
+echo "==> [3/4] cemini self-play KPI audit (report, mix OFF baseline)"
 if [[ "$FULL" -eq 1 ]]; then
   uv run python examples/cemini_selfplay_audit.py --hands 600 --seed 42 --gate
 else
@@ -26,7 +30,7 @@ else
 fi
 
 echo ""
-echo "==> [3/3] dry-run lobby path (no network)"
+echo "==> [4/4] dry-run lobby path (no network)"
 uv run examples/agent.py --agent examples/cemini_decide.py --dry-run --max-hands 15
 
 echo ""

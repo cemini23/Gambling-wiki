@@ -10,7 +10,10 @@ related:
   - concepts/poker-strategy-overview.md
   - concepts/gambling-bot-architecture.md
   - concepts/poker-hl-analyst-loop.md
+  - concepts/opponent-modeling-imperfect-info.md
+  - entities/people/tom-dwan.md
   - sources/devfun-poker-arena-phase0-2026-06-01.md
+  - sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md
   - entities/games/poker.md
 maturity: draft
 created: 2026-06-01
@@ -23,6 +26,7 @@ claim_status: VERIFIED 2026-06-01 — @cemini23
 
 - @entities/platforms/devfun-poker-arena.md — venue + Phase-0
 - @entities/tools/pokerskill.md — skill-binding pattern (full PokerSkill repo not wired yet)
+- @entities/people/tom-dwan.md — Pro Table Finale villain profile (`durrrr` exploit overlay — **not** Playground defaults)
 - @concepts/poker-hl-analyst-loop.md — **HL analyst loop** (analyze → patch → preflight → deploy)
 - `briefs/2026-06-03_playground-top20-qualification.md` — top-20 cutoff + survival strategy
 - Code: `agents/devfun-poker-arena/examples/cemini_decide.py`
@@ -59,6 +63,10 @@ arena API (pending-actions → action)
 2. **Skill binding stub** — scenario labels in YAML reasoning (`open_defend`, `wet_board_pot_control`, …) — PokerSkill-shaped, not full lbn187/PokerSkill repo yet
 3. **Postflop** — treys Monte Carlo equity vs pot odds (from starter `agent.py`)
 4. **Clock** — check/fold when `deadline_s < 2`
+
+### Pro Table Finale prep (future)
+
+When dev.fun publishes finale format: add **`villain_id: durrrr`** exploit margins per @entities/people/tom-dwan.md — lower bluff freq, thinner value, wider call vs pressure. **Do not** merge into Playground survival logic (`_SURVIVAL_STACK_CHIPS`).
 
 ### Next iterations
 

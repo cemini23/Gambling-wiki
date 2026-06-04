@@ -40,6 +40,7 @@ except ImportError:
     def _train_threshold(_name: str, default: float) -> float:  # noqa: E402
         return default
 from research_static_chart import research_static_chart  # noqa: E402
+from action_mix import resolve_postflop_call_fold  # noqa: E402
 
 # Preflop trash facing a raise — fold unless equity clearly covers price.
 _WEAK_FACING_RAISE = frozenset({
@@ -228,6 +229,14 @@ def decide(
             and equity < max(pot_odds + garbage_margin, trash_eq)):
         return _build("fold", None, table, allowed, eq=equity, po=pot_odds,
                       msg=f"{binding}: trash hand vs bet — fold")
+
+    # HL R6 #01 — 72o CO paired runout; IP low trash must not call any street.
+    if (street != "Preflop" and call_chips > 0 and "fold" in available
+            and position in ("CO", "BTN") and in_position
+            and _is_low_trash_offsuit(hc)
+            and _board_is_paired(board)):
+        return _build("fold", None, table, allowed, eq=equity, po=pot_odds,
+                      msg=f"{binding}: CO/BTN trash on paired board — fold")
 
     # PokerSkill library / stub: explicit fold when facing a bet (weak hands only).
     if (ps_bias == "fold" and call_chips > 0 and "fold" in available
@@ -440,6 +449,11 @@ def _preflop_vs_bet(chart: dict, allowed: dict, available: list,
             and "fold" in available):
         return "fold", None
 
+    # BB: fold low suited trash vs opens (T2s, 98s — HL R6 #04/#05).
+    if (position == "BB" and call_chips > 0 and _is_bb_suited_trash(hc)
+            and "fold" in available):
+        return "fold", None
+
     # EP/MP: no medium-pair calls vs raises (77 MP −100 analyze #02).
     if (position in ("UTG", "MP") and call_chips > 0
             and hc in _LOW_PAIRS_PROTECT and "fold" in available):
@@ -557,6 +571,16 @@ def _is_sb_suited_trash(hc: str) -> bool:
         return False
     hi, lo = _RANKS.index(hc[0]), _RANKS.index(hc[1])
     return hi <= 6 and lo <= 4
+
+
+def _is_bb_suited_trash(hc: str) -> bool:
+    """Low suited junk BB floats (T2s, 98s — HL R6 #04/#05)."""
+    if len(hc) != 3 or hc[2] != "s" or hc[0] == hc[1]:
+        return False
+    if _is_sb_suited_trash(hc):
+        return True
+    hi, lo = _RANKS.index(hc[0]), _RANKS.index(hc[1])
+    return hi <= 8 and lo <= 7
 
 
 def _is_sb_complete_trash(hc: str) -> bool:
@@ -765,6 +789,41 @@ def _hero_overcards_only(hole: list[str], board: list[str]) -> bool:
     return not any(r in branks for r in hranks)
 
 
+def _postflop_mix_allowed(
+    hand_class: str,
+    hole: list[str],
+    board: list[str],
+    position: str,
+    in_position: bool,
+) -> bool:
+    """No random mixing on Playground leak classes — MC variance must not open calls."""
+    if hand_class in _WEAK_FACING_RAISE or _is_garbage_offsuit(hand_class):
+        return False
+    if _weak_ace_offsuit(hand_class) and _board_is_paired(board):
+        return False
+    if position in ("CO", "BTN") and in_position and _is_low_trash_offsuit(hand_class):
+        if _board_is_paired(board):
+            return False
+    if _weak_top_pair_offsuit(hand_class) or _marginal_offsuit_top_pair(hand_class):
+        return False
+    if _small_pocket_pair(hand_class) and _board_overcard_to_pocket(hand_class, board):
+        return False
+    if _hero_underpair_on_paired_board(hand_class, board):
+        return False
+    if _board_is_paired(board) and _weak_broadway_offsuit(hand_class):
+        return False
+    if position in ("UTG", "MP", "CO") and not in_position and not _is_strong_continue(hand_class):
+        return False
+    if _board_paired_hero_missed(hole, board) or _hero_overcards_only(hole, board):
+        return False
+    if in_position and _board_is_paired(board):
+        if (_hero_ace_high_on_paired_board(hole, board)
+                or _hero_vulnerable_on_paired_board(hole, board)
+                or _weak_broadway_offsuit(hand_class)):
+            return False
+    return True
+
+
 def _postflop_free(equity: float, allowed: dict, available: list,
                    pot: int, *, pot_control: bool = False,
                    ps_bias: Optional[str] = None,
@@ -877,7 +936,7 @@ def _postflop_facing_bet(equity: float, pot_odds: float, allowed: dict,
     if (not in_position and _weak_ace_offsuit(hand_class)
             and _board_is_paired(board)
             and call_chips >= max(int(pot * 0.32), 1)
-            and equity < 0.48 and "fold" in available):
+            and "fold" in available):
         return "fold", None
 
     # EP OOP marginal top pair on paired boards — T6o MP −290 (analyze #01).
@@ -961,8 +1020,6 @@ def _postflop_facing_bet(equity: float, pot_odds: float, allowed: dict,
     rock_oop_eq = _train_threshold("rock_oop_fold_eq", 0.40)
     if hud_mode == "rock" and not in_position and equity < rock_oop_eq and "fold" in available:
         fold_slack += 0.02
-    if equity < pot_odds - fold_slack and "fold" in available:
-        return "fold", None
     raise_bar = 0.82 if in_position else 0.86
     if equity > raise_bar and allowed.get("canRaise") and "raise" in available:
         rr = allowed.get("raiseRange") or {}
@@ -970,11 +1027,12 @@ def _postflop_facing_bet(equity: float, pot_odds: float, allowed: dict,
         max_r = int(rr.get("max") or min_r)
         target = max(min_r, min(int(pot * 0.75 + call_chips * 2), max_r))
         return "raise", target
-    if equity >= pot_odds + call_margin and "call" in available:
-        return "call", None
-    if "check" in available:
-        return "check", None
-    return ("fold" if "fold" in available else "call"), None
+    table_ctx = table if table is not None else {}
+    allow_mix = _postflop_mix_allowed(hand_class, hole, board, position, in_position)
+    return resolve_postflop_call_fold(
+        table_ctx, equity, pot_odds, fold_slack, call_margin, available,
+        allow_mix=allow_mix,
+    )
 
 
 def _message(action: str, equity: float, pot_odds: float,

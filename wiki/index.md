@@ -79,6 +79,7 @@ Catalog of all wiki pages. Updated on each ingest.
 |------|----------|
 | [alex-monahan](entities/people/alex-monahan.md) | draft |
 | [rufus-peabody](entities/people/rufus-peabody.md) | draft |
+| [tom-dwan](entities/people/tom-dwan.md) | draft |
 
 ## Entities — Games
 
@@ -119,6 +120,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [polygnosis-2-polymarket-osint-2026-06-01](sources/polygnosis-2-polymarket-osint-2026-06-01.md) | deep-read |
 | [youtube-wsj-kalshi-polymarket-valuations-2026-06-01](sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md) | deep-read |
 | [devfun-poker-arena-phase0-2026-06-01](sources/devfun-poker-arena-phase0-2026-06-01.md) | read |
+| [youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03](sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md) | deep-read |
 
 ## Meta
 

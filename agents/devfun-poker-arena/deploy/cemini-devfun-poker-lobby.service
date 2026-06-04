@@ -10,6 +10,8 @@ User=root
 Group=root
 WorkingDirectory=/opt/devfun-poker-arena
 Environment=PYTHONUNBUFFERED=1
+Environment=CEMINI_SANITIZE_OUTPUT=1
+Environment=CEMINI_MIX_POSTFLOP=1
 EnvironmentFile=-/opt/devfun-poker-arena/.env
 ExecStart=/opt/devfun-poker-arena/venv/bin/python examples/run_cemini_lobby.py
 Restart=always

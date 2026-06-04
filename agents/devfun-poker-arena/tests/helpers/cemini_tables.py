@@ -334,6 +334,34 @@ def bb_facing_raise(hero_hole: list[str], *, raise_to: int = 60) -> dict:
     )
 
 
+def co_72o_paired_river(*, villain_bet: int = 50, pot: int = 150) -> dict:
+    """72o CO IP on paired runout — HL R6 analyze #01."""
+    return six_max_table(
+        name="co_72o_paired_river",
+        hero_seat=6,
+        button_seat=1,
+        street="River",
+        board=["3d", "3c", "Ts", "Jh", "6h"],
+        pot=pot,
+        hero_hole=["7d", "2s"],
+        hero_stack=500,
+        hero_bet=0,
+        villain_bets={5: villain_bet},
+        stacks={6: 500},
+        allowed=_allowed(
+            can_fold=True,
+            can_call=True,
+            call_chips=villain_bet,
+            call_to=villain_bet,
+        ),
+    )
+
+
+def bb_t2s_facing_open(*, raise_to: int = 60) -> dict:
+    """T2s BB vs open — HL R6 analyze #05."""
+    return bb_facing_raise(["Ts", "2s"], raise_to=raise_to)
+
+
 def co_t5o_river(*, villain_bet: int = 100, pot: int = 200) -> dict:
     """T5o CO OOP weak top pair vs river bet — analyze round 4 #12."""
     return six_max_table(

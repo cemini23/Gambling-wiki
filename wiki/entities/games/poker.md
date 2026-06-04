@@ -14,9 +14,11 @@ related:
   - sources/daily-digest-arxiv-batch-2026-06-01.md
   - entities/platforms/devfun-poker-arena.md
   - entities/bots/cemini-devfun-poker-agent.md
+  - entities/people/tom-dwan.md
+  - sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-06-01
+updated: 2026-06-03
 ---
 
 ## Relations

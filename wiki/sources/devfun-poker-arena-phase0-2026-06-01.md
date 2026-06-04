@@ -11,16 +11,19 @@ related:
   - entities/bots/poker-bot-tooling.md
   - concepts/poker-strategy-overview.md
   - concepts/gambling-bot-architecture.md
+  - entities/people/tom-dwan.md
+  - sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md
 maturity: validated
 read_status: read
 created: 2026-06-01
-updated: 2026-06-01
+updated: 2026-06-03
 ---
 
 ## Relations
 
 - @entities/platforms/devfun-poker-arena.md — entity verdict
 - @entities/bots/cemini-devfun-poker-agent.md — implementation stub
+- @entities/people/tom-dwan.md — finale pro opponent (post Phase-0 ingest)
 
 ## Raw Concept
 

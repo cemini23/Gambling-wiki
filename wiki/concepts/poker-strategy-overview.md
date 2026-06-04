@@ -18,9 +18,11 @@ related:
   - entities/platforms/devfun-poker-arena.md
   - entities/bots/cemini-devfun-poker-agent.md
   - sources/devfun-poker-arena-phase0-2026-06-01.md
+  - entities/people/tom-dwan.md
+  - sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-06-01
+updated: 2026-06-03
 ---
 
 ## Relations

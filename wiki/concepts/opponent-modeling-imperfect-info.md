@@ -15,6 +15,8 @@ related:
   - sources/arxiv-2508-17671-consistent-opponent-modeling.md
   - sources/daily-digest-arxiv-batch-2026-06-01.md
   - sources/devfun-poker-arena-phase0-2026-06-01.md
+  - entities/people/tom-dwan.md
+  - sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md
 maturity: draft
 created: 2026-06-03
 updated: 2026-06-03
@@ -66,6 +68,16 @@ Ganzfried's algorithm maintains posterior mean over **sequence-form realization 
 - **Fallback**: table-aggregate HUD when agent IDs missing
 
 Pair with sweep-tuned margins (`sweep_production`: tighter vs rock steal bar, looser vs maniac calls) — see `SWEEP-RESULTS-2026-06-02.md`.
+
+### Named villain archetypes (human finale)
+
+When opponent identity is known ahead of time (dev.fun **Pro Table Finale** vs @entities/people/tom-dwan.md), **static exploit priors** can supplement HUD:
+
+| Archetype | Prior | Bot knob |
+|-----------|-------|----------|
+| **durrrr** (LAG pressure) | High call vs bets; wide 3-bet; merged bluff/value | Lower bluff freq; thinner value; wider call vs large bets |
+
+Apply only when finale format confirms human seat — not Playground bot pool defaults.
 
 ### Human poker parallel
 

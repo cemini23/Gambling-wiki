@@ -47,6 +47,18 @@ uv run python -m pytest tests/test_cemini_regression.py tests/test_cemini_scenar
 
 **After each analyze cycle:** add a spot to `tests/fixtures/regression_spots.py` (or run `examples/export_regression_spots.py` for stubs).
 
+### Layer 3b — Anti-profiling deep audit (~60s, **required before prod deploy**)
+
+Validates `CEMINI_SANITIZE_OUTPUT` + `CEMINI_MIX_POSTFLOP` do not regress leak spots or KPI gates:
+
+```bash
+uv run python examples/cemini_anti_profiling_audit.py --gate --hands 400 --seed 42
+```
+
+Also runs automatically inside `./scripts/cemini_preflight.sh` (step 2/4).
+
+Checks: 20 regression spots × mix off/on (8 repeats), sanitize preserves actions, self-play A/B (mix Δbb/100 ≤ 12), prod-env KPI gate at 250 hands.
+
 ### Layer 3 — Self-play KPI audit (~30–90s)
 
 Tracks **VPIP, PFR, EP trash opens, bb/100** vs rock + maniac with `--training-hud`:

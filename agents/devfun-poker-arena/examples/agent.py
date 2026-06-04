@@ -551,6 +551,11 @@ def _run_benchmark_loop(
             except TypeError:
                 action = decide_fn(table, deadline_s=deadline_s)
             action = _normalize_action_name(action)
+            try:
+                from output_sanitize import maybe_sanitize_action
+                action = maybe_sanitize_action(action)
+            except ImportError:
+                pass
             payload = {"tableId": table["tableId"], **action}
             try:
                 client.post("/texas/action", payload)

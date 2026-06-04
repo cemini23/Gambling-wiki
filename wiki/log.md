@@ -2,6 +2,13 @@
 
 Append-only chronological log.
 
+## [2026-06-03] ingest | Tom Dwan HSP compilation — pro-table villain profile
+
+- **Source** — `sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md` ([uC1pmdBTn6U](https://www.youtube.com/watch?v=uC1pmdBTn6U))
+- **Entity** — `entities/people/tom-dwan.md` (LAG archetype + bot counter-strategy)
+- **Updated** — `devfun-poker-arena.md` (event ladder clarified), `cemini-devfun-poker-agent.md`, `opponent-modeling-imperfect-info.md`, `poker-strategy-overview.md`, `devfun-poker-arena-phase0-2026-06-01.md`
+- **Archived** — `raw-sources/youtube-uC1pmdBTn6U.en.vtt`
+
 ## [2026-06-03] workflow | Poker HL analyst loop — analyze → patch → preflight → deploy
 
 - **Concept** — `concepts/poker-hl-analyst-loop.md` (validated)

@@ -8,10 +8,12 @@ related:
   - entities/tools/pokerskill.md
   - entities/bots/poker-bot-tooling.md
   - concepts/poker-strategy-overview.md
+  - concepts/opponent-modeling-imperfect-info.md
   - entities/games/poker.md
   - concepts/gambling-bot-architecture.md
+  - entities/people/tom-dwan.md
   - sources/devfun-poker-arena-phase0-2026-06-01.md
-  - entities/games/poker.md
+  - sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md
 maturity: draft
 created: 2026-06-01
 updated: 2026-06-03
@@ -23,6 +25,7 @@ adoption_status: PHASE-0-COMPLETE
 
 - @entities/bots/cemini-devfun-poker-agent.md — Cemini custom `decide()` entry
 - @entities/tools/pokerskill.md — skill-library binding pattern for LLM/heuristic agents
+- @entities/people/tom-dwan.md — Pro Table Finale human pro (style + bot counter-strategy)
 - @sources/devfun-poker-arena-phase0-2026-06-01.md — Phase-0 audit source
 
 ## Raw Concept
@@ -37,6 +40,17 @@ adoption_status: PHASE-0-COMPLETE
 
 Same handle on beta and official = **two agent IDs**, **two custodial Monad wallets**. MON deposited on beta does **not** sync to official. Outbound `POST /agent/wallet/transfer/native` only accepts dev.fun **protocol addresses** (402 entry fees); agent-to-agent transfer returns **403**. Fund official via MoonPay or external send to the official agent wallet address. Check: `agents/devfun-poker-arena/scripts/cemini_wallet_check.sh`. See repo `LESSONS.md` L4.
 - **Main event opens**: **2026-06-03** (landing page); prize pool **$50K** + Tom Dwan pro-table seat (marketing)
+
+### Event ladder (2026-06-03 landing) [CONFIRMED]
+
+| Stage | Format | Advance |
+|-------|--------|---------|
+| **Playground** | Bot qualifier (Jun 3–7, Jun 7–11 windows) | Top **20** |
+| **Tournament** | Knockout bracket | Top **25** |
+| **Researcher track** | Invite-only sandbox benchmark | Top **3** paid |
+| **Pro Table Finale** | **Human vs AI** — format **TBD** | Top agents earn seat vs pro |
+
+Tom Dwan is the **marketing anchor** for the finale, **not** a player in bot brackets. See @entities/people/tom-dwan.md.
 
 ## Narrative
 
