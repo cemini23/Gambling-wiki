@@ -19,8 +19,15 @@ jobs:
       - uses: astral-sh/setup-uv@v5
         with:
           enable-cache: true
-          cache-dependency-glob: agents/devfun-poker-arena/uv.lock
+          cache-dependency-glob: uv.lock
       - name: Install dev deps
         run: uv sync --extra dev
+      - name: Seed private HUD stub for CI
+        run: |
+          mkdir -p private
+          if [[ ! -f private/opponent_hud_exploit.py ]]; then
+            cp examples/opponent_hud_stub.py private/opponent_hud_exploit.py
+          fi
+          touch private/__init__.py
       - name: Run preflight gate
         run: ./scripts/cemini_preflight.sh

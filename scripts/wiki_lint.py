@@ -53,12 +53,16 @@ def load_wiki_aliases():
     for m in table_re.finditer(text):
         alias = m.group(1).strip()
         path_str = m.group(2).strip().rstrip("/")
-        # Path from CLAUDE.md already includes wiki/ — don't append again
         wiki_path = Path(path_str)
+        if not wiki_path.is_absolute():
+            wiki_path = (claude_md.parent / wiki_path).resolve()
         if wiki_path.is_dir():
             aliases[alias] = wiki_path
         elif (wiki_path / "wiki").is_dir():
             aliases[alias] = wiki_path / "wiki"
+        else:
+            # Sibling wiki absent (e.g. GitHub Actions) — still register alias for lint.
+            aliases[alias] = wiki_path if wiki_path.name == "wiki" else wiki_path / "wiki"
     return aliases
 
 
