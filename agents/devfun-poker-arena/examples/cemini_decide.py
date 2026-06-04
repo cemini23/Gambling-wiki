@@ -52,6 +52,10 @@ _WEAK_FACING_RAISE = frozenset({
     "54o", "53o", "52o", "43o", "42o", "32o", "96o", "79o",
 })
 
+_LOW_PAIRS_PROTECT = frozenset({"77", "66", "55", "44", "33", "22"})
+_BB_BROADWAY_FOLD = frozenset({"KQo", "QJo", "KJo", "KTo", "QTo", "JTo"})
+_PREFLOP_3BET_OK = frozenset({"AA", "KK", "QQ", "JJ", "TT", "AKs", "AKo", "AQs", "AQo"})
+
 _RANKS = "23456789TJQKA"
 _SURVIVAL_STACK_CHIPS = 1200  # below ~buy-in — preserve stack for qualification
 
@@ -421,10 +425,24 @@ def _preflop_vs_bet(chart: dict, allowed: dict, available: list,
     position = chart.get("position") or ""
     suggested = chart.get("suggested_action") or "fold"
 
+    # Static chart is open-range only — facing a raise, downgrade spurious "raise" (77 MP −100).
+    if call_chips > 0 and suggested == "raise" and hc not in _PREFLOP_3BET_OK:
+        suggested = "fold"
+
     # BB: never defend chart-trash vs raises (Q6o BB −100 — IP preflop pricing leak).
     if (position == "BB" and call_chips > 0 and hc in _WEAK_FACING_RAISE
             and hc not in {"AA", "KK", "QQ", "JJ", "TT", "AKs", "AKo", "AQs", "AQo"}
             and "fold" in available):
+        return "fold", None
+
+    # BB: fold dominated broadway vs opens (KQo BB −100 analyze #10).
+    if (position == "BB" and call_chips > 0 and hc in _BB_BROADWAY_FOLD
+            and "fold" in available):
+        return "fold", None
+
+    # EP/MP: no medium-pair calls vs raises (77 MP −100 analyze #02).
+    if (position in ("UTG", "MP") and call_chips > 0
+            and hc in _LOW_PAIRS_PROTECT and "fold" in available):
         return "fold", None
 
     # Lead protect: no wide CO/BTN defends — chart + premiums only.
@@ -432,8 +450,9 @@ def _preflop_vs_bet(chart: dict, allowed: dict, available: list,
             and hc not in {"AA", "KK", "QQ", "JJ", "TT", "AKs", "AKo", "AQs", "AQo"}
             and suggested == "fold" and "fold" in available):
         return "fold", None
-    # BB: defend blinds at price when chart implies call (fight blind bleed OOP).
+    # BB: defend priced pairs/suited only — no broadway float (KQo leak).
     if (lead_protect and position == "BB" and suggested != "fold"
+            and hc not in _BB_BROADWAY_FOLD
             and equity >= pot_odds + 0.02 and "call" in available):
         return "call", None
 

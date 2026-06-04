@@ -178,4 +178,20 @@ def regression_spots() -> list[RegressionSpot]:
             forbidden=frozenset({"call", "raise", "all-in"}),
             notes="CO weak top pair OOP vs river bet — fold.",
         ),
+        RegressionSpot(
+            id="prod_77_mp_vs_raise",
+            source="Playground analyze round 5 #02 — 77 MP −100 preflop",
+            table=mp_facing_raise(["7h", "7s"]),
+            forbidden=frozenset({"call", "raise", "all-in"}),
+            required=frozenset({"fold"}),
+            notes="Protect mode: no medium-pair calls vs EP opens.",
+        ),
+        RegressionSpot(
+            id="prod_kqo_bb_vs_open_protect",
+            source="Playground analyze round 5 #10 — KQo BB −100 preflop",
+            table=bb_facing_raise(["Qs", "Kh"]),
+            forbidden=frozenset({"call", "raise", "all-in"}),
+            required=frozenset({"fold"}),
+            notes="BB broadway fold under qualification protect.",
+        ),
     ]
