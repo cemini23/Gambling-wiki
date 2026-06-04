@@ -588,7 +588,7 @@ def _is_bb_suited_trash(hc: str) -> bool:
     if _is_sb_suited_trash(hc):
         return True
     hi, lo = _RANKS.index(hc[0]), _RANKS.index(hc[1])
-    return hi <= 8 and lo <= 7
+    return hi <= 8 and lo <= 7 or hc in {"J8s", "T8s", "K8s"}
 
 
 def _is_sb_complete_trash(hc: str) -> bool:
@@ -683,6 +683,36 @@ def _hero_underpair_on_paired_board(hand_class: str, board: list[str]) -> bool:
     branks = [c[0].upper() for c in board]
     top = max(branks, key=lambda r: _RANKS.index(r))
     return _RANKS.index(top) > _RANKS.index(hand_class[0])
+
+
+def _hero_pairs_flop(hole: list[str], board: list[str]) -> bool:
+    if len(hole) != 2 or len(board) < 3:
+        return False
+    hr = {_RANKS.index(c[0].upper()) for c in hole}
+    br = {_RANKS.index(c[0].upper()) for c in board[:3]}
+    return bool(hr & br)
+
+
+def _bb_oop_missed_k_high(hole: list[str], board: list[str], hand_class: str) -> bool:
+    """BB defended trash that whiffs K-high flops — J8s on K65 (HL R7 #01)."""
+    if len(board) < 3:
+        return False
+    br = [_RANKS.index(c[0].upper()) for c in board]
+    if max(br) < _RANKS.index("K"):
+        return False
+    if _hero_pairs_flop(hole, board):
+        return False
+    if _is_strong_continue(hand_class):
+        return False
+    if hand_class in {
+        "J8s", "J8o", "T8s", "T8o", "T9s", "98s", "87s", "76s",
+        "K8o", "K7o", "Q8o", "J9o",
+    }:
+        return True
+    if len(hand_class) == 3 and hand_class[2] == "s":
+        hi, lo = _RANKS.index(hand_class[0]), _RANKS.index(hand_class[1])
+        return hi <= _RANKS.index("J") and lo <= _RANKS.index("8")
+    return False
 
 
 def _weak_kicker_top_pair(hole: list[str], board: list[str]) -> bool:
@@ -884,6 +914,13 @@ def _postflop_facing_bet(equity: float, pot_odds: float, allowed: dict,
 
     if table and _overcommit_should_fold(
             table, hand_class, equity, call_chips, lead_protect=lead_protect):
+        return "fold", None
+
+    # BB OOP air on K-high flops — J8s on K65 (HL R7 analyze #01).
+    if (position == "BB" and not in_position
+            and _bb_oop_missed_k_high(hole, board, hand_class)
+            and call_chips >= max(int(pot * 0.25), 1)
+            and "fold" in available):
         return "fold", None
 
     # Lead protect: fold IP weak broadway vs medium+ bets (preserve chip stack).

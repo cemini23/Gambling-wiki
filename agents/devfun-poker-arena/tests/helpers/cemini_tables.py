@@ -362,6 +362,30 @@ def bb_t2s_facing_open(*, raise_to: int = 60) -> dict:
     return bb_facing_raise(["Ts", "2s"], raise_to=raise_to)
 
 
+def bb_j8s_k65_flop(*, villain_bet: int = 55, pot: int = 115) -> dict:
+    """J8s BB OOP unpaired on K65 vs c-bet — HL R7 analyze #01."""
+    return six_max_table(
+        name="bb_j8s_k65_flop",
+        hero_seat=3,
+        button_seat=1,
+        street="Flop",
+        board=["Ks", "6d", "5h"],
+        pot=pot,
+        hero_hole=["8s", "Js"],
+        hero_stack=950,
+        hero_bet=0,
+        villain_bets={1: villain_bet},
+        stacks={3: 950},
+        allowed=_allowed(
+            can_call=True,
+            can_raise=True,
+            call_chips=villain_bet,
+            call_to=villain_bet,
+            raise_range={"min": villain_bet * 2, "max": 400},
+        ),
+    )
+
+
 def co_t5o_river(*, villain_bet: int = 100, pot: int = 200) -> dict:
     """T5o CO OOP weak top pair vs river bet — analyze round 4 #12."""
     return six_max_table(

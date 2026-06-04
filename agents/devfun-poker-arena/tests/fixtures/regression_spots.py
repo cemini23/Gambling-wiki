@@ -10,6 +10,7 @@ from dataclasses import dataclass
 from tests.helpers.cemini_tables import (
     bb_a6o_paired_river,
     bb_facing_raise,
+    bb_j8s_k65_flop,
     bb_t2s_facing_open,
     btn_qto_flush_river,
     co_72o_paired_river,
@@ -211,5 +212,13 @@ def regression_spots() -> list[RegressionSpot]:
             forbidden=frozenset({"call", "raise", "all-in"}),
             required=frozenset({"fold"}),
             notes="BB low suited trash vs open — fold.",
+        ),
+        RegressionSpot(
+            id="prod_j8s_bb_k65_flop",
+            source="HL R7 analyze #01 — J8s BB −100 on K65",
+            table=bb_j8s_k65_flop(),
+            forbidden=frozenset({"call", "raise", "all-in"}),
+            required=frozenset({"fold"}),
+            notes="BB OOP missed K-high flop — fold vs c-bet.",
         ),
     ]
