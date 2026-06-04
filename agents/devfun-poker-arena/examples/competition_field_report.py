@@ -49,6 +49,16 @@ def _avg_stat(group: list[dict], key: str) -> float | None:
     return mean(nums) if nums else None
 
 
+def _leader_agent(agents: list[dict]) -> dict | None:
+    """Return rank-1 agent; fall back to best (lowest) rank when export is partial."""
+    if not agents:
+        return None
+    rank_one = next((a for a in agents if a.get("rank") == 1), None)
+    if rank_one is not None:
+        return rank_one
+    return min(agents, key=lambda x: x.get("rank") or 9999)
+
+
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description="Competition field report from export dir")
     p.add_argument("export_dir", type=Path, help="Directory with agents.jsonl, tables.jsonl")
@@ -80,9 +90,10 @@ def main(argv: list[str] | None = None) -> int:
         )
 
     hero = next((a for a in agents if (a.get("handle") or "").lower() == args.hero.lower()), None)
-    leader = agents[0] if agents else None
+    leader = _leader_agent(agents)
     if hero and leader:
-        print("\n=== Hero vs #1 ===")
+        leader_label = leader.get("handle") or f"rank {leader.get('rank', '?')}"
+        print(f"\n=== Hero vs #1 ({leader_label}) ===")
         for key in ("vpip", "pfr", "three_bet_pct"):
             hs = (hero.get("stats") or {}).get(key)
             ls = (leader.get("stats") or {}).get(key)
@@ -98,7 +109,10 @@ def main(argv: list[str] | None = None) -> int:
         vp = _avg_stat(grp, "vpip")
         pf = _avg_stat(grp, "pfr")
         if vp is not None:
-            print(f"{label:8} avg VPIP={_fmt_pct(vp)}  PFR={_fmt_pct(pf)}" if pf else f"{label:8} avg VPIP={_fmt_pct(vp)}")
+            line = f"{label:8} avg VPIP={_fmt_pct(vp)}"
+            if pf is not None:
+                line += f"  PFR={_fmt_pct(pf)}"
+            print(line)
 
     grok = [a for a in agents if "grok" in (a.get("handle") or "").lower()]
     grok_top = sorted(grok, key=lambda x: x.get("rank") or 9999)[:10]
