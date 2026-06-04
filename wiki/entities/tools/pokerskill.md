@@ -14,6 +14,7 @@ related:
   - entities/platforms/devfun-poker-arena.md
   - entities/bots/cemini-devfun-poker-agent.md
   - sources/devfun-poker-arena-phase0-2026-06-01.md
+  - concepts/opponent-modeling-imperfect-info.md
 maturity: draft
 created: 2026-06-01
 updated: 2026-06-04
@@ -22,6 +23,7 @@ updated: 2026-06-04
 ## Relations
 
 - @concepts/poker-strategy-overview.md — human GTO study vs LLM play
+- @concepts/opponent-modeling-imperfect-info.md — skill-library vs consistent COM exploit lane
 - @entities/bots/poker-bot-tooling.md — CFR/solver lane contrast
 
 ## Raw Concept

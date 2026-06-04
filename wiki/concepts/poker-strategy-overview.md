@@ -20,15 +20,19 @@ related:
   - sources/devfun-poker-arena-phase0-2026-06-01.md
   - entities/people/tom-dwan.md
   - sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md
+  - concepts/opponent-modeling-imperfect-info.md
+  - concepts/poker-hl-analyst-loop.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-06-03
+updated: 2026-06-04
 ---
 
 ## Relations
 
 - @entities/games/poker.md — game entity
 - @entities/platforms/pokerstars.md — major online room
+- @concepts/opponent-modeling-imperfect-info.md — bot / repeated-game exploit lane (BBR, HUD)
+- @concepts/poker-hl-analyst-loop.md — arena HL patch workflow
 - @sources/youtube-operator-batch-casino-2026-05-31.md — operator YouTube poker cluster
 
 ## Raw Concept

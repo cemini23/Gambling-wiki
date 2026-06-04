@@ -32,6 +32,7 @@ related:
   - entities/bots/cemini-devfun-poker-agent.md
   - sources/devfun-poker-arena-phase0-2026-06-01.md
   - concepts/poker-hl-analyst-loop.md
+  - concepts/opponent-modeling-imperfect-info.md
 maturity: core
 created: 2026-05-31
 updated: 2026-06-01

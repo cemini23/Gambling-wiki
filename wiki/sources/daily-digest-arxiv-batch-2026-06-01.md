@@ -16,15 +16,16 @@ related:
   - sources/daily-digest-news-r1-r12-2026-06-01.md
   - sources/polygnosis-2-polymarket-osint-2026-06-01.md
   - sources/daily-digest-arxiv-batch-2026-06-02.md
+  - concepts/opponent-modeling-imperfect-info.md
 maturity: validated
-read_status: deep-read
 created: 2026-06-01
-updated: 2026-06-01
+updated: 2026-06-04
 ---
 
 ## Relations
 
 - @meta/daily-research-digest-cadence.md — federated digest provenance
+- @concepts/opponent-modeling-imperfect-info.md — PokerSkill / sim research cross-ref
 - @sweeps/2026-06-01-daily.md — morning sweep that fetched these PDFs
 
 ## Raw Concept

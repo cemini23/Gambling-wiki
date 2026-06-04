@@ -11,15 +11,17 @@ related:
   - entities/tools/pokerskill.md
   - entities/bots/wagerbrain.md
   - entities/bots/README.md
+  - concepts/opponent-modeling-imperfect-info.md
 maturity: validated
 created: 2026-06-01
-updated: 2026-06-01
+updated: 2026-06-04
 laptop_install: VERIFIED 2026-06-01 — OSINT `.local/venv-gambling-research` (rlcard 1.2.0); run `gambling_research_venv.sh` in OSINT repo
 ---
 
 ## Relations
 
 - @concepts/poker-strategy-overview.md — poker research lane
+- @concepts/opponent-modeling-imperfect-info.md — sim research for opponent modeling
 - @sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md — K92 Adopt (Cemini financial in eval; gambling = sim research)
 
 ## Raw Concept

@@ -14,9 +14,11 @@ related:
   - entities/people/tom-dwan.md
   - sources/devfun-poker-arena-phase0-2026-06-01.md
   - sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md
+  - concepts/poker-hl-analyst-loop.md
+  - sources/arxiv-2508-17671-consistent-opponent-modeling.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-03
+updated: 2026-06-04
 phase_0_verdict: CONDITIONAL-GO 2026-06-01 — sanctioned bot arena (not live poker room); enter via arena API; prize claim needs X verify + external payout wallet
 adoption_status: PHASE-0-COMPLETE
 ---
@@ -24,6 +26,8 @@ adoption_status: PHASE-0-COMPLETE
 ## Relations
 
 - @entities/bots/cemini-devfun-poker-agent.md — Cemini custom `decide()` entry
+- @concepts/poker-hl-analyst-loop.md — analyze → patch → deploy loop for Playground leaks
+- @sources/arxiv-2508-17671-consistent-opponent-modeling.md — K95 opponent modeling anchor
 - @entities/tools/pokerskill.md — skill-library binding pattern for LLM/heuristic agents
 - @entities/people/tom-dwan.md — Pro Table Finale human pro (style + bot counter-strategy)
 - @sources/devfun-poker-arena-phase0-2026-06-01.md — Phase-0 audit source

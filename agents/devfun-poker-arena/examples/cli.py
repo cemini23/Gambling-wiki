@@ -49,6 +49,7 @@ commands:
   replay      render a self-contained HTML viewer for past matches
   analyze     failure analysis report for the Heuristic Learning loop
   export      download competition hand data (JSONL for training / opponent research)
+  field-report  summarize export dir (leaderboard, hero vs #1, tablemates)
   test        run the pytest smoke suite
   version     print version + git commit
 
@@ -64,6 +65,7 @@ examples:
   pokerkit analyze --out report.txt        # save to file
   pokerkit export --match <compId>         # JSONL hand dump for training
   pokerkit export --mode full              # all agent submissions (slow)
+  pokerkit field-report reports/exports/<compId>/  # field intel from export dir
 """)
 
 
@@ -100,6 +102,10 @@ def main(argv: Optional[list[str]] = None) -> int:
     if cmd == "export":
         import export_competition_hands as export_mod  # noqa: WPS433
         return export_mod.main(rest)
+
+    if cmd == "field-report":
+        import competition_field_report as field_report_mod  # noqa: WPS433
+        return field_report_mod.main(rest)
 
     if cmd == "test":
         repo_root = Path(__file__).resolve().parent.parent

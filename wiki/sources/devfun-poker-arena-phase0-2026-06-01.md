@@ -13,15 +13,17 @@ related:
   - concepts/gambling-bot-architecture.md
   - entities/people/tom-dwan.md
   - sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md
+  - concepts/opponent-modeling-imperfect-info.md
 maturity: validated
 read_status: read
 created: 2026-06-01
-updated: 2026-06-03
+updated: 2026-06-04
 ---
 
 ## Relations
 
 - @entities/platforms/devfun-poker-arena.md — entity verdict
+- @concepts/opponent-modeling-imperfect-info.md — arena exploit / HUD lane
 - @entities/bots/cemini-devfun-poker-agent.md — implementation stub
 - @entities/people/tom-dwan.md — finale pro opponent (post Phase-0 ingest)
 

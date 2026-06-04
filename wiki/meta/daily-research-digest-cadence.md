@@ -12,6 +12,7 @@ related:
   - sources/daily-digest-news-r1-r12-2026-06-01.md
   - sources/daily-digest-arxiv-batch-2026-06-02.md
   - sources/daily-digest-arxiv-batch-2026-06-04.md
+  - sweeps/2026-06-04-daily.md
   - sources/daily-digest-news-r1-r12-2026-06-02.md
   - sources/polygnosis-2-polymarket-osint-2026-06-01.md
 maturity: validated

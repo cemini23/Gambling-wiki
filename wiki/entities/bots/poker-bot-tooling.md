@@ -17,6 +17,8 @@ related:
   - entities/platforms/devfun-poker-arena.md
   - entities/bots/cemini-devfun-poker-agent.md
   - sources/devfun-poker-arena-phase0-2026-06-01.md
+  - concepts/opponent-modeling-imperfect-info.md
+  - concepts/poker-hl-analyst-loop.md
 maturity: draft
 created: 2026-06-01
 updated: 2026-06-04
@@ -25,6 +27,8 @@ updated: 2026-06-04
 ## Relations
 
 - @concepts/poker-strategy-overview.md — human strategy context
+- @concepts/opponent-modeling-imperfect-info.md — rlcard / sim lane for COM research
+- @concepts/poker-hl-analyst-loop.md — arena regression + HL tooling
 - @entities/games/poker.md — game entity
 - @sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md — K92 eval cluster
 

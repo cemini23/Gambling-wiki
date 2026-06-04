@@ -2,6 +2,12 @@
 
 Append-only chronological log.
 
+## [2026-06-04] maintenance | Playground rank sync, wiki links, field-report CLI
+
+- **Entity** — `cemini-devfun-poker-agent.md` — S1 rank **#3 @ 13,322** (Jun 4 export); Dead Ends timeline corrected
+- **Wiki lint** — repaired 13 bidirectional `related:` gaps; added frontmatter to `sweeps/2026-06-04-daily.md`
+- **Arena** — `competition_field_report.py` + `pokerkit field-report` + pytest; `.cursor/BUGBOT.md` for PR review
+
 ## [2026-06-04] ingest | PM digest arXiv batch (SEPO + D-Wave dead end)
 
 - **Sweep** — `wiki/sweeps/2026-06-04-daily.md`

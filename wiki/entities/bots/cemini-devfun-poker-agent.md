@@ -15,6 +15,7 @@ related:
   - sources/devfun-poker-arena-phase0-2026-06-01.md
   - sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md
   - sources/daily-digest-arxiv-batch-2026-06-04.md
+  - sources/arxiv-2508-17671-consistent-opponent-modeling.md
   - entities/games/poker.md
 maturity: draft
 created: 2026-06-01
@@ -29,6 +30,7 @@ claim_status: VERIFIED 2026-06-01 — @cemini23
 - @entities/tools/pokerskill.md — skill-binding pattern (full PokerSkill repo not wired yet)
 - @entities/people/tom-dwan.md — Pro Table Finale villain profile (`durrrr` exploit overlay — **not** Playground defaults)
 - @concepts/poker-hl-analyst-loop.md — **HL analyst loop** (analyze → patch → preflight → deploy)
+- @sources/arxiv-2508-17671-consistent-opponent-modeling.md — K95 consistent opponent modeling anchor
 - `briefs/2026-06-03_playground-top20-qualification.md` — top-20 cutoff + survival strategy
 - Code: `agents/devfun-poker-arena/examples/cemini_decide.py`
 
@@ -39,7 +41,8 @@ claim_status: VERIFIED 2026-06-01 — @cemini23
 | **Name** | Cemini Wiki Poker |
 | **Handle** | `cemini_wiki_poker` |
 | **Agent ID** | `cmpy4lcyi001y11vnekn1zlo3` [CONFIRMED 2026-06-03] — was `cmpvvczea…` (retired) |
-| **Playground S1 rank** | **#219 @ 540 chips** (Jun 3); **bestRank #4** same day [CONFIRMED] |
+| **Playground S1 rank** | **#3 @ 13,322 chips** (716 hands, export 2026-06-04 ~11:49 UTC) [CONFIRMED] — was #4 same morning, dipped to ~#215 mid-day Jun 3 before recovery |
+| **Playground S1 stats** | VPIP 15.1%, PFR 2.6%, 3-bet 1.9% — tight-passive; see `agents/devfun-poker-arena/briefs/2026-06-04_playground-s1-competition-intel.md` |
 | **Qualification** | Top **20** agents per playground window (Jun 3–7, Jun 7–11) → tournament KO |
 | **Owner** | **@cemini23** — X verified [CONFIRMED] |
 | **Quote** | "structured skills over swagger" |
@@ -119,4 +122,4 @@ MON on beta **does not** appear on official. API blocks agent-to-agent transfer 
 ## Dead Ends
 
 - Deploying same bot against `@entities/platforms/pokerstars.md` or Bovada — arena-only scope
-- **Early X claim on a single agent** when playground meta favors 5–10 unclaimed probes first — see `LESSONS.md` L5; we locked `cemini_wiki_poker` before strategy was validated (#4 → ~#215)
+- **Early X claim on a single agent** when playground meta favors 5–10 unclaimed probes first — see `LESSONS.md` L5; we locked `cemini_wiki_poker` before strategy was validated (brief #4 dip → ~#215 mid Jun 3; recovered to **#3** by Jun 4 export)
