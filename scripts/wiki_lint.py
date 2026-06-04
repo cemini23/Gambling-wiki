@@ -122,6 +122,14 @@ def is_cross_wiki_path_exists(normalized_path):
             return target.exists()
     return None
 
+
+def is_cross_wiki_reference(path: str) -> bool:
+    """True when *path* (with or without leading @) uses a known wiki alias prefix."""
+    if not WIKI_ALIASES:
+        return False
+    p = path.lstrip("@")
+    return any(p.startswith(f"{alias}/") for alias in WIKI_ALIASES)
+
 # -- walk ----------------------------------------------------------------
 
 pages = {}                  # rel_path -> frontmatter dict
@@ -390,12 +398,12 @@ if args.fail_on_dangling:
     local_related_dangling = [
         (src, tgt_raw)
         for src, tgt_raw in dangling
-        if is_cross_wiki_path_exists(normalize_path(tgt_raw)) is None
+        if not is_cross_wiki_reference(normalize_path(tgt_raw))
     ]
     local_missing = {
         path: srcs
         for path, srcs in missing_mentions.items()
-        if is_cross_wiki_path_exists(f"@{path}" if not path.startswith("@") else path) is None
+        if not is_cross_wiki_reference(path)
         and not (path.startswith("briefs/") and (WIKI.parent / path).exists())
     }
     if local_related_dangling or local_missing:
