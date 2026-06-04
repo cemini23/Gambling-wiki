@@ -8,6 +8,7 @@ related:
   - entities/bots/poker-bot-tooling.md
   - entities/games/poker.md
   - sources/daily-digest-arxiv-batch-2026-06-01.md
+  - sources/daily-digest-arxiv-batch-2026-06-04.md
   - concepts/gambling-bot-architecture.md
   - entities/tools/rlcard.md
   - entities/platforms/devfun-poker-arena.md
@@ -15,7 +16,7 @@ related:
   - sources/devfun-poker-arena-phase0-2026-06-01.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-01
+updated: 2026-06-04
 ---
 
 ## Relations
@@ -57,6 +58,10 @@ At each decision: engine labels board texture, hand class, action line, SPR, pre
 ### Design lesson for wiki
 
 **Decision-binding problem**: LLMs know concepts but fail to apply the right one per node — structured retrieval fixes binding. Analog for sportsbook bots: alert → **structured playbook** → LLM triage, not raw “place bet.”
+
+### Related LLM poker training (SEPO) [TENTATIVE]
+
+**SEPO** (arxiv:2605.30854) is an alternative paradigm: RL fine-tune with exploitability / collusion / externality penalties rather than skill-library retrieval. Benchmarks include **Kuhn Poker**; SFT warm-start alone worsens exploit resistance. Complements PokerSkill's training-free approach — see `@sources/daily-digest-arxiv-batch-2026-06-04.md`.
 
 ## Snippets
 

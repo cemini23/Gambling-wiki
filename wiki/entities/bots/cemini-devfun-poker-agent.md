@@ -14,10 +14,11 @@ related:
   - entities/people/tom-dwan.md
   - sources/devfun-poker-arena-phase0-2026-06-01.md
   - sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md
+  - sources/daily-digest-arxiv-batch-2026-06-04.md
   - entities/games/poker.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-03
+updated: 2026-06-04
 adoption_status: ACTIVE-DEV
 claim_status: VERIFIED 2026-06-01 — @cemini23
 ---

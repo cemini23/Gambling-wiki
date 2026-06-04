@@ -14,12 +14,13 @@ related:
   - entities/tools/rlcard.md
   - sources/arxiv-2508-17671-consistent-opponent-modeling.md
   - sources/daily-digest-arxiv-batch-2026-06-01.md
+  - sources/daily-digest-arxiv-batch-2026-06-04.md
   - sources/devfun-poker-arena-phase0-2026-06-01.md
   - entities/people/tom-dwan.md
   - sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md
 maturity: draft
 created: 2026-06-03
-updated: 2026-06-03
+updated: 2026-06-04
 ---
 
 ## Relations
@@ -78,6 +79,18 @@ When opponent identity is known ahead of time (dev.fun **Pro Table Finale** vs @
 | **durrrr** (LAG pressure) | High call vs bets; wide 3-bet; merged bluff/value | Lower bluff freq; thinner value; wider call vs large bets |
 
 Apply only when finale format confirms human seat — not Playground bot pool defaults.
+
+### Exploit-resistance training (SEPO) [TENTATIVE — 2026-06-04]
+
+**Safe Equilibrium Policy Optimization** (arxiv:2605.30854) trains LLM game agents with an explicit **exploitability penalty** alongside task payoff — the mirror problem to COM (which asks how to *exploit* weak opponents). On **Kuhn Poker**, SEPO drives exploit-pool advantage to **zero** (Nash mixed strategy) where SFT alone **increases** exploitability.
+
+| COM (Ganzfried) | SEPO (Arumugam et al.) |
+|-----------------|------------------------|
+| Exploit *suboptimal* opponents | Penalize *being* exploited |
+| Sequence-form posterior convergence | GRPO + per-rollout adversarial pool |
+| Arena HUD / `opponent_target.py` lane | Future LLM fine-tune research lane |
+
+See `@sources/daily-digest-arxiv-batch-2026-06-04.md` and `@entities/bots/poker-bot-tooling.md`.
 
 ### Human poker parallel
 

@@ -115,6 +115,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [brief-k93-federated-digest-2026-06-01](sources/brief-k93-federated-digest-2026-06-01.md) | deep-read |
 | [daily-digest-arxiv-batch-2026-06-01](sources/daily-digest-arxiv-batch-2026-06-01.md) | deep-read |
 | [daily-digest-arxiv-batch-2026-06-02](sources/daily-digest-arxiv-batch-2026-06-02.md) | read |
+| [daily-digest-arxiv-batch-2026-06-04](sources/daily-digest-arxiv-batch-2026-06-04.md) | read |
 | [daily-digest-news-r1-r12-2026-06-01](sources/daily-digest-news-r1-r12-2026-06-01.md) | read |
 | [daily-digest-news-r1-r12-2026-06-02](sources/daily-digest-news-r1-r12-2026-06-02.md) | read |
 | [polygnosis-2-polymarket-osint-2026-06-01](sources/polygnosis-2-polymarket-osint-2026-06-01.md) | deep-read |

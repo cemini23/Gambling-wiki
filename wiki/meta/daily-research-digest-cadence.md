@@ -11,11 +11,12 @@ related:
   - sources/daily-digest-arxiv-batch-2026-06-01.md
   - sources/daily-digest-news-r1-r12-2026-06-01.md
   - sources/daily-digest-arxiv-batch-2026-06-02.md
+  - sources/daily-digest-arxiv-batch-2026-06-04.md
   - sources/daily-digest-news-r1-r12-2026-06-02.md
   - sources/polygnosis-2-polymarket-osint-2026-06-01.md
 maturity: validated
 created: 2026-06-01
-updated: 2026-06-02
+updated: 2026-06-04
 ---
 
 ## Relations
@@ -34,7 +35,7 @@ K93 federated install: morning **discovery-only** loop for sports betting, PM re
 |-------|-------|
 | **Cadence** | Daily @ 08:15 local (`com.cemini.daily-research-digest.gambling`) |
 | **Installed** | 2026-06-01 (K93 brief) |
-| **Last run** | 2026-06-03 |
+| **Last run** | 2026-06-04 |
 | **Script** | `~/bin/cemini-daily-research-digest-gambling` → `scripts/daily_research_digest_run.py` |
 | **Deps** | `wiki_source_index.py` (required alongside digest runner) |
 | **Config** | `scripts/daily_research_config.yaml` |

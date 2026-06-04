@@ -2,6 +2,13 @@
 
 Append-only chronological log.
 
+## [2026-06-04] ingest | PM digest arXiv batch (SEPO + D-Wave dead end)
+
+- **Sweep** — `wiki/sweeps/2026-06-04-daily.md`
+- **Source** — `sources/daily-digest-arxiv-batch-2026-06-04.md` (2605.30854 SEPO/Kuhn poker; 2605.17623 portfolio dead end)
+- **Updated** — `poker-bot-tooling.md`, `opponent-modeling-imperfect-info.md`, `pokerskill.md`, `cemini-devfun-poker-agent.md`, `daily-research-digest-cadence.md`
+- **Archived** — 2 PDFs → `raw-sources/`
+
 ## [2026-06-03] ingest | Tom Dwan HSP compilation — pro-table villain profile
 
 - **Source** — `sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md` ([uC1pmdBTn6U](https://www.youtube.com/watch?v=uC1pmdBTn6U))
