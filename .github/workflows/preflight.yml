@@ -1,0 +1,26 @@
+name: Preflight
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Weekly Sunday 06:00 UTC — full deploy gate (self-play audits).
+    - cron: "0 6 * * 0"
+
+jobs:
+  cemini-preflight:
+    name: cemini preflight
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: agents/devfun-poker-arena
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+          cache-dependency-glob: agents/devfun-poker-arena/uv.lock
+      - name: Install dev deps
+        run: uv sync --dev
+      - name: Run preflight gate
+        run: ./scripts/cemini_preflight.sh

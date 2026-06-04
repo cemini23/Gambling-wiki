@@ -24,6 +24,11 @@ from collections import defaultdict
 parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
 parser.add_argument("--verify-age-days", type=int, default=7,
                     help="Flag [NEEDS VERIFICATION YYYY-MM-DD] tags older than this many days (default: 7)")
+parser.add_argument(
+    "--fail-on-dangling",
+    action="store_true",
+    help="Exit 1 when local related:/@path links do not resolve (ignores cross-wiki aliases)",
+)
 args = parser.parse_args()
 TODAY = date.today()
 
@@ -380,3 +385,24 @@ else:
             print(f"  {src}  →  @{alias}/{rel_path}  (wiki alias not found in CLAUDE.md)")
         else:
             print(f"  {src}  →  @{alias}/{rel_path}  (file not found: {target})")
+
+if args.fail_on_dangling:
+    local_related_dangling = [
+        (src, tgt_raw)
+        for src, tgt_raw in dangling
+        if is_cross_wiki_path_exists(normalize_path(tgt_raw)) is None
+    ]
+    local_missing = {
+        path: srcs
+        for path, srcs in missing_mentions.items()
+        if is_cross_wiki_path_exists(f"@{path}" if not path.startswith("@") else path) is None
+        and not (path.startswith("briefs/") and (WIKI.parent / path).exists())
+    }
+    if local_related_dangling or local_missing:
+        print("\nERROR: unresolved local wiki links (--fail-on-dangling)")
+        for src, tgt_raw in local_related_dangling:
+            print(f"  related: {src} → {tgt_raw}")
+        for path, srcs in sorted(local_missing.items()):
+            for src in sorted(srcs):
+                print(f"  @mention: {src} → {path}")
+        sys.exit(1)

@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  wiki-lint:
+    name: Wiki lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: wiki_lint (strict local links)
+        run: python3 scripts/wiki_lint.py --fail-on-dangling
+
+  agent-tests:
+    name: Agent pytest
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: agents/devfun-poker-arena
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+          cache-dependency-glob: agents/devfun-poker-arena/uv.lock
+      - name: Install dev deps
+        run: uv sync --dev
+      - name: pytest
+        run: uv run pytest -q --tb=short
