@@ -40,7 +40,29 @@ def test_lead_protect_top5_large_cushion():
     st = fetch_qualification_status(client, "comp1")
     assert st["qualification_protect"] is True
     assert st["lead_protect"] is True
+    assert st["first_protect"] is False
     assert st["buffer_chips"] == 7104
+
+
+def test_first_protect_top_two():
+    client = _FakeClient(
+        {"leaderboard": [{"arenaId": "comp1", "rank": 2, "totalScore": 13378}]},
+        cutoff_score=3625,
+    )
+    st = fetch_qualification_status(client, "comp1")
+    assert st["lead_protect"] is True
+    assert st["first_protect"] is True
+
+
+def test_first_protect_rank_one():
+    client = _FakeClient(
+        {"leaderboard": [{"arenaId": "comp1", "rank": 1, "totalScore": 12000}]},
+        cutoff_score=2010,
+    )
+    st = fetch_qualification_status(client, "comp1")
+    assert st["lead_protect"] is True
+    assert st["first_protect"] is True
+    assert st["buffer_chips"] == 9990
 
 
 def test_no_lead_protect_when_buffer_below_3000():

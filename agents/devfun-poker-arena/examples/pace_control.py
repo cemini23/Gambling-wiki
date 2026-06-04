@@ -7,6 +7,7 @@ DEFAULT_JOIN_RETRY_S = 60.0
 DEFAULT_IN_QUEUE_RETRY_S = 180.0
 DEFAULT_QUAL_JOIN_RETRY_S = 300.0  # 5 min — still seated, fewer new tables
 DEFAULT_LEAD_JOIN_RETRY_S = 900.0  # 15 min — time game > chip game when safely ahead
+DEFAULT_FIRST_JOIN_RETRY_S = 1800.0  # 30 min — rank #1: minimize new table intake
 
 
 def _env_float(name: str, default: float) -> float:
@@ -18,17 +19,20 @@ def _env_float(name: str, default: float) -> float:
 
 def join_retry_seconds(
     *,
+    first_protect: bool = False,
     lead_protect: bool,
     qual_protect: bool,
     in_queue_only: bool,
 ) -> float:
     """Seconds between join attempts when idle (no pending actions).
 
-    Lead protect uses the longest backoff; qualification protect is moderate;
-    otherwise use the default lobby cadence (or in-queue wait).
+    First place uses the longest backoff; lead protect is next; qualification
+    protect is moderate; otherwise use the default lobby cadence (or in-queue wait).
     """
     if in_queue_only:
         return _env_float("CEMINI_IN_QUEUE_RETRY_S", DEFAULT_IN_QUEUE_RETRY_S)
+    if first_protect:
+        return _env_float("CEMINI_FIRST_JOIN_RETRY_S", DEFAULT_FIRST_JOIN_RETRY_S)
     if lead_protect:
         return _env_float("CEMINI_LEAD_JOIN_RETRY_S", DEFAULT_LEAD_JOIN_RETRY_S)
     if qual_protect:

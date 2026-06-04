@@ -207,6 +207,7 @@ def run_lobby(args: argparse.Namespace) -> int:
     last_qual_check_at = 0.0
     qual_protect = False
     lead_protect = False
+    first_protect = False
     in_queue_only = False
     last_pace_log_at = 0.0
 
@@ -218,14 +219,20 @@ def run_lobby(args: argparse.Namespace) -> int:
             nonlocal last_join_at, last_lobby_log_at, in_queue_only, last_pace_log_at
             now = time.time()
             retry_s = join_retry_seconds(
+                first_protect=first_protect,
                 lead_protect=lead_protect,
                 qual_protect=qual_protect,
                 in_queue_only=in_queue_only,
             )
-            if (lead_protect or qual_protect) and (
+            if (first_protect or lead_protect or qual_protect) and (
                 now - last_pace_log_at
             ) >= LOBBY_LOG_INTERVAL_S:
-                tier = "lead" if lead_protect else "qualification"
+                if first_protect:
+                    tier = "first"
+                elif lead_protect:
+                    tier = "lead"
+                else:
+                    tier = "qualification"
                 print(
                     f"[cemini-lobby] pace throttle ({tier}): "
                     f"join retry {retry_s:.0f}s — fewer tables, preserve buffer"
@@ -330,7 +337,7 @@ def run_lobby(args: argparse.Namespace) -> int:
             ensure_joined(force=True)
 
         def refresh_qualification(force: bool = False) -> None:
-            nonlocal last_qual_check_at, qual_protect, lead_protect
+            nonlocal last_qual_check_at, qual_protect, lead_protect, first_protect
             now = time.time()
             if not force and (now - last_qual_check_at) < QUAL_STATUS_INTERVAL_S:
                 return
@@ -339,7 +346,15 @@ def run_lobby(args: argparse.Namespace) -> int:
                 st = fetch_qualification_status(client, competition_id)
                 qual_protect = bool(st.get("qualification_protect"))
                 lead_protect = bool(st.get("lead_protect"))
-                if lead_protect:
+                first_protect = bool(st.get("first_protect"))
+                if first_protect:
+                    print(
+                        f"[cemini-lobby] FIRST protect ON "
+                        f"rank={st.get('rank')} chips={st.get('chips')} "
+                        f"buffer=+{st.get('buffer_chips')} vs #{st.get('cutoff_chips')} "
+                        f"(pace {join_retry_seconds(first_protect=True, lead_protect=True, qual_protect=True, in_queue_only=False):.0f}s join retry)"
+                    )
+                elif lead_protect:
                     print(
                         f"[cemini-lobby] LEAD protect ON "
                         f"rank={st.get('rank')} chips={st.get('chips')} "
@@ -392,6 +407,8 @@ def run_lobby(args: argparse.Namespace) -> int:
                     ctx["survival_mode"] = True
                 if lead_protect:
                     ctx["lead_protect"] = True
+                if first_protect:
+                    ctx["first_protect"] = True
                 villain_mem = villain_memory_for_table(state, table)
                 if villain_mem:
                     ctx["session_villain_memory"] = villain_mem

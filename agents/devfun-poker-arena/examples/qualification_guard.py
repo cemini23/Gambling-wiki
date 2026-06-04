@@ -8,6 +8,7 @@ DEFAULT_CUTOFF_RANK = 20
 DEFAULT_BUFFER_CHIPS = 1000  # chips above rank-20 floor before protect mode
 DEFAULT_LEAD_RANK = 5
 DEFAULT_LEAD_BUFFER_CHIPS = 3000  # extra cushion before lead-protect tier
+DEFAULT_FIRST_RANK = 2  # rank #1–#2 with lead buffer → slowest join pace
 
 
 def _buffer_threshold() -> int:
@@ -28,6 +29,13 @@ def _lead_rank_threshold() -> int:
     raw = os.environ.get("CEMINI_LEAD_RANK")
     if raw is None or raw == "":
         return DEFAULT_LEAD_RANK
+    return int(raw)
+
+
+def _first_rank_threshold() -> int:
+    raw = os.environ.get("CEMINI_FIRST_RANK")
+    if raw is None or raw == "":
+        return DEFAULT_FIRST_RANK
     return int(raw)
 
 
@@ -55,6 +63,7 @@ def fetch_qualification_status(
     out: dict[str, Any] = {
         "qualification_protect": False,
         "lead_protect": False,
+        "first_protect": False,
         "rank": None,
         "chips": None,
         "cutoff_chips": None,
@@ -97,4 +106,6 @@ def fetch_qualification_status(
         out["qualification_protect"] = True
     if buffer >= lead_buffer_chips and int(rank) <= lead_rank:
         out["lead_protect"] = True
+    if out["lead_protect"] and int(rank) <= _first_rank_threshold():
+        out["first_protect"] = True
     return out

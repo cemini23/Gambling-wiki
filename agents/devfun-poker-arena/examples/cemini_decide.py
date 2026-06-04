@@ -168,6 +168,7 @@ def decide(
     margins = _merge_margins(margins, mem_margins)
     qual_protect = bool(ctx.get("qualification_protect"))
     lead_protect = bool(ctx.get("lead_protect"))
+    first_protect = bool(ctx.get("first_protect"))
     survival = (
         _survival_mode(self_seat)
         or bool(ctx.get("survival_mode"))
@@ -184,6 +185,11 @@ def decide(
             "call_margin_delta": 0.04,
             "bet_bar_delta": -0.06,
             "preflop_fold_margin_delta": 0.02,
+        })
+    if first_protect:
+        margins = _merge_margins(margins, {
+            "preflop_fold_margin_delta": 0.02,
+            "open_steal_equity": 0.99,
         })
     if deadline_s < 4.0:
         margins = _merge_margins(margins, {"fold_slack_delta": 0.03})
@@ -251,7 +257,8 @@ def decide(
             hand_class=hc,
             position=position, ps_bias=ps_bias, ps_library=ps_library,
             hud_mode=hud_mode, margins=margins, cold_start=cold_start,
-            lead_protect=lead_protect, qual_protect=qual_protect)
+            lead_protect=lead_protect, qual_protect=qual_protect,
+            first_protect=first_protect)
     elif street == "Preflop" and call_chips > 0:
         action_name, amount = _preflop_vs_bet(
             chart, allowed, available, equity, pot_odds, call_chips, pot,
@@ -362,7 +369,8 @@ def _preflop_open(suggested: str, allowed: dict, available: list,
                   margins: Optional[dict] = None,
                   cold_start: bool = False,
                   lead_protect: bool = False,
-                  qual_protect: bool = False) -> tuple[str, Optional[int]]:
+                  qual_protect: bool = False,
+                  first_protect: bool = False) -> tuple[str, Optional[int]]:
     margins = margins or exploit_margins(hud_mode)
     if (position == "SB" and _weak_ace_offsuit(hand_class)
             and suggested == "raise" and "check" in available):
@@ -382,7 +390,7 @@ def _preflop_open(suggested: str, allowed: dict, available: list,
             return "check", None
     # Qual/lead protect: CO/BTN chart-only — no HUD steals (K8o/T7o CO −100 leaks).
     if (qual_protect or lead_protect) and position in ("CO", "BTN") and suggested != "raise":
-        if (lead_protect and lead_blind_steal(hand_class, position)
+        if (lead_protect and not first_protect and lead_blind_steal(hand_class, position)
                 and allowed.get("canBet") and "bet" in available):
             br = allowed.get("betRange") or {}
             min_bet = int(br.get("min") or max(int(pot * 0.5), 1))
