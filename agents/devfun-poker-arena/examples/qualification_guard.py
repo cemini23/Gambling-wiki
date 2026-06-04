@@ -8,7 +8,7 @@ DEFAULT_CUTOFF_RANK = 20
 DEFAULT_BUFFER_CHIPS = 1000  # chips above rank-20 floor before protect mode
 DEFAULT_LEAD_RANK = 5
 DEFAULT_LEAD_BUFFER_CHIPS = 3000  # extra cushion before lead-protect tier
-DEFAULT_FIRST_RANK = 2  # rank #1–#2 with lead buffer → slowest join pace
+DEFAULT_FIRST_RANK = 1  # rank #1 with lead buffer → slowest join pace
 
 
 def _buffer_threshold() -> int:

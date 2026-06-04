@@ -21,6 +21,48 @@ Steps:
 - [ ] Deep-read migrated OSINT sources (Gemini sports-betting landscape primary docx)
 - [x] Push to `Gambling-wiki` GitHub + librarian rsync via OSINT sync script
 
+### W6 — dev.fun Playground bot (cemini_decide)
+
+**Status:** Active 2026-06-04 — S1a **build mode** through Jun 7; S1b compete Jun 7–11.
+
+**Agent:** `cemini_wiki_poker` on official Playground S1 (`cmpy2qy65002ud9ej6b7jjq0l`).
+
+| Window | Dates | Mode | Goal |
+|--------|-------|------|------|
+| **S1a** | Jun 3–7 | **Build** | HL loop + regression library; don’t bust; top-20 is bonus (ticket buy-in fallback OK) |
+| **S1b** | Jun 7–11 | **Compete** | Best bot variant + optional multi-agent probe; claim winner |
+| **KO** | TBA | **Compete** | Survival + reads; top 25 advance |
+
+**S1a build mode (current)**
+
+- [x] Rank #2 ~13k chips, +8k buffer — qualification zone secured if stack holds
+- [x] FIRST protect: rank **#1 only** @ 30min join retry (`CEMINI_FIRST_RANK=1`)
+- [x] Lead protect: rank 2–5 @ **10min** join retry (`CEMINI_LEAD_JOIN_RETRY_S=600`) — more analyze signal than 15min
+- [ ] HL rounds through SB/UTG/BTN trash clusters (~every 50–100 hands)
+- [ ] Freeze each leak in `tests/fixtures/regression_spots.py`
+- [ ] Prep S1b: 3–5 unclaimed probe agents + egress train profile sweep (L5)
+
+**Cadence**
+
+```bash
+./scripts/cemini_playground_status.sh          # rank vs #20 floor
+./examples/cemini_hl_loop.sh --from-prod --round N
+# patch → ./examples/cemini_hl_loop.sh --preflight-only --deploy
+```
+
+**Do not in S1a:** chase #1, widen steals, optimize self-play bb/100, deploy with `CEMINI_FORCE_CREDS=1`.
+
+**S1b compete flip (before Jun 7)**
+
+| Env | Build (S1a) | Compete (S1b) |
+|-----|-------------|---------------|
+| `CEMINI_FIRST_RANK` | `1` | `1` or `2` if co-leader |
+| `CEMINI_LEAD_JOIN_RETRY_S` | `600` | `900` |
+| `CEMINI_FIRST_JOIN_RETRY_S` | `1800` | `1800`–`3600` |
+| Multi-agent probe | optional local | register 3–5 handles, claim best |
+
+See `agents/devfun-poker-arena/briefs/2026-06-03_playground-top20-qualification.md`, `README-CEMINI.md` qualification section.
+
 ### W2 — Domain expansion (queued)
 
 Priority ingest lanes once sources arrive:
@@ -83,6 +125,7 @@ Steps:
 
 | Date | Item |
 |------|------|
+| 2026-06-04 | Playground W6 — S1a build mode in ROADMAP; prod pace tuned (FIRST_RANK=1, LEAD 600s) |
 | 2026-06-01 | K93 federated daily digest — scripts, config, meta cadence, sweeps/ |
 | 2026-06-01 | K92 Phase-0 audits + WagerBrain/rlcard adopt notes |
 | 2026-05-31 | WC 2026 retail ingest — 1 source, 1 sport entity, 5 concepts, 8 page updates |

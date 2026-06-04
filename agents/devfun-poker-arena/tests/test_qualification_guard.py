@@ -44,14 +44,14 @@ def test_lead_protect_top5_large_cushion():
     assert st["buffer_chips"] == 7104
 
 
-def test_first_protect_top_two():
+def test_first_protect_rank_one_only():
     client = _FakeClient(
         {"leaderboard": [{"arenaId": "comp1", "rank": 2, "totalScore": 13378}]},
         cutoff_score=3625,
     )
     st = fetch_qualification_status(client, "comp1")
     assert st["lead_protect"] is True
-    assert st["first_protect"] is True
+    assert st["first_protect"] is False
 
 
 def test_first_protect_rank_one():
