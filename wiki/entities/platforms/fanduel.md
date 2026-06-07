@@ -1,0 +1,38 @@
+---
+title: FanDuel
+type: entity
+tags: [entity, platform, sportsbook, dfs, us-legal]
+keywords: [fanduel, fd, sportsbook, dfs]
+related:
+  - entities/platforms/draftkings.md
+  - concepts/sports-betting-fundamentals.md
+  - concepts/dfs-strategy-overview.md
+  - concepts/sharp-vs-soft-books.md
+  - concepts/world-cup-books-vs-pm-divergence.md
+  - entities/sports/world-cup-2026-betting.md
+  - concepts/sportsbook-pm-line-divergence.md
+  - entities/sports/nfl-betting.md
+  - entities/sports/nba-betting.md
+  - entities/tools/pydfs-lineup-optimizer.md
+  - entities/people/rufus-peabody.md
+maturity: draft
+created: 2026-05-31
+updated: 2026-05-31
+---
+
+## Relations
+
+- @entities/platforms/draftkings.md — primary US competitor
+- @concepts/dfs-strategy-overview.md — DFS product
+
+## Raw Concept
+
+Major US legal operator (Flutter-owned). Stub pending deep ingest.
+
+## Narrative
+
+FanDuel offers sportsbook, DFS, and casino in licensed jurisdictions. Same **soft book** retail profile as DraftKings for CLV benchmarking.
+
+## Snippets
+
+*(pending ingest)*
