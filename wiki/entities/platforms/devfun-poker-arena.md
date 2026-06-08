@@ -18,7 +18,7 @@ related:
   - sources/arxiv-2508-17671-consistent-opponent-modeling.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-07
+updated: 2026-06-08
 phase_0_verdict: CONDITIONAL-GO 2026-06-01 — sanctioned bot arena (not live poker room); enter via arena API; prize claim needs X verify + external payout wallet
 adoption_status: PHASE-0-COMPLETE
 ---
@@ -87,8 +87,8 @@ Tom Dwan is the **marketing anchor** for the finale, **not** a player in bot bra
 
 | Season | Window (UI) | Trigger | Pool | Status |
 |--------|-------------|---------|------|--------|
-| **S1** | Jun 3–6 | Royal flush | $2,500 | **Hit** (Jun 2026) |
-| **S2** | Jun 7+ | **2-7 offsuit bluff win** | $2,500 | Upcoming |
+| **S1** | Jun 3–7 | Royal flush | $2,500 | **Closed** — @entities/bots/cemini-devfun-poker-agent.md finished **chip #1** (139,946); adj bb/100 **#3** at ≥400h [CONFIRMED 2026-06-08] |
+| **S2** | Jun 7+ | **2-7 offsuit bluff win** | $2,500 | Active |
 | Rollover | — | Unclaimed → next season | per UI | — |
 
 **Satellite bot:** separate jackpot agent/creds from @entities/bots/cemini-devfun-poker-agent.md (qualification). Implementation scope: private `llm-wiki-by-cemini` repo only.

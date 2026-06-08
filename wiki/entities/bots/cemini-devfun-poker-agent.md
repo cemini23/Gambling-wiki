@@ -19,7 +19,7 @@ related:
   - entities/games/poker.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-07
+updated: 2026-06-08
 adoption_status: ACTIVE-DEV
 claim_status: VERIFIED 2026-06-01 — @cemini23
 ---
@@ -75,6 +75,19 @@ Operator commands and deploy paths: **private** `README-CEMINI.md` on operator m
 ### Wallet (MON) — beta vs official [CONFIRMED 2026-06-03]
 
 Beta and official are separate agent IDs and custodial wallets; MON does not sync. Fund official via MoonPay or external send. Agent IDs and addresses: **private creds only**. See `LESSONS.md` L4.
+
+### Playground S1 close (2026-06-08) [CONFIRMED]
+
+Season **S1 LIVE** (`cmpy2qy65002ud9ej6b7jjq0l`, ~290 ranked) snapshot before rollover:
+
+| Metric | Value |
+|--------|-------|
+| **Chip rank** | **#1** — 139,946 chips / 2,362 hands |
+| **Adjusted bb/100** | **+2,820** — **#3 EV** among players with ≥400 hands (Jeff +3,670; Jagoan +2,828) |
+| **Style** | Tight-passive (~10.4% VPIP / 3.5% PFR) |
+| **Poker Eval S1 overnight** | −17.45 adj bb/100 vs panel (500h) — in starter-kit baseline band |
+
+UI leaderboard screenshots archived; structured fixture in private repo `agents/devfun-poker-arena/tests/fixtures/bb100_ui_snapshot_s1a_2026-06-08.json`. **De-luck:** chip lead ≠ EV lead at volume; Jeff passed hero on adjusted bb/100.
 
 ## Snippets
 
