@@ -11,7 +11,7 @@ related:
   - sources/brief-k93-federated-digest-2026-06-01.md
 maturity: core
 created: 2026-05-31
-updated: 2026-06-01
+updated: 2026-06-07
 ---
 
 ## Relations
@@ -39,7 +39,7 @@ Ingest routing checklist when a source touches wagering strategy, **gambling aut
 ### Route to @osint-wiki (stub + brief)
 
 - CeminiSuite **prod** config, conductor, librarian infra
-- Bot **implementation** already in Cemini repo (deploy steps, module graph)
+- Bot **implementation** (CeminiSuite deploy, `cemini_decide`, arena HL scripts) — private `llm-wiki-by-cemini/agents/`
 - Regulatory briefs for **institutional trading stack** at full depth
 - Macro/equity OSINT unrelated to betting
 
@@ -48,6 +48,7 @@ Ingest routing checklist when a source touches wagering strategy, **gambling aut
 - Kelly, FLB, cross-venue PM — general here, implementation there
 - MomentumOdds, Odds Jam — tool entity in both with split narrative
 - **PM/Kalshi bots** — requirements + retail constraints **here**; code + prod **there**
+- **dev.fun arena bot** — venue + HL workflow **here**; `decide()` + deploy **there**
 - World Cup automation — retail contract types here; bot v1 there
 
 ### Gambling-bot ingest

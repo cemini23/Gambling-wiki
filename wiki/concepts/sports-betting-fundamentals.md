@@ -34,9 +34,11 @@ related:
   - entities/tools/pickfinder.md
   - entities/people/rufus-peabody.md
   - sources/youtube-operator-batch-casino-2026-05-31.md
+  - concepts/pm-live-belief-updating.md
+  - sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-06-09
 ---
 
 ## Relations
@@ -62,6 +64,8 @@ Orientation page for mainstream US sports betting market types and odds formats.
 | **Props** | Player/team stat | Mahomes over 275.5 passing yards |
 | **Futures** | Season/tournament | Super Bowl winner |
 | **Live (in-play)** | Lines during game | Next score, live spread |
+
+**PM live note:** Kalshi NBA research shows in-play **event-contract mids react directionally** to game state but **underreact in magnitude** (~0.64× fair move on 1-min horizon) — `@concepts/pm-live-belief-updating.md`. Traditional book live behavior is venue-specific; don't assume identical β.
 
 ### Odds formats
 

@@ -10,7 +10,7 @@ related:
   - meta/cross-wiki-routing.md
 maturity: core
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-06-07
 ---
 
 ## Relations
@@ -54,7 +54,7 @@ Same as `CLAUDE.md`: pricing, TOS, license (`gh api`), failure mode, compare exi
 | What to bet/automate and why | How Cemini deploys it |
 | Retail +EV constraints, fee math | Orchestrator, secrets, prod MCP |
 | FOSS eval for gambling-wiki strip-mine | Full bot codebase narrative |
-| Per-platform bot **requirements** | Per-platform bot **implementation** |
+| Per-platform bot **requirements** | Per-platform bot **implementation** (e.g. `agents/devfun-poker-arena/`) |
 
 ## Snippets
 

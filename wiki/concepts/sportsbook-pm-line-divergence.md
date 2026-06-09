@@ -24,9 +24,11 @@ related:
   - sources/daily-digest-news-r1-r12-2026-06-02.md
   - concepts/pm-perspective-mismatch-trading.md
   - sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md
+  - concepts/pm-live-belief-updating.md
+  - sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-06-01
+updated: 2026-06-09
 ---
 
 ## Relations
@@ -45,6 +47,8 @@ When **FanDuel/DK/Pinnacle implied probability** differs materially from **Kalsh
 ### Core idea (multi-source K80)
 
 YouTube batch (Beast Sports, MomentumOdds/Odds channel): edge framed as **sportsbook consensus vs PM line** on totals and moneylines — not sub-second in-play scraping for most retail.
+
+**Live caveat (Kalshi NBA, 2606.07811):** even when a static book-vs-PM gap exists, **live Kalshi mids lag** public-information fair value by ~36% on impact and drift over minutes — but spread/fees kill naive "chase the lag" execution. See `@concepts/pm-live-belief-updating.md`.
 
 ```
 Sportsbook consensus (60+ books via MomentumOdds, or sharp close via Pinnacle)

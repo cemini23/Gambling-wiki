@@ -33,9 +33,11 @@ related:
   - sources/devfun-poker-arena-phase0-2026-06-01.md
   - concepts/poker-hl-analyst-loop.md
   - concepts/opponent-modeling-imperfect-info.md
+  - concepts/pm-live-belief-updating.md
+  - sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md
 maturity: core
 created: 2026-05-31
-updated: 2026-06-01
+updated: 2026-06-09
 ---
 
 # Gambling bot architecture (planned)
@@ -89,7 +91,7 @@ Default assumption unless operator revises (see `ROADMAP.md` D4):
 | Lane | Bot role (draft) | Wiki pages to grow |
 |------|------------------|-------------------|
 | **Sportsbooks** | Line shop, +EV scanner hooks, steam/CLV logging, promo capture | `@entities/platforms/draftkings.md`, `@entities/platforms/fanduel.md`, `@entities/platforms/pinnacle.md` |
-| **Prediction markets** | Sports PM divergence, fee-aware sizing, settlement rule checks | `@entities/platforms/kalshi.md`, `@entities/platforms/polymarket.md`, `@concepts/sportsbook-pm-line-divergence.md` |
+| **Prediction markets** | Sports PM divergence, fee-aware sizing, settlement rule checks; **live liquidity gate + drift-aware limits** (β≈0.64 underreaction — `@concepts/pm-live-belief-updating.md`) | `@entities/platforms/kalshi.md`, `@entities/platforms/polymarket.md`, `@concepts/sportsbook-pm-line-divergence.md`, `@concepts/pm-live-belief-updating.md` |
 | **DFS / best ball** | Slate import, exposure caps, correlation stacks — not in-play HFT | `@concepts/dfs-strategy-overview.md`, `@entities/tools/pydfs-lineup-optimizer.md` |
 | **Casino / poker** | Poker engines + RL (**rlcard**, poker_ai) = research lane; **iGaming slot UI** = dead end | K92 eval: @sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md |
 | **Sportsbook API** | Bovada community APIs — reference-only, ToS risk | @entities/bots/bovada-api-reference.md |
@@ -146,7 +148,7 @@ Do **not** duplicate osint entity bodies — bidirectional `related:` + 2–3 se
 |----|----------|
 | D4 | Single master orchestrator vs independent platform bots |
 | D5 | First automation lane priority (sportsbook +EV vs PM divergence vs DFS) |
-| D6 | Code repo home: `Gambling-wiki` scripts vs `CeminiSuite` vs new repo |
+| D6 | Code repo home | **Resolved** — public `Gambling-wiki` = wiki + scripts; implementations in private `llm-wiki-by-cemini/agents/` (dev.fun arena, PM bots, CeminiSuite deploy) |
 
 ## Snippets
 

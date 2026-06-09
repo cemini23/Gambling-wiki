@@ -21,9 +21,10 @@ related:
   - entities/platforms/kalshi.md
   - entities/tools/unabated.md
   - sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md
+  - concepts/pm-live-belief-updating.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-06-01
+updated: 2026-06-09
 ---
 
 ## Relations

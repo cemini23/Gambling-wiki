@@ -18,6 +18,18 @@ This workspace is a **librarian** for betting and gambling research. It:
 4. Drop a source into `research to be indexed/` and ask Claude/Cursor to ingest it
 5. Lint: `python3 scripts/wiki_lint.py`
 
+**CI (GitHub):** wiki lint only on push — no agent pytest in this public repo.
+
+## Where code lives
+
+| Content | Repo / path |
+|---------|-------------|
+| **This wiki** (public) | `wiki/`, `LESSONS.md`, `ROADMAP.md` |
+| **dev.fun arena bot** (`cemini_decide`, deploy, briefs) | Private [llm-wiki-by-cemini](https://github.com/cemini23/llm-wiki-by-cemini) → `agents/devfun-poker-arena/` (open **OSINT WORKSPACE** locally) |
+| **PM / CeminiSuite bots** | Same private osint repo — see `@osint-wiki` |
+
+Public clone gets `agents/README.md` only (pointer stub). Do not commit competition strategy here.
+
 ## Folder layout
 
 ```
@@ -26,6 +38,7 @@ Gambling-wiki/
   README.md
   LESSONS.md
   ROADMAP.md
+  agents/README.md          # stub → private bot repo (implementation gitignored)
   wiki/
     index.md              # catalog
     log.md                # operations log
@@ -48,7 +61,7 @@ Gambling-wiki/
 | Alias | Repository | Focus |
 |-------|------------|--------|
 | **`gambling-wiki`** | **This repo** | Sports betting, casino, poker, DFS, best ball |
-| `osint-wiki` | *private* | Prediction-market bots, CeminiSuite, quant OSINT |
+| `osint-wiki` | *private* ([llm-wiki-by-cemini](https://github.com/cemini23/llm-wiki-by-cemini)) | PM bots, dev.fun arena bot code, CeminiSuite, quant OSINT |
 | `ccc-wiki` | [cemini-claude-code-CCC](https://github.com/cemini23/cemini-claude-code-CCC) | Agent workflow, MCP, skills |
 | `cybersecurity-wiki` | [Cybersecurity-wiki](https://github.com/cemini23/Cybersecurity-wiki) | Pentest, SOC |
 | `seo-wiki` | [SEO-GEO-B-M-Wiki](https://github.com/cemini23/SEO-GEO-B-M-Wiki) | Local SEO, creator ops |
@@ -63,8 +76,8 @@ git clone https://github.com/cemini23/Gambling-wiki.git
 
 ## Privacy
 
-- `.env`, `raw-sources/`, `briefs/`, `hot.md` are gitignored
-- Never commit API keys, account credentials, or sportsbook PII
+- `.env`, `raw-sources/`, `briefs/`, `hot.md`, and `agents/devfun-poker-arena/` are gitignored
+- Never commit API keys, arena credentials (`.arena-credentials`), account PII, or live competition intel (ranks, leak clusters, patch toggles)
 
 ## Related
 

@@ -23,7 +23,7 @@ Steps:
 
 ### W6 — dev.fun Playground bot (cemini_decide)
 
-**Status:** Active — Playground qualification window + upcoming KO. **Competitive-secrecy:** ranks, chip counts, env toggles, patch backlog, opponent reads, and `decide()` implementation live in **private** ops only (`agents/` local + prod); not in public wiki pages during active events.
+**Status:** Active — Playground qualification window + upcoming KO. **Competitive-secrecy:** ranks, chip counts, env toggles, patch backlog, opponent reads, and `decide()` implementation live in **private** `llm-wiki-by-cemini/agents/devfun-poker-arena/` only — not in public wiki pages during active events.
 
 **Agent:** Cemini dev.fun poker agent (handle on official arena — details in private creds).
 
@@ -86,7 +86,8 @@ Steps:
 
 - [x] MIT LICENSE
 - [x] README for federation table
-- [ ] Initial GitHub publish
+- [x] Initial GitHub publish
+- [x] Competition intel redaction — single-commit public history; bot code → private osint repo (2026-06-07)
 - [ ] Add `wiki_gap_detect.py` (copy from sibling wiki when page count > ~50)
 
 ---
@@ -100,7 +101,7 @@ Steps:
 | D3 | DFS optimizer tooling | Document pydfs-lineup-optimizer vs paid optimizers | **Open** — Phase-0 when DFS ingest batch lands |
 | D4 | Bot topology | Single master orchestrator vs independent platform bots | **Open** — lean fleet |
 | D5 | First bot lane | Sportsbook +EV vs PM divergence vs DFS slate | **Open** |
-| D6 | Code repo home | Gambling-wiki scripts vs CeminiSuite vs new repo | **Open** |
+| D6 | Code repo home | Gambling-wiki scripts vs CeminiSuite vs new repo | **Resolved 2026-06-07** — bot code in private `llm-wiki-by-cemini/agents/`; public repo = wiki + scripts only |
 
 ---
 
@@ -108,7 +109,8 @@ Steps:
 
 | Date | Item |
 |------|------|
-| 2026-06-04 | Playground W6 — S1a build mode in ROADMAP; prod pace tuned (FIRST_RANK=1, LEAD 600s) |
+| 2026-06-07 | Competition scrub — redacted public wiki/LESSONS; bot code → private osint; GitHub history squashed to single commit |
+| 2026-06-04 | Playground W6 — S1a build mode in ROADMAP; prod pace tuned (details private) |
 | 2026-06-01 | K93 federated daily digest — scripts, config, meta cadence, sweeps/ |
 | 2026-06-01 | K92 Phase-0 audits + WagerBrain/rlcard adopt notes |
 | 2026-05-31 | WC 2026 retail ingest — 1 source, 1 sport entity, 5 concepts, 8 page updates |

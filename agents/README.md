@@ -2,7 +2,7 @@
 
 The dev.fun arena bot (`cemini_decide`, HL loop, deploy scripts) was **removed from this public repo** to protect tournament edge.
 
-**Canonical copy:** private `@osint-wiki` → `agents/devfun-poker-arena/` in [llm-wiki-by-cemini](https://github.com/cemini23/llm-wiki-by-cemini) (operator access only).
+**Canonical copy:** private [llm-wiki-by-cemini](https://github.com/cemini23/llm-wiki-by-cemini) → `agents/devfun-poker-arena/` (open **OSINT WORKSPACE** locally).
 
 **Local dev:** clone or symlink from OSINT workspace:
 

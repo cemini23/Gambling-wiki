@@ -15,9 +15,12 @@ related:
   - sources/gemini-github-sports-betting-landscape-2026-05-30.md
   - sources/youtube-sports-pm-retail-batch-2026-05-29.md
   - entities/tools/pydfs-lineup-optimizer.md
+  - entities/platforms/kalshi.md
+  - concepts/pm-live-belief-updating.md
+  - sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-06-09
 ---
 
 ## Relations
@@ -42,6 +45,17 @@ NBA-specific betting — pace, rest, load management, prop volume.
 ### PM / Kalshi overlap
 
 MomentumOdds YouTube demo explicitly routes **NBA playoff**-style Kalshi contracts from sportsbook correlation signals — see `@entities/tools/momentum-odds.md`. Always verify contract spec (regulation vs OT).
+
+### Kalshi live microstructure (2026 research) [CONFIRMED]
+
+arXiv **2606.07811** (1,421 NBA games, 1-min Kalshi + play-by-play):
+
+- Live mids **move correctly** after scoring, 3pt, lead changes, runs.
+- **Underreact ~36%** vs public-info win-prob benchmark on 1-min horizon (β ≈ 0.64).
+- **Illiquid** games + **salient** events (lead changes) → largest gaps; **clutch** states β ≈ 0.51.
+- Midpoint drift over 5–15 min is predictable but **not +EV** after bid–ask.
+
+Hub: `@concepts/pm-live-belief-updating.md`. Relevant during **playoffs/Finals** when Kalshi NBA volume spikes (`@entities/platforms/kalshi.md`).
 
 ### DFS overlap
 

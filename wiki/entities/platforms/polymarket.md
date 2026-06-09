@@ -28,9 +28,11 @@ related:
   - sources/polygnosis-2-polymarket-osint-2026-06-01.md
   - sources/arxiv-polymarket-v1-database-2606.04217-2026-06-05.md
   - concepts/polymarket-v1-research-database.md
+  - concepts/pm-live-belief-updating.md
+  - sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-06-05
+updated: 2026-06-09
 ---
 
 ## Relations

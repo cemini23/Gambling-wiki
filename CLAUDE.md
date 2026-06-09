@@ -30,12 +30,14 @@ This is a laptop-first workspace. Raw sources archive locally in `raw-sources/` 
 | Sportsbook / casino / DFS strategy | **Primary home** | Cross-link only |
 | Kelly, FLB, vig (general theory) | **Primary home** | PM-specific implementations + bot code |
 | Kalshi / Polymarket **as products** (fees, rules, retail behavior) | **Primary home** | Regulatory + CeminiSuite execution |
-| **Gambling bot program** (design, requirements, FOSS eval, per-platform lanes) | **Primary home** | Prod deploy + existing bot **code** |
+| **Gambling bot program** (design, requirements, FOSS eval, per-platform lanes) | **Primary home** | Prod deploy + bot **code** (incl. dev.fun `cemini_decide`) |
 | PM/Kalshi **LP, maker, institutional arb** at Cemini depth | Summary + cross-link | **Primary home** |
 | World Cup bot, Cemini trading stack | Retail + bot requirements | **Implementation** |
 | OSINT / macro / equity research | Out of scope | Primary home |
 
-**Routing rule:** ingest here when the source teaches *how to bet or gamble better* **or what a gambling bot should automate* on a wagering platform (DraftKings, Kalshi, DFS, etc.). Route to `@osint-wiki` when the source is primarily *CeminiSuite prod deployment*, private credentials, or PM bot **codebase** operations — but still capture **wagering logic** on a gambling-wiki page or stub.
+**Routing rule:** ingest here when the source teaches *how to bet or gamble better* **or what a gambling bot should automate* on a wagering platform (DraftKings, Kalshi, DFS, etc.). Route to `@osint-wiki` when the source is primarily *CeminiSuite prod deployment*, private credentials, or bot **codebase** operations — but still capture **wagering logic** on a gambling-wiki page or stub. **Never commit** dev.fun arena `decide()` patches, competition briefs, or live rank/leak stats to this public repo (see `agents/README.md`).
+
+**Competition secrecy (dev.fun / $50K path):** public pages may describe venue rules and generic HL workflow only — not frequencies, env toggles, opponent profiles, or patch backlogs while events are live.
 
 **Bot ingest:** follow `wiki/meta/gambling-bot-ingest-rubric.md` and `wiki/concepts/gambling-bot-architecture.md`.
 
@@ -68,6 +70,9 @@ Gambling-wiki/
   research to be indexed/           # gitignored drop zone
   raw-sources/                      # gitignored archive
   briefs/                           # gitignored
+  agents/
+    README.md                       # public stub only
+    devfun-poker-arena/             # gitignored — canonical copy in @osint-wiki
   wiki/
     index.md
     log.md

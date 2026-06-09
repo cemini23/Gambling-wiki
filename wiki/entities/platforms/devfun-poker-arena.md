@@ -45,14 +45,16 @@ adoption_status: PHASE-0-COMPLETE
 Same handle on beta and official = **two agent IDs**, **two custodial Monad wallets**. MON deposited on beta does **not** sync to official. Outbound `POST /agent/wallet/transfer/native` only accepts dev.fun **protocol addresses** (402 entry fees); agent-to-agent transfer returns **403**. Fund official via MoonPay or external send. Wallet/agent IDs: private creds only. See repo `LESSONS.md` L4.
 - **Main event opens**: **2026-06-03** (landing page); prize pool **$50K** + Tom Dwan pro-table seat (marketing)
 
-### Event ladder (2026-06-03 landing) [CONFIRMED]
+### Event ladder — paired seasons [TENTATIVE 2026-06-08 Discord]
 
 | Stage | Format | Advance |
 |-------|--------|---------|
-| **Playground** | Bot qualifier (Jun 3–7, Jun 7–11 windows) | Top **20** |
-| **Tournament** | Knockout bracket | Top **25** |
+| **Playground S*N*** | Bot qualifier per season (fresh bankroll) | Top **20** → **free entry Tournament S*N*** |
+| **Tournament S*N*** | Knockout bracket (paired to same season number) | Top **25** within that bracket |
 | **Researcher track** | Invite-only sandbox benchmark | Top **3** paid |
 | **Pro Table Finale** | **Human vs AI** — format **TBD** | Top agents earn seat vs pro |
+
+Playground S1 qualification does **not** carry to Tournament S2 — re-qualify on each new playground season. [TENTATIVE — Discord team 2026-06-08; verify on docs when updated]
 
 Tom Dwan is the **marketing anchor** for the finale, **not** a player in bot brackets. See @entities/people/tom-dwan.md.
 
@@ -83,23 +85,24 @@ Tom Dwan is the **marketing anchor** for the finale, **not** a player in bot bra
 
 **Verdict: CONDITIONAL-GO** — participate in **dev.fun arena only**; do not reuse stack against consumer poker sites.
 
-### Season jackpots (Playground UI — [NEEDS VERIFICATION on API]) [TENTATIVE 2026-06-04]
+### Season jackpots (`GET /texas/jackpots`) [CONFIRMED 2026-06-08]
 
-| Season | Window (UI) | Trigger | Pool | Status |
-|--------|-------------|---------|------|--------|
-| **S1** | Jun 3–7 | Royal flush | $2,500 | **Closed** — @entities/bots/cemini-devfun-poker-agent.md finished **chip #1** (139,946); adj bb/100 **#3** at ≥400h [CONFIRMED 2026-06-08] |
-| **S2** | Jun 7+ | **2-7 offsuit bluff win** | $2,500 | Active |
-| Rollover | — | Unclaimed → next season | per UI | — |
+| Type | Trigger (API introspection) | S2 pool (example) |
+|------|---------------------------|-------------------|
+| **Royal flush** | Showdown, hand unfolded | 5× 13,600 MON slots |
+| **7-2 offsuit bluff** | Uncontested pot — all fold vs 72o | 10× 4,500 MON slots |
 
-**Satellite bot:** separate jackpot agent/creds from @entities/bots/cemini-devfun-poker-agent.md (qualification). Implementation scope: private `llm-wiki-by-cemini` repo only.
+S1 royal slot **Claimed**. S2 runs **both** jackpots. Optional hunt on qual bot when flagged — not a substitute for top-20 pairing above.
 
-### Active beta competitions (2026-06-02) [CONFIRMED]
+### Active official competitions (2026-06-08) [CONFIRMED]
 
 | ID | Name | Notes |
 |----|------|-------|
-| `cmpr1vesh2it1x69xmtpiaecp` | [Poker] Tournament S28 | **Prod lobby** — entry fee **0.01 MON** on Monad [CONFIRMED 2026-06-02] |
-| `cmpr1uomm2is6x69xx4nyqz9r` | [Poker] Playground S1 | Dev / casual |
-| `cmpdk0pt00eawvcaf1es8plw2` | Poker Eval 500-hand | Inactive until next eval window |
+| `cmq57o53r0bhw18g23qkydb08` | [Poker] Playground S2 | **Prod qual target** → Tournament S2 |
+| `cmpy2qy65002ud9ej6b7jjq0l` | [Poker] Playground S1 | Closed — chip #1, Tournament S1 ticket |
+| `seed_poker_eval_s1` | [Poker] Eval S1 | Benchmark panel |
+
+Tournament S1/S2 IDs not in `list-active` yet — watch Discord + arena UI. Beta IDs (`b-arena`) are a separate environment.
 
 Re-check `GET /competition/list-active` before each run.
 

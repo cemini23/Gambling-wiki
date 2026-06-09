@@ -16,7 +16,7 @@ related:
   - sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md
 maturity: core
 created: 2026-05-31
-updated: 2026-06-01
+updated: 2026-06-07
 ---
 
 ## Relations
@@ -26,7 +26,7 @@ updated: 2026-06-01
 
 ## Raw Concept
 
-Placeholder namespace for **platform-specific gambling bot** entity pages (`entities/bots/<slug>.md`). Create stubs as design notes or FOSS evals land — not for production code (see `@osint-wiki`).
+Placeholder namespace for **platform-specific gambling bot** entity pages (`entities/bots/<slug>.md`). Public pages hold requirements and Phase-0 verdicts — **production code** lives in private `@osint-wiki` (`llm-wiki-by-cemini/agents/`).
 
 ## Narrative
 
@@ -40,7 +40,7 @@ Placeholder namespace for **platform-specific gambling bot** entity pages (`enti
 | @entities/bots/stake-engine-client.md | Stake client | **NO-GO** Phase-0 |
 | @entities/bots/bovada-hand-history-converter.md | Analytics / CLV | Steal-from K92 |
 | @entities/bots/poker-bot-tooling.md | Poker RL / equity | rlcard Adopt + engines |
-| @entities/bots/stake-engine-client.md | Stake engine API | Steal-from; high ToS risk |
+| @entities/bots/cemini-devfun-poker-agent.md | dev.fun arena NLHE | **Active** — public entity stub; `cemini_decide` in private osint repo |
 
 ### Planned stubs (create on first ingest)
 

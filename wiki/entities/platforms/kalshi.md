@@ -22,9 +22,12 @@ related:
   - sources/daily-digest-news-r1-r12-2026-06-02.md
   - sources/daily-digest-arxiv-batch-2026-06-02.md
   - sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md
+  - sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md
+  - concepts/pm-live-belief-updating.md
+  - entities/sports/nba-betting.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-06-02
+updated: 2026-06-09
 ---
 
 ## Relations
@@ -77,8 +80,24 @@ Structural drivers cited: **USD bank on-ramp** vs PM USDC friction, **order-book
 
 Hub: `@sources/daily-digest-news-r1-r12-2026-06-02.md`.
 
+### Live NBA belief updating (arXiv 2606.07811, 2026-06-09) [CONFIRMED]
+
+Angelini & De Angelis merge **1-min Kalshi NBA game-contract quotes** with **play-by-play**:
+
+| Finding | Detail |
+|---------|--------|
+| Pre-game | Calibrated; Brier improves 0.204 → 0.199 in final 24h |
+| Directional live | Prices react quickly to scoring, 3pt, lead changes, runs |
+| Efficient live | **β ≈ 0.64** — 10pp public-info move → ~6.4pp mid move on impact |
+| Drift | Updating gap predicts **5–15 min** further mid move; **not** executable after spread |
+| Salience × liquidity | Visible events in **thin** markets underreact most |
+
+Retail: live mids **track the game** but **lag full fair-value move** — size down in illiquid states; don't market-chase the lag. Bot: liquidity gate + drift-aware limits. Hub: `@concepts/pm-live-belief-updating.md`, `@sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md`.
+
 ## Snippets
 
 > "Kalshi priced KC YES at $0.585… DraftKings -135… Kalshi paid the better effective price by 1.1 cents." [Source: @sources/daily-digest-news-r1-r12-2026-06-01.md, R2]
 
 > "Kalshi took $3.99 billion of weekly notional volume… lifting… share… to 70.8% — its highest reading on record." [Source: @sources/daily-digest-news-r1-r12-2026-06-02.md, R2]
+
+> "A one-minute change in benchmark win probability is associated with only about a 0.64-for-one contemporaneous change in market prices." [Source: arxiv-2606.07811 via @sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md]

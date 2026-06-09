@@ -2,6 +2,14 @@
 
 Append-only chronological log.
 
+## [2026-06-09] ingest | Kalshi live belief updating (arXiv 2606.07811)
+
+- **Source** — `sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md` (deep-read)
+- **Concept** — `pm-live-belief-updating.md` (validated)
+- **Updated** — `entities/platforms/kalshi.md`, `entities/sports/nba-betting.md`, `prediction-markets-crossover.md`, `sportsbook-pm-line-divergence.md`, `sports-betting-fundamentals.md`
+- **Raw** — PDF → `raw-sources/`; 4 tournament screenshots → `raw-sources/tournament-screenshots-2026-06-09/` (archive only, not ingested)
+- **Sweep** — `wiki/sweeps/2026-06-09-daily.md` inbox cleared
+
 ## [2026-06-07] security | Competition intel redaction + arena bot moved private
 
 - **Redacted** — `LESSONS.md` L4–L6, `ROADMAP.md` W6, entity/bot pages (no ranks, wallets, leak clusters, env toggles)

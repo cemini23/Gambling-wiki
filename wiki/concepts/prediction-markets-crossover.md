@@ -30,9 +30,11 @@ related:
   - concepts/gambling-bot-architecture.md
   - concepts/polymarket-v1-research-database.md
   - sources/arxiv-polymarket-v1-database-2606.04217-2026-06-05.md
+  - concepts/pm-live-belief-updating.md
+  - sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-06-05
+updated: 2026-06-09
 ---
 
 ## Relations
@@ -103,6 +105,10 @@ Expanded tournament + host nations (USA/Mexico/Canada) create **books vs PM/Kals
 ### Offline research (K100)
 
 **Polymarket-v1 dataset** (1.2B trades, Nov 2022 – Apr 2026) supports backtests of FLB, fee-reform impact, and category spread baselines without live API keys. See `@concepts/polymarket-v1-research-database.md`. Key retail lesson: **inferred buy/sell from public tape ≈ coin-flip** — copy products need on-chain aggressor side, not tick-rule proxies `[CONFIRMED — arXiv 2606.04217]`.
+
+### Live in-play updating (Kalshi NBA)
+
+Academic live study (arXiv **2606.07811**): Kalshi NBA mids are **directionally responsive** to play-by-play but **underreact on impact** (~**0.64×** public-info benchmark move). Gap predicts short-horizon drift; **spread absorbs executable edge**. See `@concepts/pm-live-belief-updating.md` — complements static **books vs PM** divergence above.
 
 ## Snippets
 

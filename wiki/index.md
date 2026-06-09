@@ -25,6 +25,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [poker-hl-analyst-loop](concepts/poker-hl-analyst-loop.md) | validated | HL loop: analyze → LLM patch → preflight → deploy |
 | [casino-game-house-edge](concepts/casino-game-house-edge.md) | validated | Edge by game, smart-bet ranking |
 | [prediction-markets-crossover](concepts/prediction-markets-crossover.md) | validated | Kalshi/Polymarket retail lens |
+| [pm-live-belief-updating](concepts/pm-live-belief-updating.md) | validated | Live PM underreaction, salience×liquidity |
 | [world-cup-2026-format](concepts/world-cup-2026-format.md) | validated | 48-team structure, calendar |
 | [world-cup-prediction-market-types](concepts/world-cup-prediction-market-types.md) | validated | Advance vs ML vs outright |
 | [world-cup-books-vs-pm-divergence](concepts/world-cup-books-vs-pm-divergence.md) | validated | Sportsbook vs PM/Kalshi gaps |
@@ -124,6 +125,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [devfun-poker-arena-phase0-2026-06-01](sources/devfun-poker-arena-phase0-2026-06-01.md) | read |
 | [youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03](sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md) | deep-read |
 | [arxiv-polymarket-v1-database-2606.04217-2026-06-05](sources/arxiv-polymarket-v1-database-2606.04217-2026-06-05.md) | deep-read |
+| [arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09](sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md) | deep-read |
 
 ## Meta
 

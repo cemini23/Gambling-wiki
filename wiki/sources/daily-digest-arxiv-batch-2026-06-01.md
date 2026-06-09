@@ -17,9 +17,10 @@ related:
   - sources/polygnosis-2-polymarket-osint-2026-06-01.md
   - sources/daily-digest-arxiv-batch-2026-06-02.md
   - concepts/opponent-modeling-imperfect-info.md
+  - sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md
 maturity: validated
 created: 2026-06-01
-updated: 2026-06-04
+updated: 2026-06-09
 ---
 
 ## Relations
