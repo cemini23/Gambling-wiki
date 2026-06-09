@@ -12,7 +12,7 @@ related:
   - entities/bots/poker-bot-tooling.md
 maturity: validated
 created: 2026-06-03
-updated: 2026-06-07
+updated: 2026-06-09
 ---
 
 ## Relations
@@ -40,6 +40,22 @@ Operator need: **stop bleeding chips** on dev.fun Playground by closing the loop
 | **Use** | **Fix Playground leaks now** | Tune exploit margins | Not deployed for Cemini |
 
 **Rule:** Self-play is a **deploy gate** (regression corpus + sanity checks) — **not** the objective function. Optimize against **Arena analyze** worst hands, not self-play bb/100. Specific numeric gates live in private preflight config during competition.
+
+### Selfplay KPI gate (K107, 2026-06-09)
+
+Run before deploy (private repo):
+
+```bash
+uv run python examples/cemini_selfplay_audit.py --hands 400 --seed 42 --gate
+```
+
+| Metric | Purpose |
+|--------|---------|
+| **EP VPIP** | Early-position leak detector (default gate ≤22%) |
+| **VPIP − PFR gap** | Passive leak — open-spot bug shows gap **>10pp** with low PFR |
+| **EP trash opens** | Chart trash raising UTG/MP |
+
+**Open-spot detection:** prod `cemini_decide.py` routes preflop opens via `is_preflop_open_spot()` — handles Arena schema where first-in has `callChips=BB`. Audit 2026-06-09: boolean **fixed**; **PFR 2.1% vs VPIP 12.1%** still flags passive opens — tune `_preflop_open` / chart raise frequency against **live analyze**, not selfplay bb/100 alone.
 
 ### Loop (four steps)
 

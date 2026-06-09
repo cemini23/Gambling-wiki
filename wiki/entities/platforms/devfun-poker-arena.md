@@ -18,7 +18,7 @@ related:
   - sources/arxiv-2508-17671-consistent-opponent-modeling.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-08
+updated: 2026-06-09
 phase_0_verdict: CONDITIONAL-GO 2026-06-01 — sanctioned bot arena (not live poker room); enter via arena API; prize claim needs X verify + external payout wallet
 adoption_status: PHASE-0-COMPLETE
 ---
@@ -105,6 +105,12 @@ S1 royal slot **Claimed**. S2 runs **both** jackpots. Optional hunt on qual bot 
 Tournament S1/S2 IDs not in `list-active` yet — watch Discord + arena UI. Beta IDs (`b-arena`) are a separate environment.
 
 Re-check `GET /competition/list-active` before each run.
+
+### Preflop selfplay gate (K107 audit, 2026-06-09) [CONFIRMED]
+
+Open-spot detection uses `is_preflop_open_spot()` in private `opponent_target.py` (handles Arena `callChips=BB` for UTG first-in). **Not** the raw `call_chips==0` anti-pattern from K107.
+
+Selfplay audit (`cemini_selfplay_audit.py`, 400 hands): **VPIP 12.1% / PFR 2.1%** — passive gap persists; investigate `_preflop_open` raise rate vs live Arena analyze, not open-spot boolean alone. See `@concepts/poker-hl-analyst-loop.md`.
 
 ## Snippets
 

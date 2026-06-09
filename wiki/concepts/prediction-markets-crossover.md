@@ -32,6 +32,8 @@ related:
   - sources/arxiv-polymarket-v1-database-2606.04217-2026-06-05.md
   - concepts/pm-live-belief-updating.md
   - sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md
+  - concepts/world-cup-pm-retail-hygiene.md
+  - sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-06-09
@@ -95,7 +97,7 @@ Better liquidity on mainstream spreads; PM shines on **niche events**, **politic
 
 ### World Cup 2026
 
-Expanded tournament + host nations (USA/Mexico/Canada) create **books vs PM/Kalshi divergence** on advance and futures — `@entities/sports/world-cup-2026-betting.md`, `@concepts/world-cup-books-vs-pm-divergence.md`. Contract-type cheat sheet: `@concepts/world-cup-prediction-market-types.md`.
+Expanded tournament + host nations (USA/Mexico/Canada) create **books vs PM/Kalshi divergence** on advance and futures — `@entities/sports/world-cup-2026-betting.md`, `@concepts/world-cup-books-vs-pm-divergence.md`. Contract-type cheat sheet: `@concepts/world-cup-prediction-market-types.md`. **Retail hygiene checklist (K108):** `@concepts/world-cup-pm-retail-hygiene.md`.
 
 ### Signal products
 

@@ -23,9 +23,11 @@ related:
   - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
   - sources/daily-digest-news-r1-r12-2026-06-01.md
   - sources/daily-digest-news-r1-r12-2026-06-02.md
+  - concepts/world-cup-pm-retail-hygiene.md
+  - sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-06-02
+updated: 2026-06-09
 ---
 
 ## Relations
@@ -92,6 +94,7 @@ YouTube group previews (DeadBall TV, B Wade Picks, etc.) catalogued in `@osint-w
 - Size with `@concepts/bankroll-management.md` and fractional Kelly — `@concepts/kelly-criterion-betting.md`.
 - FLB on longshot nation futures — `@concepts/favorite-longshot-bias.md`.
 - Re-check all pre-tournament prices **within 24h of kickoff** — research snapshots are May 2026 anchors only.
+- **PM retail hygiene (K108)** — pre-tournament gates (rules, fees, UMA, cross-venue, drawdown brakes) — `@concepts/world-cup-pm-retail-hygiene.md`.
 
 ## Snippets
 

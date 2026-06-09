@@ -13,9 +13,11 @@ related:
   - entities/platforms/kalshi.md
   - entities/platforms/polymarket.md
   - sources/osint-cross-wiki-wc2026-retail-synthesis-2026-05-31.md
+  - concepts/world-cup-pm-retail-hygiene.md
+  - sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-06-09
 ---
 
 ## Relations

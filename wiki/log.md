@@ -2,6 +2,14 @@
 
 Append-only chronological log.
 
+## [2026-06-09] ingest | K108 WC PM retail hygiene + K107 open-spot audit
+
+- **Source** — `sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md`
+- **Concept** — `world-cup-pm-retail-hygiene.md` (validated)
+- **Updated** — `entities/sports/world-cup-2026-betting.md`, `entities/platforms/polymarket.md`, `poker-hl-analyst-loop.md`, `devfun-poker-arena.md`
+- **K107 audit** — open-spot fix confirmed in private `is_preflop_open_spot()`; selfplay VPIP 12.1% / PFR 2.1% — passive leak remains; results in `briefs/2026-06-09_k107-gambling-poker-open-spot-AUDIT.md`
+- **Briefs cleared** — removed ingested K90 + K93 stubs from `briefs/`
+
 ## [2026-06-09] ingest | Kalshi live belief updating (arXiv 2606.07811)
 
 - **Source** — `sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md` (deep-read)

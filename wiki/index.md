@@ -31,6 +31,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [world-cup-books-vs-pm-divergence](concepts/world-cup-books-vs-pm-divergence.md) | validated | Sportsbook vs PM/Kalshi gaps |
 | [world-cup-third-place-advancement-betting](concepts/world-cup-third-place-advancement-betting.md) | validated | Eight-best-thirds, GD bubbles |
 | [world-cup-knockout-phase-betting](concepts/world-cup-knockout-phase-betting.md) | validated | KO phases, 90-min vs ET |
+| [world-cup-pm-retail-hygiene](concepts/world-cup-pm-retail-hygiene.md) | validated | K108 WC PM retail checklist |
 | [polymarket-weather-wagering-retail](concepts/polymarket-weather-wagering-retail.md) | draft |
 | [live-betting-match-integrity](concepts/live-betting-match-integrity.md) | draft |
 | [pm-perspective-mismatch-trading](concepts/pm-perspective-mismatch-trading.md) | draft |
@@ -126,6 +127,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03](sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md) | deep-read |
 | [arxiv-polymarket-v1-database-2606.04217-2026-06-05](sources/arxiv-polymarket-v1-database-2606.04217-2026-06-05.md) | deep-read |
 | [arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09](sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md) | deep-read |
+| [brief-k108-gambling-wc-retail-hygiene-2026-06-09](sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md) | deep-read |
 
 ## Meta
 

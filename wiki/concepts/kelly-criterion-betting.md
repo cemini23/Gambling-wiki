@@ -16,9 +16,11 @@ related:
   - sources/youtube-operator-batch-casino-2026-05-31.md
   - sources/youtube-operator-batch-sports-betting-research-2026-05-31.md
   - entities/bots/wagerbrain.md
+  - concepts/world-cup-pm-retail-hygiene.md
+  - sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-06-09
 ---
 
 ## Relations
