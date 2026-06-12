@@ -27,6 +27,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [prediction-markets-crossover](concepts/prediction-markets-crossover.md) | validated | Kalshi/Polymarket retail lens |
 | [pm-live-belief-updating](concepts/pm-live-belief-updating.md) | validated | Live PM underreaction, salience×liquidity |
 | [world-cup-2026-format](concepts/world-cup-2026-format.md) | validated | 48-team structure, calendar |
+| [world-cup-2026-fan-narrative-preview](concepts/world-cup-2026-fan-narrative-preview.md) | draft | K112 @Lutchyn13 fan essay REFERENCE |
 | [world-cup-prediction-market-types](concepts/world-cup-prediction-market-types.md) | validated | Advance vs ML vs outright |
 | [world-cup-books-vs-pm-divergence](concepts/world-cup-books-vs-pm-divergence.md) | validated | Sportsbook vs PM/Kalshi gaps |
 | [world-cup-third-place-advancement-betting](concepts/world-cup-third-place-advancement-betting.md) | validated | Eight-best-thirds, GD bubbles |
@@ -128,6 +129,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [arxiv-polymarket-v1-database-2606.04217-2026-06-05](sources/arxiv-polymarket-v1-database-2606.04217-2026-06-05.md) | deep-read |
 | [arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09](sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md) | deep-read |
 | [brief-k108-gambling-wc-retail-hygiene-2026-06-09](sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md) | deep-read |
+| [brief-k112-gambling-wc-2026-narrative-2026-06-12](sources/brief-k112-gambling-wc-2026-narrative-2026-06-12.md) | deep-read |
 
 ## Meta
 

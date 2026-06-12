@@ -4,6 +4,7 @@ type: concept
 tags: [concept, world-cup-2026, soccer, tournament-structure]
 keywords: [48-team, group-stage, round-of-32, third-place, tiebreakers]
 related:
+  - concepts/world-cup-2026-fan-narrative-preview.md
   - entities/sports/world-cup-2026-betting.md
   - concepts/world-cup-third-place-advancement-betting.md
   - concepts/world-cup-knockout-phase-betting.md

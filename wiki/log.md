@@ -2,6 +2,12 @@
 
 Append-only chronological log.
 
+## [2026-06-12] ingest | K112 WC 2026 fan narrative from OSINT
+
+- **Source** — `sources/brief-k112-gambling-wc-2026-narrative-2026-06-12.md`
+- **Concept** — `concepts/world-cup-2026-fan-narrative-preview.md` (REFERENCE)
+- **Brief cleared** — ingested from `briefs/2026-06-12_k112-gambling-wc-2026-narrative-from-osint.md`
+
 ## [2026-06-09] ingest | K108 WC PM retail hygiene + K107 open-spot audit
 
 - **Source** — `sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md`
