@@ -19,10 +19,12 @@ related:
   - entities/platforms/polymarket.md
   - entities/platforms/kalshi.md
   - sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md
+  - concepts/world-cup-2026-fan-narrative-preview.md
+  - sources/brief-k112-gambling-wc-2026-narrative-2026-06-12.md
   - osint-wiki/concepts/polymarket-retail-trading-discipline.md
 maturity: validated
 created: 2026-06-09
-updated: 2026-06-09
+updated: 2026-06-12
 ---
 
 ## Relations

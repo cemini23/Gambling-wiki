@@ -8,7 +8,7 @@ related:
   - concepts/world-cup-pm-retail-hygiene.md
   - entities/sports/world-cup-2026-betting.md
   - sources/brief-k112-gambling-wc-2026-narrative-2026-06-12.md
-  - "@osint-wiki/sources/trading-posts-compilation-9-2026-06-12.md"
+  - osint-wiki/sources/trading-posts-compilation-9-2026-06-12.md
 maturity: draft
 created: 2026-06-12
 updated: 2026-06-12

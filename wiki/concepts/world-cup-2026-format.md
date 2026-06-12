@@ -13,9 +13,11 @@ related:
   - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
   - concepts/world-cup-pm-retail-hygiene.md
   - sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md
+  - concepts/world-cup-2026-fan-narrative-preview.md
+  - sources/brief-k112-gambling-wc-2026-narrative-2026-06-12.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-06-09
+updated: 2026-06-12
 ---
 
 ## Relations

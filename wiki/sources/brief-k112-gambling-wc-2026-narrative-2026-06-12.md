@@ -8,7 +8,7 @@ related:
   - concepts/world-cup-2026-format.md
   - concepts/world-cup-pm-retail-hygiene.md
   - entities/sports/world-cup-2026-betting.md
-  - "@osint-wiki/sources/trading-posts-compilation-9-2026-06-12.md"
+  - osint-wiki/sources/trading-posts-compilation-9-2026-06-12.md
 maturity: validated
 read_status: deep-read
 created: 2026-06-12
