@@ -208,7 +208,8 @@ When a query needs data from another wiki, use `@wiki-alias/path/to/page.md`. Pa
 
 | Alias | Path | Visibility | Description |
 |-------|------|------------|-------------|
-| `gambling-wiki` | `wiki/` | **Public** | Sports betting, casino, poker, DFS, best ball, consumer prediction-market wagering |
+| `gambling-wiki` | `../Gambling wiki/wiki/` | **Public** | Sports betting, casino, poker, DFS, best ball, consumer prediction-market wagering |
+| `game-dev-wiki` | `../Game Dev wiki/wiki/` | **Public** | Hobby game dev — castle/RTS research, engine evals, agent harness |
 | `osint-wiki` | `../../OSINT WORKSPACE/wiki/` | **Private** | Quant finance, PM/Kalshi bots, CeminiSuite, macro OSINT. Shared: Kelly, FLB, cross-venue arb |
 | `ccc-wiki` | `../Cemini claude code CCC/wiki/` | **Public** | Agent workflow, MCP, skills, ingest tooling |
 | `cybersecurity-wiki` | `../Cybersecurity wiki/wiki/` | Public | Minimal overlap |

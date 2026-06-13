@@ -56,11 +56,12 @@ Gambling-wiki/
 
 ## Cemini wiki federation
 
-**Seven** wikis + private **Cemini Financial Suite**. Cross-links: `@<alias>/path/to/page.md` (`CLAUDE.md` → Related Wikis).
+**Eight** wikis + private **Cemini Financial Suite**. Cross-links: `@<alias>/path/to/page.md` (`CLAUDE.md` → Related Wikis).
 
 | Alias | Repository | Focus |
 |-------|------------|--------|
 | **`gambling-wiki`** | **This repo** | Sports betting, casino, poker, DFS, best ball |
+| `game-dev-wiki` | [Game-Dev-wiki](https://github.com/cemini23/Game-Dev-wiki) | Castle/RTS hobby dev, Godot evals, agent harness |
 | `osint-wiki` | *private* ([llm-wiki-by-cemini](https://github.com/cemini23/llm-wiki-by-cemini)) | PM bots, dev.fun arena bot code, CeminiSuite, quant OSINT |
 | `ccc-wiki` | [cemini-claude-code-CCC](https://github.com/cemini23/cemini-claude-code-CCC) | Agent workflow, MCP, skills |
 | `cybersecurity-wiki` | [Cybersecurity-wiki](https://github.com/cemini23/Cybersecurity-wiki) | Pentest, SOC |
