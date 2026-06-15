@@ -34,7 +34,7 @@ read_status: deep-read
 |-------|-------|
 | Title | The Convergence of Autonomous AI Agents, ML, and Decentralized Prediction Markets (GitHub landscape) |
 | Author | Gemini Deep Research |
-| Location | `cemini-librarian:/opt/cemini-bulk/research/GitHub Sports Betting Repositories Evaluation.docx` |
+| Location | `raw-sources/GitHub Sports Betting Repositories Evaluation.docx` (cemini-librarian bulk retired 2026-06) |
 | Retrieved | 2026-05-30 |
 | Read status | deep-read (gambling-wiki lens: fiat/DFS/retail; PM bot rows on @osint-wiki) |
 

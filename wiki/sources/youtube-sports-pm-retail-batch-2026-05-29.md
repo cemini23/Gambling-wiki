@@ -34,7 +34,7 @@ read_status: deep-read
 | Title | YouTube sports / PM retail signals synthesis |
 | Author | Cross-wiki from @osint-wiki K80 batches |
 | Type | transcript synthesis |
-| Location | `cemini-librarian:/opt/cemini-bulk/research/youtube-kalshi-bots-batch-2026-05-29-transcripts.md` + `youtube-polymarket-bots-batch-2026-05-29-transcripts.md` |
+| Location | `raw-sources/youtube-kalshi-bots-batch-2026-05-29-transcripts.md` + `raw-sources/youtube-polymarket-bots-batch-2026-05-29-transcripts.md` (cemini-librarian bulk retired 2026-06) |
 | Videos | 11 (7 Kalshi + 4 Polymarket) |
 | Retrieved | 2026-05-31 |
 | Read status | deep-read |

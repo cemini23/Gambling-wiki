@@ -34,7 +34,7 @@ cross-wiki-measurement: "@osint-wiki/concepts/polymarket-microstructure-findings
 | **Authors** | Boka Qin; Rui Yang (Time Seventeen) |
 | **arXiv** | [2606.04217](https://arxiv.org/abs/2606.04217) |
 | **Dataset** | [HuggingFace TimeSeventeen/Polymarket-v1](https://huggingface.co/datasets/TimeSeventeen/Polymarket-v1) |
-| **PDF** | `cemini-librarian:/opt/cemini-bulk/research/arxiv-2606.04217-polymarket-v1-database.pdf` |
+| **PDF** | `raw-sources/arxiv-2606.04217-polymarket-v1-database.pdf` (cemini-librarian bulk retired 2026-06) |
 | **Span** | 2022-11-21 → 2026-04-28 (CTF Exchange v1 lifecycle) |
 | **Scale** | 1.20B trades · 1.30M markets · ~$61B nominal volume · ~$29B economic (de-relayer) |
 | **Read status** | deep-read — abstract, institutional background, stylized facts, fee DiD, calibration benchmarks |
@@ -126,5 +126,5 @@ Participant concentration: top **1%** of makers = **84.1%** of maker volume; top
 
 - **Not** a live trading feed — frozen v1 tape; v2 architecture is post-sample
 - **Not** a substitute for reading current Polymarket fee schedule UI — use platform docs for exact taker curves at your price point
-- Full HF dataset mirror to librarian — deferred to OSINT storage brief `[NEEDS VERIFICATION 2026-06-05]`
+- Full HF dataset mirror — laptop `raw-sources/` or HuggingFace only; cemini-librarian bulk retired 2026-06
 - DiD t-statistics on some liquidity metrics likely under-clustered — treat magnitudes as directional, not precise causal calibration

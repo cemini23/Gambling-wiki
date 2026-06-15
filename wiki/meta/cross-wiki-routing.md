@@ -38,7 +38,7 @@ Ingest routing checklist when a source touches wagering strategy, **gambling aut
 
 ### Route to @osint-wiki (stub + brief)
 
-- CeminiSuite **prod** config, conductor, librarian infra
+- CeminiSuite **prod** config and conductor (librarian infra retired 2026-06)
 - Bot **implementation** (CeminiSuite deploy, `cemini_decide`, arena HL scripts) — private `llm-wiki-by-cemini/agents/`
 - Regulatory briefs for **institutional trading stack** at full depth
 - Macro/equity OSINT unrelated to betting

@@ -26,7 +26,7 @@ read_status: deep-read
 | Title | A New Interpretation of Information Rate |
 | Author | J. L. Kelly, Jr. (Bell Telephone Laboratories) |
 | Journal | Bell System Technical Journal, Vol. 35, pp. 917–926, July 1956 |
-| Location | `cemini-librarian:/opt/cemini-bulk/research/A New Interpretation of Information Rate.pdf` |
+| Location | `raw-sources/A New Interpretation of Information Rate.pdf` (cemini-librarian bulk retired 2026-06) |
 | Retrieved | 2026-05-31 (cross-wiki from @osint-wiki) |
 | Read status | deep-read |
 

@@ -35,7 +35,7 @@ read_status: deep-read
 | Title | WC 2026 retail betting synthesis |
 | Author | Gambling-wiki ingest session (synthesized from @osint-wiki K82–K85 research) |
 | Type | cross-wiki synthesis — no new raw file in inbox |
-| Location | Primary docx on librarian: `cemini-librarian:/opt/cemini-bulk/research/2026 World Cup Prediction Market Research.docx` (+ companion docx listed on osint source pages) |
+| Location | `raw-sources/2026 World Cup Prediction Market Research.docx` (+ companion docx on @osint-wiki source pages; cemini-librarian bulk retired 2026-06) |
 | Retrieved | 2026-05-31 |
 | Read status | deep-read |
 

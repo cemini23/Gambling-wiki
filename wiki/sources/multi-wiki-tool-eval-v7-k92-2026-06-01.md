@@ -34,7 +34,7 @@ updated: 2026-06-15
 | **Title** | GitHub Repo Evaluation for Cemini (v5 prompt, casino/poker/stake cluster) |
 | **Author** | Gemini Deep Research |
 | **Type** | docx |
-| **Location** | `cemini-librarian:/opt/cemini-bulk/research/GitHub Repo Evaluation for Cemini.docx` |
+| **Location** | `raw-sources/GitHub Repo Evaluation for Cemini.docx` (cemini-librarian bulk retired 2026-06) |
 | **Retrieved** | 2026-06-01 |
 | **URLs** | 90 |
 | **Read status** | deep-read |

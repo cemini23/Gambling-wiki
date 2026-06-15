@@ -19,7 +19,7 @@ Steps:
 - [x] **WC 2026 retail batch** — cross-wiki synthesis from osint Gemini/YouTube research (7 new pages)
 - [x] Operator YouTube drop — 17 videos (WC + BBM7) ingested 2026-05-31
 - [ ] Deep-read migrated OSINT sources (Gemini sports-betting landscape primary docx)
-- [x] Push to `Gambling-wiki` GitHub + librarian rsync via OSINT sync script
+- [x] Push to `Gambling-wiki` GitHub (librarian rsync retired 2026-06)
 
 ### W6 — dev.fun Playground bot (cemini_decide)
 
@@ -96,8 +96,8 @@ Steps:
 
 | ID | Question | Options | Status |
 |----|----------|---------|--------|
-| D1 | Librarian sync cadence | Manual rsync vs hourly LaunchAgent like osint-wiki | **Open** — defer until page count justifies RAG |
-| D2 | Raw source home | Laptop `raw-sources/` only vs also push to cemini-librarian bulk | **Open** — follow operator preference on next ingest |
+| D1 | Librarian sync cadence | Manual rsync vs hourly LaunchAgent like osint-wiki | **Closed 2026-06** — cemini-librarian retired; no remote RAG mirror |
+| D2 | Raw source home | Laptop `raw-sources/` only vs also push to cemini-librarian bulk | **Resolved 2026-06** — laptop `raw-sources/` only |
 | D3 | DFS optimizer tooling | Document pydfs-lineup-optimizer vs paid optimizers | **Open** — Phase-0 when DFS ingest batch lands |
 | D4 | Bot topology | Single master orchestrator vs independent platform bots | **Open** — lean fleet |
 | D5 | First bot lane | Sportsbook +EV vs PM divergence vs DFS slate | **Open** |

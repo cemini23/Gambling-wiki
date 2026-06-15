@@ -33,7 +33,7 @@ cross-wiki-source: "@osint-wiki/sources/multi-wiki-tool-eval-v6-k90-2026-05-31.m
 | **Title** | Cemini Multi-Wiki Link Evaluation Report (Batch v6, May 2026) |
 | **Author** | Gemini Deep Research (v6 multi-wiki eval prompt) |
 | **Type** | docx |
-| **Location** | `cemini-librarian:/opt/cemini-bulk/research/multi-wiki-tool-eval-v6-k90-2026-05-31.docx` |
+| **Location** | `raw-sources/multi-wiki-tool-eval-v6-k90-2026-05-31.docx` (cemini-librarian bulk retired 2026-06) |
 | **Retrieved** | 2026-05-31 |
 | **Read status** | deep-read — gambling-wiki slice extracted; full body on `@osint-wiki` |
 

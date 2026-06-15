@@ -36,8 +36,7 @@ updated: 2026-06-15
 | **Author** | Haowei Qian (Independent Researcher) |
 | **arXiv** | [2606.13038](https://arxiv.org/abs/2606.13038) |
 | **Repo** | [WillChienT/nous-paper](https://github.com/WillChienT/nous-paper) |
-| **PDF (local)** | `raw-sources/arxiv-2606.13038-nous-an-attempt-to-extract-and-inject-the-cognit.pdf` |
-| **PDF (librarian)** | `cemini-librarian:/opt/cemini-bulk/research/arxiv-2606.13038-nous-an-attempt-to-extract-and-inject-the-cognit.pdf` [NEEDS VERIFICATION 2026-06-15 — scp timeout] |
+| **PDF** | `raw-sources/arxiv-2606.13038-nous-an-attempt-to-extract-and-inject-the-cognit.pdf` |
 | **sha256** | `4bec5de21223a9ee…` |
 | **Read status** | skimmed — abstract + intro + contribution claims (REFERENCE posture) |
 

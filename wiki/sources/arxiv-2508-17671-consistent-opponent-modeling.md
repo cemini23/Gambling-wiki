@@ -25,7 +25,7 @@ updated: 2026-06-03
 | **Title** | Consistent Opponent Modeling in Imperfect-Information Games |
 | **Author** | Ganzfried |
 | **arXiv ID** | 2508.17671 |
-| **Location** | `cemini-librarian:/opt/cemini-bulk/research/arxiv-2508.17671-consistent-opponent-modeling-in-imperfect-inform.pdf` |
+| **Location** | `raw-sources/arxiv-2508.17671-consistent-opponent-modeling-in-imperfect-inform.pdf` (cemini-librarian bulk retired 2026-06) |
 | **Retrieved** | 2026-06-03 |
 | **Read status** | read (abstract) |
 

@@ -2,6 +2,12 @@
 
 Append-only chronological log.
 
+## [2026-06-15] ops | cemini-librarian retired
+
+- **Infra** — `cemini-librarian` Hetzner host decommissioned; no bulk mirror or wiki rsync
+- **Canonical raw archive** — laptop `raw-sources/` only
+- **Updated** — `CLAUDE.md`, `ROADMAP.md` (D1/D2 closed), source provenance tables (9 pages), K114 log line
+
 ## [2026-06-13] ingest | K114 — Nous PM paper + brief close-out
 
 - **Source** — `sources/arxiv-2606-13038-nous-prediction-market-cognitive-injection-2026-06-13.md` (REFERENCE / skimmed)
@@ -11,7 +17,7 @@ Append-only chronological log.
 - **Updated** — `entities/bots/poker-bot-tooling.md` (K103 reject cluster: PQL NO-GO, casinogame + poker-equity-playground Reject)
 - **Updated** — `concepts/poker-hl-analyst-loop.md` (K107 open-spot bug pattern, audit table, passive PFR leak)
 - **Updated** — `concepts/world-cup-pm-retail-hygiene.md` (GodEye 10 mistakes numbered checklist)
-- **Raw** — Nous PDF → `raw-sources/`; librarian scp **timeout** 2026-06-15 (retry when tunnel up)
+- **Raw** — Nous PDF → `raw-sources/` only (cemini-librarian retired 2026-06)
 - **Cross-wiki** — `@osint-wiki` links on Nous source, starter-kit, poker-bot-tooling, HL loop, WC hygiene
 - **Briefs cleared** — K102, K103, K107, K108, K112 gambling handoffs from `briefs/` (K107 audit retained)
 

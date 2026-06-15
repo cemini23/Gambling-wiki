@@ -21,7 +21,7 @@ The wiki is a librarian that **manages, curates, and applies** that knowledge:
   - **claude.ai / Claude Desktop** — slate prep, strategy notes, hand-review frameworks, bankroll plans
   - **Hands-on use** — paste a brief into a DFS optimizer workflow, a poker study session, or a sports-betting journal
 
-This is a laptop-first workspace. Raw sources archive locally in `raw-sources/` after ingest. For federation with the Cemini librarian stack, sync `wiki/` to `cemini-librarian` when the operator enables multi-wiki search (see `@osint-wiki/concepts/librarian-server-architecture.md`).
+This is a laptop-first workspace. Raw sources archive locally in `raw-sources/` after ingest. Multi-wiki search uses sibling wiki folders on disk (see Related Wikis); **cemini-librarian bulk/rsync is retired** (2026-06).
 
 ## Scope boundary — vs `@osint-wiki`
 
@@ -45,8 +45,7 @@ This is a laptop-first workspace. Raw sources archive locally in `raw-sources/` 
 
 1. **Raw sources** — immutable. You read them, never modify them.
    - Canonical long-term archive: `raw-sources/` (gitignored — PDFs, ebooks, course exports, scraped articles)
-   - Shared bulk library (when operator syncs): `cemini-librarian:/opt/cemini-bulk/research/`
-   - **Drop pattern**: drop new sources into `research to be indexed/` → ingest → move to `raw-sources/` (or librarian bulk for large/shared corpus)
+   - **Drop pattern**: drop new sources into `research to be indexed/` → ingest → move to `raw-sources/`
 
 2. **The wiki** — LLM-written, human-read. Lives in `wiki/`.
 
@@ -150,7 +149,7 @@ updated: YYYY-MM-DD
 5. Create `wiki/sources/<slug>.md`
 6. Update entity + concept pages; bidirectional `related:`
 7. Update `wiki/index.md` and append `wiki/log.md`
-8. Move raw file to `raw-sources/` (or librarian bulk if operator directs)
+8. Move raw file to `raw-sources/`
 9. Run `python3 scripts/wiki_lint.py` before commit
 
 A single ingest should touch **3–15 pages**. Zero new pages → ask if the source is worth ingesting.
@@ -223,16 +222,9 @@ When a query needs data from another wiki, use `@wiki-alias/path/to/page.md`. Pa
 - Bidirectional when both pages exist
 - When creating a stub in another wiki, note dependency in `## Relations`
 
-### Librarian sync (optional)
+### Librarian sync (retired)
 
-When operator enables unified RAG:
-
-```bash
-rsync -avz "/Users/claudiobarone/Desktop/projects/Gambling wiki/wiki/" \
-  cemini-librarian:/opt/cemini-wiki/gambling-wiki/wiki/
-```
-
-Then `kb ingest` on librarian. Conductor routing documented in `@osint-wiki`.
+`cemini-librarian` Hetzner host and bulk mirror **decommissioned 2026-06**. Canonical raw archive is laptop `raw-sources/` only; published wiki is this git repo + GitHub.
 
 ## Responsible gambling
 
