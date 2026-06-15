@@ -21,7 +21,7 @@ The wiki is a librarian that **manages, curates, and applies** that knowledge:
   - **claude.ai / Claude Desktop** — slate prep, strategy notes, hand-review frameworks, bankroll plans
   - **Hands-on use** — paste a brief into a DFS optimizer workflow, a poker study session, or a sports-betting journal
 
-This is a laptop-first workspace. Raw sources archive locally in `raw-sources/` after ingest. Multi-wiki search uses sibling wiki folders on disk (see Related Wikis); **cemini-librarian bulk/rsync is retired** (2026-06).
+This is a laptop-first workspace. Raw sources archive to **`cemini-egress-fi:/opt/cemini-bulk/research/gambling/`** after ingest via OSINT `archive_raw_to_egress.sh`. Multi-wiki search uses sibling wiki folders on disk (see Related Wikis); **cemini-librarian bulk/rsync is retired** (2026-06).
 
 ## Scope boundary — vs `@osint-wiki`
 
@@ -44,8 +44,8 @@ This is a laptop-first workspace. Raw sources archive locally in `raw-sources/` 
 ## Architecture — three layers
 
 1. **Raw sources** — immutable. You read them, never modify them.
-   - Canonical long-term archive: `raw-sources/` (gitignored — PDFs, ebooks, course exports, scraped articles)
-   - **Drop pattern**: drop new sources into `research to be indexed/` → ingest → move to `raw-sources/`
+   - Canonical long-term archive: `cemini-egress-fi:/opt/cemini-bulk/research/gambling/` (via OSINT `archive_raw_to_egress.sh`)
+   - **Drop pattern**: drop new sources into `research to be indexed/` → ingest → archive to egress-fi (local copy removed on success)
 
 2. **The wiki** — LLM-written, human-read. Lives in `wiki/`.
 
@@ -149,7 +149,7 @@ updated: YYYY-MM-DD
 5. Create `wiki/sources/<slug>.md`
 6. Update entity + concept pages; bidirectional `related:`
 7. Update `wiki/index.md` and append `wiki/log.md`
-8. Move raw file to `raw-sources/`
+8. **Archive raw to egress-fi**: `bash "../../OSINT WORKSPACE/scripts/archive_raw_to_egress.sh" --wiki-id gambling "research to be indexed/<filename>"` — set source page `Location` to `cemini-egress-fi:/opt/cemini-bulk/research/gambling/<filename>`
 9. Run `python3 scripts/wiki_lint.py` before commit
 
 A single ingest should touch **3–15 pages**. Zero new pages → ask if the source is worth ingesting.
@@ -224,7 +224,7 @@ When a query needs data from another wiki, use `@wiki-alias/path/to/page.md`. Pa
 
 ### Librarian sync (retired)
 
-`cemini-librarian` Hetzner host and bulk mirror **decommissioned 2026-06**. Canonical raw archive is laptop `raw-sources/` only; published wiki is this git repo + GitHub.
+`cemini-librarian` Hetzner host **decommissioned 2026-06**. Canonical raw archive: **`cemini-egress-fi:/opt/cemini-bulk/research/gambling/`**; published wiki is this git repo + GitHub.
 
 ## Responsible gambling
 
