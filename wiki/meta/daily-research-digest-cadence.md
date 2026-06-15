@@ -17,9 +17,12 @@ related:
   - sources/polygnosis-2-polymarket-osint-2026-06-01.md
   - sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md
   - sweeps/2026-06-09-daily.md
+  - sweeps/2026-06-13-daily.md
+  - sweeps/2026-06-14-daily.md
+  - sweeps/2026-06-15-daily.md
 maturity: validated
 created: 2026-06-01
-updated: 2026-06-09
+updated: 2026-06-15
 ---
 
 ## Relations
@@ -38,7 +41,7 @@ K93 federated install: morning **discovery-only** loop for sports betting, PM re
 |-------|-------|
 | **Cadence** | Daily @ 08:15 local (`com.cemini.daily-research-digest.gambling`) |
 | **Installed** | 2026-06-01 (K93 brief) |
-| **Last run** | 2026-06-12 |
+| **Last run** | 2026-06-15 |
 | **Script** | `~/bin/cemini-daily-research-digest-gambling` → `scripts/daily_research_digest_run.py` |
 | **Deps** | `wiki_source_index.py` (required alongside digest runner) |
 | **Config** | `scripts/daily_research_config.yaml` |

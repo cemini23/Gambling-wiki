@@ -9,10 +9,12 @@ related:
   - concepts/prediction-markets-crossover.md
   - concepts/sportsbook-pm-line-divergence.md
   - concepts/pm-copy-trading-retail-risks.md
+  - concepts/pm-agent-cognitive-monoculture.md
+  - sources/arxiv-2606-13038-nous-prediction-market-cognitive-injection-2026-06-13.md
   - entities/platforms/polymarket.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-01
+updated: 2026-06-15
 ---
 
 ## Relations

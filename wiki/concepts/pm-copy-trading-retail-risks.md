@@ -18,9 +18,11 @@ related:
   - sources/arxiv-polymarket-v1-database-2606.04217-2026-06-05.md
   - concepts/polymarket-v1-research-database.md
   - concepts/world-cup-pm-retail-hygiene.md
+  - concepts/pm-agent-cognitive-monoculture.md
+  - sources/arxiv-2606-13038-nous-prediction-market-cognitive-injection-2026-06-13.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-06-09
+updated: 2026-06-15
 ---
 
 ## Relations

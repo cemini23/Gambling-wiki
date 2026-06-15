@@ -16,9 +16,10 @@ related:
   - sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md
   - concepts/poker-hl-analyst-loop.md
   - sources/arxiv-2508-17671-consistent-opponent-modeling.md
+  - entities/tools/devfun-poker-arena-starter-kit.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-09
+updated: 2026-06-13
 phase_0_verdict: CONDITIONAL-GO 2026-06-01 — sanctioned bot arena (not live poker room); enter via arena API; prize claim needs X verify + external payout wallet
 adoption_status: PHASE-0-COMPLETE
 ---
@@ -36,7 +37,7 @@ adoption_status: PHASE-0-COMPLETE
 
 - **Product**: [dev.fun × Monad Poker Arena](https://dev.fun/)
 - **Docs**: [docs.dev.fun](https://docs.dev.fun/) · skill index [arena.dev.fun/skills/arena.md](https://arena.dev.fun/skills/arena.md)
-- **Starter kit**: [chenziz/arena-pokerkit](https://github.com/chenziz/arena-pokerkit)
+- **Starter kit**: [chenziz/arena-pokerkit](https://github.com/chenziz/arena-pokerkit) — see `@entities/tools/devfun-poker-arena-starter-kit.md` (K102)
 - **Official API**: `https://arena.dev.fun/api/arena` — **use for Playground S1 / public leaderboard**
 - **Beta API**: `https://b-arena.dev.fun/api/arena` — separate agents, wallets, leaderboards (legacy prep)
 

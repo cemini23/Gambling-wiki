@@ -10,9 +10,10 @@ related:
   - concepts/opponent-modeling-imperfect-info.md
   - concepts/poker-strategy-overview.md
   - entities/bots/poker-bot-tooling.md
+  - osint-wiki/sources/trading-posts-compilation-7-2026-06-09.md
 maturity: validated
 created: 2026-06-03
-updated: 2026-06-09
+updated: 2026-06-13
 ---
 
 ## Relations
@@ -41,7 +42,24 @@ Operator need: **stop bleeding chips** on dev.fun Playground by closing the loop
 
 **Rule:** Self-play is a **deploy gate** (regression corpus + sanity checks) — **not** the objective function. Optimize against **Arena analyze** worst hands, not self-play bb/100. Specific numeric gates live in private preflight config during competition.
 
-### Selfplay KPI gate (K107, 2026-06-09)
+### Open-spot bug (K107, @3d64r_89 Post 16) [CONFIRMED]
+
+Classic preflop misdetection when porting from generic poker engines to Arena schema:
+
+| Anti-pattern | Symptom | Fix |
+|--------------|---------|-----|
+| `call_chips == 0` marks "open" | Non-blind first-to-act has `callChips = BB > 0` → treated as **facing a bet** → limp-heavy | Open when **`current_bet <= big_blind`** |
+| Bug signature | VPIP ~**23%**, PFR ~**6%**, gap ~**17pp** | TAG target: VPIP 10–16%, PFR within ~5pp of VPIP |
+
+```python
+bb = int(table.get("bigBlindChips") or 20)
+current_bet = int(table.get("currentBetChips") or table.get("currentBet") or 0)
+is_open_spot = current_bet <= bb
+```
+
+**Audit 2026-06-09:** prod uses `is_preflop_open_spot()` in private `opponent_target.py` (handles `callChips=BB` for UTG first-in; `max_bet <= bb and pot <= blinds_pot + 2`). Raw `call_chips==0` on L719 is **postflop free-action only** — not preflop open routing. Source: `@osint-wiki/sources/trading-posts-compilation-7-2026-06-09.md` Post 16.
+
+### Selfplay KPI gate (K107 audit, 2026-06-09)
 
 Run before deploy (private repo):
 
@@ -49,13 +67,15 @@ Run before deploy (private repo):
 uv run python examples/cemini_selfplay_audit.py --hands 400 --seed 42 --gate
 ```
 
-| Metric | Purpose |
-|--------|---------|
-| **EP VPIP** | Early-position leak detector (default gate ≤22%) |
-| **VPIP − PFR gap** | Passive leak — open-spot bug shows gap **>10pp** with low PFR |
-| **EP trash opens** | Chart trash raising UTG/MP |
+| Metric | Result (400h) | K107 bug signature | S1 rock target |
+|--------|---------------|-------------------|----------------|
+| **VPIP** | **12.1%** | ~23% | 10–16% |
+| **PFR** | **2.1%** | ~6% | ≈ VPIP (−5pp) |
+| **VPIP − PFR gap** | **~10pp** | ~17pp | ~5pp |
+| **EP VPIP** | 5.7% | — | gate ≤22% |
+| **EP trash opens** | 0 | — | gate 0 |
 
-**Open-spot detection:** prod `cemini_decide.py` routes preflop opens via `is_preflop_open_spot()` — handles Arena schema where first-in has `callChips=BB`. Audit 2026-06-09: boolean **fixed**; **PFR 2.1% vs VPIP 12.1%** still flags passive opens — tune `_preflop_open` / chart raise frequency against **live analyze**, not selfplay bb/100 alone.
+Open-spot boolean is **fixed**; **passive PFR leak persists** — `_preflop_open` / chart path likely **checking or calling** where raise expected. Tune against **live Arena analyze** (log `spot_kind()` on first hero preflop decision), not selfplay bb/100 alone. Brief: `briefs/2026-06-09_k107-gambling-poker-open-spot-AUDIT.md`.
 
 ### Loop (four steps)
 

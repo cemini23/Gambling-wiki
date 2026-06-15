@@ -9,8 +9,11 @@ related:
   - entities/bots/README.md
   - concepts/gambling-bot-architecture.md
   - sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md
+  - sources/multi-wiki-tool-eval-v8-k103-2026-06-07.md
   - entities/tools/pokerskill.md
   - entities/tools/rlcard.md
+  - entities/tools/devfun-poker-arena-starter-kit.md
+  - osint-wiki/entities/tools/poker-query-language.md
   - sources/daily-digest-arxiv-batch-2026-06-01.md
   - sources/daily-digest-arxiv-batch-2026-06-02.md
   - sources/daily-digest-arxiv-batch-2026-06-04.md
@@ -21,7 +24,7 @@ related:
   - concepts/poker-hl-analyst-loop.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-04
+updated: 2026-06-13
 ---
 
 ## Relations
@@ -31,10 +34,12 @@ updated: 2026-06-04
 - @concepts/poker-hl-analyst-loop.md — arena regression + HL tooling
 - @entities/games/poker.md — game entity
 - @sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md — K92 eval cluster
+- @sources/multi-wiki-tool-eval-v8-k103-2026-06-07.md — K103 poker/casino reject strip
+- @entities/tools/devfun-poker-arena-starter-kit.md — K102 Arena entry (MIT arena-pokerkit)
 
 ## Raw Concept
 
-K92 eval **poker engine / RL** cluster — **research and evaluation** lane for future poker bots, not live online poker botting (collusion/ToS dead end on real-money sites).
+K92 eval **poker engine / RL** cluster — **research and evaluation** lane for future poker bots, not live online poker botting (collusion/ToS dead end on real-money sites). K103 adds a **reject cluster** for immature/no-license poker playgrounds — document only, no adoption.
 
 ## Narrative
 
@@ -47,6 +52,16 @@ K92 eval **poker engine / RL** cluster — **research and evaluation** lane for 
 | andrewprock/pokerstove | Steal-from | Equity calculator |
 | fedden/poker_ai | Steal-from | Deep CFR / research |
 | ishikota/PyPokerEngine | Defer | Engine |
+
+### K103 reject cluster (2026-06-07) [CONFIRMED — Phase-0]
+
+| Repo | Eval tier | K103 verdict | Notes |
+|------|-----------|--------------|-------|
+| solve-poker/Poker-Query-Language | Steal-from | **NO-GO** | ~4★ WIP; immature query language — stub only `@osint-wiki/entities/tools/poker-query-language.md` |
+| ToNiePiter/casinogame | Reject | **Reject** | No license |
+| alfredzimmer/poker-equity-playground | Reject | **Reject** | Playground only; no license |
+
+**Action:** wiki reference / cross-wiki stub only. No laptop venv install, no prod gambling bot brief, no WC bot adoption from this cluster. Arena path remains `@entities/tools/devfun-poker-arena-starter-kit.md` (K102 MIT).
 
 ### Daily digest note (2026-06-01)
 

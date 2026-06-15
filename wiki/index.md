@@ -26,6 +26,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [casino-game-house-edge](concepts/casino-game-house-edge.md) | validated | Edge by game, smart-bet ranking |
 | [prediction-markets-crossover](concepts/prediction-markets-crossover.md) | validated | Kalshi/Polymarket retail lens |
 | [pm-live-belief-updating](concepts/pm-live-belief-updating.md) | validated | Live PM underreaction, salience×liquidity |
+| [pm-agent-cognitive-monoculture](concepts/pm-agent-cognitive-monoculture.md) | validated | K114 Nous — LLM ensemble correlation, prompt injection dead-end |
 | [world-cup-2026-format](concepts/world-cup-2026-format.md) | validated | 48-team structure, calendar |
 | [world-cup-2026-fan-narrative-preview](concepts/world-cup-2026-fan-narrative-preview.md) | draft | K112 @Lutchyn13 fan essay REFERENCE |
 | [world-cup-prediction-market-types](concepts/world-cup-prediction-market-types.md) | validated | Advance vs ML vs outright |
@@ -65,6 +66,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [pickfinder](entities/tools/pickfinder.md) | draft |
 | [pokerskill](entities/tools/pokerskill.md) | draft |
 | [rlcard](entities/tools/rlcard.md) | draft |
+| [devfun-poker-arena-starter-kit](entities/tools/devfun-poker-arena-starter-kit.md) | validated |
 
 ## Entities — Bots
 
@@ -116,6 +118,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [youtube-operator-batch-casino-2026-05-31](sources/youtube-operator-batch-casino-2026-05-31.md) | deep-read |
 | [youtube-raise-your-edge-10k-bankroll-2026-05-31](sources/youtube-raise-your-edge-10k-bankroll-2026-05-31.md) | deep-read |
 | [multi-wiki-tool-eval-v7-k92-2026-06-01](sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md) | deep-read |
+| [multi-wiki-tool-eval-v8-k103-2026-06-07](sources/multi-wiki-tool-eval-v8-k103-2026-06-07.md) | deep-read |
 | [brief-k93-federated-digest-2026-06-01](sources/brief-k93-federated-digest-2026-06-01.md) | deep-read |
 | [daily-digest-arxiv-batch-2026-06-01](sources/daily-digest-arxiv-batch-2026-06-01.md) | deep-read |
 | [daily-digest-arxiv-batch-2026-06-02](sources/daily-digest-arxiv-batch-2026-06-02.md) | read |
@@ -130,6 +133,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09](sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md) | deep-read |
 | [brief-k108-gambling-wc-retail-hygiene-2026-06-09](sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md) | deep-read |
 | [brief-k112-gambling-wc-2026-narrative-2026-06-12](sources/brief-k112-gambling-wc-2026-narrative-2026-06-12.md) | deep-read |
+| [arxiv-2606-13038-nous-prediction-market-cognitive-injection-2026-06-13](sources/arxiv-2606-13038-nous-prediction-market-cognitive-injection-2026-06-13.md) | skimmed |
 
 ## Meta
 

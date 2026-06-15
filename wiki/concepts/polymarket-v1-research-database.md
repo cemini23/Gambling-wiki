@@ -7,7 +7,9 @@ related:
   - sources/arxiv-polymarket-v1-database-2606.04217-2026-06-05.md
   - concepts/favorite-longshot-bias.md
   - concepts/pm-copy-trading-retail-risks.md
+  - concepts/pm-agent-cognitive-monoculture.md
   - concepts/prediction-markets-crossover.md
+  - sources/arxiv-2606-13038-nous-prediction-market-cognitive-injection-2026-06-13.md
   - entities/platforms/polymarket.md
   - osint-wiki/sources/arxiv-polymarket-v1-database-2606.04217-2026-06-05.md
   - osint-wiki/concepts/polymarket-microstructure-findings.md

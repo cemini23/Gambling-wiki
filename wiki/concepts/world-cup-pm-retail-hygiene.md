@@ -24,7 +24,7 @@ related:
   - osint-wiki/concepts/polymarket-retail-trading-discipline.md
 maturity: validated
 created: 2026-06-09
-updated: 2026-06-12
+updated: 2026-06-13
 ---
 
 ## Relations
@@ -35,9 +35,26 @@ updated: 2026-06-12
 
 ## Raw Concept
 
-Pre-tournament and in-tournament **human operator checklist** for wagering FIFA 2026 on **Polymarket / Kalshi** — mechanical gates before sizing, not a model or bot spec.
+Pre-tournament and in-tournament **human operator checklist** for wagering FIFA 2026 on **Polymarket / Kalshi** — mechanical gates before sizing, not a model or bot spec. Canonical list: **@GodEyeDotFun ten mistakes** (K108 Post 0).
 
 ## Narrative
+
+### GodEye ten mistakes checklist (K108 Post 0) [CONFIRMED]
+
+| # | Mistake | Retail gate |
+|---|---------|-------------|
+| 1 | **Title not rules** | Read resolution block — ET vs 90-min, penalties, abandonment, oracle/data source |
+| 2 | **Ignore fees + spread** | Model taker fee curve + spread; sports taker ~0.75% peak at 50¢ `[TENTATIVE]`; prefer maker limits where rebates apply |
+| 3 | **Longshot festival** | FLB — need concrete mispricing thesis, not tail lottery — `@concepts/favorite-longshot-bias.md` |
+| 4 | **Outright winner lockup** | Match tenor to thesis — group/R16 vs season-long outright capital tie-up |
+| 5 | **Thin niche books** | Depth/slippage check before market orders |
+| 6 | **Gut sizing** | **1–2%** bankroll/trade; pre-commit drawdown brakes **20 / 40 / 50%** |
+| 7 | **Revenge trading** | Daily trade cap during dense **104-match** group-stage schedule |
+| 8 | **UMA dispute latency** | **2h** challenge window; possible **48–96h** DVM — size for settlement lag |
+| 9 | **Single-venue anchor** | De-vig vs **Kalshi + sportsbook consensus** before PM-only sizing |
+| 10 | **48-team format drift** | Third-place math (8 of 12 advance), extra R32, US heat venues |
+
+Full tactic framework + bot gates: `@osint-wiki/concepts/polymarket-retail-trading-discipline.md`. Provenance: `@sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md`.
 
 ### Pre-tournament mechanical gates
 

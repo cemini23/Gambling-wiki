@@ -19,6 +19,10 @@ related:
   - sources/gemini-github-sports-betting-landscape-2026-05-30.md
   - sources/multi-wiki-tool-eval-v6-k90-2026-05-31.md
   - sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md
+  - sources/multi-wiki-tool-eval-v8-k103-2026-06-07.md
+  - concepts/pm-agent-cognitive-monoculture.md
+  - sources/arxiv-2606-13038-nous-prediction-market-cognitive-injection-2026-06-13.md
+  - entities/tools/devfun-poker-arena-starter-kit.md
   - entities/bots/wagerbrain.md
   - entities/bots/bovada-api-reference.md
   - entities/bots/bovada-hand-history-converter.md
@@ -37,7 +41,7 @@ related:
   - sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md
 maturity: core
 created: 2026-05-31
-updated: 2026-06-09
+updated: 2026-06-15
 ---
 
 # Gambling bot architecture (planned)

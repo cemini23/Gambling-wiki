@@ -2,6 +2,19 @@
 
 Append-only chronological log.
 
+## [2026-06-13] ingest | K114 — Nous PM paper + brief close-out
+
+- **Source** — `sources/arxiv-2606-13038-nous-prediction-market-cognitive-injection-2026-06-13.md` (REFERENCE / skimmed)
+- **Concept** — `concepts/pm-agent-cognitive-monoculture.md` (validated)
+- **Source** — `sources/multi-wiki-tool-eval-v8-k103-2026-06-07.md` (K103 reject cluster)
+- **Entity** — `entities/tools/devfun-poker-arena-starter-kit.md` (K102 MIT arena-pokerkit Phase-0 REFERENCE)
+- **Updated** — `entities/bots/poker-bot-tooling.md` (K103 reject cluster: PQL NO-GO, casinogame + poker-equity-playground Reject)
+- **Updated** — `concepts/poker-hl-analyst-loop.md` (K107 open-spot bug pattern, audit table, passive PFR leak)
+- **Updated** — `concepts/world-cup-pm-retail-hygiene.md` (GodEye 10 mistakes numbered checklist)
+- **Raw** — Nous PDF → `raw-sources/`; librarian scp **timeout** 2026-06-15 (retry when tunnel up)
+- **Cross-wiki** — `@osint-wiki` links on Nous source, starter-kit, poker-bot-tooling, HL loop, WC hygiene
+- **Briefs cleared** — K102, K103, K107, K108, K112 gambling handoffs from `briefs/` (K107 audit retained)
+
 ## [2026-06-12] ingest | K112 WC 2026 fan narrative from OSINT
 
 - **Source** — `sources/brief-k112-gambling-wc-2026-narrative-2026-06-12.md`

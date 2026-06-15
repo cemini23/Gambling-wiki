@@ -7,6 +7,7 @@ related:
   - concepts/prediction-markets-crossover.md
   - concepts/pm-copy-trading-retail-risks.md
   - concepts/pm-perspective-mismatch-trading.md
+  - concepts/pm-agent-cognitive-monoculture.md
   - concepts/sportsbook-pm-line-divergence.md
   - entities/platforms/polymarket.md
   - entities/platforms/kalshi.md

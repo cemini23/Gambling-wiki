@@ -6,6 +6,7 @@ keywords: [cemini, devfun, cemini_decide, arena-pokerkit, decide-function]
 related:
   - entities/platforms/devfun-poker-arena.md
   - entities/tools/pokerskill.md
+  - entities/tools/devfun-poker-arena-starter-kit.md
   - entities/bots/poker-bot-tooling.md
   - concepts/poker-strategy-overview.md
   - concepts/gambling-bot-architecture.md
@@ -19,7 +20,7 @@ related:
   - entities/games/poker.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-08
+updated: 2026-06-13
 adoption_status: ACTIVE-DEV
 claim_status: VERIFIED 2026-06-01 — @cemini23
 ---

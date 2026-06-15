@@ -13,10 +13,11 @@ related:
   - entities/bots/poker-bot-tooling.md
   - entities/bots/stake-engine-client.md
   - entities/tools/rlcard.md
+  - sources/multi-wiki-tool-eval-v8-k103-2026-06-07.md
 maturity: validated
 read_status: deep-read
 created: 2026-06-01
-updated: 2026-06-01
+updated: 2026-06-15
 ---
 
 ## Relations
@@ -24,6 +25,7 @@ updated: 2026-06-01
 - @osint-wiki/sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md — canonical OSINT eval page
 - @entities/bots/wagerbrain.md — top Steal-from (quoter)
 - @concepts/gambling-bot-architecture.md — fleet + iGaming dead-end
+- @sources/multi-wiki-tool-eval-v8-k103-2026-06-07.md — K103 poker/casino reject strip (successor)
 
 ## Raw Concept
 

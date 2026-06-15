@@ -34,9 +34,11 @@ related:
   - sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md
   - concepts/world-cup-pm-retail-hygiene.md
   - sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md
+  - sources/arxiv-2606-13038-nous-prediction-market-cognitive-injection-2026-06-13.md
+  - concepts/pm-agent-cognitive-monoculture.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-06-09
+updated: 2026-06-15
 ---
 
 ## Relations
