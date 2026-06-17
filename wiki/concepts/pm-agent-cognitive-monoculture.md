@@ -12,11 +12,16 @@ related:
   - concepts/polymarket-v1-research-database.md
   - entities/platforms/polymarket.md
   - sources/arxiv-2606-13038-nous-prediction-market-cognitive-injection-2026-06-13.md
+  - concepts/pm-llm-coherence-projection.md
+  - concepts/pm-proper-scoring-clob-profitability.md
+  - concepts/prediction-markets-crossover.md
+  - entities/platforms/polymarket.md
   - sweeps/2026-06-13-daily.md
+  - sources/arxiv-2606-13038-nous-prediction-market-cognitive-injection-2026-06-13.md
   - osint-wiki/concepts/market-informedness-market-making.md
 maturity: validated
 created: 2026-06-13
-updated: 2026-06-15
+updated: 2026-06-17
 ---
 
 ## Relations

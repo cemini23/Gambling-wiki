@@ -10,6 +10,10 @@ related:
   - concepts/pm-perspective-mismatch-trading.md
   - concepts/polymarket-v1-research-database.md
   - concepts/gambling-bot-architecture.md
+  - concepts/pm-copy-trading-retail-risks.md
+  - concepts/pm-perspective-mismatch-trading.md
+  - concepts/polymarket-v1-research-database.md
+  - concepts/pm-agent-cognitive-monoculture.md
   - entities/platforms/polymarket.md
   - sweeps/2026-06-13-daily.md
   - osint-wiki/concepts/market-informedness-market-making.md

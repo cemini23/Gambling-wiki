@@ -35,10 +35,14 @@ related:
   - concepts/world-cup-pm-retail-hygiene.md
   - sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md
   - sources/arxiv-2606-13038-nous-prediction-market-cognitive-injection-2026-06-13.md
+  - sources/openreview-prophets-profit-pm-LYSTj2Cnuu-2026-06-17.md
+  - sources/openreview-llm-coherence-projection-Tqos7VqQhH-2026-06-17.md
+  - concepts/pm-proper-scoring-clob-profitability.md
+  - concepts/pm-llm-coherence-projection.md
   - concepts/pm-agent-cognitive-monoculture.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-06-15
+updated: 2026-06-17
 ---
 
 ## Relations

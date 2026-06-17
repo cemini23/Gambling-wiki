@@ -18,9 +18,10 @@ related:
   - entities/bots/wagerbrain.md
   - concepts/world-cup-pm-retail-hygiene.md
   - sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md
+  - concepts/pm-proper-scoring-clob-profitability.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-06-09
+updated: 2026-06-17
 ---
 
 ## Relations

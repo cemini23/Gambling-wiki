@@ -5,16 +5,22 @@
 # Report: wiki/sweeps/YYYY-MM-DD-daily.md
 #
 # Update active_topics when ROADMAP.md workstreams shift.
+#
+# Fetch lane (2026-06-17 tune): arXiv + OpenReview PDFs → research to be indexed/
+# News rows remain manual unless operator drops URL/PDF into inbox.
 
 loop:
-  recency_window_days: 7
-  max_results_per_query: 3
+  recency_window_days: 10
+  max_results_per_query: 4
 
 fetch:
   enabled: true
-  max_downloads: 5
-  fetch_likely: false
-  max_results_per_paper_query: 5
+  max_downloads: 8
+  fetch_likely: true
+  max_results_per_paper_query: 6
+  sources:
+    - arxiv
+    - openreview
 
 active_topics:
   - "Sports betting — +EV process, CLV, line shopping, sharp vs soft books"
@@ -26,16 +32,28 @@ active_topics:
   - "Poker & casino — MTT bankroll, basic strategy, house edge (study lane)"
 
 paper_queries:
-  - cluster: sports-betting-paper
-    query: "research paper sports betting closing line value market efficiency prediction"
+  - cluster: sports-betting-arxiv
+    query: "arxiv sports betting wagering odds market efficiency closing line value bookmaker"
     category: research paper
 
-  - cluster: prediction-markets-retail-paper
-    query: "research paper prediction market retail trading Polymarket Kalshi event contract"
+  - cluster: pm-retail-arxiv
+    query: "arxiv Polymarket Kalshi prediction market event contract trading microstructure"
     category: research paper
 
-  - cluster: poker-rl-paper
-    query: "research paper poker reinforcement learning game theory optimal betting"
+  - cluster: pm-openreview
+    query: "openreview prediction market prophets profit arbitrage forecast coherence Polymarket"
+    category: research paper
+
+  - cluster: poker-imperfect-info
+    query: "arxiv poker Texas holdem imperfect information opponent modeling CFR"
+    category: research paper
+
+  - cluster: dfs-roster-arxiv
+    query: "arxiv daily fantasy sports lineup roster optimization ownership"
+    category: research paper
+
+  - cluster: kelly-bankroll-arxiv
+    query: "arxiv Kelly criterion sports betting bankroll wager sizing gambling"
     category: research paper
 
 queries:
@@ -53,6 +71,10 @@ queries:
 
   - cluster: dfs-best-ball
     query: '"best ball" OR Underdog fantasy OR DraftKings best ball roster construction ADP'
+    category: news
+
+  - cluster: poker-arena-bots
+    query: '"poker bot" OR dev.fun poker arena OR pokerkit reinforcement learning tournament'
     category: news
 
 monokern_pipeline:

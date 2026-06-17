@@ -11,11 +11,13 @@ related:
   - concepts/prediction-markets-crossover.md
   - sources/arxiv-2606-13038-nous-prediction-market-cognitive-injection-2026-06-13.md
   - entities/platforms/polymarket.md
+  - concepts/pm-llm-coherence-projection.md
+  - sources/openreview-llm-coherence-projection-Tqos7VqQhH-2026-06-17.md
   - osint-wiki/sources/arxiv-polymarket-v1-database-2606.04217-2026-06-05.md
   - osint-wiki/concepts/polymarket-microstructure-findings.md
 maturity: validated
 created: 2026-06-05
-updated: 2026-06-05
+updated: 2026-06-17
 ---
 
 ## Relations

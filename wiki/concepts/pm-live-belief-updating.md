@@ -14,9 +14,11 @@ related:
   - entities/platforms/polymarket.md
   - entities/sports/nba-betting.md
   - sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md
+  - concepts/pm-proper-scoring-clob-profitability.md
+  - sources/openreview-prophets-profit-pm-LYSTj2Cnuu-2026-06-17.md
 maturity: validated
 created: 2026-06-09
-updated: 2026-06-09
+updated: 2026-06-17
 ---
 
 ## Relations

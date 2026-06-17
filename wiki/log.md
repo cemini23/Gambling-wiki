@@ -2,6 +2,21 @@
 
 Append-only chronological log.
 
+## [2026-06-17] ingest | K116 — Forecast@ICML26 PM papers (OpenReview)
+
+- **Sources** — `openreview-prophets-profit-pm-LYSTj2Cnuu-2026-06-17.md`, `openreview-llm-coherence-projection-Tqos7VqQhH-2026-06-17.md` (skimmed)
+- **Concepts** — `pm-proper-scoring-clob-profitability.md`, `pm-llm-coherence-projection.md`
+- **Rejected** — 6 off-topic arXiv digest hits → `raw-sources/rejected-digest-2026-06-17/` (K116 brief)
+- **Briefs** — K116 false-positive log, K117 JCD → @osint-wiki routing
+- **Raw** — 2 OpenReview PDFs → `raw-sources/` + egress-fi mirror
+- **Sweep** — `2026-06-17-daily.md` INGESTED (2/8 inbox)
+
+## [2026-06-17] ops | Daily digest fetch tune (arXiv + OpenReview)
+
+- **Config** — 6 paper lanes, 10-day window, `fetch_likely: true`, cap 8; news lane + poker-arena-bots query
+- **Scripts** — `daily_research_fetch.py` OpenReview PDF support; synced to `~/.cemini/launchagent/osint/`
+- **Test run** — 8 PDFs → `research to be indexed/` (awaiting full ingest)
+
 ## [2026-06-15] ops | cemini-librarian retired
 
 - **Infra** — `cemini-librarian` Hetzner host decommissioned; no bulk mirror or wiki rsync

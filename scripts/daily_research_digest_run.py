@@ -175,14 +175,14 @@ def run_queries(
 
 def render_fetch_table(outcomes: list[FetchOutcome]) -> list[str]:
     lines = [
-        "| Status | arXiv | Title | File / reason |",
-        "|--------|-------|-------|---------------|",
+        "| Status | Source | ID | Title | File / reason |",
+        "|--------|--------|-----|-------|---------------|",
     ]
     for o in outcomes:
         title = o.title.replace("|", "\\|")[:80]
         file_col = o.path or o.detail[:80]
-        aid = o.arxiv_id or "—"
-        lines.append(f"| {o.status} | `{aid}` | {title} | {file_col} |")
+        pid = o.paper_id or "—"
+        lines.append(f"| {o.status} | {o.source} | `{pid}` | {title} | {file_col} |")
     return lines
 
 
@@ -217,12 +217,14 @@ def main() -> int:
     partial = paper_partial or news_partial
 
     fetch_outcomes: list[FetchOutcome] = []
+    fetch_sources = [str(s).lower() for s in (fetch_cfg.get("sources") or ["arxiv"])]
     if fetch_cfg.get("enabled", True) and paper_sections:
         fetch_outcomes = fetch_papers(
             repo,
             paper_sections,
             max_downloads=int(fetch_cfg.get("max_downloads", 8)),
             fetch_likely=bool(fetch_cfg.get("fetch_likely", False)),
+            sources=fetch_sources,
         )
 
     inbox = inbox_files(repo)
@@ -241,7 +243,7 @@ def main() -> int:
         f"News lane: {len(news_defs)} queries (digest only).",
         "",
         "Reference: `@scripts/daily_research_config.yaml`. "
-        "**Does NOT ingest wiki** — fetched arXiv PDFs go to `research to be indexed/`.",
+        f"**Does NOT ingest wiki** — auto-fetched PDFs ({', '.join(fetch_sources)}) → `research to be indexed/`.",
         "",
         "---",
         "",
@@ -263,7 +265,7 @@ def main() -> int:
             lines.append(f"- `{p.name}`{tag}")
         lines.extend(["", "### preingest_check", "", "```", preingest_out[:6000], "```", ""])
     else:
-        lines.append("_Empty — no PDFs fetched overnight (all hits were dupes or non-arXiv)._")
+        lines.append("_Empty — no PDFs fetched overnight (dupes, unsupported hosts, or cap hit)._")
         lines.append("")
 
     if fetch_outcomes:

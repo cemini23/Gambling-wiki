@@ -27,6 +27,8 @@ Catalog of all wiki pages. Updated on each ingest.
 | [prediction-markets-crossover](concepts/prediction-markets-crossover.md) | validated | Kalshi/Polymarket retail lens |
 | [pm-live-belief-updating](concepts/pm-live-belief-updating.md) | validated | Live PM underreaction, salience×liquidity |
 | [pm-agent-cognitive-monoculture](concepts/pm-agent-cognitive-monoculture.md) | validated | K114 Nous — LLM ensemble correlation, prompt injection dead-end |
+| [pm-proper-scoring-clob-profitability](concepts/pm-proper-scoring-clob-profitability.md) | validated | K116 CLOB proper scoring vs heuristic trap |
+| [pm-llm-coherence-projection](concepts/pm-llm-coherence-projection.md) | validated | K116 JCD — arbitrage-free LLM marginals |
 | [world-cup-2026-format](concepts/world-cup-2026-format.md) | validated | 48-team structure, calendar |
 | [world-cup-2026-fan-narrative-preview](concepts/world-cup-2026-fan-narrative-preview.md) | draft | K112 @Lutchyn13 fan essay REFERENCE |
 | [world-cup-prediction-market-types](concepts/world-cup-prediction-market-types.md) | validated | Advance vs ML vs outright |
@@ -134,6 +136,8 @@ Catalog of all wiki pages. Updated on each ingest.
 | [brief-k108-gambling-wc-retail-hygiene-2026-06-09](sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md) | deep-read |
 | [brief-k112-gambling-wc-2026-narrative-2026-06-12](sources/brief-k112-gambling-wc-2026-narrative-2026-06-12.md) | deep-read |
 | [arxiv-2606-13038-nous-prediction-market-cognitive-injection-2026-06-13](sources/arxiv-2606-13038-nous-prediction-market-cognitive-injection-2026-06-13.md) | skimmed |
+| [openreview-prophets-profit-pm-LYSTj2Cnuu-2026-06-17](sources/openreview-prophets-profit-pm-LYSTj2Cnuu-2026-06-17.md) | skimmed |
+| [openreview-llm-coherence-projection-Tqos7VqQhH-2026-06-17](sources/openreview-llm-coherence-projection-Tqos7VqQhH-2026-06-17.md) | skimmed |
 
 ## Meta
 

@@ -21,7 +21,10 @@ related:
   - sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md
   - sources/multi-wiki-tool-eval-v8-k103-2026-06-07.md
   - concepts/pm-agent-cognitive-monoculture.md
-  - sources/arxiv-2606-13038-nous-prediction-market-cognitive-injection-2026-06-13.md
+  - concepts/pm-llm-coherence-projection.md
+  - concepts/pm-proper-scoring-clob-profitability.md
+  - sources/openreview-llm-coherence-projection-Tqos7VqQhH-2026-06-17.md
+  - sources/openreview-prophets-profit-pm-LYSTj2Cnuu-2026-06-17.md
   - entities/tools/devfun-poker-arena-starter-kit.md
   - entities/bots/wagerbrain.md
   - entities/bots/bovada-api-reference.md
@@ -41,7 +44,7 @@ related:
   - sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md
 maturity: core
 created: 2026-05-31
-updated: 2026-06-15
+updated: 2026-06-17
 ---
 
 # Gambling bot architecture (planned)

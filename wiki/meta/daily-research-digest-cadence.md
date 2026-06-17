@@ -20,9 +20,12 @@ related:
   - sweeps/2026-06-13-daily.md
   - sweeps/2026-06-14-daily.md
   - sweeps/2026-06-15-daily.md
+  - sweeps/2026-06-17-daily.md
+  - sources/openreview-prophets-profit-pm-LYSTj2Cnuu-2026-06-17.md
+  - sources/openreview-llm-coherence-projection-Tqos7VqQhH-2026-06-17.md
 maturity: validated
 created: 2026-06-01
-updated: 2026-06-15
+updated: 2026-06-17
 ---
 
 ## Relations
@@ -41,7 +44,8 @@ K93 federated install: morning **discovery-only** loop for sports betting, PM re
 |-------|-------|
 | **Cadence** | Daily @ 08:15 local (`com.cemini.daily-research-digest.gambling`) |
 | **Installed** | 2026-06-01 (K93 brief) |
-| **Last run** | 2026-06-15 |
+| **Last run** | 2026-06-17 |
+| **Fetch sources** | arXiv + OpenReview PDFs → `research to be indexed/` (tuned 2026-06-17) |
 | **Script** | `~/bin/cemini-daily-research-digest-gambling` → `scripts/daily_research_digest_run.py` |
 | **Deps** | `wiki_source_index.py` (required alongside digest runner) |
 | **Config** | `scripts/daily_research_config.yaml` |
@@ -59,6 +63,8 @@ K93 federated install: morning **discovery-only** loop for sports betting, PM re
 ### Topic lanes (config)
 
 Kalshi/PM retail, sports betting +EV/CLV, World Cup 2026 cross-venue (cross-ref @osint-wiki WC bot), gambling-bot FOSS evals (W4), bankroll/Kelly, DFS/best ball, poker/casino study.
+
+**Auto-fetch (2026-06-17):** 6 paper Exa lanes + `fetch.sources: [arxiv, openreview]`; `fetch_likely: true`; 10-day window; cap 8 PDFs/night. News rows still manual.
 
 ### Gates [CONFIRMED]
 

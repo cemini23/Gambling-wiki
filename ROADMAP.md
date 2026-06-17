@@ -66,8 +66,9 @@ Steps:
 - [x] Run `install_federated_daily_digest.sh` for gambling-wiki
 - [x] Domain `daily_research_config.yaml` (sports betting, PM retail, WC, bots, bankroll, DFS, poker)
 - [x] `wiki/meta/daily-research-digest-cadence.md` + sweeps template
-- [ ] Operator: `launchctl load ~/Library/LaunchAgents/com.cemini.daily-research-digest.gambling.plist`
-- [ ] First morning sweep review + ingest session
+- [x] Operator: `launchctl load ~/Library/LaunchAgents/com.cemini.daily-research-digest.gambling.plist`
+- [x] Fetch tune 2026-06-17 — arXiv + OpenReview, 6 paper lanes, `fetch_likely: true`
+- [x] First morning sweep review + ingest session (K116 2026-06-17)
 
 ### W4 — Gambling bot program (planned)
 
