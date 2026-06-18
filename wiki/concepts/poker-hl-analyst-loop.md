@@ -10,16 +10,18 @@ related:
   - concepts/opponent-modeling-imperfect-info.md
   - concepts/poker-strategy-overview.md
   - entities/bots/poker-bot-tooling.md
+  - sources/brief-k118-poker-agent-research-gaps-2026-06-17.md
   - osint-wiki/sources/trading-posts-compilation-7-2026-06-09.md
 maturity: validated
 created: 2026-06-03
-updated: 2026-06-13
+updated: 2026-06-17
 ---
 
 ## Relations
 
 - @entities/bots/cemini-devfun-poker-agent.md — prod `cemini_decide.py` agent
 - @entities/platforms/devfun-poker-arena.md — Arena venue + monitor
+- @sources/brief-k118-poker-agent-research-gaps-2026-06-17.md — research → agent gap matrix + fix backlog
 - @concepts/gambling-bot-architecture.md — bot fleet; HL loop is the **poker lane** iteration pattern
 - @osint-wiki/concepts/cemini-knowledge-application-architecture.md — brief → verify → deploy (cross-wiki)
 - Private repo: `llm-wiki-by-cemini/agents/devfun-poker-arena/` — HL loop scripts
@@ -59,7 +61,7 @@ is_open_spot = current_bet <= bb
 
 **Audit 2026-06-09:** prod uses `is_preflop_open_spot()` in private `opponent_target.py` (handles `callChips=BB` for UTG first-in; `max_bet <= bb and pot <= blinds_pot + 2`). Raw `call_chips==0` on L719 is **postflop free-action only** — not preflop open routing. Source: `@osint-wiki/sources/trading-posts-compilation-7-2026-06-09.md` Post 16.
 
-### Selfplay KPI gate (K107 audit, 2026-06-09)
+### Selfplay KPI gate (K107 audit + K118 refresh)
 
 Run before deploy (private repo):
 
@@ -67,15 +69,28 @@ Run before deploy (private repo):
 uv run python examples/cemini_selfplay_audit.py --hands 400 --seed 42 --gate
 ```
 
-| Metric | Result (400h) | K107 bug signature | S1 rock target |
-|--------|---------------|-------------------|----------------|
-| **VPIP** | **12.1%** | ~23% | 10–16% |
-| **PFR** | **2.1%** | ~6% | ≈ VPIP (−5pp) |
-| **VPIP − PFR gap** | **~10pp** | ~17pp | ~5pp |
-| **EP VPIP** | 5.7% | — | gate ≤22% |
-| **EP trash opens** | 0 | — | gate 0 |
+| Metric | 2026-06-09 | **2026-06-17** | K107 bug signature | S1 rock target |
+|--------|------------|----------------|-------------------|----------------|
+| **VPIP** | 12.1% | **11.5%** | ~23% | 10–16% |
+| **PFR** | 2.1% | **2.2%** | ~6% | ≈ VPIP (−5pp) |
+| **VPIP − PFR gap** | ~10pp | **~9pp** | ~17pp | ~5pp |
+| **SB VPIP** | — | **13.4%** | — | limp inflation |
+| **EP VPIP** | 5.7% | **5.6%** | — | gate ≤22% |
+| **EP trash opens** | 0 | **0** | — | gate 0 |
 
-Open-spot boolean is **fixed**; **passive PFR leak persists** — `_preflop_open` / chart path likely **checking or calling** where raise expected. Tune against **live Arena analyze** (log `spot_kind()` on first hero preflop decision), not selfplay bb/100 alone. Brief: `briefs/2026-06-09_k107-gambling-poker-open-spot-AUDIT.md`.
+Open-spot boolean is **fixed**; **passive PFR leak persists** — `_preflop_open` fallthrough to `check`, SB complete path, and rock `open_steal_equity` ~0.99 suppress steals. **No PFR gate in `--gate` today** — K118 adds F1 (min PFR + max gap). Tune against **live Arena analyze** (log `spot_kind()` on first hero preflop decision), not selfplay bb/100 alone. Briefs: K107 audit; **K118** `@sources/brief-k118-poker-agent-research-gaps-2026-06-17.md`.
+
+### Research vs agent gaps (K118) [CONFIRMED 2026-06-17]
+
+| Research theme | Literature | Agent today | Fix lane |
+|----------------|------------|-------------|----------|
+| Multi-hand exploit | AlphaExploitem (arXiv:2605.09150) | `session_memory.py` aggression counts only | F6: showdown queue per villain |
+| Solver tool use | ToolPoker (arXiv:2602.00528) | No runtime LLM (correct) | F12–F13: offline river lookup + PokerSkill |
+| Consistent OM | COM (arXiv:2508.17671) | HUD margins + chart | Defer full COM |
+| Eval vs live mix | Eval S1 DeepCFR panel | Playground fish/maniac analyze | F9–F11: separate eval cadence |
+| Open frequency | TAG 6-max doctrine | PFR 2.2% | **P0 F1–F5** |
+
+Do **not** optimize for selfplay bb/100; do **not** add runtime LLM decide() for ToolPoker parity.
 
 ### Loop (four steps)
 

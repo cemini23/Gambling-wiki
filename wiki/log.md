@@ -2,6 +2,23 @@
 
 Append-only chronological log.
 
+## [2026-06-18] ingest | K119 — Digest reject cluster (3 false positives)
+
+- **Source** — `sources/daily-digest-reject-cluster-k119-2026-06-18.md` (validated)
+- **Rejected** — arXiv 2606.11118, 2606.13598, 2606.18247 → `raw-sources/rejected-digest-2026-06-18/`
+- **Brief** — K119 false-positive log + digest tune recommendations
+- **Config** — tightened poker-exploit, poker-llm-tools, dfs-roster queries
+- **Sweep** — `2026-06-18-daily.md` INGESTED (0/3 papers)
+
+## [2026-06-17] brief | K118 — Poker agent research gaps + fix backlog
+
+- **Source** — `sources/brief-k118-poker-agent-research-gaps-2026-06-17.md` (validated)
+- **Brief** — `briefs/2026-06-17_k118-gambling-poker-agent-research-gap-fixes.md` (private operator backlog)
+- **Updated** — `concepts/poker-hl-analyst-loop.md` (K118 metrics, research gap table, PFR gate gap)
+- **Updated** — `entities/bots/cemini-devfun-poker-agent.md`, `entities/platforms/devfun-poker-arena.md`
+- **Config** — `scripts/daily_research_config.yaml` poker exploit/LLM/OpenReview lanes + arena dataset news
+- **Selfplay** — 400h seed 42: VPIP 11.5%, PFR 2.2%, SB VPIP 13.4% (private repo audit)
+
 ## [2026-06-17] ingest | K116 — Forecast@ICML26 PM papers (OpenReview)
 
 - **Sources** — `openreview-prophets-profit-pm-LYSTj2Cnuu-2026-06-17.md`, `openreview-llm-coherence-projection-Tqos7VqQhH-2026-06-17.md` (skimmed)

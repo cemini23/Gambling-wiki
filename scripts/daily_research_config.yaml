@@ -29,7 +29,7 @@ active_topics:
   - "Gambling bot program — FOSS evals, API/ToS, per-platform lanes (W4)"
   - "Bankroll & Kelly — fractional sizing, variance, responsible-gambling guardrails"
   - "DFS / best ball — BBM7, Underdog, roster construction, ownership leverage"
-  - "Poker & casino — MTT bankroll, basic strategy, house edge (study lane)"
+  - "Poker & arena bots — NLHE 6-max, dev.fun decide(), exploit modeling, HL loop (K118)"
 
 paper_queries:
   - cluster: sports-betting-arxiv
@@ -44,12 +44,24 @@ paper_queries:
     query: "openreview prediction market prophets profit arbitrage forecast coherence Polymarket"
     category: research paper
 
+  - cluster: poker-exploit-arxiv
+    query: "arxiv poker OR holdem OR texas holdem exploit suboptimal opponent imperfect information"
+    category: research paper
+
+  - cluster: poker-llm-tools-arxiv
+    query: "arxiv poker LLM game-theoretic CFR solver tool use holdem -robot -robotics"
+    category: research paper
+
   - cluster: poker-imperfect-info
-    query: "arxiv poker Texas holdem imperfect information opponent modeling CFR"
+    query: "arxiv poker Texas holdem imperfect information opponent modeling CFR consistent"
+    category: research paper
+
+  - cluster: poker-openreview
+    query: "openreview poker Texas holdem reinforcement learning opponent modeling exploit"
     category: research paper
 
   - cluster: dfs-roster-arxiv
-    query: "arxiv daily fantasy sports lineup roster optimization ownership"
+    query: "arxiv daily fantasy sports lineup roster optimization ownership DraftKings FanDuel"
     category: research paper
 
   - cluster: kelly-bankroll-arxiv
@@ -74,7 +86,11 @@ queries:
     category: news
 
   - cluster: poker-arena-bots
-    query: '"poker bot" OR dev.fun poker arena OR pokerkit reinforcement learning tournament'
+    query: '"dev.fun" OR "arena pokerkit" OR "poker eval" DeepCFR Texas holdem agent benchmark'
+    category: news
+
+  - cluster: poker-agent-dataset
+    query: "arena-pokerkit-hands huggingface poker agent dataset devfun"
     category: news
 
 monokern_pipeline:

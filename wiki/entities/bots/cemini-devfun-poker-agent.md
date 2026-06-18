@@ -17,10 +17,11 @@ related:
   - sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md
   - sources/daily-digest-arxiv-batch-2026-06-04.md
   - sources/arxiv-2508-17671-consistent-opponent-modeling.md
+  - sources/brief-k118-poker-agent-research-gaps-2026-06-17.md
   - entities/games/poker.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-13
+updated: 2026-06-17
 adoption_status: ACTIVE-DEV
 claim_status: VERIFIED 2026-06-01 — @cemini23
 ---
@@ -32,6 +33,7 @@ claim_status: VERIFIED 2026-06-01 — @cemini23
 - @entities/people/tom-dwan.md — Pro Table Finale villain profile (`durrrr` exploit overlay — **not** Playground defaults)
 - @concepts/poker-hl-analyst-loop.md — **HL analyst loop** (analyze → patch → preflight → deploy)
 - @sources/arxiv-2508-17671-consistent-opponent-modeling.md — K95 consistent opponent modeling anchor
+- @sources/brief-k118-poker-agent-research-gaps-2026-06-17.md — K118 research gap analysis + P0 fix backlog (private brief)
 - Implementation: **private** — `llm-wiki-by-cemini` repo, path `agents/devfun-poker-arena/` (not in public Gambling-wiki)
 
 ## Raw Concept
@@ -57,11 +59,13 @@ Layer stack (generic): preflop chart hints → labeled scenario reasoning → po
 
 When dev.fun publishes finale format: optional named-villain exploit overlays per @entities/people/tom-dwan.md — **not** merged into Playground survival defaults.
 
-### Next iterations
+### Next iterations (K118 priority)
 
-- Wire **PokerSkill** expert library when license verified on GitHub
-- Optional research lane: runtime LLM eval — not prod path
-- Heartbeat / lobby resilience on prod host
+1. **P0 — PFR gate + open path** — selfplay shows VPIP 11.5% / PFR 2.2% (2026-06-17); SB limp inflation; rock steal threshold too high. See @sources/brief-k118-poker-agent-research-gaps-2026-06-17.md.
+2. Wire **PokerSkill** expert library when license verified on GitHub
+3. **AlphaExploitem-lite** — extend session memory beyond aggression counts
+4. Optional research lane: runtime LLM eval — not prod path
+5. Heartbeat / lobby resilience on prod host
 
 ### Entry fee
 

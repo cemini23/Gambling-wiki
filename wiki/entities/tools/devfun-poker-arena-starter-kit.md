@@ -15,6 +15,7 @@ related:
   - sources/devfun-poker-arena-phase0-2026-06-01.md
   - sources/multi-wiki-tool-eval-v8-k103-2026-06-07.md
   - osint-wiki/sources/multi-wiki-tool-eval-50url-k102-2026-06-06.md
+  - sources/brief-k118-poker-agent-research-gaps-2026-06-17.md
 maturity: validated
 created: 2026-06-13
 updated: 2026-06-15

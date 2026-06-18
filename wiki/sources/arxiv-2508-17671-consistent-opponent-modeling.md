@@ -7,6 +7,7 @@ related:
   - concepts/opponent-modeling-imperfect-info.md
   - entities/bots/cemini-devfun-poker-agent.md
   - entities/platforms/devfun-poker-arena.md
+  - sources/brief-k118-poker-agent-research-gaps-2026-06-17.md
 maturity: draft
 read_status: read
 created: 2026-06-03

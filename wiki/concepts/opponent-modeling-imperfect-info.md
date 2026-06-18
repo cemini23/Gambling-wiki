@@ -14,6 +14,7 @@ related:
   - entities/tools/rlcard.md
   - sources/arxiv-2508-17671-consistent-opponent-modeling.md
   - sources/daily-digest-arxiv-batch-2026-06-01.md
+  - sources/brief-k118-poker-agent-research-gaps-2026-06-17.md
   - sources/daily-digest-arxiv-batch-2026-06-04.md
   - sources/devfun-poker-arena-phase0-2026-06-01.md
   - entities/people/tom-dwan.md

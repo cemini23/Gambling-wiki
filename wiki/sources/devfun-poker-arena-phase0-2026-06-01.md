@@ -14,6 +14,7 @@ related:
   - entities/people/tom-dwan.md
   - sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md
   - concepts/opponent-modeling-imperfect-info.md
+  - sources/brief-k118-poker-agent-research-gaps-2026-06-17.md
 maturity: validated
 read_status: read
 created: 2026-06-01

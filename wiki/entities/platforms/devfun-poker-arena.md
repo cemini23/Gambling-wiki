@@ -16,10 +16,11 @@ related:
   - sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md
   - concepts/poker-hl-analyst-loop.md
   - sources/arxiv-2508-17671-consistent-opponent-modeling.md
+  - sources/brief-k118-poker-agent-research-gaps-2026-06-17.md
   - entities/tools/devfun-poker-arena-starter-kit.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-13
+updated: 2026-06-17
 phase_0_verdict: CONDITIONAL-GO 2026-06-01 — sanctioned bot arena (not live poker room); enter via arena API; prize claim needs X verify + external payout wallet
 adoption_status: PHASE-0-COMPLETE
 ---
@@ -111,7 +112,7 @@ Re-check `GET /competition/list-active` before each run.
 
 Open-spot detection uses `is_preflop_open_spot()` in private `opponent_target.py` (handles Arena `callChips=BB` for UTG first-in). **Not** the raw `call_chips==0` anti-pattern from K107.
 
-Selfplay audit (`cemini_selfplay_audit.py`, 400 hands): **VPIP 12.1% / PFR 2.1%** — passive gap persists; investigate `_preflop_open` raise rate vs live Arena analyze, not open-spot boolean alone. See `@concepts/poker-hl-analyst-loop.md`.
+Selfplay audit (`cemini_selfplay_audit.py`, 400 hands, seed 42): **VPIP 11.5% / PFR 2.2%** (2026-06-17) — passive gap persists; SB VPIP 13.4%. See `@sources/brief-k118-poker-agent-research-gaps-2026-06-17.md` and `@concepts/poker-hl-analyst-loop.md`.
 
 ## Snippets
 

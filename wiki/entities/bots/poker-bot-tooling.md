@@ -16,6 +16,7 @@ related:
   - osint-wiki/entities/tools/poker-query-language.md
   - sources/daily-digest-arxiv-batch-2026-06-01.md
   - sources/daily-digest-arxiv-batch-2026-06-02.md
+  - sources/brief-k118-poker-agent-research-gaps-2026-06-17.md
   - sources/daily-digest-arxiv-batch-2026-06-04.md
   - entities/platforms/devfun-poker-arena.md
   - entities/bots/cemini-devfun-poker-agent.md

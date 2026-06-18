@@ -109,6 +109,8 @@ Catalog of all wiki pages. Updated on each ingest.
 
 | Page | Read status |
 |------|-------------|
+| [brief-k118-poker-agent-research-gaps-2026-06-17](sources/brief-k118-poker-agent-research-gaps-2026-06-17.md) | deep-read |
+| [daily-digest-reject-cluster-k119-2026-06-18](sources/daily-digest-reject-cluster-k119-2026-06-18.md) | skimmed |
 | [arxiv-2508-17671-consistent-opponent-modeling](sources/arxiv-2508-17671-consistent-opponent-modeling.md) | read |
 | [kelly-1956-information-rate](sources/kelly-1956-information-rate.md) | deep-read |
 | [gemini-github-sports-betting-landscape-2026-05-30](sources/gemini-github-sports-betting-landscape-2026-05-30.md) | deep-read |

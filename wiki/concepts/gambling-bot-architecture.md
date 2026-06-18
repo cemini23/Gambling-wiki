@@ -25,6 +25,7 @@ related:
   - concepts/pm-proper-scoring-clob-profitability.md
   - sources/openreview-llm-coherence-projection-Tqos7VqQhH-2026-06-17.md
   - sources/openreview-prophets-profit-pm-LYSTj2Cnuu-2026-06-17.md
+  - sources/daily-digest-reject-cluster-k119-2026-06-18.md
   - entities/tools/devfun-poker-arena-starter-kit.md
   - entities/bots/wagerbrain.md
   - entities/bots/bovada-api-reference.md
@@ -55,6 +56,7 @@ updated: 2026-06-17
 - @entities/bots/README.md — platform bot entity stubs
 - @concepts/gambling-wiki-scope.md — wiki boundary vs @osint-wiki prod stack
 - @meta/cross-wiki-routing.md — ingest routing for bot-related sources
+- @sources/daily-digest-reject-cluster-k119-2026-06-18.md — digest false positives (OrchRM NO-GO)
 - @osint-wiki/concepts/cross-venue-arbitrage-pattern.md — PM×Kalshi execution patterns (cross-wiki)
 - @osint-wiki/entities/tools/polybot.md — existing PM strip-mine reference
 
