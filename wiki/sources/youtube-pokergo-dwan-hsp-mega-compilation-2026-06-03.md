@@ -11,10 +11,12 @@ related:
   - concepts/opponent-modeling-imperfect-info.md
   - entities/games/poker.md
   - entities/bots/cemini-devfun-poker-agent.md
+  - sources/web-pro-villain-profiles-dwan-cates-2026-06-19.md
+  - entities/people/daniel-cates-jungleman.md
 maturity: validated
 read_status: deep-read
 created: 2026-06-03
-updated: 2026-06-03
+updated: 2026-06-19
 ---
 
 ## Relations

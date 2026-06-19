@@ -15,6 +15,8 @@ related:
   - entities/people/tom-dwan.md
   - entities/people/daniel-cates-jungleman.md
   - sources/devfun-poker-researcher-track-email-2026-06-19.md
+  - sources/web-pro-villain-profiles-dwan-cates-2026-06-19.md
+  - entities/people/daniel-cates-jungleman.md
   - sources/devfun-poker-arena-phase0-2026-06-01.md
   - sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md
   - sources/daily-digest-arxiv-batch-2026-06-04.md
@@ -61,6 +63,17 @@ claim_status: VERIFIED 2026-06-01 — @cemini23
 Arena API drives a local agent loop: pending actions in, action + reasoning YAML out. Strategy is **pure code at runtime** (no per-hand LLM). Iteration uses the HL analyst loop at @concepts/poker-hl-analyst-loop.md — analyze live leaks, patch offline, gate with tests, deploy to prod.
 
 Layer stack (generic): preflop chart hints → labeled scenario reasoning → postflop equity vs pot odds → clock safety. **Specific thresholds, guards, and opponent overlays are competition-private.**
+
+### Pro villain prep (K121 research, 2026-06-19)
+
+Named exploit overlays for finale / HU sandbox — **private implementation** only:
+
+| `villain_id` | Profile page | Core adjustment |
+|--------------|--------------|-----------------|
+| `durrrr` | @entities/people/tom-dwan.md | Call-heavy vs bombs; thin value; cut bluffs |
+| `jungleman` | @entities/people/daniel-cates-jungleman.md | Wide defend; punish probes; fix passive PFR |
+
+Synthesis source: @sources/web-pro-villain-profiles-dwan-cates-2026-06-19.md. **Researcher rep pick** may require **style emulation** (especially Jungleman HU frequencies), not pure exploit.
 
 ### Researcher track (K121, 2026-06-19) [CONFIRMED — public email]
 

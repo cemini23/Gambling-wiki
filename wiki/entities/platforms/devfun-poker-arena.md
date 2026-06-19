@@ -20,6 +20,7 @@ related:
   - sources/brief-k107-poker-open-spot-audit-2026-06-09.md
   - entities/tools/devfun-poker-arena-starter-kit.md
   - sources/devfun-poker-researcher-track-email-2026-06-19.md
+  - sources/web-pro-villain-profiles-dwan-cates-2026-06-19.md
   - entities/people/daniel-cates-jungleman.md
 maturity: draft
 created: 2026-06-01

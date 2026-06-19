@@ -2,6 +2,12 @@
 
 Append-only chronological log.
 
+## [2026-06-19] research | Pro villain profiles — Dwan + Jungleman (finale prep)
+
+- **New** — `sources/web-pro-villain-profiles-dwan-cates-2026-06-19.md` (web + Durrrr Challenge synthesis)
+- **Updated** — `entities/people/tom-dwan.md`, `entities/people/daniel-cates-jungleman.md` (validated, deep style + bot knobs)
+- **Updated** — `concepts/opponent-modeling-imperfect-info.md`, `entities/bots/cemini-devfun-poker-agent.md`
+
 ## [2026-06-19] ingest | K121 — dev.fun researcher track invite email
 
 - **New** — `sources/devfun-poker-researcher-track-email-2026-06-19.md` (HU sandbox, TrueSkill, Jun 21/25 timeline)

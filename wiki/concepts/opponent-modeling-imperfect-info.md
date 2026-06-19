@@ -18,10 +18,13 @@ related:
   - sources/daily-digest-arxiv-batch-2026-06-04.md
   - sources/devfun-poker-arena-phase0-2026-06-01.md
   - entities/people/tom-dwan.md
+  - entities/people/daniel-cates-jungleman.md
   - sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md
+  - sources/web-pro-villain-profiles-dwan-cates-2026-06-19.md
+  - sources/devfun-poker-researcher-track-email-2026-06-19.md
 maturity: draft
 created: 2026-06-03
-updated: 2026-06-04
+updated: 2026-06-19
 ---
 
 ## Relations
@@ -68,13 +71,14 @@ Arena bot uses a lightweight opponent-target layer (last aggressor multiway, ste
 
 ### Named villain archetypes (human finale)
 
-When opponent identity is known ahead of time (dev.fun **Pro Table Finale** vs @entities/people/tom-dwan.md), **static exploit priors** can supplement HUD:
+When opponent identity is known ahead of time (dev.fun **Pro Table Finale** or **researcher track rep** vs @entities/people/tom-dwan.md / @entities/people/daniel-cates-jungleman.md), **static exploit priors** can supplement HUD:
 
 | Archetype | Prior | Bot knob |
 |-----------|-------|----------|
-| **durrrr** (LAG pressure) | High call vs bets; wide 3-bet; merged bluff/value | Lower bluff freq; thinner value; wider call vs large bets |
+| **durrrr** (LAG pressure + merge) | High call vs bets; wide 3-bet/4-bet trash; polar river lines | Lower bluff freq; thinner value; wider call vs large bets; looser 4-bet defense |
+| **jungleman** (HU balanced LAG) | High 3-bet (~20%+ HU); probes every pot; light call-down vs bluffs; range merge | Wide blind defend; raise vs small bets; selective bluffs; expect adjustment mid-session |
 
-Apply only when finale format confirms human seat — not Playground bot pool defaults.
+Full profiles: @sources/web-pro-villain-profiles-dwan-cates-2026-06-19.md. Apply only when finale format or `villain_id` confirms human seat — not Playground bot pool defaults.
 
 ### Exploit-resistance training (SEPO) [TENTATIVE — 2026-06-04]
 
