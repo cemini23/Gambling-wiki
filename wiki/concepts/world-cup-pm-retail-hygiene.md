@@ -21,10 +21,13 @@ related:
   - sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md
   - concepts/world-cup-2026-fan-narrative-preview.md
   - sources/brief-k112-gambling-wc-2026-narrative-2026-06-12.md
-  - osint-wiki/concepts/polymarket-retail-trading-discipline.md
+  - "@osint-wiki/concepts/polymarket-retail-trading-discipline.md"
+  - "@seo-wiki/concepts/outlier-weekly-issue3-world-cup-bot-notes.md"
+  - "@seo-wiki/concepts/x-account-voice-and-format.md"
+  - "@seo-wiki/concepts/world-cup-bot-search-discovery.md"
 maturity: validated
 created: 2026-06-09
-updated: 2026-06-13
+updated: 2026-06-18
 ---
 
 ## Relations
@@ -32,6 +35,9 @@ updated: 2026-06-13
 - @sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md — K108 ingest provenance
 - @entities/sports/world-cup-2026-betting.md — WC entity hub
 - @osint-wiki/concepts/polymarket-retail-trading-discipline.md — general PM retail tactics (K57 + K108 overlay)
+- @seo-wiki/concepts/outlier-weekly-issue3-world-cup-bot-notes.md — Outlier Weekly Issue 3 / World Cup Bot launch (education funnel)
+- @seo-wiki/concepts/x-account-voice-and-format.md — X distribution voice for PM/OSS posts
+- @seo-wiki/concepts/world-cup-bot-search-discovery.md — GitHub Pages + GSC discovery playbook
 
 ## Raw Concept
 

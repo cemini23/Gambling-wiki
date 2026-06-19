@@ -9,9 +9,11 @@ related:
   - entities/sports/world-cup-2026-betting.md
   - sources/brief-k112-gambling-wc-2026-narrative-2026-06-12.md
   - osint-wiki/sources/trading-posts-compilation-9-2026-06-12.md
+  - "@seo-wiki/concepts/x-account-voice-and-format.md"
+  - "@seo-wiki/concepts/outlier-weekly-issue3-world-cup-bot-notes.md"
 maturity: draft
 created: 2026-06-12
-updated: 2026-06-12
+updated: 2026-06-18
 ---
 
 ## Relations
@@ -20,6 +22,8 @@ updated: 2026-06-12
 - @concepts/world-cup-pm-retail-hygiene.md — K108 retail checklist
 - @entities/sports/world-cup-2026-betting.md — entity hub
 - @sources/brief-k112-gambling-wc-2026-narrative-2026-06-12.md — K112 brief ingest
+- @seo-wiki/concepts/x-account-voice-and-format.md — repurpose narrative hooks for X/Articles without picks
+- @seo-wiki/concepts/outlier-weekly-issue3-world-cup-bot-notes.md — WC tournament marketing lane
 
 ## Raw Concept
 

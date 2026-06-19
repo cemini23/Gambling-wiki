@@ -40,9 +40,11 @@ related:
   - concepts/pm-proper-scoring-clob-profitability.md
   - concepts/pm-llm-coherence-projection.md
   - concepts/pm-agent-cognitive-monoculture.md
+  - "@seo-wiki/concepts/outlier-weekly-issue3-world-cup-bot-notes.md"
+  - "@seo-wiki/concepts/generative-engine-optimization.md"
 maturity: validated
 created: 2026-05-31
-updated: 2026-06-17
+updated: 2026-06-18
 ---
 
 ## Relations
@@ -56,6 +58,8 @@ updated: 2026-06-17
 - @osint-wiki/entities/platforms/polymarket.md — bot/LP context
 - @osint-wiki/concepts/cross-venue-arbitrage-pattern.md — automated arb
 - @osint-wiki/concepts/sports-prediction-consensus-agent.md — sports PM entry signals
+- @seo-wiki/concepts/outlier-weekly-issue3-world-cup-bot-notes.md — public PM/OSS education funnel (Outlier Weekly)
+- @seo-wiki/concepts/generative-engine-optimization.md — citability for public PM explainers
 
 ## Raw Concept
 

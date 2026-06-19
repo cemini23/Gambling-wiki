@@ -15,9 +15,10 @@ related:
   - sources/osint-cross-wiki-wc2026-retail-synthesis-2026-05-31.md
   - concepts/world-cup-pm-retail-hygiene.md
   - sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md
+  - "@seo-wiki/concepts/outlier-weekly-issue3-world-cup-bot-notes.md"
 maturity: validated
 created: 2026-05-31
-updated: 2026-06-09
+updated: 2026-06-18
 ---
 
 ## Relations
@@ -25,6 +26,7 @@ updated: 2026-06-09
 - @entities/sports/world-cup-2026-betting.md — WC hub
 - @concepts/world-cup-knockout-phase-betting.md — 90-min vs to-advance detail
 - @osint-wiki/sources/gemini-world-cup-market-structure-research-2026-05-29.md — full contract map
+- @seo-wiki/concepts/outlier-weekly-issue3-world-cup-bot-notes.md — advance-market scope in World Cup Bot v1 marketing
 
 ## Raw Concept
 

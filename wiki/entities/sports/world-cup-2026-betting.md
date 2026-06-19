@@ -27,9 +27,11 @@ related:
   - sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md
   - concepts/world-cup-2026-fan-narrative-preview.md
   - sources/brief-k112-gambling-wc-2026-narrative-2026-06-12.md
+  - "@seo-wiki/concepts/outlier-weekly-issue3-world-cup-bot-notes.md"
+  - "@seo-wiki/concepts/x-account-voice-and-format.md"
 maturity: validated
 created: 2026-05-31
-updated: 2026-06-12
+updated: 2026-06-18
 ---
 
 ## Relations
@@ -40,6 +42,8 @@ updated: 2026-06-12
 - @entities/platforms/kalshi.md — regulated event contracts
 - @entities/platforms/polymarket.md — crypto PM sports menu
 - @osint-wiki/concepts/world-cup-advance-market-bot-v1.md — automation (cross-wiki; not retail primary)
+- @seo-wiki/concepts/outlier-weekly-issue3-world-cup-bot-notes.md — Issue 3 marketing cross-promo
+- @seo-wiki/concepts/x-account-voice-and-format.md — X distribution voice for WC / PM posts
 
 ## Raw Concept
 
