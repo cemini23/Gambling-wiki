@@ -2,6 +2,15 @@
 
 Append-only chronological log.
 
+## [2026-06-19] research | K122 — poker researcher track research plan
+
+- **New** — `concepts/heads-up-arena-strategy.md`, `concepts/poker-axis-eval-literacy.md`, `sources/research-k122-poker-paper-landscape-2026-06-19.md`
+- **Updated** — `entities/tools/devfun-poker-arena-starter-kit.md` (devfun-org primary repo)
+- **Updated** — `entities/platforms/devfun-poker-arena.md`, `entities/bots/cemini-devfun-poker-agent.md`, cross-links
+- **Brief** — `briefs/2026-06-19_k122-poker-researcher-track-research-plan.md` (6-lane synthesis)
+
+## [2026-06-19] research | Pro villain profiles — Dwan + Jungleman (finale prep)
+
 - **New** — `sources/web-pro-villain-profiles-dwan-cates-2026-06-19.md` (web + Durrrr Challenge synthesis)
 - **Updated** — `entities/people/tom-dwan.md`, `entities/people/daniel-cates-jungleman.md` (validated, deep style + bot knobs)
 - **Updated** — `concepts/opponent-modeling-imperfect-info.md`, `entities/bots/cemini-devfun-poker-agent.md`
