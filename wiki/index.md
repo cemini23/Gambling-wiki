@@ -19,7 +19,21 @@ Catalog of all wiki pages. Updated on each ingest.
 | [pm-copy-trading-retail-risks](concepts/pm-copy-trading-retail-risks.md) | validated | Whale-copy discipline |
 | [parlay-and-correlated-bets](concepts/parlay-and-correlated-bets.md) | draft | Parlays, SGP, correlation |
 | [dfs-strategy-overview](concepts/dfs-strategy-overview.md) | draft | GPP, cash, stacking |
-| [best-ball-strategy](concepts/best-ball-strategy.md) | validated | GPP, cash, stacking, BBM7 |
+| [best-ball-strategy](concepts/best-ball-strategy.md) | validated | BBM7 roster construction, portfolio drafting |
+| [best-ball-mania-winners](concepts/best-ball-mania-winners.md) | validated | BBM1–BBM6 winner dossier, cross-patterns |
+| [bbm7-portfolio-construction](concepts/bbm7-portfolio-construction.md) | validated | 150-entry timing × archetype playbook |
+| [bbm7-adp-delta-tracker](concepts/bbm7-adp-delta-tracker.md) | validated | Underdog ADP BUY/FADE tracker (Jun 2026) |
+| [bbm7-playoff-week-construction](concepts/bbm7-playoff-week-construction.md) | validated | W15–17 byes, game stacks, advance cliffs |
+| [best-ball-draft-timing](concepts/best-ball-draft-timing.md) | validated | When to draft — July–August sweet spot, portfolio split |
+
+## Sources — Best ball (BBM7)
+
+| Page | Maturity | Summary |
+|------|----------|---------|
+| [fantasysixpack-bbm-new-meta-2026-06-08](sources/fantasysixpack-bbm-new-meta-2026-06-08.md) | validated | 2026 scoring-compression / “New Meta” framework |
+| [4for4-bbm7-guide-series-2026-06-18](sources/4for4-bbm7-guide-series-2026-06-18.md) | validated | 4for4 BBMVI meta + 2026 positional playbook (7 free articles) |
+| [fantasy-guru-bbm-tactics-2026-06-08](sources/fantasy-guru-bbm-tactics-2026-06-08.md) | draft | Paywalled stub — Tyler Buecher tactics |
+| [etr-best-ball-mania-manifesto-draft-timing-2026-06-18](sources/etr-best-ball-mania-manifesto-draft-timing-2026-06-18.md) | validated | ETR Leone draft timing extract (BBM3) |
 | [poker-strategy-overview](concepts/poker-strategy-overview.md) | validated | Cash, MTT, ICM, zero-to-10k path |
 | [opponent-modeling-imperfect-info](concepts/opponent-modeling-imperfect-info.md) | draft | K95 BBR/consistency — dev.fun arena exploit lane |
 | [poker-hl-analyst-loop](concepts/poker-hl-analyst-loop.md) | validated | HL loop: analyze → LLM patch → preflight → deploy |
@@ -47,13 +61,19 @@ Catalog of all wiki pages. Updated on each ingest.
 | Page | Maturity |
 |------|----------|
 | [draftkings](entities/platforms/draftkings.md) | draft |
-| [underdog-fantasy](entities/platforms/underdog-fantasy.md) | draft |
+| [underdog-fantasy](entities/platforms/underdog-fantasy.md) | validated |
 | [fanduel](entities/platforms/fanduel.md) | draft |
 | [pinnacle](entities/platforms/pinnacle.md) | draft |
 | [kalshi](entities/platforms/kalshi.md) | draft |
 | [polymarket](entities/platforms/polymarket.md) | draft |
 | [devfun-poker-arena](entities/platforms/devfun-poker-arena.md) | draft |
 | [pokerstars](entities/platforms/pokerstars.md) | draft |
+
+## Entities — Tournaments
+
+| Page | Maturity |
+|------|----------|
+| [best-ball-mania-vii](entities/tournaments/best-ball-mania-vii.md) | validated |
 
 ## Entities — Tools
 

@@ -4,7 +4,9 @@ type: concept
 tags: [concept, bankroll, risk-management, discipline]
 keywords: [bankroll, unit-sizing, stop-loss, session-limits, responsible-gambling]
 related:
+  - concepts/bbm7-portfolio-construction.md
   - concepts/best-ball-strategy.md
+  - entities/tournaments/best-ball-mania-vii.md
   - concepts/casino-game-house-edge.md
   - concepts/dfs-strategy-overview.md
   - concepts/gambling-bot-architecture.md

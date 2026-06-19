@@ -5,15 +5,19 @@ tags: [source, youtube, world-cup-2026, best-ball, underdog, operator-drop]
 keywords: [world-cup-betting, best-ball-mania, bbm7, underdog-fantasy, futures, adp, stacks]
 related:
   - entities/sports/world-cup-2026-betting.md
+  - concepts/bbm7-adp-delta-tracker.md
   - concepts/best-ball-strategy.md
   - concepts/world-cup-2026-format.md
   - concepts/world-cup-third-place-advancement-betting.md
   - concepts/bankroll-management.md
   - concepts/sports-betting-fundamentals.md
   - entities/platforms/underdog-fantasy.md
+  - entities/tournaments/best-ball-mania-vii.md
+  - concepts/best-ball-mania-winners.md
   - entities/platforms/draftkings.md
   - entities/sports/nfl-betting.md
   - concepts/dfs-strategy-overview.md
+  - sources/fantasysixpack-bbm-new-meta-2026-06-08.md
   - sources/youtube-operator-batch-sports-betting-research-2026-05-31.md
 maturity: validated
 read_status: deep-read

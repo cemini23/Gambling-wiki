@@ -6,6 +6,7 @@ keywords: [nfl, football, spreads, props, totals, key-numbers]
 related:
   - concepts/sports-betting-fundamentals.md
   - concepts/best-ball-strategy.md
+  - entities/tournaments/best-ball-mania-vii.md
   - concepts/dfs-strategy-overview.md
   - concepts/line-shopping-and-clv.md
   - concepts/sharp-vs-soft-books.md

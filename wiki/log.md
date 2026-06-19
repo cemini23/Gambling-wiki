@@ -2,6 +2,48 @@
 
 Append-only chronological log.
 
+## [2026-06-18] ingest | Fantasy Six Pack — 2026 Best Ball New Meta
+
+- **New** — `sources/fantasysixpack-bbm-new-meta-2026-06-08.md`
+- **Updated** — `best-ball-strategy.md`, `bbm7-adp-delta-tracker.md`, sweep R11 (2026-06-09/10)
+
+## [2026-06-18] update | BBM3/BBM5/BBM6 winner roster gaps filled
+
+- **Updated** — `concepts/best-ball-mania-winners.md` — full 18-pick BBM3 (Kerrane, seat 7) + BBM5 (LGREWE50, seat 4) + BBM6 corrections (Pollard, Burden, Stevenson, Corum)
+- **Sources** — ETR Manifesto, bestballteambuilder, Fantasy Alarm (BBMV CLV table)
+
+## [2026-06-18] brief | BBM7 portfolio prep — ADP tracker + W15–17 + 150-entry matrix
+
+- **New** — `concepts/bbm7-adp-delta-tracker.md` (TE R11–13, QB R8–10, rookie CLV)
+- **New** — `concepts/bbm7-playoff-week-construction.md` (bye calendar, W17 stacks)
+- **New** — `concepts/bbm7-portfolio-construction.md` (150 entries × timing × archetype)
+- **Brief** — `briefs/2026-06-18_bbm7-portfolio-brief.md` (operator handoff)
+- **Updated** — `best-ball-strategy.md`, `index.md`, W7 ROADMAP
+
+## [2026-06-18] ingest | BBM7 guides — 4for4 series + Fantasy Guru stub
+
+- **New** — `sources/4for4-bbm7-guide-series-2026-06-18.md` (7 free articles deep-read; ultimate guide paywalled)
+- **New** — `sources/fantasy-guru-bbm-tactics-2026-06-08.md` (paywall stub)
+- **Updated** — `concepts/best-ball-strategy.md` (BBM7 2026 positional playbook, advance vs winner tension)
+- **Updated** — `concepts/best-ball-draft-timing.md` (4for4 preseason volume cross-ref)
+- **Sweep** — R12 4for4 + R13 Fantasy Guru marked ingested in `2026-06-18-daily.md`
+
+## [2026-06-18] ingest | BBM7 draft timing research
+
+- **New** — `concepts/best-ball-draft-timing.md` (July–August sweet spot, portfolio window split)
+- **New** — `sources/etr-best-ball-mania-manifesto-draft-timing-2026-06-18.md`
+- **Updated** — `best-ball-strategy.md`, `entities/tournaments/best-ball-mania-vii.md`
+- **Finding** — bye weeks known from May schedule; August edge is camp injuries/role clarity, not bye discovery
+
+## [2026-06-18] ingest | BBM7 research kickoff — rules + winner dossier
+
+- **New** — `entities/tournaments/best-ball-mania-vii.md` (official format, bracket, scoring [CONFIRMED])
+- **New** — `concepts/best-ball-mania-winners.md` (BBM1–BBM6 full dossier + cross-patterns)
+- **Updated** — `entities/platforms/underdog-fantasy.md` (BBM7 confirmed, maturity → validated)
+- **Updated** — `concepts/best-ball-strategy.md` (winner archetype evolution, portfolio implications)
+- **ROADMAP** — W7 BBM7 research workstream opened
+- **Sources** — Underdog help center, bestballteambuilder, props.com, Rolling Stone, Fantasy Points, RotoViz
+
 ## [2026-06-18] ingest | K119 — Digest reject cluster (3 false positives)
 
 - **Source** — `sources/daily-digest-reject-cluster-k119-2026-06-18.md` (validated)

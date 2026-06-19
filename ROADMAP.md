@@ -46,6 +46,22 @@ Steps:
 
 **Public doc rule:** wiki may describe *that* we run an arena bot and the HL *workflow*; it must **not** publish frequencies, guards, nemesis profiles, or patch priorities while the $50k path is live.
 
+### W7 — BBM7 research & draft prep (active)
+
+**Status:** Started 2026-06-18 — wiki as research hub for Underdog Best Ball Mania VII entries.
+
+Steps:
+- [x] Official BBM7 rules/format verified — `entities/tournaments/best-ball-mania-vii.md`
+- [x] BBM1–BBM6 winner dossier — `concepts/best-ball-mania-winners.md`
+- [x] Cross-winner pattern synthesis (archetypes, stacks, TE, late-round value)
+- [x] Draft timing research — `concepts/best-ball-draft-timing.md` (ETR Manifesto; July–Aug sweet spot)
+- [x] Fill roster gaps — BBM3 + BBM5 full 18, BBM6 corrected (bestballteambuilder + ETR + Fantasy Alarm)
+- [x] Ingest 4for4 BBM7 guide + Fantasy Guru tournament tactics (sweep hits R12–R13)
+- [x] ADP vs projection delta tracker — `concepts/bbm7-adp-delta-tracker.md`
+- [x] Portfolio construction brief — `concepts/bbm7-portfolio-construction.md` + `briefs/2026-06-18_bbm7-portfolio-brief.md`
+- [x] Week 15–17 bye/cliff analysis — `concepts/bbm7-playoff-week-construction.md`
+- [x] Ingest Fantasy Six Pack 2026 New Meta — `sources/fantasysixpack-bbm-new-meta-2026-06-08.md`
+
 ### W2 — Domain expansion (queued)
 
 Priority ingest lanes once sources arrive:
