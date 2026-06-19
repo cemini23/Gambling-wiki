@@ -4,6 +4,8 @@ type: entity
 tags: [entity, bot, poker, devfun, arena-pokerkit]
 keywords: [cemini, devfun, cemini_decide, arena-pokerkit, decide-function]
 related:
+  - concepts/poker-axis-eval-literacy.md
+  - sources/research-k122-poker-paper-landscape-2026-06-19.md
   - entities/platforms/devfun-poker-arena.md
   - entities/tools/pokerskill.md
   - entities/tools/devfun-poker-arena-starter-kit.md

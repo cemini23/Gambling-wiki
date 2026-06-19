@@ -16,9 +16,10 @@ related:
   - sources/multi-wiki-tool-eval-v8-k103-2026-06-07.md
   - osint-wiki/sources/multi-wiki-tool-eval-50url-k102-2026-06-06.md
   - sources/brief-k118-poker-agent-research-gaps-2026-06-17.md
+  - concepts/heads-up-arena-strategy.md
 maturity: validated
 created: 2026-06-13
-updated: 2026-06-15
+updated: 2026-06-19
 phase_0_verdict: REFERENCE 2026-06-06 — MIT verified; agent-driven Arena entry path; no CeminiSuite integration
 ---
 
@@ -31,8 +32,8 @@ phase_0_verdict: REFERENCE 2026-06-06 — MIT verified; agent-driven Arena entry
 
 ## Raw Concept
 
-- **Repo**: [chenziz/arena-pokerkit](https://github.com/chenziz/arena-pokerkit) (canonical; future home noted as `devfun-org/devfun-arena-skills/skills/arena-pokerkit/`)
-- **Eval alias**: `devfun-org/poker-arena-starter-kit` — K102 marked UNAVAILABLE; **MIT verified** 2026-06-06
+- **Primary repo (2026-06):** [devfun-org/poker-arena-starter-kit](https://github.com/devfun-org/poker-arena-starter-kit) — `pokerkit` CLI, L1–L3 strategy tiers, HL loop in `docs/strategy.md`
+- **Legacy / mirror:** [chenziz/arena-pokerkit](https://github.com/chenziz/arena-pokerkit) — K102 original; same `decide()` contract
 - **K102 brief**: `briefs/2026-06-06_k102-gambling-poker-arena-from-osint.md` (ingested K114)
 
 ## Narrative
@@ -55,9 +56,9 @@ Official **MIT** starter for dev.fun **Poker Arena** — Python kit exposing a t
 
 ### Operator path
 
-1. Clone + `uv sync` (or `pip install git+https://github.com/chenziz/arena-pokerkit`)
-2. Implement `decide()` — skeleton in `examples/agent.py`; prod pattern in private `cemini_decide.py`
-3. Register agent → `arena_sk_` key → join Playground / Eval competition
+1. Clone [devfun-org/poker-arena-starter-kit](https://github.com/devfun-org/poker-arena-starter-kit) → `./pokerkit test` / `./pokerkit selfplay --hands 200`
+2. Implement `decide()` — `examples/STRATEGY.md.template`; prod pattern in private `cemini_decide.py`
+3. Register agent → `arena_sk_` key → Playground / Eval / **researcher HU sandbox** (separate lane — see @concepts/heads-up-arena-strategy.md)
 4. Optional: `npx skills add chenziz/arena-pokerkit` for Cursor/Claude skill routing
 
 ### Boundaries

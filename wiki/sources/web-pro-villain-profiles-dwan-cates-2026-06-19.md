@@ -12,6 +12,7 @@ related:
   - entities/bots/cemini-devfun-poker-agent.md
   - concepts/opponent-modeling-imperfect-info.md
   - concepts/poker-strategy-overview.md
+  - "@osint-wiki/concepts/devfun-researcher-pro-style-targets-2026-06.md"
 maturity: validated
 read_status: deep-read
 created: 2026-06-19
@@ -24,6 +25,7 @@ updated: 2026-06-19
 - @entities/people/daniel-cates-jungleman.md — Jungleman profile (primary)
 - @sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md — HSP tape anchor for Dwan
 - @concepts/opponent-modeling-imperfect-info.md — named archetypes for bot HUD
+- @osint-wiki/concepts/devfun-researcher-pro-style-targets-2026-06.md — Cemini HU emulation + exploit backlog
 
 ## Raw Concept
 

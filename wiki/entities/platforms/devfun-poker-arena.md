@@ -22,6 +22,8 @@ related:
   - sources/devfun-poker-researcher-track-email-2026-06-19.md
   - sources/web-pro-villain-profiles-dwan-cates-2026-06-19.md
   - entities/people/daniel-cates-jungleman.md
+  - concepts/heads-up-arena-strategy.md
+  - concepts/poker-axis-eval-literacy.md
 maturity: draft
 created: 2026-06-01
 updated: 2026-06-19

@@ -13,6 +13,7 @@ related:
   - sources/arxiv-2508-17671-consistent-opponent-modeling.md
   - sources/brief-k118-poker-agent-research-gaps-2026-06-17.md
   - sources/brief-k107-poker-open-spot-audit-2026-06-09.md
+  - sources/research-k122-poker-paper-landscape-2026-06-19.md
 maturity: validated
 read_status: deep-read
 created: 2026-06-17

@@ -38,6 +38,9 @@ Catalog of all wiki pages. Updated on each ingest.
 | [poker-strategy-overview](concepts/poker-strategy-overview.md) | validated | Cash, MTT, ICM, zero-to-10k path |
 | [opponent-modeling-imperfect-info](concepts/opponent-modeling-imperfect-info.md) | draft | K95 BBR/consistency — dev.fun arena exploit lane |
 | [poker-hl-analyst-loop](concepts/poker-hl-analyst-loop.md) | validated | HL loop: analyze → LLM patch → preflight → deploy |
+| [heads-up-arena-strategy](concepts/heads-up-arena-strategy.md) | draft | HU NLHE primer — dev.fun researcher track (K122) |
+| [poker-axis-eval-literacy](concepts/poker-axis-eval-literacy.md) | draft | Pointer to OSINT Raeth M₁–M₉ axis eval |
+| [research-k122-poker-paper-landscape-2026-06-19](sources/research-k122-poker-paper-landscape-2026-06-19.md) | draft | 12-paper map vs K118; top 5 deep-reads |
 | [casino-game-house-edge](concepts/casino-game-house-edge.md) | validated | Edge by game, smart-bet ranking |
 | [prediction-markets-crossover](concepts/prediction-markets-crossover.md) | validated | Kalshi/Polymarket retail lens |
 | [pm-live-belief-updating](concepts/pm-live-belief-updating.md) | validated | Live PM underreaction, salience×liquidity |

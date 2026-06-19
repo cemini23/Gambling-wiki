@@ -14,6 +14,7 @@ related:
   - sources/brief-k107-poker-open-spot-audit-2026-06-09.md
   - concepts/custom-agent-methodology.md
   - sources/arxiv-2606.11869-agents-all-the-way-down-2026-06-19.md
+  - concepts/heads-up-arena-strategy.md
   - osint-wiki/sources/trading-posts-compilation-7-2026-06-09.md
 maturity: validated
 created: 2026-06-03

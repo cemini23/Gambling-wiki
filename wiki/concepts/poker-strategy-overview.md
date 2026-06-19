@@ -19,6 +19,7 @@ related:
   - entities/bots/cemini-devfun-poker-agent.md
   - sources/devfun-poker-arena-phase0-2026-06-01.md
   - entities/people/tom-dwan.md
+  - concepts/heads-up-arena-strategy.md
   - sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md
   - concepts/opponent-modeling-imperfect-info.md
   - concepts/poker-hl-analyst-loop.md
