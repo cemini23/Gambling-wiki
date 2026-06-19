@@ -40,8 +40,8 @@ related:
   - concepts/pm-proper-scoring-clob-profitability.md
   - concepts/pm-llm-coherence-projection.md
   - concepts/pm-agent-cognitive-monoculture.md
-  - "@seo-wiki/concepts/outlier-weekly-issue3-world-cup-bot-notes.md"
-  - "@seo-wiki/concepts/generative-engine-optimization.md"
+  - @seo-wiki/concepts/outlier-weekly-issue3-world-cup-bot-notes.md
+  - @seo-wiki/concepts/generative-engine-optimization.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-06-18

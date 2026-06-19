@@ -88,7 +88,7 @@ def parse_frontmatter(text):
         for line in rl.group(1).splitlines():
             s = line.strip()
             if s.startswith("- "):
-                items.append(s[2:].strip())
+                items.append(s[2:].strip().strip('"').strip("'"))
         out["related"] = items
     else:
         # try inline form: related: [a, b, c]
@@ -105,8 +105,9 @@ def parse_frontmatter(text):
     return out
 
 def normalize_path(p):
-    """Strip leading slash, drop wiki/ prefix if accidentally included."""
-    p = p.strip().lstrip("/")
+    """Strip leading slash, drop wiki/ prefix if accidentally included, YAML quotes."""
+    p = p.strip().strip('"').strip("'")
+    p = p.lstrip("/")
     if p.startswith("wiki/"):
         p = p[len("wiki/"):]
     return p
@@ -243,7 +244,7 @@ if WIKI_ALIASES:
             # Only treat as cross-wiki link if alias is in WIKI_ALIASES
             if alias not in WIKI_ALIASES:
                 continue  # skip local wiki links like @concepts/..., @entities/...
-            rel_path = m.group(2).lstrip("/").rstrip(".,;:\\])}")
+            rel_path = m.group(2).lstrip("/").rstrip(".,;:\\])}\"'")
             if "..." in rel_path:
                 continue  # prose placeholder, not a real path
             target = WIKI_ALIASES[alias] / rel_path
