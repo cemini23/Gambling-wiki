@@ -8,6 +8,7 @@ Catalog of all wiki pages. Updated on each ingest.
 |------|----------|---------|
 | [gambling-wiki-scope](concepts/gambling-wiki-scope.md) | core | Scope vs @osint-wiki |
 | [gambling-bot-architecture](concepts/gambling-bot-architecture.md) | core | Planned bot fleet / master orchestrator |
+| [custom-agent-methodology](concepts/custom-agent-methodology.md) | validated | K120 Agents All the Way Down — P1–P5, CLI-over-MCP |
 | [bankroll-management](concepts/bankroll-management.md) | validated | Units, pools, discipline |
 | [kelly-criterion-betting](concepts/kelly-criterion-betting.md) | validated | Kelly math + fractional Kelly |
 | [vig-and-hold](concepts/vig-and-hold.md) | validated | Juice, overround, breakeven |
@@ -130,6 +131,9 @@ Catalog of all wiki pages. Updated on each ingest.
 | Page | Read status |
 |------|-------------|
 | [brief-k118-poker-agent-research-gaps-2026-06-17](sources/brief-k118-poker-agent-research-gaps-2026-06-17.md) | deep-read |
+| [brief-k107-poker-open-spot-audit-2026-06-09](sources/brief-k107-poker-open-spot-audit-2026-06-09.md) | deep-read |
+| [arxiv-2606.11869-agents-all-the-way-down-2026-06-19](sources/arxiv-2606.11869-agents-all-the-way-down-2026-06-19.md) | skimmed |
+| [daily-digest-reject-cluster-k116-2026-06-17](sources/daily-digest-reject-cluster-k116-2026-06-17.md) | skimmed |
 | [daily-digest-reject-cluster-k119-2026-06-18](sources/daily-digest-reject-cluster-k119-2026-06-18.md) | skimmed |
 | [arxiv-2508-17671-consistent-opponent-modeling](sources/arxiv-2508-17671-consistent-opponent-modeling.md) | read |
 | [kelly-1956-information-rate](sources/kelly-1956-information-rate.md) | deep-read |

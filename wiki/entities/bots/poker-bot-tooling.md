@@ -23,9 +23,11 @@ related:
   - sources/devfun-poker-arena-phase0-2026-06-01.md
   - concepts/opponent-modeling-imperfect-info.md
   - concepts/poker-hl-analyst-loop.md
+  - sources/brief-k107-poker-open-spot-audit-2026-06-09.md
+  - sources/arxiv-2606.11869-agents-all-the-way-down-2026-06-19.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-13
+updated: 2026-06-19
 ---
 
 ## Relations

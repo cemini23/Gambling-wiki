@@ -18,10 +18,13 @@ related:
   - sources/daily-digest-arxiv-batch-2026-06-04.md
   - sources/arxiv-2508-17671-consistent-opponent-modeling.md
   - sources/brief-k118-poker-agent-research-gaps-2026-06-17.md
+  - sources/brief-k107-poker-open-spot-audit-2026-06-09.md
+  - concepts/custom-agent-methodology.md
+  - sources/arxiv-2606.11869-agents-all-the-way-down-2026-06-19.md
   - entities/games/poker.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-17
+updated: 2026-06-19
 adoption_status: ACTIVE-DEV
 claim_status: VERIFIED 2026-06-01 — @cemini23
 ---
@@ -34,6 +37,8 @@ claim_status: VERIFIED 2026-06-01 — @cemini23
 - @concepts/poker-hl-analyst-loop.md — **HL analyst loop** (analyze → patch → preflight → deploy)
 - @sources/arxiv-2508-17671-consistent-opponent-modeling.md — K95 consistent opponent modeling anchor
 - @sources/brief-k118-poker-agent-research-gaps-2026-06-17.md — K118 research gap analysis + P0 fix backlog (private brief)
+- @sources/brief-k107-poker-open-spot-audit-2026-06-09.md — K107 open-spot audit baseline
+- @concepts/custom-agent-methodology.md — HL loop as custom-agent P3→P5 pattern (K120)
 - Implementation: **private** — `llm-wiki-by-cemini` repo, path `agents/devfun-poker-arena/` (not in public Gambling-wiki)
 
 ## Raw Concept

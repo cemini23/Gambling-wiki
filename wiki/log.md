@@ -2,6 +2,16 @@
 
 Append-only chronological log.
 
+## [2026-06-19] ingest | K120 — Agents All the Way Down + brief close-out
+
+- **New** — `sources/arxiv-2606.11869-agents-all-the-way-down-2026-06-19.md` (arXiv 2606.11869)
+- **New** — `concepts/custom-agent-methodology.md` (P1–P5, CLI-over-MCP, HL loop mapping)
+- **New** — `sources/brief-k107-poker-open-spot-audit-2026-06-09.md` (K107 cross-wiki brief source)
+- **New** — `sources/daily-digest-reject-cluster-k116-2026-06-17.md` (6-paper reject cluster)
+- **Updated** — `gambling-bot-architecture.md`, `poker-hl-analyst-loop.md`, `cemini-devfun-poker-agent.md`, `devfun-poker-arena-phase0-2026-06-01.md`, `brief-k118-*.md`
+- **Archive** — PDF → `raw-sources/`; inbox cleared
+- **Sweep** — `2026-06-19-daily.md` marked INGESTED
+
 ## [2026-06-18] ingest | Fantasy Six Pack — 2026 Best Ball New Meta
 
 - **New** — `sources/fantasysixpack-bbm-new-meta-2026-06-08.md`

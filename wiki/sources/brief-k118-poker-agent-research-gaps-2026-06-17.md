@@ -11,11 +11,12 @@ related:
   - entities/tools/devfun-poker-arena-starter-kit.md
   - entities/bots/poker-bot-tooling.md
   - sources/arxiv-2508-17671-consistent-opponent-modeling.md
-  - sources/devfun-poker-arena-phase0-2026-06-01.md
+  - sources/brief-k118-poker-agent-research-gaps-2026-06-17.md
+  - sources/brief-k107-poker-open-spot-audit-2026-06-09.md
 maturity: validated
 read_status: deep-read
 created: 2026-06-17
-updated: 2026-06-17
+updated: 2026-06-19
 cross-wiki-source: "briefs/2026-06-17_k118-gambling-poker-agent-research-gap-fixes.md"
 ---
 

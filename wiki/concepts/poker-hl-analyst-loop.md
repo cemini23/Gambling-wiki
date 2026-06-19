@@ -11,10 +11,13 @@ related:
   - concepts/poker-strategy-overview.md
   - entities/bots/poker-bot-tooling.md
   - sources/brief-k118-poker-agent-research-gaps-2026-06-17.md
+  - sources/brief-k107-poker-open-spot-audit-2026-06-09.md
+  - concepts/custom-agent-methodology.md
+  - sources/arxiv-2606.11869-agents-all-the-way-down-2026-06-19.md
   - osint-wiki/sources/trading-posts-compilation-7-2026-06-09.md
 maturity: validated
 created: 2026-06-03
-updated: 2026-06-17
+updated: 2026-06-19
 ---
 
 ## Relations
@@ -22,6 +25,8 @@ updated: 2026-06-17
 - @entities/bots/cemini-devfun-poker-agent.md — prod `cemini_decide.py` agent
 - @entities/platforms/devfun-poker-arena.md — Arena venue + monitor
 - @sources/brief-k118-poker-agent-research-gaps-2026-06-17.md — research → agent gap matrix + fix backlog
+- @sources/brief-k107-poker-open-spot-audit-2026-06-09.md — K107 open-spot audit + selfplay KPI baseline
+- @concepts/custom-agent-methodology.md — HL loop as P3→P4→P5 instance (K120)
 - @concepts/gambling-bot-architecture.md — bot fleet; HL loop is the **poker lane** iteration pattern
 - @osint-wiki/concepts/cemini-knowledge-application-architecture.md — brief → verify → deploy (cross-wiki)
 - Private repo: `llm-wiki-by-cemini/agents/devfun-poker-arena/` — HL loop scripts
@@ -94,11 +99,13 @@ Do **not** optimize for selfplay bb/100; do **not** add runtime LLM decide() for
 
 ### Loop (four steps)
 
+Maps to @concepts/custom-agent-methodology.md **P3→P4→P5** (offline LLM patch + shipped CLI artifact + behavioral gate):
+
 ```
-1. ANALYZE   arena_monitor / analyze.py → failure report (position + worst hands)
-2. PATCH     LLM reads brief (OSINT shape) → ONE leak fix in cemini_decide.py
-3. PREFLIGHT pytest + regression + self-play gate + dry-run
-4. DEPLOY    rsync cemini-prod + systemctl restart (optional flag)
+1. ANALYZE   arena_monitor / analyze.py → failure report (position + worst hands)   [P3]
+2. PATCH     LLM reads brief (OSINT shape) → ONE leak fix in cemini_decide.py        [P3]
+3. PREFLIGHT pytest + regression + self-play gate + dry-run                          [P5]
+4. DEPLOY    rsync cemini-prod + systemctl restart (optional flag)                   [P4 ship]
 ```
 
 ### Commands (operator — private repo)

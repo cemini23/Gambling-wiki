@@ -15,10 +15,11 @@ related:
   - sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md
   - concepts/opponent-modeling-imperfect-info.md
   - sources/brief-k118-poker-agent-research-gaps-2026-06-17.md
+  - sources/brief-k107-poker-open-spot-audit-2026-06-09.md
 maturity: validated
 read_status: read
 created: 2026-06-01
-updated: 2026-06-04
+updated: 2026-06-19
 ---
 
 ## Relations

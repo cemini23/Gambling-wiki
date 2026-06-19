@@ -40,12 +40,15 @@ related:
   - entities/bots/cemini-devfun-poker-agent.md
   - sources/devfun-poker-arena-phase0-2026-06-01.md
   - concepts/poker-hl-analyst-loop.md
+  - concepts/custom-agent-methodology.md
   - concepts/opponent-modeling-imperfect-info.md
   - concepts/pm-live-belief-updating.md
   - sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md
+  - sources/arxiv-2606.11869-agents-all-the-way-down-2026-06-19.md
+  - sources/daily-digest-reject-cluster-k116-2026-06-17.md
 maturity: core
 created: 2026-05-31
-updated: 2026-06-17
+updated: 2026-06-19
 ---
 
 # Gambling bot architecture (planned)
@@ -57,6 +60,8 @@ updated: 2026-06-17
 - @concepts/gambling-wiki-scope.md — wiki boundary vs @osint-wiki prod stack
 - @meta/cross-wiki-routing.md — ingest routing for bot-related sources
 - @sources/daily-digest-reject-cluster-k119-2026-06-18.md — digest false positives (OrchRM NO-GO)
+- @concepts/custom-agent-methodology.md — K120 Agents All the Way Down; CLI-over-MCP, P3→P5 loop
+- @sources/arxiv-2606.11869-agents-all-the-way-down-2026-06-19.md — K120 source
 - @osint-wiki/concepts/cross-venue-arbitrage-pattern.md — PM×Kalshi execution patterns (cross-wiki)
 - @osint-wiki/entities/tools/polybot.md — existing PM strip-mine reference
 

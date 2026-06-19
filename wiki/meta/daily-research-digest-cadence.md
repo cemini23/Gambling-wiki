@@ -26,9 +26,11 @@ related:
   - sources/openreview-llm-coherence-projection-Tqos7VqQhH-2026-06-17.md
   - sources/brief-k118-poker-agent-research-gaps-2026-06-17.md
   - sources/daily-digest-reject-cluster-k119-2026-06-18.md
+  - sources/daily-digest-reject-cluster-k116-2026-06-17.md
+  - sweeps/2026-06-19-daily.md
 maturity: validated
 created: 2026-06-01
-updated: 2026-06-18
+updated: 2026-06-19
 ---
 
 ## Relations
@@ -47,7 +49,7 @@ K93 federated install: morning **discovery-only** loop for sports betting, PM re
 |-------|-------|
 | **Cadence** | Daily @ 08:15 local (`com.cemini.daily-research-digest.gambling`) |
 | **Installed** | 2026-06-01 (K93 brief) |
-| **Last run** | 2026-06-18 |
+| **Last run** | 2026-06-19 |
 | **Fetch sources** | arXiv + OpenReview PDFs → `research to be indexed/` (tuned 2026-06-17) |
 | **Script** | `~/bin/cemini-daily-research-digest-gambling` → `scripts/daily_research_digest_run.py` |
 | **Deps** | `wiki_source_index.py` (required alongside digest runner) |

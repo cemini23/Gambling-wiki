@@ -17,10 +17,11 @@ related:
   - concepts/poker-hl-analyst-loop.md
   - sources/arxiv-2508-17671-consistent-opponent-modeling.md
   - sources/brief-k118-poker-agent-research-gaps-2026-06-17.md
+  - sources/brief-k107-poker-open-spot-audit-2026-06-09.md
   - entities/tools/devfun-poker-arena-starter-kit.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-17
+updated: 2026-06-19
 phase_0_verdict: CONDITIONAL-GO 2026-06-01 — sanctioned bot arena (not live poker room); enter via arena API; prize claim needs X verify + external payout wallet
 adoption_status: PHASE-0-COMPLETE
 ---

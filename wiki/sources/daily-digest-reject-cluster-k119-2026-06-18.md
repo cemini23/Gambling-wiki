@@ -7,12 +7,13 @@ related:
   - meta/daily-research-digest-cadence.md
   - concepts/gambling-bot-architecture.md
   - sources/brief-k118-poker-agent-research-gaps-2026-06-17.md
+  - sources/daily-digest-reject-cluster-k116-2026-06-17.md
   - sweeps/2026-06-18-daily.md
   - sources/daily-digest-arxiv-batch-2026-06-04.md
 maturity: validated
 read_status: skimmed
 created: 2026-06-18
-updated: 2026-06-18
+updated: 2026-06-19
 ---
 
 ## Relations
