@@ -14,9 +14,8 @@ related:
   - sources/devfun-poker-arena-phase0-2026-06-01.md
   - entities/tools/devfun-poker-arena-starter-kit.md
   - entities/bots/poker-bot-tooling.md
-  - concepts/devfun-researcher-track-readiness-2026-06.md
-  - concepts/devfun-poker-agent-challenge-2026.md
-  - "@osint-wiki/sources/devfun-poker-researcher-track-email-2026-06-19.md"
+  - sources/web-pro-villain-profiles-dwan-cates-2026-06-19.md
+  - osint-wiki/sources/devfun-poker-researcher-track-email-2026-06-19.md
 maturity: validated
 read_status: read
 created: 2026-06-19
@@ -29,6 +28,7 @@ updated: 2026-06-19
 - @entities/people/tom-dwan.md — pro rep-selection anchor
 - @entities/people/daniel-cates-jungleman.md — second pro rep-selection anchor
 - @entities/bots/cemini-devfun-poker-agent.md — operator agent (private implementation)
+- @sources/web-pro-villain-profiles-dwan-cates-2026-06-19.md — pro style research (Dwan + Jungleman)
 - @osint-wiki/sources/devfun-poker-researcher-track-email-2026-06-19.md — OSINT cross-wiki stub + Cemini posture
 
 ## Raw Concept
