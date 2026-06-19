@@ -2,6 +2,13 @@
 
 Append-only chronological log.
 
+## [2026-06-19] ingest | K121 — dev.fun researcher track invite email
+
+- **New** — `sources/devfun-poker-researcher-track-email-2026-06-19.md` (HU sandbox, TrueSkill, Jun 21/25 timeline)
+- **New** — `entities/people/daniel-cates-jungleman.md` (Jungleman stub)
+- **Updated** — `entities/platforms/devfun-poker-arena.md` (researcher track ladder, game modes)
+- **Updated** — `entities/people/tom-dwan.md`, `entities/bots/cemini-devfun-poker-agent.md`, `ROADMAP.md` W6
+
 ## [2026-06-19] ingest | K120 — Agents All the Way Down + brief close-out
 
 - **New** — `sources/arxiv-2606.11869-agents-all-the-way-down-2026-06-19.md` (arXiv 2606.11869)

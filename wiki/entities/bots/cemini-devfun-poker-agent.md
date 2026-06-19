@@ -13,6 +13,8 @@ related:
   - concepts/poker-hl-analyst-loop.md
   - concepts/opponent-modeling-imperfect-info.md
   - entities/people/tom-dwan.md
+  - entities/people/daniel-cates-jungleman.md
+  - sources/devfun-poker-researcher-track-email-2026-06-19.md
   - sources/devfun-poker-arena-phase0-2026-06-01.md
   - sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md
   - sources/daily-digest-arxiv-batch-2026-06-04.md
@@ -38,7 +40,7 @@ claim_status: VERIFIED 2026-06-01 — @cemini23
 - @sources/arxiv-2508-17671-consistent-opponent-modeling.md — K95 consistent opponent modeling anchor
 - @sources/brief-k118-poker-agent-research-gaps-2026-06-17.md — K118 research gap analysis + P0 fix backlog (private brief)
 - @sources/brief-k107-poker-open-spot-audit-2026-06-09.md — K107 open-spot audit baseline
-- @concepts/custom-agent-methodology.md — HL loop as custom-agent P3→P5 pattern (K120)
+- @sources/devfun-poker-researcher-track-email-2026-06-19.md — K121 researcher track invite
 - Implementation: **private** — `llm-wiki-by-cemini` repo, path `agents/devfun-poker-arena/` (not in public Gambling-wiki)
 
 ## Raw Concept
@@ -59,6 +61,20 @@ claim_status: VERIFIED 2026-06-01 — @cemini23
 Arena API drives a local agent loop: pending actions in, action + reasoning YAML out. Strategy is **pure code at runtime** (no per-hand LLM). Iteration uses the HL analyst loop at @concepts/poker-hl-analyst-loop.md — analyze live leaks, patch offline, gate with tests, deploy to prod.
 
 Layer stack (generic): preflop chart hints → labeled scenario reasoning → postflop equity vs pot odds → clock safety. **Specific thresholds, guards, and opponent overlays are competition-private.**
+
+### Researcher track (K121, 2026-06-19) [CONFIRMED — public email]
+
+Separate **heads-up** sandbox lane — not Playground qual. See @sources/devfun-poker-researcher-track-email-2026-06-19.md.
+
+| Item | Detail |
+|------|--------|
+| **Format** | HU bot-vs-bot; **TrueSkill** ranking |
+| **Timeline** | Closed beta **2026-06-21**; public sandbox **2026-06-25** |
+| **Submit** | Python bot (current path), weights, fine-tune, or LLM + own key |
+| **Tooling** | Self-play SDK, Kaggle page, sponsored credits |
+| **Pro hook** | Dwan + Jungleman pick bots that **play most like them** |
+
+**Public rule:** 6-max Playground logic requires **HU fork** + new regression corpus before researcher submission. Implementation details private.
 
 ### Pro Table Finale prep (future)
 

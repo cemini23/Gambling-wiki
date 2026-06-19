@@ -23,7 +23,7 @@ Steps:
 
 ### W6 — dev.fun Playground bot (cemini_decide)
 
-**Status:** Active — Playground qualification window + upcoming KO. **Competitive-secrecy:** ranks, chip counts, env toggles, patch backlog, opponent reads, and `decide()` implementation live in **private** `llm-wiki-by-cemini/agents/devfun-poker-arena/` only — not in public wiki pages during active events.
+**Status:** Active — Playground S2 + Tournament path; **researcher track HU sandbox opens 2026-06-25** (closed beta 2026-06-21). **Competitive-secrecy:** ranks, chip counts, env toggles, patch backlog, opponent reads, and `decide()` implementation live in **private** `llm-wiki-by-cemini/agents/devfun-poker-arena/` only — not in public wiki pages during active events.
 
 **Agent:** Cemini dev.fun poker agent (handle on official arena — details in private creds).
 
@@ -33,6 +33,9 @@ Steps:
 |--------|-------|------|---------------|
 | **S1a** | Jun 3–7 | **Build** | HL loop + regression library; don’t bust; qualify if possible |
 | **S1b** | Jun 7–11 | **Compete** | Best validated variant; claim when rules allow |
+| **S2 Playground** | Active | **Compete** | Qualify top 20 → Tournament S2 |
+| **Researcher β** | Jun 21 | **R&D** | Closed beta — HU agent + self-play SDK |
+| **Researcher public** | Jun 25+ | **Benchmark** | HU TrueSkill sandbox; style rep vs Dwan/Jungleman |
 | **KO** | TBA | **Compete** | Survival-first (no rebuy) |
 
 **In progress (private runbooks)**
@@ -41,6 +44,7 @@ Steps:
 - [x] HL analyst loop + preflight gate stack operational
 - [ ] KO cold-start / early-bust hardening (no rebuy)
 - [ ] S1b variant selection under competition rules
+- [ ] Researcher track signup + HU strategy fork (K121)
 
 **Cadence (generic):** status script → analyze → one patch → preflight → deploy. Command paths in private `README-CEMINI.md`.
 

@@ -19,6 +19,8 @@ related:
   - sources/brief-k118-poker-agent-research-gaps-2026-06-17.md
   - sources/brief-k107-poker-open-spot-audit-2026-06-09.md
   - entities/tools/devfun-poker-arena-starter-kit.md
+  - sources/devfun-poker-researcher-track-email-2026-06-19.md
+  - entities/people/daniel-cates-jungleman.md
 maturity: draft
 created: 2026-06-01
 updated: 2026-06-19
@@ -32,7 +34,9 @@ adoption_status: PHASE-0-COMPLETE
 - @concepts/poker-hl-analyst-loop.md — analyze → patch → deploy loop for Playground leaks
 - @sources/arxiv-2508-17671-consistent-opponent-modeling.md — K95 opponent modeling anchor
 - @entities/tools/pokerskill.md — skill-library binding pattern for LLM/heuristic agents
-- @entities/people/tom-dwan.md — Pro Table Finale human pro (style + bot counter-strategy)
+- @entities/people/tom-dwan.md — Pro Table Finale + researcher rep selection
+- @entities/people/daniel-cates-jungleman.md — researcher rep selection (Jungleman)
+- @sources/devfun-poker-researcher-track-email-2026-06-19.md — researcher track invite (K121)
 - @sources/devfun-poker-arena-phase0-2026-06-01.md — Phase-0 audit source
 
 ## Raw Concept
@@ -48,18 +52,29 @@ adoption_status: PHASE-0-COMPLETE
 Same handle on beta and official = **two agent IDs**, **two custodial Monad wallets**. MON deposited on beta does **not** sync to official. Outbound `POST /agent/wallet/transfer/native` only accepts dev.fun **protocol addresses** (402 entry fees); agent-to-agent transfer returns **403**. Fund official via MoonPay or external send. Wallet/agent IDs: private creds only. See repo `LESSONS.md` L4.
 - **Main event opens**: **2026-06-03** (landing page); prize pool **$50K** + Tom Dwan pro-table seat (marketing)
 
-### Event ladder — paired seasons [TENTATIVE 2026-06-08 Discord]
+### Event ladder — three public tracks + finale [CONFIRMED researcher detail 2026-06-19]
 
-| Stage | Format | Advance |
-|-------|--------|---------|
-| **Playground S*N*** | Bot qualifier per season (fresh bankroll) | Top **20** → **free entry Tournament S*N*** |
-| **Tournament S*N*** | Knockout bracket (paired to same season number) | Top **25** within that bracket |
-| **Researcher track** | Invite-only sandbox benchmark | Top **3** paid |
-| **Pro Table Finale** | **Human vs AI** — format **TBD** | Top agents earn seat vs pro |
+| Stage | Format | Advance / outcome |
+|-------|--------|-------------------|
+| **Playground S*N*** | 6-max bot qualifier, season bankroll | Top **20** → free **Tournament S*N*** entry |
+| **Tournament S*N*** | Knockout bracket (paired season) | Top **25** in bracket |
+| **Researcher track** | **Heads-up** sandbox; **TrueSkill** ranking | Top agent = **field benchmark**; Dwan + Jungleman pick **style-matched** bots to represent them |
+| **Pro Table Finale** | Human vs AI showcase | Top agents vs pros (Dwan + Jungleman per PR) |
 
-Playground S1 qualification does **not** carry to Tournament S2 — re-qualify on each new playground season. [TENTATIVE — Discord team 2026-06-08; verify on docs when updated]
+Playground S1 qualification does **not** carry to Tournament S2 — re-qualify each playground season. [TENTATIVE — Discord 2026-06-08 for Playground/Tournament pairing]
 
-Tom Dwan is the **marketing anchor** for the finale, **not** a player in bot brackets. See @entities/people/tom-dwan.md.
+**Researcher track timeline** [CONFIRMED — @sources/devfun-poker-researcher-track-email-2026-06-19.md]:
+
+| Date | Milestone |
+|------|-----------|
+| **2026-06-21** | Closed beta (researchers) |
+| **2026-06-25** | Public sandbox opens |
+
+**Researcher submission types:** Python bot, fine-tuned model, raw weights, or LLM agent with operator API key. **Tooling:** self-play SDK, Kaggle competition page, sponsored sandbox credits.
+
+**Not the same lane as Playground** — HU vs 6-max; TrueSkill vs chip leaderboard; separate SDK/API surface until docs confirm parity with `arena-pokerkit`.
+
+Tom Dwan and Jungleman are **pro anchors** for finale marketing and researcher **style rep selection**, not players in bot Playground brackets. See @entities/people/tom-dwan.md, @entities/people/daniel-cates-jungleman.md.
 
 ## Narrative
 
@@ -72,6 +87,7 @@ Tom Dwan is the **marketing anchor** for the finale, **not** a player in bot bra
 | Mode | Shape |
 |------|--------|
 | **Texas Hold’em lobby** | Continuous 6-max tables, season bankroll |
+| **Researcher sandbox** | **Heads-up** bot-vs-bot; **TrueSkill**; self-play SDK + Kaggle |
 | **Poker Eval benchmark** | PVE vs reference panel; `POST /texas/benchmark/start` |
 | **Pump prediction** | Separate dev.fun skill family (out of scope) |
 
@@ -119,9 +135,11 @@ Selfplay audit (`cemini_selfplay_audit.py`, 400 hands, seed 42): **VPIP 11.5% / 
 
 > "$50K. best bots climb the leaderboard, and earn a seat against Tom Dwan." [Source: https://dev.fun/ (retrieved 2026-06-01)]
 
+> "we run it heads-up in a sandbox, ranked by TrueSkill" [Source: @sources/devfun-poker-researcher-track-email-2026-06-19.md]
+
 > "If it acts like gambling…" — **not applicable here**; platform is explicit agent arena, not state-licensed sportsbook/room product.
 
 ## Dead Ends
 
 - Treating arena win-rate as proof of +EV on DraftKings/Kalshi sports
-- Expecting full June 3 rules before registration — use Playground / Poker Eval for prep
+- Port Playground 6-max charts to **researcher HU sandbox** without HU-specific regression — format mismatch

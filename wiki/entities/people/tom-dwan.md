@@ -11,14 +11,18 @@ related:
   - entities/games/poker.md
   - sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md
   - sources/devfun-poker-arena-phase0-2026-06-01.md
+  - sources/devfun-poker-researcher-track-email-2026-06-19.md
+  - entities/people/daniel-cates-jungleman.md
 maturity: draft
 created: 2026-06-03
-updated: 2026-06-03
+updated: 2026-06-19
 ---
 
 ## Relations
 
-- @entities/platforms/devfun-poker-arena.md — **Pro Table Finale** marketing anchor (human vs AI seat)
+- @entities/platforms/devfun-poker-arena.md — **Pro Table Finale** + **researcher track rep selection**
+- @entities/people/daniel-cates-jungleman.md — co-anchor for researcher style-matched bot picks
+- @sources/devfun-poker-researcher-track-email-2026-06-19.md — HU sandbox; pros pick bots that play most like them
 - @entities/bots/cemini-devfun-poker-agent.md — future **`durrrr` villain profile** for finale exploit tuning
 - @concepts/opponent-modeling-imperfect-info.md — named archetype vs generic HUD
 - @sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md — primary style ingest
@@ -53,12 +57,13 @@ Synthesized from @sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.m
 The arena is **not** one bracket where bots and Dwan share a final table.
 
 ```text
-Playground (bot) → Tournament KO (bot) → Researcher track → Pro Table Finale (human vs AI, TBD)
-                                                              └── Tom Dwan = headline pro opponent
+Playground (6-max bot) → Tournament KO (bot) → Researcher track (HU, TrueSkill) → Pro Table Finale (human vs AI)
+                                                      └── Dwan + Jungleman pick style-matched bots
 ```
 
-- **Stages 1–3:** bot vs bot on arena API (6-max NLHE, action clock).
-- **Pro Table Finale:** separate showcase; format **TBD** on dev.fun landing (2026-06-03).
+- **Stages 1–2:** bot vs bot **6-max** on arena API (action clock).
+- **Researcher track:** **heads-up** sandbox; Dwan and Jungleman select bots that **play most like them** [CONFIRMED 2026-06-19 — @sources/devfun-poker-researcher-track-email-2026-06-19.md].
+- **Pro Table Finale:** separate showcase; format **TBD** on dev.fun landing.
 - **Current bot work** (`cemini_wiki_poker`): optimize for **bot ladder + qualification**, not Dwan yet.
 
 ### Bot counter-strategy (`durrrr` profile) [TENTATIVE — implement when finale rules drop]
@@ -90,5 +95,5 @@ A **chart + Monte Carlo** agent without exploit layer is a poor matchup: Dwan's 
 ## Dead Ends
 
 - Scraping live Dwan stream/session for bot training — out of scope; use published tape + finale format when announced
-- Assuming **heads-up** — dev.fun has not confirmed HU vs 6-max pro table (2026-06-03)
 - Porting HSP **deep-stack overbet** lines to **short-stack Playground** — wrong stack depth
+- **Assuming researcher HU charts = 6-max Playground charts** — separate strategy fork required

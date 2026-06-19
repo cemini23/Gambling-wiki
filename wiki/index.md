@@ -109,6 +109,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [alex-monahan](entities/people/alex-monahan.md) | draft |
 | [rufus-peabody](entities/people/rufus-peabody.md) | draft |
 | [tom-dwan](entities/people/tom-dwan.md) | draft |
+| [daniel-cates-jungleman](entities/people/daniel-cates-jungleman.md) | draft |
 
 ## Entities — Games
 
@@ -132,6 +133,7 @@ Catalog of all wiki pages. Updated on each ingest.
 |------|-------------|
 | [brief-k118-poker-agent-research-gaps-2026-06-17](sources/brief-k118-poker-agent-research-gaps-2026-06-17.md) | deep-read |
 | [brief-k107-poker-open-spot-audit-2026-06-09](sources/brief-k107-poker-open-spot-audit-2026-06-09.md) | deep-read |
+| [devfun-poker-researcher-track-email-2026-06-19](sources/devfun-poker-researcher-track-email-2026-06-19.md) | read |
 | [arxiv-2606.11869-agents-all-the-way-down-2026-06-19](sources/arxiv-2606.11869-agents-all-the-way-down-2026-06-19.md) | skimmed |
 | [daily-digest-reject-cluster-k116-2026-06-17](sources/daily-digest-reject-cluster-k116-2026-06-17.md) | skimmed |
 | [daily-digest-reject-cluster-k119-2026-06-18](sources/daily-digest-reject-cluster-k119-2026-06-18.md) | skimmed |
