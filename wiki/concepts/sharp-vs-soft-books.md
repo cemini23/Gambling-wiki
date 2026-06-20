@@ -11,6 +11,7 @@ related:
   - entities/platforms/pinnacle.md
   - entities/platforms/draftkings.md
   - entities/platforms/fanduel.md
+  - entities/platforms/hard-rock-bet.md
   - concepts/prediction-markets-crossover.md
   - concepts/world-cup-books-vs-pm-divergence.md
   - sources/gemini-github-sports-betting-landscape-2026-05-30.md

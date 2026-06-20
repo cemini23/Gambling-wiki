@@ -14,13 +14,14 @@ related:
   - entities/sports/world-cup-2026-betting.md
   - entities/platforms/draftkings.md
   - entities/platforms/fanduel.md
+  - entities/platforms/hard-rock-bet.md
   - sources/gemini-github-sports-betting-landscape-2026-05-30.md
   - entities/tools/pydfs-lineup-optimizer.md
   - entities/platforms/underdog-fantasy.md
   - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-06-20
 ---
 
 ## Relations
@@ -28,6 +29,7 @@ updated: 2026-05-31
 - @concepts/best-ball-strategy.md — fantasy overlap (same player knowledge)
 - @concepts/dfs-strategy-overview.md — DFS overlap
 - @concepts/sports-betting-fundamentals.md — market types
+- @entities/platforms/hard-rock-bet.md — operator primary NFL book (W8)
 
 ## Raw Concept
 

@@ -18,6 +18,7 @@ related:
   - concepts/world-cup-knockout-phase-betting.md
   - entities/platforms/draftkings.md
   - entities/platforms/fanduel.md
+  - entities/platforms/hard-rock-bet.md
   - concepts/sportsbook-pm-line-divergence.md
   - sources/kelly-1956-information-rate.md
   - entities/tools/sports-betting-georgedouzas.md
@@ -47,6 +48,7 @@ updated: 2026-06-09
 - @concepts/sharp-vs-soft-books.md — where to bet
 - @entities/platforms/draftkings.md — major US book
 - @entities/platforms/fanduel.md — major US book
+- @entities/platforms/hard-rock-bet.md — operator primary NFL book (W8)
 
 ## Raw Concept
 

@@ -5,6 +5,7 @@
 # Report: wiki/sweeps/YYYY-MM-DD-daily.md
 #
 # Update active_topics when ROADMAP.md workstreams shift.
+# W8 (2026-06-20): NFL season prep + W6 poker — dual primary targets in digest.
 #
 # Fetch lane (2026-06-17 tune): arXiv + OpenReview PDFs → research to be indexed/
 # News rows remain manual unless operator drops URL/PDF into inbox.
@@ -23,13 +24,14 @@ fetch:
     - openreview
 
 active_topics:
-  - "Sports betting — +EV process, CLV, line shopping, sharp vs soft books"
+  - "NFL 2026 season prep (W8) — Hard Rock +EV/CLV, FanDuel DFS GPP, Underdog/BBM7, props correlation"
+  - "Poker & arena bots (W6) — NLHE 6-max/HU, dev.fun decide(), exploit modeling, HL loop (K118/K122)"
+  - "DFS / best ball — BBM7, Underdog ADP movers, roster construction, ownership leverage"
+  - "Sports betting — +EV process, CLV, line shopping, NFL spreads/props, sharp vs soft books"
+  - "Bankroll & Kelly — fractional sizing, variance, responsible-gambling guardrails"
+  - "Gambling bot program — FOSS evals, API/ToS, per-platform lanes (W4)"
   - "Prediction markets retail — Kalshi/Polymarket fees, FLB, cross-venue vs books"
   - "World Cup 2026 — retail wagering, books vs PM divergence (@osint-wiki WC bot cross-ref)"
-  - "Gambling bot program — FOSS evals, API/ToS, per-platform lanes (W4)"
-  - "Bankroll & Kelly — fractional sizing, variance, responsible-gambling guardrails"
-  - "DFS / best ball — BBM7, Underdog, roster construction, ownership leverage"
-  - "Poker & arena bots — NLHE 6-max, dev.fun decide(), exploit modeling, HL loop (K118)"
 
 paper_queries:
   - cluster: sports-betting-arxiv
@@ -69,24 +71,48 @@ paper_queries:
     category: research paper
 
 queries:
-  - cluster: kalshi-pm-retail
-    query: '"Kalshi" OR "Polymarket" sports betting OR event contract retail OR prediction market fees'
+  - cluster: nfl-sportsbook
+    query: 'NFL 2026 betting spread props closing line value line shopping sharp money preseason'
+    category: news
+
+  - cluster: nfl-hard-rock
+    query: '"Hard Rock Bet" OR "Hard Rock Sportsbook" NFL odds promo bonus 2026'
+    category: news
+
+  - cluster: nfl-fanduel-dfs
+    query: 'FanDuel NFL DFS GPP ownership stacking showdown slate strategy 2026'
+    category: news
+
+  - cluster: nfl-underdog-bbm
+    query: 'Underdog "Best Ball Mania" OR BBM7 NFL ADP risers fallers draft strategy 2026'
+    category: news
+
+  - cluster: nfl-preseason-camp
+    query: 'NFL training camp injury report betting line movement depth chart 2026'
     category: news
 
   - cluster: sports-betting-ev
-    query: '"sports betting" closing line value OR positive EV OR line shopping OR sharp money'
+    query: '"sports betting" closing line value OR positive EV OR line shopping OR sharp money NFL'
+    category: news
+
+  - cluster: dfs-best-ball
+    query: '"best ball" OR Underdog fantasy OR DraftKings best ball roster construction ADP NFL'
+    category: news
+
+  - cluster: kalshi-pm-retail
+    query: '"Kalshi" OR "Polymarket" sports betting OR event contract retail OR prediction market fees'
     category: news
 
   - cluster: world-cup-2026-wagering
     query: '"World Cup 2026" betting odds OR prediction market OR advance market futures'
     category: news
 
-  - cluster: dfs-best-ball
-    query: '"best ball" OR Underdog fantasy OR DraftKings best ball roster construction ADP'
-    category: news
-
   - cluster: poker-arena-bots
     query: '"dev.fun" OR "arena pokerkit" OR "poker eval" DeepCFR Texas holdem agent benchmark'
+    category: news
+
+  - cluster: poker-hu-exploit
+    query: 'poker heads-up NLHE opponent modeling exploit LLM agent sandbox benchmark 2026'
     category: news
 
   - cluster: poker-agent-dataset
@@ -106,9 +132,9 @@ monokern_pipeline:
 social:
   manual_pass:
     - tool: opencli-reader
-      prompt: "Reddit r/sportsbook + r/sportsbetting + HN for betting/PM headlines last 24h"
+      prompt: "Reddit r/sportsbook + r/sportsbetting NFL, r/underdogfantasy + r/dailyfantasysports BBM/DFS, r/poker + dev.fun arena last 24h"
     - tool: twitter-reader
-      prompt: "Search for Kalshi, Polymarket sports, CLV, +EV betting discourse last 24h"
+      prompt: "NFL CLV, FanDuel DFS, Underdog BBM7 ADP, Hard Rock Bet; dev.fun poker HU sandbox, exploit modeling, arena agents last 24h"
 
 output:
   path_template: "wiki/sweeps/{date}-daily.md"

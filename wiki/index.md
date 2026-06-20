@@ -68,6 +68,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [draftkings](entities/platforms/draftkings.md) | draft |
 | [underdog-fantasy](entities/platforms/underdog-fantasy.md) | validated |
 | [fanduel](entities/platforms/fanduel.md) | draft |
+| [hard-rock-bet](entities/platforms/hard-rock-bet.md) | draft |
 | [pinnacle](entities/platforms/pinnacle.md) | draft |
 | [kalshi](entities/platforms/kalshi.md) | draft |
 | [polymarket](entities/platforms/polymarket.md) | draft |

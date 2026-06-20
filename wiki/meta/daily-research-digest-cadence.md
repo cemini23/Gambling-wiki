@@ -69,7 +69,9 @@ K93 federated install: morning **discovery-only** loop for sports betting, PM re
 
 ### Topic lanes (config)
 
-Kalshi/PM retail, sports betting +EV/CLV, World Cup 2026 cross-venue (cross-ref @osint-wiki WC bot), gambling-bot FOSS evals (W4), bankroll/Kelly, DFS/best ball, poker/casino study.
+**Co-primary (2026-06-20):** W8 NFL season prep (Hard Rock, FanDuel DFS, Underdog/BBM7) **and** W6 poker/arena bots (dev.fun HU sandbox, exploit modeling, HL loop) — both in `active_topics`, news queries, and social pass.
+
+Also: Kalshi/PM retail, sports betting +EV/CLV, World Cup 2026 cross-venue (cross-ref @osint-wiki WC bot), gambling-bot FOSS evals (W4), bankroll/Kelly, DFS/best ball.
 
 **Auto-fetch (2026-06-17):** 6 paper Exa lanes + `fetch.sources: [arxiv, openreview]`; `fetch_likely: true`; 10-day window; cap 8 PDFs/night. News rows still manual.
 

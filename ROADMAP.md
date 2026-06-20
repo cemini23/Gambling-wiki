@@ -50,9 +50,30 @@ Steps:
 
 **Public doc rule:** wiki may describe *that* we run an arena bot and the HL *workflow*; it must **not** publish frequencies, guards, nemesis profiles, or patch priorities while the $50k path is live.
 
+### W8 — NFL 2026 season prep (active)
+
+**Status:** Started 2026-06-20 — operator #1 betting window. Lanes: **Hard Rock** sportsbook/casino, **FanDuel** DFS, **Underdog** DFS + **BBM7**. Daily digest adds W8 NFL query clusters **alongside** W6 poker lanes (`scripts/daily_research_config.yaml`).
+
+| Phase | Window | Focus |
+|-------|--------|-------|
+| **Draft season** | Jun–Aug | BBM7 entries (see W7); ADP refresh; stack meta |
+| **Camp / preseason** | Jul–Aug | Injury reports, depth charts, prop limits |
+| **Regular season** | Sep–Feb | Weekly CLV, FanDuel GPP slates, live betting hygiene |
+
+Steps:
+- [x] Wire W8 into federated daily digest — NFL query clusters + social pass (`daily_research_config.yaml`)
+- [x] Hard Rock Bet platform stub — `entities/platforms/hard-rock-bet.md`
+- [ ] Phase-0 Hard Rock — TOS, limits, promo math, casino vs book split
+- [ ] Deep-read NFL sportsbook lane — expand `entities/sports/nfl-betting.md` (props, key numbers, injury cadence)
+- [ ] FanDuel NFL DFS playbook — GPP/showdown/ownership (expand `entities/platforms/fanduel.md` or dedicated concept)
+- [ ] Operator YouTube / free-guide ingest batch (NFL betting + FD DFS)
+- [ ] In-season: weekly slate briefs in `briefs/`; CLV journal hook on `@concepts/line-shopping-and-clv.md`
+
+**Digest note:** W8 NFL and W6 poker are **co-primary** in `active_topics` and news/social passes — not either/or.
+
 ### W7 — BBM7 research & draft prep (active)
 
-**Status:** Started 2026-06-18 — wiki as research hub for Underdog Best Ball Mania VII entries.
+**Status:** Started 2026-06-18 — wiki as research hub for Underdog Best Ball Mania VII entries. Subsumed under W8 for season prep; keep ADP/portfolio cadence through Week 1.
 
 Steps:
 - [x] Official BBM7 rules/format verified — `entities/tournaments/best-ball-mania-vii.md`

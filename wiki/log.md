@@ -2,6 +2,13 @@
 
 Append-only chronological log.
 
+## [2026-06-20] config | W8 NFL season prep + dual-target digest
+
+- **ROADMAP** — W8 NFL 2026 season prep workstream; W6 poker + W8 NFL co-primary in digest
+- **Config** — `daily_research_config.yaml`: 5 NFL news clusters, `poker-hu-exploit` cluster, restored full poker `active_topics`, combined social pass
+- **New** — `entities/platforms/hard-rock-bet.md` (operator primary NFL book stub)
+- **Updated** — `nfl-betting.md`, `sharp-vs-soft-books.md`, `sports-betting-fundamentals.md`, `daily-research-digest-cadence.md`
+
 ## [2026-06-20] ingest | K123 — daily digest batch + researcher Jun 21 checklist
 
 - **New** — `sources/arxiv-2606.16139-team-zero-sum-games-complexity-2026-06-20.md` (REFERENCE — PPAD team zero-sum)
