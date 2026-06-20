@@ -14,17 +14,20 @@ related:
   - entities/tools/pydfs-lineup-optimizer.md
   - entities/platforms/underdog-fantasy.md
   - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
-  - sources/gemini-github-sports-betting-landscape-2026-05-30.md
-maturity: draft
+  - sources/web-dfs-hero-nfl-gpp-strategy-2026-06-20.md
+  - sources/web-tech-insider-nfl-betting-strategy-2026-06-20.md
+  - sweeps/2026-06-20-tier2-w8-nfl.md
+maturity: validated
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-06-20
 ---
 
 ## Relations
 
 - @concepts/best-ball-strategy.md — season-long variant
 - @entities/platforms/draftkings.md — DraftKings DFS
-- @entities/platforms/fanduel.md — FanDuel DFS
+- @entities/platforms/fanduel.md — FanDuel DFS (W8 NFL GPP)
+- @sources/web-dfs-hero-nfl-gpp-strategy-2026-06-20.md — NFL GPP playbook (K124)
 
 ## Raw Concept
 
@@ -58,6 +61,19 @@ Gemini landscape flags classical ML DFS repos as **reference for DFS modeling**,
 ### Not prediction markets
 
 DFS is **contest vs field**, not against the house line (though rake exists). Different math from sports spread betting.
+
+### NFL GPP (FanDuel / DraftKings) [CONFIRMED — K124]
+
+Operator W8 focus: **FanDuel half-PPR GPPs** alongside Hard Rock spreads. See @entities/platforms/fanduel.md for platform rules; full stack/MME template in @sources/web-dfs-hero-nfl-gpp-strategy-2026-06-20.md.
+
+| Lever | NFL GPP note |
+|-------|--------------|
+| Game stack | 3×1 default; both QBs in high-total games |
+| Ownership | Less binding than NBA — leverage at WR/TE |
+| Flex | RB on FanDuel half-PPR; avoid TE flex |
+| MME | 3 shootout games × 2 QBs; wide WR pool |
+
+Same **Vegas totals / injury** research as @entities/sports/nfl-betting.md — betting line moves inform DFS game selection.
 
 ## Snippets
 

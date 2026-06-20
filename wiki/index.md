@@ -18,8 +18,8 @@ Catalog of all wiki pages. Updated on each ingest.
 | [sharp-vs-soft-books](concepts/sharp-vs-soft-books.md) | draft | Pinnacle vs DK/FD |
 | [sportsbook-pm-line-divergence](concepts/sportsbook-pm-line-divergence.md) | validated | Books vs Kalshi/PM gaps |
 | [pm-copy-trading-retail-risks](concepts/pm-copy-trading-retail-risks.md) | validated | Whale-copy discipline |
-| [parlay-and-correlated-bets](concepts/parlay-and-correlated-bets.md) | draft | Parlays, SGP, correlation |
-| [dfs-strategy-overview](concepts/dfs-strategy-overview.md) | draft | GPP, cash, stacking |
+| [parlay-and-correlated-bets](concepts/parlay-and-correlated-bets.md) | validated | Parlays, SGP, correlation |
+| [dfs-strategy-overview](concepts/dfs-strategy-overview.md) | validated | GPP, cash, stacking, NFL GPP (W8) |
 | [best-ball-strategy](concepts/best-ball-strategy.md) | validated | BBM7 roster construction, portfolio drafting |
 | [best-ball-mania-winners](concepts/best-ball-mania-winners.md) | validated | BBM1–BBM6 winner dossier, cross-patterns |
 | [bbm7-portfolio-construction](concepts/bbm7-portfolio-construction.md) | validated | 150-entry timing × archetype playbook |
@@ -35,6 +35,14 @@ Catalog of all wiki pages. Updated on each ingest.
 | [4for4-bbm7-guide-series-2026-06-18](sources/4for4-bbm7-guide-series-2026-06-18.md) | validated | 4for4 BBMVI meta + 2026 positional playbook (7 free articles) |
 | [fantasy-guru-bbm-tactics-2026-06-08](sources/fantasy-guru-bbm-tactics-2026-06-08.md) | draft | Paywalled stub — Tyler Buecher tactics |
 | [etr-best-ball-mania-manifesto-draft-timing-2026-06-18](sources/etr-best-ball-mania-manifesto-draft-timing-2026-06-18.md) | validated | ETR Leone draft timing extract (BBM3) |
+
+## Sources — NFL / W8 (K124)
+
+| Page | Maturity | Summary |
+|------|----------|---------|
+| [web-tech-insider-nfl-betting-strategy-2026-06-20](sources/web-tech-insider-nfl-betting-strategy-2026-06-20.md) | validated | Key numbers, CLV, bankroll, live betting |
+| [web-sportsbookreview-hard-rock-bet-2026-06-20](sources/web-sportsbookreview-hard-rock-bet-2026-06-20.md) | validated | Hard Rock Phase-0 — promos, NFL vig, BetVision |
+| [web-dfs-hero-nfl-gpp-strategy-2026-06-20](sources/web-dfs-hero-nfl-gpp-strategy-2026-06-20.md) | validated | NFL GPP stacks, MME pool, FanDuel half-PPR |
 | [poker-strategy-overview](concepts/poker-strategy-overview.md) | validated | Cash, MTT, ICM, zero-to-10k path |
 | [opponent-modeling-imperfect-info](concepts/opponent-modeling-imperfect-info.md) | draft | K95 BBR/consistency — dev.fun arena exploit lane |
 | [poker-hl-analyst-loop](concepts/poker-hl-analyst-loop.md) | validated | HL loop: analyze → LLM patch → preflight → deploy |
@@ -67,8 +75,8 @@ Catalog of all wiki pages. Updated on each ingest.
 |------|----------|
 | [draftkings](entities/platforms/draftkings.md) | draft |
 | [underdog-fantasy](entities/platforms/underdog-fantasy.md) | validated |
-| [fanduel](entities/platforms/fanduel.md) | draft |
-| [hard-rock-bet](entities/platforms/hard-rock-bet.md) | draft |
+| [fanduel](entities/platforms/fanduel.md) | validated |
+| [hard-rock-bet](entities/platforms/hard-rock-bet.md) | validated |
 | [pinnacle](entities/platforms/pinnacle.md) | draft |
 | [kalshi](entities/platforms/kalshi.md) | draft |
 | [polymarket](entities/platforms/polymarket.md) | draft |
@@ -128,7 +136,7 @@ Catalog of all wiki pages. Updated on each ingest.
 
 | Page | Maturity |
 |------|----------|
-| [nfl-betting](entities/sports/nfl-betting.md) | draft |
+| [nfl-betting](entities/sports/nfl-betting.md) | validated |
 | [nba-betting](entities/sports/nba-betting.md) | draft |
 | [world-cup-2026-betting](entities/sports/world-cup-2026-betting.md) | validated |
 

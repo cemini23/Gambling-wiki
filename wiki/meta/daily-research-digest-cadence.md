@@ -29,7 +29,8 @@ related:
   - sources/daily-digest-reject-cluster-k116-2026-06-17.md
   - sweeps/2026-06-19-daily.md
   - sweeps/2026-06-20-daily.md
-  - sources/daily-digest-reject-cluster-k123-2026-06-20.md
+  - sweeps/2026-06-20-tier2-w8-nfl.md
+  - sources/web-tech-insider-nfl-betting-strategy-2026-06-20.md
 maturity: validated
 created: 2026-06-01
 updated: 2026-06-20

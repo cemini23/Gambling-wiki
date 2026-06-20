@@ -63,9 +63,9 @@ Steps:
 Steps:
 - [x] Wire W8 into federated daily digest — NFL query clusters + social pass (`daily_research_config.yaml`)
 - [x] Hard Rock Bet platform stub — `entities/platforms/hard-rock-bet.md`
-- [ ] Phase-0 Hard Rock — TOS, limits, promo math, casino vs book split
-- [ ] Deep-read NFL sportsbook lane — expand `entities/sports/nfl-betting.md` (props, key numbers, injury cadence)
-- [ ] FanDuel NFL DFS playbook — GPP/showdown/ownership (expand `entities/platforms/fanduel.md` or dedicated concept)
+- [x] Phase-0 Hard Rock — TOS, limits, promo math, casino vs book split
+- [x] Deep-read NFL sportsbook lane — expand `entities/sports/nfl-betting.md` (props, key numbers, injury cadence)
+- [x] FanDuel NFL DFS playbook — GPP/showdown/ownership (expand `entities/platforms/fanduel.md` or dedicated concept)
 - [ ] Operator YouTube / free-guide ingest batch (NFL betting + FD DFS)
 - [ ] In-season: weekly slate briefs in `briefs/`; CLV journal hook on `@concepts/line-shopping-and-clv.md`
 

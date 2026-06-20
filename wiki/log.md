@@ -2,6 +2,13 @@
 
 Append-only chronological log.
 
+## [2026-06-20] ingest | K124 — W8 NFL tier-2 sweep (Exa + Brave + web)
+
+- **Sweep** — `sweeps/2026-06-20-tier2-w8-nfl.md` (Tier 2 targeted W8)
+- **New sources** — Tech Insider NFL strategy, SBR Hard Rock Phase-0, DFS Hero NFL GPP
+- **Updated** — `nfl-betting.md`, `hard-rock-bet.md`, `fanduel.md`, `dfs-strategy-overview.md`, `parlay-and-correlated-bets.md`
+- **ROADMAP** — W8 Phase-0 + NFL book + FanDuel DFS steps checked
+
 ## [2026-06-20] config | W8 NFL season prep + dual-target digest
 
 - **ROADMAP** — W8 NFL 2026 season prep workstream; W6 poker + W8 NFL co-primary in digest

@@ -1,10 +1,11 @@
 ---
 title: FanDuel
 type: entity
-tags: [entity, platform, sportsbook, dfs, us-legal]
-keywords: [fanduel, fd, sportsbook, dfs]
+tags: [entity, platform, sportsbook, dfs, us-legal, nfl]
+keywords: [fanduel, fd, sportsbook, dfs, nfl-gpp, half-ppr, showdown]
 related:
   - entities/platforms/draftkings.md
+  - entities/platforms/hard-rock-bet.md
   - concepts/sports-betting-fundamentals.md
   - concepts/dfs-strategy-overview.md
   - concepts/sharp-vs-soft-books.md
@@ -15,24 +16,63 @@ related:
   - entities/sports/nba-betting.md
   - entities/tools/pydfs-lineup-optimizer.md
   - entities/people/rufus-peabody.md
-maturity: draft
+  - sources/web-dfs-hero-nfl-gpp-strategy-2026-06-20.md
+  - sources/web-tech-insider-nfl-betting-strategy-2026-06-20.md
+  - sweeps/2026-06-20-tier2-w8-nfl.md
+maturity: validated
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-06-20
 ---
 
 ## Relations
 
-- @entities/platforms/draftkings.md — primary US competitor
-- @concepts/dfs-strategy-overview.md — DFS product
+- @entities/platforms/draftkings.md — primary US competitor (DFS + book)
+- @entities/platforms/hard-rock-bet.md — cross-shop sportsbook peer (W8)
+- @concepts/dfs-strategy-overview.md — NFL GPP framework
+- @sources/web-dfs-hero-nfl-gpp-strategy-2026-06-20.md — K124 FanDuel-relevant GPP playbook
 
 ## Raw Concept
 
-Major US legal operator (Flutter-owned). Stub pending deep ingest.
+Major US legal operator (Flutter-owned). **W8 lanes:** NFL DFS GPP/tournaments + soft-book line shop vs Hard Rock handle.
 
 ## Narrative
 
-FanDuel offers sportsbook, DFS, and casino in licensed jurisdictions. Same **soft book** retail profile as DraftKings for CLV benchmarking.
+### Sportsbook (CLV cross-shop)
+
+Same **soft book** retail profile as DraftKings. Industry reviews often rank FanDuel among **sharper spread prices** on NFL — use for line shopping even when primary handle is Hard Rock.
+
+### NFL DFS (operator primary DFS lane)
+
+| Setting | FanDuel NFL |
+|---------|-------------|
+| Scoring | **Half-PPR** |
+| Team stack cap | **4** players from one team (vs DK 5) |
+| Main slates | Sun/Mon/Thu + alt slates |
+| Showdown | Single-game; high correlation |
+
+### GPP strategy summary [CONFIRMED — @sources/web-dfs-hero-nfl-gpp-strategy-2026-06-20.md]
+
+**Goal:** top-1% finish, not min-cash.
+
+1. **Game stacks** — default 3×1 (QB + 2 pass-catchers + opp WR); 3×2 in smaller fields; 4×1 on short slates
+2. **Game selection** — high Vegas totals, low QB pressure rate, rising totals through week
+3. **RB workload** — secure-touch backs for floor; chalk RB ownership acceptable
+4. **WR/TE leverage** — lower-owned pass-catchers (UPWR thesis: targets + air yards)
+5. **Flex** — RB often best on half-PPR; **avoid TE in flex** for GPP ceiling
+6. **Salary** — leave ≤ $500 on table
+7. **MME (150 max)** — 3 game environments × both QBs; 5–10 RBs; 15–30 WRs; 4–6 TEs; 4–8 DST; max 2 off-stack players per team
+
+### Bankroll
+
+GPP = high variance — size entries per @concepts/bankroll-management.md; separate from Hard Rock sportsbook roll and Underdog BBM7 draft budget.
+
+### Tools
+
+- `@entities/tools/pydfs-lineup-optimizer.md` — FOSS lineup gen (Phase-0 license)
+- Paid optimizers — ownership + sims optional upgrade
 
 ## Snippets
 
-*(pending ingest)*
+> "On half-point PPR sites like FanDuel … consider using a running back in your flex spot for stability." [Source: @sources/web-dfs-hero-nfl-gpp-strategy-2026-06-20.md]
+
+> "When entering high-stakes or large-field GPP contests, the goal is to secure a top finish, not just to cash." [Source: same]
