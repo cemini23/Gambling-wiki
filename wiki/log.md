@@ -2,6 +2,16 @@
 
 Append-only chronological log.
 
+## [2026-06-20] ingest | K123 — daily digest batch + researcher Jun 21 checklist
+
+- **New** — `sources/arxiv-2606.16139-team-zero-sum-games-complexity-2026-06-20.md` (REFERENCE — PPAD team zero-sum)
+- **New** — `sources/arxiv-2606.17682-trainee-to-trainer-llm-env-engineer-2026-06-20.md` (REFERENCE — LLM env engineer / HL loop)
+- **New** — `sources/daily-digest-reject-cluster-k123-2026-06-20.md` (2606.15501 primal-dual REJECT)
+- **New** — `sources/brief-k123-researcher-jun21-checklist-2026-06-20.md` + operator brief
+- **Updated** — `custom-agent-methodology.md`, `opponent-modeling-imperfect-info.md`, `poker-hl-analyst-loop.md`, agent/platform entities, `ROADMAP.md` W6
+- **Archive** — 3 PDFs → `cemini-egress-fi:/opt/cemini-bulk/research/gambling/`; inbox cleared
+- **Sweep** — `2026-06-20-daily.md` marked INGESTED
+
 ## [2026-06-19] research | K122 — poker researcher track research plan
 
 - **New** — `concepts/heads-up-arena-strategy.md`, `concepts/poker-axis-eval-literacy.md`, `sources/research-k122-poker-paper-landscape-2026-06-19.md`

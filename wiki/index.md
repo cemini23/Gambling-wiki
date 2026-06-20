@@ -41,6 +41,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [heads-up-arena-strategy](concepts/heads-up-arena-strategy.md) | draft | HU NLHE primer — dev.fun researcher track (K122) |
 | [poker-axis-eval-literacy](concepts/poker-axis-eval-literacy.md) | draft | Pointer to OSINT Raeth M₁–M₉ axis eval |
 | [research-k122-poker-paper-landscape-2026-06-19](sources/research-k122-poker-paper-landscape-2026-06-19.md) | draft | 12-paper map vs K118; top 5 deep-reads |
+| [brief-k123-researcher-jun21-checklist-2026-06-20](sources/brief-k123-researcher-jun21-checklist-2026-06-20.md) | deep-read | Jun 21 HU sandbox operator checklist |
 | [casino-game-house-edge](concepts/casino-game-house-edge.md) | validated | Edge by game, smart-bet ranking |
 | [prediction-markets-crossover](concepts/prediction-markets-crossover.md) | validated | Kalshi/Polymarket retail lens |
 | [pm-live-belief-updating](concepts/pm-live-belief-updating.md) | validated | Live PM underreaction, salience×liquidity |
@@ -141,6 +142,9 @@ Catalog of all wiki pages. Updated on each ingest.
 | [arxiv-2606.11869-agents-all-the-way-down-2026-06-19](sources/arxiv-2606.11869-agents-all-the-way-down-2026-06-19.md) | skimmed |
 | [daily-digest-reject-cluster-k116-2026-06-17](sources/daily-digest-reject-cluster-k116-2026-06-17.md) | skimmed |
 | [daily-digest-reject-cluster-k119-2026-06-18](sources/daily-digest-reject-cluster-k119-2026-06-18.md) | skimmed |
+| [daily-digest-reject-cluster-k123-2026-06-20](sources/daily-digest-reject-cluster-k123-2026-06-20.md) | skimmed |
+| [arxiv-2606.16139-team-zero-sum-games-complexity-2026-06-20](sources/arxiv-2606.16139-team-zero-sum-games-complexity-2026-06-20.md) | skimmed |
+| [arxiv-2606.17682-trainee-to-trainer-llm-env-engineer-2026-06-20](sources/arxiv-2606.17682-trainee-to-trainer-llm-env-engineer-2026-06-20.md) | skimmed |
 | [arxiv-2508-17671-consistent-opponent-modeling](sources/arxiv-2508-17671-consistent-opponent-modeling.md) | read |
 | [kelly-1956-information-rate](sources/kelly-1956-information-rate.md) | deep-read |
 | [gemini-github-sports-betting-landscape-2026-05-30](sources/gemini-github-sports-betting-landscape-2026-05-30.md) | deep-read |

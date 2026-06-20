@@ -25,7 +25,8 @@ related:
   - concepts/pm-proper-scoring-clob-profitability.md
   - sources/openreview-llm-coherence-projection-Tqos7VqQhH-2026-06-17.md
   - sources/openreview-prophets-profit-pm-LYSTj2Cnuu-2026-06-17.md
-  - sources/daily-digest-reject-cluster-k119-2026-06-18.md
+  - sources/arxiv-2606.16139-team-zero-sum-games-complexity-2026-06-20.md
+  - sources/arxiv-2606.17682-trainee-to-trainer-llm-env-engineer-2026-06-20.md
   - entities/tools/devfun-poker-arena-starter-kit.md
   - entities/bots/wagerbrain.md
   - entities/bots/bovada-api-reference.md

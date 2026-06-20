@@ -44,7 +44,7 @@ Steps:
 - [x] HL analyst loop + preflight gate stack operational
 - [ ] KO cold-start / early-bust hardening (no rebuy)
 - [ ] S1b variant selection under competition rules
-- [ ] Researcher track signup + HU strategy fork (K121)
+- [ ] Researcher track signup + HU strategy fork (K121) — **K123 checklist** `@sources/brief-k123-researcher-jun21-checklist-2026-06-20.md`
 
 **Cadence (generic):** status script → analyze → one patch → preflight → deploy. Command paths in private `README-CEMINI.md`.
 

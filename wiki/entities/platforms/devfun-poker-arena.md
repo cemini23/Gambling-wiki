@@ -23,6 +23,7 @@ related:
   - sources/web-pro-villain-profiles-dwan-cates-2026-06-19.md
   - entities/people/daniel-cates-jungleman.md
   - concepts/heads-up-arena-strategy.md
+  - sources/brief-k123-researcher-jun21-checklist-2026-06-20.md
   - concepts/poker-axis-eval-literacy.md
 maturity: draft
 created: 2026-06-01

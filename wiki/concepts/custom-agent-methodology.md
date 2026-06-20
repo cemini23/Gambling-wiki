@@ -13,9 +13,10 @@ related:
   - sources/devfun-poker-arena-phase0-2026-06-01.md
   - osint-wiki/concepts/cemini-knowledge-application-architecture.md
   - sweeps/2026-06-19-daily.md
+  - sources/arxiv-2606.17682-trainee-to-trainer-llm-env-engineer-2026-06-20.md
 maturity: validated
 created: 2026-06-19
-updated: 2026-06-19
+updated: 2026-06-20
 ---
 
 ## Relations

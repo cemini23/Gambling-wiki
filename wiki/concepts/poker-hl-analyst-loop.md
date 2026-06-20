@@ -15,6 +15,7 @@ related:
   - concepts/custom-agent-methodology.md
   - sources/arxiv-2606.11869-agents-all-the-way-down-2026-06-19.md
   - concepts/heads-up-arena-strategy.md
+  - sources/brief-k123-researcher-jun21-checklist-2026-06-20.md
   - osint-wiki/sources/trading-posts-compilation-7-2026-06-09.md
 maturity: validated
 created: 2026-06-03

@@ -23,9 +23,10 @@ related:
   - sources/youtube-pokergo-dwan-hsp-mega-compilation-2026-06-03.md
   - sources/web-pro-villain-profiles-dwan-cates-2026-06-19.md
   - sources/devfun-poker-researcher-track-email-2026-06-19.md
+  - sources/arxiv-2606.16139-team-zero-sum-games-complexity-2026-06-20.md
 maturity: draft
 created: 2026-06-03
-updated: 2026-06-19
+updated: 2026-06-20
 ---
 
 ## Relations
