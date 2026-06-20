@@ -15,6 +15,8 @@ related:
   - entities/sports/nfl-betting.md
   - entities/sports/nba-betting.md
   - entities/tools/pydfs-lineup-optimizer.md
+  - entities/tools/stokastic-dfs.md
+  - entities/tools/fantasylabs-dfs.md
   - entities/people/rufus-peabody.md
   - sources/web-dfs-hero-nfl-gpp-strategy-2026-06-20.md
   - sources/web-tech-insider-nfl-betting-strategy-2026-06-20.md
@@ -68,8 +70,9 @@ GPP = high variance — size entries per @concepts/bankroll-management.md; separ
 
 ### Tools
 
-- `@entities/tools/pydfs-lineup-optimizer.md` — FOSS lineup gen (Phase-0 license)
-- Paid optimizers — ownership + sims optional upgrade
+- `@entities/tools/pydfs-lineup-optimizer.md` — FOSS lineup gen (MIT; see `scripts/fanduel_slate_optimize.py`)
+- `@entities/tools/stokastic-dfs.md` — recommended paid projections/sims (W8)
+- `@entities/tools/fantasylabs-dfs.md` — alternate paid + CSV export (ETR bundle)
 
 ## Snippets
 

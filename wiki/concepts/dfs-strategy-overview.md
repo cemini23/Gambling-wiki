@@ -14,6 +14,8 @@ related:
   - entities/tools/pydfs-lineup-optimizer.md
   - entities/platforms/underdog-fantasy.md
   - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
+  - entities/tools/stokastic-dfs.md
+  - entities/tools/fantasylabs-dfs.md
   - sources/web-dfs-hero-nfl-gpp-strategy-2026-06-20.md
   - sources/web-tech-insider-nfl-betting-strategy-2026-06-20.md
   - sweeps/2026-06-20-tier2-w8-nfl.md
@@ -52,9 +54,10 @@ Daily fantasy sports (DFS) — GPP vs cash, stacking, ownership leverage, bankro
 
 ### Tools
 
-- **pydfs-lineup-optimizer** — open-source lineup generation (`@entities/tools/pydfs-lineup-optimizer.md`); Phase-0 license check before install
-- Paid optimizers — ownership leverage, late swap, contest sims
-- Projection sites — model quality dominates optimizer output
+- **pydfs-lineup-optimizer** — FOSS lineup generation (`@entities/tools/pydfs-lineup-optimizer.md`); **MIT GO**; scripts in repo root
+- **Stokastic** — paid sims + ownership (`@entities/tools/stokastic-dfs.md`); operator W8 primary
+- **FantasyLabs** — paid CSV export + optimizer (`@entities/tools/fantasylabs-dfs.md`); ETR bundle option
+- Cursor skill: `.cursor/skills/nfl-fanduel-slate-prep/` — weekly slate workflow
 
 Gemini landscape flags classical ML DFS repos as **reference for DFS modeling**, not spread-betting edge [Source: @sources/gemini-github-sports-betting-landscape-2026-05-30.md].
 

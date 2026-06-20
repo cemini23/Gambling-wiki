@@ -95,7 +95,9 @@ Catalog of all wiki pages. Updated on each ingest.
 |------|----------|
 | [momentum-odds](entities/tools/momentum-odds.md) | draft |
 | [odds-jam](entities/tools/odds-jam.md) | draft |
-| [pydfs-lineup-optimizer](entities/tools/pydfs-lineup-optimizer.md) | draft |
+| [pydfs-lineup-optimizer](entities/tools/pydfs-lineup-optimizer.md) | validated |
+| [stokastic-dfs](entities/tools/stokastic-dfs.md) | validated |
+| [fantasylabs-dfs](entities/tools/fantasylabs-dfs.md) | validated |
 | [sports-betting-georgedouzas](entities/tools/sports-betting-georgedouzas.md) | draft |
 | [fredbet](entities/tools/fredbet.md) | draft |
 | [unabated](entities/tools/unabated.md) | draft |

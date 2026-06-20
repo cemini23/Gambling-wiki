@@ -2,6 +2,14 @@
 
 Append-only chronological log.
 
+## [2026-06-20] tools | W8 DFS optimizer Phase-0 + FanDuel slate pipeline
+
+- **New** — `entities/tools/stokastic-dfs.md`, `entities/tools/fantasylabs-dfs.md` (CONDITIONAL-GO paid tools)
+- **Updated** — `pydfs-lineup-optimizer.md` — MIT license confirmed; GO verdict; CSV→150 lineup path
+- **Scripts** — `scripts/fanduel_slate_optimize.py`, `scripts/normalize_dfs_projection_csv.py`
+- **Skill** — `.cursor/skills/nfl-fanduel-slate-prep/SKILL.md`
+- **ROADMAP** — D3 closed (Stokastic primary + pydfs FOSS)
+
 ## [2026-06-20] ingest | K124 — W8 NFL tier-2 sweep (Exa + Brave + web)
 
 - **Sweep** — `sweeps/2026-06-20-tier2-w8-nfl.md` (Tier 2 targeted W8)
