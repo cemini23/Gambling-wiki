@@ -11,9 +11,11 @@ related:
   - concepts/heads-up-arena-strategy.md
   - entities/bots/poker-bot-tooling.md
   - entities/bots/cemini-devfun-poker-agent.md
+  - sources/arxiv-2606.19308-mafp-multi-agent-fictitious-play-2026-06-21.md
+  - sources/arxiv-2606.14571-streammembench-agent-memory-2026-06-21.md
 maturity: draft
 created: 2026-06-19
-updated: 2026-06-19
+updated: 2026-06-21
 ---
 
 ## Relations
@@ -54,6 +56,8 @@ COM (`2508.17671`), PokerSkill + SEPO (digest batches), Agents All the Way Down 
 | ABD (depth-limit exploit) | [2501.10464](https://arxiv.org/abs/2501.10464) | REFERENCE |
 | PokerBench | [2501.08328](https://arxiv.org/abs/2501.08328) | REFERENCE |
 | OMIS | [OpenReview bGhsbfyg3b](https://openreview.net/forum?id=bGhsbfyg3b) | GO |
+| MAFP | [2606.19308](https://arxiv.org/abs/2606.19308) | REFERENCE (K124) |
+| StreamMemBench | [2606.14571](https://arxiv.org/abs/2606.14571) | REFERENCE (F6 eval) |
 | SpinGPT | [2509.22387](https://arxiv.org/abs/2509.22387) | REJECT (runtime LLM) |
 | SPIRAL | [2506.24119](https://arxiv.org/abs/2506.24119) | REJECT (wrong stack) |
 

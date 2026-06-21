@@ -54,6 +54,16 @@ Append-only chronological log.
 - **New** — `entities/platforms/hard-rock-bet.md` (operator primary NFL book stub)
 - **Updated** — `nfl-betting.md`, `sharp-vs-soft-books.md`, `sports-betting-fundamentals.md`, `daily-research-digest-cadence.md`
 
+## [2026-06-21] ingest | K124 — daily digest batch (MAFP + StreamMemBench)
+
+- **New** — `sources/arxiv-2606.19308-mafp-multi-agent-fictitious-play-2026-06-21.md` (REFERENCE — fictitious play steals)
+- **New** — `sources/arxiv-2606.14571-streammembench-agent-memory-2026-06-21.md` (REFERENCE — F6 memory eval rubric)
+- **New** — `sources/daily-digest-reject-cluster-k124-2026-06-21.md` (2606.20510 security REJECT)
+- **New** — `sources/brief-k124-mafp-memory-poker-steals-2026-06-21.md` + operator brief
+- **Updated** — `opponent-modeling-imperfect-info.md`, `custom-agent-methodology.md`, `poker-hl-analyst-loop.md`, K122 landscape
+- **Archive** — 3 PDFs → egress-fi; inbox cleared
+- **Sweep** — `2026-06-21-daily.md` INGESTED
+
 ## [2026-06-20] ingest | K123 — daily digest batch + researcher Jun 21 checklist
 
 - **New** — `sources/arxiv-2606.16139-team-zero-sum-games-complexity-2026-06-20.md` (REFERENCE — PPAD team zero-sum)

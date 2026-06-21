@@ -7,6 +7,7 @@ related:
   - concepts/poker-axis-eval-literacy.md
   - sources/research-k122-poker-paper-landscape-2026-06-19.md
   - sources/brief-k123-researcher-jun21-checklist-2026-06-20.md
+  - sources/brief-k124-mafp-memory-poker-steals-2026-06-21.md
   - entities/platforms/devfun-poker-arena.md
   - entities/tools/pokerskill.md
   - entities/tools/devfun-poker-arena-starter-kit.md

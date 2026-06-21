@@ -178,7 +178,10 @@ Catalog of all wiki pages. Updated on each ingest.
 | [arxiv-2606.11869-agents-all-the-way-down-2026-06-19](sources/arxiv-2606.11869-agents-all-the-way-down-2026-06-19.md) | skimmed |
 | [daily-digest-reject-cluster-k116-2026-06-17](sources/daily-digest-reject-cluster-k116-2026-06-17.md) | skimmed |
 | [daily-digest-reject-cluster-k119-2026-06-18](sources/daily-digest-reject-cluster-k119-2026-06-18.md) | skimmed |
-| [daily-digest-reject-cluster-k123-2026-06-20](sources/daily-digest-reject-cluster-k123-2026-06-20.md) | skimmed |
+| [brief-k124-mafp-memory-poker-steals-2026-06-21](sources/brief-k124-mafp-memory-poker-steals-2026-06-21.md) | deep-read | MAFP + StreamMemBench steals for Researcher β |
+| [arxiv-2606.19308-mafp-multi-agent-fictitious-play-2026-06-21](sources/arxiv-2606.19308-mafp-multi-agent-fictitious-play-2026-06-21.md) | skimmed | Fictitious play MAS — REFERENCE |
+| [arxiv-2606.14571-streammembench-agent-memory-2026-06-21](sources/arxiv-2606.14571-streammembench-agent-memory-2026-06-21.md) | skimmed | Agent memory eval — F6 rubric |
+| [daily-digest-reject-cluster-k124-2026-06-21](sources/daily-digest-reject-cluster-k124-2026-06-21.md) | skimmed |
 | [arxiv-2606.16139-team-zero-sum-games-complexity-2026-06-20](sources/arxiv-2606.16139-team-zero-sum-games-complexity-2026-06-20.md) | skimmed |
 | [arxiv-2606.17682-trainee-to-trainer-llm-env-engineer-2026-06-20](sources/arxiv-2606.17682-trainee-to-trainer-llm-env-engineer-2026-06-20.md) | skimmed |
 | [arxiv-2508-17671-consistent-opponent-modeling](sources/arxiv-2508-17671-consistent-opponent-modeling.md) | read |

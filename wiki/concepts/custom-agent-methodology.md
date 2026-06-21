@@ -14,9 +14,11 @@ related:
   - osint-wiki/concepts/cemini-knowledge-application-architecture.md
   - sweeps/2026-06-19-daily.md
   - sources/arxiv-2606.17682-trainee-to-trainer-llm-env-engineer-2026-06-20.md
+  - sources/arxiv-2606.19308-mafp-multi-agent-fictitious-play-2026-06-21.md
+  - sources/brief-k124-mafp-memory-poker-steals-2026-06-21.md
 maturity: validated
 created: 2026-06-19
-updated: 2026-06-20
+updated: 2026-06-21
 ---
 
 ## Relations
