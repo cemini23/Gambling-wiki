@@ -2,6 +2,36 @@
 
 Append-only chronological log.
 
+## [2026-06-20] research | K125 cross-wiki sweep (all sibling wikis)
+
+- **New** — `sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md` (OSINT weather API matrix, CCC orchestration, gambling underlinks)
+- **Updated** — `concepts/dfs-weather-adjustments.md` (Open-Meteo + NWS + Visual Crossing + Wethr stack; bias_correction RETRACTED)
+- **Updated** — `diy-nfl-dfs-model-architecture.md`, `nfl-dfs-data-sources.md`, `dfs-model-orchestration.md`
+- **Wired** — `line-shopping-and-clv`, `kelly-criterion-betting`, `bankroll-management`, `nfl-betting`, `momentum-odds` → K125 hub
+- **Finding** — @osint-wiki is primary for free weather APIs; Visual Crossing backtest-only (interpolation caveat); no cross-wiki nflverse/DFS ownership coverage
+
+## [2026-06-20] research | K125 — DIY NFL DFS projection model (38 subagents)
+
+- **Plan** — `sources/research-diy-dfs-model-master-plan-2026-06-20.md` (Opus 4.8: 18 workstreams)
+- **Keystone** — `concepts/diy-nfl-dfs-model-architecture.md` + 15 layer concept pages
+- **Updated** — `dfs-paid-tool-methodologies.md`, `nfl-dfs-data-sources.md`, `dfs-strategy-overview.md`, `ROADMAP.md` W8/K125
+- **Verdicts** — nflreadpy GO; stat-first v1 + hybrid v2; Stokastic/Labs benchmark CSV; chanzer0 ideas-only
+
+## [2026-06-20] research | W-CORR NFL DFS scoring correlations + stack rules
+
+- **New** — `concepts/dfs-correlation-stacking.md` (correlation cheat table, Gaussian-copula/Cholesky method, pydfs defaults)
+- **New** — `sources/web-nfl-dfs-correlation-stacking-2026-06-20.md` (4for4/PFF/pydfs docs synthesis)
+- **Updated** — `concepts/diy-nfl-dfs-model-architecture.md` (W-CORR layer now drafted)
+- **Updated** — `concepts/dfs-strategy-overview.md`, `entities/tools/pydfs-lineup-optimizer.md`, `index.md`
+- **Finding** — QB-WR1 remains the core positive pair; bring-backs are supported by opposing passing-game lift; `RB + own DST` is mild positive rather than a negative-correlation ban
+
+## [2026-06-20] research | W-LEGAL NFL DFS source ToS posture
+
+- **New** — `concepts/nfl-dfs-data-sources.md` (W-DATA/W-LEGAL matrix: scrape posture, rate norms, cache policy, GO/CONDITIONAL/NO-GO)
+- **New** — `sources/web-nfl-dfs-source-legal-posture-2026-06-20.md` (official terms scan: nflverse, The Odds API, FanDuel, DraftKings, ESPN, Open-Meteo, ownership vendors)
+- **Updated** — `index.md` (K125 DIY DFS concept/source rows)
+- **Finding** — primary automation lane = nflverse + The Odds API + Open-Meteo; manual-only lane = FanDuel/DraftKings files; red-flag lane = ESPN undocumented endpoints + scraped ownership archives
+
 ## [2026-06-20] tools | W8 DFS optimizer Phase-0 + FanDuel slate pipeline
 
 - **New** — `entities/tools/stokastic-dfs.md`, `entities/tools/fantasylabs-dfs.md` (CONDITIONAL-GO paid tools)

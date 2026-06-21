@@ -5,6 +5,7 @@ tags: [entity, tool, dfs, open-source, python, nfl, fanduel]
 keywords: [pydfs, lineup-optimizer, draftkings, fanduel, nfl, mit]
 related:
   - concepts/dfs-strategy-overview.md
+  - concepts/dfs-correlation-stacking.md
   - entities/platforms/draftkings.md
   - entities/platforms/fanduel.md
   - entities/sports/nfl-betting.md
@@ -12,6 +13,7 @@ related:
   - entities/tools/stokastic-dfs.md
   - entities/tools/fantasylabs-dfs.md
   - sources/gemini-github-sports-betting-landscape-2026-05-30.md
+  - sources/web-nfl-dfs-correlation-stacking-2026-06-20.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-06-20
@@ -21,6 +23,8 @@ updated: 2026-06-20
 
 - @entities/tools/stokastic-dfs.md — projection CSV source (paid)
 - @entities/tools/fantasylabs-dfs.md — alternate CSV source
+- @concepts/dfs-correlation-stacking.md — W-CORR default stack priors + bring-back rules
+- @sources/web-nfl-dfs-correlation-stacking-2026-06-20.md — empirical correlation scan + pydfs method map
 - @entities/platforms/fanduel.md — W8 FanDuel NFL target site
 - @.cursor/skills/nfl-fanduel-slate-prep/ — operator slate workflow
 
@@ -82,7 +86,29 @@ Docs: https://pydfs-lineup-optimizer.readthedocs.io/
 
 ### Stacking
 
-Use `--stack qb:2` for 3×1-style QB stacks; add rules in script or extend wrapper for bring-back WR. Align with @sources/web-dfs-hero-nfl-gpp-strategy-2026-06-20.md.
+Default NFL rule set should reflect measured correlations, not generic "more same-team players" logic:
+
+```python
+from pydfs_lineup_optimizer import GameStack, PositionsStack, TeamStack
+
+optimizer.add_stack(PositionsStack(['QB', ('WR', 'TE')]))
+optimizer.add_stack(TeamStack(3, for_positions=['QB', 'WR', 'TE', 'RB'], max_exposure=0.35))
+optimizer.force_positions_for_opposing_team(('QB', 'WR'))
+optimizer.restrict_positions_for_opposing_team(['QB'], ['DST'])
+
+# Optional short-slate / shootout setting
+optimizer.add_stack(GameStack(5, min_from_team=2))
+```
+
+Practical defaults:
+
+- **Core** — `PositionsStack(['QB', ('WR', 'TE')])` because QB-pass-catcher is the strongest public correlation
+- **Same-team extension** — `TeamStack(3, ...)` only for condensed/high-total offenses; exposure-cap it
+- **Bring-back** — `force_positions_for_opposing_team(('QB', 'WR'))` is the clean built-in single bring-back rule
+- **Anti-correlation** — ban QB vs opposing D/ST
+- **Do not ban RB + own D/ST** — public DFS studies describe it as **mild positive**, not negative
+
+See @concepts/dfs-correlation-stacking.md for the empirical cheat table and role-prior logic.
 
 ### Failure modes
 

@@ -23,6 +23,9 @@ related:
   - entities/tools/pydfs-lineup-optimizer.md
   - entities/platforms/underdog-fantasy.md
   - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
+  - concepts/diy-nfl-dfs-model-architecture.md
+  - concepts/dfs-injury-and-news-workflow.md
+  - sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md
   - sweeps/2026-06-20-tier2-w8-nfl.md
 maturity: validated
 created: 2026-05-31

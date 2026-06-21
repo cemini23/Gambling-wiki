@@ -6,6 +6,7 @@ keywords: [dfs, gpp, cash, ownership, stacking, correlation]
 related:
   - concepts/best-ball-strategy.md
   - concepts/bankroll-management.md
+  - concepts/dfs-correlation-stacking.md
   - concepts/parlay-and-correlated-bets.md
   - entities/platforms/draftkings.md
   - entities/platforms/fanduel.md
@@ -16,6 +17,7 @@ related:
   - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
   - entities/tools/stokastic-dfs.md
   - entities/tools/fantasylabs-dfs.md
+  - concepts/diy-nfl-dfs-model-architecture.md
   - sources/web-dfs-hero-nfl-gpp-strategy-2026-06-20.md
   - sources/web-tech-insider-nfl-betting-strategy-2026-06-20.md
   - sweeps/2026-06-20-tier2-w8-nfl.md
@@ -29,6 +31,8 @@ updated: 2026-06-20
 - @concepts/best-ball-strategy.md — season-long variant
 - @entities/platforms/draftkings.md — DraftKings DFS
 - @entities/platforms/fanduel.md — FanDuel DFS (W8 NFL GPP)
+- @concepts/dfs-correlation-stacking.md — measured stack priors and bring-back logic
+- @concepts/diy-nfl-dfs-model-architecture.md — K125 DIY projection pipeline
 - @sources/web-dfs-hero-nfl-gpp-strategy-2026-06-20.md — NFL GPP playbook (K124)
 
 ## Raw Concept
@@ -59,6 +63,10 @@ Daily fantasy sports (DFS) — GPP vs cash, stacking, ownership leverage, bankro
 - **FantasyLabs** — paid CSV export + optimizer (`@entities/tools/fantasylabs-dfs.md`); ETR bundle option
 - Cursor skill: `.cursor/skills/nfl-fanduel-slate-prep/` — weekly slate workflow
 
+### DIY projection model (K125)
+
+Building a from-scratch pipeline documented in `@concepts/diy-nfl-dfs-model-architecture.md`: nflreadpy data → implied totals → volume/usage → stat regression → FD scoring → optional Monte Carlo + ownership. Paid tools (Stokastic/Labs) retained as **backtest benchmark only**. See layer pages under that architecture hub.
+
 Gemini landscape flags classical ML DFS repos as **reference for DFS modeling**, not spread-betting edge [Source: @sources/gemini-github-sports-betting-landscape-2026-05-30.md].
 
 ### Not prediction markets
@@ -75,6 +83,8 @@ Operator W8 focus: **FanDuel half-PPR GPPs** alongside Hard Rock spreads. See @e
 | Ownership | Less binding than NBA — leverage at WR/TE |
 | Flex | RB on FanDuel half-PPR; avoid TE flex |
 | MME | 3 shootout games × 2 QBs; wide WR pool |
+
+Empirical priors for W8/W-CORR: **QB-WR1** is the anchor pair, **bring-backs** are supported by opposing passing-game lift, and **RB + own D/ST** is mild positive rather than a negative-correlation ban. See @concepts/dfs-correlation-stacking.md.
 
 Same **Vegas totals / injury** research as @entities/sports/nfl-betting.md — betting line moves inform DFS game selection.
 

@@ -205,6 +205,7 @@ def main() -> int:
     paper_defs = cfg.get("paper_queries") or []
     news_defs = cfg.get("queries") or []
     active_topics = cfg.get("active_topics") or []
+    brief_note = (cfg.get("brief_routing_note") or "").strip()
     social = cfg.get("social") or {}
 
     seen_urls: set[str] = set()
@@ -252,6 +253,17 @@ def main() -> int:
     ]
     for t in active_topics:
         lines.append(f"- {t}")
+    if brief_note:
+        lines.extend(
+            [
+                "",
+                "### Brief routing",
+                "",
+                brief_note.strip(),
+                "",
+                "Canonical: `scripts/active_project_brief_targets.yaml` · @osint-wiki/concepts/active-project-research-routing.md",
+            ]
+        )
     lines.extend(["", "---", ""])
 
     lines.extend(["## Inbox (`research to be indexed/`)", ""])
@@ -349,7 +361,9 @@ def main() -> int:
             "",
             "```",
             "Full ingest — process everything in research to be indexed/ and any checked rows above.",
-            "- preingest_check → discuss takeaways → 3–15 wiki pages → lint → ingest_session_gate → commit",
+            "- preingest_check → discuss takeaways → 3–15 wiki pages → lint → commit",
+            "- Briefs: co-primary per scripts/active_project_brief_targets.yaml (poker-arena · ceminidfs; then nfl-w8)",
+            "- Prod bot deploy stays @osint-wiki — no auto-scp from gambling-wiki briefs",
             "```",
             "",
             "---",

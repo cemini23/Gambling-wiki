@@ -5,8 +5,12 @@ tags: [entity, tool, dfs, nfl, fanduel, paid, w8]
 keywords: [stokastic, awesemo, dfs-sims, ownership, nfl-core, gpp]
 related:
   - concepts/dfs-strategy-overview.md
+  - concepts/dfs-pipeline-integration-spec.md
+  - concepts/dfs-paid-tool-methodologies.md
+  - concepts/diy-nfl-dfs-model-architecture.md
+  - concepts/dfs-backtesting-framework.md
+  - sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md
   - entities/platforms/fanduel.md
-  - entities/sports/nfl-betting.md
   - entities/tools/pydfs-lineup-optimizer.md
   - entities/tools/fantasylabs-dfs.md
   - sources/web-dfs-hero-nfl-gpp-strategy-2026-06-20.md

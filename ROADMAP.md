@@ -50,6 +50,24 @@ Steps:
 
 **Public doc rule:** wiki may describe *that* we run an arena bot and the HL *workflow*; it must **not** publish frequencies, guards, nemesis profiles, or patch priorities while the $50k path is live.
 
+### W9 — CeminiDFS implementation (active 2026-06-20)
+
+**Status:** Phases 0–5 **shipped** in standalone repo. Morning digest targets calibration, ownership sim, and pydfs MME research **alongside** W8 NFL and W6 poker.
+
+| Lane | Focus |
+|------|-------|
+| **Data** | nflverse fetch/cache, Vegas, weather, salary ingest |
+| **Model** | Stat-first projection, backtest vs realized PBP |
+| **Optimize** | pydfs FanDuel MME, late-swap, sim rerank |
+| **Benchmark** | Stokastic/FantasyLabs paid export comparison |
+
+Steps:
+- [x] Repo public — `../projects/CeminiDFS` (MIT)
+- [x] Entity page — `entities/tools/ceminidfs.md`
+- [x] Digest + brief routing — `scripts/daily_research_config.yaml`, `scripts/active_project_brief_targets.yaml`
+- [ ] Preseason calibration briefs from live slates
+- [ ] Wiki refresh when backtest/calibrate outputs change methodology
+
 ### W8 — NFL 2026 season prep (active)
 
 **Status:** Started 2026-06-20 — operator #1 betting window. Lanes: **Hard Rock** sportsbook/casino, **FanDuel** DFS, **Underdog** DFS + **BBM7**. Daily digest adds W8 NFL query clusters **alongside** W6 poker lanes (`scripts/daily_research_config.yaml`).
@@ -69,7 +87,15 @@ Steps:
 - [ ] Operator YouTube / free-guide ingest batch (NFL betting + FD DFS)
 - [ ] In-season: weekly slate briefs in `briefs/`; CLV journal hook on `@concepts/line-shopping-and-clv.md`
 
-**Digest note:** W8 NFL and W6 poker are **co-primary** in `active_topics` and news/social passes — not either/or.
+**K125 — DIY NFL DFS projection model (research complete 2026-06-20; implementation shipped):**
+- [x] Master plan — 18 workstreams / 38 subagents (`sources/research-diy-dfs-model-master-plan-2026-06-20.md`)
+- [x] Architecture + 15 layer concept pages (`concepts/diy-nfl-dfs-model-architecture.md` and linked)
+- [x] **CeminiDFS repo** — phases 0–5 complete ([github.com/cemini23/CeminiDFS](https://github.com/cemini23/CeminiDFS))
+- [x] Morning digest W9 lanes — CeminiDFS co-primary in `scripts/daily_research_config.yaml` + `scripts/active_project_brief_targets.yaml`
+- [ ] Preseason live-slate runs with FanDuel salary exports + calibration briefs in `../CeminiDFS/briefs/`
+- [ ] Operator YouTube / free-guide ingest batch (NFL betting + FD DFS methodology)
+
+**Digest note:** W9 CeminiDFS, W8 NFL, and W6 poker are **co-primary** in `active_topics`, news queries, and social passes.
 
 ### W7 — BBM7 research & draft prep (active)
 

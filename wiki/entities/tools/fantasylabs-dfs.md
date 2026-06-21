@@ -5,6 +5,10 @@ tags: [entity, tool, dfs, nfl, fanduel, paid, action-network]
 keywords: [fantasylabs, simlabs, csv-export, koerner, etr-bundle]
 related:
   - concepts/dfs-strategy-overview.md
+  - concepts/dfs-paid-tool-methodologies.md
+  - concepts/diy-nfl-dfs-model-architecture.md
+  - concepts/dfs-backtesting-framework.md
+  - concepts/dfs-ownership-projection.md
   - entities/platforms/fanduel.md
   - entities/platforms/draftkings.md
   - entities/tools/stokastic-dfs.md

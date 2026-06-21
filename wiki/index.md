@@ -20,6 +20,27 @@ Catalog of all wiki pages. Updated on each ingest.
 | [pm-copy-trading-retail-risks](concepts/pm-copy-trading-retail-risks.md) | validated | Whale-copy discipline |
 | [parlay-and-correlated-bets](concepts/parlay-and-correlated-bets.md) | validated | Parlays, SGP, correlation |
 | [dfs-strategy-overview](concepts/dfs-strategy-overview.md) | validated | GPP, cash, stacking, NFL GPP (W8) |
+| [diy-nfl-dfs-model-architecture](concepts/diy-nfl-dfs-model-architecture.md) | draft | K125 DIY projection pipeline hub |
+| [dfs-paid-tool-methodologies](concepts/dfs-paid-tool-methodologies.md) | draft | How paid tools build projection CSVs |
+| [nfl-dfs-data-sources](concepts/nfl-dfs-data-sources.md) | draft | Data inventory + ToS posture |
+| [implied-team-totals-dfs](concepts/implied-team-totals-dfs.md) | draft | Vegas → ITT, game environment score |
+| [team-volume-pace-model](concepts/team-volume-pace-model.md) | draft | Plays, PROE, pass/run split |
+| [player-usage-models](concepts/player-usage-models.md) | draft | Target/carry/snap shares |
+| [dfs-stat-projection-engine](concepts/dfs-stat-projection-engine.md) | draft | Efficiency → counting stats |
+| [fd-dk-scoring-conversion](concepts/fd-dk-scoring-conversion.md) | draft | Site scoring rules |
+| [dfs-distribution-layer](concepts/dfs-distribution-layer.md) | draft | Monte Carlo, ceiling/floor |
+| [dfs-correlation-stacking](concepts/dfs-correlation-stacking.md) | draft | Correlation matrix, pydfs stacks |
+| [dfs-ownership-projection](concepts/dfs-ownership-projection.md) | draft | Field modeling, leverage |
+| [dfs-backtesting-framework](concepts/dfs-backtesting-framework.md) | draft | Walk-forward, MAE benchmarks |
+| [dfs-pipeline-integration-spec](concepts/dfs-pipeline-integration-spec.md) | draft | CSV schema, script backlog |
+| [dfs-foss-tooling-landscape](concepts/dfs-foss-tooling-landscape.md) | draft | FOSS eval, build vs borrow |
+| [dfs-weather-adjustments](concepts/dfs-weather-adjustments.md) | draft | Wind/dome thresholds + OSINT weather API stack |
+| [dfs-injury-and-news-workflow](concepts/dfs-injury-and-news-workflow.md) | draft | Q/D/O, late swap |
+| [dfs-model-orchestration](concepts/dfs-model-orchestration.md) | draft | Weekly run, manifest |
+| [dfs-paid-tool-methodologies](concepts/dfs-paid-tool-methodologies.md) | draft | Paid DFS tool feature map and build-vs-buy notes |
+| [diy-nfl-dfs-model-architecture](concepts/diy-nfl-dfs-model-architecture.md) | draft | Source→projection→optimizer blueprint for a DIY NFL model |
+| [nfl-dfs-data-sources](concepts/nfl-dfs-data-sources.md) | draft | W-DATA/W-LEGAL source matrix, ToS posture, cache rules |
+| [dfs-correlation-stacking](concepts/dfs-correlation-stacking.md) | draft | W-CORR cheat table, copula method, and pydfs stack defaults |
 | [best-ball-strategy](concepts/best-ball-strategy.md) | validated | BBM7 roster construction, portfolio drafting |
 | [best-ball-mania-winners](concepts/best-ball-mania-winners.md) | validated | BBM1–BBM6 winner dossier, cross-patterns |
 | [bbm7-portfolio-construction](concepts/bbm7-portfolio-construction.md) | validated | 150-entry timing × archetype playbook |
@@ -35,11 +56,14 @@ Catalog of all wiki pages. Updated on each ingest.
 | [4for4-bbm7-guide-series-2026-06-18](sources/4for4-bbm7-guide-series-2026-06-18.md) | validated | 4for4 BBMVI meta + 2026 positional playbook (7 free articles) |
 | [fantasy-guru-bbm-tactics-2026-06-08](sources/fantasy-guru-bbm-tactics-2026-06-08.md) | draft | Paywalled stub — Tyler Buecher tactics |
 | [etr-best-ball-mania-manifesto-draft-timing-2026-06-18](sources/etr-best-ball-mania-manifesto-draft-timing-2026-06-18.md) | validated | ETR Leone draft timing extract (BBM3) |
-
 ## Sources — NFL / W8 (K124)
 
 | Page | Maturity | Summary |
 |------|----------|---------|
+| [research-diy-dfs-model-master-plan-2026-06-20](sources/research-diy-dfs-model-master-plan-2026-06-20.md) | read | K125 master plan for the DIY NFL DFS model |
+| [cross-wiki-k125-diy-dfs-sweep-2026-06-20](sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md) | read | Sibling-wiki sweep: OSINT weather APIs, CCC orchestration |
+| [web-nfl-dfs-source-legal-posture-2026-06-20](sources/web-nfl-dfs-source-legal-posture-2026-06-20.md) | deep-read | W-LEGAL ToS scan for DFS data inputs |
+| [web-nfl-dfs-correlation-stacking-2026-06-20](sources/web-nfl-dfs-correlation-stacking-2026-06-20.md) | deep-read | W-CORR empirical stack/correlation scan + pydfs rule mapping |
 | [web-tech-insider-nfl-betting-strategy-2026-06-20](sources/web-tech-insider-nfl-betting-strategy-2026-06-20.md) | validated | Key numbers, CLV, bankroll, live betting |
 | [web-sportsbookreview-hard-rock-bet-2026-06-20](sources/web-sportsbookreview-hard-rock-bet-2026-06-20.md) | validated | Hard Rock Phase-0 — promos, NFL vig, BetVision |
 | [web-dfs-hero-nfl-gpp-strategy-2026-06-20](sources/web-dfs-hero-nfl-gpp-strategy-2026-06-20.md) | validated | NFL GPP stacks, MME pool, FanDuel half-PPR |
@@ -96,6 +120,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [momentum-odds](entities/tools/momentum-odds.md) | draft |
 | [odds-jam](entities/tools/odds-jam.md) | draft |
 | [pydfs-lineup-optimizer](entities/tools/pydfs-lineup-optimizer.md) | validated |
+| [CeminiDFS](entities/tools/ceminidfs.md) | validated |
 | [stokastic-dfs](entities/tools/stokastic-dfs.md) | validated |
 | [fantasylabs-dfs](entities/tools/fantasylabs-dfs.md) | validated |
 | [sports-betting-georgedouzas](entities/tools/sports-betting-georgedouzas.md) | draft |

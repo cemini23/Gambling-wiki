@@ -22,6 +22,9 @@ related:
   - entities/tools/unabated.md
   - sources/youtube-operator-batch-sports-betting-research-2026-05-31.md
   - entities/tools/pickfinder.md
+  - concepts/dfs-backtesting-framework.md
+  - concepts/diy-nfl-dfs-model-architecture.md
+  - sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-05-31

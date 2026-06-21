@@ -9,6 +9,7 @@ related:
   - entities/tournaments/best-ball-mania-vii.md
   - concepts/casino-game-house-edge.md
   - concepts/dfs-strategy-overview.md
+  - concepts/diy-nfl-dfs-model-architecture.md
   - concepts/gambling-bot-architecture.md
   - concepts/gambling-wiki-scope.md
   - concepts/kelly-criterion-betting.md
@@ -27,6 +28,7 @@ related:
   - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
   - sources/youtube-raise-your-edge-10k-bankroll-2026-05-31.md
   - entities/bots/wagerbrain.md
+  - sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md
   - concepts/world-cup-pm-retail-hygiene.md
   - sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md
 maturity: validated

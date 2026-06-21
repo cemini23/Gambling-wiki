@@ -1,0 +1,60 @@
+# Active project brief routing — gambling-wiki (2026-06-20)
+#
+# Sync with ROADMAP.md workstreams and scripts/daily_research_config.yaml.
+# OSINT canonical superset: ../OSINT WORKSPACE/scripts/active_project_brief_targets.yaml
+
+default_posture: wiki-only
+
+# Co-primary — equal morning ingest priority (2026-06-20)
+projects:
+  poker-arena:
+    label: "dev.fun Poker Arena (cemini_decide)"
+    code_root: "../../OSINT WORKSPACE/agents/devfun-poker-arena"
+    wiki: "wiki/concepts/poker-hl-analyst-loop.md"
+    brief_dir: "../../OSINT WORKSPACE/agents/devfun-poker-arena/briefs"
+    scp_target: null
+    co_primary: true
+    primary_goal: "Researcher Round HU sandbox LB — Jun 21 beta"
+    steal_from:
+      - "Researcher Round HU sandbox, nine-axis eval, MAFP fictitious play"
+      - "Generator-verifier steering for decide()"
+      - "6-max preflop, blind pressure, opponent modeling, HL loop leaks"
+    skip_brief_if:
+      - "Casino slots / sportsbook unrelated to arena-pokerkit"
+
+  ceminidfs:
+    label: "CeminiDFS — DIY NFL projection pipeline (FanDuel-primary)"
+    code_root: "../CeminiDFS"
+    wiki: "wiki/concepts/diy-nfl-dfs-model-architecture.md"
+    brief_dir: "../CeminiDFS/briefs"
+    scp_target: null
+    co_primary: true
+    steal_from:
+      - "nflverse PBP → volume/usage/stat projection layers"
+      - "Vegas implied team totals, weather adjustments, injury workflow"
+      - "Ownership projection, copula/sim rerank, late-swap pydfs integration"
+      - "Backtest/calibration vs Stokastic/FantasyLabs paid benchmarks"
+      - "FanDuel slate strategy, stacking/correlation, MME pool generation"
+    skip_brief_if:
+      - "NBA/other-sport DFS unless NFL methodology transfer explicit"
+      - "Paid-tool affiliate content without reproducible methodology"
+
+  nfl-w8:
+    label: "NFL 2026 season prep — Hard Rock, FanDuel GPP, Underdog BBM7"
+    code_root: null
+    wiki: "wiki/entities/sports/nfl-betting.md"
+    brief_dir: "briefs"
+    scp_target: null
+    steal_from:
+      - "Hard Rock Bet promos, limits, TOS posture"
+      - "FanDuel GPP/showdown ownership and stacking meta"
+      - "Underdog BBM7 ADP movers, best-ball roster construction"
+      - "CLV, line shopping, injury-driven line movement"
+    skip_brief_if:
+      - "Institutional CeminiSuite bot deployment content"
+
+legacy_deprioritized:
+  stacks:
+    - "Generic casino slot strategy without NFL/DFS hook"
+    - "Institutional PM bot architecture (→ @osint-wiki)"
+  action: "wiki + concept page only unless user asks"

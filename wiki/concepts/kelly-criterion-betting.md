@@ -5,6 +5,7 @@ tags: [concept, kelly-criterion, position-sizing, math]
 keywords: [kelly, fractional-kelly, edge, growth-rate, binary-bets]
 related:
   - concepts/bankroll-management.md
+  - concepts/diy-nfl-dfs-model-architecture.md
   - concepts/favorite-longshot-bias.md
   - concepts/gambling-bot-architecture.md
   - concepts/parlay-and-correlated-bets.md
@@ -19,6 +20,7 @@ related:
   - concepts/world-cup-pm-retail-hygiene.md
   - sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md
   - concepts/pm-proper-scoring-clob-profitability.md
+  - sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-06-17

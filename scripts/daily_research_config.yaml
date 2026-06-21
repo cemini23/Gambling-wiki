@@ -5,8 +5,9 @@
 # Report: wiki/sweeps/YYYY-MM-DD-daily.md
 #
 # Update active_topics when ROADMAP.md workstreams shift.
-# W8 (2026-06-20): NFL season prep + W6 poker — dual primary targets in digest.
+# W6 poker + W9 CeminiDFS — co-primary in digest (equal priority, 2026-06-20).
 #
+# Brief routing: scripts/active_project_brief_targets.yaml
 # Fetch lane (2026-06-17 tune): arXiv + OpenReview PDFs → research to be indexed/
 # News rows remain manual unless operator drops URL/PDF into inbox.
 
@@ -16,7 +17,7 @@ loop:
 
 fetch:
   enabled: true
-  max_downloads: 8
+  max_downloads: 12
   fetch_likely: true
   max_results_per_paper_query: 6
   sources:
@@ -24,28 +25,23 @@ fetch:
     - openreview
 
 active_topics:
+  - "Poker & arena bots (W6) — Researcher Round HU sandbox (Jun 21 β), MAFP/verifier steals, dev.fun decide(), HL loop (→ OSINT agents/devfun-poker-arena/briefs/)"
+  - "CeminiDFS (W9/K125) — nflverse projection, ownership sim, pydfs MME, calibration vs Stokastic (→ ../projects/CeminiDFS/briefs/)"
   - "NFL 2026 season prep (W8) — Hard Rock +EV/CLV, FanDuel DFS GPP, Underdog/BBM7, props correlation"
-  - "Poker & arena bots (W6) — NLHE 6-max/HU, dev.fun decide(), exploit modeling, HL loop (K118/K122)"
   - "DFS / best ball — BBM7, Underdog ADP movers, roster construction, ownership leverage"
   - "Sports betting — +EV process, CLV, line shopping, NFL spreads/props, sharp vs soft books"
   - "Bankroll & Kelly — fractional sizing, variance, responsible-gambling guardrails"
   - "Gambling bot program — FOSS evals, API/ToS, per-platform lanes (W4)"
   - "Prediction markets retail — Kalshi/Polymarket fees, FLB, cross-venue vs books"
-  - "World Cup 2026 — retail wagering, books vs PM divergence (@osint-wiki WC bot cross-ref)"
+  - "World Cup 2026 — retail wagering, books vs PM divergence; ticket resale cross-ref @osint-wiki wc-ticket-monitor"
+
+brief_routing_note: |
+  Co-primary ingest (equal priority): poker-arena · ceminidfs.
+  Full ingest briefs route per `scripts/active_project_brief_targets.yaml`.
+  poker-arena → OSINT agents/devfun-poker-arena/briefs/ · CeminiDFS → ../CeminiDFS/briefs/
+  nfl-w8 → briefs/ (wiki-only). Prod bot deploy stays @osint-wiki.
 
 paper_queries:
-  - cluster: sports-betting-arxiv
-    query: "arxiv sports betting wagering odds market efficiency closing line value bookmaker"
-    category: research paper
-
-  - cluster: pm-retail-arxiv
-    query: "arxiv Polymarket Kalshi prediction market event contract trading microstructure"
-    category: research paper
-
-  - cluster: pm-openreview
-    query: "openreview prediction market prophets profit arbitrage forecast coherence Polymarket"
-    category: research paper
-
   - cluster: poker-exploit-arxiv
     query: "arxiv poker OR holdem OR texas holdem exploit suboptimal opponent imperfect information"
     category: research paper
@@ -62,8 +58,36 @@ paper_queries:
     query: "openreview poker Texas holdem reinforcement learning opponent modeling exploit"
     category: research paper
 
+  - cluster: poker-hu-researcher-arxiv
+    query: "arxiv heads-up poker Texas holdem sandbox benchmark agent evaluation TrueSkill"
+    category: research paper
+
+  - cluster: poker-mafp-arxiv
+    query: "arxiv multi-agent fictitious play poker game theory equilibrium"
+    category: research paper
+
+  - cluster: sports-betting-arxiv
+    query: "arxiv sports betting wagering odds market efficiency closing line value bookmaker"
+    category: research paper
+
+  - cluster: pm-retail-arxiv
+    query: "arxiv Polymarket Kalshi prediction market event contract trading microstructure"
+    category: research paper
+
+  - cluster: pm-openreview
+    query: "openreview prediction market prophets profit arbitrage forecast coherence Polymarket"
+    category: research paper
+
   - cluster: dfs-roster-arxiv
     query: "arxiv daily fantasy sports lineup roster optimization ownership DraftKings FanDuel"
+    category: research paper
+
+  - cluster: cemini-dfs-nflverse-paper
+    query: "arxiv nflverse play-by-play NFL player usage projection fantasy football python"
+    category: research paper
+
+  - cluster: cemini-dfs-ownership-paper
+    query: "arxiv daily fantasy sports ownership projection simulation copula monte carlo GPP"
     category: research paper
 
   - cluster: kelly-bankroll-arxiv
@@ -71,6 +95,18 @@ paper_queries:
     category: research paper
 
 queries:
+  - cluster: poker-arena-bots
+    query: '"dev.fun" OR "arena pokerkit" OR poker agent challenge researcher track heads-up sandbox 2026'
+    category: news
+
+  - cluster: poker-hu-exploit
+    query: 'poker heads-up NLHE opponent modeling exploit LLM agent MAFP fictitious play verifier 2026'
+    category: news
+
+  - cluster: poker-agent-dataset
+    query: "arena-pokerkit-hands huggingface poker agent dataset devfun"
+    category: news
+
   - cluster: nfl-sportsbook
     query: 'NFL 2026 betting spread props closing line value line shopping sharp money preseason'
     category: news
@@ -81,6 +117,22 @@ queries:
 
   - cluster: nfl-fanduel-dfs
     query: 'FanDuel NFL DFS GPP ownership stacking showdown slate strategy 2026'
+    category: news
+
+  - cluster: cemini-dfs-nflverse
+    query: 'nflverse play-by-play NFL DFS projection python FanDuel salary modeling open source'
+    category: news
+
+  - cluster: cemini-dfs-calibration
+    query: 'Stokastic OR FantasyLabs NFL DFS projection benchmark calibration ownership accuracy'
+    category: news
+
+  - cluster: cemini-dfs-pydfs
+    query: 'pydfs-lineup-optimizer FanDuel MME lineup generation late swap NFL DFS'
+    category: news
+
+  - cluster: cemini-dfs-weather-injury
+    query: 'NFL DFS weather adjustment injury report projection model Vegas implied team total'
     category: news
 
   - cluster: nfl-underdog-bbm
@@ -107,18 +159,6 @@ queries:
     query: '"World Cup 2026" betting odds OR prediction market OR advance market futures'
     category: news
 
-  - cluster: poker-arena-bots
-    query: '"dev.fun" OR "arena pokerkit" OR "poker eval" DeepCFR Texas holdem agent benchmark'
-    category: news
-
-  - cluster: poker-hu-exploit
-    query: 'poker heads-up NLHE opponent modeling exploit LLM agent sandbox benchmark 2026'
-    category: news
-
-  - cluster: poker-agent-dataset
-    query: "arena-pokerkit-hands huggingface poker agent dataset devfun"
-    category: news
-
 monokern_pipeline:
   enabled: true
   cadence: weekly
@@ -127,14 +167,14 @@ monokern_pipeline:
     - yt-dlp
     - inbox_pdf
     - web_url
-  ingest_hook: "After weekly digest, one NotebookLM pass on top ROADMAP topic (W2 lane or W4 bot eval)"
+  ingest_hook: "After weekly digest, one NotebookLM pass on co-primary topic (W6 poker Researcher Round, W9 CeminiDFS, or W8 NFL)"
 
 social:
   manual_pass:
     - tool: opencli-reader
-      prompt: "Reddit r/sportsbook + r/sportsbetting NFL, r/underdogfantasy + r/dailyfantasysports BBM/DFS, r/poker + dev.fun arena last 24h"
+      prompt: "Reddit r/poker + dev.fun arena Researcher Round HU; r/dailyfantasysports NFL; r/sportsbook last 24h"
     - tool: twitter-reader
-      prompt: "NFL CLV, FanDuel DFS, Underdog BBM7 ADP, Hard Rock Bet; dev.fun poker HU sandbox, exploit modeling, arena agents last 24h"
+      prompt: "dev.fun poker HU sandbox MAFP verifier; NFL DFS FanDuel pydfs; Underdog BBM7 ADP last 24h"
 
 output:
   path_template: "wiki/sweeps/{date}-daily.md"
