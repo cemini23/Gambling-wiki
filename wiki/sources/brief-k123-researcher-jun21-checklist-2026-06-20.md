@@ -13,6 +13,7 @@ related:
   - entities/tools/devfun-poker-arena-starter-kit.md
   - sources/brief-k118-poker-agent-research-gaps-2026-06-17.md
   - sources/research-k122-poker-paper-landscape-2026-06-19.md
+  - sources/devfun-researcher-sandbox-bundle-discord-2026-06-20.md
 maturity: validated
 read_status: deep-read
 created: 2026-06-20
@@ -23,6 +24,7 @@ cross-wiki-source: "briefs/2026-06-20_k123-researcher-track-jun21-checklist.md"
 ## Relations
 
 - @sources/devfun-poker-researcher-track-email-2026-06-19.md — K121 HU TrueSkill timeline
+- @sources/devfun-researcher-sandbox-bundle-discord-2026-06-20.md — bundle submit + LLM posture
 - @concepts/heads-up-arena-strategy.md — HU fork doctrine
 - Private brief: `briefs/2026-06-20_k123-researcher-track-jun21-checklist.md`
 - @osint-wiki/concepts/devfun-researcher-track-readiness-2026-06.md — ops hub + HU gates
@@ -46,12 +48,13 @@ Condensed from K122 six-lane research synthesis. **Do not** submit 6-max logic t
 - [ ] **Fix K118 PFR gate** on shared preflop path (blocks Jungleman emulation)
 - [ ] Fork HU `decide()` + regression corpus (OSINT: `run_hu_sandbox_gate.sh`)
 - [ ] Pin researcher `competitionId` when SDK/email drops — do not assume Playground ID
+- [ ] **Bundle submit** — pack agent per submission interface when spec drops [CONFIRMED Discord 2026-06-20]; **no runtime LLM** (dev recommendation)
 
 ### P1 — beta day (Jun 21)
 
 - [ ] Read `skillFile` — table size, axis rubric, submission types
 - [ ] Skeleton HU agent: legal actions + clock safety first
-- [ ] Watch email/Discord for **Kaggle URL**, sandbox API base, sponsored credits
+- [ ] Watch for: **bundle interface docs**, Kaggle URL, sandbox API base, sponsored credits
 - [ ] Export trajectory + `axis_summary.json` before submit (Raeth hygiene)
 
 ### Metrics discipline
@@ -73,4 +76,5 @@ No public wiki updates with ranks, patches, env toggles, or `decide()` internals
 ## Dead Ends
 
 - Routing Playground S2 qual logic to researcher sandbox
+- Runtime LLM `decide()` for sandbox submit — devs recommend pure-code agents [CONFIRMED 2026-06-20]
 - Optimizing for Google Kaggle Game Arena HU (different product from dev.fun TrueSkill)

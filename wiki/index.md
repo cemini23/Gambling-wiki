@@ -74,6 +74,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [poker-axis-eval-literacy](concepts/poker-axis-eval-literacy.md) | draft | Pointer to OSINT Raeth M₁–M₉ axis eval |
 | [research-k122-poker-paper-landscape-2026-06-19](sources/research-k122-poker-paper-landscape-2026-06-19.md) | draft | 12-paper map vs K118; top 5 deep-reads |
 | [brief-k123-researcher-jun21-checklist-2026-06-20](sources/brief-k123-researcher-jun21-checklist-2026-06-20.md) | deep-read | Jun 21 HU sandbox operator checklist |
+| [devfun-researcher-sandbox-bundle-discord-2026-06-20](sources/devfun-researcher-sandbox-bundle-discord-2026-06-20.md) | read | Bundle submit + LLM BYOK posture (Discord) |
 | [casino-game-house-edge](concepts/casino-game-house-edge.md) | validated | Edge by game, smart-bet ranking |
 | [prediction-markets-crossover](concepts/prediction-markets-crossover.md) | validated | Kalshi/Polymarket retail lens |
 | [pm-live-belief-updating](concepts/pm-live-belief-updating.md) | validated | Live PM underreaction, salience×liquidity |

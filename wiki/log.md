@@ -2,6 +2,11 @@
 
 Append-only chronological log.
 
+## [2026-06-20] ingest | K123 Discord — researcher sandbox bundle submission
+
+- **New** — `sources/devfun-researcher-sandbox-bundle-discord-2026-06-20.md` (+ OSINT cross-wiki stub)
+- **Updated** — `entities/platforms/devfun-poker-arena.md`, `sources/brief-k123-researcher-jun21-checklist-2026-06-20.md`, `concepts/heads-up-arena-strategy.md`, `entities/bots/cemini-devfun-poker-agent.md`
+
 ## [2026-06-20] research | K125 cross-wiki sweep (all sibling wikis)
 
 - **New** — `sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md` (OSINT weather API matrix, CCC orchestration, gambling underlinks)

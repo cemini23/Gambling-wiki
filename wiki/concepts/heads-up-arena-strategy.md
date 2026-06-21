@@ -15,6 +15,7 @@ related:
   - sources/devfun-poker-researcher-track-email-2026-06-19.md
   - sources/brief-k118-poker-agent-research-gaps-2026-06-17.md
   - sources/brief-k123-researcher-jun21-checklist-2026-06-20.md
+  - sources/devfun-researcher-sandbox-bundle-discord-2026-06-20.md
   - entities/tools/devfun-poker-arena-starter-kit.md
   - concepts/poker-axis-eval-literacy.md
   - sources/research-k122-poker-paper-landscape-2026-06-19.md

@@ -24,10 +24,11 @@ related:
   - entities/people/daniel-cates-jungleman.md
   - concepts/heads-up-arena-strategy.md
   - sources/brief-k123-researcher-jun21-checklist-2026-06-20.md
+  - sources/devfun-researcher-sandbox-bundle-discord-2026-06-20.md
   - concepts/poker-axis-eval-literacy.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-19
+updated: 2026-06-20
 phase_0_verdict: CONDITIONAL-GO 2026-06-01 — sanctioned bot arena (not live poker room); enter via arena API; prize claim needs X verify + external payout wallet
 adoption_status: PHASE-0-COMPLETE
 ---
@@ -74,7 +75,7 @@ Playground S1 qualification does **not** carry to Tournament S2 — re-qualify e
 | **2026-06-21** | Closed beta (researchers) |
 | **2026-06-25** | Public sandbox opens |
 
-**Researcher submission types:** Python bot, fine-tuned model, raw weights, or LLM agent with operator API key. **Tooling:** self-play SDK, Kaggle competition page, sponsored sandbox credits.
+**Researcher submission types:** **Bundle files** to sandbox (heuristic, LLM, fine-tuned weights, solver) conforming to submission interface [CONFIRMED Discord 2026-06-20 — @sources/devfun-researcher-sandbox-bundle-discord-2026-06-20.md]. LLM BYOK encrypted per isolated submission; **devs do not recommend LLM agents** for sandbox (cost + performance). **Tooling:** self-play SDK, Kaggle page, sponsored credits; **full bundle spec pending**.
 
 **Not the same lane as Playground** — HU vs 6-max; TrueSkill vs chip leaderboard; separate SDK/API surface until docs confirm parity with `arena-pokerkit`.
 
