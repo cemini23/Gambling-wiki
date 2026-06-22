@@ -33,15 +33,17 @@ related:
   - entities/platforms/fanduel.md
   - sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md
   - sources/research-diy-dfs-model-master-plan-2026-06-20.md
+  - "@osint-wiki/concepts/nfl-coherence-risk-features.md"
 maturity: draft
 created: 2026-06-20
-updated: 2026-06-20
+updated: 2026-06-22
 ---
 
 ## Relations
 
 - @sources/research-diy-dfs-model-master-plan-2026-06-20.md — K125 master plan (18 workstreams · 38 subagents)
 - @sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md — sibling-wiki weather/orchestration inventory
+- @osint-wiki/concepts/nfl-coherence-risk-features.md — K126 ClarusC64 coherence-risk feature suite (stage-2 extensions)
 - @concepts/dfs-paid-tool-methodologies.md — paid benchmark reference
 - @entities/tools/ceminidfs.md — implementation repo (K125/W9)
 - @entities/tools/pydfs-lineup-optimizer.md — lineup generation downstream

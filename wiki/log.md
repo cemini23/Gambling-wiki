@@ -2,6 +2,10 @@
 
 Append-only chronological log.
 
+## [2026-06-22] cross-wiki | K126 OSINT — ClarusC64 NFL coherence-risk backlink
+
+- **Updated** — `concepts/diy-nfl-dfs-model-architecture.md` — bidirectional link to `@osint-wiki/concepts/nfl-coherence-risk-features.md` (CeminiDFS stage-2 feature extensions)
+
 ## [2026-06-22] ingest | K125 — daily digest batch (distribution shift eval)
 
 - **New** — `sources/arxiv-2606.14506-distribution-shift-model-eval-2026-06-22.md` (REFERENCE — eval under shift/selective labels)
