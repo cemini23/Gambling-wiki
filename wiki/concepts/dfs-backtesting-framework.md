@@ -10,9 +10,10 @@ related:
   - entities/tools/fantasylabs-dfs.md
   - concepts/diy-nfl-dfs-model-architecture.md
   - concepts/line-shopping-and-clv.md
+  - sources/arxiv-2606.14506-distribution-shift-model-eval-2026-06-22.md
 maturity: draft
 created: 2026-06-20
-updated: 2026-06-20
+updated: 2026-06-22
 ---
 
 ## Relations

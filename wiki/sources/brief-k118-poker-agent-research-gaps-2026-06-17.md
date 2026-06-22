@@ -14,11 +14,14 @@ related:
   - sources/brief-k118-poker-agent-research-gaps-2026-06-17.md
   - sources/brief-k107-poker-open-spot-audit-2026-06-09.md
   - sources/brief-k124-mafp-memory-poker-steals-2026-06-21.md
+  - sources/arxiv-2606.19308-mafp-multi-agent-fictitious-play-2026-06-21.md
   - sources/research-k122-poker-paper-landscape-2026-06-19.md
+  - sources/brief-k125-eval-gate-discipline-2026-06-22.md
+  - sources/arxiv-2606.14506-distribution-shift-model-eval-2026-06-22.md
 maturity: validated
 read_status: deep-read
 created: 2026-06-17
-updated: 2026-06-19
+updated: 2026-06-22
 cross-wiki-source: "briefs/2026-06-17_k118-gambling-poker-agent-research-gap-fixes.md"
 ---
 

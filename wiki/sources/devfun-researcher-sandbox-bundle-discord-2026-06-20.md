@@ -9,6 +9,7 @@ related:
   - entities/tools/devfun-poker-arena-starter-kit.md
   - sources/devfun-poker-researcher-track-email-2026-06-19.md
   - sources/brief-k123-researcher-jun21-checklist-2026-06-20.md
+  - sources/brief-k125-eval-gate-discipline-2026-06-22.md
   - concepts/heads-up-arena-strategy.md
   - concepts/poker-axis-eval-literacy.md
   - osint-wiki/sources/devfun-researcher-sandbox-bundle-discord-2026-06-20.md

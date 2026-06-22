@@ -8,6 +8,7 @@ related:
   - sources/research-k122-poker-paper-landscape-2026-06-19.md
   - sources/brief-k123-researcher-jun21-checklist-2026-06-20.md
   - sources/devfun-researcher-sandbox-bundle-discord-2026-06-20.md
+  - sources/brief-k125-eval-gate-discipline-2026-06-22.md
   - sources/brief-k124-mafp-memory-poker-steals-2026-06-21.md
   - entities/platforms/devfun-poker-arena.md
   - entities/tools/pokerskill.md

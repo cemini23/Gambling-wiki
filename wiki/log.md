@@ -2,6 +2,15 @@
 
 Append-only chronological log.
 
+## [2026-06-22] ingest | K125 — daily digest batch (distribution shift eval)
+
+- **New** — `sources/arxiv-2606.14506-distribution-shift-model-eval-2026-06-22.md` (REFERENCE — eval under shift/selective labels)
+- **New** — `sources/daily-digest-reject-cluster-k125-2026-06-22.md` (DRFLOW + DP submodular REJECT)
+- **New** — `sources/brief-k125-eval-gate-discipline-2026-06-22.md` + operator brief (bundle + eval gates)
+- **Updated** — `poker-hl-analyst-loop.md`, `dfs-backtesting-framework.md`, Discord bundle cross-links
+- **Archive** — 3 PDFs → egress-fi; inbox cleared
+- **Sweep** — `2026-06-22-daily.md` INGESTED
+
 ## [2026-06-20] ingest | K123 Discord — researcher sandbox bundle submission
 
 - **New** — `sources/devfun-researcher-sandbox-bundle-discord-2026-06-20.md` (+ OSINT cross-wiki stub)
