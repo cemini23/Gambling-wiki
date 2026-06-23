@@ -183,6 +183,10 @@ Catalog of all wiki pages. Updated on each ingest.
 | [arxiv-2606.19308-mafp-multi-agent-fictitious-play-2026-06-21](sources/arxiv-2606.19308-mafp-multi-agent-fictitious-play-2026-06-21.md) | skimmed | Fictitious play MAS — REFERENCE |
 | [arxiv-2606.14571-streammembench-agent-memory-2026-06-21](sources/arxiv-2606.14571-streammembench-agent-memory-2026-06-21.md) | skimmed | Agent memory eval — F6 rubric |
 | [brief-k125-eval-gate-discipline-2026-06-22](sources/brief-k125-eval-gate-discipline-2026-06-22.md) | deep-read | Eval shift discipline + bundle posture |
+| [brief-k126-garip-selfplay-pm-forecast-steals-2026-06-23](sources/brief-k126-garip-selfplay-pm-forecast-steals-2026-06-23.md) | deep-read | GARIP selfplay + PM forecast eval steals |
+| [arxiv-2606.22688-garip-last-iterate-selfplay-2026-06-23](sources/arxiv-2606.22688-garip-last-iterate-selfplay-2026-06-23.md) | skimmed | Running-average self-play anchor |
+| [arxiv-2606.21013-agentic-time-machine-forecasting-2026-06-23](sources/arxiv-2606.21013-agentic-time-machine-forecasting-2026-06-23.md) | skimmed | FutureX/Polymarket eval sandbox |
+| [daily-digest-reject-cluster-k126-2026-06-23](sources/daily-digest-reject-cluster-k126-2026-06-23.md) | skimmed |
 | [arxiv-2606.14506-distribution-shift-model-eval-2026-06-22](sources/arxiv-2606.14506-distribution-shift-model-eval-2026-06-22.md) | skimmed | Pre-deploy eval under covariate shift |
 | [daily-digest-reject-cluster-k125-2026-06-22](sources/daily-digest-reject-cluster-k125-2026-06-22.md) | skimmed |
 | [arxiv-2606.16139-team-zero-sum-games-complexity-2026-06-20](sources/arxiv-2606.16139-team-zero-sum-games-complexity-2026-06-20.md) | skimmed |

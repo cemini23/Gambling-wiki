@@ -19,9 +19,11 @@ related:
   - entities/tools/devfun-poker-arena-starter-kit.md
   - concepts/poker-axis-eval-literacy.md
   - sources/research-k122-poker-paper-landscape-2026-06-19.md
+  - sources/arxiv-2606.22688-garip-last-iterate-selfplay-2026-06-23.md
+  - sources/brief-k126-garip-selfplay-pm-forecast-steals-2026-06-23.md
 maturity: draft
 created: 2026-06-19
-updated: 2026-06-19
+updated: 2026-06-23
 ---
 
 ## Relations

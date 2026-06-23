@@ -13,10 +13,11 @@ related:
   - entities/bots/cemini-devfun-poker-agent.md
   - sources/daily-digest-reject-cluster-k124-2026-06-21.md
   - sweeps/2026-06-21-daily.md
+  - sources/arxiv-2606.22688-garip-last-iterate-selfplay-2026-06-23.md
 maturity: draft
 read_status: skimmed
 created: 2026-06-21
-updated: 2026-06-21
+updated: 2026-06-23
 location: cemini-egress-fi:/opt/cemini-bulk/research/gambling/arxiv-2606.19308-enhancing-decision-making-with-large-language-mo.pdf
 phase_0_verdict: REFERENCE 2026-06-21 — game-theoretic MAS for competitive decisions; runtime LLM NO-GO for decide()
 ---

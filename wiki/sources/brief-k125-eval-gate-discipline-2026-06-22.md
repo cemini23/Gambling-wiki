@@ -11,10 +11,11 @@ related:
   - concepts/poker-hl-analyst-loop.md
   - entities/bots/cemini-devfun-poker-agent.md
   - sources/daily-digest-reject-cluster-k125-2026-06-22.md
+  - sources/brief-k126-garip-selfplay-pm-forecast-steals-2026-06-23.md
 maturity: validated
 read_status: deep-read
 created: 2026-06-22
-updated: 2026-06-22
+updated: 2026-06-23
 cross-wiki-source: "briefs/2026-06-22_k125-eval-gate-discipline-sandbox-bundle.md"
 ---
 

@@ -35,9 +35,11 @@ related:
   - sources/web-tech-insider-nfl-betting-strategy-2026-06-20.md
   - sweeps/2026-06-22-daily.md
   - sources/daily-digest-reject-cluster-k125-2026-06-22.md
+  - sweeps/2026-06-23-daily.md
+  - sources/daily-digest-reject-cluster-k126-2026-06-23.md
 maturity: validated
 created: 2026-06-01
-updated: 2026-06-22
+updated: 2026-06-23
 ---
 
 ## Relations
@@ -56,7 +58,7 @@ K93 federated install: morning **discovery-only** loop for sports betting, PM re
 |-------|-------|
 | **Cadence** | Daily @ 08:15 local (`com.cemini.daily-research-digest.gambling`) |
 | **Installed** | 2026-06-01 (K93 brief) |
-| **Last run** | 2026-06-22 |
+| **Last run** | 2026-06-23 |
 | **Fetch sources** | arXiv + OpenReview PDFs → `research to be indexed/` (tuned 2026-06-17) |
 | **Script** | `~/bin/cemini-daily-research-digest-gambling` → `scripts/daily_research_digest_run.py` |
 | **Deps** | `wiki_source_index.py` (required alongside digest runner) |

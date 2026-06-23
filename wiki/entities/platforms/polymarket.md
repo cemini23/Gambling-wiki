@@ -38,9 +38,11 @@ related:
   - sources/openreview-prophets-profit-pm-LYSTj2Cnuu-2026-06-17.md
   - sources/openreview-llm-coherence-projection-Tqos7VqQhH-2026-06-17.md
   - sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md
+  - sources/arxiv-2606.21013-agentic-time-machine-forecasting-2026-06-23.md
+  - sources/brief-k126-garip-selfplay-pm-forecast-steals-2026-06-23.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-06-17
+updated: 2026-06-23
 ---
 
 ## Relations

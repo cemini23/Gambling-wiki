@@ -9,6 +9,8 @@ related:
   - sources/brief-k123-researcher-jun21-checklist-2026-06-20.md
   - sources/devfun-researcher-sandbox-bundle-discord-2026-06-20.md
   - sources/brief-k125-eval-gate-discipline-2026-06-22.md
+  - sources/brief-k126-garip-selfplay-pm-forecast-steals-2026-06-23.md
+  - sources/arxiv-2606.22688-garip-last-iterate-selfplay-2026-06-23.md
   - sources/brief-k124-mafp-memory-poker-steals-2026-06-21.md
   - entities/platforms/devfun-poker-arena.md
   - entities/tools/pokerskill.md

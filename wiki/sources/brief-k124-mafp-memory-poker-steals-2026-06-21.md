@@ -12,10 +12,11 @@ related:
   - concepts/poker-hl-analyst-loop.md
   - entities/bots/cemini-devfun-poker-agent.md
   - sources/daily-digest-reject-cluster-k124-2026-06-21.md
+  - sources/brief-k126-garip-selfplay-pm-forecast-steals-2026-06-23.md
 maturity: validated
 read_status: deep-read
 created: 2026-06-21
-updated: 2026-06-21
+updated: 2026-06-23
 cross-wiki-source: "briefs/2026-06-21_k124-mafp-memory-poker-research-steals.md"
 ---
 

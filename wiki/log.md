@@ -2,6 +2,16 @@
 
 Append-only chronological log.
 
+## [2026-06-23] ingest | K126 — daily digest batch (GARIP selfplay + PM forecast eval)
+
+- **New** — `sources/arxiv-2606.22688-garip-last-iterate-selfplay-2026-06-23.md` (REFERENCE — running-average self-play anchor)
+- **New** — `sources/arxiv-2606.21013-agentic-time-machine-forecasting-2026-06-23.md` (REFERENCE — FutureX/Polymarket eval sandbox)
+- **New** — `sources/daily-digest-reject-cluster-k126-2026-06-23.md` (predictability privacy REJECT)
+- **New** — `sources/brief-k126-garip-selfplay-pm-forecast-steals-2026-06-23.md` + operator brief
+- **Updated** — `poker-hl-analyst-loop.md`, `heads-up-arena-strategy.md`, MAFP, Polymarket, cemini agent cross-links
+- **Archive** — 3 PDFs → egress-fi; inbox cleared
+- **Sweep** — `2026-06-23-daily.md` INGESTED
+
 ## [2026-06-22] cross-wiki | K126 OSINT — ClarusC64 NFL coherence-risk backlink
 
 - **Updated** — `concepts/diy-nfl-dfs-model-architecture.md` — bidirectional link to `@osint-wiki/concepts/nfl-coherence-risk-features.md` (CeminiDFS stage-2 feature extensions)
