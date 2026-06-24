@@ -14,11 +14,13 @@ related:
   - entities/bots/cemini-devfun-poker-agent.md
   - sources/research-k122-poker-paper-landscape-2026-06-19.md
   - sources/daily-digest-reject-cluster-k126-2026-06-23.md
+  - sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md
+  - sources/brief-k127-emagnet-irumai-selfplay-steals-2026-06-24.md
   - sweeps/2026-06-23-daily.md
 maturity: draft
 read_status: skimmed
 created: 2026-06-23
-updated: 2026-06-23
+updated: 2026-06-24
 location: cemini-egress-fi:/opt/cemini-bulk/research/gambling/arxiv-2606.22688-pdf-garip-a-running-average-moving-reference-for.pdf
 phase_0_verdict: REFERENCE 2026-06-23 — last-iterate self-play anchor design; offline HU selfplay tuning only
 ---
@@ -26,6 +28,7 @@ phase_0_verdict: REFERENCE 2026-06-23 — last-iterate self-play anchor design; 
 ## Relations
 
 - @sources/arxiv-2606.19308-mafp-multi-agent-fictitious-play-2026-06-21.md — complementary equilibrium-seeking line (MAFP vs gradient self-play)
+- @sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md — parameter-space EMA magnet (K127)
 - @sources/brief-k126-garip-selfplay-pm-forecast-steals-2026-06-23.md — operator steal summary (K126)
 - @concepts/poker-hl-analyst-loop.md — selfplay panel on egress; not runtime `decide()`
 

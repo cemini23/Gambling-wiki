@@ -21,10 +21,12 @@ related:
   - sources/arxiv-2606.19308-mafp-multi-agent-fictitious-play-2026-06-21.md
   - sources/brief-k126-garip-selfplay-pm-forecast-steals-2026-06-23.md
   - sources/arxiv-2606.22688-garip-last-iterate-selfplay-2026-06-23.md
+  - sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md
+  - sources/brief-k127-emagnet-irumai-selfplay-steals-2026-06-24.md
   - osint-wiki/sources/trading-posts-compilation-7-2026-06-09.md
 maturity: validated
 created: 2026-06-03
-updated: 2026-06-23
+updated: 2026-06-24
 ---
 
 ## Relations

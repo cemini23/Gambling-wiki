@@ -25,9 +25,12 @@ related:
   - concepts/poker-hl-analyst-loop.md
   - sources/brief-k107-poker-open-spot-audit-2026-06-09.md
   - sources/arxiv-2606.11869-agents-all-the-way-down-2026-06-19.md
+  - sources/arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24.md
+  - entities/games/indian-rummy.md
+  - sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-19
+updated: 2026-06-24
 ---
 
 ## Relations

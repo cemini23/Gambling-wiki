@@ -21,9 +21,11 @@ related:
   - sources/research-k122-poker-paper-landscape-2026-06-19.md
   - sources/arxiv-2606.22688-garip-last-iterate-selfplay-2026-06-23.md
   - sources/brief-k126-garip-selfplay-pm-forecast-steals-2026-06-23.md
+  - sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md
+  - sources/brief-k127-emagnet-irumai-selfplay-steals-2026-06-24.md
 maturity: draft
 created: 2026-06-19
-updated: 2026-06-23
+updated: 2026-06-24
 ---
 
 ## Relations

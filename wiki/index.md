@@ -157,6 +157,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | Page | Maturity |
 |------|----------|
 | [poker](entities/games/poker.md) | draft |
+| [indian-rummy](entities/games/indian-rummy.md) | draft |
 | [blackjack](entities/games/blackjack.md) | validated |
 | [roulette](entities/games/roulette.md) | draft |
 
@@ -184,6 +185,11 @@ Catalog of all wiki pages. Updated on each ingest.
 | [arxiv-2606.14571-streammembench-agent-memory-2026-06-21](sources/arxiv-2606.14571-streammembench-agent-memory-2026-06-21.md) | skimmed | Agent memory eval — F6 rubric |
 | [brief-k125-eval-gate-discipline-2026-06-22](sources/brief-k125-eval-gate-discipline-2026-06-22.md) | deep-read | Eval shift discipline + bundle posture |
 | [brief-k126-garip-selfplay-pm-forecast-steals-2026-06-23](sources/brief-k126-garip-selfplay-pm-forecast-steals-2026-06-23.md) | deep-read | GARIP selfplay + PM forecast eval steals |
+| [brief-k127-emagnet-irumai-selfplay-steals-2026-06-24](sources/brief-k127-emagnet-irumai-selfplay-steals-2026-06-24.md) | deep-read | EMAgnet + IRumAI + SETE steals |
+| [arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24](sources/arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24.md) | skimmed | First RL agent for Indian Rummy |
+| [arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24](sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md) | skimmed | Parameter EMA self-play magnet |
+| [arxiv-2606.20960-equilibrium-internal-transfers-2026-06-24](sources/arxiv-2606.20960-equilibrium-internal-transfers-2026-06-24.md) | skimmed | SETE / M-SETE transfer equilibria |
+| [daily-digest-reject-cluster-k127-2026-06-24](sources/daily-digest-reject-cluster-k127-2026-06-24.md) | skimmed |
 | [arxiv-2606.22688-garip-last-iterate-selfplay-2026-06-23](sources/arxiv-2606.22688-garip-last-iterate-selfplay-2026-06-23.md) | skimmed | Running-average self-play anchor |
 | [arxiv-2606.21013-agentic-time-machine-forecasting-2026-06-23](sources/arxiv-2606.21013-agentic-time-machine-forecasting-2026-06-23.md) | skimmed | FutureX/Polymarket eval sandbox |
 | [daily-digest-reject-cluster-k126-2026-06-23](sources/daily-digest-reject-cluster-k126-2026-06-23.md) | skimmed |

@@ -27,9 +27,12 @@ related:
   - sources/arxiv-2606.19308-mafp-multi-agent-fictitious-play-2026-06-21.md
   - sources/arxiv-2606.14571-streammembench-agent-memory-2026-06-21.md
   - sources/brief-k124-mafp-memory-poker-steals-2026-06-21.md
+  - sources/arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24.md
+  - sources/arxiv-2606.20960-equilibrium-internal-transfers-2026-06-24.md
+  - sources/brief-k127-emagnet-irumai-selfplay-steals-2026-06-24.md
 maturity: draft
 created: 2026-06-03
-updated: 2026-06-21
+updated: 2026-06-24
 ---
 
 ## Relations

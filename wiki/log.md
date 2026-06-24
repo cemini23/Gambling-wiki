@@ -2,6 +2,18 @@
 
 Append-only chronological log.
 
+## [2026-06-24] ingest | K127 — daily digest batch (EMAgnet + IRumAI + SETE)
+
+- **New** — `sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md` (REFERENCE — parameter EMA self-play magnet)
+- **New** — `sources/arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24.md` (REFERENCE — Indian Rummy RL benchmark)
+- **New** — `sources/arxiv-2606.20960-equilibrium-internal-transfers-2026-06-24.md` (REFERENCE — SETE transfer equilibria)
+- **New** — `sources/daily-digest-reject-cluster-k127-2026-06-24.md` (15 rejects incl. line-planning / DeFi AMM false positives)
+- **New** — `sources/brief-k127-emagnet-irumai-selfplay-steals-2026-06-24.md` + operator + OSINT arena brief
+- **New** — `entities/games/indian-rummy.md`
+- **Updated** — `poker-hl-analyst-loop.md`, `heads-up-arena-strategy.md`, `opponent-modeling-imperfect-info.md`, `poker-bot-tooling.md`, GARIP cross-link
+- **Archive** — 18 PDFs → egress-fi; inbox cleared
+- **Sweep** — `2026-06-24-daily.md` INGESTED
+
 ## [2026-06-23] ingest | K126 — daily digest batch (GARIP selfplay + PM forecast eval)
 
 - **New** — `sources/arxiv-2606.22688-garip-last-iterate-selfplay-2026-06-23.md` (REFERENCE — running-average self-play anchor)
