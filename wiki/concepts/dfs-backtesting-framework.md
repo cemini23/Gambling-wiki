@@ -11,9 +11,11 @@ related:
   - concepts/diy-nfl-dfs-model-architecture.md
   - concepts/line-shopping-and-clv.md
   - sources/arxiv-2606.14506-distribution-shift-model-eval-2026-06-22.md
+  - sources/arxiv-2606.20820-celeus-llm-eval-eprocesses-2026-06-25.md
+  - sources/brief-k129-celeus-tmax-eval-steals-2026-06-25.md
 maturity: draft
 created: 2026-06-20
-updated: 2026-06-22
+updated: 2026-06-25
 ---
 
 ## Relations

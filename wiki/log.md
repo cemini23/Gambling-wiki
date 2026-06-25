@@ -2,6 +2,22 @@
 
 Append-only chronological log.
 
+## [2026-06-25] ingest | K129 — daily digest batch (CELEUS eval + Tmax)
+
+- **New** — `sources/arxiv-2606.20820-celeus-llm-eval-eprocesses-2026-06-25.md` (REFERENCE — anytime-valid LLM eval CIs)
+- **New** — `sources/arxiv-2606.23321-tmax-terminal-agents-2026-06-25.md` (CONDITIONAL-GO — Apache-2.0 terminal agent recipe)
+- **New** — `sources/daily-digest-reject-cluster-k129-2026-06-25.md` (6 rejects)
+- **New** — `sources/brief-k129-celeus-tmax-eval-steals-2026-06-25.md` + operator + OSINT arena brief
+- **Updated** — `poker-hl-analyst-loop.md`, `brief-k125`, `dfs-backtesting-framework.md`
+- **Archive** — 8 PDFs → egress-fi; inbox cleared
+- **Sweep** — `2026-06-25-daily.md` INGESTED
+
+## [2026-06-25] wiki | K128 — BBM7 Draft Copilot hub + Underdog mechanics
+
+- **New** — `sources/brief-k128-bbm7-draft-copilot-hub-2026-06-24.md` (links master plan, challenge register, CeminiDFS impl)
+- **Updated** — `entities/platforms/underdog-fantasy.md` (draft room UI, ToS, CSV, overlay integration)
+- **Updated** — `bbm7-portfolio-construction.md`, `ceminidfs.md`, `ROADMAP.md` W7 phases
+
 ## [2026-06-24] ingest | K127 — daily digest batch (EMAgnet + IRumAI + SETE)
 
 - **New** — `sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md` (REFERENCE — parameter EMA self-play magnet)

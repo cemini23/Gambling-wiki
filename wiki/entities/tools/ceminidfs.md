@@ -14,10 +14,11 @@ related:
   - entities/tools/fantasylabs-dfs.md
   - entities/platforms/fanduel.md
   - sources/research-diy-dfs-model-master-plan-2026-06-20.md
+  - sources/brief-k128-bbm7-draft-copilot-hub-2026-06-24.md
   - "@osint-wiki/concepts/active-project-research-routing.md"
 maturity: validated
 created: 2026-06-20
-updated: 2026-06-20
+updated: 2026-06-25
 ---
 
 ## Relations

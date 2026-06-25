@@ -12,10 +12,12 @@ related:
   - entities/bots/cemini-devfun-poker-agent.md
   - sources/daily-digest-reject-cluster-k125-2026-06-22.md
   - sources/brief-k126-garip-selfplay-pm-forecast-steals-2026-06-23.md
+  - sources/brief-k129-celeus-tmax-eval-steals-2026-06-25.md
+  - sources/arxiv-2606.20820-celeus-llm-eval-eprocesses-2026-06-25.md
 maturity: validated
 read_status: deep-read
 created: 2026-06-22
-updated: 2026-06-23
+updated: 2026-06-25
 cross-wiki-source: "briefs/2026-06-22_k125-eval-gate-discipline-sandbox-bundle.md"
 ---
 

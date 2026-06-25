@@ -186,6 +186,11 @@ Catalog of all wiki pages. Updated on each ingest.
 | [brief-k125-eval-gate-discipline-2026-06-22](sources/brief-k125-eval-gate-discipline-2026-06-22.md) | deep-read | Eval shift discipline + bundle posture |
 | [brief-k126-garip-selfplay-pm-forecast-steals-2026-06-23](sources/brief-k126-garip-selfplay-pm-forecast-steals-2026-06-23.md) | deep-read | GARIP selfplay + PM forecast eval steals |
 | [brief-k127-emagnet-irumai-selfplay-steals-2026-06-24](sources/brief-k127-emagnet-irumai-selfplay-steals-2026-06-24.md) | deep-read | EMAgnet + IRumAI + SETE steals |
+| [brief-k128-bbm7-draft-copilot-hub-2026-06-24](sources/brief-k128-bbm7-draft-copilot-hub-2026-06-24.md) | deep-read | BBM7 live draft tool hub |
+| [brief-k129-celeus-tmax-eval-steals-2026-06-25](sources/brief-k129-celeus-tmax-eval-steals-2026-06-25.md) | deep-read | CELEUS eval + Tmax steals |
+| [arxiv-2606.20820-celeus-llm-eval-eprocesses-2026-06-25](sources/arxiv-2606.20820-celeus-llm-eval-eprocesses-2026-06-25.md) | skimmed | Anytime-valid LLM eval CIs |
+| [arxiv-2606.23321-tmax-terminal-agents-2026-06-25](sources/arxiv-2606.23321-tmax-terminal-agents-2026-06-25.md) | skimmed | Terminal agent training recipe |
+| [daily-digest-reject-cluster-k129-2026-06-25](sources/daily-digest-reject-cluster-k129-2026-06-25.md) | skimmed |
 | [arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24](sources/arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24.md) | skimmed | First RL agent for Indian Rummy |
 | [arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24](sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md) | skimmed | Parameter EMA self-play magnet |
 | [arxiv-2606.20960-equilibrium-internal-transfers-2026-06-24](sources/arxiv-2606.20960-equilibrium-internal-transfers-2026-06-24.md) | skimmed | SETE / M-SETE transfer equilibria |

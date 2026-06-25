@@ -23,10 +23,12 @@ related:
   - sources/arxiv-2606.22688-garip-last-iterate-selfplay-2026-06-23.md
   - sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md
   - sources/brief-k127-emagnet-irumai-selfplay-steals-2026-06-24.md
+  - sources/brief-k129-celeus-tmax-eval-steals-2026-06-25.md
+  - sources/arxiv-2606.20820-celeus-llm-eval-eprocesses-2026-06-25.md
   - osint-wiki/sources/trading-posts-compilation-7-2026-06-09.md
 maturity: validated
 created: 2026-06-03
-updated: 2026-06-24
+updated: 2026-06-25
 ---
 
 ## Relations

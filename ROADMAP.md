@@ -112,6 +112,14 @@ Steps:
 - [x] Portfolio construction brief — `concepts/bbm7-portfolio-construction.md` + `briefs/2026-06-18_bbm7-portfolio-brief.md`
 - [x] Week 15–17 bye/cliff analysis — `concepts/bbm7-playoff-week-construction.md`
 - [x] Ingest Fantasy Six Pack 2026 New Meta — `sources/fantasysixpack-bbm-new-meta-2026-06-08.md`
+- [x] Live draft tool master plan (K128) — `briefs/2026-06-24_bbm7-live-draft-tool-master-plan.md`
+- [x] Challenge register + solutions playbook (K128b) — `briefs/2026-06-24_bbm7-challenge-register.md`, `briefs/2026-06-24_bbm7-challenges-and-solutions.md`
+- [x] **Implementation brief (K128c)** — `../CeminiDFS/briefs/2026-06-24_bbm7-draft-copilot-implementation-brief.md` (self-contained; build there)
+- [ ] Pre-build spikes 1–2 (name normalize + CSV schema proof) — **CeminiDFS**
+- [ ] Phase 0 — `src/ceminidfs/bbm/` scaffold, registry JSON, draft card — **CeminiDFS**
+- [ ] Phase 1 — CLI draft assistant + portfolio ledger — **CeminiDFS**
+- [ ] Phase 2 — ADP normalizer + half-PPR projection merge + weekly refresh — **CeminiDFS**
+- [ ] Phase 3 (optional) — browser overlay (Draft Co-Pilot fork) — **CeminiDFS**
 
 ### W2 — Domain expansion (queued)
 
