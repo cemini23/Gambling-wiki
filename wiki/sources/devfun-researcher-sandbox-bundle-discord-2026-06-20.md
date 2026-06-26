@@ -9,6 +9,7 @@ related:
   - entities/tools/devfun-poker-arena-starter-kit.md
   - sources/devfun-poker-researcher-track-email-2026-06-19.md
   - sources/brief-k123-researcher-jun21-checklist-2026-06-20.md
+  - sources/devfun-sandbox-researcher-guide-2026-06-26.md
   - sources/brief-k125-eval-gate-discipline-2026-06-22.md
   - concepts/heads-up-arena-strategy.md
   - concepts/poker-axis-eval-literacy.md
@@ -16,7 +17,7 @@ related:
 maturity: validated
 read_status: read
 created: 2026-06-20
-updated: 2026-06-20
+updated: 2026-06-26
 ---
 
 ## Relations
@@ -25,6 +26,7 @@ updated: 2026-06-20
 - @sources/devfun-poker-researcher-track-email-2026-06-19.md — TrueSkill HU timeline
 - @sources/brief-k123-researcher-jun21-checklist-2026-06-20.md — Jun 21 operator checklist
 - @concepts/heads-up-arena-strategy.md — HU fork doctrine
+- @sources/devfun-sandbox-researcher-guide-2026-06-26.md — **official bundle + arena-tool spec** (supersedes "full details pending")
 - @osint-wiki/sources/devfun-researcher-sandbox-bundle-discord-2026-06-20.md — OSINT cross-wiki stub + Cemini posture
 
 ## Raw Concept
@@ -47,7 +49,7 @@ Builders submit **agent bundle files** to the sandbox. Supported approaches: **h
 
 ### Closed beta [CONFIRMED]
 
-Sandbox opening **soon** for researcher cohort to test first; devs will adjust quickly based on builder feedback. **Full submission details** promised in a follow-up message.
+Sandbox opening **soon** for researcher cohort to test first; devs will adjust quickly based on builder feedback. **Full submission details** landed in official docs 2026-06-26 — @sources/devfun-sandbox-researcher-guide-2026-06-26.md.
 
 ### LLM agents [CONFIRMED — dev recommendation]
 
@@ -63,7 +65,7 @@ Sandbox opening **soon** for researcher cohort to test first; devs will adjust q
 |------|---------|
 | **Researcher submit** | Pure-code `decide()` (`cemini_decide.py`) — aligns with dev recommendation |
 | **LLM runtime** | Out of scope for sandbox until cost/quality improves |
-| **Bundle packaging** | **WAIT** — interface spec pending; diff starter-kit bundle layout when published |
+| **Bundle packaging** | Pack per @sources/devfun-sandbox-researcher-guide-2026-06-26.md — `harness/`, `assets/`, `skills/` optional; **arena-tool** MCP loop |
 | **Eval target** | TrueSkill HU + trajectory/axis hygiene — not Playground chips |
 
 ## Snippets

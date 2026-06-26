@@ -24,6 +24,7 @@ related:
   - sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md
   - sources/brief-k127-emagnet-irumai-selfplay-steals-2026-06-24.md
   - sources/brief-k122-poker-researcher-track-plan-2026-06-19.md
+  - sources/devfun-sandbox-researcher-guide-2026-06-26.md
 maturity: draft
 created: 2026-06-19
 updated: 2026-06-26
@@ -35,6 +36,7 @@ updated: 2026-06-26
 - @sources/devfun-poker-researcher-track-email-2026-06-19.md — TrueSkill + style rep mechanic
 - @entities/people/daniel-cates-jungleman.md — default HU aggression target for TrueSkill
 - @concepts/poker-strategy-overview.md — ring-game doctrine; **not portable** to HU without rewrite
+- @sources/devfun-sandbox-researcher-guide-2026-06-26.md — official bundle + arena-tool + TrueSkill scoring spec
 - @osint-wiki/concepts/devfun-researcher-track-readiness-2026-06.md — ops hub + HU gates (cross-wiki)
 
 ## Raw Concept
@@ -80,7 +82,15 @@ Researcher sandbox is **BTN (SB) vs BB** only [CONFIRMED K121]. Playground is **
 
 ### TrueSkill vs chip EV
 
-TrueSkill ranks **pairwise match wins**. Optimize local selfplay for **match W/L**, not bb/100 vs tight heuristics. High variance early — plan sustained volume.
+TrueSkill ranks **pairwise match outcomes** on the researcher leaderboard. Official spec [CONFIRMED @sources/devfun-sandbox-researcher-guide-2026-06-26.md]:
+
+| Mode | Scoring |
+|------|---------|
+| **PvP** | Duplicate-dealt **blocks**; higher **equity-adjusted bb/100** wins each block (margin-weighted); μ/σ update; **fixed hand count** ends match |
+| **PvE** | vs rotating **panel bot** (top agent becomes next panel); completed/target hands; **best score kept** |
+| **Leaderboard** | Conservative TrueSkill (μ − uncertainty); **best finalized bot** per user |
+
+Optimize local selfplay for **match W/L and block equity**, not raw bb/100 vs tight heuristics alone. High variance early — plan sustained volume within **daily submit cap**.
 
 **Dual objective tension:** TrueSkill max may conflict with **style rep** (Dwan merge vs Jungleman probe frequency). Default **Jungleman-shaped** aggression for sandbox; keep Dwan overlay for rep lane tests [Source: @osint-wiki/concepts/devfun-researcher-pro-style-targets-2026-06.md].
 
@@ -101,9 +111,20 @@ Each hand is a new imperfect-information state. Policy stack:
 
 Full research plan: @sources/brief-k122-poker-researcher-track-plan-2026-06-19.md (operator copy in `briefs/`).
 
+### Sandbox submit interface [CONFIRMED 2026-06-26]
+
+Researcher bundle uses **`arena-tool` MCP** (not Playground HTTP polling):
+
+1. `join_pve` — start/resume match (`DEVFUN_COMPETITION_ID`)
+2. `get_game_state` — poll pending action
+3. `submit_action` — action from `allowedActions`; `amount` = **total street commitment**; hand-specific `reasoning_text`
+4. `get_session_status` — until match complete
+
+Bundle optional dirs: `harness/`, `assets/`, `skills/` under `/app/workspace`. See @sources/devfun-sandbox-researcher-guide-2026-06-26.md.
+
 ### SDK local iteration
 
-Use **`devfun-org/poker-arena-starter-kit`**: `./pokerkit test`, `./pokerkit selfplay --hands 200`, `./pokerkit analyze`. HU-specific selfplay opponents TBD when researcher SDK ships [NEEDS VERIFICATION 2026-06-21].
+Use **`devfun-org/poker-arena-starter-kit`** for **Playground / local selfplay gates**: `./pokerkit test`, `./pokerkit selfplay --hands 200`, `./pokerkit analyze`. Researcher sandbox eval runs in **Daytona** via `arena-tool` — different runtime from lobby `pokerkit run`.
 
 ## Snippets
 

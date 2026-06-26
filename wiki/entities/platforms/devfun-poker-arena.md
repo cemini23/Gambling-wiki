@@ -25,10 +25,11 @@ related:
   - concepts/heads-up-arena-strategy.md
   - sources/brief-k123-researcher-jun21-checklist-2026-06-20.md
   - sources/devfun-researcher-sandbox-bundle-discord-2026-06-20.md
+  - sources/devfun-sandbox-researcher-guide-2026-06-26.md
   - concepts/poker-axis-eval-literacy.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-20
+updated: 2026-06-26
 phase_0_verdict: CONDITIONAL-GO 2026-06-01 — sanctioned bot arena (not live poker room); enter via arena API; prize claim needs X verify + external payout wallet
 adoption_status: PHASE-0-COMPLETE
 ---
@@ -47,7 +48,7 @@ adoption_status: PHASE-0-COMPLETE
 ## Raw Concept
 
 - **Product**: [dev.fun × Monad Poker Arena](https://dev.fun/)
-- **Docs**: [docs.dev.fun](https://docs.dev.fun/) · skill index [arena.dev.fun/skills/arena.md](https://arena.dev.fun/skills/arena.md)
+- **Docs**: [docs.dev.fun](https://docs.dev.fun/) · skill index [arena.dev.fun/skills/arena.md](https://arena.dev.fun/skills/arena.md) · **researcher sandbox guide** [The Sandbox — Researcher Guide](https://docs.dev.fun/arena/poker-arena-and-prize/the-sandbox-researcher-guide) — see @sources/devfun-sandbox-researcher-guide-2026-06-26.md
 - **Starter kit**: [chenziz/arena-pokerkit](https://github.com/chenziz/arena-pokerkit) — see `@entities/tools/devfun-poker-arena-starter-kit.md` (K102)
 - **Official API**: `https://arena.dev.fun/api/arena` — **use for Playground S1 / public leaderboard**
 - **Beta API**: `https://b-arena.dev.fun/api/arena` — separate agents, wallets, leaderboards (legacy prep)
@@ -63,7 +64,7 @@ Same handle on beta and official = **two agent IDs**, **two custodial Monad wall
 |-------|--------|-------------------|
 | **Playground S*N*** | 6-max bot qualifier, season bankroll | Top **20** → free **Tournament S*N*** entry |
 | **Tournament S*N*** | Knockout bracket (paired season) | Top **25** in bracket |
-| **Researcher track** | **Heads-up** sandbox; **TrueSkill** ranking | Top agent = **field benchmark**; Dwan + Jungleman pick **style-matched** bots to represent them |
+| **Researcher track** | **Heads-up** sandbox; **TrueSkill** (PvP) + panel bot (PvE); **$15K** pool | Top agent = **field benchmark** + challengeable live bot; Dwan + Jungleman pick **style-matched** reps |
 | **Pro Table Finale** | Human vs AI showcase | Top agents vs pros (Dwan + Jungleman per PR) |
 
 Playground S1 qualification does **not** carry to Tournament S2 — re-qualify each playground season. [TENTATIVE — Discord 2026-06-08 for Playground/Tournament pairing]
@@ -75,9 +76,19 @@ Playground S1 qualification does **not** carry to Tournament S2 — re-qualify e
 | **2026-06-21** | Closed beta (researchers) |
 | **2026-06-25** | Public sandbox opens |
 
-**Researcher submission types:** **Bundle files** to sandbox (heuristic, LLM, fine-tuned weights, solver) conforming to submission interface [CONFIRMED Discord 2026-06-20 — @sources/devfun-researcher-sandbox-bundle-discord-2026-06-20.md]. LLM BYOK encrypted per isolated submission; **devs do not recommend LLM agents** for sandbox (cost + performance). **Tooling:** self-play SDK, Kaggle page, sponsored credits; **full bundle spec pending**.
+**Researcher submission** [CONFIRMED official docs 2026-06-26 — @sources/devfun-sandbox-researcher-guide-2026-06-26.md]:
 
-**Not the same lane as Playground** — HU vs 6-max; TrueSkill vs chip leaderboard; separate SDK/API surface until docs confirm parity with `arena-pokerkit`.
+| Aspect | Detail |
+|--------|--------|
+| **Submit** | **Agent bundle** → isolated **Daytona** sandbox per run; **BenchFlow** eval |
+| **Interface** | **`arena-tool` MCP** (`join_pve`, `get_game_state`, `submit_action`, `get_session_status`) — **no direct Arena HTTP** |
+| **Bundle paths** | `/app/workspace/harness/`, `assets/`, `skills/` (optional); minimum = decision policy |
+| **Agent types** | Python bot, fine-tuned model, weights file, LLM (BYOK encrypted per submission) |
+| **LLM posture** | Dev recommendation against LLM agents [CONFIRMED Discord 2026-06-20] |
+| **PvP rules** | Daily submit cap; validation match → `active`; one bot/user; leaderboard = **best finalized** |
+| **Access** | Whitelist during closed beta; `403` = not whitelisted |
+
+**Not the same lane as Playground** — HU vs 6-max; TrueSkill (equity-adj bb/100 blocks) vs chip leaderboard; **arena-tool** loop vs Playground HTTP polling (`arena-pokerkit`).
 
 Tom Dwan and Jungleman are **pro anchors** for finale marketing and researcher **style rep selection**, not players in bot Playground brackets. See @entities/people/tom-dwan.md, @entities/people/daniel-cates-jungleman.md.
 
@@ -92,7 +103,7 @@ Tom Dwan and Jungleman are **pro anchors** for finale marketing and researcher *
 | Mode | Shape |
 |------|--------|
 | **Texas Hold’em lobby** | Continuous 6-max tables, season bankroll |
-| **Researcher sandbox** | **Heads-up** bot-vs-bot; **TrueSkill**; self-play SDK + Kaggle |
+| **Researcher sandbox** | **Heads-up** PvP (TrueSkill) + PvE (panel bot); **arena-tool** MCP; $15K pool — @sources/devfun-sandbox-researcher-guide-2026-06-26.md |
 | **Poker Eval benchmark** | PVE vs reference panel; `POST /texas/benchmark/start` |
 | **Pump prediction** | Separate dev.fun skill family (out of scope) |
 

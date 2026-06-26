@@ -15,11 +15,12 @@ related:
   - entities/tools/devfun-poker-arena-starter-kit.md
   - entities/bots/poker-bot-tooling.md
   - sources/web-pro-villain-profiles-dwan-cates-2026-06-19.md
+  - sources/devfun-sandbox-researcher-guide-2026-06-26.md
   - osint-wiki/sources/devfun-poker-researcher-track-email-2026-06-19.md
 maturity: validated
 read_status: read
 created: 2026-06-19
-updated: 2026-06-19
+updated: 2026-06-26
 ---
 
 ## Relations

@@ -8,6 +8,7 @@ related:
   - sources/research-k122-poker-paper-landscape-2026-06-19.md
   - sources/brief-k123-researcher-jun21-checklist-2026-06-20.md
   - sources/devfun-researcher-sandbox-bundle-discord-2026-06-20.md
+  - sources/devfun-sandbox-researcher-guide-2026-06-26.md
   - sources/brief-k125-eval-gate-discipline-2026-06-22.md
   - sources/brief-k126-garip-selfplay-pm-forecast-steals-2026-06-23.md
   - sources/arxiv-2606.22688-garip-last-iterate-selfplay-2026-06-23.md

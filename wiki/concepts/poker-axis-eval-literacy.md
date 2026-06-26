@@ -9,9 +9,10 @@ related:
   - entities/platforms/devfun-poker-arena.md
   - concepts/poker-hl-analyst-loop.md
   - sources/devfun-poker-researcher-track-email-2026-06-19.md
+  - sources/devfun-sandbox-researcher-guide-2026-06-26.md
 maturity: draft
 created: 2026-06-19
-updated: 2026-06-19
+updated: 2026-06-26
 ---
 
 ## Relations

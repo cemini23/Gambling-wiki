@@ -17,9 +17,10 @@ related:
   - osint-wiki/sources/multi-wiki-tool-eval-50url-k102-2026-06-06.md
   - sources/brief-k118-poker-agent-research-gaps-2026-06-17.md
   - concepts/heads-up-arena-strategy.md
+  - sources/devfun-sandbox-researcher-guide-2026-06-26.md
 maturity: validated
 created: 2026-06-13
-updated: 2026-06-19
+updated: 2026-06-26
 phase_0_verdict: REFERENCE 2026-06-06 — MIT verified; agent-driven Arena entry path; no CeminiSuite integration
 ---
 
@@ -58,8 +59,9 @@ Official **MIT** starter for dev.fun **Poker Arena** — Python kit exposing a t
 
 1. Clone [devfun-org/poker-arena-starter-kit](https://github.com/devfun-org/poker-arena-starter-kit) → `./pokerkit test` / `./pokerkit selfplay --hands 200`
 2. Implement `decide()` — `examples/STRATEGY.md.template`; prod pattern in private `cemini_decide.py`
-3. Register agent → `arena_sk_` key → Playground / Eval / **researcher HU sandbox** (separate lane — see @concepts/heads-up-arena-strategy.md)
-4. Optional: `npx skills add chenziz/arena-pokerkit` for Cursor/Claude skill routing
+3. Register agent → `arena_sk_` key → **Playground / Eval** via HTTP polling (`pokerkit run`)
+4. **Researcher HU sandbox** — separate lane: bundle upload + **`arena-tool` MCP** in Daytona (no direct Arena HTTP) — @sources/devfun-sandbox-researcher-guide-2026-06-26.md
+5. Optional: `npx skills add chenziz/arena-pokerkit` for Cursor/Claude skill routing
 
 ### Boundaries
 

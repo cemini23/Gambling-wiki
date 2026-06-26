@@ -2,6 +2,11 @@
 
 Append-only chronological log.
 
+## [2026-06-26] wiki | dev.fun Sandbox Researcher Guide (official docs)
+
+- **New** — `sources/devfun-sandbox-researcher-guide-2026-06-26.md` — arena-tool MCP, bundle layout, PvP/PvE scoring, $15K pool, submit rules
+- **Updated** — `devfun-poker-arena.md`, `heads-up-arena-strategy.md`, `devfun-poker-arena-starter-kit.md`, Discord bundle source, K123 checklist
+
 ## [2026-06-26] wiki | Brief audit — fill missing source stubs
 
 - **New** — `brief-k130-rlcard-offline-baseline-adopt-2026-06-26.md` (K130 Adopt)
