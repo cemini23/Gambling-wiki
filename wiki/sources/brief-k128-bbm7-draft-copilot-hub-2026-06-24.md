@@ -12,10 +12,13 @@ related:
   - entities/tools/ceminidfs.md
   - concepts/diy-nfl-dfs-model-architecture.md
   - sources/4for4-bbm7-guide-series-2026-06-18.md
+  - sources/brief-k128b-bbm7-challenge-register-2026-06-24.md
+  - sources/brief-k128b-bbm7-challenges-and-solutions-2026-06-24.md
+  - sources/research-nfl-dfs-id-mapping-2026-06-20.md
 maturity: validated
 read_status: deep-read
 created: 2026-06-24
-updated: 2026-06-25
+updated: 2026-06-26
 cross-wiki-source: "briefs/2026-06-24_bbm7-live-draft-tool-master-plan.md"
 ---
 

@@ -28,9 +28,10 @@ related:
   - sources/arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24.md
   - entities/games/indian-rummy.md
   - sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md
+  - sources/brief-k130-rlcard-offline-baseline-adopt-2026-06-26.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-24
+updated: 2026-06-26
 ---
 
 ## Relations

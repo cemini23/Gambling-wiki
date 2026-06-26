@@ -13,9 +13,11 @@ related:
   - concepts/dfs-model-orchestration.md
   - concepts/dfs-backtesting-framework.md
   - sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md
+  - sources/research-nfl-dfs-id-mapping-2026-06-20.md
+  - sources/research-nfl-historical-odds-2026-06-20.md
 maturity: draft
 created: 2026-06-20
-updated: 2026-06-20
+updated: 2026-06-26
 ---
 
 ## Relations

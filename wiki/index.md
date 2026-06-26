@@ -188,6 +188,12 @@ Catalog of all wiki pages. Updated on each ingest.
 | [brief-k127-emagnet-irumai-selfplay-steals-2026-06-24](sources/brief-k127-emagnet-irumai-selfplay-steals-2026-06-24.md) | deep-read | EMAgnet + IRumAI + SETE steals |
 | [brief-k128-bbm7-draft-copilot-hub-2026-06-24](sources/brief-k128-bbm7-draft-copilot-hub-2026-06-24.md) | deep-read | BBM7 live draft tool hub |
 | [brief-k129-celeus-tmax-eval-steals-2026-06-25](sources/brief-k129-celeus-tmax-eval-steals-2026-06-25.md) | deep-read | CELEUS eval + Tmax steals |
+| [brief-k130-rlcard-offline-baseline-adopt-2026-06-26](sources/brief-k130-rlcard-offline-baseline-adopt-2026-06-26.md) | deep-read | RLCard Adopt reaffirmation |
+| [brief-k122-poker-researcher-track-plan-2026-06-19](sources/brief-k122-poker-researcher-track-plan-2026-06-19.md) | deep-read | HU researcher 6-lane plan |
+| [brief-k128b-bbm7-challenge-register-2026-06-24](sources/brief-k128b-bbm7-challenge-register-2026-06-24.md) | deep-read | BBM7 draft copilot challenges |
+| [brief-k128b-bbm7-challenges-and-solutions-2026-06-24](sources/brief-k128b-bbm7-challenges-and-solutions-2026-06-24.md) | deep-read | BBM7 solutions playbook |
+| [research-nfl-dfs-id-mapping-2026-06-20](sources/research-nfl-dfs-id-mapping-2026-06-20.md) | deep-read | FD/DK name normalize pipeline |
+| [research-nfl-historical-odds-2026-06-20](sources/research-nfl-historical-odds-2026-06-20.md) | deep-read | nflreadr Vegas backtest GO |
 | [arxiv-2606.20820-celeus-llm-eval-eprocesses-2026-06-25](sources/arxiv-2606.20820-celeus-llm-eval-eprocesses-2026-06-25.md) | skimmed | Anytime-valid LLM eval CIs |
 | [arxiv-2606.23321-tmax-terminal-agents-2026-06-25](sources/arxiv-2606.23321-tmax-terminal-agents-2026-06-25.md) | skimmed | Terminal agent training recipe |
 | [daily-digest-reject-cluster-k129-2026-06-25](sources/daily-digest-reject-cluster-k129-2026-06-25.md) | skimmed |

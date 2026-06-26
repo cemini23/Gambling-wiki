@@ -15,10 +15,12 @@ related:
   - entities/platforms/fanduel.md
   - sources/research-diy-dfs-model-master-plan-2026-06-20.md
   - sources/brief-k128-bbm7-draft-copilot-hub-2026-06-24.md
+  - sources/research-nfl-dfs-id-mapping-2026-06-20.md
+  - sources/research-nfl-historical-odds-2026-06-20.md
   - "@osint-wiki/concepts/active-project-research-routing.md"
 maturity: validated
 created: 2026-06-20
-updated: 2026-06-25
+updated: 2026-06-26
 ---
 
 ## Relations

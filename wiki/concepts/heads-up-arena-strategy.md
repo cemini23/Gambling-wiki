@@ -23,9 +23,10 @@ related:
   - sources/brief-k126-garip-selfplay-pm-forecast-steals-2026-06-23.md
   - sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md
   - sources/brief-k127-emagnet-irumai-selfplay-steals-2026-06-24.md
+  - sources/brief-k122-poker-researcher-track-plan-2026-06-19.md
 maturity: draft
 created: 2026-06-19
-updated: 2026-06-24
+updated: 2026-06-26
 ---
 
 ## Relations
@@ -98,7 +99,7 @@ Each hand is a new imperfect-information state. Policy stack:
 5. **Optional style overlay** — `jungleman` or `durrrr` priors for rep lane
 6. **Offline HL loop** — patch thresholds from analyze reports; **zero runtime LLM**
 
-Full research plan: `briefs/2026-06-19_k122-poker-researcher-track-research-plan.md` (operator).
+Full research plan: @sources/brief-k122-poker-researcher-track-plan-2026-06-19.md (operator copy in `briefs/`).
 
 ### SDK local iteration
 

@@ -13,9 +13,10 @@ related:
   - entities/bots/cemini-devfun-poker-agent.md
   - sources/arxiv-2606.19308-mafp-multi-agent-fictitious-play-2026-06-21.md
   - sources/arxiv-2606.14571-streammembench-agent-memory-2026-06-21.md
+  - sources/brief-k122-poker-researcher-track-plan-2026-06-19.md
 maturity: draft
 created: 2026-06-19
-updated: 2026-06-21
+updated: 2026-06-26
 ---
 
 ## Relations

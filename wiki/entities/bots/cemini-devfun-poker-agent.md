@@ -12,6 +12,8 @@ related:
   - sources/brief-k126-garip-selfplay-pm-forecast-steals-2026-06-23.md
   - sources/arxiv-2606.22688-garip-last-iterate-selfplay-2026-06-23.md
   - sources/brief-k127-emagnet-irumai-selfplay-steals-2026-06-24.md
+  - sources/brief-k122-poker-researcher-track-plan-2026-06-19.md
+  - sources/brief-k130-rlcard-offline-baseline-adopt-2026-06-26.md
   - sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md
   - sources/brief-k124-mafp-memory-poker-steals-2026-06-21.md
   - entities/platforms/devfun-poker-arena.md
@@ -38,7 +40,7 @@ related:
   - entities/games/poker.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-24
+updated: 2026-06-26
 adoption_status: ACTIVE-DEV
 claim_status: VERIFIED 2026-06-01 — @cemini23
 ---

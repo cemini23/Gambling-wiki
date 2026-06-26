@@ -12,16 +12,19 @@ related:
   - entities/bots/wagerbrain.md
   - entities/bots/README.md
   - concepts/opponent-modeling-imperfect-info.md
+  - sources/brief-k130-rlcard-offline-baseline-adopt-2026-06-26.md
 maturity: validated
 created: 2026-06-01
-updated: 2026-06-04
+updated: 2026-06-26
 laptop_install: VERIFIED 2026-06-01 — OSINT `.local/venv-gambling-research` (rlcard 1.2.0); run `gambling_research_venv.sh` in OSINT repo
+phase_0_verdict: ADOPT 2026-06-26 — K130 refresh; MIT; offline Leduc/limit-HU baselines only
 ---
 
 ## Relations
 
 - @concepts/poker-strategy-overview.md — poker research lane
 - @concepts/opponent-modeling-imperfect-info.md — sim research for opponent modeling
+- @sources/brief-k130-rlcard-offline-baseline-adopt-2026-06-26.md — K130 Adopt reaffirmation
 - @sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md — K92 Adopt (Cemini financial in eval; gambling = sim research)
 
 ## Raw Concept
@@ -40,12 +43,12 @@ Clone: `/tmp/k92-phase0/rlcard`
 | Check | Result |
 |-------|--------|
 | License | **MIT** |
-| Maturity | 3481★ / 744 forks / 80 open issues |
+| Maturity | 3508★ / 749 forks / 80 open issues (K130 refresh 2026-06-26) |
 | Activity | Last push **2024-06-26** (maintained, not daily) |
 | Fit | Poker-bot **research** and policy eval — aligns with casino/poker dead-end vs sportsbook split |
 | Cemini prod | **NO** default prod adopt — use for offline sim only unless explicit poker-bot workstream |
 
-**Verdict: CONDITIONAL-GO** — laptop research installs OK; document env deps; no prod deploy without separate brief.
+**Verdict: ADOPT** (K130 2026-06-26) — laptop research installs OK; Leduc/limit-HU offline baselines; no prod deploy without separate brief.
 
 ### Adoption status [ADOPTED 2026-06-01]
 

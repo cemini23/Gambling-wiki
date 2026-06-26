@@ -2,6 +2,14 @@
 
 Append-only chronological log.
 
+## [2026-06-26] wiki | Brief audit — fill missing source stubs
+
+- **New** — `brief-k130-rlcard-offline-baseline-adopt-2026-06-26.md` (K130 Adopt)
+- **New** — `brief-k122-poker-researcher-track-plan-2026-06-19.md`
+- **New** — `brief-k128b-bbm7-challenge-register` + `challenges-and-solutions` stubs
+- **New** — `research-nfl-dfs-id-mapping-2026-06-20.md`, `research-nfl-historical-odds-2026-06-20.md`
+- **Updated** — `rlcard.md` (K130 Phase-0 refresh ADOPT), poker-bot-tooling, CeminiDFS/BBM cross-links
+
 ## [2026-06-25] ingest | K129 — daily digest batch (CELEUS eval + Tmax)
 
 - **New** — `sources/arxiv-2606.20820-celeus-llm-eval-eprocesses-2026-06-25.md` (REFERENCE — anytime-valid LLM eval CIs)

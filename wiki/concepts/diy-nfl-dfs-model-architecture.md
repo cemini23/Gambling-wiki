@@ -33,10 +33,12 @@ related:
   - entities/platforms/fanduel.md
   - sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md
   - sources/research-diy-dfs-model-master-plan-2026-06-20.md
+  - sources/research-nfl-dfs-id-mapping-2026-06-20.md
+  - sources/research-nfl-historical-odds-2026-06-20.md
   - "@osint-wiki/concepts/nfl-coherence-risk-features.md"
 maturity: draft
 created: 2026-06-20
-updated: 2026-06-22
+updated: 2026-06-26
 ---
 
 ## Relations
