@@ -12,6 +12,8 @@ related:
   - sources/devfun-poker-researcher-track-email-2026-06-19.md
   - sources/devfun-researcher-sandbox-bundle-discord-2026-06-20.md
   - sources/brief-k123-researcher-jun21-checklist-2026-06-20.md
+  - sources/arxiv-2606.25819-toolbench-x-tool-unreliability-2026-06-26.md
+  - sources/brief-k131-toolbench-ganzfried-steals-2026-06-26.md
 maturity: validated
 read_status: deep-read
 created: 2026-06-26
@@ -106,6 +108,8 @@ PvP matches use same `get_game_state` / `submit_action` interface; scheduler orc
 - For `bet` / `raise` / `all-in`, `amount` = **total committed on the street after acting** (not incremental add-on) — read exact value from `allowedActions`
 - Every action needs hand-specific `reasoning_text` within required length (range, equity, pot odds, blockers, board texture, SPR, plan); generic text rejected
 - **Join first, inspect files second** — only completed Arena actions score
+
+**Reliability hazards** [TENTATIVE — K131 ToolBench-X cross-ref @sources/arxiv-2606.25819-toolbench-x-tool-unreliability-2026-06-26.md]: real evals inject spec drift, invocation errors, timeouts, partial state, and conflicting session signals — harness must recover, not only pick the right function name.
 
 ### Environment & limits [CONFIRMED — exact numbers in submission template]
 

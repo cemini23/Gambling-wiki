@@ -24,11 +24,13 @@ related:
   - sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md
   - sources/brief-k127-emagnet-irumai-selfplay-steals-2026-06-24.md
   - sources/brief-k129-celeus-tmax-eval-steals-2026-06-25.md
-  - sources/arxiv-2606.20820-celeus-llm-eval-eprocesses-2026-06-25.md
+  - sources/arxiv-2606.25819-toolbench-x-tool-unreliability-2026-06-26.md
+  - sources/brief-k131-toolbench-ganzfried-steals-2026-06-26.md
+  - sources/devfun-sandbox-researcher-guide-2026-06-26.md
   - osint-wiki/sources/trading-posts-compilation-7-2026-06-09.md
 maturity: validated
 created: 2026-06-03
-updated: 2026-06-25
+updated: 2026-06-26
 ---
 
 ## Relations
@@ -147,6 +149,10 @@ Same sections as @osint-wiki `BRIEF_TEMPLATE.md`: **Target**, **Summary**, **Bod
 4. After ~50 hands, next analyze round
 
 See private `README-CEMINI.md` for commands.
+
+### Researcher sandbox harness (K131) [CONFIRMED 2026-06-26]
+
+HL loop fixes **`decide()` policy**; researcher **bundle submit** adds **`arena-tool` MCP** hazard layer (@sources/arxiv-2606.25819-toolbench-x-tool-unreliability-2026-06-26.md). Function-call correctness ≠ match completion — harness needs retry/fallback on timeout, schema drift, and `reasoning_text` rejection. See @sources/devfun-sandbox-researcher-guide-2026-06-26.md and @sources/brief-k131-toolbench-ganzfried-steals-2026-06-26.md.
 
 ## Snippets
 

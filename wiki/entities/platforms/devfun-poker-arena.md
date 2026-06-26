@@ -26,6 +26,8 @@ related:
   - sources/brief-k123-researcher-jun21-checklist-2026-06-20.md
   - sources/devfun-researcher-sandbox-bundle-discord-2026-06-20.md
   - sources/devfun-sandbox-researcher-guide-2026-06-26.md
+  - sources/arxiv-2606.25819-toolbench-x-tool-unreliability-2026-06-26.md
+  - sources/brief-k131-toolbench-ganzfried-steals-2026-06-26.md
   - concepts/poker-axis-eval-literacy.md
 maturity: draft
 created: 2026-06-01

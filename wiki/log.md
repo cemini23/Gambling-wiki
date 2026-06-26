@@ -2,6 +2,16 @@
 
 Append-only chronological log.
 
+## [2026-06-26] ingest | K131 — daily digest batch (ToolBench-X + Ganzfried VBT)
+
+- **New** — `sources/arxiv-2606.25819-toolbench-x-tool-unreliability-2026-06-26.md` (REFERENCE — arena-tool hazard taxonomy)
+- **New** — `sources/arxiv-2606.25997-ganzfried-vbt-nash-imperfect-info-2026-06-26.md` (REFERENCE — exact multiplayer NE)
+- **New** — `sources/daily-digest-reject-cluster-k131-2026-06-26.md` (1 reject: ITS 2606.23015)
+- **New** — `sources/brief-k131-toolbench-ganzfried-steals-2026-06-26.md` + operator + OSINT arena brief
+- **Updated** — `poker-hl-analyst-loop.md`, `opponent-modeling-imperfect-info.md`, `custom-agent-methodology.md`, sandbox guide
+- **Archive** — 3 PDFs → egress-fi; inbox cleared
+- **Sweep** — `2026-06-26-daily.md` INGESTED
+
 ## [2026-06-26] wiki | dev.fun Sandbox Researcher Guide (official docs)
 
 - **New** — `sources/devfun-sandbox-researcher-guide-2026-06-26.md` — arena-tool MCP, bundle layout, PvP/PvE scoring, $15K pool, submit rules

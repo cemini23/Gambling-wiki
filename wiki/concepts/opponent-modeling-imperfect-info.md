@@ -29,10 +29,12 @@ related:
   - sources/brief-k124-mafp-memory-poker-steals-2026-06-21.md
   - sources/arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24.md
   - sources/arxiv-2606.20960-equilibrium-internal-transfers-2026-06-24.md
-  - sources/brief-k127-emagnet-irumai-selfplay-steals-2026-06-24.md
+  - sources/brief-k124-mafp-memory-poker-steals-2026-06-21.md
+  - sources/arxiv-2606.25997-ganzfried-vbt-nash-imperfect-info-2026-06-26.md
+  - sources/brief-k131-toolbench-ganzfried-steals-2026-06-26.md
 maturity: draft
 created: 2026-06-03
-updated: 2026-06-24
+updated: 2026-06-26
 ---
 
 ## Relations
@@ -43,8 +45,7 @@ updated: 2026-06-24
 - @entities/bots/cemini-devfun-poker-agent.md — `cemini_decide` + HUD implementation
 - @entities/platforms/devfun-poker-arena.md — NLHE agent arena (opens 2026-06-03)
 - @sources/arxiv-2508-17671-consistent-opponent-modeling.md — K95 anchor (Ganzfried 2508.17671)
-
-## Raw Concept
+- @sources/arxiv-2606.25997-ganzfried-vbt-nash-imperfect-info-2026-06-26.md — exact multiplayer NE via NLCP + VBT (K131)
 
 Synthesized from @sources/arxiv-2508-17671-consistent-opponent-modeling.md — how to **exploit suboptimal opponents** in repeated imperfect-information games (poker) using observed play, and why naive Bayesian Best Response (BBR) fails a **consistency** guarantee even against static opponents.
 
@@ -92,11 +93,11 @@ Full profiles: @sources/web-pro-villain-profiles-dwan-cates-2026-06-19.md. Apply
 
 **Safe Equilibrium Policy Optimization** (arxiv:2605.30854) trains LLM game agents with an explicit **exploitability penalty** alongside task payoff — the mirror problem to COM (which asks how to *exploit* weak opponents). On **Kuhn Poker**, SEPO drives exploit-pool advantage to **zero** (Nash mixed strategy) where SFT alone **increases** exploitability.
 
-| COM (Ganzfried) | SEPO (Arumugam et al.) |
-|-----------------|------------------------|
-| Exploit *suboptimal* opponents | Penalize *being* exploited |
-| Sequence-form posterior convergence | GRPO + per-rollout adversarial pool |
-| Arena HUD / `opponent_target.py` lane | Future LLM fine-tune research lane |
+| COM (Ganzfried) | SEPO (Arumugam et al.) | VBT exact NE (2606.25997) |
+|-----------------|------------------------|---------------------------|
+| Exploit *suboptimal* opponents | Penalize *being* exploited | **Exact** multiplayer Nash (toy games) |
+| Sequence-form posterior convergence | GRPO + per-rollout adversarial pool | NLCP + branch-and-bound — not NLHE scale |
+| Arena HUD / `opponent_target.py` lane | Future LLM fine-tune research lane | Theory ceiling for why approximations persist |
 
 See `@sources/daily-digest-arxiv-batch-2026-06-04.md` and `@entities/bots/poker-bot-tooling.md`.
 

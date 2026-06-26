@@ -8,16 +8,18 @@ related:
   - entities/bots/cemini-devfun-poker-agent.md
   - entities/platforms/devfun-poker-arena.md
   - sources/brief-k118-poker-agent-research-gaps-2026-06-17.md
+  - sources/brief-k131-toolbench-ganzfried-steals-2026-06-26.md
 maturity: draft
 read_status: read
 created: 2026-06-03
-updated: 2026-06-03
+updated: 2026-06-26
 ---
 
 ## Relations
 
 - @concepts/opponent-modeling-imperfect-info.md — K95 synthesis
 - @entities/bots/cemini-devfun-poker-agent.md — arena agent exploit lane
+- @sources/arxiv-2606.25997-ganzfried-vbt-nash-imperfect-info-2026-06-26.md — Ganzfried exact NE follow-on (K131)
 
 ## Raw Concept
 
