@@ -2,6 +2,15 @@
 
 Append-only chronological log.
 
+## [2026-06-27] ingest | K132 — daily digest batch (Fara-1.5 CUA envs)
+
+- **New** — `sources/arxiv-2606.20785-fara-computer-use-agents-2026-06-27.md` (CONDITIONAL-GO — MIT microsoft/fara)
+- **New** — `sources/daily-digest-reject-cluster-k132-2026-06-27.md` (1 reject: FDN 2606.25201)
+- **New** — `sources/brief-k132-fara-agent-env-steals-2026-06-27.md` + operator + OSINT arena brief
+- **Updated** — `poker-hl-analyst-loop.md`, `custom-agent-methodology.md`, sandbox guide
+- **Archive** — 2 PDFs → egress-fi; inbox cleared
+- **Sweep** — `2026-06-27-daily.md` INGESTED
+
 ## [2026-06-26] ingest | K131 — daily digest batch (ToolBench-X + Ganzfried VBT)
 
 - **New** — `sources/arxiv-2606.25819-toolbench-x-tool-unreliability-2026-06-26.md` (REFERENCE — arena-tool hazard taxonomy)

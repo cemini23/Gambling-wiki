@@ -13,11 +13,12 @@ related:
   - sources/devfun-researcher-sandbox-bundle-discord-2026-06-20.md
   - sources/brief-k123-researcher-jun21-checklist-2026-06-20.md
   - sources/arxiv-2606.25819-toolbench-x-tool-unreliability-2026-06-26.md
-  - sources/brief-k131-toolbench-ganzfried-steals-2026-06-26.md
+  - sources/brief-k132-fara-agent-env-steals-2026-06-27.md
+  - sources/arxiv-2606.20785-fara-computer-use-agents-2026-06-27.md
 maturity: validated
 read_status: deep-read
 created: 2026-06-26
-updated: 2026-06-26
+updated: 2026-06-27
 ---
 
 ## Relations
@@ -110,6 +111,8 @@ PvP matches use same `get_game_state` / `submit_action` interface; scheduler orc
 - **Join first, inspect files second** — only completed Arena actions score
 
 **Reliability hazards** [TENTATIVE — K131 ToolBench-X cross-ref @sources/arxiv-2606.25819-toolbench-x-tool-unreliability-2026-06-26.md]: real evals inject spec drift, invocation errors, timeouts, partial state, and conflicting session signals — harness must recover, not only pick the right function name.
+
+**Verifier triad** [TENTATIVE — K132 FaraGen cross-ref @sources/arxiv-2606.20785-fara-computer-use-agents-2026-06-27.md]: score bundle trajectories on **correctness** (legal completed actions), **efficiency** (clock budget), and **critical-point adherence** (`reasoning_text` + join-first rule).
 
 ### Environment & limits [CONFIRMED — exact numbers in submission template]
 

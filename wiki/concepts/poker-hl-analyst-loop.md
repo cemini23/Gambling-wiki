@@ -26,11 +26,13 @@ related:
   - sources/brief-k129-celeus-tmax-eval-steals-2026-06-25.md
   - sources/arxiv-2606.25819-toolbench-x-tool-unreliability-2026-06-26.md
   - sources/brief-k131-toolbench-ganzfried-steals-2026-06-26.md
+  - sources/arxiv-2606.20785-fara-computer-use-agents-2026-06-27.md
+  - sources/brief-k132-fara-agent-env-steals-2026-06-27.md
   - sources/devfun-sandbox-researcher-guide-2026-06-26.md
   - osint-wiki/sources/trading-posts-compilation-7-2026-06-09.md
 maturity: validated
 created: 2026-06-03
-updated: 2026-06-26
+updated: 2026-06-27
 ---
 
 ## Relations
@@ -152,7 +154,9 @@ See private `README-CEMINI.md` for commands.
 
 ### Researcher sandbox harness (K131) [CONFIRMED 2026-06-26]
 
-HL loop fixes **`decide()` policy**; researcher **bundle submit** adds **`arena-tool` MCP** hazard layer (@sources/arxiv-2606.25819-toolbench-x-tool-unreliability-2026-06-26.md). Function-call correctness ≠ match completion — harness needs retry/fallback on timeout, schema drift, and `reasoning_text` rejection. See @sources/devfun-sandbox-researcher-guide-2026-06-26.md and @sources/brief-k131-toolbench-ganzfried-steals-2026-06-26.md.
+HL loop fixes **`decide()` policy**; researcher **bundle submit** adds **`arena-tool` MCP** hazard layer (@sources/arxiv-2606.25819-toolbench-x-tool-unreliability-2026-06-26.md). Function-call correctness ≠ match completion — harness needs retry/fallback on timeout, schema drift, and `reasoning_text` rejection.
+
+**FaraGen verifier triad** (K132 — @sources/arxiv-2606.20785-fara-computer-use-agents-2026-06-27.md): private bundle regression should score **correctness**, **efficiency**, and **critical-point adherence** alongside K131 hazard injection. See @sources/brief-k132-fara-agent-env-steals-2026-06-27.md.
 
 ## Snippets
 

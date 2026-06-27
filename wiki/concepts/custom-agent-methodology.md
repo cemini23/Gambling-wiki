@@ -17,9 +17,10 @@ related:
   - sources/arxiv-2606.19308-mafp-multi-agent-fictitious-play-2026-06-21.md
   - sources/brief-k124-mafp-memory-poker-steals-2026-06-21.md
   - sources/arxiv-2606.25819-toolbench-x-tool-unreliability-2026-06-26.md
+  - sources/arxiv-2606.20785-fara-computer-use-agents-2026-06-27.md
 maturity: validated
 created: 2026-06-19
-updated: 2026-06-26
+updated: 2026-06-27
 ---
 
 ## Relations

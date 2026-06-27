@@ -12,11 +12,12 @@ related:
   - sources/devfun-sandbox-researcher-guide-2026-06-26.md
   - sources/brief-k131-toolbench-ganzfried-steals-2026-06-26.md
   - sources/daily-digest-reject-cluster-k131-2026-06-26.md
+  - sources/arxiv-2606.20785-fara-computer-use-agents-2026-06-27.md
   - sweeps/2026-06-26-daily.md
 maturity: draft
 read_status: skimmed
 created: 2026-06-26
-updated: 2026-06-26
+updated: 2026-06-27
 location: cemini-egress-fi:/opt/cemini-bulk/research/gambling/arxiv-2606.25819-2606-25819v1-beyond-function-calling-benchmarkin.pdf
 phase_0_verdict: CONDITIONAL-GO 2026-06-26 — ToolBench-X repo has no LICENSE (gh api); reference benchmark design only, no install
 ---

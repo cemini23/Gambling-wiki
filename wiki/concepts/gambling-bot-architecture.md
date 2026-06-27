@@ -46,10 +46,11 @@ related:
   - concepts/pm-live-belief-updating.md
   - sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md
   - sources/arxiv-2606.11869-agents-all-the-way-down-2026-06-19.md
+  - sources/arxiv-2606.20785-fara-computer-use-agents-2026-06-27.md
   - sources/daily-digest-reject-cluster-k116-2026-06-17.md
 maturity: core
 created: 2026-05-31
-updated: 2026-06-19
+updated: 2026-06-27
 ---
 
 # Gambling bot architecture (planned)
