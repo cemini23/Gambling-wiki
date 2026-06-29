@@ -204,6 +204,8 @@ Catalog of all wiki pages. Updated on each ingest.
 | [daily-digest-reject-cluster-k131-2026-06-26](sources/daily-digest-reject-cluster-k131-2026-06-26.md) | skimmed | K131 reject cluster (ITS false positive) |
 | [arxiv-2606.20785-fara-computer-use-agents-2026-06-27](sources/arxiv-2606.20785-fara-computer-use-agents-2026-06-27.md) | skimmed | Fara-1.5 CUA env+verifier pipeline (MIT) |
 | [daily-digest-reject-cluster-k132-2026-06-27](sources/daily-digest-reject-cluster-k132-2026-06-27.md) | skimmed | K132 reject cluster (FDN spatiotemporal false positive) |
+| [arxiv-2606.26294-red-queen-godel-machine-2026-06-29](sources/arxiv-2606.26294-red-queen-godel-machine-2026-06-29.md) | skimmed | RQGM co-evolving agents + evaluators |
+| [daily-digest-reject-cluster-k133-2026-06-29](sources/daily-digest-reject-cluster-k133-2026-06-29.md) | skimmed | K133 reject cluster (algebra HRL + MOMDP false positives) |
 | [daily-digest-reject-cluster-k129-2026-06-25](sources/daily-digest-reject-cluster-k129-2026-06-25.md) | skimmed |
 | [arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24](sources/arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24.md) | skimmed | First RL agent for Indian Rummy |
 | [arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24](sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md) | skimmed | Parameter EMA self-play magnet |

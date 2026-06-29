@@ -2,6 +2,15 @@
 
 Append-only chronological log.
 
+## [2026-06-29] ingest | K133 — daily digest batch (RQGM co-evolving evaluators)
+
+- **New** — `sources/arxiv-2606.26294-red-queen-godel-machine-2026-06-29.md` (CONDITIONAL-GO — paper-only)
+- **New** — `sources/daily-digest-reject-cluster-k133-2026-06-29.md` (2 rejects: 2606.22922 algebra, 2606.26397 MOMDP)
+- **New** — `sources/brief-k133-rqgm-evaluator-steals-2026-06-29.md` + operator + OSINT arena brief
+- **Updated** — `poker-hl-analyst-loop.md`, `custom-agent-methodology.md`, `gambling-bot-architecture.md`, Fara source backlink
+- **Archive** — 3 PDFs → egress-fi; inbox cleared
+- **Sweep** — `2026-06-29-daily.md` INGESTED
+
 ## [2026-06-27] ingest | K132 — daily digest batch (Fara-1.5 CUA envs)
 
 - **New** — `sources/arxiv-2606.20785-fara-computer-use-agents-2026-06-27.md` (CONDITIONAL-GO — MIT microsoft/fara)

@@ -18,9 +18,10 @@ related:
   - sources/brief-k124-mafp-memory-poker-steals-2026-06-21.md
   - sources/arxiv-2606.25819-toolbench-x-tool-unreliability-2026-06-26.md
   - sources/arxiv-2606.20785-fara-computer-use-agents-2026-06-27.md
+  - sources/arxiv-2606.26294-red-queen-godel-machine-2026-06-29.md
 maturity: validated
 created: 2026-06-19
-updated: 2026-06-27
+updated: 2026-06-29
 ---
 
 ## Relations
@@ -78,6 +79,19 @@ Paper claim: orchestration = **`call_cli` composition** — parent agent invokes
 - Shared core (bankroll, Kelly, logging) can orchestrate lane bots via CLI contracts
 - Avoid heavyweight MAS frameworks until typed shared state or durable workflows are required (§5.4 leaks)
 - **NO-GO:** OrchRM-style runtime LLM orchestration for prod wagering (K119 reject cluster)
+
+### Evaluator co-evolution (K133 RQGM) [TENTATIVE]
+
+Self-improving agent literature assumes **stationary** benchmarks; RQGM @sources/arxiv-2606.26294-red-queen-godel-machine-2026-06-29.md introduces **epoch-versioned utilities** and co-evolved judges. For gambling-bot program:
+
+| Pattern | Application |
+|---------|-------------|
+| Fixed within-epoch eval | Private HL regression + sandbox verifier weights frozen per patch generation |
+| Epoch boundary update | Document eval changelog when corpus or judge rubric shifts |
+| Agent-as-judge | Cheap screening before expensive sim — pairs K132 Fara verifier triad |
+| Adversarial epoch | Correct PvE panel over-acceptance on AI bundles |
+
+**NO-GO:** RQGM recursive self-edit on prod `decide()` during live competition.
 
 ## Snippets
 

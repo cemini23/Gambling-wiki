@@ -11,12 +11,13 @@ related:
   - sources/arxiv-2606.23321-tmax-terminal-agents-2026-06-25.md
   - sources/devfun-sandbox-researcher-guide-2026-06-26.md
   - sources/brief-k132-fara-agent-env-steals-2026-06-27.md
+  - sources/arxiv-2606.26294-red-queen-godel-machine-2026-06-29.md
   - sources/daily-digest-reject-cluster-k132-2026-06-27.md
   - sweeps/2026-06-27-daily.md
 maturity: draft
 read_status: skimmed
 created: 2026-06-27
-updated: 2026-06-27
+updated: 2026-06-29
 location: cemini-egress-fi:/opt/cemini-bulk/research/gambling/arxiv-2606.20785-2606-20785v1-fara-1-5-scalable-learning-environm.pdf
 phase_0_verdict: CONDITIONAL-GO 2026-06-27 — MIT github.com/microsoft/fara (5931★); reference env+verifier pipeline only, not wagering
 ---
@@ -25,6 +26,7 @@ phase_0_verdict: CONDITIONAL-GO 2026-06-27 — MIT github.com/microsoft/fara (59
 
 - @sources/arxiv-2606.25819-toolbench-x-tool-unreliability-2026-06-26.md — tool/MCP hazard eval (K131)
 - @sources/arxiv-2606.23321-tmax-terminal-agents-2026-06-25.md — synthetic task generation (K129)
+- @sources/arxiv-2606.26294-red-queen-godel-machine-2026-06-29.md — co-evolving evaluators (K133)
 - @sources/devfun-sandbox-researcher-guide-2026-06-26.md — researcher `arena-tool` submit loop
 - @sources/brief-k132-fara-agent-env-steals-2026-06-27.md — K132 operator steals
 
@@ -59,7 +61,7 @@ Models (Qwen3.5 4B/9B/27B) set size-class SOTA on **Online-Mind2Web** (Fara1.5-9
 | **dev.fun researcher sandbox** | **Medium** — tri-verifier pattern maps to bundle eval: legal action + clock efficiency + reasoning-text quality |
 | **Playground `decide()`** | Low — browser CUA ≠ NLHE policy |
 | **CeminiDFS** | NO-GO |
-| **Agent eval harness design** | **HIGH** — synthetic env for gated flows mirrors Daytona sandbox; verifier stack complements ToolBench-X hazards |
+| **Agent eval harness design** | **HIGH** — synthetic env for gated flows mirrors Daytona sandbox; verifier stack complements ToolBench-X hazards; co-evolving evaluators per K133 RQGM |
 
 Phase-0 **CONDITIONAL-GO**: read MIT repo for FaraGen verifier composition; do not deploy CUA for sportsbook/PM automation (ToS + scope).
 
