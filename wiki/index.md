@@ -78,6 +78,8 @@ Catalog of all wiki pages. Updated on each ingest.
 | [devfun-sandbox-researcher-guide-2026-06-26](sources/devfun-sandbox-researcher-guide-2026-06-26.md) | deep-read | Official sandbox guide — arena-tool, bundle layout, TrueSkill, $15K pool |
 | [brief-k131-toolbench-ganzfried-steals-2026-06-26](sources/brief-k131-toolbench-ganzfried-steals-2026-06-26.md) | deep-read | ToolBench-X hazards + Ganzfried VBT Nash steals |
 | [brief-k132-fara-agent-env-steals-2026-06-27](sources/brief-k132-fara-agent-env-steals-2026-06-27.md) | deep-read | FaraGen tri-verifier steals for arena harness |
+| [brief-k133-rqgm-evaluator-steals-2026-06-29](sources/brief-k133-rqgm-evaluator-steals-2026-06-29.md) | deep-read | RQGM co-evolving evaluator epoch steals |
+| [brief-k134-ganzfried-ped-deal-games-steals-2026-06-30](sources/brief-k134-ganzfried-ped-deal-games-steals-2026-06-30.md) | deep-read | Ganzfried PED + OpenSpiel exploitability ladder |
 | [casino-game-house-edge](concepts/casino-game-house-edge.md) | validated | Edge by game, smart-bet ranking |
 | [prediction-markets-crossover](concepts/prediction-markets-crossover.md) | validated | Kalshi/Polymarket retail lens |
 | [pm-live-belief-updating](concepts/pm-live-belief-updating.md) | validated | Live PM underreaction, salience×liquidity |
@@ -206,6 +208,9 @@ Catalog of all wiki pages. Updated on each ingest.
 | [daily-digest-reject-cluster-k132-2026-06-27](sources/daily-digest-reject-cluster-k132-2026-06-27.md) | skimmed | K132 reject cluster (FDN spatiotemporal false positive) |
 | [arxiv-2606.26294-red-queen-godel-machine-2026-06-29](sources/arxiv-2606.26294-red-queen-godel-machine-2026-06-29.md) | skimmed | RQGM co-evolving agents + evaluators |
 | [daily-digest-reject-cluster-k133-2026-06-29](sources/daily-digest-reject-cluster-k133-2026-06-29.md) | skimmed | K133 reject cluster (algebra HRL + MOMDP false positives) |
+| [arxiv-2606.29169-ganzfried-ped-nash-imperfect-info-2026-06-30](sources/arxiv-2606.29169-ganzfried-ped-nash-imperfect-info-2026-06-30.md) | skimmed | Ganzfried PED — multiplayer NE approximation |
+| [arxiv-2606.29457-takeover-auction-diligence-games-2026-06-30](sources/arxiv-2606.29457-takeover-auction-diligence-games-2026-06-30.md) | skimmed | OpenSpiel M&A auction exploitability benchmark (MIT) |
+| [daily-digest-batch-k134-2026-06-30](sources/daily-digest-batch-k134-2026-06-30.md) | skimmed | K134 batch (2 REFERENCE ingests) |
 | [daily-digest-reject-cluster-k129-2026-06-25](sources/daily-digest-reject-cluster-k129-2026-06-25.md) | skimmed |
 | [arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24](sources/arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24.md) | skimmed | First RL agent for Indian Rummy |
 | [arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24](sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md) | skimmed | Parameter EMA self-play magnet |

@@ -2,6 +2,16 @@
 
 Append-only chronological log.
 
+## [2026-06-30] ingest | K134 — daily digest batch (Ganzfried PED + deal-games)
+
+- **New** — `sources/arxiv-2606.29169-ganzfried-ped-nash-imperfect-info-2026-06-30.md` (REFERENCE)
+- **New** — `sources/arxiv-2606.29457-takeover-auction-diligence-games-2026-06-30.md` (CONDITIONAL-GO — MIT deal-games)
+- **New** — `sources/daily-digest-batch-k134-2026-06-30.md` (2 REFERENCE / 0 reject)
+- **New** — `sources/brief-k134-ganzfried-ped-deal-games-steals-2026-06-30.md` + operator + OSINT arena brief
+- **Updated** — `opponent-modeling-imperfect-info.md`, `poker-hl-analyst-loop.md`, Ganzfried VBT backlink; index brief stubs k133+k134
+- **Archive** — 2 PDFs → egress-fi; inbox cleared
+- **Sweep** — `2026-06-30-daily.md` INGESTED
+
 ## [2026-06-29] ingest | K133 — daily digest batch (RQGM co-evolving evaluators)
 
 - **New** — `sources/arxiv-2606.26294-red-queen-godel-machine-2026-06-29.md` (CONDITIONAL-GO — paper-only)

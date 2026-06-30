@@ -29,9 +29,11 @@ related:
   - entities/games/indian-rummy.md
   - sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md
   - sources/brief-k130-rlcard-offline-baseline-adopt-2026-06-26.md
+  - sources/arxiv-2606.29457-takeover-auction-diligence-games-2026-06-30.md
+  - sources/arxiv-2606.29169-ganzfried-ped-nash-imperfect-info-2026-06-30.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-26
+updated: 2026-06-30
 ---
 
 ## Relations
@@ -77,6 +79,8 @@ K92 eval **poker engine / RL** cluster — **research and evaluation** lane for 
 **GIMARL** (arxiv:2605.31318, 2026-06-02 digest): **Generalized Intention Modeling** — mixture of task-specific opponent intent embeddings; one head maximizes MI with ego **returns**. [TENTATIVE] Useful design pattern for **sim bots** and Arena-style opponent modeling; benchmarks are general MARL, not NLHE. See `@sources/daily-digest-arxiv-batch-2026-06-02.md`.
 
 **SEPO** (arxiv:2605.30854, 2026-06-04 digest): **Safe Equilibrium Policy Optimization** — GRPO reward = payoff minus exploitability / collusion / externality penalties. Achieves **zero exploit-pool advantage** on **Kuhn Poker** (Gemma 4, Qwen 3.5-4B); SFT alone worsens exploit resistance. Critical implementation detail: exploit penalty must be computed **per rollout** (constant penalty cancels in advantage normalization → zero gradient). [TENTATIVE] Research lane for LLM poker agents; complements PokerSkill (skills + LLM) and Ganzfried opponent modeling. See `@sources/daily-digest-arxiv-batch-2026-06-04.md`.
+
+**Deal-games OpenSpiel** (arxiv:2606.29457, K134): MIT `imperfect-information-deal-games` — M&A auction imperfect-info benchmarks with **CFR vs PPO** exploitability ladder. Not poker, but reusable pattern for when exact solvers stop scaling. See @sources/arxiv-2606.29457-takeover-auction-diligence-games-2026-06-30.md.
 
 ### Gambling-bot program fit
 

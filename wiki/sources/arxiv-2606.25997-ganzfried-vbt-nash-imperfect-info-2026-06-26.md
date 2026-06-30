@@ -11,11 +11,12 @@ related:
   - sources/arxiv-2508-17671-consistent-opponent-modeling.md
   - sources/brief-k131-toolbench-ganzfried-steals-2026-06-26.md
   - sources/daily-digest-reject-cluster-k131-2026-06-26.md
+  - sources/arxiv-2606.29169-ganzfried-ped-nash-imperfect-info-2026-06-30.md
   - sweeps/2026-06-26-daily.md
 maturity: draft
 read_status: skimmed
 created: 2026-06-26
-updated: 2026-06-26
+updated: 2026-06-30
 location: cemini-egress-fi:/opt/cemini-bulk/research/gambling/arxiv-2606.25997-pdf-variable-bound-tightening-for-nash-equilibri.pdf
 phase_0_verdict: REFERENCE 2026-06-26 — exact Nash solver theory; no wagering bot adoption path
 ---
@@ -25,6 +26,7 @@ phase_0_verdict: REFERENCE 2026-06-26 — exact Nash solver theory; no wagering 
 - @sources/arxiv-2508-17671-consistent-opponent-modeling.md — prior Ganzfried opponent-modeling anchor (K95)
 - @concepts/opponent-modeling-imperfect-info.md — exploit lane vs exact equilibrium computation
 - @sources/brief-k131-toolbench-ganzfried-steals-2026-06-26.md — K131 operator summary
+- @sources/arxiv-2606.29169-ganzfried-ped-nash-imperfect-info-2026-06-30.md — scalable PED / FP-PED (K134)
 
 ## Raw Concept
 
