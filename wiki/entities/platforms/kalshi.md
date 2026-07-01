@@ -29,9 +29,11 @@ related:
   - sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md
   - concepts/pm-proper-scoring-clob-profitability.md
   - sources/openreview-prophets-profit-pm-LYSTj2Cnuu-2026-06-17.md
+  - sources/arxiv-2606.30040-kalshi-macro-belief-distributions-2026-07-01.md
+  - sources/arxiv-2606.31675-settlement-manipulation-prediction-markets-2026-07-01.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-06-17
+updated: 2026-07-01
 ---
 
 ## Relations
@@ -97,6 +99,14 @@ Angelini & De Angelis merge **1-min Kalshi NBA game-contract quotes** with **pla
 | Salience × liquidity | Visible events in **thin** markets underreact most |
 
 Retail: live mids **track the game** but **lag full fair-value move** — size down in illiquid states; don't market-chase the lag. Bot: liquidity gate + drift-aware limits. Hub: `@concepts/pm-live-belief-updating.md`, `@sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md`.
+
+### Macro CPI belief distributions (K135) [TENTATIVE 2026-07-01]
+
+@sources/arxiv-2606.30040-kalshi-macro-belief-distributions-2026-07-01.md (Angelini) recovers **full implied distributions** from adjacent **CPI / core CPI threshold** contracts — tail probabilities often carry signal beyond Reuters point consensus. Pairs live NBA updating paper above.
+
+### Crypto event-contract volume (K135 context) [TENTATIVE]
+
+@sources/arxiv-2606.31675-settlement-manipulation-prediction-markets-2026-07-01.md cites Kalshi crypto binaries passing **$1B/month** (Mar 2026) as horizons shrink — same **cash-settlement manipulation** structural risk applies when contracts settle on manipulable spot prices.
 
 ## Snippets
 

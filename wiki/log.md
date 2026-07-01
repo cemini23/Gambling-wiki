@@ -2,6 +2,16 @@
 
 Append-only chronological log.
 
+## [2026-07-01] ingest | K135 — daily digest batch (PM settlement + Kalshi macro beliefs)
+
+- **New** — `sources/arxiv-2606.31675-settlement-manipulation-prediction-markets-2026-07-01.md` (REFERENCE)
+- **New** — `sources/arxiv-2606.30040-kalshi-macro-belief-distributions-2026-07-01.md` (REFERENCE)
+- **New** — `sources/daily-digest-batch-k135-2026-07-01.md` (2 REFERENCE / 0 reject)
+- **New** — `sources/brief-k135-pm-settlement-macro-beliefs-steals-2026-07-01.md` + operator brief
+- **Updated** — `polymarket.md`, `kalshi.md`, `prediction-markets-crossover.md`, Kalshi live-belief backlink
+- **Archive** — 2 PDFs → egress-fi; inbox cleared
+- **Sweep** — `2026-07-01-daily.md` INGESTED
+
 ## [2026-06-30] ingest | K134 — daily digest batch (Ganzfried PED + deal-games)
 
 - **New** — `sources/arxiv-2606.29169-ganzfried-ped-nash-imperfect-info-2026-06-30.md` (REFERENCE)

@@ -15,10 +15,11 @@ related:
   - meta/daily-research-digest-cadence.md
   - sweeps/2026-06-09-daily.md
   - sources/daily-digest-arxiv-batch-2026-06-01.md
+  - sources/arxiv-2606.30040-kalshi-macro-belief-distributions-2026-07-01.md
 maturity: validated
 read_status: deep-read
 created: 2026-06-09
-updated: 2026-06-09
+updated: 2026-07-01
 ---
 
 ## Relations
@@ -27,6 +28,7 @@ updated: 2026-06-09
 - @concepts/pm-live-belief-updating.md — retail + bot synthesis page
 - @entities/platforms/kalshi.md — platform entity
 - @entities/sports/nba-betting.md — sport context (NBA Finals stress test window)
+- @sources/arxiv-2606.30040-kalshi-macro-belief-distributions-2026-07-01.md — same author; CPI distribution panel (K135)
 
 ## Raw Concept
 

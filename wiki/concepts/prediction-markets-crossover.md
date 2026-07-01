@@ -40,11 +40,14 @@ related:
   - concepts/pm-proper-scoring-clob-profitability.md
   - concepts/pm-llm-coherence-projection.md
   - concepts/pm-agent-cognitive-monoculture.md
+  - sources/arxiv-2606.31675-settlement-manipulation-prediction-markets-2026-07-01.md
+  - sources/arxiv-2606.30040-kalshi-macro-belief-distributions-2026-07-01.md
+  - sources/brief-k135-pm-settlement-macro-beliefs-steals-2026-07-01.md
   - @seo-wiki/concepts/outlier-weekly-issue3-world-cup-bot-notes.md
   - @seo-wiki/concepts/generative-engine-optimization.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-06-18
+updated: 2026-07-01
 ---
 
 ## Relations
@@ -83,6 +86,8 @@ How Kalshi and Polymarket fit the **wagering** knowledge base vs the **trading s
 3. Compare price vs **sportsbook line** (CLV analog)
 4. Size with **fractional Kelly** — `@concepts/kelly-criterion-betting.md` + `@osint-wiki/concepts/kelly-sizing-quarter.md`
 5. Know **jurisdiction** — geoblocks, KYC; state **gambling-license** fights may restrict sports contracts (`@sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md`)
+6. **Horizon + cash-settlement** (K135) — avoid or minimize **short-horizon asset-price** binaries (e.g. 5-min crypto) where spot can be pushed at oracle close; prefer **15-min+** or non-spot-settled events (`@sources/arxiv-2606.31675-settlement-manipulation-prediction-markets-2026-07-01.md`)
+7. **Macro ladders** — on Kalshi CPI thresholds, read **tail distribution** not point mean alone (`@sources/arxiv-2606.30040-kalshi-macro-belief-distributions-2026-07-01.md`)
 
 ### Tools spanning both wikis
 

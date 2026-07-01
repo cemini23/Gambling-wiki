@@ -40,9 +40,10 @@ related:
   - sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md
   - sources/arxiv-2606.21013-agentic-time-machine-forecasting-2026-06-23.md
   - sources/brief-k126-garip-selfplay-pm-forecast-steals-2026-06-23.md
+  - sources/arxiv-2606.31675-settlement-manipulation-prediction-markets-2026-07-01.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-06-23
+updated: 2026-07-01
 ---
 
 ## Relations
@@ -81,6 +82,10 @@ Fee revenue was **zero before Jan 2026**. Post-activation descriptive pattern: l
 **Polymarket-v1** public archive — 1.2B trades, Nov 2022 – Apr 2026, ground-truth aggressor side. Use for offline FLB/calibration backtests; live wagering still uses Gamma/CLOB. See `@concepts/polymarket-v1-research-database.md` and [HuggingFace dataset](https://huggingface.co/datasets/TimeSeventeen/Polymarket-v1).
 
 **Empirical FLB on v1 panel:** longshots (≤30¢) **overpriced**, favorites (≥40¢) **underpriced** — paper terms this **favorite-longshot reversal** (opposite sign from classic racetrack FLB). `@concepts/favorite-longshot-bias.md`.
+
+### Short-horizon crypto — settlement manipulation (K135) [CONFIRMED 2026-07-01]
+
+@sources/arxiv-2606.31675-settlement-manipulation-prediction-markets-2026-07-01.md: **5-minute BTC** binaries show settlement-time spot pushes, post-close reversals, and **~93%** retail loss share in manipulated cycles. **15-minute** horizon largely clears the signature. **Retail:** NO-GO or minimal size on sub-15-minute asset-price binaries.
 
 ### Research signals
 
