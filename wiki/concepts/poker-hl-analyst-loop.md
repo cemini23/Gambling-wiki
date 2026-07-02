@@ -33,11 +33,13 @@ related:
   - sources/brief-k134-ganzfried-ped-deal-games-steals-2026-06-30.md
   - sources/arxiv-2606.29169-ganzfried-ped-nash-imperfect-info-2026-06-30.md
   - sources/arxiv-2606.29457-takeover-auction-diligence-games-2026-06-30.md
+  - sources/brief-k136-tool-rl-collapse-steals-2026-07-02.md
+  - sources/arxiv-2606.26027-tool-rl-collapse-supervisory-signals-2026-07-02.md
   - sources/devfun-sandbox-researcher-guide-2026-06-26.md
   - osint-wiki/sources/trading-posts-compilation-7-2026-06-09.md
 maturity: validated
 created: 2026-06-03
-updated: 2026-06-30
+updated: 2026-07-02
 ---
 
 ## Relations
@@ -166,6 +168,8 @@ HL loop fixes **`decide()` policy**; researcher **bundle submit** adds **`arena-
 **RQGM eval epochs** (K133 — @sources/arxiv-2606.26294-red-queen-godel-machine-2026-06-29.md): static regression gates drift as policy improves — version private eval utility per **epoch** (frozen within epoch, changelog at boundary). Optional co-evolved agent-as-judge on `reasoning_text` before full sim; adversarial epoch if PvE panel over-accepts AI bundles. See @sources/brief-k133-rqgm-evaluator-steals-2026-06-29.md.
 
 **Exploitability literacy** (K134 — @sources/arxiv-2606.29169-ganzfried-ped-nash-imperfect-info-2026-06-30.md, @sources/arxiv-2606.29457-takeover-auction-diligence-games-2026-06-30.md): multiplayer Nash ε(σ) and FP-PED hybrid are **theory anchors** — selfplay `--gate` and TrueSkill are **not** exploitability certificates. See @sources/brief-k134-ganzfried-ped-deal-games-steals-2026-06-30.md.
+
+**Tool-RL structural collapse** (K136 — @sources/arxiv-2606.26027-tool-rl-collapse-supervisory-signals-2026-07-02.md): if fine-tuning sandbox MCP bundle agents, use **interleaved SFT + RL** on golden `arena-tool` trajectories; monitor polluted/collapsed tool formats. See @sources/brief-k136-tool-rl-collapse-steals-2026-07-02.md.
 
 ## Snippets
 

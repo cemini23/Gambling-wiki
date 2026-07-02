@@ -81,6 +81,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [brief-k133-rqgm-evaluator-steals-2026-06-29](sources/brief-k133-rqgm-evaluator-steals-2026-06-29.md) | deep-read | RQGM co-evolving evaluator epoch steals |
 | [brief-k134-ganzfried-ped-deal-games-steals-2026-06-30](sources/brief-k134-ganzfried-ped-deal-games-steals-2026-06-30.md) | deep-read | Ganzfried PED + OpenSpiel exploitability ladder |
 | [brief-k135-pm-settlement-macro-beliefs-steals-2026-07-01](sources/brief-k135-pm-settlement-macro-beliefs-steals-2026-07-01.md) | deep-read | PM settlement manipulation + Kalshi CPI beliefs |
+| [brief-k136-tool-rl-collapse-steals-2026-07-02](sources/brief-k136-tool-rl-collapse-steals-2026-07-02.md) | deep-read | Tool-RL structural collapse + interleaved SFT steals |
 | [casino-game-house-edge](concepts/casino-game-house-edge.md) | validated | Edge by game, smart-bet ranking |
 | [prediction-markets-crossover](concepts/prediction-markets-crossover.md) | validated | Kalshi/Polymarket retail lens |
 | [pm-live-belief-updating](concepts/pm-live-belief-updating.md) | validated | Live PM underreaction, salience×liquidity |
@@ -215,6 +216,8 @@ Catalog of all wiki pages. Updated on each ingest.
 | [arxiv-2606.31675-settlement-manipulation-prediction-markets-2026-07-01](sources/arxiv-2606.31675-settlement-manipulation-prediction-markets-2026-07-01.md) | skimmed | PM settlement manipulation — 5-min BTC hazard |
 | [arxiv-2606.30040-kalshi-macro-belief-distributions-2026-07-01](sources/arxiv-2606.30040-kalshi-macro-belief-distributions-2026-07-01.md) | skimmed | Kalshi CPI threshold belief distributions |
 | [daily-digest-batch-k135-2026-07-01](sources/daily-digest-batch-k135-2026-07-01.md) | skimmed | K135 batch (2 REFERENCE PM ingests) |
+| [arxiv-2606.26027-tool-rl-collapse-supervisory-signals-2026-07-02](sources/arxiv-2606.26027-tool-rl-collapse-supervisory-signals-2026-07-02.md) | skimmed | Tool-RL structural collapse — interleaved SFT fix (MIT) |
+| [daily-digest-batch-k136-2026-07-02](sources/daily-digest-batch-k136-2026-07-02.md) | skimmed | K136 batch (1 REFERENCE ingest) |
 | [daily-digest-reject-cluster-k129-2026-06-25](sources/daily-digest-reject-cluster-k129-2026-06-25.md) | skimmed |
 | [arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24](sources/arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24.md) | skimmed | First RL agent for Indian Rummy |
 | [arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24](sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md) | skimmed | Parameter EMA self-play magnet |

@@ -19,9 +19,10 @@ related:
   - sources/arxiv-2606.25819-toolbench-x-tool-unreliability-2026-06-26.md
   - sources/arxiv-2606.20785-fara-computer-use-agents-2026-06-27.md
   - sources/arxiv-2606.26294-red-queen-godel-machine-2026-06-29.md
+  - sources/arxiv-2606.26027-tool-rl-collapse-supervisory-signals-2026-07-02.md
 maturity: validated
 created: 2026-06-19
-updated: 2026-06-29
+updated: 2026-07-02
 ---
 
 ## Relations
@@ -92,6 +93,10 @@ Self-improving agent literature assumes **stationary** benchmarks; RQGM @sources
 | Adversarial epoch | Correct PvE panel over-acceptance on AI bundles |
 
 **NO-GO:** RQGM recursive self-edit on prod `decide()` during live competition.
+
+### Tool-RL structural collapse (K136) [TENTATIVE]
+
+@sources/arxiv-2606.26027-tool-rl-collapse-supervisory-signals-2026-07-02.md: pure RL on multi-step MCP loops can **collapse tool-call structure** (control-token spikes) while competence remains. **Interleaved SFT + RL** stabilizes; pairs K131 runtime hazards. Research lane for sandbox bundle LLMs only — prod `decide()` stays pure code.
 
 ## Snippets
 

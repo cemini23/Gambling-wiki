@@ -47,6 +47,7 @@ related:
   - sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md
   - sources/arxiv-2606.11869-agents-all-the-way-down-2026-06-19.md
   - sources/arxiv-2606.20785-fara-computer-use-agents-2026-06-27.md
+  - sources/arxiv-2606.26027-tool-rl-collapse-supervisory-signals-2026-07-02.md
   - sources/arxiv-2606.26294-red-queen-godel-machine-2026-06-29.md
   - sources/daily-digest-reject-cluster-k116-2026-06-17.md
 maturity: core

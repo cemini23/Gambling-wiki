@@ -2,6 +2,15 @@
 
 Append-only chronological log.
 
+## [2026-07-02] ingest | K136 — daily digest batch (Tool-RL structural collapse)
+
+- **New** — `sources/arxiv-2606.26027-tool-rl-collapse-supervisory-signals-2026-07-02.md` (CONDITIONAL-GO — MIT Tool-RL-Box)
+- **New** — `sources/daily-digest-batch-k136-2026-07-02.md` (1 REFERENCE / 0 reject)
+- **New** — `sources/brief-k136-tool-rl-collapse-steals-2026-07-02.md` + operator + OSINT arena brief
+- **Updated** — `custom-agent-methodology.md`, `poker-hl-analyst-loop.md`, `gambling-bot-architecture.md`, ToolBench-X backlink
+- **Archive** — 1 PDF → egress-fi; inbox cleared
+- **Sweep** — `2026-07-02-daily.md` INGESTED
+
 ## [2026-07-01] ingest | K135 — daily digest batch (PM settlement + Kalshi macro beliefs)
 
 - **New** — `sources/arxiv-2606.31675-settlement-manipulation-prediction-markets-2026-07-01.md` (REFERENCE)
