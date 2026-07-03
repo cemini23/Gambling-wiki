@@ -218,6 +218,11 @@ Catalog of all wiki pages. Updated on each ingest.
 | [daily-digest-batch-k135-2026-07-01](sources/daily-digest-batch-k135-2026-07-01.md) | skimmed | K135 batch (2 REFERENCE PM ingests) |
 | [arxiv-2606.26027-tool-rl-collapse-supervisory-signals-2026-07-02](sources/arxiv-2606.26027-tool-rl-collapse-supervisory-signals-2026-07-02.md) | skimmed | Tool-RL structural collapse — interleaved SFT fix (MIT) |
 | [daily-digest-batch-k136-2026-07-02](sources/daily-digest-batch-k136-2026-07-02.md) | skimmed | K136 batch (1 REFERENCE ingest) |
+| [arxiv-2606.30573-swe-interact-user-driven-coding-agents-2026-07-03](sources/arxiv-2606.30573-swe-interact-user-driven-coding-agents-2026-07-03.md) | skimmed | SWE-INTERACT multi-turn user-driven coding benchmark (Apache-2.0) |
+| [arxiv-2607.00164-verifiable-rewards-calibrated-forecasting-2026-07-03](sources/arxiv-2607.00164-verifiable-rewards-calibrated-forecasting-2026-07-03.md) | skimmed | RLVR NFL in-game WP calibration vs betting market |
+| [daily-digest-batch-k137-2026-07-03](sources/daily-digest-batch-k137-2026-07-03.md) | skimmed | K137 batch (2 REFERENCE / 1 reject) |
+| [daily-digest-reject-cluster-k137-2026-07-03](sources/daily-digest-reject-cluster-k137-2026-07-03.md) | skimmed | K137 reject cluster (30105 interval-belief NN verification) |
+| [brief-k137-swe-interact-rlvr-nfl-steals-2026-07-03](sources/brief-k137-swe-interact-rlvr-nfl-steals-2026-07-03.md) | deep-read | K137 SWE-INTERACT + RLVR NFL steals |
 | [daily-digest-reject-cluster-k129-2026-06-25](sources/daily-digest-reject-cluster-k129-2026-06-25.md) | skimmed |
 | [arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24](sources/arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24.md) | skimmed | First RL agent for Indian Rummy |
 | [arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24](sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md) | skimmed | Parameter EMA self-play magnet |

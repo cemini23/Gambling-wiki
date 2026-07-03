@@ -27,9 +27,11 @@ related:
   - concepts/dfs-injury-and-news-workflow.md
   - sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md
   - sweeps/2026-06-20-tier2-w8-nfl.md
+  - sources/arxiv-2607.00164-verifiable-rewards-calibrated-forecasting-2026-07-03.md
+  - sources/brief-k137-swe-interact-rlvr-nfl-steals-2026-07-03.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-06-20
+updated: 2026-07-03
 ---
 
 ## Relations
@@ -106,6 +108,7 @@ Cross-link DFS: same OUT tags move FanDuel ownership and Underdog ADP.
 
 - Markets overreact to early TDs; slow starts can improve live unders
 - Do not size live bets larger than pre-game unit — set rules before kickoff
+- **In-game win probability models** (K137 — @sources/arxiv-2607.00164-verifiable-rewards-calibrated-forecasting-2026-07-03.md): public-state WP can match market **calibration** (ECE ~0.027–0.029) without implying +EV — residual market edge is **live information** beyond shared feeds. Benchmark vs closing in-game line; keep **CLV** separate from Brier/ECE checks
 
 ### Open-source ML note
 

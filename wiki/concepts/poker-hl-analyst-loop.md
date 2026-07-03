@@ -35,11 +35,13 @@ related:
   - sources/arxiv-2606.29457-takeover-auction-diligence-games-2026-06-30.md
   - sources/brief-k136-tool-rl-collapse-steals-2026-07-02.md
   - sources/arxiv-2606.26027-tool-rl-collapse-supervisory-signals-2026-07-02.md
+  - sources/arxiv-2606.30573-swe-interact-user-driven-coding-agents-2026-07-03.md
+  - sources/brief-k137-swe-interact-rlvr-nfl-steals-2026-07-03.md
   - sources/devfun-sandbox-researcher-guide-2026-06-26.md
   - osint-wiki/sources/trading-posts-compilation-7-2026-06-09.md
 maturity: validated
 created: 2026-06-03
-updated: 2026-07-02
+updated: 2026-07-03
 ---
 
 ## Relations
@@ -170,6 +172,8 @@ HL loop fixes **`decide()` policy**; researcher **bundle submit** adds **`arena-
 **Exploitability literacy** (K134 — @sources/arxiv-2606.29169-ganzfried-ped-nash-imperfect-info-2026-06-30.md, @sources/arxiv-2606.29457-takeover-auction-diligence-games-2026-06-30.md): multiplayer Nash ε(σ) and FP-PED hybrid are **theory anchors** — selfplay `--gate` and TrueSkill are **not** exploitability certificates. See @sources/brief-k134-ganzfried-ped-deal-games-steals-2026-06-30.md.
 
 **Tool-RL structural collapse** (K136 — @sources/arxiv-2606.26027-tool-rl-collapse-supervisory-signals-2026-07-02.md): if fine-tuning sandbox MCP bundle agents, use **interleaved SFT + RL** on golden `arena-tool` trajectories; monitor polluted/collapsed tool formats. See @sources/brief-k136-tool-rl-collapse-steals-2026-07-02.md.
+
+**SWE-INTERACT partial-spec eval** (K137 — @sources/arxiv-2606.30573-swe-interact-user-driven-coding-agents-2026-07-03.md): offline analyze briefs are **user-driven** (vague → evolving requirements). Add private scenarios that test requirement memory and mid-loop constraint reveals — single-turn MCP pass is insufficient. See @sources/brief-k137-swe-interact-rlvr-nfl-steals-2026-07-03.md.
 
 ## Snippets
 

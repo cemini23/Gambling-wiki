@@ -25,9 +25,11 @@ related:
   - concepts/dfs-backtesting-framework.md
   - concepts/diy-nfl-dfs-model-architecture.md
   - sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md
+  - sources/arxiv-2607.00164-verifiable-rewards-calibrated-forecasting-2026-07-03.md
+  - sources/brief-k137-swe-interact-rlvr-nfl-steals-2026-07-03.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-07-03
 ---
 
 ## Relations
@@ -47,6 +49,8 @@ Line shopping reduces vig; CLV measures whether your bet beat the closing sharp 
 Same bet at -105 vs -110 is **material** over hundreds of bets. Maintain accounts at multiple legal books; use odds aggregators responsibly (verify lines before click).
 
 ### CLV definition
+
+**Calibration vs CLV:** A model can match the market on **Brier/ECE** for in-game win probability using only public state (@sources/arxiv-2607.00164-verifiable-rewards-calibrated-forecasting-2026-07-03.md) while still failing to beat **closing lines** after vig and latency. Treat calibration checks and CLV as separate gates.
 
 **Closing Line Value** = your bet's implied edge vs the **closing line** (often Pinnacle or consensus sharp close). Positive CLV over large sample → strong signal of skill even if short-term P&L is negative.
 

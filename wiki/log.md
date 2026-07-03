@@ -2,6 +2,17 @@
 
 Append-only chronological log.
 
+## [2026-07-03] ingest | K137 — daily digest batch (SWE-INTERACT + RLVR NFL calibration)
+
+- **New** — `sources/arxiv-2606.30573-swe-interact-user-driven-coding-agents-2026-07-03.md` (CONDITIONAL-GO — Apache-2.0 SWE-Interact)
+- **New** — `sources/arxiv-2607.00164-verifiable-rewards-calibrated-forecasting-2026-07-03.md` (REFERENCE)
+- **New** — `sources/daily-digest-batch-k137-2026-07-03.md` (2 REFERENCE / 1 reject)
+- **New** — `sources/daily-digest-reject-cluster-k137-2026-07-03.md` (30105 NN verification false positive)
+- **New** — `sources/brief-k137-swe-interact-rlvr-nfl-steals-2026-07-03.md` + operator + OSINT arena brief
+- **Updated** — `custom-agent-methodology.md`, `poker-hl-analyst-loop.md`, `nfl-betting.md`, `line-shopping-and-clv.md`
+- **Archive** — 3 PDFs → egress-fi; inbox cleared
+- **Sweep** — `2026-07-03-daily.md` INGESTED
+
 ## [2026-07-02] ingest | K136 — daily digest batch (Tool-RL structural collapse)
 
 - **New** — `sources/arxiv-2606.26027-tool-rl-collapse-supervisory-signals-2026-07-02.md` (CONDITIONAL-GO — MIT Tool-RL-Box)

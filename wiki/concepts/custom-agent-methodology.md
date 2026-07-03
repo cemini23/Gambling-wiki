@@ -20,9 +20,11 @@ related:
   - sources/arxiv-2606.20785-fara-computer-use-agents-2026-06-27.md
   - sources/arxiv-2606.26294-red-queen-godel-machine-2026-06-29.md
   - sources/arxiv-2606.26027-tool-rl-collapse-supervisory-signals-2026-07-02.md
+  - sources/arxiv-2606.30573-swe-interact-user-driven-coding-agents-2026-07-03.md
+  - sources/brief-k137-swe-interact-rlvr-nfl-steals-2026-07-03.md
 maturity: validated
 created: 2026-06-19
-updated: 2026-07-02
+updated: 2026-07-03
 ---
 
 ## Relations
@@ -97,6 +99,10 @@ Self-improving agent literature assumes **stationary** benchmarks; RQGM @sources
 ### Tool-RL structural collapse (K136) [TENTATIVE]
 
 @sources/arxiv-2606.26027-tool-rl-collapse-supervisory-signals-2026-07-02.md: pure RL on multi-step MCP loops can **collapse tool-call structure** (control-token spikes) while competence remains. **Interleaved SFT + RL** stabilizes; pairs K131 runtime hazards. Research lane for sandbox bundle LLMs only — prod `decide()` stays pure code.
+
+### SWE-INTERACT interactive eval (K137) [TENTATIVE]
+
+@sources/arxiv-2606.30573-swe-interact-user-driven-coding-agents-2026-07-03.md: **single-turn SWE success does not transfer** to multi-turn user-driven sessions (~50% → ~25% solve rate). HL patch loop and sandbox bundles should eval **partial-spec recovery** (vague brief → progressive constraints), not only fully-specified MCP trajectories. Apache-2.0 `scaleapi/SWE-Interact` is benchmark reference only.
 
 ## Snippets
 
