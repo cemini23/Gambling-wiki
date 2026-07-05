@@ -4,6 +4,7 @@ type: concept
 tags: [concept, dfs, nfl, data-sources, legal, tos, w-legal]
 keywords: [nflverse, the-odds-api, fanduel, draftkings, espn, open-meteo, ownership archives, scraping, rate limits, caching]
 related:
+  - concepts/pickem-data-sources.md
   - concepts/diy-nfl-dfs-model-architecture.md
   - concepts/dfs-foss-tooling-landscape.md
   - concepts/implied-team-totals-dfs.md
@@ -22,6 +23,7 @@ updated: 2026-06-26
 
 ## Relations
 
+- @concepts/pickem-data-sources.md — K147 pick'em stack inherits this matrix
 - @concepts/diy-nfl-dfs-model-architecture.md — W-DATA/W-LEGAL layer page for the DIY stack
 - @sources/web-nfl-dfs-source-legal-posture-2026-06-20.md — underlying June 2026 ToS / usage scan
 - @sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md — OSINT weather API inventory + sibling wiki matrix

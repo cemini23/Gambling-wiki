@@ -10,13 +10,17 @@ related:
   - concepts/bankroll-management.md
   - concepts/kelly-criterion-betting.md
   - concepts/dfs-strategy-overview.md
+  - concepts/pickem-slip-ev-and-correlation.md
+  - entities/platforms/prizepicks.md
+  - entities/platforms/underdog-pickem.md
+  - concepts/diy-nfl-pickem-props-tool-architecture.md
   - entities/sports/nfl-betting.md
   - entities/platforms/hard-rock-bet.md
   - sources/web-tech-insider-nfl-betting-strategy-2026-06-20.md
   - sources/web-sportsbookreview-hard-rock-bet-2026-06-20.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-06-20
+updated: 2026-07-05
 ---
 
 ## Relations
@@ -24,7 +28,10 @@ updated: 2026-06-20
 - @concepts/favorite-longshot-bias.md — parlays amplify longshot bias
 - @concepts/vig-and-hold.md — parlay hold compounds
 - @entities/platforms/hard-rock-bet.md — SGP Max / Flex Parlay product (W8)
+- @entities/platforms/underdog-pickem.md — pick'em lounge adjusts payouts for correlated legs
+- @entities/platforms/prizepicks.md — Demon/Goblin and combo correlation shifts
 - @entities/sports/nfl-betting.md — NFL SGP discipline
+- @concepts/pickem-slip-ev-and-correlation.md — DFS pick'em lounges (fixed-payout correlated slips)
 
 ## Raw Concept
 
@@ -58,6 +65,19 @@ Treat parlay as **single bet** with combined `p` and `b`. Do not full-Kelly each
 ### DFS overlap
 
 DFS lineups are **correlated multi-leg portfolios** — different product but similar correlation thinking; see `@concepts/dfs-strategy-overview.md`. NFL game stacks in FanDuel GPPs are +EV-vs-field when projections support; SGPs are +EV-vs-book only with mispriced correlation.
+
+### DFS pick'em lounges
+
+PrizePicks-style **pick'em slips** are fixed-multiplier parlays on player stat O/U — not sportsbook SGPs. Same correlation lessons apply, different pricing:
+
+| Dimension | Sportsbook SGP | DFS pick'em lounge |
+|-----------|----------------|-------------------|
+| Price | Book models correlation into combined odds | **Fixed** Power/Flex table by leg count |
+| Vig | Embedded in SGP margin | Embedded in breakeven `p*` vs 50% (@concepts/pickem-payout-and-breakeven.md) |
+| Correlation | Often conservatively priced | Lounge may **not** adjust multiplier for same-game stacks [TENTATIVE] |
+| Sizing | Kelly on combined ticket | Fractional Kelly on **whole slip** — @concepts/pickem-slip-ev-and-correlation.md |
+
+**Tool path (K147):** joint `P(all legs hit)` via copula (reuse @concepts/dfs-correlation-stacking.md priors), rank slips by `EV = P_joint × M − 1`, size with quarter-Kelly on the slip. Full math: @concepts/pickem-slip-ev-and-correlation.md. Architecture hub: @concepts/diy-nfl-pickem-props-tool-architecture.md.
 
 ## Snippets
 

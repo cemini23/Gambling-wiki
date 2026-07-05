@@ -4,6 +4,7 @@ type: concept
 tags: [concept, dfs, nfl, backtest, accuracy, w-backtest]
 keywords: [mae, rmse, spearman, walk-forward, leakage, benchmark]
 related:
+  - concepts/pickem-backtesting-framework.md
   - concepts/dfs-stat-projection-engine.md
   - concepts/dfs-ownership-projection.md
   - entities/tools/stokastic-dfs.md
@@ -20,6 +21,7 @@ updated: 2026-06-25
 
 ## Relations
 
+- @concepts/pickem-backtesting-framework.md — sibling harness for K147 props grading
 - @entities/tools/stokastic-dfs.md — paid benchmark CSV column
 - @entities/tools/fantasylabs-dfs.md — paid benchmark CSV column
 

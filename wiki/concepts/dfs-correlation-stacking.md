@@ -8,13 +8,15 @@ related:
   - concepts/dfs-strategy-overview.md
   - entities/tools/pydfs-lineup-optimizer.md
   - sources/web-nfl-dfs-correlation-stacking-2026-06-20.md
+  - concepts/pickem-slip-ev-and-correlation.md
 maturity: draft
 created: 2026-06-20
-updated: 2026-06-20
+updated: 2026-07-05
 ---
 
 ## Relations
 
+- @concepts/pickem-slip-ev-and-correlation.md — copula priors for same-game pick'em stacks
 - @concepts/diy-nfl-dfs-model-architecture.md — W-CORR layer inside the full DIY NFL model
 - @concepts/dfs-strategy-overview.md — high-level DFS/GPP stack context
 - @entities/tools/pydfs-lineup-optimizer.md — implementation target for lineup rules

@@ -4,6 +4,8 @@ type: source
 tags: [source, brief, dfs, nfl, vegas, backtest, nflverse]
 keywords: [load_schedules, spread_line, total_line, spreadspoke, implied-totals]
 related:
+  - concepts/pickem-data-sources.md
+  - concepts/pickem-backtesting-framework.md
   - concepts/nfl-dfs-data-sources.md
   - concepts/implied-team-totals-dfs.md
   - concepts/dfs-backtesting-framework.md
@@ -18,6 +20,8 @@ cross-wiki-source: "briefs/nfl-historical-odds-research.md"
 
 ## Relations
 
+- @concepts/pickem-data-sources.md — game-level history; prop lines need extension
+- @concepts/pickem-backtesting-framework.md — CLV / walk-forward consumer
 - @concepts/implied-team-totals-dfs.md — Vegas → team total workflow
 - @concepts/dfs-backtesting-framework.md — walk-forward eval discipline
 - @entities/tools/ceminidfs.md — pipeline consumer

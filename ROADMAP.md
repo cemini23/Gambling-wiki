@@ -95,7 +95,30 @@ Steps:
 - [ ] Preseason live-slate runs with FanDuel salary exports + calibration briefs in `../CeminiDFS/briefs/`
 - [ ] Operator YouTube / free-guide ingest batch (NFL betting + FD DFS methodology)
 
-**Digest note:** W9 CeminiDFS, W8 NFL, and W6 poker are **co-primary** in `active_topics`, news queries, and social passes.
+**Digest note:** W9 CeminiDFS, W8 NFL, W6 poker, and **W10 K147 pick'em** (digest lane) are tracked in `active_topics`, news queries, and social passes.
+
+### W10 — K147 DIY NFL pick'em / props tool (active 2026-07-05)
+
+**Status:** Phase-0 research **~90%** — platform locked: **Underdog MVP**, PrizePicks Phase-2. Repo spawn ready pending in-app geo check.
+
+| Lane | Focus |
+|------|-------|
+| **Platform** | **Underdog Pick'em (MVP)** · PrizePicks Phase-2 · PickLabs benchmark |
+| **Math** | Fair P(over), payout breakeven, slip correlation + Kelly |
+| **Ops** | Manual line capture, pre-slate batch rank, walk-forward grader spec |
+| **Boundary** | **Not CeminiDFS** — borrow distributions only |
+
+Steps:
+- [x] Research hub — `concepts/diy-nfl-pickem-props-tool-architecture.md`
+- [x] Master plan — `sources/research-diy-pickem-props-master-plan-2026-07-05.md` (14 workstreams · 14 subagents)
+- [x] Layer concept pages (payout, fair-prob, slip-EV, stat-map, data, legal, backtest, workflow, integration)
+- [x] PrizePicks Phase-0 — `entities/platforms/prizepicks.md` (validated)
+- [x] Underdog Pick'em Phase-0 — `entities/platforms/underdog-pickem.md` (draft)
+- [x] PickLabs deep-read — `sources/fantasylabs-picklabs-launch-2026-07-05.md` (validated)
+- [x] Digest routing — `scripts/daily_research_config.yaml`, `scripts/active_project_brief_targets.yaml`
+- [x] Operator: pick primary platform — **Underdog MVP**, PrizePicks Phase-2 (2026-07-05)
+- [ ] Operator: in-app geo verification (UD)
+- [ ] Spawn repo + K147 implementation brief (`--platform underdog` default)
 
 ### W7 — BBM7 research & draft prep (active)
 

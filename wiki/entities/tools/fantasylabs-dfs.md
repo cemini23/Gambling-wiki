@@ -7,6 +7,8 @@ related:
   - concepts/dfs-strategy-overview.md
   - concepts/dfs-paid-tool-methodologies.md
   - concepts/diy-nfl-dfs-model-architecture.md
+  - concepts/diy-nfl-pickem-props-tool-architecture.md
+  - sources/fantasylabs-picklabs-launch-2026-07-05.md
   - concepts/dfs-backtesting-framework.md
   - concepts/dfs-ownership-projection.md
   - entities/platforms/fanduel.md
@@ -16,7 +18,7 @@ related:
   - sources/web-dfs-hero-nfl-gpp-strategy-2026-06-20.md
 maturity: validated
 created: 2026-06-20
-updated: 2026-06-20
+updated: 2026-07-05
 ---
 
 ## Relations
@@ -56,6 +58,18 @@ updated: 2026-06-20
 ### ETR bundle note
 
 Establish The Run sells Labs optimizer access at discounted NFL rate with **ETR + Labs projections preloaded** and Levitan ownership. Separate company from ETR's **Solver** best-ball draft assistant — do not conflate.
+
+### PickLabs (props / pick'em) — 2026-07-05
+
+Separate product surface from salary-cap DFS — **player props** and **DFS pick'em** edges (PrizePicks, Underdog, Sleeper + sportsbooks via Playbook). **Not** integrated into CeminiDFS.
+
+| Field | Value |
+|-------|-------|
+| **Gating** | **All-Access** membership (launch article CTA) — not a documented standalone SKU |
+| **Edge metrics** | Win probability, edge %, value grade vs market consensus |
+| **Workflow** | Pick Board → slip builder → manual place at book/app; Playbook odds compare |
+| **Export** | **UI-only** — no PickLabs CSV/API (DFS Player Model CSV export is a different feature) |
+| **K147 verdict** | Paid **benchmark** only — see @sources/fantasylabs-picklabs-launch-2026-07-05.md (validated deep-read) and @concepts/diy-nfl-pickem-props-tool-architecture.md |
 
 ### Integration path
 

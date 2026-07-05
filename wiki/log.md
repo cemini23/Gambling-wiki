@@ -2,6 +2,42 @@
 
 Append-only chronological log.
 
+## [2026-07-05] decision | K147 primary platform — Underdog MVP, PrizePicks Phase-2
+
+- **Operator** — start Underdog Pick'em (BBM7 account already active); add PrizePicks payout profile later
+- **Updated** — `concepts/diy-nfl-pickem-props-tool-architecture.md`, `pickem-operator-workflow.md`, `pickem-pipeline-integration-spec.md`, `ROADMAP.md` W10
+- **Next** — in-app geo check → spawn `CeminiPick` repo with `underdog.json` payout profile first
+
+## [2026-07-05] research | K147 master plan + layer pages (14 workstreams)
+
+- **New** — `sources/research-diy-pickem-props-master-plan-2026-07-05.md` (14 workstreams · 14 subagents · 4 waves)
+- **New** — `concepts/pickem-payout-and-breakeven.md`, `pickem-fair-probability.md`, `pickem-slip-ev-and-correlation.md`, `pickem-stat-type-mapping.md`, `pickem-data-sources.md`, `pickem-legal-and-tos-posture.md`, `pickem-backtesting-framework.md`, `pickem-operator-workflow.md`, `pickem-pipeline-integration-spec.md`
+- **Updated** — `concepts/diy-nfl-pickem-props-tool-architecture.md` (stub → **draft**; Phase-0 ~85%)
+- **Updated** — `entities/platforms/prizepicks.md` (stub → **validated**, SA-01), `underdog-pickem.md` (stub → **draft**, SA-02)
+- **Updated** — `concepts/parlay-and-correlated-bets.md` (DFS pick'em lounges section)
+- **Routing** — `scripts/active_project_brief_targets.yaml`, `scripts/daily_research_config.yaml` (K147 pick'em lane)
+- **Gate** — repo spawn blocked until primary platform chosen + operator geo verified
+
+## [2026-07-05] research | W-PLATFORM-PP (SA-01) — PrizePicks Phase-0
+
+- **Updated** — `entities/platforms/underdog-pickem.md` (stub → **draft**): payout tables vs PrizePicks, NFL stat menu, Flex/Rescue/correlation, ToS ix/x, manual workflow
+- **Updated** — `entities/sports/nfl-betting.md` (bidirectional links), `concepts/diy-nfl-pickem-props-tool-architecture.md` (platform matrix row)
+- **Rejected** — `aidanhall21/underdog-fantasy-pickem-scraper`, `fantasydatapros/underdog` (no LICENSE)
+
+## [2026-07-05] deep-read | W-PAID-PICKLABS (SA-03) — FantasyLabs PickLabs launch
+
+- **Updated** — `sources/fantasylabs-picklabs-launch-2026-07-05.md` (stub → **validated**, `read_status: deep-read`)
+- **Updated** — `entities/tools/fantasylabs-dfs.md` (PickLabs All-Access gating, UI-only export)
+- **Updated** — `concepts/diy-nfl-pickem-props-tool-architecture.md` (platform matrix, R20 done, economics checkbox)
+- **Finding** — PickLabs bundled in All-Access; win prob + edge % vs consensus; no CSV/API; hybrid benchmark for K147 DIY
+
+## [2026-07-05] stub | K147 — NFL pick'em / props tool research hub
+
+- **New** — `concepts/diy-nfl-pickem-props-tool-architecture.md` (stub — Phase-0 checklist, reuse map from CeminiDFS, no repo yet)
+- **New** — `sources/fantasylabs-picklabs-launch-2026-07-05.md` (R20 from 07-05 sweep)
+- **New** — `entities/platforms/prizepicks.md`, `entities/platforms/underdog-pickem.md` (platform stubs)
+- **Routed from** — CeminiDFS `briefs/2026-07-05_research-triage-plan.md` (PickLabs no-action → wiki)
+
 ## [2026-07-05] ingest | Newsletter RSS cross-wiki — Event Horizon / Klement synthesis
 
 - **Concepts (3)** — `kalshi-spotify-oracle-manipulation-2026-07.md`, `kalshi-michigan-sports-injunction-2026-06.md`, `pm-whale-conviction-bias-2026-07.md`

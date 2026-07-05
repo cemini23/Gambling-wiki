@@ -9,6 +9,7 @@ related:
   - concepts/favorite-longshot-bias.md
   - concepts/gambling-bot-architecture.md
   - concepts/parlay-and-correlated-bets.md
+  - concepts/pickem-slip-ev-and-correlation.md
   - concepts/prediction-markets-crossover.md
   - concepts/sports-betting-fundamentals.md
   - concepts/vig-and-hold.md
@@ -23,11 +24,12 @@ related:
   - sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-06-17
+updated: 2026-07-05
 ---
 
 ## Relations
 
+- @concepts/pickem-slip-ev-and-correlation.md — fractional Kelly on whole pick'em slip
 - @concepts/gambling-bot-architecture.md — sizing for automated lanes
 - @concepts/bankroll-management.md — Kelly informs unit size; bankroll rules cap Kelly
 - @concepts/favorite-longshot-bias.md — mis-estimated `p` breaks full-Kelly

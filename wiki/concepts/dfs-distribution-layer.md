@@ -9,13 +9,15 @@ related:
   - concepts/dfs-ownership-projection.md
   - entities/tools/pydfs-lineup-optimizer.md
   - concepts/diy-nfl-dfs-model-architecture.md
+  - concepts/pickem-fair-probability.md
 maturity: draft
 created: 2026-06-20
-updated: 2026-06-20
+updated: 2026-07-05
 ---
 
 ## Relations
 
+- @concepts/pickem-fair-probability.md — adapt marginals for pick'em `P(over line)`
 - @concepts/dfs-correlation-stacking.md — correlation matrix for sampling
 - @entities/tools/pydfs-lineup-optimizer.md — candidate lineup generator
 

@@ -12,6 +12,8 @@ related:
   - concepts/best-ball-draft-timing.md
   - concepts/dfs-strategy-overview.md
   - concepts/bankroll-management.md
+  - concepts/diy-nfl-pickem-props-tool-architecture.md
+  - entities/platforms/underdog-pickem.md
   - entities/tournaments/best-ball-mania-vii.md
   - entities/platforms/draftkings.md
   - entities/sports/nfl-betting.md
@@ -134,6 +136,8 @@ Underdog's Terms of Use (specifically sections **ix** and **x** at `legal.underd
 ### Verdict
 
 **REFERENCE** for best ball lane — primary platform in operator YouTube batch; not a sports **betting** sharp book.
+
+For Underdog **pick'em** (higher/lower stats, not BBM drafts), see @entities/platforms/underdog-pickem.md and @concepts/diy-nfl-pickem-props-tool-architecture.md.
 
 ## Snippets
 

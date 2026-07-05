@@ -4,6 +4,8 @@ type: entity
 tags: [tool, dfs, nfl, open-source, cemini23, w9, k125]
 keywords: [ceminidfs, nflverse, pydfs, fanduel, projection-pipeline, ownership, backtest]
 related:
+  - concepts/pickem-stat-type-mapping.md
+  - concepts/pickem-pipeline-integration-spec.md
   - concepts/diy-nfl-dfs-model-architecture.md
   - concepts/dfs-strategy-overview.md
   - concepts/dfs-backtesting-framework.md
@@ -25,6 +27,8 @@ updated: 2026-06-26
 
 ## Relations
 
+- @concepts/pickem-stat-type-mapping.md — projection → pick'em stat bridge (no pick'em code here)
+- @concepts/pickem-pipeline-integration-spec.md — future K147 repo CLI boundary
 - @concepts/diy-nfl-dfs-model-architecture.md — K125 architecture hub
 - @entities/tools/pydfs-lineup-optimizer.md — downstream lineup generation
 - @osint-wiki/concepts/active-project-research-routing.md — morning digest + brief routing
@@ -56,3 +60,4 @@ Implementation repo for K125 DIY NFL DFS projection pipeline. Phases 0–5 compl
 
 - **Primary wiki:** gambling-wiki (methodology + retail DFS)
 - **OSINT:** brief routing + cross-wiki ingest when source touches PM/bot stacks
+- **Pick'em / props:** **not in this repo** — research hub @concepts/diy-nfl-pickem-props-tool-architecture.md (K147); future standalone tool may borrow projection distributions only

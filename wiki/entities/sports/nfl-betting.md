@@ -22,6 +22,9 @@ related:
   - sources/web-sportsbookreview-hard-rock-bet-2026-06-20.md
   - entities/tools/pydfs-lineup-optimizer.md
   - entities/platforms/underdog-fantasy.md
+  - entities/platforms/underdog-pickem.md
+  - entities/platforms/prizepicks.md
+  - concepts/diy-nfl-pickem-props-tool-architecture.md
   - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
   - concepts/diy-nfl-dfs-model-architecture.md
   - concepts/dfs-injury-and-news-workflow.md
@@ -31,7 +34,7 @@ related:
   - sources/brief-k137-swe-interact-rlvr-nfl-steals-2026-07-03.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-07-03
+updated: 2026-07-05
 ---
 
 ## Relations
@@ -55,8 +58,9 @@ NFL-specific betting and fantasy context — key numbers, season structure, mark
 | Sportsbook + casino | Hard Rock Bet | @entities/platforms/hard-rock-bet.md |
 | Daily fantasy GPP | FanDuel | @entities/platforms/fanduel.md |
 | Best ball | Underdog BBM7 | @entities/tournaments/best-ball-mania-vii.md |
+| DFS pick'em / props lounges | PrizePicks, Underdog Pick'em | @entities/platforms/prizepicks.md, @entities/platforms/underdog-pickem.md, @concepts/diy-nfl-pickem-props-tool-architecture.md (K147 — **no tool yet**) |
 
-Same injury and game-environment research feeds all three; **betting** is vs the line, **DFS/best ball** vs the field.
+Same injury and game-environment research feeds all four; **betting** is vs the line, **DFS/best ball** vs the field, **pick'em** is binary O/U on posted stat lines.
 
 ### Key numbers (spread) [CONFIRMED]
 

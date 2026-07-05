@@ -50,6 +50,16 @@ Catalog of all wiki pages. Updated on each ingest.
 | [bbm7-adp-delta-tracker](concepts/bbm7-adp-delta-tracker.md) | validated | Underdog ADP BUY/FADE tracker (Jun 2026) |
 | [bbm7-playoff-week-construction](concepts/bbm7-playoff-week-construction.md) | validated | W15–17 byes, game stacks, advance cliffs |
 | [best-ball-draft-timing](concepts/best-ball-draft-timing.md) | validated | When to draft — July–August sweet spot, portfolio split |
+| [diy-nfl-pickem-props-tool-architecture](concepts/diy-nfl-pickem-props-tool-architecture.md) | draft | K147 — pick'em/props tool hub (not CeminiDFS) |
+| [pickem-payout-and-breakeven](concepts/pickem-payout-and-breakeven.md) | draft | W-PAYOUT — Power/Flex implied prob + breakeven |
+| [pickem-fair-probability](concepts/pickem-fair-probability.md) | draft | W-FAIR-PROB — P(stat > line) marginals |
+| [pickem-slip-ev-and-correlation](concepts/pickem-slip-ev-and-correlation.md) | draft | W-SLIP-EV — joint EV + Kelly on slip |
+| [pickem-stat-type-mapping](concepts/pickem-stat-type-mapping.md) | draft | W-STAT-MAP — CeminiDFS → lounge stat menu |
+| [pickem-data-sources](concepts/pickem-data-sources.md) | draft | W-DATA — nflverse + manual lines |
+| [pickem-legal-and-tos-posture](concepts/pickem-legal-and-tos-posture.md) | draft | W-LEGAL — scraper reject, CLI GO |
+| [pickem-backtesting-framework](concepts/pickem-backtesting-framework.md) | draft | W-BACKTEST — walk-forward grader |
+| [pickem-operator-workflow](concepts/pickem-operator-workflow.md) | draft | W-WORKFLOW — pre-slate batch rank |
+| [pickem-pipeline-integration-spec](concepts/pickem-pipeline-integration-spec.md) | draft | W-INTEG — prop-fair CLI + edges.csv |
 
 ## Sources — Best ball (BBM7)
 
@@ -63,6 +73,8 @@ Catalog of all wiki pages. Updated on each ingest.
 
 | Page | Maturity | Summary |
 |------|----------|---------|
+| [fantasylabs-picklabs-launch-2026-07-05](sources/fantasylabs-picklabs-launch-2026-07-05.md) | validated | PickLabs launch deep-read (SA-03) — All-Access props/pick'em benchmark |
+| [research-diy-pickem-props-master-plan-2026-07-05](sources/research-diy-pickem-props-master-plan-2026-07-05.md) | draft | K147 master plan — 14 workstreams · 14 subagents |
 | [research-diy-dfs-model-master-plan-2026-06-20](sources/research-diy-dfs-model-master-plan-2026-06-20.md) | read | K125 master plan for the DIY NFL DFS model |
 | [cross-wiki-k125-diy-dfs-sweep-2026-06-20](sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md) | read | Sibling-wiki sweep: OSINT weather APIs, CCC orchestration |
 | [web-nfl-dfs-source-legal-posture-2026-06-20](sources/web-nfl-dfs-source-legal-posture-2026-06-20.md) | deep-read | W-LEGAL ToS scan for DFS data inputs |
@@ -110,6 +122,8 @@ Catalog of all wiki pages. Updated on each ingest.
 |------|----------|
 | [draftkings](entities/platforms/draftkings.md) | draft |
 | [underdog-fantasy](entities/platforms/underdog-fantasy.md) | validated |
+| [underdog-pickem](entities/platforms/underdog-pickem.md) | draft |
+| [prizepicks](entities/platforms/prizepicks.md) | validated |
 | [fanduel](entities/platforms/fanduel.md) | validated |
 | [hard-rock-bet](entities/platforms/hard-rock-bet.md) | validated |
 | [pinnacle](entities/platforms/pinnacle.md) | draft |

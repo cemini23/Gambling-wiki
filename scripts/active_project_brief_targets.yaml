@@ -38,6 +38,25 @@ projects:
     skip_brief_if:
       - "NBA/other-sport DFS unless NFL methodology transfer explicit"
       - "Paid-tool affiliate content without reproducible methodology"
+      - "Pick'em / PrizePicks / player-props lounge content (→ k147-pickem)"
+
+  k147-pickem:
+    label: "K147 — DIY NFL pick'em / props fair-value tool (wiki research)"
+    code_root: null
+    wiki: "wiki/concepts/diy-nfl-pickem-props-tool-architecture.md"
+    brief_dir: "briefs"
+    scp_target: null
+    co_primary: false
+    steal_from:
+      - "Underdog Pick'em payout tables (MVP), Flex/Rescue/correlation, shifted multipliers"
+      - "PrizePicks Power/Flex demon-goblin (Phase-2)"
+      - "Fair P(over line), slip correlation, Kelly on whole slip"
+      - "PickLabs / sportsbook prop benchmarks vs DIY edges.csv"
+      - "Manual posted-line workflow, walk-forward prop grader spec"
+    skip_brief_if:
+      - "Salary-cap DFS lineup optimization (→ ceminidfs)"
+      - "Underdog BBM snake draft / ADP (→ ceminidfs bbm)"
+      - "Platform scraper repos without license"
 
   nfl-w8:
     label: "NFL 2026 season prep — Hard Rock, FanDuel GPP, Underdog BBM7"

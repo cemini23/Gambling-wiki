@@ -27,6 +27,7 @@ fetch:
 active_topics:
   - "Poker & arena bots (W6) — Researcher Round HU sandbox (Jun 21 β), MAFP/verifier steals, dev.fun decide(), HL loop (→ OSINT agents/devfun-poker-arena/briefs/)"
   - "CeminiDFS (W9/K125) — nflverse projection, ownership sim, pydfs MME, calibration vs Stokastic (→ ../projects/CeminiDFS/briefs/)"
+  - "K147 pick'em/props (W10) — PrizePicks/UD fair value, slip EV, manual line workflow (→ wiki/concepts/diy-nfl-pickem-props-tool-architecture.md)"
   - "NFL 2026 season prep (W8) — Hard Rock +EV/CLV, FanDuel DFS GPP, Underdog/BBM7, props correlation"
   - "DFS / best ball — BBM7, Underdog ADP movers, roster construction, ownership leverage"
   - "Sports betting — +EV process, CLV, line shopping, NFL spreads/props, sharp vs soft books"
@@ -121,6 +122,14 @@ queries:
 
   - cluster: cemini-dfs-nflverse
     query: 'nflverse play-by-play NFL DFS projection python FanDuel salary modeling open source'
+    category: news
+
+  - cluster: cemini-pickem-props
+    query: 'PrizePicks OR Underdog pickem OR player props fair value DFS lounge demon goblin power play flex NFL'
+    category: news
+
+  - cluster: cemini-pickem-paid-bench
+    query: 'PickLabs OR FantasyLabs player props pickem edge OR Unabated prop model NFL'
     category: news
 
   - cluster: cemini-dfs-calibration

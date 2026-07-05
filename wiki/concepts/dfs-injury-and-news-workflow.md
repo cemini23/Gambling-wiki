@@ -4,6 +4,7 @@ type: concept
 tags: [concept, dfs, nfl, injury, late-swap, w-inj, w-news]
 keywords: [nflreadr-injuries, inactives, late-swap, override-schema]
 related:
+  - concepts/pickem-operator-workflow.md
   - concepts/player-usage-models.md
   - concepts/dfs-pipeline-integration-spec.md
   - concepts/diy-nfl-dfs-model-architecture.md
@@ -14,6 +15,7 @@ updated: 2026-06-20
 
 ## Relations
 
+- @concepts/pickem-operator-workflow.md — K147 pick'em shares injury latency patterns
 - @concepts/player-usage-models.md — Q/D/O play-probability priors
 
 ## Raw Concept

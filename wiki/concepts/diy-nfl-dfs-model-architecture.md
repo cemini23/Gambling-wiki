@@ -30,6 +30,8 @@ related:
   - entities/tools/fantasylabs-dfs.md
   - entities/tools/pydfs-lineup-optimizer.md
   - entities/tools/ceminidfs.md
+  - concepts/diy-nfl-pickem-props-tool-architecture.md
+  - sources/research-diy-pickem-props-master-plan-2026-07-05.md
   - entities/platforms/fanduel.md
   - sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md
   - sources/research-diy-dfs-model-master-plan-2026-06-20.md
@@ -49,6 +51,8 @@ updated: 2026-06-26
 - @concepts/dfs-paid-tool-methodologies.md — paid benchmark reference
 - @entities/tools/ceminidfs.md — implementation repo (K125/W9)
 - @entities/tools/pydfs-lineup-optimizer.md — lineup generation downstream
+- @concepts/diy-nfl-pickem-props-tool-architecture.md — sibling K147 pick'em tool (shares projection layers only)
+- @sources/research-diy-pickem-props-master-plan-2026-07-05.md — K147 master plan (14 workstreams)
 
 ## Raw Concept
 

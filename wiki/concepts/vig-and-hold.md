@@ -11,6 +11,7 @@ related:
   - concepts/line-shopping-and-clv.md
   - concepts/favorite-longshot-bias.md
   - concepts/parlay-and-correlated-bets.md
+  - concepts/pickem-payout-and-breakeven.md
   - entities/platforms/pinnacle.md
   - sources/kelly-1956-information-rate.md
   - sources/youtube-operator-batch-sports-betting-research-2026-05-31.md
@@ -19,11 +20,12 @@ related:
   - sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-06-09
+updated: 2026-07-05
 ---
 
 ## Relations
 
+- @concepts/pickem-payout-and-breakeven.md — pick'em lounges embed hold via payout tables
 - @concepts/sports-betting-fundamentals.md — how vig appears on tickets
 - @concepts/sharp-vs-soft-books.md — sharp books run lower hold
 - @concepts/line-shopping-and-clv.md — shopping reduces effective vig

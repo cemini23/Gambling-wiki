@@ -9,13 +9,15 @@ related:
   - concepts/dfs-distribution-layer.md
   - concepts/diy-nfl-dfs-model-architecture.md
   - concepts/dfs-foss-tooling-landscape.md
+  - concepts/pickem-fair-probability.md
 maturity: draft
 created: 2026-06-20
-updated: 2026-06-20
+updated: 2026-07-05
 ---
 
 ## Relations
 
+- @concepts/pickem-fair-probability.md — counting-stat medians feed pick'em marginals
 - @concepts/player-usage-models.md — volume × usage inputs
 - @concepts/fd-dk-scoring-conversion.md — counting stats → site points
 
