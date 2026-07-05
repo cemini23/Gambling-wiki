@@ -2,6 +2,10 @@
 
 Append-only chronological log.
 
+## [2026-07-05] install | NFL slate prefetch LaunchAgent (in-season, idle until Sep)
+
+- **Installed** — `com.cemini.nfl-slate-prefetch.gambling` (hourly :05; writes stubs only in T-30/T-20 pass windows)
+
 ## [2026-07-05] ingest | Offseason week 27 hub + weekly LaunchAgent
 
 - **Installed** — `com.cemini.nfl-offseason-weekly.gambling` (Sundays 09:15)

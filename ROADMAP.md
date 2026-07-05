@@ -86,7 +86,7 @@ Steps:
 - [x] FanDuel NFL DFS playbook — GPP/showdown/ownership (expand `entities/platforms/fanduel.md` or dedicated concept)
 - [ ] Operator YouTube / free-guide ingest batch (NFL betting + FD DFS)
 - [x] Offseason: weekly camp hub — `bash scripts/install_nfl_offseason_weekly.sh` (@meta/nfl-offseason-weekly-cadence.md)
-- [ ] In-season (Sep+): slate **prefetch** LaunchAgent — `bash scripts/install_nfl_slate_prefetch.sh` (@meta/nfl-slate-prefetch-cadence.md)
+- [x] In-season (Sep+): slate **prefetch** LaunchAgent — `bash scripts/install_nfl_slate_prefetch.sh` (@meta/nfl-slate-prefetch-cadence.md)
 - [ ] In-season: weekly **slate hub** briefs in `briefs/` per @concepts/nfl-weekly-slate-hub-workflow.md; CLV journal hook on `@concepts/line-shopping-and-clv.md`
 
 **K125 — DIY NFL DFS projection model (research complete 2026-06-20; implementation shipped):**
