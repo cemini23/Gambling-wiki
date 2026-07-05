@@ -18,6 +18,9 @@ Catalog of all wiki pages. Updated on each ingest.
 | [sharp-vs-soft-books](concepts/sharp-vs-soft-books.md) | draft | Pinnacle vs DK/FD |
 | [sportsbook-pm-line-divergence](concepts/sportsbook-pm-line-divergence.md) | validated | Books vs Kalshi/PM gaps |
 | [pm-copy-trading-retail-risks](concepts/pm-copy-trading-retail-risks.md) | validated | Whale-copy discipline |
+| [pm-whale-conviction-bias-2026-07](concepts/pm-whale-conviction-bias-2026-07.md) | draft | Daleep et al. — whale size vs edge |
+| [kalshi-spotify-oracle-manipulation-2026-07](concepts/kalshi-spotify-oracle-manipulation-2026-07.md) | validated | Stream-botting / chart oracle lag |
+| [kalshi-michigan-sports-injunction-2026-06](concepts/kalshi-michigan-sports-injunction-2026-06.md) | validated | Michigan TRO on sports contracts |
 | [parlay-and-correlated-bets](concepts/parlay-and-correlated-bets.md) | validated | Parlays, SGP, correlation |
 | [dfs-strategy-overview](concepts/dfs-strategy-overview.md) | validated | GPP, cash, stacking, NFL GPP (W8) |
 | [diy-nfl-dfs-model-architecture](concepts/diy-nfl-dfs-model-architecture.md) | draft | K125 DIY projection pipeline hub |
@@ -264,6 +267,13 @@ Catalog of all wiki pages. Updated on each ingest.
 | [arxiv-2606-13038-nous-prediction-market-cognitive-injection-2026-06-13](sources/arxiv-2606-13038-nous-prediction-market-cognitive-injection-2026-06-13.md) | skimmed |
 | [openreview-prophets-profit-pm-LYSTj2Cnuu-2026-06-17](sources/openreview-prophets-profit-pm-LYSTj2Cnuu-2026-06-17.md) | skimmed |
 | [openreview-llm-coherence-projection-Tqos7VqQhH-2026-06-17](sources/openreview-llm-coherence-projection-Tqos7VqQhH-2026-06-17.md) | skimmed |
+- [Event Horizon — Michigan Court Orders Kalshi to Stop Sports Event Contracts](sources/substack-rss-event-horizon-2026-06-29-michigan-court-orders-kalshi-to-stop-sports-even.md) — cross-wiki stub routed from ingest — `cross-wiki`
+- [Event Horizon — Why Do Prediction Markets Insist On Downplaying Sports Volume?](sources/substack-rss-event-horizon-2026-06-29-why-do-prediction-markets-insist-on-downplaying.md) — cross-wiki stub routed from ingest — `cross-wiki`
+- [Event Horizon — World Launches Solana-Based Prediction Market](sources/substack-rss-event-horizon-2026-07-01-world-launches-solana-based-prediction-market.md) — cross-wiki stub routed from ingest — `cross-wiki`
+- [Event Horizon — How Much Kalshi Trading Is There On Things Other Than Sports And Crypto?](sources/substack-rss-event-horizon-2026-07-02-how-much-kalshi-trading-is-there-on-things-other.md) — cross-wiki stub routed from ingest — `cross-wiki`
+- [Event Horizon — How Artificial Spotify Streams Broke A Kalshi Market](sources/substack-rss-event-horizon-2026-07-03-how-artificial-spotify-streams-broke-a-kalshi-ma.md) — cross-wiki stub routed from ingest — `cross-wiki`
+- [Klement on Investing — A fundamental flaw of prediction markets](sources/substack-rss-klement-2026-07-02-a-fundamental-flaw-of-prediction-markets.md) — cross-wiki stub routed from ingest — `cross-wiki`
+- [Outlier Weekly — The $1.1B Warehouse Failure Behind the CXW/GEO Trade](sources/substack-rss-outlier-weekly-2026-07-03-the-11b-warehouse-failure-behind-the-cxwgeo-trad.md) — cross-wiki stub routed from ingest — `cross-wiki`
 
 ## Meta
 

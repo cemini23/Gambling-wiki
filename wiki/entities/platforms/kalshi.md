@@ -31,14 +31,21 @@ related:
   - sources/openreview-prophets-profit-pm-LYSTj2Cnuu-2026-06-17.md
   - sources/arxiv-2606.30040-kalshi-macro-belief-distributions-2026-07-01.md
   - sources/arxiv-2606.31675-settlement-manipulation-prediction-markets-2026-07-01.md
+  - concepts/kalshi-spotify-oracle-manipulation-2026-07.md
+  - concepts/kalshi-michigan-sports-injunction-2026-06.md
+  - concepts/pm-whale-conviction-bias-2026-07.md
+  - sources/substack-rss-event-horizon-2026-07-03-how-artificial-spotify-streams-broke-a-kalshi-ma.md
+  - sources/substack-rss-event-horizon-2026-06-29-michigan-court-orders-kalshi-to-stop-sports-even.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-07-01
+updated: 2026-07-05
 ---
 
 ## Relations
 
-- @entities/platforms/polymarket.md — primary cross-venue peer
+- @concepts/kalshi-spotify-oracle-manipulation-2026-07.md — culture-chart oracle risk
+- @concepts/kalshi-michigan-sports-injunction-2026-06.md — Michigan TRO
+- @concepts/pm-whale-conviction-bias-2026-07.md — size-weighting bias
 - @concepts/prediction-markets-crossover.md — retail vs bot lens
 - @osint-wiki/entities/platforms/kalshi.md — Cemini trading stack, regulation, bots
 
@@ -107,6 +114,18 @@ Retail: live mids **track the game** but **lag full fair-value move** — size d
 ### Crypto event-contract volume (K135 context) [TENTATIVE]
 
 @sources/arxiv-2606.31675-settlement-manipulation-prediction-markets-2026-07-01.md cites Kalshi crypto binaries passing **$1B/month** (Mar 2026) as horizons shrink — same **cash-settlement manipulation** structural risk applies when contracts settle on manipulable spot prices.
+
+### Spotify culture-market oracle incident (2026-07) [TENTATIVE]
+
+Event Horizon / trader Caleb Davies: alleged **stream-botting** resolved a low-probability **Malcolm Todd** chart bracket before Spotify audit removed fake plays; Kalshi paid out on pre-audit data. Hub: `@concepts/kalshi-spotify-oracle-manipulation-2026-07.md`, `@sources/substack-rss-event-horizon-2026-07-03-how-artificial-spotify-streams-broke-a-kalshi-ma.md`.
+
+### Michigan sports-contract TRO (2026-06-29) [TENTATIVE]
+
+14-day injunction: no Michigan sports event contracts without sports-betting license; **$120k/day** geolocation fine. Hub: `@concepts/kalshi-michigan-sports-injunction-2026-06.md`.
+
+### Whale size-weighting bias (2026-07) [TENTATIVE]
+
+Daleep et al. via Klement: large bettors show **lower edge** than small — PM prices may mis-weight conviction. Hub: `@concepts/pm-whale-conviction-bias-2026-07.md`.
 
 ## Snippets
 

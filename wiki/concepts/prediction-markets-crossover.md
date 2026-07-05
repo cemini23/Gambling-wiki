@@ -43,11 +43,16 @@ related:
   - sources/arxiv-2606.31675-settlement-manipulation-prediction-markets-2026-07-01.md
   - sources/arxiv-2606.30040-kalshi-macro-belief-distributions-2026-07-01.md
   - sources/brief-k135-pm-settlement-macro-beliefs-steals-2026-07-01.md
+  - concepts/kalshi-spotify-oracle-manipulation-2026-07.md
+  - concepts/kalshi-michigan-sports-injunction-2026-06.md
+  - concepts/pm-whale-conviction-bias-2026-07.md
+  - sources/substack-rss-event-horizon-2026-07-03-how-artificial-spotify-streams-broke-a-kalshi-ma.md
+  - sources/substack-rss-klement-2026-07-02-a-fundamental-flaw-of-prediction-markets.md
   - @seo-wiki/concepts/outlier-weekly-issue3-world-cup-bot-notes.md
   - @seo-wiki/concepts/generative-engine-optimization.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-07-01
+updated: 2026-07-05
 ---
 
 ## Relations
@@ -87,7 +92,9 @@ How Kalshi and Polymarket fit the **wagering** knowledge base vs the **trading s
 4. Size with **fractional Kelly** — `@concepts/kelly-criterion-betting.md` + `@osint-wiki/concepts/kelly-sizing-quarter.md`
 5. Know **jurisdiction** — geoblocks, KYC; state **gambling-license** fights may restrict sports contracts (`@sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md`)
 6. **Horizon + cash-settlement** (K135) — avoid or minimize **short-horizon asset-price** binaries (e.g. 5-min crypto) where spot can be pushed at oracle close; prefer **15-min+** or non-spot-settled events (`@sources/arxiv-2606.31675-settlement-manipulation-prediction-markets-2026-07-01.md`)
-7. **Macro ladders** — on Kalshi CPI thresholds, read **tail distribution** not point mean alone (`@sources/arxiv-2606.30040-kalshi-macro-belief-distributions-2026-07-01.md`)
+7. **Third-party chart oracles** — culture markets (Spotify charts) where the data provider **audits after** PM settlement (`@concepts/kalshi-spotify-oracle-manipulation-2026-07.md`)
+8. **Whale-weighted prices** — large OI holders may be **negative** signal on forecast quality (`@concepts/pm-whale-conviction-bias-2026-07.md`)
+9. **Macro ladders** — on Kalshi CPI thresholds, read **tail distribution** not point mean alone (`@sources/arxiv-2606.30040-kalshi-macro-belief-distributions-2026-07-01.md`)
 
 ### Tools spanning both wikis
 

@@ -2,6 +2,13 @@
 
 Append-only chronological log.
 
+## [2026-07-05] ingest | Newsletter RSS cross-wiki — Event Horizon / Klement synthesis
+
+- **Concepts (3)** — `kalshi-spotify-oracle-manipulation-2026-07.md`, `kalshi-michigan-sports-injunction-2026-06.md`, `pm-whale-conviction-bias-2026-07.md`
+- **Updated** — `kalshi.md`, `prediction-markets-crossover.md`; EH sources deep-read + Location pointers
+- **Archive** — OSINT inbox newsletter/macro-charts RSS → `cemini-egress-fi:/opt/cemini-bulk/research/osint/`
+- **Cross-wiki** — routed stubs from 2026-07-05 batch (`@osint-wiki` provenance)
+
 ## [2026-07-03] ingest | K137 — daily digest batch (SWE-INTERACT + RLVR NFL calibration)
 
 - **New** — `sources/arxiv-2606.30573-swe-interact-user-driven-coding-agents-2026-07-03.md` (CONDITIONAL-GO — Apache-2.0 SWE-Interact)
@@ -576,3 +583,38 @@ Cross-wiki stub routed from `@osint-wiki/sources/multi-wiki-tool-eval-v6-k90-202
 - **Fee** — 0.01 MON on Monad (402 until paid on dev.fun); lobby retries join every 60s
 - **Code** — `run_cemini_lobby.py` no longer exits on 402; monitor defaults updated
 - **Wiki** — devfun-poker-arena + cemini-devfun-poker-agent entry-fee notes
+
+## [2026-07-05] cross-wiki route | Event Horizon — Michigan Court Orders Kalshi to Stop Sports Event Contracts
+
+Cross-wiki stub routed from `@osint-wiki/sources/substack-rss-event-horizon-2026-06-29-michigan-court-orders-kalshi-to-stop-sports-even.md`.
+- Created wiki/sources/substack-rss-event-horizon-2026-06-29-michigan-court-orders-kalshi-to-stop-sports-even.md (stub)
+
+## [2026-07-05] cross-wiki route | Event Horizon — Why Do Prediction Markets Insist On Downplaying Sports Volume?
+
+Cross-wiki stub routed from `@osint-wiki/sources/substack-rss-event-horizon-2026-06-29-why-do-prediction-markets-insist-on-downplaying.md`.
+- Created wiki/sources/substack-rss-event-horizon-2026-06-29-why-do-prediction-markets-insist-on-downplaying.md (stub)
+
+## [2026-07-05] cross-wiki route | Event Horizon — World Launches Solana-Based Prediction Market
+
+Cross-wiki stub routed from `@osint-wiki/sources/substack-rss-event-horizon-2026-07-01-world-launches-solana-based-prediction-market.md`.
+- Created wiki/sources/substack-rss-event-horizon-2026-07-01-world-launches-solana-based-prediction-market.md (stub)
+
+## [2026-07-05] cross-wiki route | Event Horizon — How Much Kalshi Trading Is There On Things Other Than Sports And Crypto?
+
+Cross-wiki stub routed from `@osint-wiki/sources/substack-rss-event-horizon-2026-07-02-how-much-kalshi-trading-is-there-on-things-other.md`.
+- Created wiki/sources/substack-rss-event-horizon-2026-07-02-how-much-kalshi-trading-is-there-on-things-other.md (stub)
+
+## [2026-07-05] cross-wiki route | Event Horizon — How Artificial Spotify Streams Broke A Kalshi Market
+
+Cross-wiki stub routed from `@osint-wiki/sources/substack-rss-event-horizon-2026-07-03-how-artificial-spotify-streams-broke-a-kalshi-ma.md`.
+- Created wiki/sources/substack-rss-event-horizon-2026-07-03-how-artificial-spotify-streams-broke-a-kalshi-ma.md (stub)
+
+## [2026-07-05] cross-wiki route | Klement on Investing — A fundamental flaw of prediction markets
+
+Cross-wiki stub routed from `@osint-wiki/sources/substack-rss-klement-2026-07-02-a-fundamental-flaw-of-prediction-markets.md`.
+- Created wiki/sources/substack-rss-klement-2026-07-02-a-fundamental-flaw-of-prediction-markets.md (stub)
+
+## [2026-07-05] cross-wiki route | Outlier Weekly — The $1.1B Warehouse Failure Behind the CXW/GEO Trade
+
+Cross-wiki stub routed from `@osint-wiki/sources/substack-rss-outlier-weekly-2026-07-03-the-11b-warehouse-failure-behind-the-cxwgeo-trad.md`.
+- Created wiki/sources/substack-rss-outlier-weekly-2026-07-03-the-11b-warehouse-failure-behind-the-cxwgeo-trad.md (stub)
