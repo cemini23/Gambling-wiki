@@ -9,6 +9,7 @@ related:
   - entities/tournaments/best-ball-mania-vii.md
   - concepts/dfs-strategy-overview.md
   - concepts/line-shopping-and-clv.md
+  - concepts/nfl-weekly-slate-hub-workflow.md
   - concepts/sharp-vs-soft-books.md
   - concepts/parlay-and-correlated-bets.md
   - concepts/bankroll-management.md
@@ -27,7 +28,9 @@ related:
   - concepts/diy-nfl-pickem-props-tool-architecture.md
   - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
   - concepts/diy-nfl-dfs-model-architecture.md
-  - concepts/dfs-injury-and-news-workflow.md
+  - meta/nfl-slate-prefetch-cadence.md
+  - concepts/nfl-offseason-research-cadence.md
+  - meta/nfl-offseason-weekly-cadence.md
   - sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md
   - sweeps/2026-06-20-tier2-w8-nfl.md
   - sources/arxiv-2607.00164-verifiable-rewards-calibrated-forecasting-2026-07-03.md
@@ -61,6 +64,10 @@ NFL-specific betting and fantasy context — key numbers, season structure, mark
 | DFS pick'em / props lounges | PrizePicks, Underdog Pick'em | @entities/platforms/prizepicks.md, @entities/platforms/underdog-pickem.md, @concepts/diy-nfl-pickem-props-tool-architecture.md (K147 — **no tool yet**) |
 
 Same injury and game-environment research feeds all four; **betting** is vs the line, **DFS/best ball** vs the field, **pick'em** is binary O/U on posted stat lines.
+
+**In-season weekly cadence:** research once in gambling-wiki → hub brief → launch each tool session separately. See @concepts/nfl-weekly-slate-hub-workflow.md.
+
+**Offseason (Jul–Aug):** weekly camp/depth research only — no pick'em entries until tool ships. See @concepts/nfl-offseason-research-cadence.md.
 
 ### Key numbers (spread) [CONFIRMED]
 

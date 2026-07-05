@@ -8,6 +8,7 @@ related:
   - concepts/player-usage-models.md
   - concepts/dfs-pipeline-integration-spec.md
   - concepts/diy-nfl-dfs-model-architecture.md
+  - sources/web-bleacher-report-key-injuries-2026-07-01.md
 maturity: draft
 created: 2026-06-20
 updated: 2026-06-20

@@ -1,0 +1,60 @@
+# NFL offseason weekly research — gambling-wiki (Jul–Aug)
+#
+# Weekly LaunchAgent → briefs/offseason/ stub for Cursor hub session.
+# Pick'em tool not required; feeds BBM, K147 decisions, and W8 futures.
+#
+# See: wiki/meta/nfl-offseason-weekly-cadence.md
+
+timezone: America/New_York
+
+# ISO week label in brief filename: {season}-offseason-w{WW}
+season_label: 2026
+
+# Sunday morning — review before the week
+schedule:
+  weekday: 0  # 0=Monday ... 6=Sunday — use Sunday=6 in launchd; script uses config for doc only
+  hour: 9
+  minute: 15
+
+output:
+  dir: briefs/offseason
+
+# Pull unchecked rows from latest daily sweep (these clusters)
+sweep_clusters:
+  - nfl-preseason-camp
+  - nfl-underdog-bbm
+  - cemini-pickem-props
+  - cemini-pickem-paid-bench
+  - nfl-sportsbook
+  - nfl-hard-rock
+  - cemini-dfs-nflverse
+
+research_blocks:
+  - id: camp_standouts
+    title: Training camp standouts
+    prompt: Who is winning jobs / popping in reports? Tag future pick'em and prop relevance.
+  - id: depth_injury
+    title: Depth charts & injury
+    prompt: Ourlads/beat reports — role changes, PUP, holdouts, ACL return timelines.
+  - id: bbm_adp
+    title: BBM7 / ADP movers
+    prompt: Underdog risers-fallers; cross-ref @concepts/bbm7-adp-delta-tracker.md.
+  - id: futures_vegas
+    title: Futures & team totals
+    prompt: Win totals, division odds movement — game environment priors for CeminiDFS.
+  - id: pickem_build
+    title: K147 / pick'em tool signals
+    prompt: Platform news, stat menu changes, build-vs-buy — no entries required yet.
+  - id: hard_rock
+    title: Hard Rock / book posture
+    prompt: Promo churn, NFL limits preview — defer bet list until preseason lines post.
+
+cursor_prompt: |
+  Offseason weekly research session (gambling-wiki).
+  Read the prefetch brief and latest sweep picks. Produce briefs/{season}-offseason-w{WW}-hub.md with:
+  1) Camp standout watchlist (player, team, role, pick'em/prop/BBM relevance)
+  2) Depth/injury deltas worth tracking into preseason
+  3) K147 build decisions (no tool run yet)
+  4) BBM ADP notes if material
+  5) Top 3 digest URLs to deep-read this week
+  Do NOT run slate tools or pick'em entries — research only.

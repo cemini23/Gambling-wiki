@@ -13,6 +13,7 @@ Operator stack: **FanDuel GPP** (not Underdog BBM7, not Hard Rock book). Read wi
 
 ## Wiki pages (read first)
 
+- @wiki/concepts/nfl-weekly-slate-hub-workflow.md — **if hub brief exists**, read `briefs/{season}-w{NN}-slate-hub.md` first; do not re-research schedule/weather/injury
 - @wiki/entities/platforms/fanduel.md — half-PPR, 4-player stack cap
 - @wiki/sources/web-dfs-hero-nfl-gpp-strategy-2026-06-20.md — game stacks, MME pools
 - @wiki/entities/tools/stokastic-dfs.md — CSV export workflow (primary paid tool)

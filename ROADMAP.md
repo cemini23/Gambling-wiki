@@ -85,7 +85,9 @@ Steps:
 - [x] Deep-read NFL sportsbook lane — expand `entities/sports/nfl-betting.md` (props, key numbers, injury cadence)
 - [x] FanDuel NFL DFS playbook — GPP/showdown/ownership (expand `entities/platforms/fanduel.md` or dedicated concept)
 - [ ] Operator YouTube / free-guide ingest batch (NFL betting + FD DFS)
-- [ ] In-season: weekly slate briefs in `briefs/`; CLV journal hook on `@concepts/line-shopping-and-clv.md`
+- [x] Offseason: weekly camp hub — `bash scripts/install_nfl_offseason_weekly.sh` (@meta/nfl-offseason-weekly-cadence.md)
+- [ ] In-season (Sep+): slate **prefetch** LaunchAgent — `bash scripts/install_nfl_slate_prefetch.sh` (@meta/nfl-slate-prefetch-cadence.md)
+- [ ] In-season: weekly **slate hub** briefs in `briefs/` per @concepts/nfl-weekly-slate-hub-workflow.md; CLV journal hook on `@concepts/line-shopping-and-clv.md`
 
 **K125 — DIY NFL DFS projection model (research complete 2026-06-20; implementation shipped):**
 - [x] Master plan — 18 workstreams / 38 subagents (`sources/research-diy-dfs-model-master-plan-2026-06-20.md`)
@@ -119,6 +121,7 @@ Steps:
 - [x] Operator: pick primary platform — **Underdog MVP**, PrizePicks Phase-2 (2026-07-05)
 - [ ] Operator: in-app geo verification (UD)
 - [ ] Spawn repo + K147 implementation brief (`--platform underdog` default)
+- [ ] Offseason: maintain camp standout watchlist in `briefs/offseason/` (weekly @concepts/nfl-offseason-research-cadence.md)
 
 ### W7 — BBM7 research & draft prep (active)
 

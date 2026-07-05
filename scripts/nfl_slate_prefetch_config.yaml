@@ -1,0 +1,88 @@
+# NFL slate prefetch — gambling-wiki (W8 in-season)
+#
+# Hourly LaunchAgent runs nfl_slate_prefetch_run.py during NFL season.
+# Writes data stubs → briefs/slate-prefetch/ for Cursor hub completion.
+#
+# See: wiki/meta/nfl-slate-prefetch-cadence.md
+# Hub workflow: wiki/concepts/nfl-weekly-slate-hub-workflow.md
+
+timezone: America/New_York
+
+# null = infer from calendar year (Sep–Feb → current or prior season)
+season_override: null
+
+# nflverse games.csv (no API key)
+schedule_url: https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv
+
+output:
+  dir: briefs/slate-prefetch
+  hub_brief_dir: briefs
+
+# When to materialize prefetch files (hours before first kickoff of slate)
+slate_passes:
+  thu:
+    label: Thursday Night Football
+    passes:
+      - { id: early, hours_before: 30, tolerance_hours: 1.0 }
+      - { id: final, hours_before: 2.0, tolerance_hours: 0.5 }
+  sun:
+    label: Sunday main slate
+    passes:
+      - { id: early, hours_before: 20, tolerance_hours: 1.5 }
+      - { id: final, hours_before: 1.5, tolerance_hours: 0.5 }
+  snf:
+    label: Sunday Night Football
+    passes:
+      - { id: early, hours_before: 6, tolerance_hours: 1.0 }
+      - { id: final, hours_before: 1.5, tolerance_hours: 0.5 }
+  mnf:
+    label: Monday Night Football
+    passes:
+      - { id: early, hours_before: 26, tolerance_hours: 1.5 }
+      - { id: final, hours_before: 1.5, tolerance_hours: 0.5 }
+
+# Optional: Open-Meteo wind for outdoor games (requires stadium table below)
+weather:
+  enabled: true
+  forecast_hours_before_kick: 3
+
+# Minimal roof/outdoor + lat/lon for weather (subset; extend as needed)
+stadiums:
+  BUF: { roof: open, lat: 42.7738, lon: -78.7870 }
+  MIA: { roof: open, lat: 25.9581, lon: -80.2389 }
+  NE: { roof: open, lat: 42.0909, lon: -71.2643 }
+  NYJ: { roof: open, lat: 40.8128, lon: -74.0742 }
+  BAL: { roof: open, lat: 39.2780, lon: -76.6227 }
+  CIN: { roof: open, lat: 39.0955, lon: -84.5161 }
+  CLE: { roof: open, lat: 41.5061, lon: -81.6995 }
+  PIT: { roof: open, lat: 40.4468, lon: -80.0158 }
+  HOU: { roof: closed, lat: 29.6847, lon: -95.4107 }
+  IND: { roof: closed, lat: 39.7601, lon: -86.1639 }
+  JAX: { roof: open, lat: 30.3239, lon: -81.6373 }
+  TEN: { roof: open, lat: 36.1665, lon: -86.7713 }
+  DEN: { roof: open, lat: 39.7439, lon: -105.0201 }
+  KC: { roof: open, lat: 39.0489, lon: -94.4839 }
+  LV: { roof: closed, lat: 36.0909, lon: -115.1833 }
+  LAC: { roof: open, lat: 33.9535, lon: -118.3392 }
+  DAL: { roof: closed, lat: 32.7473, lon: -97.0945 }
+  NYG: { roof: open, lat: 40.8128, lon: -74.0742 }
+  PHI: { roof: open, lat: 39.9008, lon: -75.1675 }
+  WAS: { roof: open, lat: 38.9077, lon: -76.8645 }
+  CHI: { roof: open, lat: 41.8623, lon: -87.6167 }
+  DET: { roof: closed, lat: 42.3400, lon: -83.0456 }
+  GB: { roof: open, lat: 44.5013, lon: -88.0622 }
+  MIN: { roof: closed, lat: 44.9738, lon: -93.2581 }
+  ATL: { roof: closed, lat: 33.7553, lon: -84.4006 }
+  CAR: { roof: open, lat: 35.2258, lon: -80.8528 }
+  NO: { roof: closed, lat: 29.9511, lon: -90.0812 }
+  TB: { roof: open, lat: 27.9759, lon: -82.5033 }
+  ARI: { roof: closed, lat: 33.5276, lon: -112.2626 }
+  LA: { roof: open, lat: 33.9535, lon: -118.3392 }
+  SF: { roof: open, lat: 37.4033, lon: -121.9694 }
+  SEA: { roof: open, lat: 47.5952, lon: -122.3316 }
+
+cursor_prompt: |
+  Complete the NFL slate hub brief from this prefetch file.
+  Read wiki/concepts/nfl-weekly-slate-hub-workflow.md.
+  Fill injury, narrative, and cross-lane flags; write briefs/{season}-w{week}-slate-hub-{slate}.md
+  Then list tool sessions to run (FanDuel, Hard Rock, Underdog Pick'em).

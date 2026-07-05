@@ -15,6 +15,8 @@ related:
   - concepts/pickem-legal-and-tos-posture.md
   - concepts/pickem-backtesting-framework.md
   - concepts/pickem-operator-workflow.md
+  - concepts/nfl-offseason-research-cadence.md
+  - meta/nfl-offseason-weekly-cadence.md
   - concepts/pickem-pipeline-integration-spec.md
   - concepts/line-shopping-and-clv.md
   - concepts/kelly-criterion-betting.md

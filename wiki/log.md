@@ -2,6 +2,16 @@
 
 Append-only chronological log.
 
+## [2026-07-05] ingest | Offseason week 27 hub + weekly LaunchAgent
+
+- **Installed** — `com.cemini.nfl-offseason-weekly.gambling` (Sundays 09:15)
+- **New** — `scripts/nfl_offseason_weekly_run.py`, config, `install_nfl_offseason_weekly.sh`
+- **New** — `concepts/nfl-offseason-research-cadence.md`, `meta/nfl-offseason-weekly-cadence.md`
+- **New** — `sources/web-bleacher-report-key-injuries-2026-07-01.md` (R40 deep-read)
+- **New** — `sources/web-offseason-hub-w27-synthesis-2026-07-05.md`
+- **Hub** — `briefs/offseason/2026-offseason-w27-hub.md` (gitignored)
+- **Updated** — `bbm7-adp-delta-tracker.md` (Terrance Ferguson riser w27)
+
 ## [2026-07-05] decision | K147 primary platform — Underdog MVP, PrizePicks Phase-2
 
 - **Operator** — start Underdog Pick'em (BBM7 account already active); add PrizePicks payout profile later

@@ -14,9 +14,11 @@ related:
   - sources/4for4-bbm7-guide-series-2026-06-18.md
   - sources/etr-best-ball-mania-manifesto-draft-timing-2026-06-18.md
   - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
+  - sources/web-offseason-hub-w27-synthesis-2026-07-05.md
+  - concepts/nfl-offseason-research-cadence.md
 maturity: validated
 created: 2026-06-18
-updated: 2026-06-18
+updated: 2026-07-05
 ---
 
 ## Relations
@@ -63,6 +65,7 @@ Living tracker of **Underdog ADP vs strategy rank** for BBM7 draft decisions. Up
 | Hunter Henry | 150.2 | 13 | 119.9 | NEUTRAL | NE W11 |
 | Juwan Johnson | 158.0 | 14 | — | **BUY** | BBM6 winner piece; NO W8; late value |
 | Greg Dulcich | 194.4 | 17 | — | **BUY** | +17 ADP riser Jun; MIA W6 |
+| Terrance Ferguson | — | — | — | **BUY** [TENTATIVE] | ADP riser w27 — Fantasy Life + ETR Market Monday; verify on bestballteambuilder |
 
 *Proj pts from bestballteambuilder half-PPR season projection, 2026-06-18.
 
