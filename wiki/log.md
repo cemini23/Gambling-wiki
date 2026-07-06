@@ -668,3 +668,18 @@ Cross-wiki stub routed from `@osint-wiki/sources/substack-rss-klement-2026-07-02
 
 Cross-wiki stub routed from `@osint-wiki/sources/substack-rss-outlier-weekly-2026-07-03-the-11b-warehouse-failure-behind-the-cxwgeo-trad.md`.
 - Created wiki/sources/substack-rss-outlier-weekly-2026-07-03-the-11b-warehouse-failure-behind-the-cxwgeo-trad.md (stub)
+
+## [2026-07-06] cross-wiki route | Event Horizon — Episode 23: Silliness In Prediction Markets About Spotify
+
+Cross-wiki stub routed from `@osint-wiki/sources/substack-rss-event-horizon-2026-07-06-episode-23-silliness-in-prediction-markets-about.md`.
+- Created wiki/sources/substack-rss-event-horizon-2026-07-06-episode-23-silliness-in-prediction-markets-about.md (stub)
+
+## [2026-07-06] cross-wiki route | Klement on Investing — Investors must be wary of the earnings bubble
+
+Cross-wiki stub routed from `@osint-wiki/sources/substack-rss-klement-2026-07-06-investors-must-be-wary-of-the-earnings-bubble.md`.
+- Created wiki/sources/substack-rss-klement-2026-07-06-investors-must-be-wary-of-the-earnings-bubble.md (stub)
+
+## [2026-07-06] cross-wiki route | Klement on Investing — Is water use priced in stock markets?
+
+Cross-wiki stub routed from `@osint-wiki/sources/substack-rss-klement-2026-07-06-is-water-use-priced-in-stock-markets.md`.
+- Created wiki/sources/substack-rss-klement-2026-07-06-is-water-use-priced-in-stock-markets.md (stub)

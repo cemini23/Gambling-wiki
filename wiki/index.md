@@ -292,6 +292,9 @@ Catalog of all wiki pages. Updated on each ingest.
 - [Event Horizon — How Artificial Spotify Streams Broke A Kalshi Market](sources/substack-rss-event-horizon-2026-07-03-how-artificial-spotify-streams-broke-a-kalshi-ma.md) — cross-wiki stub routed from ingest — `cross-wiki`
 - [Klement on Investing — A fundamental flaw of prediction markets](sources/substack-rss-klement-2026-07-02-a-fundamental-flaw-of-prediction-markets.md) — cross-wiki stub routed from ingest — `cross-wiki`
 - [Outlier Weekly — The $1.1B Warehouse Failure Behind the CXW/GEO Trade](sources/substack-rss-outlier-weekly-2026-07-03-the-11b-warehouse-failure-behind-the-cxwgeo-trad.md) — cross-wiki stub routed from ingest — `cross-wiki`
+- [Event Horizon — Episode 23: Silliness In Prediction Markets About Spotify](sources/substack-rss-event-horizon-2026-07-06-episode-23-silliness-in-prediction-markets-about.md) — cross-wiki stub routed from ingest — `cross-wiki`
+- [Klement on Investing — Investors must be wary of the earnings bubble](sources/substack-rss-klement-2026-07-06-investors-must-be-wary-of-the-earnings-bubble.md) — cross-wiki stub routed from ingest — `cross-wiki`
+- [Klement on Investing — Is water use priced in stock markets?](sources/substack-rss-klement-2026-07-06-is-water-use-priced-in-stock-markets.md) — cross-wiki stub routed from ingest — `cross-wiki`
 
 ## Meta
 
