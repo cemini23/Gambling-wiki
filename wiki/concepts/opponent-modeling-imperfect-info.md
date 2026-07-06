@@ -33,6 +33,8 @@ related:
   - sources/arxiv-2606.25997-ganzfried-vbt-nash-imperfect-info-2026-06-26.md
   - sources/brief-k131-toolbench-ganzfried-steals-2026-06-26.md
   - sources/arxiv-2606.29169-ganzfried-ped-nash-imperfect-info-2026-06-30.md
+  - sources/arxiv-2509.25618-ganzfried-qp-nash-imperfect-info-2026-07-06.md
+  - sources/brief-k148-agent-framework-pm-betting-steals-2026-07-06.md
   - sources/arxiv-2606.29457-takeover-auction-diligence-games-2026-06-30.md
   - sources/brief-k134-ganzfried-ped-deal-games-steals-2026-06-30.md
 maturity: draft

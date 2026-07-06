@@ -41,9 +41,11 @@ related:
   - sources/arxiv-2606.21013-agentic-time-machine-forecasting-2026-06-23.md
   - sources/brief-k126-garip-selfplay-pm-forecast-steals-2026-06-23.md
   - sources/arxiv-2606.31675-settlement-manipulation-prediction-markets-2026-07-01.md
+  - sources/arxiv-2607.02467-human-capital-pm-hybrid-forecasting-2026-07-06.md
+  - sources/brief-k148-agent-framework-pm-betting-steals-2026-07-06.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-07-01
+updated: 2026-07-06
 ---
 
 ## Relations
@@ -110,6 +112,10 @@ Hub source: `@sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md`. P
 ### US volume vs Kalshi (R2, 2026-06-02) [TENTATIVE]
 
 Week ending **2026-05-24**: **~29%** of combined US PM notional on Polymarket (**$1.65B** vs Kalshi **$3.99B**); sports **$675.5M** vs Kalshi sports **$1.599B**. Politics category still PM-heavy; US sports onboarding (fiat, parlay parity) cited as gap vs Kalshi. `@sources/daily-digest-news-r1-r12-2026-06-02.md`.
+
+### Human–AI hybrid forecasting (K148) [TENTATIVE]
+
+@sources/arxiv-2607.02467-human-capital-pm-hybrid-forecasting-2026-07-06.md: Polymarket-resolved pilot — hybrid outcomes are **trimodal** (defer to model, rubber-stamp worse than model, complementary match/beat market). **Collaborative traits** predict complementary mode more than frontier model choice. Retail: avoid rubber-stamping LLM-suggested prices without adding information.
 
 ## Snippets
 

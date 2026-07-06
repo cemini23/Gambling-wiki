@@ -12,6 +12,7 @@ related:
   - sources/brief-k131-toolbench-ganzfried-steals-2026-06-26.md
   - sources/daily-digest-reject-cluster-k131-2026-06-26.md
   - sources/arxiv-2606.29169-ganzfried-ped-nash-imperfect-info-2026-06-30.md
+  - sources/arxiv-2509.25618-ganzfried-qp-nash-imperfect-info-2026-07-06.md
   - sweeps/2026-06-26-daily.md
 maturity: draft
 read_status: skimmed

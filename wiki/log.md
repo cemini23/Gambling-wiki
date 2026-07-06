@@ -2,6 +2,16 @@
 
 Append-only chronological log.
 
+## [2026-07-06] ingest | K148 — daily digest batch (agent substrate, PM hybrid, SD journal)
+
+- **New** — 7 source pages (Ganzfried QP, SD e-process, KARLA, vuln cognitive, steerability, framework health, PM hybrid)
+- **New** — `sources/daily-digest-batch-k148-2026-07-06.md` (7 REFERENCE / 1 reject)
+- **New** — `sources/daily-digest-reject-cluster-k148-2026-07-06.md` (26904 video false positive)
+- **New** — `sources/brief-k148-agent-framework-pm-betting-steals-2026-07-06.md` + 3 operator briefs (arena + 2 wiki)
+- **Updated** — `custom-agent-methodology.md`, `gambling-bot-architecture.md`, `poker-hl-analyst-loop.md`, `opponent-modeling-imperfect-info.md`, `bankroll-management.md`, `polymarket.md`, Ganzfried backlink
+- **Archive** — 8 PDFs → egress-fi; inbox cleared
+- **Sweep** — `2026-07-06-daily.md` INGESTED
+
 ## [2026-07-05] install | NFL slate prefetch LaunchAgent (in-season, idle until Sep)
 
 - **Installed** — `com.cemini.nfl-slate-prefetch.gambling` (hourly :05; writes stubs only in T-30/T-20 pass windows)

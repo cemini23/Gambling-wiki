@@ -48,11 +48,14 @@ related:
   - sources/arxiv-2606.11869-agents-all-the-way-down-2026-06-19.md
   - sources/arxiv-2606.20785-fara-computer-use-agents-2026-06-27.md
   - sources/arxiv-2606.26027-tool-rl-collapse-supervisory-signals-2026-07-02.md
-  - sources/arxiv-2606.26294-red-queen-godel-machine-2026-06-29.md
+  - sources/arxiv-2607.02389-steerability-constraints-coding-agents-2026-07-06.md
+  - sources/arxiv-2607.02453-oss-agent-framework-ecosystem-health-2026-07-06.md
+  - sources/arxiv-2606.26807-karla-kb-augmented-retrieval-2026-07-06.md
+  - sources/brief-k148-agent-framework-pm-betting-steals-2026-07-06.md
   - sources/daily-digest-reject-cluster-k116-2026-06-17.md
 maturity: core
 created: 2026-05-31
-updated: 2026-06-27
+updated: 2026-07-06
 ---
 
 # Gambling bot architecture (planned)
@@ -152,6 +155,10 @@ Mark prod-only deployment detail `[ROUTE @osint-wiki]` in narrative; still **sum
 | Open-source sportsbook arb finders | Alert-only reference, latency notes | Optional code mirror |
 
 Do **not** duplicate osint entity bodies — bidirectional `related:` + 2–3 sentence gambling angle here.
+
+### Framework Phase-0 metrics (K148) [TENTATIVE]
+
+@sources/arxiv-2607.02453-oss-agent-framework-ecosystem-health-2026-07-06.md: **GitHub stars ≠ adoption depth** — log **contributor density**, cross-ecosystem engagement, and **30/90-day retention** on any agent framework Adopt candidate (extends K90–K103). @sources/arxiv-2606.26807-karla-kb-augmented-retrieval-2026-07-06.md: **CONDITIONAL-GO** KB-trigger RAG for versioned platform rules when public code + license verified.
 
 ### Responsible automation
 

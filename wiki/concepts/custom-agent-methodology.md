@@ -21,10 +21,12 @@ related:
   - sources/arxiv-2606.26294-red-queen-godel-machine-2026-06-29.md
   - sources/arxiv-2606.26027-tool-rl-collapse-supervisory-signals-2026-07-02.md
   - sources/arxiv-2606.30573-swe-interact-user-driven-coding-agents-2026-07-03.md
-  - sources/brief-k137-swe-interact-rlvr-nfl-steals-2026-07-03.md
+  - sources/arxiv-2607.02389-steerability-constraints-coding-agents-2026-07-06.md
+  - sources/arxiv-2607.02453-oss-agent-framework-ecosystem-health-2026-07-06.md
+  - sources/brief-k148-agent-framework-pm-betting-steals-2026-07-06.md
 maturity: validated
 created: 2026-06-19
-updated: 2026-07-03
+updated: 2026-07-06
 ---
 
 ## Relations
@@ -103,6 +105,10 @@ Self-improving agent literature assumes **stationary** benchmarks; RQGM @sources
 ### SWE-INTERACT interactive eval (K137) [TENTATIVE]
 
 @sources/arxiv-2606.30573-swe-interact-user-driven-coding-agents-2026-07-03.md: **single-turn SWE success does not transfer** to multi-turn user-driven sessions (~50% → ~25% solve rate). HL patch loop and sandbox bundles should eval **partial-spec recovery** (vague brief → progressive constraints), not only fully-specified MCP trajectories. Apache-2.0 `scaleapi/SWE-Interact` is benchmark reference only.
+
+### Constraint substrate (K148) [TENTATIVE]
+
+@sources/arxiv-2607.02389-steerability-constraints-coding-agents-2026-07-06.md: pre-LLM **linters, layered docs CLI, allow-lists** beat unconstrained MCP scaffolding for auditable coding agents. Pairs K120 hooks/allow-list — **Adopt** substrate before expanding tool surface.
 
 ## Snippets
 

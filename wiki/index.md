@@ -244,6 +244,16 @@ Catalog of all wiki pages. Updated on each ingest.
 | [daily-digest-batch-k137-2026-07-03](sources/daily-digest-batch-k137-2026-07-03.md) | skimmed | K137 batch (2 REFERENCE / 1 reject) |
 | [daily-digest-reject-cluster-k137-2026-07-03](sources/daily-digest-reject-cluster-k137-2026-07-03.md) | skimmed | K137 reject cluster (30105 interval-belief NN verification) |
 | [brief-k137-swe-interact-rlvr-nfl-steals-2026-07-03](sources/brief-k137-swe-interact-rlvr-nfl-steals-2026-07-03.md) | deep-read | K137 SWE-INTERACT + RLVR NFL steals |
+| [arxiv-2509.25618-ganzfried-qp-nash-imperfect-info-2026-07-06](sources/arxiv-2509.25618-ganzfried-qp-nash-imperfect-info-2026-07-06.md) | skimmed | Ganzfried QP exact NE imperfect-info |
+| [arxiv-2604.21851-betting-on-bets-stochastic-dominance-2026-07-06](sources/arxiv-2604.21851-betting-on-bets-stochastic-dominance-2026-07-06.md) | skimmed | Anytime-valid stochastic dominance e-processes |
+| [arxiv-2606.26807-karla-kb-augmented-retrieval-2026-07-06](sources/arxiv-2606.26807-karla-kb-augmented-retrieval-2026-07-06.md) | skimmed | KARLA KB-trigger retrieval (CONDITIONAL-GO) |
+| [arxiv-2606.30587-llm-vuln-detection-cognitive-heuristics-2026-07-06](sources/arxiv-2606.30587-llm-vuln-detection-cognitive-heuristics-2026-07-06.md) | skimmed | LLM vuln detection cognitive heuristics |
+| [arxiv-2607.02389-steerability-constraints-coding-agents-2026-07-06](sources/arxiv-2607.02389-steerability-constraints-coding-agents-2026-07-06.md) | skimmed | Constraint substrate for coding agent oversight |
+| [arxiv-2607.02453-oss-agent-framework-ecosystem-health-2026-07-06](sources/arxiv-2607.02453-oss-agent-framework-ecosystem-health-2026-07-06.md) | skimmed | OSS agent framework contributor-density metrics |
+| [arxiv-2607.02467-human-capital-pm-hybrid-forecasting-2026-07-06](sources/arxiv-2607.02467-human-capital-pm-hybrid-forecasting-2026-07-06.md) | skimmed | Human capital predicts PM hybrid forecasting lift |
+| [daily-digest-batch-k148-2026-07-06](sources/daily-digest-batch-k148-2026-07-06.md) | skimmed | K148 batch (7 REFERENCE / 1 reject) |
+| [daily-digest-reject-cluster-k148-2026-07-06](sources/daily-digest-reject-cluster-k148-2026-07-06.md) | skimmed | K148 reject (26904 video tool orchestration) |
+| [brief-k148-agent-framework-pm-betting-steals-2026-07-06](sources/brief-k148-agent-framework-pm-betting-steals-2026-07-06.md) | deep-read | K148 agent substrate + PM hybrid + SD steals |
 | [daily-digest-reject-cluster-k129-2026-06-25](sources/daily-digest-reject-cluster-k129-2026-06-25.md) | skimmed |
 | [arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24](sources/arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24.md) | skimmed | First RL agent for Indian Rummy |
 | [arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24](sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md) | skimmed | Parameter EMA self-play magnet |

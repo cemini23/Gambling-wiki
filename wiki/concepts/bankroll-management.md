@@ -30,10 +30,11 @@ related:
   - entities/bots/wagerbrain.md
   - sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md
   - concepts/world-cup-pm-retail-hygiene.md
-  - sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md
+  - sources/brief-k148-agent-framework-pm-betting-steals-2026-07-06.md
+  - sources/arxiv-2604.21851-betting-on-bets-stochastic-dominance-2026-07-06.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-06-09
+updated: 2026-07-06
 ---
 
 ## Relations
@@ -72,6 +73,8 @@ Express edge bets in **units** (1u = 1% of current bankroll or fixed fraction). 
 ### Record-keeping
 
 Track: date, sport/market, line, odds, stake, result, closing line (for CLV). Without logs, perceived skill dominates actual ROI.
+
+**Strategy A/B monitoring (K148):** when comparing manual betting or pick'em processes over time, consider **anytime-valid stochastic dominance** e-processes on full P&L distributions (@sources/arxiv-2604.21851-betting-on-bets-stochastic-dominance-2026-07-06.md) — sequential monitoring only, not live bet triggers.
 
 ### Responsible gambling guardrails
 
