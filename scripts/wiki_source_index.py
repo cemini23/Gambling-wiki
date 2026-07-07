@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Wiki source index for URL/arXiv/OpenReview duplicate checks (preingest + daily digest fetch)."""
+"""Wiki source index for URL/arXiv duplicate checks (preingest + daily digest fetch)."""
 
 from __future__ import annotations
 
@@ -10,9 +10,6 @@ from collections import defaultdict
 from pathlib import Path
 
 ARXIV_RE = re.compile(r"\b(\d{4}\.\d{4,5})(v\d+)?\b")
-OPENREVIEW_URL_RE = re.compile(
-    r"openreview\.net/(?:forum|pdf)\?id=([A-Za-z0-9_-]+)", re.I
-)
 DOI_RE = re.compile(r"\b(10\.\d{4,9}/[A-Za-z0-9._;()<>/-]+)\b")
 URL_RE = re.compile(r"https?://[^\s`<>\)]+")
 TITLE_FRONTMATTER_RE = re.compile(r'^title:\s*"?([^"\n]+?)"?\s*$', re.MULTILINE)
@@ -27,11 +24,6 @@ STOPWORDS = {
 
 def arxiv_id_from_url(url: str) -> str | None:
     m = re.search(r"arxiv\.org/(?:abs|pdf|html)/(\d{4}\.\d{4,5})", url, re.I)
-    return m.group(1) if m else None
-
-
-def openreview_id_from_url(url: str) -> str | None:
-    m = OPENREVIEW_URL_RE.search(url)
     return m.group(1) if m else None
 
 
@@ -91,7 +83,6 @@ def _extract_own_metadata_section(text: str) -> str:
 def build_wiki_index(sources_dir: Path) -> dict:
     idx = {
         "arxiv": defaultdict(list),
-        "openreview": defaultdict(list),
         "doi": defaultdict(list),
         "url": defaultdict(list),
         "location_basename": defaultdict(list),
@@ -108,8 +99,6 @@ def build_wiki_index(sources_dir: Path) -> dict:
         own = _extract_own_metadata_section(text)
         for m in ARXIV_RE.finditer(own):
             idx["arxiv"][m.group(1)].append(rel)
-        for m in OPENREVIEW_URL_RE.finditer(own):
-            idx["openreview"][m.group(1)].append(rel)
         for m in DOI_RE.finditer(own):
             idx["doi"][m.group(1)].append(rel)
         for m in URL_RE.finditer(own):
@@ -126,72 +115,42 @@ def build_wiki_index(sources_dir: Path) -> dict:
     return idx
 
 
-def inbox_paper_ids(inbox: Path) -> dict[str, set[str]]:
-    """Return pending inbox IDs keyed by source type (arxiv, openreview)."""
-    ids: dict[str, set[str]] = {"arxiv": set(), "openreview": set()}
+def inbox_arxiv_ids(inbox: Path) -> set[str]:
+    ids: set[str] = set()
     if not inbox.is_dir():
         return ids
     for p in inbox.iterdir():
         if not p.is_file() or p.name.startswith("."):
             continue
         for m in ARXIV_RE.finditer(p.name):
-            ids["arxiv"].add(m.group(1))
-        m = re.match(r"openreview-([A-Za-z0-9_-]+)-", p.name)
-        if m:
-            ids["openreview"].add(m.group(1))
+            ids.add(m.group(1))
     return ids
-
-
-def inbox_arxiv_ids(inbox: Path) -> set[str]:
-    """Backward-compatible helper."""
-    return inbox_paper_ids(inbox)["arxiv"]
 
 
 def verdict_for_remote_hit(
     url: str,
     title: str,
     idx: dict,
-    pending: dict[str, set[str]] | set[str],
+    inbox_ids: set[str],
     *,
-    source: str | None = None,
-    paper_id: str | None = None,
     fuzzy_threshold: float = 0.5,
 ) -> tuple[str, list[str]]:
     """Return (NEW|LIKELY|DUPLICATE, notes) for an Exa hit before download."""
     notes: list[str] = []
     verdict = "NEW"
 
-    if isinstance(pending, set):
-        pending = {"arxiv": pending, "openreview": set()}
-
-    if source and paper_id:
-        if paper_id in pending.get(source, set()):
-            return "DUPLICATE", [f"{source} {paper_id} already in inbox"]
-        if paper_id in idx.get(source, {}):
-            paths = sorted(set(idx[source][paper_id]))
-            return "DUPLICATE", [f"{source} {paper_id} in wiki → {', '.join(paths[:3])}"]
-
     aid = arxiv_id_from_url(url)
     if aid:
-        if aid in pending.get("arxiv", set()):
+        if aid in inbox_ids:
             return "DUPLICATE", [f"arXiv {aid} already in inbox"]
         if aid in idx["arxiv"]:
             paths = sorted(set(idx["arxiv"][aid]))
             return "DUPLICATE", [f"arXiv {aid} in wiki → {', '.join(paths[:3])}"]
 
-    oid = openreview_id_from_url(url)
-    if oid:
-        if oid in pending.get("openreview", set()):
-            return "DUPLICATE", [f"OpenReview {oid} already in inbox"]
-        if oid in idx["openreview"]:
-            paths = sorted(set(idx["openreview"][oid]))
-            return "DUPLICATE", [f"OpenReview {oid} in wiki → {', '.join(paths[:3])}"]
-
     nu = normalize_url(url)
     if nu in idx["url"]:
         soft = re.search(
-            r"github\.com/.+/.+|gist\.github\.com/.+|arxiv\.org/(abs|pdf)/.+|"
-            r"openreview\.net/(forum|pdf)\?id=.+|ssrn\.com/.+abstract_id=",
+            r"github\.com/.+/.+|gist\.github\.com/.+|arxiv\.org/(abs|pdf)/.+|ssrn\.com/.+abstract_id=",
             nu,
         )
         severity = "DUPLICATE" if soft else "LIKELY"
