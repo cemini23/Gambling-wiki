@@ -305,6 +305,9 @@ Catalog of all wiki pages. Updated on each ingest.
 - [Event Horizon — Episode 23: Silliness In Prediction Markets About Spotify](sources/substack-rss-event-horizon-2026-07-06-episode-23-silliness-in-prediction-markets-about.md) — cross-wiki stub routed from ingest — `cross-wiki`
 - [Klement on Investing — Investors must be wary of the earnings bubble](sources/substack-rss-klement-2026-07-06-investors-must-be-wary-of-the-earnings-bubble.md) — cross-wiki stub routed from ingest — `cross-wiki`
 - [Klement on Investing — Is water use priced in stock markets?](sources/substack-rss-klement-2026-07-06-is-water-use-priced-in-stock-markets.md) — cross-wiki stub routed from ingest — `cross-wiki`
+- [Event Horizon — North Carolina’s Prediction Market Budget Process Seems Pretty Unserious](sources/substack-rss-event-horizon-2026-07-07-north-carolinas-prediction-market-budget-process.md) — cross-wiki stub routed from ingest — `cross-wiki`
+- [Klement on Investing — Globalisation in the 2020s](sources/substack-rss-klement-2026-07-07-globalisation-in-the-2020s.md) — cross-wiki stub routed from ingest — `cross-wiki`
+- [Klement on Investing — Momentum crash warnings flash red. Here’s how you might survive](sources/substack-rss-klement-2026-07-07-momentum-crash-warnings-flash-red-heres-how-you.md) — cross-wiki stub routed from ingest — `cross-wiki`
 
 ## Meta
 

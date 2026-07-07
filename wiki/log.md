@@ -693,3 +693,18 @@ Cross-wiki stub routed from `@osint-wiki/sources/substack-rss-klement-2026-07-06
 
 Cross-wiki stub routed from `@osint-wiki/sources/substack-rss-klement-2026-07-06-is-water-use-priced-in-stock-markets.md`.
 - Created wiki/sources/substack-rss-klement-2026-07-06-is-water-use-priced-in-stock-markets.md (stub)
+
+## [2026-07-07] cross-wiki route | Event Horizon — North Carolina’s Prediction Market Budget Process Seems Pretty Unserious
+
+Cross-wiki stub routed from `@osint-wiki/sources/substack-rss-event-horizon-2026-07-07-north-carolinas-prediction-market-budget-process.md`.
+- Created wiki/sources/substack-rss-event-horizon-2026-07-07-north-carolinas-prediction-market-budget-process.md (stub)
+
+## [2026-07-07] cross-wiki route | Klement on Investing — Globalisation in the 2020s
+
+Cross-wiki stub routed from `@osint-wiki/sources/substack-rss-klement-2026-07-07-globalisation-in-the-2020s.md`.
+- Created wiki/sources/substack-rss-klement-2026-07-07-globalisation-in-the-2020s.md (stub)
+
+## [2026-07-07] cross-wiki route | Klement on Investing — Momentum crash warnings flash red. Here’s how you might survive
+
+Cross-wiki stub routed from `@osint-wiki/sources/substack-rss-klement-2026-07-07-momentum-crash-warnings-flash-red-heres-how-you.md`.
+- Created wiki/sources/substack-rss-klement-2026-07-07-momentum-crash-warnings-flash-red-heres-how-you.md (stub)
