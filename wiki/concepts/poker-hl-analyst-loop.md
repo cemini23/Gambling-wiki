@@ -36,7 +36,8 @@ related:
   - sources/brief-k136-tool-rl-collapse-steals-2026-07-02.md
   - sources/arxiv-2606.26027-tool-rl-collapse-supervisory-signals-2026-07-02.md
   - sources/arxiv-2606.30573-swe-interact-user-driven-coding-agents-2026-07-03.md
-  - sources/brief-k148-agent-framework-pm-betting-steals-2026-07-06.md
+  - sources/brief-k149-policy-ssl-advent-poker-steals-2026-07-07.md
+  - sources/arxiv-2607.01498-policy-representation-ssl-poker-2026-07-07.md
   - sources/arxiv-2607.02389-steerability-constraints-coding-agents-2026-07-06.md
   - sources/arxiv-2606.30587-llm-vuln-detection-cognitive-heuristics-2026-07-06.md
   - sources/devfun-sandbox-researcher-guide-2026-06-26.md
@@ -178,6 +179,8 @@ HL loop fixes **`decide()` policy**; researcher **bundle submit** adds **`arena-
 **SWE-INTERACT partial-spec eval** (K137 — @sources/arxiv-2606.30573-swe-interact-user-driven-coding-agents-2026-07-03.md): offline analyze briefs are **user-driven** (vague → evolving requirements). Add private scenarios that test requirement memory and mid-loop constraint reveals — single-turn MCP pass is insufficient. See @sources/brief-k137-swe-interact-rlvr-nfl-steals-2026-07-03.md.
 
 **Constraint substrate + cognitive security** (K148 — @sources/arxiv-2607.02389-steerability-constraints-coding-agents-2026-07-06.md, @sources/arxiv-2606.30587-llm-vuln-detection-cognitive-heuristics-2026-07-06.md): enforce linters/docs CLI on bundle repo; treat LLM vuln triage on analyze output as **advisory** — preflight + regression remain deploy gates. See @sources/brief-k148-agent-framework-pm-betting-steals-2026-07-06.md.
+
+**Policy SSL + ADVENT spot taxonomy** (K149 — @sources/arxiv-2607.01498-policy-representation-ssl-poker-2026-07-07.md, @sources/arxiv-2607.01585-advent-ilp-poker-predicate-invention-2026-07-07.md): Leduc policy embeddings for opponent archive; LLM→verify loop for named regression-spot predicates. See @sources/brief-k149-policy-ssl-advent-poker-steals-2026-07-07.md.
 
 ## Snippets
 

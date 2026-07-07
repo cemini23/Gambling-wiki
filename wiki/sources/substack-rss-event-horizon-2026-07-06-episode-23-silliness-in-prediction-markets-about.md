@@ -1,12 +1,18 @@
 ---
 title: Event Horizon — Episode 23: Silliness In Prediction Markets About Spotify
 type: source
-tags: []
-keywords: []
-related: []
-maturity: draft
+tags: [source, event-horizon, kalshi, spotify, culture-markets, cross-wiki, k149]
+keywords: [ingame-podcast, spotify-streams, kalshi-culture, oracle-manipulation]
+related:
+  - concepts/kalshi-spotify-oracle-manipulation-2026-07.md
+  - sources/substack-rss-event-horizon-2026-07-03-how-artificial-spotify-streams-broke-a-kalshi-ma.md
+  - entities/platforms/kalshi.md
+  - sources/daily-digest-batch-k149-2026-07-07.md
+  - osint-wiki/sources/substack-rss-event-horizon-2026-07-06-episode-23-silliness-in-prediction-markets-about.md
+maturity: validated
+read_status: skimmed
 created: 2026-07-06
-updated: 2026-07-06
+updated: 2026-07-07
 cross-wiki-source: @osint-wiki/sources/substack-rss-event-horizon-2026-07-06-episode-23-silliness-in-prediction-markets-about.md
 ---
 
@@ -14,15 +20,25 @@ cross-wiki-source: @osint-wiki/sources/substack-rss-event-horizon-2026-07-06-epi
 
 ## Relations
 
-- @osint-wiki/sources/substack-rss-event-horizon-2026-07-06-episode-23-silliness-in-prediction-markets-about.md  (cross-wiki source)
+- @concepts/kalshi-spotify-oracle-manipulation-2026-07.md — primary concept
+- @sources/substack-rss-event-horizon-2026-07-03-how-artificial-spotify-streams-broke-a-kalshi-ma.md — guest column deep-dive
+- @osint-wiki/sources/substack-rss-event-horizon-2026-07-06-episode-23-silliness-in-prediction-markets-about.md
 
 ## Raw Concept
 
-Cross-wiki stub routed from `@osint-wiki/sources/substack-rss-event-horizon-2026-07-06-episode-23-silliness-in-prediction-markets-about.md` during ingest.
-What prompted this page + which sources synthesize into it — fill in on next
-ingest pass.
+| Field | Value |
+|-------|-------|
+| **Format** | Event Horizon podcast ep. 23 (Daniel O'Boyle / InGame) |
+| **Topic** | Kalshi Spotify stream markets + manipulation episode |
+| **Verdict** | **REFERENCE** — podcast companion to Jul 3 guest column |
 
 ## Narrative
+
+Podcast breakdown of Kalshi **Spotify stream** markets and stream-manipulation episode. Substantive analysis lives in @sources/substack-rss-event-horizon-2026-07-03-how-artificial-spotify-streams-broke-a-kalshi-ma.md and @concepts/kalshi-spotify-oracle-manipulation-2026-07.md — this page is routing + RSS capture.
+
+## Dead Ends
+
+- Podcast alone as trade signal without oracle methodology review
 
 I’ll be at NEXTPredict in October; a lot of big names and smart people from the prediction markets industry will be there. Get your tickets now for 15% off using   this link   and promo code  CLOSINGLINE15.
 

@@ -1,10 +1,12 @@
 ---
 title: Klement on Investing — Globalisation in the 2020s
 type: source
-tags: []
-keywords: []
-related: []
+tags: [source, klement, cross-wiki, equity, out-of-scope-primary]
+keywords: [globalisation, equity-markets, macro]
+related:
+  - osint-wiki/sources/substack-rss-klement-2026-07-07-globalisation-in-the-2020s.md
 maturity: draft
+read_status: skimmed
 created: 2026-07-07
 updated: 2026-07-07
 cross-wiki-source: @osint-wiki/sources/substack-rss-klement-2026-07-07-globalisation-in-the-2020s.md
@@ -14,13 +16,11 @@ cross-wiki-source: @osint-wiki/sources/substack-rss-klement-2026-07-07-globalisa
 
 ## Relations
 
-- @osint-wiki/sources/substack-rss-klement-2026-07-07-globalisation-in-the-2020s.md  (cross-wiki source)
+- @osint-wiki/sources/substack-rss-klement-2026-07-07-globalisation-in-the-2020s.md
 
 ## Raw Concept
 
-Cross-wiki stub routed from `@osint-wiki/sources/substack-rss-klement-2026-07-07-globalisation-in-the-2020s.md` during ingest.
-What prompted this page + which sources synthesize into it — fill in on next
-ingest pass.
+**Cross-wiki stub** — equity globalisation / macro. **Primary home:** @osint-wiki. No gambling-wiki concept page.
 
 ## Narrative
 

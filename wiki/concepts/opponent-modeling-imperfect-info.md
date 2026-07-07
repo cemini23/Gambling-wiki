@@ -35,11 +35,14 @@ related:
   - sources/arxiv-2606.29169-ganzfried-ped-nash-imperfect-info-2026-06-30.md
   - sources/arxiv-2509.25618-ganzfried-qp-nash-imperfect-info-2026-07-06.md
   - sources/brief-k148-agent-framework-pm-betting-steals-2026-07-06.md
+  - sources/arxiv-2607.01498-policy-representation-ssl-poker-2026-07-07.md
+  - sources/arxiv-2607.01585-advent-ilp-poker-predicate-invention-2026-07-07.md
+  - sources/brief-k149-policy-ssl-advent-poker-steals-2026-07-07.md
   - sources/arxiv-2606.29457-takeover-auction-diligence-games-2026-06-30.md
   - sources/brief-k134-ganzfried-ped-deal-games-steals-2026-06-30.md
 maturity: draft
 created: 2026-06-03
-updated: 2026-06-30
+updated: 2026-07-07
 ---
 
 ## Relations
@@ -106,6 +109,14 @@ Full profiles: @sources/web-pro-villain-profiles-dwan-cates-2026-06-19.md. Apply
 | Arena HUD / `opponent_target.py` lane | Future LLM fine-tune research lane | Theory ceiling for why approximations persist | Long-run refinement after FP/MAFP burn-in |
 
 See `@sources/daily-digest-arxiv-batch-2026-06-04.md` and `@entities/bots/poker-bot-tooling.md`.
+
+### Policy SSL embeddings (K149) [TENTATIVE]
+
+@sources/arxiv-2607.01498-policy-representation-ssl-poker-2026-07-07.md: self-supervised **policy representations** on Kuhn/Leduc — compact embeddings for opponent clustering and depth-limited search. Pairs @entities/tools/rlcard.md Leduc baselines (K130). `VitamintK/ssl-project` has **no LICENSE** — methods reference only.
+
+### Interpretable spot predicates (K149 ADVENT) [TENTATIVE]
+
+@sources/arxiv-2607.01585-advent-ilp-poker-predicate-invention-2026-07-07.md: LLM proposes **named predicates** with Prolog verification — steal for offline **regression spot taxonomy**, not hand-ranking rules in prod `decide()`.
 
 ### Human poker parallel
 

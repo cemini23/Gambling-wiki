@@ -2,6 +2,17 @@
 
 Append-only chronological log.
 
+## [2026-07-07] ingest | K149 — daily digest batch (policy SSL + ADVENT poker ILP)
+
+- **New** — `sources/arxiv-2607.01498-policy-representation-ssl-poker-2026-07-07.md` (CONDITIONAL-GO — ssl-project no LICENSE)
+- **New** — `sources/arxiv-2607.01585-advent-ilp-poker-predicate-invention-2026-07-07.md` (REFERENCE)
+- **New** — `sources/daily-digest-batch-k149-2026-07-07.md` (2 REFERENCE / 0 reject)
+- **New** — `sources/brief-k149-policy-ssl-advent-poker-steals-2026-07-07.md` + OSINT arena brief
+- **Filled** — Event Horizon NC PM budget stub; ep23 Spotify routing; Klement Jul 7 cross-wiki tags
+- **Updated** — `opponent-modeling-imperfect-info.md`, `prediction-markets-crossover.md`
+- **Archive** — 2 PDFs → egress-fi; inbox cleared
+- **Sweep** — `2026-07-07-daily.md` INGESTED
+
 ## [2026-07-06] ingest | K148 — daily digest batch (agent substrate, PM hybrid, SD journal)
 
 - **New** — 7 source pages (Ganzfried QP, SD e-process, KARLA, vuln cognitive, steerability, framework health, PM hybrid)

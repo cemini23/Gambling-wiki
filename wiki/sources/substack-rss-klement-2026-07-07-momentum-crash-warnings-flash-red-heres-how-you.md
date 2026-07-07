@@ -1,10 +1,12 @@
 ---
 title: Klement on Investing — Momentum crash warnings flash red. Here’s how you might survive
 type: source
-tags: []
-keywords: []
-related: []
+tags: [source, klement, cross-wiki, equity, out-of-scope-primary]
+keywords: [momentum-crash, reuters, equity-markets]
+related:
+  - osint-wiki/sources/substack-rss-klement-2026-07-07-momentum-crash-warnings-flash-red-heres-how-you.md
 maturity: draft
+read_status: skimmed
 created: 2026-07-07
 updated: 2026-07-07
 cross-wiki-source: @osint-wiki/sources/substack-rss-klement-2026-07-07-momentum-crash-warnings-flash-red-heres-how-you.md
@@ -14,13 +16,11 @@ cross-wiki-source: @osint-wiki/sources/substack-rss-klement-2026-07-07-momentum-
 
 ## Relations
 
-- @osint-wiki/sources/substack-rss-klement-2026-07-07-momentum-crash-warnings-flash-red-heres-how-you.md  (cross-wiki source)
+- @osint-wiki/sources/substack-rss-klement-2026-07-07-momentum-crash-warnings-flash-red-heres-how-you.md
 
 ## Raw Concept
 
-Cross-wiki stub routed from `@osint-wiki/sources/substack-rss-klement-2026-07-07-momentum-crash-warnings-flash-red-heres-how-you.md` during ingest.
-What prompted this page + which sources synthesize into it — fill in on next
-ingest pass.
+**Cross-wiki stub** — equity momentum risk (Reuters). **Primary home:** @osint-wiki. No gambling-wiki concept page; retained for federation search only.
 
 ## Narrative
 
