@@ -16,10 +16,14 @@ related:
   - concepts/kelly-criterion-betting.md
   - sources/openreview-prophets-profit-pm-LYSTj2Cnuu-2026-06-17.md
   - sources/openreview-llm-coherence-projection-Tqos7VqQhH-2026-06-17.md
+  - sources/arxiv-2607.01198-liquidity-tail-risk-large-trades-2026-07-09.md
+  - sources/arxiv-2607.01377-kyle-liquidity-premium-investment-horizons-2026-07-09.md
+  - sources/brief-k150-pm-liquidity-proper-betting-steals-2026-07-09.md
   - sweeps/2026-06-17-daily.md
+  - sweeps/2026-07-09-daily.md
 maturity: validated
 created: 2026-06-17
-updated: 2026-06-17
+updated: 2026-07-09
 ---
 
 ## Relations
@@ -57,7 +61,9 @@ Authors claim this is the **only** strategy class in their AI forecast panel tha
 1. **Liquidity gate** — edge on paper ≠ fill at mid
 2. **Scoring alignment** — know which market resolution rule / score applies
 3. **Heuristic trap** — momentum / copy without \(\mathbf{p}\) vs \(\mathbf{q}\) decomposition
-4. **Bot lane** — proper-scoring module before size (`@concepts/gambling-bot-architecture.md`); execution on `@osint-wiki`
+4. **Large-trade ambiguity** — heavy-tailed liquidity shocks can mimic informed flow; do not treat block prints as edge without depth/spread context [Source: @sources/arxiv-2607.01198-liquidity-tail-risk-large-trades-2026-07-09.md]
+5. **Illiquidity premium (Kyle λ)** — high price-impact regimes tax entry/exit via adverse selection; widen edge threshold or size down [Source: @sources/arxiv-2607.01377-kyle-liquidity-premium-investment-horizons-2026-07-09.md]
+6. **Bot lane** — proper-scoring module before size (`@concepts/gambling-bot-architecture.md`); execution on `@osint-wiki`
 
 ### Cross-links
 

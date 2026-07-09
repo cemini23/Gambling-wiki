@@ -15,11 +15,16 @@ related:
   - entities/platforms/kalshi.md
   - sources/openreview-llm-coherence-projection-Tqos7VqQhH-2026-06-17.md
   - sweeps/2026-06-17-daily.md
+  - sweeps/2026-07-09-daily.md
+  - sources/daily-digest-batch-k150-2026-07-09.md
+  - sources/arxiv-2607.01198-liquidity-tail-risk-large-trades-2026-07-09.md
+  - sources/arxiv-2607.01377-kyle-liquidity-premium-investment-horizons-2026-07-09.md
+  - sources/brief-k150-pm-liquidity-proper-betting-steals-2026-07-09.md
   - osint-wiki/concepts/market-informedness-market-making.md
 maturity: validated
 read_status: skimmed
 created: 2026-06-17
-updated: 2026-06-17
+updated: 2026-07-09
 ---
 
 ## Relations
@@ -37,8 +42,10 @@ updated: 2026-06-17
 | **Authors** | Anri Gu, Nicole Kagan, Alec Sun, Jibang Wu, Haifeng Xu |
 | **Venue** | Forecast @ ICML 2026 (Spotlight) |
 | **OpenReview** | [LYSTj2Cnuu](https://openreview.net/forum?id=LYSTj2Cnuu) |
+| **arXiv** | [2607.06166](https://arxiv.org/abs/2607.06166) — canonical supplement (K150; no duplicate page) |
 | **PDF (local)** | `raw-sources/openreview-LYSTj2Cnuu-when-do-prophets-profit-in-prediction-markets-op.pdf` |
 | **PDF (egress)** | `cemini-egress-fi:/opt/cemini-bulk/research/gambling/openreview-LYSTj2Cnuu-when-do-prophets-profit-in-prediction-markets-op.pdf` |
+| **PDF (arXiv egress)** | `cemini-egress-fi:/opt/cemini-bulk/research/gambling/arxiv-2607.06166-when-do-prophets-profit-in-prediction-markets-au.pdf` |
 | **Keywords** | Prediction markets; forecasting; proper scoring rules; computational social science |
 | **Read status** | skimmed — abstract + OpenReview metadata (REFERENCE for retail; live ROI claims unverified) |
 

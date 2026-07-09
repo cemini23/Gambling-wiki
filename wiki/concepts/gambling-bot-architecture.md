@@ -52,10 +52,12 @@ related:
   - sources/arxiv-2607.02453-oss-agent-framework-ecosystem-health-2026-07-06.md
   - sources/arxiv-2606.26807-karla-kb-augmented-retrieval-2026-07-06.md
   - sources/brief-k148-agent-framework-pm-betting-steals-2026-07-06.md
+  - sources/arxiv-2607.01120-areal-agentic-rl-self-evolving-agents-2026-07-09.md
+  - sources/brief-k150-pm-liquidity-proper-betting-steals-2026-07-09.md
   - sources/daily-digest-reject-cluster-k116-2026-06-17.md
 maturity: core
 created: 2026-05-31
-updated: 2026-07-06
+updated: 2026-07-09
 ---
 
 # Gambling bot architecture (planned)
@@ -159,6 +161,10 @@ Do **not** duplicate osint entity bodies — bidirectional `related:` + 2–3 se
 ### Framework Phase-0 metrics (K148) [TENTATIVE]
 
 @sources/arxiv-2607.02453-oss-agent-framework-ecosystem-health-2026-07-06.md: **GitHub stars ≠ adoption depth** — log **contributor density**, cross-ecosystem engagement, and **30/90-day retention** on any agent framework Adopt candidate (extends K90–K103). @sources/arxiv-2606.26807-karla-kb-augmented-retrieval-2026-07-06.md: **CONDITIONAL-GO** KB-trigger RAG for versioned platform rules when public code + license verified.
+
+### Online learning architecture (K150) [TENTATIVE]
+
+@sources/arxiv-2607.01120-areal-agentic-rl-self-evolving-agents-2026-07-09.md — **AReaL** (Apache-2.0, ~5.5k★): three-pillar pattern for **future** fleet bots — (1) agent trajectory data protocol, (2) governed workload→RL data proxy, (3) evolution control plane triggering weight vs in-context updates. **Research lane only**; no prod online RL on wagering without ToS + human-in-loop. Pairs K148 framework Phase-0 metrics.
 
 ### Responsible automation
 

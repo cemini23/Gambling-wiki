@@ -258,6 +258,12 @@ Catalog of all wiki pages. Updated on each ingest.
 | [arxiv-2607.01585-advent-ilp-poker-predicate-invention-2026-07-07](sources/arxiv-2607.01585-advent-ilp-poker-predicate-invention-2026-07-07.md) | skimmed | ADVENT LLM+Prolog predicate invention on poker-hand ILP |
 | [daily-digest-batch-k149-2026-07-07](sources/daily-digest-batch-k149-2026-07-07.md) | skimmed | K149 batch (2 REFERENCE ingests) |
 | [brief-k149-policy-ssl-advent-poker-steals-2026-07-07](sources/brief-k149-policy-ssl-advent-poker-steals-2026-07-07.md) | deep-read | K149 policy SSL + ADVENT steals |
+| [daily-digest-batch-k150-2026-07-09](sources/daily-digest-batch-k150-2026-07-09.md) | skimmed | K150 batch (3 REF / 1 CONDITIONAL-GO / 3 reject) |
+| [daily-digest-reject-cluster-k150-2026-07-09](sources/daily-digest-reject-cluster-k150-2026-07-09.md) | skimmed | K150 rejects (GAMLSS, MIRA, PolyWorkBench) |
+| [arxiv-2607.01198-liquidity-tail-risk-large-trades-2026-07-09](sources/arxiv-2607.01198-liquidity-tail-risk-large-trades-2026-07-09.md) | skimmed | LOB liquidity-tail ambiguity |
+| [arxiv-2607.01377-kyle-liquidity-premium-investment-horizons-2026-07-09](sources/arxiv-2607.01377-kyle-liquidity-premium-investment-horizons-2026-07-09.md) | skimmed | Kyle λ illiquidity premium |
+| [arxiv-2607.01120-areal-agentic-rl-self-evolving-agents-2026-07-09](sources/arxiv-2607.01120-areal-agentic-rl-self-evolving-agents-2026-07-09.md) | skimmed | AReaL agentic online RL (CONDITIONAL-GO) |
+| [brief-k150-pm-liquidity-proper-betting-steals-2026-07-09](sources/brief-k150-pm-liquidity-proper-betting-steals-2026-07-09.md) | deep-read | K150 PM liquidity + proper betting steals |
 | [daily-digest-reject-cluster-k129-2026-06-25](sources/daily-digest-reject-cluster-k129-2026-06-25.md) | skimmed |
 | [arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24](sources/arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24.md) | skimmed | First RL agent for Indian Rummy |
 | [arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24](sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md) | skimmed | Parameter EMA self-play magnet |

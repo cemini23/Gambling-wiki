@@ -719,3 +719,20 @@ Cross-wiki stub routed from `@osint-wiki/sources/substack-rss-klement-2026-07-07
 
 Cross-wiki stub routed from `@osint-wiki/sources/substack-rss-klement-2026-07-07-momentum-crash-warnings-flash-red-heres-how-you.md`.
 - Created wiki/sources/substack-rss-klement-2026-07-07-momentum-crash-warnings-flash-red-heres-how-you.md (stub)
+
+## [2026-07-08] cross-wiki | K149 gambling
+
+- Kalshi SDNY PI denial brief
+
+## [2026-07-09] ingest | K150 daily digest
+
+- **Batch K150:** 3 REFERENCE + 1 CONDITIONAL-GO + 1 arXiv supplement + 3 reject
+- Created `wiki/sources/arxiv-2607.01198-liquidity-tail-risk-large-trades-2026-07-09.md`
+- Created `wiki/sources/arxiv-2607.01377-kyle-liquidity-premium-investment-horizons-2026-07-09.md`
+- Created `wiki/sources/arxiv-2607.01120-areal-agentic-rl-self-evolving-agents-2026-07-09.md`
+- Created `wiki/sources/daily-digest-batch-k150-2026-07-09.md`, reject cluster, brief stub
+- Updated `openreview-prophets-profit-pm` with arXiv 2607.06166 supplement
+- Updated `pm-proper-scoring-clob-profitability`, `gambling-bot-architecture`
+- Brief: `briefs/2026-07-09_k150-pm-liquidity-proper-betting-steal.md` (wiki-only; no prod scp)
+- Sweep `2026-07-09-daily.md` → INGESTED; routing link fix
+- Archived 7 PDFs to egress-fi
