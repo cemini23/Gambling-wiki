@@ -19,11 +19,15 @@ related:
   - sources/arxiv-2607.01198-liquidity-tail-risk-large-trades-2026-07-09.md
   - sources/arxiv-2607.01377-kyle-liquidity-premium-investment-horizons-2026-07-09.md
   - sources/brief-k150-pm-liquidity-proper-betting-steals-2026-07-09.md
+  - sources/arxiv-2607.03015-belief-to-trade-pm-agents-predict-raven-2026-07-10.md
+  - sources/brief-k151-pm-belief-to-trade-volatility-steals-2026-07-10.md
+  - concepts/pm-structural-volatility.md
   - sweeps/2026-06-17-daily.md
   - sweeps/2026-07-09-daily.md
+  - sweeps/2026-07-10-daily.md
 maturity: validated
 created: 2026-06-17
-updated: 2026-07-09
+updated: 2026-07-10
 ---
 
 ## Relations
@@ -55,6 +59,8 @@ For strictly proper scoring rule \(S\), a **proper betting strategy** \(\pi(\mat
 2. Market has **sufficient liquidity** for the strategy’s footprint.
 
 Authors claim this is the **only** strategy class in their AI forecast panel that reliably maps accuracy → profit; live deployment stats cited (+80% ROI, Sharpe 3.35) need independent verification before prod use.
+
+**K151 addendum:** Raven-Agent / predict-raven formalizes a **belief-to-trade layer** — calibrated forecasts can still lose money without a separate trade policy (@sources/arxiv-2607.03015-belief-to-trade-pm-agents-predict-raven-2026-07-10.md).
 
 ### Retail checklist
 

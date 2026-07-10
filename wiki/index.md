@@ -106,6 +106,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [pm-live-belief-updating](concepts/pm-live-belief-updating.md) | validated | Live PM underreaction, salience×liquidity |
 | [pm-agent-cognitive-monoculture](concepts/pm-agent-cognitive-monoculture.md) | validated | K114 Nous — LLM ensemble correlation, prompt injection dead-end |
 | [pm-proper-scoring-clob-profitability](concepts/pm-proper-scoring-clob-profitability.md) | validated | K116 CLOB proper scoring vs heuristic trap |
+| [pm-structural-volatility](concepts/pm-structural-volatility.md) | draft | K151 binary PM vol (deadline + order-flow) |
 | [pm-llm-coherence-projection](concepts/pm-llm-coherence-projection.md) | validated | K116 JCD — arbitrage-free LLM marginals |
 | [world-cup-2026-format](concepts/world-cup-2026-format.md) | validated | 48-team structure, calendar |
 | [world-cup-2026-fan-narrative-preview](concepts/world-cup-2026-fan-narrative-preview.md) | draft | K112 @Lutchyn13 fan essay REFERENCE |
@@ -264,6 +265,13 @@ Catalog of all wiki pages. Updated on each ingest.
 | [arxiv-2607.01377-kyle-liquidity-premium-investment-horizons-2026-07-09](sources/arxiv-2607.01377-kyle-liquidity-premium-investment-horizons-2026-07-09.md) | skimmed | Kyle λ illiquidity premium |
 | [arxiv-2607.01120-areal-agentic-rl-self-evolving-agents-2026-07-09](sources/arxiv-2607.01120-areal-agentic-rl-self-evolving-agents-2026-07-09.md) | skimmed | AReaL agentic online RL (CONDITIONAL-GO) |
 | [brief-k150-pm-liquidity-proper-betting-steals-2026-07-09](sources/brief-k150-pm-liquidity-proper-betting-steals-2026-07-09.md) | deep-read | K150 PM liquidity + proper betting steals |
+| [daily-digest-batch-k151-2026-07-10](sources/daily-digest-batch-k151-2026-07-10.md) | skimmed | K151 batch (3 REF / 1 CONDITIONAL-GO / 1 reject) |
+| [daily-digest-reject-cluster-k151-2026-07-10](sources/daily-digest-reject-cluster-k151-2026-07-10.md) | skimmed | K151 reject (DeFi reverse Kelly AMM) |
+| [arxiv-2607.03015-belief-to-trade-pm-agents-predict-raven-2026-07-10](sources/arxiv-2607.03015-belief-to-trade-pm-agents-predict-raven-2026-07-10.md) | skimmed | Raven-Agent belief-to-trade layer (CONDITIONAL-GO) |
+| [arxiv-2607.08199-pm-structural-volatility-kalshi-2026-07-10](sources/arxiv-2607.08199-pm-structural-volatility-kalshi-2026-07-10.md) | skimmed | Kalshi structural PM volatility |
+| [arxiv-2607.02599-agentltl-trace-verification-agents-2026-07-10](sources/arxiv-2607.02599-agentltl-trace-verification-agents-2026-07-10.md) | skimmed | AgentLTL procedural trace verification |
+| [arxiv-2607.03510-cage-1-enterprise-agent-governance-2026-07-10](sources/arxiv-2607.03510-cage-1-enterprise-agent-governance-2026-07-10.md) | skimmed | CAGE-1 enterprise agent governance eval |
+| [brief-k151-pm-belief-to-trade-volatility-steals-2026-07-10](sources/brief-k151-pm-belief-to-trade-volatility-steals-2026-07-10.md) | deep-read | K151 PM belief-to-trade + vol steals |
 | [daily-digest-reject-cluster-k129-2026-06-25](sources/daily-digest-reject-cluster-k129-2026-06-25.md) | skimmed |
 | [arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24](sources/arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24.md) | skimmed | First RL agent for Indian Rummy |
 | [arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24](sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md) | skimmed | Parameter EMA self-play magnet |

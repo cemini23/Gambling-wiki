@@ -38,6 +38,7 @@ related:
   - sources/openreview-prophets-profit-pm-LYSTj2Cnuu-2026-06-17.md
   - sources/openreview-llm-coherence-projection-Tqos7VqQhH-2026-06-17.md
   - concepts/pm-proper-scoring-clob-profitability.md
+  - concepts/pm-structural-volatility.md
   - concepts/pm-llm-coherence-projection.md
   - concepts/pm-agent-cognitive-monoculture.md
   - sources/arxiv-2606.31675-settlement-manipulation-prediction-markets-2026-07-01.md
@@ -53,7 +54,7 @@ related:
   - @seo-wiki/concepts/generative-engine-optimization.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-07-07
+updated: 2026-07-10
 ---
 
 ## Relations

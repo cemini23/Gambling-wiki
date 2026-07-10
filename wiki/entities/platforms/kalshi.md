@@ -36,9 +36,11 @@ related:
   - concepts/pm-whale-conviction-bias-2026-07.md
   - sources/substack-rss-event-horizon-2026-07-03-how-artificial-spotify-streams-broke-a-kalshi-ma.md
   - sources/substack-rss-event-horizon-2026-06-29-michigan-court-orders-kalshi-to-stop-sports-even.md
+  - sources/arxiv-2607.08199-pm-structural-volatility-kalshi-2026-07-10.md
+  - concepts/pm-structural-volatility.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-07-05
+updated: 2026-07-10
 ---
 
 ## Relations

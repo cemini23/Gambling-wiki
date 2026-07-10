@@ -54,10 +54,16 @@ related:
   - sources/brief-k148-agent-framework-pm-betting-steals-2026-07-06.md
   - sources/arxiv-2607.01120-areal-agentic-rl-self-evolving-agents-2026-07-09.md
   - sources/brief-k150-pm-liquidity-proper-betting-steals-2026-07-09.md
+  - sources/arxiv-2607.03015-belief-to-trade-pm-agents-predict-raven-2026-07-10.md
+  - sources/arxiv-2607.02599-agentltl-trace-verification-agents-2026-07-10.md
+  - sources/arxiv-2607.03510-cage-1-enterprise-agent-governance-2026-07-10.md
+  - sources/brief-k151-pm-belief-to-trade-volatility-steals-2026-07-10.md
+  - entities/bots/predict-raven.md
+  - concepts/pm-structural-volatility.md
   - sources/daily-digest-reject-cluster-k116-2026-06-17.md
 maturity: core
 created: 2026-05-31
-updated: 2026-07-09
+updated: 2026-07-10
 ---
 
 # Gambling bot architecture (planned)
@@ -165,6 +171,10 @@ Do **not** duplicate osint entity bodies — bidirectional `related:` + 2–3 se
 ### Online learning architecture (K150) [TENTATIVE]
 
 @sources/arxiv-2607.01120-areal-agentic-rl-self-evolving-agents-2026-07-09.md — **AReaL** (Apache-2.0, ~5.5k★): three-pillar pattern for **future** fleet bots — (1) agent trajectory data protocol, (2) governed workload→RL data proxy, (3) evolution control plane triggering weight vs in-context updates. **Research lane only**; no prod online RL on wagering without ToS + human-in-loop. Pairs K148 framework Phase-0 metrics.
+
+### Belief-to-trade + governance (K151) [TENTATIVE]
+
+@sources/arxiv-2607.03015-belief-to-trade-pm-agents-predict-raven-2026-07-10.md — **predict-raven** (MIT): separate forecast from trade policy; @entities/bots/predict-raven.md. @sources/arxiv-2607.02599-agentltl-trace-verification-agents-2026-07-10.md + @sources/arxiv-2607.03510-cage-1-enterprise-agent-governance-2026-07-10.md — procedural trace gates + CAGE-style authorization/replay/stop checklist for wager-submit bots.
 
 ### Responsible automation
 

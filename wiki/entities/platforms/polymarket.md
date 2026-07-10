@@ -43,9 +43,13 @@ related:
   - sources/arxiv-2606.31675-settlement-manipulation-prediction-markets-2026-07-01.md
   - sources/arxiv-2607.02467-human-capital-pm-hybrid-forecasting-2026-07-06.md
   - sources/brief-k148-agent-framework-pm-betting-steals-2026-07-06.md
+  - sources/arxiv-2607.03015-belief-to-trade-pm-agents-predict-raven-2026-07-10.md
+  - sources/arxiv-2607.08199-pm-structural-volatility-kalshi-2026-07-10.md
+  - entities/bots/predict-raven.md
+  - concepts/pm-structural-volatility.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-07-06
+updated: 2026-07-10
 ---
 
 ## Relations

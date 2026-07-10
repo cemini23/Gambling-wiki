@@ -736,3 +736,14 @@ Cross-wiki stub routed from `@osint-wiki/sources/substack-rss-klement-2026-07-07
 - Brief: `briefs/2026-07-09_k150-pm-liquidity-proper-betting-steal.md` (wiki-only; no prod scp)
 - Sweep `2026-07-09-daily.md` → INGESTED; routing link fix
 - Archived 7 PDFs to egress-fi
+
+## [2026-07-10] ingest | K151 daily digest
+
+- **Batch K151:** 3 REFERENCE + 1 CONDITIONAL-GO + 1 reject
+- Created predict-raven source + entity; PM structural volatility source + concept
+- Created AgentLTL + CAGE-1 governance sources
+- Reject: DeFi reverse Kelly AMM (04178)
+- Updated `pm-proper-scoring`, `gambling-bot-architecture`, Kalshi/Polymarket entities
+- Brief: `briefs/2026-07-10_k151-pm-belief-to-trade-volatility-steal.md` (wiki-only)
+- Sweep `2026-07-10-daily.md` → INGESTED; routing link fix
+- Archived 5 PDFs to egress-fi

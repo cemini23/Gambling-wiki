@@ -12,11 +12,12 @@ related:
   - entities/bots/bovada-hand-history-converter.md
   - entities/bots/poker-bot-tooling.md
   - entities/bots/stake-engine-client.md
+  - entities/bots/predict-raven.md
   - entities/tools/rlcard.md
   - sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md
 maturity: core
 created: 2026-05-31
-updated: 2026-06-07
+updated: 2026-07-10
 ---
 
 ## Relations
@@ -41,6 +42,7 @@ Placeholder namespace for **platform-specific gambling bot** entity pages (`enti
 | @entities/bots/bovada-hand-history-converter.md | Analytics / CLV | Steal-from K92 |
 | @entities/bots/poker-bot-tooling.md | Poker RL / equity | rlcard Adopt + engines |
 | @entities/bots/cemini-devfun-poker-agent.md | dev.fun arena NLHE | **Active** — public entity stub; `cemini_decide` in private osint repo |
+| @entities/bots/predict-raven.md | PM / Polymarket | **CONDITIONAL-GO** K151 — belief-to-trade strip-mine |
 
 ### Planned stubs (create on first ingest)
 
