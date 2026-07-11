@@ -747,3 +747,13 @@ Cross-wiki stub routed from `@osint-wiki/sources/substack-rss-klement-2026-07-07
 - Brief: `briefs/2026-07-10_k151-pm-belief-to-trade-volatility-steal.md` (wiki-only)
 - Sweep `2026-07-10-daily.md` → INGESTED; routing link fix
 - Archived 5 PDFs to egress-fi
+
+## [2026-07-11] ingest | K152 daily digest
+
+- **Batch K152:** 1 REFERENCE + 1 CONDITIONAL-GO / 0 reject
+- Created expert-yardstick source + `entities/tools/adversarial-coevolution.md`
+- Created forgetting-factor regret source
+- Updated `opponent-modeling-imperfect-info`, `poker-hl-analyst-loop`, `rlcard`
+- Briefs: wiki `briefs/2026-07-11_k152-...` + OSINT `agents/devfun-poker-arena/briefs/2026-07-11_k152-...`
+- Sweep `2026-07-11-daily.md` → INGESTED; routing link fix
+- Archived 2 PDFs to egress-fi

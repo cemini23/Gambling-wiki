@@ -37,14 +37,15 @@ related:
   - sources/arxiv-2606.26027-tool-rl-collapse-supervisory-signals-2026-07-02.md
   - sources/arxiv-2606.30573-swe-interact-user-driven-coding-agents-2026-07-03.md
   - sources/brief-k149-policy-ssl-advent-poker-steals-2026-07-07.md
-  - sources/arxiv-2607.01498-policy-representation-ssl-poker-2026-07-07.md
-  - sources/arxiv-2607.02389-steerability-constraints-coding-agents-2026-07-06.md
-  - sources/arxiv-2606.30587-llm-vuln-detection-cognitive-heuristics-2026-07-06.md
+  - sources/brief-k152-expert-yardstick-forgetting-regret-steals-2026-07-11.md
+  - sources/arxiv-2607.06854-lightweight-game-agent-expert-yardstick-2026-07-11.md
+  - sources/arxiv-2607.07078-forgetting-factor-regret-zero-sum-2026-07-11.md
+  - entities/tools/adversarial-coevolution.md
   - sources/devfun-sandbox-researcher-guide-2026-06-26.md
   - osint-wiki/sources/trading-posts-compilation-7-2026-06-09.md
 maturity: validated
 created: 2026-06-03
-updated: 2026-07-03
+updated: 2026-07-11
 ---
 
 ## Relations
@@ -181,6 +182,8 @@ HL loop fixes **`decide()` policy**; researcher **bundle submit** adds **`arena-
 **Constraint substrate + cognitive security** (K148 — @sources/arxiv-2607.02389-steerability-constraints-coding-agents-2026-07-06.md, @sources/arxiv-2606.30587-llm-vuln-detection-cognitive-heuristics-2026-07-06.md): enforce linters/docs CLI on bundle repo; treat LLM vuln triage on analyze output as **advisory** — preflight + regression remain deploy gates. See @sources/brief-k148-agent-framework-pm-betting-steals-2026-07-06.md.
 
 **Policy SSL + ADVENT spot taxonomy** (K149 — @sources/arxiv-2607.01498-policy-representation-ssl-poker-2026-07-07.md, @sources/arxiv-2607.01585-advent-ilp-poker-predicate-invention-2026-07-07.md): Leduc policy embeddings for opponent archive; LLM→verify loop for named regression-spot predicates. See @sources/brief-k149-policy-ssl-advent-poker-steals-2026-07-07.md.
+
+**Expert yardstick + forgetting regret** (K152 — @sources/arxiv-2607.06854-lightweight-game-agent-expert-yardstick-2026-07-11.md, @sources/arxiv-2607.07078-forgetting-factor-regret-zero-sum-2026-07-11.md): regression gates vs fixed exploit/expert pool (not self-play Elo alone); recency-weighted regret when league drifts. See @sources/brief-k152-expert-yardstick-forgetting-regret-steals-2026-07-11.md.
 
 ## Snippets
 

@@ -13,9 +13,11 @@ related:
   - entities/bots/README.md
   - concepts/opponent-modeling-imperfect-info.md
   - sources/brief-k130-rlcard-offline-baseline-adopt-2026-06-26.md
+  - entities/tools/adversarial-coevolution.md
+  - sources/arxiv-2607.06854-lightweight-game-agent-expert-yardstick-2026-07-11.md
 maturity: validated
 created: 2026-06-01
-updated: 2026-06-26
+updated: 2026-07-11
 laptop_install: VERIFIED 2026-06-01 — OSINT `.local/venv-gambling-research` (rlcard 1.2.0); run `gambling_research_venv.sh` in OSINT repo
 phase_0_verdict: ADOPT 2026-06-26 — K130 refresh; MIT; offline Leduc/limit-HU baselines only
 ---

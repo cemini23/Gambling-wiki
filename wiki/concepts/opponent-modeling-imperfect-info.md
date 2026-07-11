@@ -38,11 +38,15 @@ related:
   - sources/arxiv-2607.01498-policy-representation-ssl-poker-2026-07-07.md
   - sources/arxiv-2607.01585-advent-ilp-poker-predicate-invention-2026-07-07.md
   - sources/brief-k149-policy-ssl-advent-poker-steals-2026-07-07.md
+  - sources/arxiv-2607.06854-lightweight-game-agent-expert-yardstick-2026-07-11.md
+  - sources/arxiv-2607.07078-forgetting-factor-regret-zero-sum-2026-07-11.md
+  - entities/tools/adversarial-coevolution.md
+  - sources/brief-k152-expert-yardstick-forgetting-regret-steals-2026-07-11.md
   - sources/arxiv-2606.29457-takeover-auction-diligence-games-2026-06-30.md
   - sources/brief-k134-ganzfried-ped-deal-games-steals-2026-06-30.md
 maturity: draft
 created: 2026-06-03
-updated: 2026-07-07
+updated: 2026-07-11
 ---
 
 ## Relations
@@ -117,6 +121,14 @@ See `@sources/daily-digest-arxiv-batch-2026-06-04.md` and `@entities/bots/poker-
 ### Interpretable spot predicates (K149 ADVENT) [TENTATIVE]
 
 @sources/arxiv-2607.01585-advent-ilp-poker-predicate-invention-2026-07-07.md: LLM proposes **named predicates** with Prolog verification — steal for offline **regression spot taxonomy**, not hand-ranking rules in prod `decide()`.
+
+### Expert yardstick eval (K152) [TENTATIVE]
+
+@sources/arxiv-2607.06854-lightweight-game-agent-expert-yardstick-2026-07-11.md: grade imperfect-info RL vs a **fixed strong expert** (eval-only), not self-play Elo or random crush. Helps: trust-region, curriculum, warm start, keep-best; hurts: DAgger, live LLM opponent, heavy embeddings. Leduc optimum check pairs @entities/tools/rlcard.md. @entities/tools/adversarial-coevolution.md — **no LICENSE**.
+
+### Forgetting-factor regret (K152) [TENTATIVE]
+
+@sources/arxiv-2607.07078-forgetting-factor-regret-zero-sum-2026-07-11.md: **recency-weighted regret** for tracking time-varying NE when opponent pool drifts (MAFP/league context).
 
 ### Human poker parallel
 
