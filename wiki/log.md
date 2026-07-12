@@ -757,3 +757,13 @@ Cross-wiki stub routed from `@osint-wiki/sources/substack-rss-klement-2026-07-07
 - Briefs: wiki `briefs/2026-07-11_k152-...` + OSINT `agents/devfun-poker-arena/briefs/2026-07-11_k152-...`
 - Sweep `2026-07-11-daily.md` → INGESTED; routing link fix
 - Archived 2 PDFs to egress-fi
+
+## [2026-07-12] ingest | K153 daily digest
+
+- **Batch K153:** 1 REFERENCE + 1 CONDITIONAL-GO + 1 reject
+- Created MPPO source + entity; ASE PM evidence-chain source
+- Reject: matroid rank aggregation (07153)
+- Updated `opponent-modeling-imperfect-info`, `poker-hl-analyst-loop`, `pm-agent-cognitive-monoculture`, `blackjack`
+- Briefs: wiki + OSINT arena MPPO steal
+- Sweep `2026-07-12-daily.md` → INGESTED; routing link fix
+- Archived 3 PDFs to egress-fi

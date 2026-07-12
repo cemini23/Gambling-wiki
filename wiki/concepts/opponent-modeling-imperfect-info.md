@@ -42,11 +42,14 @@ related:
   - sources/arxiv-2607.07078-forgetting-factor-regret-zero-sum-2026-07-11.md
   - entities/tools/adversarial-coevolution.md
   - sources/brief-k152-expert-yardstick-forgetting-regret-steals-2026-07-11.md
+  - sources/arxiv-2506.16995-mppo-style-preserving-game-agents-2026-07-12.md
+  - entities/tools/mppo.md
+  - sources/brief-k153-mppo-style-pm-evidence-steals-2026-07-12.md
   - sources/arxiv-2606.29457-takeover-auction-diligence-games-2026-06-30.md
   - sources/brief-k134-ganzfried-ped-deal-games-steals-2026-06-30.md
 maturity: draft
 created: 2026-06-03
-updated: 2026-07-11
+updated: 2026-07-12
 ---
 
 ## Relations
@@ -129,6 +132,10 @@ See `@sources/daily-digest-arxiv-batch-2026-06-04.md` and `@entities/bots/poker-
 ### Forgetting-factor regret (K152) [TENTATIVE]
 
 @sources/arxiv-2607.07078-forgetting-factor-regret-zero-sum-2026-07-11.md: **recency-weighted regret** for tracking time-varying NE when opponent pool drifts (MAFP/league context).
+
+### Style-preserving opponent upgrade (K153) [TENTATIVE]
+
+@sources/arxiv-2506.16995-mppo-style-preserving-game-agents-2026-07-12.md: **MPPO** mixes online PPO with style-specific demonstrations to raise league-bot strength without erasing archetypes; track **D_policy** style drift. @entities/tools/mppo.md — **no LICENSE**.
 
 ### Human poker parallel
 

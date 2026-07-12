@@ -7,9 +7,10 @@ related:
   - concepts/casino-game-house-edge.md
   - concepts/bankroll-management.md
   - sources/youtube-operator-batch-casino-2026-05-31.md
+  - sources/arxiv-2506.16995-mppo-style-preserving-game-agents-2026-07-12.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-07-12
 ---
 
 ## Relations

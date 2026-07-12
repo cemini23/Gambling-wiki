@@ -160,6 +160,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [pokerskill](entities/tools/pokerskill.md) | draft |
 | [rlcard](entities/tools/rlcard.md) | draft |
 | [adversarial-coevolution](entities/tools/adversarial-coevolution.md) | draft | K152 expert-yardstick pipeline (no LICENSE) |
+| [mppo](entities/tools/mppo.md) | draft | K153 style-preserving opponent RL (no LICENSE) |
 | [devfun-poker-arena-starter-kit](entities/tools/devfun-poker-arena-starter-kit.md) | validated |
 
 ## Entities — Bots
@@ -277,6 +278,11 @@ Catalog of all wiki pages. Updated on each ingest.
 | [arxiv-2607.06854-lightweight-game-agent-expert-yardstick-2026-07-11](sources/arxiv-2607.06854-lightweight-game-agent-expert-yardstick-2026-07-11.md) | skimmed | Expert yardstick RL eval (Leduc/Gin) |
 | [arxiv-2607.07078-forgetting-factor-regret-zero-sum-2026-07-11](sources/arxiv-2607.07078-forgetting-factor-regret-zero-sum-2026-07-11.md) | skimmed | Forgetting-factor regret online zero-sum |
 | [brief-k152-expert-yardstick-forgetting-regret-steals-2026-07-11](sources/brief-k152-expert-yardstick-forgetting-regret-steals-2026-07-11.md) | deep-read | K152 arena eval + regret steals |
+| [daily-digest-batch-k153-2026-07-12](sources/daily-digest-batch-k153-2026-07-12.md) | skimmed | K153 batch (1 REF / 1 CONDITIONAL-GO / 1 reject) |
+| [daily-digest-reject-cluster-k153-2026-07-12](sources/daily-digest-reject-cluster-k153-2026-07-12.md) | skimmed | K153 reject (matroid rank aggregation) |
+| [arxiv-2506.16995-mppo-style-preserving-game-agents-2026-07-12](sources/arxiv-2506.16995-mppo-style-preserving-game-agents-2026-07-12.md) | skimmed | MPPO style-preserving game agents |
+| [arxiv-2607.07760-adversarial-social-epistemology-llm-2026-07-12](sources/arxiv-2607.07760-adversarial-social-epistemology-llm-2026-07-12.md) | skimmed | ASE for LLM evidence-chain audit |
+| [brief-k153-mppo-style-pm-evidence-steals-2026-07-12](sources/brief-k153-mppo-style-pm-evidence-steals-2026-07-12.md) | deep-read | K153 MPPO + PM evidence steals |
 | [daily-digest-reject-cluster-k129-2026-06-25](sources/daily-digest-reject-cluster-k129-2026-06-25.md) | skimmed |
 | [arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24](sources/arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24.md) | skimmed | First RL agent for Indian Rummy |
 | [arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24](sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md) | skimmed | Parameter EMA self-play magnet |

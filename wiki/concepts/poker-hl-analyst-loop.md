@@ -38,14 +38,13 @@ related:
   - sources/arxiv-2606.30573-swe-interact-user-driven-coding-agents-2026-07-03.md
   - sources/brief-k149-policy-ssl-advent-poker-steals-2026-07-07.md
   - sources/brief-k152-expert-yardstick-forgetting-regret-steals-2026-07-11.md
-  - sources/arxiv-2607.06854-lightweight-game-agent-expert-yardstick-2026-07-11.md
-  - sources/arxiv-2607.07078-forgetting-factor-regret-zero-sum-2026-07-11.md
-  - entities/tools/adversarial-coevolution.md
+  - sources/brief-k153-mppo-style-pm-evidence-steals-2026-07-12.md
+  - sources/arxiv-2506.16995-mppo-style-preserving-game-agents-2026-07-12.md
+  - entities/tools/mppo.md
   - sources/devfun-sandbox-researcher-guide-2026-06-26.md
-  - osint-wiki/sources/trading-posts-compilation-7-2026-06-09.md
 maturity: validated
 created: 2026-06-03
-updated: 2026-07-11
+updated: 2026-07-12
 ---
 
 ## Relations
@@ -184,6 +183,8 @@ HL loop fixes **`decide()` policy**; researcher **bundle submit** adds **`arena-
 **Policy SSL + ADVENT spot taxonomy** (K149 — @sources/arxiv-2607.01498-policy-representation-ssl-poker-2026-07-07.md, @sources/arxiv-2607.01585-advent-ilp-poker-predicate-invention-2026-07-07.md): Leduc policy embeddings for opponent archive; LLM→verify loop for named regression-spot predicates. See @sources/brief-k149-policy-ssl-advent-poker-steals-2026-07-07.md.
 
 **Expert yardstick + forgetting regret** (K152 — @sources/arxiv-2607.06854-lightweight-game-agent-expert-yardstick-2026-07-11.md, @sources/arxiv-2607.07078-forgetting-factor-regret-zero-sum-2026-07-11.md): regression gates vs fixed exploit/expert pool (not self-play Elo alone); recency-weighted regret when league drifts. See @sources/brief-k152-expert-yardstick-forgetting-regret-steals-2026-07-11.md.
+
+**MPPO style-preserving league upgrade** (K153 — @sources/arxiv-2506.16995-mppo-style-preserving-game-agents-2026-07-12.md): demonstration-mixed RL when strengthening stylized opponents; track style drift on promotion. See @sources/brief-k153-mppo-style-pm-evidence-steals-2026-07-12.md.
 
 ## Snippets
 

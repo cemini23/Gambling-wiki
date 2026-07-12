@@ -18,10 +18,12 @@ related:
   - entities/platforms/polymarket.md
   - sweeps/2026-06-13-daily.md
   - sources/arxiv-2606-13038-nous-prediction-market-cognitive-injection-2026-06-13.md
+  - sources/arxiv-2607.07760-adversarial-social-epistemology-llm-2026-07-12.md
+  - sources/brief-k153-mppo-style-pm-evidence-steals-2026-07-12.md
   - osint-wiki/concepts/market-informedness-market-making.md
 maturity: validated
 created: 2026-06-13
-updated: 2026-06-17
+updated: 2026-07-12
 ---
 
 ## Relations
@@ -51,6 +53,10 @@ Independent frontier model families show forecast error correlation **r ≈ 0.77
 | **Bottleneck** | Structure-to-narrative translator emits **semantically uniform prompts** |
 
 **Verdict:** hand-designed LLM personas and wallet-profile prompt stuffing are **Dead Ends** for PM edge. Paper points to **below-prompt** methods (PEFT, activation steering) — `@osint-wiki` implementation lane.
+
+### Evidence-chain audit (K153 ASE) [TENTATIVE]
+
+@sources/arxiv-2607.07760-adversarial-social-epistemology-llm-2026-07-12.md: beyond correlated errors — agents may **omit, under-specify, or distort** scaffolded testimony chains. PM forecast bots need **auditable source→inference→trade** logs, not headline trust. Pairs K151 predict-raven evidence gather.
 
 ### Bot design checklist
 
