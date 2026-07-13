@@ -45,11 +45,13 @@ related:
   - sources/arxiv-2506.16995-mppo-style-preserving-game-agents-2026-07-12.md
   - entities/tools/mppo.md
   - sources/brief-k153-mppo-style-pm-evidence-steals-2026-07-12.md
+  - sources/arxiv-2607.08692-pokemon-tcg-nash-lean-metagame-2026-07-13.md
+  - sources/brief-k154-metagame-memory-search-steals-2026-07-13.md
   - sources/arxiv-2606.29457-takeover-auction-diligence-games-2026-06-30.md
   - sources/brief-k134-ganzfried-ped-deal-games-steals-2026-06-30.md
 maturity: draft
 created: 2026-06-03
-updated: 2026-07-12
+updated: 2026-07-13
 ---
 
 ## Relations
@@ -136,6 +138,10 @@ See `@sources/daily-digest-arxiv-batch-2026-06-04.md` and `@entities/bots/poker-
 ### Style-preserving opponent upgrade (K153) [TENTATIVE]
 
 @sources/arxiv-2506.16995-mppo-style-preserving-game-agents-2026-07-12.md: **MPPO** mixes online PPO with style-specific demonstrations to raise league-bot strength without erasing archetypes; track **D_policy** style drift. @entities/tools/mppo.md — **no LICENSE**.
+
+### Metagame Nash / popularity paradox (K154) [TENTATIVE]
+
+@sources/arxiv-2607.08692-pokemon-tcg-nash-lean-metagame-2026-07-13.md: machine-checked Nash on tournament matchup matrix — **field share ≠ equilibrium weight**; methodological steal for league archetype pools (Pokémon TCG case study).
 
 ### Human poker parallel
 

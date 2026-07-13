@@ -767,3 +767,13 @@ Cross-wiki stub routed from `@osint-wiki/sources/substack-rss-klement-2026-07-07
 - Briefs: wiki + OSINT arena MPPO steal
 - Sweep `2026-07-12-daily.md` → INGESTED; routing link fix
 - Archived 3 PDFs to egress-fi
+
+## [2026-07-13] ingest | K154 daily digest
+
+- **Batch K154:** 2 REFERENCE + 1 CONDITIONAL-GO + 4 reject
+- Created Pokémon TCG Nash metagame, Ensemble QSP memory, DeepSearch-World sources
+- Reject cluster: robotics affordances, psych AI eval, quantile RL, equity support/resistance
+- Updated `opponent-modeling`, `poker-hl-analyst-loop`, `custom-agent-methodology`, `predict-raven`
+- Briefs: wiki + OSINT arena metagame/memory steal
+- Sweep `2026-07-13-daily.md` → INGESTED; routing link fix
+- Archived 7 PDFs to egress-fi

@@ -24,9 +24,10 @@ related:
   - sources/arxiv-2607.02389-steerability-constraints-coding-agents-2026-07-06.md
   - sources/arxiv-2607.02453-oss-agent-framework-ecosystem-health-2026-07-06.md
   - sources/brief-k148-agent-framework-pm-betting-steals-2026-07-06.md
+  - sources/arxiv-2607.07666-ensemble-qsp-hierarchical-memory-2026-07-13.md
 maturity: validated
 created: 2026-06-19
-updated: 2026-07-06
+updated: 2026-07-13
 ---
 
 ## Relations

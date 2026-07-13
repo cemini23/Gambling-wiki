@@ -283,6 +283,12 @@ Catalog of all wiki pages. Updated on each ingest.
 | [arxiv-2506.16995-mppo-style-preserving-game-agents-2026-07-12](sources/arxiv-2506.16995-mppo-style-preserving-game-agents-2026-07-12.md) | skimmed | MPPO style-preserving game agents |
 | [arxiv-2607.07760-adversarial-social-epistemology-llm-2026-07-12](sources/arxiv-2607.07760-adversarial-social-epistemology-llm-2026-07-12.md) | skimmed | ASE for LLM evidence-chain audit |
 | [brief-k153-mppo-style-pm-evidence-steals-2026-07-12](sources/brief-k153-mppo-style-pm-evidence-steals-2026-07-12.md) | deep-read | K153 MPPO + PM evidence steals |
+| [daily-digest-batch-k154-2026-07-13](sources/daily-digest-batch-k154-2026-07-13.md) | skimmed | K154 batch (2 REF / 1 CONDITIONAL-GO / 4 reject) |
+| [daily-digest-reject-cluster-k154-2026-07-13](sources/daily-digest-reject-cluster-k154-2026-07-13.md) | skimmed | K154 rejects (robotics, psych, quantile RL, equity TA) |
+| [arxiv-2607.08692-pokemon-tcg-nash-lean-metagame-2026-07-13](sources/arxiv-2607.08692-pokemon-tcg-nash-lean-metagame-2026-07-13.md) | skimmed | Lean 4 Nash metagame (popularity paradox) |
+| [arxiv-2607.07666-ensemble-qsp-hierarchical-memory-2026-07-13](sources/arxiv-2607.07666-ensemble-qsp-hierarchical-memory-2026-07-13.md) | skimmed | Ensemble QSP bounded hierarchical memory |
+| [arxiv-2607.07820-deepsearch-world-self-distillation-2026-07-13](sources/arxiv-2607.07820-deepsearch-world-self-distillation-2026-07-13.md) | skimmed | DeepSearch-World verifiable search (CONDITIONAL-GO) |
+| [brief-k154-metagame-memory-search-steals-2026-07-13](sources/brief-k154-metagame-memory-search-steals-2026-07-13.md) | deep-read | K154 metagame Nash + memory + search steals |
 | [daily-digest-reject-cluster-k129-2026-06-25](sources/daily-digest-reject-cluster-k129-2026-06-25.md) | skimmed |
 | [arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24](sources/arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24.md) | skimmed | First RL agent for Indian Rummy |
 | [arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24](sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md) | skimmed | Parameter EMA self-play magnet |

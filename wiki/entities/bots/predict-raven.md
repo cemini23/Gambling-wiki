@@ -13,9 +13,10 @@ related:
   - sources/arxiv-2607.03015-belief-to-trade-pm-agents-predict-raven-2026-07-10.md
   - sources/brief-k151-pm-belief-to-trade-volatility-steals-2026-07-10.md
   - sources/openreview-prophets-profit-pm-LYSTj2Cnuu-2026-06-17.md
+  - sources/arxiv-2607.07820-deepsearch-world-self-distillation-2026-07-13.md
 maturity: draft
 created: 2026-07-10
-updated: 2026-07-10
+updated: 2026-07-13
 ---
 
 ## Relations
