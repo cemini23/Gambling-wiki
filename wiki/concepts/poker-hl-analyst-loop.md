@@ -43,9 +43,12 @@ related:
   - sources/arxiv-2607.08692-pokemon-tcg-nash-lean-metagame-2026-07-13.md
   - sources/arxiv-2607.07666-ensemble-qsp-hierarchical-memory-2026-07-13.md
   - sources/devfun-sandbox-researcher-guide-2026-06-26.md
+  - sources/arxiv-2607.08758-ideas-have-genomes-ig-bench-2026-07-14.md
+  - sources/brief-k155-ideagene-lineage-steals-2026-07-14.md
+  - entities/tools/ideagene-bench.md
 maturity: validated
 created: 2026-06-03
-updated: 2026-07-13
+updated: 2026-07-14
 ---
 
 ## Relations
@@ -56,6 +59,8 @@ updated: 2026-07-13
 - @sources/brief-k107-poker-open-spot-audit-2026-06-09.md — K107 open-spot audit + selfplay KPI baseline
 - @concepts/custom-agent-methodology.md — HL loop as P3→P4→P5 instance (K120)
 - @concepts/gambling-bot-architecture.md — bot fleet; HL loop is the **poker lane** iteration pattern
+- @sources/brief-k155-ideagene-lineage-steals-2026-07-14.md — K155 GenomeDiff patch-lineage steal
+- @sources/arxiv-2607.08758-ideas-have-genomes-ig-bench-2026-07-14.md — IdeaGene-Bench
 - @osint-wiki/concepts/cemini-knowledge-application-architecture.md — brief → verify → deploy (cross-wiki)
 - Private repo: `llm-wiki-by-cemini/agents/devfun-poker-arena/` — HL loop scripts
 
@@ -155,6 +160,10 @@ Artifacts:
 ### Brief shape (OSINT-aligned)
 
 Same sections as @osint-wiki `BRIEF_TEMPLATE.md`: **Target**, **Summary**, **Body**, **Sources**, **Implementation status** — but Target is `examples/cemini_decide.py`, not CeminiSuite. Built by `examples/cemini_hl_brief.py`.
+
+### Patch lineage (K155 IdeaGene) [TENTATIVE]
+
+@sources/arxiv-2607.08758-ideas-have-genomes-ig-bench-2026-07-14.md: treat successive HL patches as **GenomeDiff** — record parent mechanism Inherited / Mutated / Lost / Novel. Reject steals that share poker/task ecology without a driver-mechanism link. Pairs P5 joint-consistency gates.
 
 ### End-of-session cadence
 

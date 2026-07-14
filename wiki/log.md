@@ -2,6 +2,16 @@
 
 Append-only chronological log.
 
+## [2026-07-14] ingest | K155 daily digest
+
+- **Batch K155:** 1 CONDITIONAL-GO + 1 reject
+- Created IdeaGene source + `entities/tools/ideagene-bench.md`
+- Reject: Contravariance NeuroAI (08561)
+- Updated `custom-agent-methodology`, `poker-hl-analyst-loop`
+- Briefs: wiki `briefs/2026-07-14_k155-...` + OSINT arena patch-lineage + CCC prod lineage-eval
+- Local adopt: `raw-sources/foss-evals/IdeasHaveGenomes/` (~26MB; LICENSE TBD) on gambling-wiki + CCC
+- Sweep `2026-07-14-daily.md` → INGESTED; archived 2 PDFs to egress-fi
+
 ## [2026-07-07] ingest | K149 — daily digest batch (policy SSL + ADVENT poker ILP)
 
 - **New** — `sources/arxiv-2607.01498-policy-representation-ssl-poker-2026-07-07.md` (CONDITIONAL-GO — ssl-project no LICENSE)

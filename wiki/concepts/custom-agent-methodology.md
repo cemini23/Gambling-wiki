@@ -25,9 +25,12 @@ related:
   - sources/arxiv-2607.02453-oss-agent-framework-ecosystem-health-2026-07-06.md
   - sources/brief-k148-agent-framework-pm-betting-steals-2026-07-06.md
   - sources/arxiv-2607.07666-ensemble-qsp-hierarchical-memory-2026-07-13.md
+  - sources/arxiv-2607.08758-ideas-have-genomes-ig-bench-2026-07-14.md
+  - entities/tools/ideagene-bench.md
+  - sources/brief-k155-ideagene-lineage-steals-2026-07-14.md
 maturity: validated
 created: 2026-06-19
-updated: 2026-07-13
+updated: 2026-07-14
 ---
 
 ## Relations
@@ -36,6 +39,8 @@ updated: 2026-07-13
 - @concepts/poker-hl-analyst-loop.md — primary gambling-wiki application (offline patch loop)
 - @concepts/gambling-bot-architecture.md — fleet topology; CLI composition corollary
 - @meta/gambling-bot-ingest-rubric.md — Phase-0 checklist for Adopt repos
+- @entities/tools/ideagene-bench.md — K155 lineage-competence FOSS eval (CONDITIONAL-GO)
+- @sources/arxiv-2607.08758-ideas-have-genomes-ig-bench-2026-07-14.md — IdeaGene / GenomeDiff / PES
 
 ## Raw Concept
 
@@ -110,6 +115,10 @@ Self-improving agent literature assumes **stationary** benchmarks; RQGM @sources
 ### Constraint substrate (K148) [TENTATIVE]
 
 @sources/arxiv-2607.02389-steerability-constraints-coding-agents-2026-07-06.md: pre-LLM **linters, layered docs CLI, allow-lists** beat unconstrained MCP scaffolding for auditable coding agents. Pairs K120 hooks/allow-list — **Adopt** substrate before expanding tool surface.
+
+### Lineage competence (K155 IdeaGene) [TENTATIVE]
+
+@sources/arxiv-2607.08758-ideas-have-genomes-ig-bench-2026-07-14.md / @entities/tools/ideagene-bench.md: research proposals and HL patches should be scored on **mechanism inheritance**, not topical proximity. Steal typed Idea Genome roles + GenomeDiff fates; open proposals use PES (Heredity · Variation · Selection). P5 behavioral gates should reject “related paper” steals that share task ecology but not driver mechanism. **CONDITIONAL-GO** FOSS harness until SPDX LICENSE lands.
 
 ## Snippets
 

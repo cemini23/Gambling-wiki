@@ -289,6 +289,11 @@ Catalog of all wiki pages. Updated on each ingest.
 | [arxiv-2607.07666-ensemble-qsp-hierarchical-memory-2026-07-13](sources/arxiv-2607.07666-ensemble-qsp-hierarchical-memory-2026-07-13.md) | skimmed | Ensemble QSP bounded hierarchical memory |
 | [arxiv-2607.07820-deepsearch-world-self-distillation-2026-07-13](sources/arxiv-2607.07820-deepsearch-world-self-distillation-2026-07-13.md) | skimmed | DeepSearch-World verifiable search (CONDITIONAL-GO) |
 | [brief-k154-metagame-memory-search-steals-2026-07-13](sources/brief-k154-metagame-memory-search-steals-2026-07-13.md) | deep-read | K154 metagame Nash + memory + search steals |
+| [daily-digest-batch-k155-2026-07-14](sources/daily-digest-batch-k155-2026-07-14.md) | skimmed | K155 batch (1 CONDITIONAL-GO / 1 reject) |
+| [daily-digest-reject-cluster-k155-2026-07-14](sources/daily-digest-reject-cluster-k155-2026-07-14.md) | skimmed | K155 reject (NeuroAI contravariance) |
+| [arxiv-2607.08758-ideas-have-genomes-ig-bench-2026-07-14](sources/arxiv-2607.08758-ideas-have-genomes-ig-bench-2026-07-14.md) | skimmed | IdeaGene-Bench lineage competence (CONDITIONAL-GO) |
+| [brief-k155-ideagene-lineage-steals-2026-07-14](sources/brief-k155-ideagene-lineage-steals-2026-07-14.md) | deep-read | K155 IdeaGene / GenomeDiff / PES steals |
+| [ideagene-bench](entities/tools/ideagene-bench.md) | draft | FOSS IG-Bench harness (~26MB; LICENSE TBD) |
 | [daily-digest-reject-cluster-k129-2026-06-25](sources/daily-digest-reject-cluster-k129-2026-06-25.md) | skimmed |
 | [arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24](sources/arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24.md) | skimmed | First RL agent for Indian Rummy |
 | [arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24](sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md) | skimmed | Parameter EMA self-play magnet |
