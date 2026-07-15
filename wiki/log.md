@@ -2,6 +2,15 @@
 
 Append-only chronological log.
 
+## [2026-07-15] ingest | K156 daily digest
+
+- **Batch K156:** 1 CONDITIONAL-GO / 0 reject
+- Created AgentTexasPoker source + `entities/tools/agent-texas-poker.md`
+- Updated `poker-hl-analyst-loop`, `opponent-modeling-imperfect-info`
+- Briefs: wiki + OSINT arena risk-spectrum + CCC prod LLM risk audit
+- Local adopt: `raw-sources/foss-evals/AgentTexasPoker/` (~688KB; LICENSE TBD)
+- Sweep `2026-07-15-daily.md` → INGESTED; archived 1 PDF to egress-fi
+
 ## [2026-07-14] ingest | K155 daily digest
 
 - **Batch K155:** 1 CONDITIONAL-GO + 1 reject

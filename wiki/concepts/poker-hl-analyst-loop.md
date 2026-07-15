@@ -46,9 +46,12 @@ related:
   - sources/arxiv-2607.08758-ideas-have-genomes-ig-bench-2026-07-14.md
   - sources/brief-k155-ideagene-lineage-steals-2026-07-14.md
   - entities/tools/ideagene-bench.md
+  - sources/arxiv-2607.10251-risk-sensitive-llm-poker-2026-07-15.md
+  - sources/brief-k156-risk-sensitive-llm-poker-steals-2026-07-15.md
+  - entities/tools/agent-texas-poker.md
 maturity: validated
 created: 2026-06-03
-updated: 2026-07-14
+updated: 2026-07-15
 ---
 
 ## Relations
@@ -61,6 +64,8 @@ updated: 2026-07-14
 - @concepts/gambling-bot-architecture.md — bot fleet; HL loop is the **poker lane** iteration pattern
 - @sources/brief-k155-ideagene-lineage-steals-2026-07-14.md — K155 GenomeDiff patch-lineage steal
 - @sources/arxiv-2607.08758-ideas-have-genomes-ig-bench-2026-07-14.md — IdeaGene-Bench
+- @sources/brief-k156-risk-sensitive-llm-poker-steals-2026-07-15.md — K156 VPIP/PFR risk spectra
+- @entities/tools/agent-texas-poker.md — AgentTexasPoker FOSS assay
 - @osint-wiki/concepts/cemini-knowledge-application-architecture.md — brief → verify → deploy (cross-wiki)
 - Private repo: `llm-wiki-by-cemini/agents/devfun-poker-arena/` — HL loop scripts
 
@@ -164,6 +169,10 @@ Same sections as @osint-wiki `BRIEF_TEMPLATE.md`: **Target**, **Summary**, **Bod
 ### Patch lineage (K155 IdeaGene) [TENTATIVE]
 
 @sources/arxiv-2607.08758-ideas-have-genomes-ig-bench-2026-07-14.md: treat successive HL patches as **GenomeDiff** — record parent mechanism Inherited / Mutated / Lost / Novel. Reject steals that share poker/task ecology without a driver-mechanism link. Pairs P5 joint-consistency gates.
+
+### Risk spectra under pressure (K156 AgentTexasPoker) [TENTATIVE]
+
+@sources/arxiv-2607.10251-risk-sensitive-llm-poker-2026-07-15.md: LLM / AI foes have stable **VPIP/PFR** profiles and unequal plasticity when blinds or stacks burn. Re-check open/3-bet gates by pressure band; separate entry contraction from raise de-escalation. JSON parse/retry telemetry should not count as folds.
 
 ### End-of-session cadence
 

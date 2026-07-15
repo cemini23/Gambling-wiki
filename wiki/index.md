@@ -294,6 +294,10 @@ Catalog of all wiki pages. Updated on each ingest.
 | [arxiv-2607.08758-ideas-have-genomes-ig-bench-2026-07-14](sources/arxiv-2607.08758-ideas-have-genomes-ig-bench-2026-07-14.md) | skimmed | IdeaGene-Bench lineage competence (CONDITIONAL-GO) |
 | [brief-k155-ideagene-lineage-steals-2026-07-14](sources/brief-k155-ideagene-lineage-steals-2026-07-14.md) | deep-read | K155 IdeaGene / GenomeDiff / PES steals |
 | [ideagene-bench](entities/tools/ideagene-bench.md) | draft | FOSS IG-Bench harness (~26MB; LICENSE TBD) |
+| [daily-digest-batch-k156-2026-07-15](sources/daily-digest-batch-k156-2026-07-15.md) | skimmed | K156 batch (1 CONDITIONAL-GO) |
+| [arxiv-2607.10251-risk-sensitive-llm-poker-2026-07-15](sources/arxiv-2607.10251-risk-sensitive-llm-poker-2026-07-15.md) | skimmed | LLM VPIP/PFR risk spectra (CONDITIONAL-GO) |
+| [brief-k156-risk-sensitive-llm-poker-steals-2026-07-15](sources/brief-k156-risk-sensitive-llm-poker-steals-2026-07-15.md) | deep-read | K156 AgentTexasPoker risk-spectrum steals |
+| [agent-texas-poker](entities/tools/agent-texas-poker.md) | draft | FOSS NLHE LLM risk assay (~688KB; LICENSE TBD) |
 | [daily-digest-reject-cluster-k129-2026-06-25](sources/daily-digest-reject-cluster-k129-2026-06-25.md) | skimmed |
 | [arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24](sources/arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24.md) | skimmed | First RL agent for Indian Rummy |
 | [arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24](sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md) | skimmed | Parameter EMA self-play magnet |

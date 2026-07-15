@@ -49,9 +49,12 @@ related:
   - sources/brief-k154-metagame-memory-search-steals-2026-07-13.md
   - sources/arxiv-2606.29457-takeover-auction-diligence-games-2026-06-30.md
   - sources/brief-k134-ganzfried-ped-deal-games-steals-2026-06-30.md
+  - sources/arxiv-2607.10251-risk-sensitive-llm-poker-2026-07-15.md
+  - entities/tools/agent-texas-poker.md
+  - sources/brief-k156-risk-sensitive-llm-poker-steals-2026-07-15.md
 maturity: draft
 created: 2026-06-03
-updated: 2026-07-13
+updated: 2026-07-15
 ---
 
 ## Relations
@@ -64,6 +67,8 @@ updated: 2026-07-13
 - @sources/arxiv-2508-17671-consistent-opponent-modeling.md — K95 anchor (Ganzfried 2508.17671)
 - @sources/arxiv-2606.25997-ganzfried-vbt-nash-imperfect-info-2026-06-26.md — exact multiplayer NE via NLCP + VBT (K131)
 - @sources/arxiv-2606.29169-ganzfried-ped-nash-imperfect-info-2026-06-30.md — PED / FP-PED approximate NE (K134)
+- @entities/tools/agent-texas-poker.md — K156 VPIP/PFR risk-spectrum assay
+- @sources/arxiv-2607.10251-risk-sensitive-llm-poker-2026-07-15.md — LLM risk plasticity under pressure
 
 Synthesized from @sources/arxiv-2508-17671-consistent-opponent-modeling.md — how to **exploit suboptimal opponents** in repeated imperfect-information games (poker) using observed play, and why naive Bayesian Best Response (BBR) fails a **consistency** guarantee even against static opponents.
 
@@ -142,6 +147,10 @@ See `@sources/daily-digest-arxiv-batch-2026-06-04.md` and `@entities/bots/poker-
 ### Metagame Nash / popularity paradox (K154) [TENTATIVE]
 
 @sources/arxiv-2607.08692-pokemon-tcg-nash-lean-metagame-2026-07-13.md: machine-checked Nash on tournament matchup matrix — **field share ≠ equilibrium weight**; methodological steal for league archetype pools (Pokémon TCG case study).
+
+### LLM risk spectra (K156 AgentTexasPoker) [TENTATIVE]
+
+@sources/arxiv-2607.10251-risk-sensitive-llm-poker-2026-07-15.md: tag AI opponents by **Participation (VPIP)** × **Proactiveness (PFR)**; profiles are sticky across opponent pools but extremes diverge in mixed tables. Re-estimate under blind/stack pressure — plasticity is model-specific (broad contraction vs selective de-escalation vs near-invariant).
 
 ### Human poker parallel
 
