@@ -298,6 +298,9 @@ Catalog of all wiki pages. Updated on each ingest.
 | [arxiv-2607.10251-risk-sensitive-llm-poker-2026-07-15](sources/arxiv-2607.10251-risk-sensitive-llm-poker-2026-07-15.md) | skimmed | LLM VPIP/PFR risk spectra (CONDITIONAL-GO) |
 | [brief-k156-risk-sensitive-llm-poker-steals-2026-07-15](sources/brief-k156-risk-sensitive-llm-poker-steals-2026-07-15.md) | deep-read | K156 AgentTexasPoker risk-spectrum steals |
 | [agent-texas-poker](entities/tools/agent-texas-poker.md) | draft | FOSS NLHE LLM risk assay (~688KB; LICENSE TBD) |
+| [daily-digest-batch-k157-2026-07-16](sources/daily-digest-batch-k157-2026-07-16.md) | skimmed | K157 batch (1 REFERENCE) |
+| [arxiv-2607.08861-fictitious-play-coupled-fbsde-2026-07-16](sources/arxiv-2607.08861-fictitious-play-coupled-fbsde-2026-07-16.md) | skimmed | Fully coupled FBSDE fictitious-play convergence |
+| [brief-k157-fbsde-fictitious-play-shelf-2026-07-16](sources/brief-k157-fbsde-fictitious-play-shelf-2026-07-16.md) | deep-read | K157 FP theory shelf (no adopt) |
 | [daily-digest-reject-cluster-k129-2026-06-25](sources/daily-digest-reject-cluster-k129-2026-06-25.md) | skimmed |
 | [arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24](sources/arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24.md) | skimmed | First RL agent for Indian Rummy |
 | [arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24](sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md) | skimmed | Parameter EMA self-play magnet |

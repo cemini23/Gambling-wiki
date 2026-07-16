@@ -52,9 +52,11 @@ related:
   - sources/arxiv-2607.10251-risk-sensitive-llm-poker-2026-07-15.md
   - entities/tools/agent-texas-poker.md
   - sources/brief-k156-risk-sensitive-llm-poker-steals-2026-07-15.md
+  - sources/arxiv-2607.08861-fictitious-play-coupled-fbsde-2026-07-16.md
+  - sources/brief-k157-fbsde-fictitious-play-shelf-2026-07-16.md
 maturity: draft
 created: 2026-06-03
-updated: 2026-07-15
+updated: 2026-07-16
 ---
 
 ## Relations
@@ -69,6 +71,7 @@ updated: 2026-07-15
 - @sources/arxiv-2606.29169-ganzfried-ped-nash-imperfect-info-2026-06-30.md — PED / FP-PED approximate NE (K134)
 - @entities/tools/agent-texas-poker.md — K156 VPIP/PFR risk-spectrum assay
 - @sources/arxiv-2607.10251-risk-sensitive-llm-poker-2026-07-15.md — LLM risk plasticity under pressure
+- @sources/arxiv-2607.08861-fictitious-play-coupled-fbsde-2026-07-16.md — continuous FP convergence shelf (K157)
 
 Synthesized from @sources/arxiv-2508-17671-consistent-opponent-modeling.md — how to **exploit suboptimal opponents** in repeated imperfect-information games (poker) using observed play, and why naive Bayesian Best Response (BBR) fails a **consistency** guarantee even against static opponents.
 
@@ -151,6 +154,10 @@ See `@sources/daily-digest-arxiv-batch-2026-06-04.md` and `@entities/bots/poker-
 ### LLM risk spectra (K156 AgentTexasPoker) [TENTATIVE]
 
 @sources/arxiv-2607.10251-risk-sensitive-llm-poker-2026-07-15.md: tag AI opponents by **Participation (VPIP)** × **Proactiveness (PFR)**; profiles are sticky across opponent pools but extremes diverge in mixed tables. Re-estimate under blind/stack pressure — plasticity is model-specific (broad contraction vs selective de-escalation vs near-invariant).
+
+### Continuous FP convergence shelf (K157) [REFERENCE]
+
+@sources/arxiv-2607.08861-fictitious-play-coupled-fbsde-2026-07-16.md: geometric (sometimes super-exponential) fictitious-play convergence for fully coupled continuous Nash FBSDEs. Theory shelf next to MAFP — **rates do not transfer** to discrete NLHE iteration budgets.
 
 ### Human poker parallel
 

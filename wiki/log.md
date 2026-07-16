@@ -2,6 +2,14 @@
 
 Append-only chronological log.
 
+## [2026-07-16] ingest | K157 daily digest
+
+- **Batch K157:** 1 REFERENCE / 0 reject
+- Created FBSDE fictitious-play convergence source (2607.08861)
+- Updated MAFP source backlink + `opponent-modeling-imperfect-info`
+- Briefs: wiki shelf + OSINT arena shelf (no prod/David/FOSS)
+- Sweep `2026-07-16-daily.md` → INGESTED; archived 1 PDF to egress-fi
+
 ## [2026-07-15] ingest | K156 daily digest
 
 - **Batch K156:** 1 CONDITIONAL-GO / 0 reject
