@@ -28,9 +28,12 @@ related:
   - sources/arxiv-2607.08758-ideas-have-genomes-ig-bench-2026-07-14.md
   - entities/tools/ideagene-bench.md
   - sources/brief-k155-ideagene-lineage-steals-2026-07-14.md
+  - sources/arxiv-2607.14169-play-adequacy-code-world-models-2026-07-17.md
+  - entities/tools/code-world-models.md
+  - sources/brief-k158-play-adequacy-cwm-steals-2026-07-17.md
 maturity: validated
 created: 2026-06-19
-updated: 2026-07-14
+updated: 2026-07-17
 ---
 
 ## Relations
@@ -41,6 +44,8 @@ updated: 2026-07-14
 - @meta/gambling-bot-ingest-rubric.md — Phase-0 checklist for Adopt repos
 - @entities/tools/ideagene-bench.md — K155 lineage-competence FOSS eval (CONDITIONAL-GO)
 - @sources/arxiv-2607.08758-ideas-have-genomes-ig-bench-2026-07-14.md — IdeaGene / GenomeDiff / PES
+- @entities/tools/code-world-models.md — K158 play-adequacy CWM eval (CONDITIONAL-GO)
+- @sources/arxiv-2607.14169-play-adequacy-code-world-models-2026-07-17.md — verified-vs-correct gap / danger law
 
 ## Raw Concept
 
@@ -119,6 +124,10 @@ Self-improving agent literature assumes **stationary** benchmarks; RQGM @sources
 ### Lineage competence (K155 IdeaGene) [TENTATIVE]
 
 @sources/arxiv-2607.08758-ideas-have-genomes-ig-bench-2026-07-14.md / @entities/tools/ideagene-bench.md: research proposals and HL patches should be scored on **mechanism inheritance**, not topical proximity. Steal typed Idea Genome roles + GenomeDiff fates; open proposals use PES (Heredity · Variation · Selection). P5 behavioral gates should reject “related paper” steals that share task ecology but not driver mechanism. **CONDITIONAL-GO** FOSS harness until SPDX LICENSE lands.
+
+### Play-adequacy vs prediction accuracy (K158 CWM) [TENTATIVE]
+
+@sources/arxiv-2607.14169-play-adequacy-code-world-models-2026-07-17.md / @entities/tools/code-world-models.md: P5 gates that only check fixture/transition match can still fail at play (verified-vs-correct gap). Prefer search-distribution or head-to-head play metrics; size eval N with the danger law for rare pivotal failures; complete specs rather than flooding examples.
 
 ## Snippets
 

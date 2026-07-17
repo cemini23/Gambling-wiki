@@ -54,9 +54,12 @@ related:
   - sources/brief-k156-risk-sensitive-llm-poker-steals-2026-07-15.md
   - sources/arxiv-2607.08861-fictitious-play-coupled-fbsde-2026-07-16.md
   - sources/brief-k157-fbsde-fictitious-play-shelf-2026-07-16.md
+  - sources/arxiv-2607.14169-play-adequacy-code-world-models-2026-07-17.md
+  - entities/tools/code-world-models.md
+  - sources/brief-k158-play-adequacy-cwm-steals-2026-07-17.md
 maturity: draft
 created: 2026-06-03
-updated: 2026-07-16
+updated: 2026-07-17
 ---
 
 ## Relations
@@ -72,6 +75,8 @@ updated: 2026-07-16
 - @entities/tools/agent-texas-poker.md — K156 VPIP/PFR risk-spectrum assay
 - @sources/arxiv-2607.10251-risk-sensitive-llm-poker-2026-07-15.md — LLM risk plasticity under pressure
 - @sources/arxiv-2607.08861-fictitious-play-coupled-fbsde-2026-07-16.md — continuous FP convergence shelf (K157)
+- @sources/arxiv-2607.14169-play-adequacy-code-world-models-2026-07-17.md — play-adequacy / inference coverage (K158)
+- @entities/tools/code-world-models.md — CWM FOSS assay
 
 Synthesized from @sources/arxiv-2508-17671-consistent-opponent-modeling.md — how to **exploit suboptimal opponents** in repeated imperfect-information games (poker) using observed play, and why naive Bayesian Best Response (BBR) fails a **consistency** guarantee even against static opponents.
 
@@ -158,6 +163,10 @@ See `@sources/daily-digest-arxiv-batch-2026-06-04.md` and `@entities/bots/poker-
 ### Continuous FP convergence shelf (K157) [REFERENCE]
 
 @sources/arxiv-2607.08861-fictitious-play-coupled-fbsde-2026-07-16.md: geometric (sometimes super-exponential) fictitious-play convergence for fully coupled continuous Nash FBSDEs. Theory shelf next to MAFP — **rates do not transfer** to discrete NLHE iteration budgets.
+
+### Play-adequacy / inference coverage (K158) [TENTATIVE]
+
+@sources/arxiv-2607.14169-play-adequacy-code-world-models-2026-07-17.md: imperfect-info belief/`infer_states` functions can pass sampling gates yet lose every game (Beacon witness). Kuhn may be covered at modest N; Leduc-scale needs explicit coverage of competent-relevant info-sets. Pairs @entities/tools/rlcard.md / @entities/tools/code-world-models.md.
 
 ### Human poker parallel
 

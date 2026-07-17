@@ -49,9 +49,12 @@ related:
   - sources/arxiv-2607.10251-risk-sensitive-llm-poker-2026-07-15.md
   - sources/brief-k156-risk-sensitive-llm-poker-steals-2026-07-15.md
   - entities/tools/agent-texas-poker.md
+  - sources/arxiv-2607.14169-play-adequacy-code-world-models-2026-07-17.md
+  - sources/brief-k158-play-adequacy-cwm-steals-2026-07-17.md
+  - entities/tools/code-world-models.md
 maturity: validated
 created: 2026-06-03
-updated: 2026-07-15
+updated: 2026-07-17
 ---
 
 ## Relations
@@ -66,6 +69,8 @@ updated: 2026-07-15
 - @sources/arxiv-2607.08758-ideas-have-genomes-ig-bench-2026-07-14.md — IdeaGene-Bench
 - @sources/brief-k156-risk-sensitive-llm-poker-steals-2026-07-15.md — K156 VPIP/PFR risk spectra
 - @entities/tools/agent-texas-poker.md — AgentTexasPoker FOSS assay
+- @sources/brief-k158-play-adequacy-cwm-steals-2026-07-17.md — K158 play-adequacy ship gates
+- @entities/tools/code-world-models.md — CWM play-adequacy FOSS
 - @osint-wiki/concepts/cemini-knowledge-application-architecture.md — brief → verify → deploy (cross-wiki)
 - Private repo: `llm-wiki-by-cemini/agents/devfun-poker-arena/` — HL loop scripts
 
@@ -173,6 +178,10 @@ Same sections as @osint-wiki `BRIEF_TEMPLATE.md`: **Target**, **Summary**, **Bod
 ### Risk spectra under pressure (K156 AgentTexasPoker) [TENTATIVE]
 
 @sources/arxiv-2607.10251-risk-sensitive-llm-poker-2026-07-15.md: LLM / AI foes have stable **VPIP/PFR** profiles and unequal plasticity when blinds or stacks burn. Re-check open/3-bet gates by pressure band; separate entry contraction from raise de-escalation. JSON parse/retry telemetry should not count as folds.
+
+### Play-adequacy gates (K158 Code World Models) [TENTATIVE]
+
+@sources/arxiv-2607.14169-play-adequacy-code-world-models-2026-07-17.md: transition-accuracy / log-match gates can pass while play loses — rare pivotal omissions evade sampling with probability `(1−rarity)^N`. Prefer play / search-distribution regression; complete the heuristic spec instead of flooding similar hands.
 
 ### End-of-session cadence
 

@@ -15,9 +15,11 @@ related:
   - sources/brief-k130-rlcard-offline-baseline-adopt-2026-06-26.md
   - entities/tools/adversarial-coevolution.md
   - sources/arxiv-2607.06854-lightweight-game-agent-expert-yardstick-2026-07-11.md
+  - sources/arxiv-2607.14169-play-adequacy-code-world-models-2026-07-17.md
+  - entities/tools/code-world-models.md
 maturity: validated
 created: 2026-06-01
-updated: 2026-07-11
+updated: 2026-07-17
 laptop_install: VERIFIED 2026-06-01 — OSINT `.local/venv-gambling-research` (rlcard 1.2.0); run `gambling_research_venv.sh` in OSINT repo
 phase_0_verdict: ADOPT 2026-06-26 — K130 refresh; MIT; offline Leduc/limit-HU baselines only
 ---
@@ -28,6 +30,8 @@ phase_0_verdict: ADOPT 2026-06-26 — K130 refresh; MIT; offline Leduc/limit-HU 
 - @concepts/opponent-modeling-imperfect-info.md — sim research for opponent modeling
 - @sources/brief-k130-rlcard-offline-baseline-adopt-2026-06-26.md — K130 Adopt reaffirmation
 - @sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md — K92 Adopt (Cemini financial in eval; gambling = sim research)
+- @entities/tools/code-world-models.md — K158 play-adequacy CWM (Kuhn/Leduc inference sibling)
+- @sources/arxiv-2607.14169-play-adequacy-code-world-models-2026-07-17.md — verified-vs-correct gap on imperfect-info CWMs
 
 ## Raw Concept
 

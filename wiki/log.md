@@ -2,6 +2,15 @@
 
 Append-only chronological log.
 
+## [2026-07-17] ingest | K158 daily digest
+
+- **Batch K158:** 1 CONDITIONAL-GO / 0 reject
+- Created play-adequacy CWM source + `entities/tools/code-world-models.md`
+- Updated `poker-hl-analyst-loop`, `custom-agent-methodology`, `opponent-modeling-imperfect-info`, `rlcard`
+- Briefs: wiki + OSINT arena play-adequacy gate + CCC prod eval
+- Local adopt: `raw-sources/foss-evals/code-world-models/` (~4.8MB; LICENSE TBD)
+- Sweep `2026-07-17-daily.md` → INGESTED; archived 1 PDF to egress-fi
+
 ## [2026-07-16] ingest | K157 daily digest
 
 - **Batch K157:** 1 REFERENCE / 0 reject

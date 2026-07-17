@@ -301,6 +301,10 @@ Catalog of all wiki pages. Updated on each ingest.
 | [daily-digest-batch-k157-2026-07-16](sources/daily-digest-batch-k157-2026-07-16.md) | skimmed | K157 batch (1 REFERENCE) |
 | [arxiv-2607.08861-fictitious-play-coupled-fbsde-2026-07-16](sources/arxiv-2607.08861-fictitious-play-coupled-fbsde-2026-07-16.md) | skimmed | Fully coupled FBSDE fictitious-play convergence |
 | [brief-k157-fbsde-fictitious-play-shelf-2026-07-16](sources/brief-k157-fbsde-fictitious-play-shelf-2026-07-16.md) | deep-read | K157 FP theory shelf (no adopt) |
+| [daily-digest-batch-k158-2026-07-17](sources/daily-digest-batch-k158-2026-07-17.md) | skimmed | K158 batch (1 CONDITIONAL-GO) |
+| [arxiv-2607.14169-play-adequacy-code-world-models-2026-07-17](sources/arxiv-2607.14169-play-adequacy-code-world-models-2026-07-17.md) | skimmed | CWM play-adequacy vs transition accuracy |
+| [brief-k158-play-adequacy-cwm-steals-2026-07-17](sources/brief-k158-play-adequacy-cwm-steals-2026-07-17.md) | deep-read | K158 play-adequacy / danger-law steals |
+| [code-world-models](entities/tools/code-world-models.md) | draft | FOSS CWM+MCTS assay (~4.8MB; LICENSE TBD) |
 | [daily-digest-reject-cluster-k129-2026-06-25](sources/daily-digest-reject-cluster-k129-2026-06-25.md) | skimmed |
 | [arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24](sources/arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24.md) | skimmed | First RL agent for Indian Rummy |
 | [arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24](sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md) | skimmed | Parameter EMA self-play magnet |
