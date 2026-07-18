@@ -7,13 +7,14 @@ related:
   - meta/daily-research-digest-cadence.md
   - sweeps/2026-07-17-daily.md
   - sources/daily-digest-batch-k157-2026-07-16.md
+  - sources/daily-digest-batch-k159-2026-07-18.md
   - sources/arxiv-2607.14169-play-adequacy-code-world-models-2026-07-17.md
   - entities/tools/code-world-models.md
   - sources/brief-k158-play-adequacy-cwm-steals-2026-07-17.md
 maturity: validated
 read_status: skimmed
 created: 2026-07-17
-updated: 2026-07-17
+updated: 2026-07-18
 ---
 
 ## Relations

@@ -305,6 +305,11 @@ Catalog of all wiki pages. Updated on each ingest.
 | [arxiv-2607.14169-play-adequacy-code-world-models-2026-07-17](sources/arxiv-2607.14169-play-adequacy-code-world-models-2026-07-17.md) | skimmed | CWM play-adequacy vs transition accuracy |
 | [brief-k158-play-adequacy-cwm-steals-2026-07-17](sources/brief-k158-play-adequacy-cwm-steals-2026-07-17.md) | deep-read | K158 play-adequacy / danger-law steals |
 | [code-world-models](entities/tools/code-world-models.md) | draft | FOSS CWM+MCTS assay (~4.8MB; LICENSE TBD) |
+| [daily-digest-batch-k159-2026-07-18](sources/daily-digest-batch-k159-2026-07-18.md) | skimmed | K159 batch (1 CONDITIONAL-GO / 1 REFERENCE) |
+| [arxiv-2607.08043-aleena-alignment-agent-2026-07-18](sources/arxiv-2607.08043-aleena-alignment-agent-2026-07-18.md) | skimmed | Aleena lifecycle alignment agent |
+| [arxiv-2607.07207-memory-scarcity-open-models-2026-07-18](sources/arxiv-2607.07207-memory-scarcity-open-models-2026-07-18.md) | skimmed | Memory scarcity / open-model infra REFERENCE |
+| [brief-k159-aleena-decision-continuity-steals-2026-07-18](sources/brief-k159-aleena-decision-continuity-steals-2026-07-18.md) | deep-read | K159 decision-continuity / vocab-drift steals |
+| [aleena](entities/tools/aleena.md) | draft | FOSS UW SSEC alignment agent (~1.5MB; LICENSE TBD) |
 | [daily-digest-reject-cluster-k129-2026-06-25](sources/daily-digest-reject-cluster-k129-2026-06-25.md) | skimmed |
 | [arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24](sources/arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24.md) | skimmed | First RL agent for Indian Rummy |
 | [arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24](sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md) | skimmed | Parameter EMA self-play magnet |

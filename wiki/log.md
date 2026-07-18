@@ -2,6 +2,16 @@
 
 Append-only chronological log.
 
+## [2026-07-18] ingest | K159 daily digest
+
+- **Batch K159:** 1 CONDITIONAL-GO + 1 REFERENCE / 0 reject
+- Created Aleena source + `entities/tools/aleena.md`; Memory Scarcity REFERENCE source
+- Updated `custom-agent-methodology`, `poker-hl-analyst-loop`
+- Briefs: wiki + OSINT arena decision-continuity + CCC Aleena prod + CCC memory-scarcity REFERENCE
+- Local adopt: `raw-sources/foss-evals/Aleena/` (~1.5MB; LICENSE TBD) on gambling-wiki + CCC
+- No David/TipDrop (no image-gen path); no CeminiDFS
+- Sweep `2026-07-18-daily.md` → INGESTED; routing link fix; archived 2 PDFs to egress-fi
+
 ## [2026-07-17] ingest | K158 daily digest
 
 - **Batch K158:** 1 CONDITIONAL-GO / 0 reject

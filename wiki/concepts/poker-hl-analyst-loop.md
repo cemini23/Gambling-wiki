@@ -52,9 +52,12 @@ related:
   - sources/arxiv-2607.14169-play-adequacy-code-world-models-2026-07-17.md
   - sources/brief-k158-play-adequacy-cwm-steals-2026-07-17.md
   - entities/tools/code-world-models.md
+  - sources/arxiv-2607.08043-aleena-alignment-agent-2026-07-18.md
+  - sources/brief-k159-aleena-decision-continuity-steals-2026-07-18.md
+  - entities/tools/aleena.md
 maturity: validated
 created: 2026-06-03
-updated: 2026-07-17
+updated: 2026-07-18
 ---
 
 ## Relations
@@ -71,6 +74,8 @@ updated: 2026-07-17
 - @entities/tools/agent-texas-poker.md — AgentTexasPoker FOSS assay
 - @sources/brief-k158-play-adequacy-cwm-steals-2026-07-17.md — K158 play-adequacy ship gates
 - @entities/tools/code-world-models.md — CWM play-adequacy FOSS
+- @sources/brief-k159-aleena-decision-continuity-steals-2026-07-18.md — K159 decision/risk continuity
+- @entities/tools/aleena.md — Aleena FOSS (CONDITIONAL-GO)
 - @osint-wiki/concepts/cemini-knowledge-application-architecture.md — brief → verify → deploy (cross-wiki)
 - Private repo: `llm-wiki-by-cemini/agents/devfun-poker-arena/` — HL loop scripts
 
@@ -182,6 +187,10 @@ Same sections as @osint-wiki `BRIEF_TEMPLATE.md`: **Target**, **Summary**, **Bod
 ### Play-adequacy gates (K158 Code World Models) [TENTATIVE]
 
 @sources/arxiv-2607.14169-play-adequacy-code-world-models-2026-07-17.md: transition-accuracy / log-match gates can pass while play loses — rare pivotal omissions evade sampling with probability `(1−rarity)^N`. Prefer play / search-distribution regression; complete the heuristic spec instead of flooding similar hands.
+
+### Decision continuity across patch sessions (K159) [TENTATIVE]
+
+@sources/arxiv-2607.08043-aleena-alignment-agent-2026-07-18.md: offline HL analyze→patch→preflight should leave structured **decisions / risks / open questions**, not only a patch file — reduces lost context between sessions. Vocabulary-drift checks on Arena/heuristic terms when definitions conflict. Do not auto-merge draft PRs; runtime `decide()` stays pure code.
 
 ### End-of-session cadence
 
