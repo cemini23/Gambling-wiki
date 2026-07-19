@@ -7,19 +7,23 @@ related:
   - concepts/nfl-offseason-research-cadence.md
   - meta/nfl-offseason-weekly-cadence.md
   - sources/web-bleacher-report-key-injuries-2026-07-01.md
+  - sources/web-offseason-hub-w28-synthesis-2026-07-19.md
+  - sources/web-offseason-hub-w29-synthesis-2026-07-19.md
   - concepts/bbm7-adp-delta-tracker.md
   - concepts/diy-nfl-pickem-props-tool-architecture.md
   - entities/sports/nfl-betting.md
 maturity: draft
 read_status: read
 created: 2026-07-05
-updated: 2026-07-05
+updated: 2026-07-19
 ---
 
 ## Relations
 
 - @meta/nfl-offseason-weekly-cadence.md — automation that spawned prefetch
 - @concepts/nfl-offseason-research-cadence.md — operator cadence
+- @sources/web-offseason-hub-w28-synthesis-2026-07-19.md — following week
+- @sources/web-offseason-hub-w29-synthesis-2026-07-19.md — current week chain end
 
 ## Raw Concept
 

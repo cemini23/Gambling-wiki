@@ -10,18 +10,21 @@ related:
   - concepts/bbm7-adp-delta-tracker.md
   - concepts/dfs-injury-and-news-workflow.md
   - sources/web-bleacher-report-key-injuries-2026-07-01.md
-  - sources/web-bleacher-report-key-injuries-2026-07-01.md
   - sources/web-offseason-hub-w27-synthesis-2026-07-05.md
+  - sources/web-offseason-hub-w28-synthesis-2026-07-19.md
+  - sources/web-offseason-hub-w29-synthesis-2026-07-19.md
   - entities/tools/ceminidfs.md
 maturity: draft
 created: 2026-07-05
-updated: 2026-07-05
+updated: 2026-07-19
 ---
 
 ## Relations
 
 - @meta/nfl-offseason-weekly-cadence.md — Sunday LaunchAgent + prefetch files
 - @sources/web-offseason-hub-w27-synthesis-2026-07-05.md — week 27 hub ingest (2026-07-05)
+- @sources/web-offseason-hub-w28-synthesis-2026-07-19.md — week 28 hub ingest (gap-fill 2026-07-19)
+- @sources/web-offseason-hub-w29-synthesis-2026-07-19.md — week 29 hub ingest (2026-07-19)
 - @sources/web-bleacher-report-key-injuries-2026-07-01.md — injury watchlist source
 - @concepts/nfl-weekly-slate-hub-workflow.md — replaces this cadence in Sep (per-slate entries)
 

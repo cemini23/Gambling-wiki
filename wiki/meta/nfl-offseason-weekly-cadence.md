@@ -11,10 +11,12 @@ related:
   - concepts/diy-nfl-pickem-props-tool-architecture.md
   - concepts/bbm7-adp-delta-tracker.md
   - sources/web-offseason-hub-w27-synthesis-2026-07-05.md
+  - sources/web-offseason-hub-w28-synthesis-2026-07-19.md
+  - sources/web-offseason-hub-w29-synthesis-2026-07-19.md
   - sources/web-bleacher-report-key-injuries-2026-07-01.md
 maturity: draft
 created: 2026-07-05
-updated: 2026-07-05
+updated: 2026-07-19
 ---
 
 ## Relations
