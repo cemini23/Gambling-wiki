@@ -27,7 +27,7 @@ related:
   - sources/brief-k128-bbm7-draft-copilot-hub-2026-06-24.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-06-25
+updated: 2026-07-20
 ---
 
 ## Relations
@@ -43,6 +43,10 @@ updated: 2026-06-25
 US **daily fantasy + best ball** platform. Flagship large-field tournament: **Best Ball Mania** (BBM).
 
 ## Narrative
+
+### K177 Context — prediction-market exchange (2026-07)
+
+Jul 2026 Underdog launched its own CFTC-licensed prediction-market exchange (DCM+DCO+FCM stack) after previously routing via Kalshi/Crypto.com partners. See OSINT `@osint-wiki/sources/substack-rss-event-horizon-2026-07-20-underdog-exchange.md` + gambling brief `briefs/2026-07-20_k177-underdog-prediction-exchange.md`. DFS/best-ball product lines unchanged by this Context note.
 
 ### Best Ball Mania 7 (2026 season) [CONFIRMED — Underdog help center 2026-04-27]
 
