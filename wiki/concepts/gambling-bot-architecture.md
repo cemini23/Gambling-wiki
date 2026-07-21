@@ -61,9 +61,12 @@ related:
   - entities/bots/predict-raven.md
   - concepts/pm-structural-volatility.md
   - sources/daily-digest-reject-cluster-k116-2026-06-17.md
+  - sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md
+  - entities/tools/wc2026-agents.md
+  - sources/brief-k160-wc2026-agents-market-baseline-steals-2026-07-21.md
 maturity: core
 created: 2026-05-31
-updated: 2026-07-10
+updated: 2026-07-21
 ---
 
 # Gambling bot architecture (planned)
@@ -77,6 +80,8 @@ updated: 2026-07-10
 - @sources/daily-digest-reject-cluster-k119-2026-06-18.md — digest false positives (OrchRM NO-GO)
 - @concepts/custom-agent-methodology.md — K120 Agents All the Way Down; CLI-over-MCP, P3→P5 loop
 - @sources/arxiv-2606.11869-agents-all-the-way-down-2026-06-19.md — K120 source
+- @sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md — K160 market-baseline agent eval
+- @entities/tools/wc2026-agents.md — WC2026-Agents FOSS (GO)
 - @osint-wiki/concepts/cross-venue-arbitrage-pattern.md — PM×Kalshi execution patterns (cross-wiki)
 - @osint-wiki/entities/tools/polybot.md — existing PM strip-mine reference
 

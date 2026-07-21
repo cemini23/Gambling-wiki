@@ -27,11 +27,14 @@ related:
   - sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md
   - concepts/world-cup-2026-fan-narrative-preview.md
   - sources/brief-k112-gambling-wc-2026-narrative-2026-06-12.md
+  - sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md
+  - entities/tools/wc2026-agents.md
+  - sources/brief-k160-wc2026-agents-market-baseline-steals-2026-07-21.md
   - @seo-wiki/concepts/outlier-weekly-issue3-world-cup-bot-notes.md
   - @seo-wiki/concepts/x-account-voice-and-format.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-06-18
+updated: 2026-07-21
 ---
 
 ## Relations
@@ -44,6 +47,8 @@ updated: 2026-06-18
 - @osint-wiki/concepts/world-cup-advance-market-bot-v1.md — automation (cross-wiki; not retail primary)
 - @seo-wiki/concepts/outlier-weekly-issue3-world-cup-bot-notes.md — Issue 3 marketing cross-promo
 - @seo-wiki/concepts/x-account-voice-and-format.md — X distribution voice for WC / PM posts
+- @sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md — K160 WC2026-Agents LLM vs bookmaker
+- @entities/tools/wc2026-agents.md — FOSS benchmark + odds release
 
 ## Raw Concept
 
@@ -73,6 +78,10 @@ Entity hub for **2026 FIFA World Cup** wagering across sportsbooks, Kalshi, and 
 2. **Host-nation narrative** — USA/Mexico patriotic flow vs model paths (research flagged double-digit pp gaps vs PM/Kalshi) [TENTATIVE — verify live].
 3. **Third-place path** — eight of twelve third-place teams advance; GD-sensitive bubble — `@concepts/world-cup-third-place-advancement-betting.md`.
 4. **Cross-venue shopping** — compare FanDuel/DK implied % vs Kalshi/PM before sizing; see divergence concept page.
+
+### Post-cup LLM agent benchmark (K160) [CONFIRMED]
+
+@sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md evaluated four frontier LLMs on all **104** WC2026 1X2 matches vs vig-removed opening odds (mostly DraftKings). None beat market Brier; fading the market lost for every agent; a flat-favorite $100 baseline (+$1,041) beat all agents in absolute P&L. Shared blind spots: underdog defensive organisation and knockout/penalty variance. Treat as **market-efficiency + agent-eval evidence**, not a tip sheet.
 
 ### Outright odds snapshot — Predict.fun (R9, 2026-06-02) [TENTATIVE]
 

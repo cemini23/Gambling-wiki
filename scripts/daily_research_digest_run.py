@@ -525,7 +525,7 @@ def main() -> int:
                 "",
                 brief_note.strip(),
                 "",
-                "Canonical: `scripts/active_project_brief_targets.yaml` · @concepts/active-project-research-routing.md",
+                "Canonical: `scripts/active_project_brief_targets.yaml` · `@osint-wiki/concepts/active-project-research-routing.md`",
             ]
         )
     lines.extend(["", "---", ""])

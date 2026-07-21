@@ -2,6 +2,16 @@
 
 Append-only chronological log.
 
+## [2026-07-21] ingest | K160 daily digest
+
+- **Batch K160:** 1 GO + 1 reject / 0 CONDITIONAL-GO
+- Created WC2026-Agents source + `entities/tools/wc2026-agents.md`; GenAI design reject cluster
+- Updated WC betting, FLB, vig, DraftKings, gambling-bot-architecture, custom-agent-methodology, poker-hl-analyst-loop
+- Briefs: wiki + OSINT arena three-axis eval + CCC prod forecast-agent eval
+- Local adopt: `raw-sources/foss-evals/FIFA2026LLM/` (~3.5MB; MIT+CC-BY)
+- No David/TipDrop (no image-gen); no CeminiDFS (soccer)
+- Sweep `2026-07-21-daily.md` → INGESTED; `2026-07-20-daily.md` empty-inbox → INGESTED-empty; archived 2 PDFs to egress-fi
+
 ## [2026-07-18] ingest | K159 daily digest
 
 - **Batch K159:** 1 CONDITIONAL-GO + 1 REFERENCE / 0 reject

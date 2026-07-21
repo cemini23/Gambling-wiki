@@ -18,9 +18,10 @@ related:
   - concepts/pm-live-belief-updating.md
   - concepts/world-cup-pm-retail-hygiene.md
   - sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md
+  - sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-07-05
+updated: 2026-07-21
 ---
 
 ## Relations
@@ -30,6 +31,7 @@ updated: 2026-07-05
 - @concepts/sharp-vs-soft-books.md — sharp books run lower hold
 - @concepts/line-shopping-and-clv.md — shopping reduces effective vig
 - @entities/platforms/pinnacle.md — low-hold reference book
+- @sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md — K160 vig-removed 1X2 market baseline (~1.05 overround)
 
 ## Raw Concept
 

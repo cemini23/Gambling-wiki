@@ -18,9 +18,11 @@ related:
   - sources/arxiv-polymarket-v1-database-2606.04217-2026-06-05.md
   - concepts/world-cup-pm-retail-hygiene.md
   - sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md
+  - sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md
+  - entities/tools/wc2026-agents.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-06-09
+updated: 2026-07-21
 ---
 
 ## Relations
@@ -29,6 +31,7 @@ updated: 2026-06-09
 - @entities/platforms/kalshi.md — event contracts
 - @entities/platforms/polymarket.md — CLOB event markets
 - @osint-wiki/concepts/favorite-longshot-bias.md — Cemini PM trading monetization (Avellaneda-Stoikov, cross-venue)
+- @sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md — K160: favorites over-performed WC2026; fade-market lost for LLMs
 
 ## Raw Concept
 
@@ -64,6 +67,10 @@ Retail systematically **overestimates tail outcomes** on Polymarket. Paper: `@so
 - Prefer **favorite-side** value and disciplined small longshot exposure only with independent +EV model
 - Avoid lottery parlays unless correlated edge is modeled
 - For bots: see `@osint-wiki` — favorite-side MM, longshot-fade modules
+
+### WC2026 LLM agents (K160) [CONFIRMED]
+
+@sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md: across 104 WC2026 matches, favorites **over-performed** their opening price; a flat-favorite baseline beat four frontier LLM agents in absolute P&L, and **fading the market** was unprofitable for all four. Reinforces favorite-side discipline when LLM “value” narratives point at underdogs without a price-respecting model.
 
 ## Snippets
 

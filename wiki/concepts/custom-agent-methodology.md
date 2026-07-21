@@ -35,9 +35,12 @@ related:
   - entities/tools/aleena.md
   - sources/brief-k159-aleena-decision-continuity-steals-2026-07-18.md
   - sources/arxiv-2607.07207-memory-scarcity-open-models-2026-07-18.md
+  - sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md
+  - entities/tools/wc2026-agents.md
+  - sources/brief-k160-wc2026-agents-market-baseline-steals-2026-07-21.md
 maturity: validated
 created: 2026-06-19
-updated: 2026-07-18
+updated: 2026-07-21
 ---
 
 ## Relations
@@ -53,6 +56,8 @@ updated: 2026-07-18
 - @entities/tools/aleena.md — K159 lifecycle alignment FOSS (CONDITIONAL-GO)
 - @sources/arxiv-2607.08043-aleena-alignment-agent-2026-07-18.md — decision/risk/open-question continuity
 - @sources/arxiv-2607.07207-memory-scarcity-open-models-2026-07-18.md — REFERENCE: open/local inference economics
+- @entities/tools/wc2026-agents.md — K160 WC forecasting FOSS (GO)
+- @sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md — market-baseline three-axis eval
 
 ## Raw Concept
 
@@ -139,6 +144,10 @@ Self-improving agent literature assumes **stationary** benchmarks; RQGM @sources
 ### Lifecycle decision continuity (K159 Aleena) [TENTATIVE]
 
 @sources/arxiv-2607.08043-aleena-alignment-agent-2026-07-18.md / @entities/tools/aleena.md: collaboration agents should persist **decisions / action items / risks / open questions** as structured artifacts (not chat-only), and flag **vocabulary drift** when domain terms conflict across sessions. Draft code changes stay human-gated. **CONDITIONAL-GO** FOSS until SPDX. Companion REFERENCE @sources/arxiv-2607.07207-memory-scarcity-open-models-2026-07-18.md: when memory bandwidth is scarce, prefer open/local inference economics for offline P3/P5 — not a wagering edge.
+
+### Market-baseline three-axis eval (K160 WC2026-Agents) [CONFIRMED]
+
+@sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md / @entities/tools/wc2026-agents.md: P5 agent evals that only score pick accuracy can be a null when models converge. Require a hard non-LLM / market baseline; separately score **calibration**, **decision quality** (staking / ROI), and **self-knowledge** (reflection honesty). Do not treat fade-market as default LLM alpha. **GO** FOSS (MIT + CC BY 4.0).
 
 ## Snippets
 

@@ -310,6 +310,11 @@ Catalog of all wiki pages. Updated on each ingest.
 | [arxiv-2607.07207-memory-scarcity-open-models-2026-07-18](sources/arxiv-2607.07207-memory-scarcity-open-models-2026-07-18.md) | skimmed | Memory scarcity / open-model infra REFERENCE |
 | [brief-k159-aleena-decision-continuity-steals-2026-07-18](sources/brief-k159-aleena-decision-continuity-steals-2026-07-18.md) | deep-read | K159 decision-continuity / vocab-drift steals |
 | [aleena](entities/tools/aleena.md) | draft | FOSS UW SSEC alignment agent (~1.5MB; LICENSE TBD) |
+| [daily-digest-batch-k160-2026-07-21](sources/daily-digest-batch-k160-2026-07-21.md) | skimmed | K160 batch (1 GO / 1 reject) |
+| [arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21](sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md) | deep-read | WC2026 LLM agents vs bookmaker baseline |
+| [daily-digest-reject-cluster-k160-2026-07-21](sources/daily-digest-reject-cluster-k160-2026-07-21.md) | skimmed | GenAI design-students false positive |
+| [brief-k160-wc2026-agents-market-baseline-steals-2026-07-21](sources/brief-k160-wc2026-agents-market-baseline-steals-2026-07-21.md) | deep-read | K160 market-baseline / three-axis steals |
+| [wc2026-agents](entities/tools/wc2026-agents.md) | draft | FOSS FIFA2026LLM benchmark (~3.5MB; MIT+CC-BY) |
 | [daily-digest-reject-cluster-k129-2026-06-25](sources/daily-digest-reject-cluster-k129-2026-06-25.md) | skimmed |
 | [arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24](sources/arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24.md) | skimmed | First RL agent for Indian Rummy |
 | [arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24](sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md) | skimmed | Parameter EMA self-play magnet |

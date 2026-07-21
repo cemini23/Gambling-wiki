@@ -55,9 +55,12 @@ related:
   - sources/arxiv-2607.08043-aleena-alignment-agent-2026-07-18.md
   - sources/brief-k159-aleena-decision-continuity-steals-2026-07-18.md
   - entities/tools/aleena.md
+  - sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md
+  - sources/brief-k160-wc2026-agents-market-baseline-steals-2026-07-21.md
+  - entities/tools/wc2026-agents.md
 maturity: validated
 created: 2026-06-03
-updated: 2026-07-18
+updated: 2026-07-21
 ---
 
 ## Relations
@@ -76,6 +79,8 @@ updated: 2026-07-18
 - @entities/tools/code-world-models.md — CWM play-adequacy FOSS
 - @sources/brief-k159-aleena-decision-continuity-steals-2026-07-18.md — K159 decision/risk continuity
 - @entities/tools/aleena.md — Aleena FOSS (CONDITIONAL-GO)
+- @sources/brief-k160-wc2026-agents-market-baseline-steals-2026-07-21.md — K160 three-axis eval / market baseline
+- @entities/tools/wc2026-agents.md — WC2026-Agents FOSS (GO)
 - @osint-wiki/concepts/cemini-knowledge-application-architecture.md — brief → verify → deploy (cross-wiki)
 - Private repo: `llm-wiki-by-cemini/agents/devfun-poker-arena/` — HL loop scripts
 
@@ -224,6 +229,8 @@ HL loop fixes **`decide()` policy**; researcher **bundle submit** adds **`arena-
 **MPPO style-preserving league upgrade** (K153 — @sources/arxiv-2506.16995-mppo-style-preserving-game-agents-2026-07-12.md): demonstration-mixed RL when strengthening stylized opponents; track style drift on promotion. See @sources/brief-k153-mppo-style-pm-evidence-steals-2026-07-12.md.
 
 **Metagame Nash + bounded memory** (K154 — @sources/arxiv-2607.08692-pokemon-tcg-nash-lean-metagame-2026-07-13.md, @sources/arxiv-2607.07666-ensemble-qsp-hierarchical-memory-2026-07-13.md): field share ≠ Nash EV; hierarchical capped epoch memory with eviction. See @sources/brief-k154-metagame-memory-search-steals-2026-07-13.md.
+
+**Market-baseline three-axis eval** (K160 — @sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md): accuracy-only gates can be a null when agents converge. Pair variants with a hard non-LLM baseline; separately track calibration, policy P&L vs baseline, and reflection/admit-wrong honesty. See @sources/brief-k160-wc2026-agents-market-baseline-steals-2026-07-21.md / @entities/tools/wc2026-agents.md.
 
 ## Snippets
 

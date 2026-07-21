@@ -37,13 +37,15 @@ related:
   - sources/youtube-operator-batch-casino-2026-05-31.md
   - concepts/pm-live-belief-updating.md
   - sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md
+  - sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-06-09
+updated: 2026-07-21
 ---
 
 ## Relations
 
+- @sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md — K160 WC LLM agents vs vig-removed market
 - @concepts/line-shopping-and-clv.md — edge measurement
 - @concepts/sharp-vs-soft-books.md — where to bet
 - @entities/platforms/draftkings.md — major US book

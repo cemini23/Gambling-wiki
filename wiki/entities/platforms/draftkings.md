@@ -21,9 +21,11 @@ related:
   - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
   - sources/daily-digest-news-r1-r12-2026-06-01.md
   - sources/daily-digest-news-r1-r12-2026-06-02.md
+  - sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md
+  - entities/tools/wc2026-agents.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-07-21
 ---
 
 ## Relations
@@ -31,6 +33,8 @@ updated: 2026-05-31
 - @entities/platforms/fanduel.md — primary US competitor
 - @concepts/dfs-strategy-overview.md — DFS product
 - @concepts/sharp-vs-soft-books.md — retail/soft book classification
+- @sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md — K160 used mostly DK opening 1X2 previews as market baseline
+- @entities/tools/wc2026-agents.md — released odds + LLM agent P&L vs DK-priced market
 
 ## Raw Concept
 
