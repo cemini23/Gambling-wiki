@@ -315,6 +315,9 @@ Catalog of all wiki pages. Updated on each ingest.
 | [daily-digest-reject-cluster-k160-2026-07-21](sources/daily-digest-reject-cluster-k160-2026-07-21.md) | skimmed | GenAI design-students false positive |
 | [brief-k160-wc2026-agents-market-baseline-steals-2026-07-21](sources/brief-k160-wc2026-agents-market-baseline-steals-2026-07-21.md) | deep-read | K160 market-baseline / three-axis steals |
 | [wc2026-agents](entities/tools/wc2026-agents.md) | draft | FOSS FIFA2026LLM benchmark (~3.5MB; MIT+CC-BY) |
+| [daily-digest-batch-k161-2026-07-26](sources/daily-digest-batch-k161-2026-07-26.md) | skimmed | K161 batch (0 GO / 1 reject) |
+| [daily-digest-reject-cluster-k161-2026-07-26](sources/daily-digest-reject-cluster-k161-2026-07-26.md) | skimmed | EV charging scheduling false positive |
+| [brief-k161-ev-charging-false-positive-shelf-2026-07-26](sources/brief-k161-ev-charging-false-positive-shelf-2026-07-26.md) | skimmed | K161 reject shelf / query hygiene |
 | [daily-digest-reject-cluster-k129-2026-06-25](sources/daily-digest-reject-cluster-k129-2026-06-25.md) | skimmed |
 | [arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24](sources/arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24.md) | skimmed | First RL agent for Indian Rummy |
 | [arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24](sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md) | skimmed | Parameter EMA self-play magnet |

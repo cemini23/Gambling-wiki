@@ -2,6 +2,15 @@
 
 Append-only chronological log.
 
+## [2026-07-26] ingest | K161 daily digest
+
+- **Batch K161:** 0 GO / 1 reject (EV charging OR false positive)
+- Created reject cluster + batch + shelf brief (wiki-only)
+- No FOSS adopt; no poker / TipDrop / CeminiDFS / prod briefs
+- Sweeps `2026-07-22`…`25` → INGESTED-empty; `2026-07-26` → INGESTED
+- Fixed federated LaunchAgent digest routing `@concepts/…` → `@osint-wiki/…`
+- Archived 1 PDF to egress-fi; inbox cleared
+
 ## [2026-07-21] ingest | K160 daily digest
 
 - **Batch K160:** 1 GO + 1 reject / 0 CONDITIONAL-GO
