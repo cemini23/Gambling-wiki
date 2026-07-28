@@ -81,15 +81,14 @@ Use OpenRouter model IDs from [openrouter.ai/models](https://openrouter.ai/model
 
 ## API key discovery (run before Step 4b)
 
-Search order (first file wins for each variable; script does not overwrite existing env):
+Sources (process environment wins over file values for the same key):
 
-| Priority | Path |
-|----------|------|
-| 1 | `$CEMINI_LLM_ROUTING_ENV` |
-| 2 | `~/.cemini/llm-routing.env` |
-| 3 | `{workspace}/.env` |
-| 4 | `{workspace}/config/llm-routing.env` |
-| 5 | `{project}/.env` (when auditing a subproject) |
+| Priority | Source |
+|----------|--------|
+| 1 | Process environment (`OPENROUTER_*`, `OLLAMA_*`, `ADVISOR_*`, …) |
+| 2 | Optional file at `$CEMINI_LLM_ROUTING_ENV` (operator-set absolute path) |
+
+Scripts **do not** scan project dotenv trees or hardcoded home secret paths.
 
 **Variables to probe:**
 
@@ -105,7 +104,7 @@ Search order (first file wins for each variable; script does not overwrite exist
 
 Without OpenRouter **or** Ollama, super-audit runs **3-model cursor-audit only**.
 
-**Session bootstrap:**
+**Session setup (keys already exported):**
 
 ```bash
 python3 .cursor/skills/super-audit/scripts/discover_api_keys.py
@@ -113,12 +112,43 @@ python3 .cursor/skills/super-audit/scripts/run_api_auditors.py --pack ... --out 
 ```
 
 Discovery writes recommended slots; `--discover` on run_api_auditors uses them automatically.
+Provider keys come from the process environment (or `CEMINI_LLM_ROUTING_ENV`).
 
 ## auditors.json (build from roles)
 
 Pass `--auditors path/to/auditors.json` to `run_api_auditors.py`. Labels should reflect **role**, not vendor lock-in.
 
-**Default fallback** (`auditors.default.json`) — prod-ship generic: api-adversarial + api-deep-reasoning.
+### Schema (required)
+
+```json
+{
+  "slots": [
+    {
+      "label": "api-adversarial",
+      "model": "openrouter/fusion"
+    }
+  ]
+}
+```
+
+| Field | Required | Notes |
+|-------|----------|--------|
+| `slots` | **yes** | Array. A bare single-slot object at the root is **rejected**. |
+| `label` | **yes** | Output filename stem; unique per run preferred |
+| `model` | **yes*** | OpenAI-compat model id. *Or* set `model_env` with a non-empty fallback `model` |
+| `role` | no | Documentation / synthesis only |
+| `base_url_env` | no | Env var for host. Defaults when unset: `OPENROUTER_*` → openrouter.ai, `DEEPSEEK_*` → `https://api.deepseek.com/v1`, `OLLAMA_*` → localhost:11434 |
+| `api_key_env` | no | Default `OPENROUTER_API_KEY`. `ADVISOR_API_KEY` falls back to OpenRouter key |
+| `api_key_optional` | no | `true` for local Ollama |
+| `model_env` | no | Override `model` from env (e.g. `OPENROUTER_PREMIUM_MODEL`) |
+| `fallback_model` | no | Retry once with this model id if the primary call fails |
+| `extra` | no | Merged into chat-completions body. Fusion: `{"plugins":[{"id":"fusion"}]}` |
+| `system` | no | System prompt |
+| `local` | no | Forces Ollama base default |
+| `max_tokens` | no | Default 16000 |
+| `provider` | no | Log label only |
+
+**Default fallback** (`auditors.default.json`) — prod-ship generic: api-adversarial + api-deep-reasoning. Used when discovery finds no API keys **and** no `--auditors` file was passed.
 
 ```json
 {
@@ -145,18 +175,24 @@ Pass `--auditors path/to/auditors.json` to `run_api_auditors.py`. Labels should 
 }
 ```
 
-**Brief-plan example** — swap slot 4 to api-strategic:
+**Brief-plan example** — swap slot 4 to api-strategic (still wrapped in `slots`):
 
 ```json
 {
-  "label": "api-strategic",
-  "role": "api-strategic",
-  "base_url_env": "OPENROUTER_BASE_URL",
-  "api_key_env": "OPENROUTER_API_KEY",
-  "model": "anthropic/claude-opus-4.6",
-  "system": "Super audit — strategic readonly reviewer. Follow required output format exactly."
+  "slots": [
+    {
+      "label": "api-strategic",
+      "role": "api-strategic",
+      "base_url_env": "OPENROUTER_BASE_URL",
+      "api_key_env": "OPENROUTER_API_KEY",
+      "model": "anthropic/claude-opus-4.6",
+      "system": "Super audit — strategic readonly reviewer. Follow required output format exactly."
+    }
+  ]
 }
 ```
+
+**DeepSeek / non-OpenRouter legs** — always set `base_url_env` to `DEEPSEEK_BASE_URL` (runner defaults to `https://api.deepseek.com/v1` when the env var is empty). Do **not** rely on the OpenRouter host for DeepSeek keys.
 
 Parent **rewrites `model`** fields when discovery or tailoring picks a different premium candidate for the role.
 

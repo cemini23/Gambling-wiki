@@ -14,7 +14,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -32,15 +31,6 @@ def _read_tail(path: Path, max_chars: int) -> str:
     return text[:max_chars] + f"\n\n… truncated {len(text) - max_chars} chars …"
 
 
-def _run_capture(cmd: list[str], cwd: Path, timeout: int = 60) -> str:
-    try:
-        return subprocess.check_output(
-            cmd, cwd=cwd, text=True, stderr=subprocess.STDOUT, timeout=timeout
-        )
-    except Exception as e:
-        return f"(command failed: {' '.join(cmd)} — {e})"
-
-
 def main() -> int:
     p = argparse.ArgumentParser(description="Build super-audit pack")
     p.add_argument("--prompt", type=Path, required=True, help="Tailored audit prompt markdown")
@@ -55,7 +45,7 @@ def main() -> int:
         "--cmd",
         action="append",
         default=[],
-        help="name:shell command — capture stdout into pack (cwd=--workspace)",
+        help="DISABLED for security — pre-capture output to a file and pass --artifact instead",
     )
     p.add_argument("--read-order", default="", help="Comma-separated dest names for index order")
     p.add_argument("--workspace", type=Path, default=Path.cwd())
@@ -93,14 +83,13 @@ def main() -> int:
         (out / dest).write_text(body, encoding="utf-8")
         artifacts[dest] = str(out / dest)
 
-    for spec in args.cmd:
-        if ":" not in spec:
-            print(f"Invalid --cmd (need name:command): {spec}", file=sys.stderr)
-            return 1
-        name, cmd = spec.split(":", 1)
-        body = _run_capture(["bash", "-lc", cmd], cwd=workspace)
-        (out / name).write_text(body, encoding="utf-8")
-        artifacts[name] = str(out / name)
+    if args.cmd:
+        print(
+            "--cmd is disabled (no in-pack shell capture). "
+            "Run the command yourself, save stdout to a file, then pass --artifact.",
+            file=sys.stderr,
+        )
+        return 1
 
     read_order = [x.strip() for x in args.read_order.split(",") if x.strip()]
     if not read_order:

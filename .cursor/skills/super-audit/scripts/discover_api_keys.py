@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
 """Discover API + local Ollama models for super-audit API leg (masked output).
 
+Credentials come from the process environment only. Optionally load one
+operator-supplied routing file via CEMINI_LLM_ROUTING_ENV (absolute path).
+Never scans project dotenv files or hardcoded secret paths.
+
 Usage:
+  # preferred: export keys in the shell (or source a local routing file yourself)
   python3 discover_api_keys.py
   python3 discover_api_keys.py --json
   python3 discover_api_keys.py --write-auditors reports/audit/auditors.json
@@ -18,6 +23,8 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
+# Provider auth / routing vars this skill may read for outbound LLM calls only.
+# Values are never logged in full — see _mask().
 KEY_VARS = (
     "OPENROUTER_API_KEY",
     "ADVISOR_API_KEY",
@@ -47,6 +54,7 @@ def _mask(value: str) -> str:
 
 
 def _load_env_file(path: Path) -> dict[str, str]:
+    """Parse KEY=VALUE lines from an operator-supplied routing file."""
     out: dict[str, str] = {}
     if not path.is_file():
         return out
@@ -61,27 +69,12 @@ def _load_env_file(path: Path) -> dict[str, str]:
     return out
 
 
-def _candidate_files(workspace: Path) -> list[Path]:
+def _routing_file_from_env() -> Path | None:
+    """Single optional path from CEMINI_LLM_ROUTING_ENV (operator-controlled)."""
     custom = os.environ.get("CEMINI_LLM_ROUTING_ENV", "").strip()
-    paths: list[Path] = []
-    if custom:
-        paths.append(Path(custom))
-    paths.extend(
-        [
-            Path.home() / ".cemini" / "llm-routing.env",
-            workspace / ".env",
-            workspace / "config" / "llm-routing.env",
-        ]
-    )
-    seen: set[Path] = set()
-    unique: list[Path] = []
-    for p in paths:
-        rp = Path(str(p).replace("~", str(Path.home()))) if str(p).startswith("~") else p
-        if rp in seen:
-            continue
-        seen.add(rp)
-        unique.append(rp)
-    return unique
+    if not custom:
+        return None
+    return Path(custom).expanduser()
 
 
 def _ollama_host_from_env(merged: dict[str, str]) -> str:
@@ -201,7 +194,7 @@ def _local_slot(*, label: str, role: str, model: str, kind: str) -> dict:
         "label": label,
         "role": role,
         "base_url_env": "OLLAMA_BASE_URL",
-        "api_key_env": "OLLAMA_API_KEY",
+        "api_key_env": "OLLAMA_API_KEY",  # pragma: allowlist secret
         "api_key_optional": True,
         "model_env": "OLLAMA_MODEL",
         "model": model,
@@ -273,24 +266,25 @@ def recommend_auditors(discovery: dict) -> dict:
     }
 
 
-def discover(workspace: Path) -> dict:
+def _merged_routing() -> tuple[dict[str, str], list[str]]:
+    """Build routing map from process env + optional CEMINI_LLM_ROUTING_ENV file."""
     merged: dict[str, str] = {}
     sources: list[str] = []
-    for f in _candidate_files(workspace):
-        if not f.is_file():
-            continue
-        chunk = _load_env_file(f)
-        if not chunk:
-            continue
-        sources.append(str(f))
-        for k, v in chunk.items():
-            if k not in merged and v:
-                merged[k] = v
-
+    routing = _routing_file_from_env()
+    if routing is not None:
+        chunk = _load_env_file(routing)
+        if chunk:
+            sources.append(str(routing))
+            merged.update(chunk)
     for k in KEY_VARS + URL_VARS:
-        if os.environ.get(k, "").strip():
-            merged[k] = os.environ[k].strip()
+        val = os.environ.get(k, "").strip()
+        if val:
+            merged[k] = val
+    return merged, sources
 
+
+def discover(workspace: Path) -> dict:
+    merged, sources = _merged_routing()
     merged.setdefault("OLLAMA_BASE_URL", DEFAULT_OLLAMA_V1)
 
     keys: dict[str, dict] = {}
@@ -314,7 +308,9 @@ def discover(workspace: Path) -> dict:
         "ollama": ollama,
         "default_premium_model": premium_model,
     }
-    rec = recommend_auditors({**partial, "keys": keys, "default_premium_model": premium_model, "ollama": ollama})
+    rec = recommend_auditors(
+        {**partial, "keys": keys, "default_premium_model": premium_model, "ollama": ollama}
+    )
 
     if rec["tier"] == "default-6-model":
         lm = ollama.get("recommended_model", "local")
@@ -323,7 +319,10 @@ def discover(workspace: Path) -> dict:
         coverage = "default 5-model (3 Cursor + Fusion + OpenRouter premium) — no local Ollama"
     elif rec["tier"] == "fallback-local-only":
         lm = ollama.get("recommended_model", "local")
-        coverage = f"fallback 5-model (3 Cursor + 2× Ollama `{lm}`) — add OPENROUTER_API_KEY for default stack"
+        coverage = (
+            f"fallback 5-model (3 Cursor + 2× Ollama `{lm}`) — "
+            "add OPENROUTER_API_KEY for default stack"
+        )
     else:
         coverage = "degraded (3-model Cursor only) — need OpenRouter and/or Ollama"
 
@@ -347,9 +346,9 @@ def discover(workspace: Path) -> dict:
         "coverage": coverage,
         "tier": rec["tier"],
         "auditor_count": rec["auditor_count"],
-        "auditor_count": rec["auditor_count"],
         "setup_hint": (
-            "Default: OPENROUTER_API_KEY + Ollama running → 6 auditors. "
+            "Export OPENROUTER_API_KEY (and optionally set CEMINI_LLM_ROUTING_ENV to a "
+            "routing file path), with Ollama running → 6 auditors. "
             "No Ollama → 5 auditors (3 Cursor + 2 OpenRouter). "
             "Set SUPER_AUDIT_SKIP_LOCAL=1 to force 5-model when Ollama is up."
         ),
@@ -371,7 +370,11 @@ def main() -> int:
 
     if args.write_auditors:
         slots = result["recommended_auditors"]["slots"]
-        payload = {"slots": slots, "tier": result["tier"], "auditor_count": result["auditor_count"]}
+        payload = {
+            "slots": slots,
+            "tier": result["tier"],
+            "auditor_count": result["auditor_count"],
+        }
         args.write_auditors.parent.mkdir(parents=True, exist_ok=True)
         args.write_auditors.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
         print(f"Wrote {args.write_auditors} ({len(slots)} slots, tier={result['tier']})")

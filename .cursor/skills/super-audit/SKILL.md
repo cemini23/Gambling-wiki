@@ -8,8 +8,13 @@ description: >-
   council super audit, pre-ship multi-opinion review.
 license: MIT
 metadata.author: cemini23
-metadata.version: "1.6.0"
+metadata.version: "1.6.4"
 disable-model-invocation: true
+permissions:
+  - network
+  - filesystem:read
+  - filesystem:write
+  - env
 ---
 
 # Super audit (5–6 model council)
@@ -40,12 +45,13 @@ disable-model-invocation: true
 
 ### Setup
 
-**OpenRouter** (slots 4–5) — `~/.cemini/llm-routing.env`:
+**OpenRouter** (slots 4–5) — export in the shell (or point `CEMINI_LLM_ROUTING_ENV` at a local routing file you manage outside the skill):
 
 ```bash
-OPENROUTER_API_KEY=sk-or-v1-...
-OPENROUTER_BASE_URL=https://openrouter.ai/api/v1
-OPENROUTER_PREMIUM_MODEL=z-ai/glm-5.2
+export OPENROUTER_API_KEY=sk-or-v1-...
+export OPENROUTER_BASE_URL=https://openrouter.ai/api/v1
+export OPENROUTER_PREMIUM_MODEL=z-ai/glm-5.2
+# optional: export CEMINI_LLM_ROUTING_ENV=/absolute/path/to/your-routing-file
 ```
 
 **Ollama** (slot 6) — auto-discovered:
@@ -60,6 +66,8 @@ ollama serve && ollama pull qwen3.5:32b
 ```bash
 python3 .cursor/skills/super-audit/scripts/discover_api_keys.py
 ```
+
+Scripts read process environment only (plus optional `CEMINI_LLM_ROUTING_ENV`). They do not scan project dotenv trees.
 
 **Operator overrides:**
 
@@ -163,4 +171,4 @@ Use `auditor_count` from discovery (5 or 6). Template:
 - [cursor-audit](../cursor-audit/SKILL.md)
 - [reference.md](reference.md)
 - [examples.md](examples.md)
-- `config/llm-routing.env.example`
+- Export keys in-shell, or set `CEMINI_LLM_ROUTING_ENV` to your routing file

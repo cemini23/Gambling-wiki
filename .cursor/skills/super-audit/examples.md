@@ -83,11 +83,15 @@ OPENROUTER_API_KEY: present (sk-or-…xxxx)
 DEEPSEEK_API_KEY: missing
 ```
 
-**Parent:**
+**Parent (gated — wait for operator reply before any paid API call):**
 
-> API leg: api-deep-reasoning skipped (no DeepSeek key). Proceed with 4 auditors (3 Cursor premium + api-adversarial)? Or add `DEEPSEEK_API_KEY` to `~/.cemini/llm-routing.env` and retry.
+> API leg: api-deep-reasoning skipped (DeepSeek key absent). Options:
+> 1) Continue with 4 auditors (3 Cursor premium + api-adversarial) after you say OK
+> 2) Export `DEEPSEEK_API_KEY` in your shell (or set `CEMINI_LLM_ROUTING_ENV`) and tell me to retry
+>
+> I will not call paid endpoints or change routing files until you confirm.
 
-Never ask user to paste keys in chat.
+Do not ask the operator to paste secret values into chat.
 
 ---
 

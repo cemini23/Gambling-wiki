@@ -19,15 +19,17 @@ Set `SKILL_DIR` in commands to the install path (see SKILL.md).
 
 ### API keys
 
-Copy and edit a routing env file (never commit keys):
+Export provider keys in the shell (never commit keys). Optionally set
+`CEMINI_LLM_ROUTING_ENV` to an absolute path of a local routing file you manage
+outside the skill — scripts will not scan project dotenv trees.
 
 ```bash
-# Example layout — adjust to your project
 export OPENROUTER_API_KEY=sk-or-...
 export DEEPSEEK_API_KEY=sk-...
 # Optional WC-style advisor:
 export ADVISOR_API_KEY=$OPENROUTER_API_KEY
 export ADVISOR_MODEL=google/gemini-2.5-flash
+# optional: export CEMINI_LLM_ROUTING_ENV=/absolute/path/to/your-routing-file
 ```
 
 Discover what's available:
@@ -41,7 +43,9 @@ API leg needs `httpx`: `pip install httpx`
 ## Validate
 
 ```bash
-pip install git+https://github.com/cemini23/vet.git
+# Prefer a local checkout of vet (avoid remote install-from-URL in CI/agents):
+#   git clone https://github.com/cemini23/vet.git && pip install -e ./vet
+pip install vet
 vet skills/super-audit/SKILL.md --profile skillmd --strict
 ```
 
