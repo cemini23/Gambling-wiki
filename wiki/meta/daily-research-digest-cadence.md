@@ -41,9 +41,17 @@ related:
   - sources/daily-digest-reject-cluster-k127-2026-06-24.md
   - sweeps/2026-06-25-daily.md
   - sources/daily-digest-reject-cluster-k129-2026-06-25.md
+  - sources/daily-digest-batch-k161-2026-07-26.md
+  - sources/daily-digest-reject-cluster-k161-2026-07-26.md
+  - sources/brief-k161-ev-charging-false-positive-shelf-2026-07-26.md
+  - sources/daily-digest-batch-k162-2026-07-28.md
+  - sources/daily-digest-reject-cluster-k162-2026-07-28.md
+  - sources/brief-k162-harnessllm-false-positive-shelf-2026-07-28.md
+  - sweeps/2026-07-27-daily.md
+  - sweeps/2026-07-28-daily.md
 maturity: validated
 created: 2026-06-01
-updated: 2026-06-23
+updated: 2026-07-28
 ---
 
 ## Relations
@@ -62,7 +70,7 @@ K93 federated install: morning **discovery-only** loop for sports betting, PM re
 |-------|-------|
 | **Cadence** | Daily @ 08:15 local (`com.cemini.daily-research-digest.gambling`) |
 | **Installed** | 2026-06-01 (K93 brief) |
-| **Last run** | 2026-07-26 |
+| **Last run** | 2026-07-28 |
 | **Fetch sources** | arXiv + OpenReview PDFs → `research to be indexed/` (tuned 2026-06-17) |
 | **Script** | `~/bin/cemini-daily-research-digest-gambling` → `scripts/daily_research_digest_run.py` |
 | **Deps** | `wiki_source_index.py` (required alongside digest runner) |

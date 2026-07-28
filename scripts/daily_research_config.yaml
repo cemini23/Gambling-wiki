@@ -63,8 +63,10 @@ paper_queries:
 - cluster: cemini-dfs-ownership-paper
   query: arxiv daily fantasy sports ownership projection simulation copula monte carlo GPP
   category: research paper
-  arxiv_query: (all:"daily fantasy" OR all:DraftKings OR all:FanDuel OR all:ownership) AND (all:projection
-    OR all:simulation OR all:lineup OR all:NFL)
+  # K162: drop bare all:ownership (Rust ownership / GenAI authorship / EV bleed). Require DFS anchors.
+  arxiv_query: (all:"daily fantasy" OR all:DraftKings OR all:FanDuel OR all:"fantasy sports") AND (all:ownership
+    OR all:GPP OR all:lineup OR all:copula OR all:projection) AND (all:simulation OR all:NFL OR all:fantasy
+    OR all:contest)
 - cluster: kelly-bankroll-arxiv
   query: arxiv Kelly criterion sports betting bankroll wager sizing gambling
   category: research paper

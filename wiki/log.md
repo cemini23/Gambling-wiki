@@ -2,6 +2,15 @@
 
 Append-only chronological log.
 
+## [2026-07-28] ingest | K162 daily digest
+
+- **Batch K162:** 0 GO / 1 reject (HarnessLLM Rust ownership false positive)
+- Created reject cluster + batch + shelf brief (wiki-only)
+- No FOSS adopt; no phase-0; no poker / TipDrop / CeminiDFS / prod briefs
+- Tightened `cemini-dfs-ownership-paper` arXiv query (require DFS anchors; drop bare `ownership`)
+- Sweeps `2026-07-27` → INGESTED-empty; `2026-07-28` → INGESTED
+- Archived 1 PDF to egress-fi; inbox cleared
+
 ## [2026-07-26] ingest | K161 daily digest
 
 - **Batch K161:** 0 GO / 1 reject (EV charging OR false positive)
