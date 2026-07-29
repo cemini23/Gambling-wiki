@@ -7,12 +7,13 @@ related:
   - meta/daily-research-digest-cadence.md
   - sweeps/2026-07-28-daily.md
   - sources/daily-digest-batch-k161-2026-07-26.md
+  - sources/daily-digest-batch-k163-2026-07-29.md
   - sources/daily-digest-reject-cluster-k162-2026-07-28.md
   - sources/brief-k162-harnessllm-false-positive-shelf-2026-07-28.md
 maturity: validated
 read_status: skimmed
 created: 2026-07-28
-updated: 2026-07-28
+updated: 2026-07-29
 ---
 
 ## Relations

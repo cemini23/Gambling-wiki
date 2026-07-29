@@ -321,6 +321,9 @@ Catalog of all wiki pages. Updated on each ingest.
 | [daily-digest-batch-k162-2026-07-28](sources/daily-digest-batch-k162-2026-07-28.md) | skimmed | K162 batch (0 GO / 1 reject) |
 | [daily-digest-reject-cluster-k162-2026-07-28](sources/daily-digest-reject-cluster-k162-2026-07-28.md) | skimmed | HarnessLLM Rust ownership false positive |
 | [brief-k162-harnessllm-false-positive-shelf-2026-07-28](sources/brief-k162-harnessllm-false-positive-shelf-2026-07-28.md) | skimmed | K162 reject shelf / query tighten |
+| [daily-digest-batch-k163-2026-07-29](sources/daily-digest-batch-k163-2026-07-29.md) | skimmed | K163 batch (1 REFERENCE) |
+| [arxiv-2607.23333-swap-regret-attention-2026-07-29](sources/arxiv-2607.23333-swap-regret-attention-2026-07-29.md) | skimmed | Swap-regret loss / smoothed FP attention |
+| [brief-k163-swap-regret-attention-shelf-2026-07-29](sources/brief-k163-swap-regret-attention-shelf-2026-07-29.md) | deep-read | K163 swap-regret / FP theory shelf |
 | [daily-digest-reject-cluster-k129-2026-06-25](sources/daily-digest-reject-cluster-k129-2026-06-25.md) | skimmed |
 | [arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24](sources/arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24.md) | skimmed | First RL agent for Indian Rummy |
 | [arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24](sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md) | skimmed | Parameter EMA self-play magnet |

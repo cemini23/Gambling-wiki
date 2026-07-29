@@ -15,10 +15,12 @@ related:
   - sweeps/2026-06-21-daily.md
   - sources/arxiv-2606.22688-garip-last-iterate-selfplay-2026-06-23.md
   - sources/arxiv-2607.08861-fictitious-play-coupled-fbsde-2026-07-16.md
+  - sources/arxiv-2607.23333-swap-regret-attention-2026-07-29.md
+  - sources/brief-k163-swap-regret-attention-shelf-2026-07-29.md
 maturity: draft
 read_status: skimmed
 created: 2026-06-21
-updated: 2026-07-16
+updated: 2026-07-29
 location: cemini-egress-fi:/opt/cemini-bulk/research/gambling/arxiv-2606.19308-enhancing-decision-making-with-large-language-mo.pdf
 phase_0_verdict: REFERENCE 2026-06-21 — game-theoretic MAS for competitive decisions; runtime LLM NO-GO for decide()
 ---
@@ -29,6 +31,7 @@ phase_0_verdict: REFERENCE 2026-06-21 — game-theoretic MAS for competitive dec
 - @sources/brief-k118-poker-agent-research-gaps-2026-06-17.md — F6 multi-agent exploit research lane
 - @sources/brief-k124-mafp-memory-poker-steals-2026-06-21.md — operator steal summary (K124)
 - @sources/arxiv-2607.08861-fictitious-play-coupled-fbsde-2026-07-16.md — continuous SDG FP convergence shelf (K157)
+- @sources/arxiv-2607.23333-swap-regret-attention-2026-07-29.md — regret-loss attention ≡ smoothed FP / CE (K163)
 
 ## Raw Concept
 

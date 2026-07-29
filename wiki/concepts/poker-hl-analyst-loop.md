@@ -58,9 +58,11 @@ related:
   - sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md
   - sources/brief-k160-wc2026-agents-market-baseline-steals-2026-07-21.md
   - entities/tools/wc2026-agents.md
+  - sources/arxiv-2607.23333-swap-regret-attention-2026-07-29.md
+  - sources/brief-k163-swap-regret-attention-shelf-2026-07-29.md
 maturity: validated
 created: 2026-06-03
-updated: 2026-07-21
+updated: 2026-07-29
 ---
 
 ## Relations
@@ -81,6 +83,8 @@ updated: 2026-07-21
 - @entities/tools/aleena.md — Aleena FOSS (CONDITIONAL-GO)
 - @sources/brief-k160-wc2026-agents-market-baseline-steals-2026-07-21.md — K160 three-axis eval / market baseline
 - @entities/tools/wc2026-agents.md — WC2026-Agents FOSS (GO)
+- @sources/arxiv-2607.23333-swap-regret-attention-2026-07-29.md — K163 swap-regret / smoothed FP theory shelf
+- @sources/brief-k163-swap-regret-attention-shelf-2026-07-29.md — K163 shelf (confirm OSINT K198 docs)
 - @osint-wiki/concepts/cemini-knowledge-application-architecture.md — brief → verify → deploy (cross-wiki)
 - Private repo: `llm-wiki-by-cemini/agents/devfun-poker-arena/` — HL loop scripts
 

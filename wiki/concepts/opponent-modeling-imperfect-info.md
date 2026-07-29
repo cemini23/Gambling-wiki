@@ -57,9 +57,11 @@ related:
   - sources/arxiv-2607.14169-play-adequacy-code-world-models-2026-07-17.md
   - entities/tools/code-world-models.md
   - sources/brief-k158-play-adequacy-cwm-steals-2026-07-17.md
+  - sources/arxiv-2607.23333-swap-regret-attention-2026-07-29.md
+  - sources/brief-k163-swap-regret-attention-shelf-2026-07-29.md
 maturity: draft
 created: 2026-06-03
-updated: 2026-07-17
+updated: 2026-07-29
 ---
 
 ## Relations
@@ -77,6 +79,8 @@ updated: 2026-07-17
 - @sources/arxiv-2607.08861-fictitious-play-coupled-fbsde-2026-07-16.md — continuous FP convergence shelf (K157)
 - @sources/arxiv-2607.14169-play-adequacy-code-world-models-2026-07-17.md — play-adequacy / inference coverage (K158)
 - @entities/tools/code-world-models.md — CWM FOSS assay
+- @sources/arxiv-2607.23333-swap-regret-attention-2026-07-29.md — swap-regret attention / smoothed FP (K163)
+- @sources/brief-k163-swap-regret-attention-shelf-2026-07-29.md — K163 shelf
 
 Synthesized from @sources/arxiv-2508-17671-consistent-opponent-modeling.md — how to **exploit suboptimal opponents** in repeated imperfect-information games (poker) using observed play, and why naive Bayesian Best Response (BBR) fails a **consistency** guarantee even against static opponents.
 
@@ -163,6 +167,10 @@ See `@sources/daily-digest-arxiv-batch-2026-06-04.md` and `@entities/bots/poker-
 ### Continuous FP convergence shelf (K157) [REFERENCE]
 
 @sources/arxiv-2607.08861-fictitious-play-coupled-fbsde-2026-07-16.md: geometric (sometimes super-exponential) fictitious-play convergence for fully coupled continuous Nash FBSDEs. Theory shelf next to MAFP — **rates do not transfer** to discrete NLHE iteration budgets.
+
+### Swap-regret attention / smoothed FP (K163) [REFERENCE]
+
+@sources/arxiv-2607.23333-swap-regret-attention-2026-07-29.md: single-layer attention trained with regret loss recovers **smoothed fictitious play**; swap-regret loss recovers Blum–Mansour-style CE-seeking updates (external → CCE, swap → CE). Theory shelf — OSINT K198 already filed arena advisory notes; **no decide() runtime**.
 
 ### Play-adequacy / inference coverage (K158) [TENTATIVE]
 

@@ -2,6 +2,14 @@
 
 Append-only chronological log.
 
+## [2026-07-29] ingest | K163 daily digest
+
+- **Batch K163:** 1 REFERENCE / 0 reject (swap-regret attention / smoothed FP)
+- Created paper source + batch + shelf brief; updated opponent-modeling, poker-hl, MAFP, forgetting-factor, K157 FP shelf
+- Poker arena brief confirm (OSINT K198 docs already shipped) — no decide()/FOSS/atto/TipDrop/CeminiDFS/prod
+- Sweep `2026-07-29-daily.md` → INGESTED
+- Archived 1 PDF to egress-fi; inbox cleared
+
 ## [2026-07-28] ingest | K162 daily digest
 
 - **Batch K162:** 0 GO / 1 reject (HarnessLLM Rust ownership false positive)

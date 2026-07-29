@@ -7,12 +7,13 @@ related:
   - sources/daily-digest-batch-k157-2026-07-16.md
   - sources/arxiv-2607.08861-fictitious-play-coupled-fbsde-2026-07-16.md
   - sources/arxiv-2606.19308-mafp-multi-agent-fictitious-play-2026-06-21.md
+  - sources/brief-k163-swap-regret-attention-shelf-2026-07-29.md
   - concepts/opponent-modeling-imperfect-info.md
   - sweeps/2026-07-16-daily.md
 maturity: validated
 read_status: deep-read
 created: 2026-07-16
-updated: 2026-07-16
+updated: 2026-07-29
 cross-wiki-source: "briefs/2026-07-16_k157-fbsde-fictitious-play-shelf.md"
 ---
 

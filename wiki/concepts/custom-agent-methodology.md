@@ -38,9 +38,10 @@ related:
   - sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md
   - entities/tools/wc2026-agents.md
   - sources/brief-k160-wc2026-agents-market-baseline-steals-2026-07-21.md
+  - sources/arxiv-2607.08861-fictitious-play-coupled-fbsde-2026-07-16.md
 maturity: validated
 created: 2026-06-19
-updated: 2026-07-21
+updated: 2026-07-29
 ---
 
 ## Relations

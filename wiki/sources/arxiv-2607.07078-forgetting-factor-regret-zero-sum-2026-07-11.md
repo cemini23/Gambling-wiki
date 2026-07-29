@@ -12,10 +12,11 @@ related:
   - sources/brief-k152-expert-yardstick-forgetting-regret-steals-2026-07-11.md
   - sources/daily-digest-batch-k152-2026-07-11.md
   - sweeps/2026-07-11-daily.md
+  - sources/arxiv-2607.23333-swap-regret-attention-2026-07-29.md
 maturity: draft
 read_status: skimmed
 created: 2026-07-11
-updated: 2026-07-11
+updated: 2026-07-29
 location: cemini-egress-fi:/opt/cemini-bulk/research/gambling/arxiv-2607.07078-forgetting-factor-regret-for-online-zero-sum-gam.pdf
 phase_0_verdict: REFERENCE 2026-07-11 — paper-only; recency-weighted regret for time-varying NE tracking
 ---
@@ -23,6 +24,7 @@ phase_0_verdict: REFERENCE 2026-07-11 — paper-only; recency-weighted regret fo
 ## Relations
 
 - @sources/arxiv-2607.06854-lightweight-game-agent-expert-yardstick-2026-07-11.md — complementary eval methodology (K152 batch)
+- @sources/arxiv-2607.23333-swap-regret-attention-2026-07-29.md — swap-/external-regret training objectives (K163)
 
 ## Raw Concept
 
