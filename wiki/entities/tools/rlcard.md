@@ -17,9 +17,11 @@ related:
   - sources/arxiv-2607.06854-lightweight-game-agent-expert-yardstick-2026-07-11.md
   - sources/arxiv-2607.14169-play-adequacy-code-world-models-2026-07-17.md
   - entities/tools/code-world-models.md
+  - sources/arxiv-2607.27035-ccs-mccfr-2026-07-30.md
+  - sources/brief-k164-ccs-mccfr-chance-sampling-steals-2026-07-30.md
 maturity: validated
 created: 2026-06-01
-updated: 2026-07-17
+updated: 2026-07-30
 laptop_install: VERIFIED 2026-06-01 — OSINT `.local/venv-gambling-research` (rlcard 1.2.0); run `gambling_research_venv.sh` in OSINT repo
 phase_0_verdict: ADOPT 2026-06-26 — K130 refresh; MIT; offline Leduc/limit-HU baselines only
 ---
@@ -32,6 +34,8 @@ phase_0_verdict: ADOPT 2026-06-26 — K130 refresh; MIT; offline Leduc/limit-HU 
 - @sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md — K92 Adopt (Cemini financial in eval; gambling = sim research)
 - @entities/tools/code-world-models.md — K158 play-adequacy CWM (Kuhn/Leduc inference sibling)
 - @sources/arxiv-2607.14169-play-adequacy-code-world-models-2026-07-17.md — verified-vs-correct gap on imperfect-info CWMs
+- @sources/arxiv-2607.27035-ccs-mccfr-2026-07-30.md — CCS-MCCFR Kuhn/Leduc exploitability cuts (K164)
+- @sources/brief-k164-ccs-mccfr-chance-sampling-steals-2026-07-30.md — K164 steals
 
 ## Raw Concept
 

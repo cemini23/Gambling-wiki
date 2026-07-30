@@ -60,9 +60,11 @@ related:
   - entities/tools/wc2026-agents.md
   - sources/arxiv-2607.23333-swap-regret-attention-2026-07-29.md
   - sources/brief-k163-swap-regret-attention-shelf-2026-07-29.md
+  - sources/arxiv-2607.27035-ccs-mccfr-2026-07-30.md
+  - sources/brief-k164-ccs-mccfr-chance-sampling-steals-2026-07-30.md
 maturity: validated
 created: 2026-06-03
-updated: 2026-07-29
+updated: 2026-07-30
 ---
 
 ## Relations
@@ -85,6 +87,8 @@ updated: 2026-07-29
 - @entities/tools/wc2026-agents.md — WC2026-Agents FOSS (GO)
 - @sources/arxiv-2607.23333-swap-regret-attention-2026-07-29.md — K163 swap-regret / smoothed FP theory shelf
 - @sources/brief-k163-swap-regret-attention-shelf-2026-07-29.md — K163 shelf (confirm OSINT K198 docs)
+- @sources/arxiv-2607.27035-ccs-mccfr-2026-07-30.md — K164 CCS-MCCFR offline sampler steal
+- @sources/brief-k164-ccs-mccfr-chance-sampling-steals-2026-07-30.md — K164 steals (research branch only)
 - @osint-wiki/concepts/cemini-knowledge-application-architecture.md — brief → verify → deploy (cross-wiki)
 - Private repo: `llm-wiki-by-cemini/agents/devfun-poker-arena/` — HL loop scripts
 

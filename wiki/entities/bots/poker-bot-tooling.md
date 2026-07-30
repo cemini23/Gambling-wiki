@@ -31,9 +31,11 @@ related:
   - sources/brief-k130-rlcard-offline-baseline-adopt-2026-06-26.md
   - sources/arxiv-2606.29457-takeover-auction-diligence-games-2026-06-30.md
   - sources/arxiv-2606.29169-ganzfried-ped-nash-imperfect-info-2026-06-30.md
+  - sources/arxiv-2607.27035-ccs-mccfr-2026-07-30.md
+  - sources/brief-k164-ccs-mccfr-chance-sampling-steals-2026-07-30.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-30
+updated: 2026-07-30
 ---
 
 ## Relations
@@ -45,6 +47,8 @@ updated: 2026-06-30
 - @sources/multi-wiki-tool-eval-v7-k92-2026-06-01.md — K92 eval cluster
 - @sources/multi-wiki-tool-eval-v8-k103-2026-06-07.md — K103 poker/casino reject strip
 - @entities/tools/devfun-poker-arena-starter-kit.md — K102 Arena entry (MIT arena-pokerkit)
+- @sources/arxiv-2607.27035-ccs-mccfr-2026-07-30.md — CCS-MCCFR OpenSpiel eval / chance-sampler steal (K164)
+- @sources/brief-k164-ccs-mccfr-chance-sampling-steals-2026-07-30.md — K164 operator steals
 
 ## Raw Concept
 
@@ -81,6 +85,8 @@ K92 eval **poker engine / RL** cluster — **research and evaluation** lane for 
 **SEPO** (arxiv:2605.30854, 2026-06-04 digest): **Safe Equilibrium Policy Optimization** — GRPO reward = payoff minus exploitability / collusion / externality penalties. Achieves **zero exploit-pool advantage** on **Kuhn Poker** (Gemma 4, Qwen 3.5-4B); SFT alone worsens exploit resistance. Critical implementation detail: exploit penalty must be computed **per rollout** (constant penalty cancels in advantage normalization → zero gradient). [TENTATIVE] Research lane for LLM poker agents; complements PokerSkill (skills + LLM) and Ganzfried opponent modeling. See `@sources/daily-digest-arxiv-batch-2026-06-04.md`.
 
 **Deal-games OpenSpiel** (arxiv:2606.29457, K134): MIT `imperfect-information-deal-games` — M&A auction imperfect-info benchmarks with **CFR vs PPO** exploitability ladder. Not poker, but reusable pattern for when exact solvers stop scaling. See @sources/arxiv-2606.29457-takeover-auction-diligence-games-2026-06-30.md.
+
+**CCS-MCCFR** (arxiv:2607.27035, K164): persistent randomized Weyl chance streams for External Sampling MCCFR — ~19–34% Kuhn/Leduc exploitability cuts; Linear CFR + CCS best combo. Paper-only algorithm steal for offline OpenSpiel/TexasSolver research; **decide() NO-GO**. See @sources/arxiv-2607.27035-ccs-mccfr-2026-07-30.md.
 
 ### Gambling-bot program fit
 

@@ -7,12 +7,13 @@ related:
   - meta/daily-research-digest-cadence.md
   - sweeps/2026-07-29-daily.md
   - sources/daily-digest-batch-k162-2026-07-28.md
+  - sources/daily-digest-batch-k164-2026-07-30.md
   - sources/arxiv-2607.23333-swap-regret-attention-2026-07-29.md
   - sources/brief-k163-swap-regret-attention-shelf-2026-07-29.md
 maturity: validated
 read_status: skimmed
 created: 2026-07-29
-updated: 2026-07-29
+updated: 2026-07-30
 ---
 
 ## Relations

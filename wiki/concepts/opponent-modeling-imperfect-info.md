@@ -59,9 +59,11 @@ related:
   - sources/brief-k158-play-adequacy-cwm-steals-2026-07-17.md
   - sources/arxiv-2607.23333-swap-regret-attention-2026-07-29.md
   - sources/brief-k163-swap-regret-attention-shelf-2026-07-29.md
+  - sources/arxiv-2607.27035-ccs-mccfr-2026-07-30.md
+  - sources/brief-k164-ccs-mccfr-chance-sampling-steals-2026-07-30.md
 maturity: draft
 created: 2026-06-03
-updated: 2026-07-29
+updated: 2026-07-30
 ---
 
 ## Relations
@@ -81,6 +83,8 @@ updated: 2026-07-29
 - @entities/tools/code-world-models.md — CWM FOSS assay
 - @sources/arxiv-2607.23333-swap-regret-attention-2026-07-29.md — swap-regret attention / smoothed FP (K163)
 - @sources/brief-k163-swap-regret-attention-shelf-2026-07-29.md — K163 shelf
+- @sources/arxiv-2607.27035-ccs-mccfr-2026-07-30.md — CCS-MCCFR chance sampling (K164)
+- @sources/brief-k164-ccs-mccfr-chance-sampling-steals-2026-07-30.md — K164 steals
 
 Synthesized from @sources/arxiv-2508-17671-consistent-opponent-modeling.md — how to **exploit suboptimal opponents** in repeated imperfect-information games (poker) using observed play, and why naive Bayesian Best Response (BBR) fails a **consistency** guarantee even against static opponents.
 
@@ -171,6 +175,10 @@ See `@sources/daily-digest-arxiv-batch-2026-06-04.md` and `@entities/bots/poker-
 ### Swap-regret attention / smoothed FP (K163) [REFERENCE]
 
 @sources/arxiv-2607.23333-swap-regret-attention-2026-07-29.md: single-layer attention trained with regret loss recovers **smoothed fictitious play**; swap-regret loss recovers Blum–Mansour-style CE-seeking updates (external → CCE, swap → CE). Theory shelf — OSINT K198 already filed arena advisory notes; **no decide() runtime**.
+
+### CCS-MCCFR chance sampling (K164) [CONDITIONAL-GO]
+
+@sources/arxiv-2607.27035-ccs-mccfr-2026-07-30.md: persistent randomized **Weyl** streams per concrete chance node cut Kuhn/Leduc exploitability ~19–34%; Linear CFR + CCS best combo. Offline MCCFR/OpenSpiel research steal — **decide() NO-GO**; no author FOSS.
 
 ### Play-adequacy / inference coverage (K158) [TENTATIVE]
 

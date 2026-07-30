@@ -14,10 +14,11 @@ related:
   - sources/brief-k134-ganzfried-ped-deal-games-steals-2026-06-30.md
   - sources/daily-digest-batch-k134-2026-06-30.md
   - sweeps/2026-06-30-daily.md
+  - sources/arxiv-2607.27035-ccs-mccfr-2026-07-30.md
 maturity: draft
 read_status: skimmed
 created: 2026-06-30
-updated: 2026-06-30
+updated: 2026-07-30
 location: cemini-egress-fi:/opt/cemini-bulk/research/gambling/arxiv-2606.29169-projected-exploitability-descent-for-nash-equili.pdf
 phase_0_verdict: REFERENCE 2026-06-30 — scalable NE approximation theory; no FOSS repo; pairs K131 VBT exact lane
 ---
@@ -27,6 +28,7 @@ phase_0_verdict: REFERENCE 2026-06-30 — scalable NE approximation theory; no F
 - @sources/arxiv-2606.25997-ganzfried-vbt-nash-imperfect-info-2026-06-26.md — exact NLCP + VBT (K131)
 - @sources/arxiv-2508-17671-consistent-opponent-modeling.md — Ganzfried COM exploit lane
 - @sources/brief-k134-ganzfried-ped-deal-games-steals-2026-06-30.md — K134 operator steals
+- @sources/arxiv-2607.27035-ccs-mccfr-2026-07-30.md — CCS-MCCFR exploitability cuts (K164)
 
 ## Raw Concept
 

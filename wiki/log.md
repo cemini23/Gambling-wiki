@@ -2,6 +2,14 @@
 
 Append-only chronological log.
 
+## [2026-07-30] ingest | K164 daily digest
+
+- **Batch K164:** 1 CONDITIONAL-GO / 0 reject (CCS-MCCFR correlated chance sampling)
+- Created paper source + batch + steals brief; updated opponent-modeling, poker-hl, poker-bot-tooling, rlcard, PED/deal-games OpenSpiel siblings
+- Poker arena brief (offline MCCFR/TexasSolver research only) — no FOSS; no atto / TipDrop / CeminiDFS / prod; decide() untouched
+- Sweep `2026-07-30-daily.md` → INGESTED
+- Archived 1 PDF to egress-fi; inbox cleared
+
 ## [2026-07-29] ingest | K163 daily digest
 
 - **Batch K163:** 1 REFERENCE / 0 reject (swap-regret attention / smoothed FP)
