@@ -381,6 +381,7 @@ Catalog of all wiki pages. Updated on each ingest.
 - [Event Horizon — North Carolina’s Prediction Market Budget Process Seems Pretty Unserious](sources/substack-rss-event-horizon-2026-07-07-north-carolinas-prediction-market-budget-process.md) — cross-wiki stub routed from ingest — `cross-wiki`
 - [Klement on Investing — Globalisation in the 2020s](sources/substack-rss-klement-2026-07-07-globalisation-in-the-2020s.md) — cross-wiki stub routed from ingest — `cross-wiki`
 - [Klement on Investing — Momentum crash warnings flash red. Here’s how you might survive](sources/substack-rss-klement-2026-07-07-momentum-crash-warnings-flash-red-heres-how-you.md) — cross-wiki stub routed from ingest — `cross-wiki`
+- [CS-RNR safe opponent exploitation (arXiv:2607.28520)](sources/arxiv-2607-28520-cs-rnr-safe-opponent-exploitation.md) — certified budgeted exploit of diffuse villains (Leduc/Liar's Dice); WATCH code — `paper, poker, opponent-modeling`
 
 ## Meta
 

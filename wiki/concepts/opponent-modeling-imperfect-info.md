@@ -61,14 +61,15 @@ related:
   - sources/brief-k163-swap-regret-attention-shelf-2026-07-29.md
   - sources/arxiv-2607.27035-ccs-mccfr-2026-07-30.md
   - sources/brief-k164-ccs-mccfr-chance-sampling-steals-2026-07-30.md
+  - sources/arxiv-2607-28520-cs-rnr-safe-opponent-exploitation.md
 maturity: draft
 created: 2026-06-03
-updated: 2026-07-30
+updated: 2026-08-01
 ---
 
 ## Relations
 
-- @concepts/poker-strategy-overview.md — retail/human strategy; this page is the **bot / repeated-game** exploit lane
+- @concepts/poker-strategy-overview.md — retail/human strategy; this page is the **bot / repeated-game** exploit lane @sources/arxiv-2607-28520-cs-rnr-safe-opponent-exploitation.md
 - @concepts/gambling-bot-architecture.md — arena agents vs consumer poker dead end
 - @entities/bots/poker-bot-tooling.md — rlcard research sims
 - @entities/bots/cemini-devfun-poker-agent.md — `cemini_decide` + HUD implementation

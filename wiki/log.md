@@ -867,3 +867,8 @@ Cross-wiki stub routed from `@osint-wiki/sources/substack-rss-klement-2026-07-07
 - Briefs: wiki + OSINT arena metagame/memory steal
 - Sweep `2026-07-13-daily.md` → INGESTED; routing link fix
 - Archived 7 PDFs to egress-fi
+
+## [2026-08-01] cross-wiki route | CS-RNR safe opponent exploitation (arXiv:2607.28520)
+
+Cross-wiki stub routed from `@image-gen-wiki/sources/arxiv-2607-28520-cs-rnr-opponent-exploit-routed.md`.
+- Created wiki/sources/arxiv-2607-28520-cs-rnr-safe-opponent-exploitation.md (stub)

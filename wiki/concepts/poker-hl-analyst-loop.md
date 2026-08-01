@@ -62,14 +62,15 @@ related:
   - sources/brief-k163-swap-regret-attention-shelf-2026-07-29.md
   - sources/arxiv-2607.27035-ccs-mccfr-2026-07-30.md
   - sources/brief-k164-ccs-mccfr-chance-sampling-steals-2026-07-30.md
+  - sources/arxiv-2607-28520-cs-rnr-safe-opponent-exploitation.md
 maturity: validated
 created: 2026-06-03
-updated: 2026-07-30
+updated: 2026-08-01
 ---
 
 ## Relations
 
-- @entities/bots/cemini-devfun-poker-agent.md — prod `cemini_decide.py` agent
+- @entities/bots/cemini-devfun-poker-agent.md — prod `cemini_decide.py` agent @sources/arxiv-2607-28520-cs-rnr-safe-opponent-exploitation.md
 - @entities/platforms/devfun-poker-arena.md — Arena venue + monitor
 - @sources/brief-k118-poker-agent-research-gaps-2026-06-17.md — research → agent gap matrix + fix backlog
 - @sources/brief-k107-poker-open-spot-audit-2026-06-09.md — K107 open-spot audit + selfplay KPI baseline

@@ -41,16 +41,17 @@ related:
   - concepts/custom-agent-methodology.md
   - sources/arxiv-2606.11869-agents-all-the-way-down-2026-06-19.md
   - entities/games/poker.md
+  - sources/arxiv-2607-28520-cs-rnr-safe-opponent-exploitation.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-26
+updated: 2026-08-01
 adoption_status: ACTIVE-DEV
 claim_status: VERIFIED 2026-06-01 — @cemini23
 ---
 
 ## Relations
 
-- @entities/platforms/devfun-poker-arena.md — venue + Phase-0
+- @entities/platforms/devfun-poker-arena.md — venue + Phase-0 @sources/arxiv-2607-28520-cs-rnr-safe-opponent-exploitation.md
 - @entities/tools/pokerskill.md — skill-binding pattern (full PokerSkill repo not wired yet)
 - @entities/people/tom-dwan.md — Pro Table Finale villain profile (`durrrr` exploit overlay — **not** Playground defaults)
 - @concepts/poker-hl-analyst-loop.md — **HL analyst loop** (analyze → patch → preflight → deploy)

@@ -14,17 +14,18 @@ related:
   - sources/brief-k164-ccs-mccfr-chance-sampling-steals-2026-07-30.md
   - sources/daily-digest-batch-k164-2026-07-30.md
   - sweeps/2026-07-30-daily.md
+  - sources/arxiv-2607-28520-cs-rnr-safe-opponent-exploitation.md
 maturity: draft
 read_status: skimmed
 created: 2026-07-30
-updated: 2026-07-30
+updated: 2026-08-01
 location: cemini-egress-fi:/opt/cemini-bulk/research/gambling/arxiv-2607.27035-correlated-chance-sampling-for-monte-carlo-count.pdf
 phase_0_verdict: CONDITIONAL-GO 2026-07-30 — paper-only algorithm steal for offline MCCFR/OpenSpiel research; no FOSS; decide() NO-GO
 ---
 
 ## Relations
 
-- @concepts/opponent-modeling-imperfect-info.md — equilibrium / exploitability research lane
+- @concepts/opponent-modeling-imperfect-info.md — equilibrium / exploitability research lane @sources/arxiv-2607-28520-cs-rnr-safe-opponent-exploitation.md
 - @concepts/poker-hl-analyst-loop.md — offline blueprint / solver hygiene (not runtime decide)
 - @entities/bots/poker-bot-tooling.md — OpenSpiel / tabular poker tooling shelf
 - @entities/tools/rlcard.md — Kuhn/Leduc research sims adjacent

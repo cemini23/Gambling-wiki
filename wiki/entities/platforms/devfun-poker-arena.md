@@ -29,16 +29,17 @@ related:
   - sources/arxiv-2606.25819-toolbench-x-tool-unreliability-2026-06-26.md
   - sources/brief-k131-toolbench-ganzfried-steals-2026-06-26.md
   - concepts/poker-axis-eval-literacy.md
+  - sources/arxiv-2607-28520-cs-rnr-safe-opponent-exploitation.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-26
+updated: 2026-08-01
 phase_0_verdict: CONDITIONAL-GO 2026-06-01 — sanctioned bot arena (not live poker room); enter via arena API; prize claim needs X verify + external payout wallet
 adoption_status: PHASE-0-COMPLETE
 ---
 
 ## Relations
 
-- @entities/bots/cemini-devfun-poker-agent.md — Cemini custom `decide()` entry
+- @entities/bots/cemini-devfun-poker-agent.md — Cemini custom `decide()` entry @sources/arxiv-2607-28520-cs-rnr-safe-opponent-exploitation.md
 - @concepts/poker-hl-analyst-loop.md — analyze → patch → deploy loop for Playground leaks
 - @sources/arxiv-2508-17671-consistent-opponent-modeling.md — K95 opponent modeling anchor
 - @entities/tools/pokerskill.md — skill-library binding pattern for LLM/heuristic agents
