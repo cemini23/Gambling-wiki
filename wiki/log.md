@@ -2,6 +2,16 @@
 
 Append-only chronological log.
 
+## [2026-08-04] ingest | K165 daily digest
+
+- **Batch K165:** 0 GO / 1 reject (bits-per-spike neuroscience Kelly-metaphor false positive)
+- Created reject cluster + batch + shelf brief (wiki-only)
+- Phase-1: wont_wire (reject-only; no ADOPT/GO)
+- No FOSS adopt; no poker / Atto / GuruWatcher / CeminiDFS / TipDrop / prod briefs
+- Tightened `kelly-bankroll-arxiv` query (wagering anchors + ANDNOT neural/spike)
+- Sweeps `2026-07-31`…`08-02` → INGESTED-empty; `08-03`/`08-04` → INGESTED
+- Archived 1 PDF to egress-fi; inbox cleared
+
 ## [2026-07-30] ingest | K164 daily digest
 
 - **Batch K164:** 1 CONDITIONAL-GO / 0 reject (CCS-MCCFR correlated chance sampling)

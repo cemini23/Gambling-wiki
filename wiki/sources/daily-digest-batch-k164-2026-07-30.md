@@ -7,12 +7,13 @@ related:
   - meta/daily-research-digest-cadence.md
   - sweeps/2026-07-30-daily.md
   - sources/daily-digest-batch-k163-2026-07-29.md
+  - sources/daily-digest-batch-k165-2026-08-04.md
   - sources/arxiv-2607.27035-ccs-mccfr-2026-07-30.md
   - sources/brief-k164-ccs-mccfr-chance-sampling-steals-2026-07-30.md
 maturity: validated
 read_status: skimmed
 created: 2026-07-30
-updated: 2026-07-30
+updated: 2026-08-04
 ---
 
 ## Relations

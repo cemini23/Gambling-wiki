@@ -70,7 +70,10 @@ paper_queries:
 - cluster: kelly-bankroll-arxiv
   query: arxiv Kelly criterion sports betting bankroll wager sizing gambling
   category: research paper
-  arxiv_query: (all:Kelly OR all:"bankroll") AND (all:betting OR all:wager OR all:gambling OR all:criterion)
+  # K165: require wagering anchors; ANDNOT neural bits-per-spike / neuroscience Kelly-metaphor bleed.
+  arxiv_query: (all:Kelly OR all:"bankroll" OR all:"Kelly criterion") AND (all:betting OR all:wager OR all:gambling
+    OR all:odds) AND (all:sports OR all:bookmaker OR all:bankroll OR all:fractional OR all:"closing line"
+    OR all:criterion) ANDNOT (all:spike OR all:neuron OR all:neuroscience OR all:thalamic)
 queries:
 - cluster: poker-arena-bots
   query: '"dev.fun" OR "arena pokerkit" OR poker agent challenge researcher track heads-up sandbox 2026'

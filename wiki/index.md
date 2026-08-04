@@ -327,6 +327,9 @@ Catalog of all wiki pages. Updated on each ingest.
 | [daily-digest-batch-k164-2026-07-30](sources/daily-digest-batch-k164-2026-07-30.md) | skimmed | K164 batch (1 CONDITIONAL-GO) |
 | [arxiv-2607.27035-ccs-mccfr-2026-07-30](sources/arxiv-2607.27035-ccs-mccfr-2026-07-30.md) | skimmed | CCS-MCCFR correlated chance sampling |
 | [brief-k164-ccs-mccfr-chance-sampling-steals-2026-07-30](sources/brief-k164-ccs-mccfr-chance-sampling-steals-2026-07-30.md) | deep-read | K164 CCS / Linear CFR steals |
+| [daily-digest-batch-k165-2026-08-04](sources/daily-digest-batch-k165-2026-08-04.md) | skimmed | K165 batch (0 GO / 1 reject) |
+| [daily-digest-reject-cluster-k165-2026-08-04](sources/daily-digest-reject-cluster-k165-2026-08-04.md) | skimmed | Bits-per-spike neuroscience false positive |
+| [brief-k165-bits-per-spike-false-positive-shelf-2026-08-04](sources/brief-k165-bits-per-spike-false-positive-shelf-2026-08-04.md) | skimmed | K165 reject shelf / Kelly query tighten |
 | [daily-digest-reject-cluster-k129-2026-06-25](sources/daily-digest-reject-cluster-k129-2026-06-25.md) | skimmed |
 | [arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24](sources/arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24.md) | skimmed | First RL agent for Indian Rummy |
 | [arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24](sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md) | skimmed | Parameter EMA self-play magnet |
