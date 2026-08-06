@@ -1,5 +1,9 @@
 # Wiki operations log
 
+## [2026-08-06] brief | K225 Kalshi 15-min + FanDuel/Crypto.com
+
+- Local brief `briefs/2026-08-06_k225-15min-prediction-markets.md` (gitignored). Source OSINT Event Horizon 2026-08-06 + `@osint-wiki/concepts/prediction-market-short-horizon-velocity.md`.
+
 Append-only chronological log.
 
 ## [2026-08-04] ingest | K165 daily digest
