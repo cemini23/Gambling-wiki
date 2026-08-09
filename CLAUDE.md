@@ -82,12 +82,12 @@ Gambling-wiki/
       bots/                         # planned platform bots (requirements; code on @osint-wiki)
       games/                        # poker, blackjack, craps, roulette, slots, baccarat
       sports/                       # NFL, NBA, MLB, soccer, tennis, …
+      tournaments/                  # e.g. Best Ball Mania
       people/                       # authors, coaches, notable sharp bettors
     concepts/                       # bankroll, Kelly, FLB, DFS, best ball, house edge, …
     meta/                           # cadence pages, ingest rubrics
     sweeps/                         # daily research digest reports (discovery-only)
   scripts/                          # wiki_lint.py, daily_research_digest_run.py, preingest_check.py
-  prompts/
 ```
 
 Pages can be nested inside `entities/` when `Domain > Topic > Subtopic` hierarchy is warranted (e.g. `entities/games/poker/tournament-icm.md`). `concepts/` and `sources/` are flat by convention.
