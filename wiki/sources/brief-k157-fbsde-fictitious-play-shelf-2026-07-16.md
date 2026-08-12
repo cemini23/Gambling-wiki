@@ -10,10 +10,11 @@ related:
   - sources/brief-k163-swap-regret-attention-shelf-2026-07-29.md
   - concepts/opponent-modeling-imperfect-info.md
   - sweeps/2026-07-16-daily.md
+  - sources/arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12.md
 maturity: validated
 read_status: deep-read
 created: 2026-07-16
-updated: 2026-07-29
+updated: 2026-08-12
 cross-wiki-source: "briefs/2026-07-16_k157-fbsde-fictitious-play-shelf.md"
 ---
 

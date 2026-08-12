@@ -1,5 +1,16 @@
 # Wiki operations log
 
+## [2026-08-12] ingest | K166 daily digest
+
+- **Batch K166:** 2 REFERENCE / 0 GO / 0 reject
+  - **2608.09389** Regret, equilibrium, and learning in games: A guided tour (Mertikopoulos) — **REFERENCE** FTRL/Hedge/FP literacy shelf (next to K163/K157/K152)
+  - **2608.09256** Distributed Team Orchestration via Supervisor Networks (DTOA / BR-DTOA) — **REFERENCE** team-FP / MAS shelf + **FOSS NO-GO** (claimed `github.com/zjt-1229/team_game_with_supervisor_network` HTTP 404; user `zjt-1229` public_repos=0)
+- Created paper sources + batch + shelf brief; updated opponent-modeling, poker-hl, MAFP, poker-bot-tooling, K152/K157/K163 shelf, team-zero-sum siblings
+- Poker arena brief (wiki + OSINT `agents/devfun-poker-arena/briefs/`) — no decide()/HL import; no atto / GuruWatcher / CeminiDFS / TipDrop / prod scp
+- Phase-1: `wont_wire` both (REFERENCE / FOSS 404 / no ADOPT-GO runtime)
+- Sweep `2026-08-12-daily.md` → INGESTED
+- Archived 2 PDFs to egress-fi; inbox cleared
+
 ## [2026-08-06] brief | K225 Kalshi 15-min + FanDuel/Crypto.com
 
 - Local brief `briefs/2026-08-06_k225-15min-prediction-markets.md` (gitignored). Source OSINT Event Horizon 2026-08-06 + `@osint-wiki/concepts/prediction-market-short-horizon-velocity.md`.

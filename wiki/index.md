@@ -330,6 +330,10 @@ Catalog of all wiki pages. Updated on each ingest.
 | [daily-digest-batch-k165-2026-08-04](sources/daily-digest-batch-k165-2026-08-04.md) | skimmed | K165 batch (0 GO / 1 reject) |
 | [daily-digest-reject-cluster-k165-2026-08-04](sources/daily-digest-reject-cluster-k165-2026-08-04.md) | skimmed | Bits-per-spike neuroscience false positive |
 | [brief-k165-bits-per-spike-false-positive-shelf-2026-08-04](sources/brief-k165-bits-per-spike-false-positive-shelf-2026-08-04.md) | skimmed | K165 reject shelf / Kelly query tighten |
+| [daily-digest-batch-k166-2026-08-12](sources/daily-digest-batch-k166-2026-08-12.md) | skimmed | K166 batch (2 REFERENCE) |
+| [arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12](sources/arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12.md) | skimmed | FTRL / Hedge / FP guided tour (Mertikopoulos) |
+| [arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12](sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md) | skimmed | DTOA supervisor network team-FP (FOSS 404) |
+| [brief-k166-regret-learning-games-shelf-2026-08-12](sources/brief-k166-regret-learning-games-shelf-2026-08-12.md) | deep-read | K166 FTRL/FP + team-FP theory shelf |
 | [daily-digest-reject-cluster-k129-2026-06-25](sources/daily-digest-reject-cluster-k129-2026-06-25.md) | skimmed |
 | [arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24](sources/arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24.md) | skimmed | First RL agent for Indian Rummy |
 | [arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24](sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md) | skimmed | Parameter EMA self-play magnet |

@@ -33,9 +33,12 @@ related:
   - sources/arxiv-2606.29169-ganzfried-ped-nash-imperfect-info-2026-06-30.md
   - sources/arxiv-2607.27035-ccs-mccfr-2026-07-30.md
   - sources/brief-k164-ccs-mccfr-chance-sampling-steals-2026-07-30.md
+  - sources/arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12.md
+  - sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md
+  - sources/brief-k166-regret-learning-games-shelf-2026-08-12.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-07-30
+updated: 2026-08-12
 ---
 
 ## Relations
@@ -49,10 +52,14 @@ updated: 2026-07-30
 - @entities/tools/devfun-poker-arena-starter-kit.md — K102 Arena entry (MIT arena-pokerkit)
 - @sources/arxiv-2607.27035-ccs-mccfr-2026-07-30.md — CCS-MCCFR OpenSpiel eval / chance-sampler steal (K164)
 - @sources/brief-k164-ccs-mccfr-chance-sampling-steals-2026-07-30.md — K164 operator steals
+- @sources/arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12.md — K166 FTRL/FP literacy (theory shelf, no tooling)
+- @sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md — K166 team-FP supervisor (theory shelf, no tooling)
 
 ## Raw Concept
 
 K92 eval **poker engine / RL** cluster — **research and evaluation** lane for future poker bots, not live online poker botting (collusion/ToS dead end on real-money sites). K103 adds a **reject cluster** for immature/no-license poker playgrounds — document only, no adoption.
+
+**K166 theory shelf (2026-08-12):** @sources/arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12.md (FTRL/Hedge/FP literacy) and @sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md (team-FP supervisor) are **literacy-only** — no tooling claim, no FOSS adopt (09256 repo 404). See @sources/brief-k166-regret-learning-games-shelf-2026-08-12.md.
 
 ## Narrative
 

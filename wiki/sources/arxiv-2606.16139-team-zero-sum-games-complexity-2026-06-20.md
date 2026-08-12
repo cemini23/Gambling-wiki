@@ -11,10 +11,11 @@ related:
   - sources/arxiv-2508-17671-consistent-opponent-modeling.md
   - sources/daily-digest-reject-cluster-k123-2026-06-20.md
   - sweeps/2026-06-20-daily.md
+  - sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md
 maturity: draft
 read_status: skimmed
 created: 2026-06-20
-updated: 2026-06-20
+updated: 2026-08-12
 location: cemini-egress-fi:/opt/cemini-bulk/research/gambling/arxiv-2606.16139-2606.16139v1-the-computational-complexity-of-tea.pdf
 ---
 
@@ -23,6 +24,7 @@ location: cemini-egress-fi:/opt/cemini-bulk/research/gambling/arxiv-2606.16139-2
 - @concepts/opponent-modeling-imperfect-info.md — why Nash solvers don't trivially scale to multi-agent poker
 - @concepts/heads-up-arena-strategy.md — HU researcher track is **2-player zero-sum** (tractable class)
 - @sources/arxiv-2508-17671-consistent-opponent-modeling.md — exploit lane vs equilibrium computation
+- @sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md — team-FP supervisor shelf (K166; ZSPTG lineage)
 
 ## Raw Concept
 

@@ -63,9 +63,13 @@ related:
   - sources/arxiv-2607.27035-ccs-mccfr-2026-07-30.md
   - sources/brief-k164-ccs-mccfr-chance-sampling-steals-2026-07-30.md
   - sources/arxiv-2607-28520-cs-rnr-safe-opponent-exploitation.md
+  - sources/arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12.md
+  - sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md
+  - sources/daily-digest-batch-k166-2026-08-12.md
+  - sources/brief-k166-regret-learning-games-shelf-2026-08-12.md
 maturity: validated
 created: 2026-06-03
-updated: 2026-08-01
+updated: 2026-08-12
 ---
 
 ## Relations
@@ -90,6 +94,9 @@ updated: 2026-08-01
 - @sources/brief-k163-swap-regret-attention-shelf-2026-07-29.md — K163 shelf (confirm OSINT K198 docs)
 - @sources/arxiv-2607.27035-ccs-mccfr-2026-07-30.md — K164 CCS-MCCFR offline sampler steal
 - @sources/brief-k164-ccs-mccfr-chance-sampling-steals-2026-07-30.md — K164 steals (research branch only)
+- @sources/arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12.md — K166 FTRL/FP literacy shelf (no HL import)
+- @sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md — K166 team-FP supervisor shelf (no HL import)
+- @sources/brief-k166-regret-learning-games-shelf-2026-08-12.md — K166 shelf (wont_wire)
 - @osint-wiki/concepts/cemini-knowledge-application-architecture.md — brief → verify → deploy (cross-wiki)
 - Private repo: `llm-wiki-by-cemini/agents/devfun-poker-arena/` — HL loop scripts
 
@@ -240,6 +247,8 @@ HL loop fixes **`decide()` policy**; researcher **bundle submit** adds **`arena-
 **Metagame Nash + bounded memory** (K154 — @sources/arxiv-2607.08692-pokemon-tcg-nash-lean-metagame-2026-07-13.md, @sources/arxiv-2607.07666-ensemble-qsp-hierarchical-memory-2026-07-13.md): field share ≠ Nash EV; hierarchical capped epoch memory with eviction. See @sources/brief-k154-metagame-memory-search-steals-2026-07-13.md.
 
 **Market-baseline three-axis eval** (K160 — @sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md): accuracy-only gates can be a null when agents converge. Pair variants with a hard non-LLM baseline; separately track calibration, policy P&L vs baseline, and reflection/admit-wrong honesty. See @sources/brief-k160-wc2026-agents-market-baseline-steals-2026-07-21.md / @entities/tools/wc2026-agents.md.
+
+**FTRL / FP literacy shelf (K166 — @sources/arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12.md, @sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md):** two REFERENCE papers, `wont_wire`. 09389 (Mertikopoulos) gives the unified regularized-learning story behind FP/MAFP — Brown–Robinson convergence, zero-sum ergodic Gap bound, folk theorem (strict NE attract, mixed NE avoided by EXP3-style play). Read as literacy next to K163/K157/K152, not as a patch source. 09256 (DTOA/BR-DTOA) is team-FP over supervisor beliefs with Byzantine resilience — shelf-only adjacency to MAFP, **no** decide()/HL import. No FOSS for either (09256 claimed repo HTTP 404).
 
 ## Snippets
 

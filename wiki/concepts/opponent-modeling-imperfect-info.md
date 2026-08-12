@@ -62,9 +62,13 @@ related:
   - sources/arxiv-2607.27035-ccs-mccfr-2026-07-30.md
   - sources/brief-k164-ccs-mccfr-chance-sampling-steals-2026-07-30.md
   - sources/arxiv-2607-28520-cs-rnr-safe-opponent-exploitation.md
+  - sources/arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12.md
+  - sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md
+  - sources/daily-digest-batch-k166-2026-08-12.md
+  - sources/brief-k166-regret-learning-games-shelf-2026-08-12.md
 maturity: draft
 created: 2026-06-03
-updated: 2026-08-01
+updated: 2026-08-12
 ---
 
 ## Relations
@@ -86,6 +90,9 @@ updated: 2026-08-01
 - @sources/brief-k163-swap-regret-attention-shelf-2026-07-29.md — K163 shelf
 - @sources/arxiv-2607.27035-ccs-mccfr-2026-07-30.md — CCS-MCCFR chance sampling (K164)
 - @sources/brief-k164-ccs-mccfr-chance-sampling-steals-2026-07-30.md — K164 steals
+- @sources/arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12.md — FTRL/FP literacy guided tour (K166)
+- @sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md — team-FP supervisor shelf (K166)
+- @sources/brief-k166-regret-learning-games-shelf-2026-08-12.md — K166 shelf
 
 Synthesized from @sources/arxiv-2508-17671-consistent-opponent-modeling.md — how to **exploit suboptimal opponents** in repeated imperfect-information games (poker) using observed play, and why naive Bayesian Best Response (BBR) fails a **consistency** guarantee even against static opponents.
 
@@ -180,6 +187,12 @@ See `@sources/daily-digest-arxiv-batch-2026-06-04.md` and `@entities/bots/poker-
 ### CCS-MCCFR chance sampling (K164) [CONDITIONAL-GO]
 
 @sources/arxiv-2607.27035-ccs-mccfr-2026-07-30.md: persistent randomized **Weyl** streams per concrete chance node cut Kuhn/Leduc exploitability ~19–34%; Linear CFR + CCS best combo. Offline MCCFR/OpenSpiel research steal — **decide() NO-GO**; no author FOSS.
+
+### Regret / learning-in-games guided tour (K166) [REFERENCE]
+
+@sources/arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12.md: Mertikopoulos unified tour of **regularized learning** (FTRL / Hedge / EXP3 / Tsallis-INF) with Brown–Robinson FP (Thm 1), a quantitative zero-sum ergodic Gap bound (Thm 4), and the folk theorem linking NE ↔ attracting points of regularized learning (Thm 5). Literacy shelf next to K163/K157/K152 — explains *why* FP/MAFP equilibrium-seeking converges in zero-sum and where no-regret dynamics land (strict NE attract, mixed NE are avoided by EXP3-style play). **decide() NO-GO.**
+
+@sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md: team-FP over a **supervisor network** with Byzantine misreporting (DTOA / BR-DTOA) — weak adjacency to MAFP; belief-estimation device, not a villain HUD. **FOSS NO-GO** (claimed repo HTTP 404). Shelf only.
 
 ### Play-adequacy / inference coverage (K158) [TENTATIVE]
 

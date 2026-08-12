@@ -12,10 +12,11 @@ related:
   - concepts/poker-hl-analyst-loop.md
   - entities/tools/rlcard.md
   - sweeps/2026-07-11-daily.md
+  - sources/arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12.md
 maturity: validated
 read_status: deep-read
 created: 2026-07-11
-updated: 2026-07-11
+updated: 2026-08-12
 cross-wiki-source: "briefs/2026-07-11_k152-expert-yardstick-forgetting-regret-steals.md"
 ---
 

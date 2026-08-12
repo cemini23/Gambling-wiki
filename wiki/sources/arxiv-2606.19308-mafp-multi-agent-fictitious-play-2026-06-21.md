@@ -17,10 +17,14 @@ related:
   - sources/arxiv-2607.08861-fictitious-play-coupled-fbsde-2026-07-16.md
   - sources/arxiv-2607.23333-swap-regret-attention-2026-07-29.md
   - sources/brief-k163-swap-regret-attention-shelf-2026-07-29.md
+  - sources/arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12.md
+  - sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md
+  - sources/daily-digest-batch-k166-2026-08-12.md
+  - sources/brief-k166-regret-learning-games-shelf-2026-08-12.md
 maturity: draft
 read_status: skimmed
 created: 2026-06-21
-updated: 2026-07-29
+updated: 2026-08-12
 location: cemini-egress-fi:/opt/cemini-bulk/research/gambling/arxiv-2606.19308-enhancing-decision-making-with-large-language-mo.pdf
 phase_0_verdict: REFERENCE 2026-06-21 — game-theoretic MAS for competitive decisions; runtime LLM NO-GO for decide()
 ---
@@ -32,6 +36,8 @@ phase_0_verdict: REFERENCE 2026-06-21 — game-theoretic MAS for competitive dec
 - @sources/brief-k124-mafp-memory-poker-steals-2026-06-21.md — operator steal summary (K124)
 - @sources/arxiv-2607.08861-fictitious-play-coupled-fbsde-2026-07-16.md — continuous SDG FP convergence shelf (K157)
 - @sources/arxiv-2607.23333-swap-regret-attention-2026-07-29.md — regret-loss attention ≡ smoothed FP / CE (K163)
+- @sources/arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12.md — FTRL/FP unified literacy (K166)
+- @sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md — team-FP supervisor shelf (K166)
 
 ## Raw Concept
 
@@ -59,6 +65,8 @@ MAFP targets **stance entanglement**: decisions where multiple stakeholders' cho
 | **F6 session memory** | Analog: empirical mixture of villain past actions → HUD prior |
 
 Steal pattern for pure-code bot: translate **best-response to empirical opponent mixture** into lightweight Python (freq buckets), not LLM fictitious play rounds.
+
+**K166 shelf links:** @sources/arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12.md provides the underlying regularized-learning theory for why best-response-to-history converges (Brown–Robinson, zero-sum ergodic Gap bound, folk theorem). @sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md is a team-FP variant with supervisor-distributed beliefs — adjacent in name only, **not** a MAFP replacement; both `wont_wire`.
 
 ## Snippets
 
