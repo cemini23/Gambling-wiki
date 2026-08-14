@@ -13,12 +13,14 @@ related:
   - entities/platforms/kalshi.md
   - entities/platforms/polymarket.md
   - entities/sports/nba-betting.md
+  - entities/sports/wnba-betting.md
   - sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md
   - concepts/pm-proper-scoring-clob-profitability.md
   - sources/openreview-prophets-profit-pm-LYSTj2Cnuu-2026-06-17.md
+  - sources/research-wnba-cold-streak-live-unders-2026-08-13.md
 maturity: validated
 created: 2026-06-09
-updated: 2026-06-17
+updated: 2026-08-13
 ---
 
 ## Relations
@@ -27,6 +29,7 @@ updated: 2026-06-17
 - @concepts/sportsbook-pm-line-divergence.md — static cross-venue gaps (complementary, not duplicate)
 - @concepts/prediction-markets-crossover.md — retail PM checklist
 - @entities/platforms/kalshi.md — venue entity
+- @entities/sports/wnba-betting.md — WNBA Kalshi inventory thinner; 4Q bid–ask can erase any lag edge
 
 ## Raw Concept
 

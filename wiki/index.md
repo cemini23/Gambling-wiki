@@ -198,12 +198,14 @@ Catalog of all wiki pages. Updated on each ingest.
 |------|----------|
 | [nfl-betting](entities/sports/nfl-betting.md) | validated |
 | [nba-betting](entities/sports/nba-betting.md) | draft |
+| [wnba-betting](entities/sports/wnba-betting.md) | draft |
 | [world-cup-2026-betting](entities/sports/world-cup-2026-betting.md) | validated |
 
 ## Sources
 
 | Page | Read status |
 |------|-------------|
+| [research-wnba-cold-streak-live-unders-2026-08-13](sources/research-wnba-cold-streak-live-unders-2026-08-13.md) | deep-read | ESPN PBP 189 games + Kalshi + OpenCLI social |
 | [brief-k118-poker-agent-research-gaps-2026-06-17](sources/brief-k118-poker-agent-research-gaps-2026-06-17.md) | deep-read |
 | [brief-k107-poker-open-spot-audit-2026-06-09](sources/brief-k107-poker-open-spot-audit-2026-06-09.md) | deep-read |
 | [devfun-poker-researcher-track-email-2026-06-19](sources/devfun-poker-researcher-track-email-2026-06-19.md) | read |

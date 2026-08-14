@@ -14,6 +14,7 @@ related:
   - concepts/favorite-longshot-bias.md
   - entities/sports/nfl-betting.md
   - entities/sports/nba-betting.md
+  - entities/sports/wnba-betting.md
   - entities/sports/world-cup-2026-betting.md
   - concepts/world-cup-knockout-phase-betting.md
   - entities/platforms/draftkings.md
@@ -38,9 +39,10 @@ related:
   - concepts/pm-live-belief-updating.md
   - sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md
   - sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md
+  - sources/research-wnba-cold-streak-live-unders-2026-08-13.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-07-21
+updated: 2026-08-13
 ---
 
 ## Relations
@@ -51,6 +53,7 @@ updated: 2026-07-21
 - @entities/platforms/draftkings.md — major US book
 - @entities/platforms/fanduel.md — major US book
 - @entities/platforms/hard-rock-bet.md — operator primary NFL book (W8)
+- @entities/sports/wnba-betting.md — WNBA live unders / last-2:00 research
 
 ## Raw Concept
 

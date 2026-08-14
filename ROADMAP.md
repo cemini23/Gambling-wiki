@@ -211,6 +211,7 @@ Steps:
 
 | Date | Item |
 |------|------|
+| 2026-08-13 | WNBA betting entity + cold-streak/last-2:00 research source; Kalshi WNBA series note; alert-only bot posture |
 | 2026-06-07 | Competition scrub — redacted public wiki/LESSONS; bot code → private osint; GitHub history squashed to single commit |
 | 2026-06-04 | Playground W6 — S1a build mode in ROADMAP; prod pace tuned (details private) |
 | 2026-06-01 | K93 federated daily digest — scripts, config, meta cadence, sweeps/ |

@@ -15,12 +15,14 @@ related:
   - entities/platforms/underdog-pickem.md
   - concepts/diy-nfl-pickem-props-tool-architecture.md
   - entities/sports/nfl-betting.md
+  - entities/sports/wnba-betting.md
   - entities/platforms/hard-rock-bet.md
   - sources/web-tech-insider-nfl-betting-strategy-2026-06-20.md
   - sources/web-sportsbookreview-hard-rock-bet-2026-06-20.md
+  - sources/research-wnba-cold-streak-live-unders-2026-08-13.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-07-05
+updated: 2026-08-13
 ---
 
 ## Relations
@@ -31,6 +33,7 @@ updated: 2026-07-05
 - @entities/platforms/underdog-pickem.md — pick'em lounge adjusts payouts for correlated legs
 - @entities/platforms/prizepicks.md — Demon/Goblin and combo correlation shifts
 - @entities/sports/nfl-betting.md — NFL SGP discipline
+- @entities/sports/wnba-betting.md — both-teams-under-5 last-2:00 is a correlated 2-leg (fair ~+320 overall)
 - @concepts/pickem-slip-ev-and-correlation.md — DFS pick'em lounges (fixed-payout correlated slips)
 
 ## Raw Concept

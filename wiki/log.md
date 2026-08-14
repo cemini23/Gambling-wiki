@@ -1,5 +1,14 @@
 # Wiki operations log
 
+## [2026-08-13] research | WNBA cold-streak / last-2:00 live unders
+
+- **Created** — `entities/sports/wnba-betting.md` (5-miss no edge; last-2:00 fair odds by margin; Kalshi inventory; OpenCLI social)
+- **Created** — `sources/research-wnba-cold-streak-live-unders-2026-08-13.md`
+- **Updated** — `nba-betting`, `kalshi` (WNBA series section), `gambling-bot-architecture` (alert-only row), `pm-live-belief-updating`, `parlay-and-correlated-bets`, `index.md`
+- Methods: ESPN PBP 189 games (2026-06-01…08-12); Kalshi public trade-api (no prod login); OpenCLI Reddit/X
+- Verdict: do **not** build 5-miss→Q-under bot; paper alert only for blowout last-2:00 if sportsbook lists prop above fair; Kalshi has no last-2:00 contract
+- No FOSS adopt; no sportsbook auto-wager; no prod Kalshi orders
+
 ## [2026-08-12] ingest | K166 daily digest
 
 - **Batch K166:** 2 REFERENCE / 0 GO / 0 reject

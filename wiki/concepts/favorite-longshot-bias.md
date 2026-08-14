@@ -20,9 +20,11 @@ related:
   - sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md
   - sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md
   - entities/tools/wc2026-agents.md
+  - entities/sports/wnba-betting.md
+  - sources/research-wnba-cold-streak-live-unders-2026-08-13.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-07-21
+updated: 2026-08-13
 ---
 
 ## Relations
@@ -32,6 +34,7 @@ updated: 2026-07-21
 - @entities/platforms/polymarket.md — CLOB event markets
 - @osint-wiki/concepts/favorite-longshot-bias.md — Cemini PM trading monetization (Avellaneda-Stoikov, cross-venue)
 - @sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md — K160: favorites over-performed WC2026; fade-market lost for LLMs
+- @entities/sports/wnba-betting.md — both-under-5 last-2:00 longshot; need odds longer than fair after juice
 
 ## Raw Concept
 

@@ -64,9 +64,11 @@ related:
   - sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md
   - entities/tools/wc2026-agents.md
   - sources/brief-k160-wc2026-agents-market-baseline-steals-2026-07-21.md
+  - entities/sports/wnba-betting.md
+  - sources/research-wnba-cold-streak-live-unders-2026-08-13.md
 maturity: core
 created: 2026-05-31
-updated: 2026-07-21
+updated: 2026-08-13
 ---
 
 # Gambling bot architecture (planned)
@@ -78,6 +80,7 @@ updated: 2026-07-21
 - @concepts/gambling-wiki-scope.md — wiki boundary vs @osint-wiki prod stack
 - @meta/cross-wiki-routing.md — ingest routing for bot-related sources
 - @sources/daily-digest-reject-cluster-k119-2026-06-18.md — digest false positives (OrchRM NO-GO)
+- @entities/sports/wnba-betting.md — WNBA live-under research: alert-only; no 5-miss auto-bot
 - @concepts/custom-agent-methodology.md — K120 Agents All the Way Down; CLI-over-MCP, P3→P5 loop
 - @sources/arxiv-2606.11869-agents-all-the-way-down-2026-06-19.md — K120 source
 - @sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md — K160 market-baseline agent eval
@@ -166,6 +169,7 @@ Mark prod-only deployment detail `[ROUTE @osint-wiki]` in narrative; still **sum
 | polybot, Harrier toolkits, polymarket-skills | Strip-mine patterns, retail guardrails | **Adopt / Phase-0** |
 | Copy-trading executors | **NO-GO retail** — document risks (`@concepts/pm-copy-trading-retail-risks.md`) | DIY pipeline if built |
 | Open-source sportsbook arb finders | Alert-only reference, latency notes | Optional code mirror |
+| WNBA live last-2:00 / cold-streak scanners | **Alert-only**; 5-miss→Q-under has **no edge**; Kalshi has no last-2:00 contract (`@entities/sports/wnba-betting.md`) | Optional paper log only |
 
 Do **not** duplicate osint entity bodies — bidirectional `related:` + 2–3 sentence gambling angle here.
 

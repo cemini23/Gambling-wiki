@@ -25,6 +25,7 @@ related:
   - sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md
   - concepts/pm-live-belief-updating.md
   - entities/sports/nba-betting.md
+  - entities/sports/wnba-betting.md
   - concepts/world-cup-pm-retail-hygiene.md
   - sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md
   - concepts/pm-proper-scoring-clob-profitability.md
@@ -38,9 +39,10 @@ related:
   - sources/substack-rss-event-horizon-2026-06-29-michigan-court-orders-kalshi-to-stop-sports-even.md
   - sources/arxiv-2607.08199-pm-structural-volatility-kalshi-2026-07-10.md
   - concepts/pm-structural-volatility.md
+  - sources/research-wnba-cold-streak-live-unders-2026-08-13.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-07-10
+updated: 2026-08-13
 ---
 
 ## Relations
@@ -49,6 +51,7 @@ updated: 2026-07-10
 - @concepts/kalshi-michigan-sports-injunction-2026-06.md — Michigan TRO
 - @concepts/pm-whale-conviction-bias-2026-07.md — size-weighting bias
 - @concepts/prediction-markets-crossover.md — retail vs bot lens
+- @entities/sports/wnba-betting.md — WNBA series inventory (no last-2:00 contract)
 - @osint-wiki/entities/platforms/kalshi.md — Cemini trading stack, regulation, bots
 
 ## Raw Concept
@@ -108,6 +111,10 @@ Angelini & De Angelis merge **1-min Kalshi NBA game-contract quotes** with **pla
 | Salience × liquidity | Visible events in **thin** markets underreact most |
 
 Retail: live mids **track the game** but **lag full fair-value move** — size down in illiquid states; don't market-chase the lag. Bot: liquidity gate + drift-aware limits. Hub: `@concepts/pm-live-belief-updating.md`, `@sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md`.
+
+### WNBA sports series (public catalog, 2026-08-13) [CONFIRMED]
+
+Operator catalog pass (no auth): **88** WNBA / Women’s Pro Basketball series. Liquid objects: `KXWNBAGAME`, `KXWNBATOTAL`, `KXWNBASPREAD`, half/quarter totals (`KXWNBA1–4QTOTAL`, `1H`/`2HTOTAL`), `KXWNBATEAMTOTAL`. **No** last-2-minute / each-team-under-5 time-window series (Sports-wide search empty). Live 4Q ladders can be **too wide to fill** even in blowouts; game totals carry most OI. Hub: `@entities/sports/wnba-betting.md`, `@sources/research-wnba-cold-streak-live-unders-2026-08-13.md`.
 
 ### Macro CPI belief distributions (K135) [TENTATIVE 2026-07-01]
 

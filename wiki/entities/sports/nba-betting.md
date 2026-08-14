@@ -9,6 +9,7 @@ related:
   - concepts/line-shopping-and-clv.md
   - concepts/sportsbook-pm-line-divergence.md
   - entities/sports/nfl-betting.md
+  - entities/sports/wnba-betting.md
   - entities/platforms/draftkings.md
   - entities/platforms/fanduel.md
   - entities/tools/momentum-odds.md
@@ -18,9 +19,10 @@ related:
   - entities/platforms/kalshi.md
   - concepts/pm-live-belief-updating.md
   - sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md
+  - sources/research-wnba-cold-streak-live-unders-2026-08-13.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-06-09
+updated: 2026-08-13
 ---
 
 ## Relations
@@ -28,6 +30,7 @@ updated: 2026-06-09
 - @concepts/dfs-strategy-overview.md — NBA DFS slates
 - @entities/tools/momentum-odds.md — tutorial mapped signals to Kalshi **NBA/playoff** contracts
 - @concepts/sportsbook-pm-line-divergence.md — totals/ML vs PM
+- @entities/sports/wnba-betting.md — sibling league; cold-streak / last-2:00 under research (no 5-miss edge)
 
 ## Raw Concept
 
