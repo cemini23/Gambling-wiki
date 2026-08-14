@@ -16,9 +16,10 @@ related:
   - sources/youtube-operator-batch-wc-bbm-2026-05-31.md
   - sources/web-offseason-hub-w27-synthesis-2026-07-05.md
   - concepts/nfl-offseason-research-cadence.md
+  - sources/rotoviz-preseason-paywall-2026-08-14.md
 maturity: validated
 created: 2026-06-18
-updated: 2026-07-05
+updated: 2026-08-14
 ---
 
 ## Relations
@@ -27,6 +28,7 @@ updated: 2026-07-05
 - @concepts/bbm7-portfolio-construction.md — how to deploy buys across 150 entries
 - @sources/4for4-bbm7-guide-series-2026-06-18.md — TE window + QB cluster thesis
 - @sources/fantasysixpack-bbm-new-meta-2026-06-08.md — WR selectivity + QB-cost framing
+- @sources/rotoviz-preseason-paywall-2026-08-14.md — FFPC redraft ADP heat-check (TLaw lede; body paywalled)
 
 ## Raw Concept
 

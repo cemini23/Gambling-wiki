@@ -35,9 +35,12 @@ related:
   - sweeps/2026-06-20-tier2-w8-nfl.md
   - sources/arxiv-2607.00164-verifiable-rewards-calibrated-forecasting-2026-07-03.md
   - sources/brief-k137-swe-interact-rlvr-nfl-steals-2026-07-03.md
+  - sources/sharp-nfl-rb-prop-unders-2026-08-13.md
+  - sources/rotoviz-preseason-paywall-2026-08-14.md
+  - sources/daily-digest-rss-industry-2026-08-14.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-07-05
+updated: 2026-08-14
 ---
 
 ## Relations
@@ -47,6 +50,9 @@ updated: 2026-07-05
 - @concepts/best-ball-strategy.md — shared player research stack
 - @concepts/dfs-strategy-overview.md — FanDuel/Underdog DFS overlap
 - @sources/web-tech-insider-nfl-betting-strategy-2026-06-20.md — K124 process primer
+- @sources/sharp-nfl-rb-prop-unders-2026-08-13.md — 2026 season-long RB rushing unders (volume thesis)
+- @sources/rotoviz-preseason-paywall-2026-08-14.md — OL/target-share/ADP titles (paywalled)
+- @sources/daily-digest-rss-industry-2026-08-14.md — DKeX football contracts + Colorado deposit cap
 
 ## Raw Concept
 
@@ -87,6 +93,7 @@ See @sources/web-tech-insider-nfl-betting-strategy-2026-06-20.md for situational
 |--------|-------|--------------|
 | Spread / ML / total | Highest liquidity | **Primary** — log open vs close |
 | Player props | Higher hold (~30¢ vig on soft books) | Secondary; more FLB on longshots |
+| Season-long player props | Volume × game-script bets (e.g. rush yards) | Log close vs projection, not W-L |
 | SGP | Correlation priced — see @concepts/parlay-and-correlated-bets.md | Usually -EV unless correlated edge |
 | Futures | Division, SB — capital locked months | Low frequency |
 | Live | Fast moves on drives | Supplement pre-game; pre-set rules |
@@ -114,6 +121,10 @@ See @sources/web-tech-insider-nfl-betting-strategy-2026-06-20.md for situational
 - **Inactive lists** — 90 min pre-kick (props, totals)
 
 Cross-link DFS: same OUT tags move FanDuel ownership and Underdog ADP.
+
+### 2026 season-long RB unders (preseason) [TENTATIVE]
+
+Sharp (Hirsch, 2026-08-13): **Taylor Under 1224.5 rush yards (-105)** and **Hubbard Under 700 (-114)** — both **carry-share / committee / trailing-script** theses, not talent fades. Use as a template for K147 season-long O/U; do not import as weekly pick'em. Hub: `@sources/sharp-nfl-rb-prop-unders-2026-08-13.md`.
 
 ### Live betting hygiene
 

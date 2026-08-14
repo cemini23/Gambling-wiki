@@ -8,15 +8,19 @@ related:
   - concepts/dfs-stat-projection-engine.md
   - concepts/dfs-injury-and-news-workflow.md
   - concepts/diy-nfl-dfs-model-architecture.md
+  - sources/sharp-nfl-rb-prop-unders-2026-08-13.md
+  - sources/rotoviz-preseason-paywall-2026-08-14.md
 maturity: draft
 created: 2026-06-20
-updated: 2026-06-20
+updated: 2026-08-14
 ---
 
 ## Relations
 
 - @concepts/team-volume-pace-model.md — team volume denominator
 - @concepts/dfs-injury-and-news-workflow.md — injury reallocation
+- @sources/sharp-nfl-rb-prop-unders-2026-08-13.md — season-long rush unders as carry-share bets
+- @sources/rotoviz-preseason-paywall-2026-08-14.md — OL continuity / target-share titles (paywalled)
 
 ## Raw Concept
 
@@ -39,6 +43,8 @@ Pipeline: **routes → TPRR → target share**, not raw last-game targets.
 Separate **carry share** (floor) from **inside-5 / GL share** (rush TD equity). Use yardline-bucket xTD (5–1 bucket ~40% TD rate) not raw TD rate.
 
 Committee detection via HHI on carry shares; confidence penalty on projections when HHI < 0.38.
+
+**Season-long props (2026-08):** Taylor/Hubbard unders are the same carry-share bet at season horizon — fade a posted rushing total when the implied carry monopoly is implausible (committee, OL outages, trailing scripts). `@sources/sharp-nfl-rb-prop-unders-2026-08-13.md`.
 
 ### Snap / QB (usage-snaps-qb)
 

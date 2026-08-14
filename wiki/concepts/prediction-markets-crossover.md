@@ -50,11 +50,13 @@ related:
   - sources/substack-rss-event-horizon-2026-07-03-how-artificial-spotify-streams-broke-a-kalshi-ma.md
   - sources/substack-rss-klement-2026-07-02-a-fundamental-flaw-of-prediction-markets.md
   - sources/substack-rss-event-horizon-2026-07-07-north-carolinas-prediction-market-budget-process.md
+  - sources/daily-digest-rss-industry-2026-08-14.md
+  - sources/substack-rss-event-horizon-2026-08-13-novig-responsible-trading.md
   - @seo-wiki/concepts/outlier-weekly-issue3-world-cup-bot-notes.md
   - @seo-wiki/concepts/generative-engine-optimization.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-07-10
+updated: 2026-08-14
 ---
 
 ## Relations
@@ -70,6 +72,8 @@ updated: 2026-07-10
 - @osint-wiki/concepts/sports-prediction-consensus-agent.md — sports PM entry signals
 - @seo-wiki/concepts/outlier-weekly-issue3-world-cup-bot-notes.md — public PM/OSS education funnel (Outlier Weekly)
 - @seo-wiki/concepts/generative-engine-optimization.md — citability for public PM explainers
+- @sources/daily-digest-rss-industry-2026-08-14.md — DKeX COMBOS + CFTC/NY emergency
+- @sources/substack-rss-event-horizon-2026-08-13-novig-responsible-trading.md — Novig responsible-trading + incentive advisory
 
 ## Raw Concept
 
@@ -115,6 +119,8 @@ Wharton interview with `@entities/people/rufus-peabody.md` frames **sports-focus
 | Reference | Pinnacle close | Often still benchmark vs Pinnacle |
 
 Retail: same checklist as Kalshi/PM — fees, settlement, bankroll. **Bot execution** — requirements on `@concepts/gambling-bot-architecture.md`; prod code on `@osint-wiki`.
+
+**Aug 2026:** Novig published a responsible-trading framework (21+, incentive limits) while CFTC DMO flagged **Reg 40.5/40.6 incentive programs** — treat PM bonuses as compliance-risk. DraftKings **DKeX** listed football binaries + COMBOS (product of component YES). Kalshi vs NY AG: CFTC emergency “keep operating” vs $36B restitution claim. Hubs: `@sources/substack-rss-event-horizon-2026-08-13-novig-responsible-trading.md`, `@sources/daily-digest-rss-industry-2026-08-14.md`, `@osint-wiki/concepts/prediction-market-regulation-2026.md`.
 
 ### When to stay in traditional books
 

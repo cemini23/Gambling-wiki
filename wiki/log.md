@@ -1,5 +1,24 @@
 # Wiki operations log
 
+## [2026-08-14] ingest | RSS lane first full ingest (industry + Sharp + RotoViz stub)
+
+- **Inbox** — empty (no PDFs)
+- **Ingested** — LSB S12–S14 (CFTC/NY emergency, Colorado SB 26-131, DKeX 40.2 football + COMBOS); Sharp S23 (Taylor/Hubbard rush unders); RotoViz S18–S22 paywall stub (TLaw/ROO free ledes); EH S1 Novig cross-wiki stub
+- **Skipped** — LSR S6–S10 (HTTP 403); PFT injury mill; nflverse GitHub tags; SBC vendor PR; RotoBaller sleepers; EH S2–S4 (OSINT already has bodies)
+- **Created** — `daily-digest-rss-industry-2026-08-14.md`, `sharp-nfl-rb-prop-unders-2026-08-13.md`, `rotoviz-preseason-paywall-2026-08-14.md`, `substack-rss-event-horizon-2026-08-13-novig-responsible-trading.md`
+- **Updated** — kalshi, draftkings, nfl-betting, prediction-markets-crossover, parlay-and-correlated-bets, kalshi-michigan, pickem-legal, pickem architecture/fair-prob, player-usage, dfs-distribution, bbm7-adp, cadence, index
+- Sweep `2026-08-14-daily.md` → INGESTED
+- No FOSS adopt; no sportsbook auto-wager; no prod Kalshi orders; no archive (URL-only)
+
+## [2026-08-14] research | Daily digest RSS lane (seasonal ingest)
+
+- **Problem** — paper lane dry: sports-betting / DFS / Kelly arXiv queries 0 hits most mornings; Exa news disabled (`exa.news_enabled: false`). Wrong daily diet for W8 NFL / W9 DFS.
+- **Added** — `scripts/rss_digest.py` + `rss.feeds` in `daily_research_config.yaml` (15 free RSS/Atom feeds, discovery-only, no inbox HTML dump)
+- **Wired** — `daily_research_digest_run.py` sweep section `S1`…; wiki URL dedupe
+- **Updated** — `@meta/daily-research-digest-cadence.md`, ROADMAP digest note
+- **Not enabled** — Exa news (credits); Action Network / VSiN / BettingPros picks mills; ETR/RotoGrinders/Unabated (404 or paywall stub)
+- OSINT Substack poller still owns full Event Horizon / Closing Line / Outlier bodies (`cross_wiki: gambling-wiki`)
+
 ## [2026-08-13] research | WNBA cold-streak / last-2:00 live unders
 
 - **Created** — `entities/sports/wnba-betting.md` (5-miss no edge; last-2:00 fair odds by margin; Kalshi inventory; OpenCLI social)

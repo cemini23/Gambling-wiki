@@ -14,9 +14,10 @@ related:
   - entities/platforms/underdog-pickem.md
   - entities/platforms/underdog-fantasy.md
   - entities/tools/ceminidfs.md
+  - sources/daily-digest-rss-industry-2026-08-14.md
 maturity: draft
 created: 2026-07-05
-updated: 2026-07-05
+updated: 2026-08-14
 ---
 
 ## Relations
@@ -24,6 +25,7 @@ updated: 2026-07-05
 - @concepts/nfl-dfs-data-sources.md — shared GO/NO-GO source matrix (FanDuel, DK, ESPN)
 - @entities/tools/ceminidfs.md — BBM extension posture precedent (read-only overlay, no auto-submit)
 - @entities/platforms/underdog-fantasy.md — extension lessons §6–7; pick'em is separate DOM/ToS surface
+- @sources/daily-digest-rss-industry-2026-08-14.md — Colorado SB 26-131: prop ban stripped; 6-deposit cap
 
 ## Raw Concept
 
@@ -51,6 +53,10 @@ updated: 2026-07-05
 3. **Personal ledger** — track picks, results, bankroll for your own slips; no redistribution of platform data.
 4. **Read-only overlay (deferred)** — display fair % next to manually viewed lines; user clicks platform UI to submit — same pattern as CeminiDFS BBM copilot intent.
 5. **Licensed APIs** — nflverse, The Odds API, Open-Meteo per their terms (@concepts/nfl-dfs-data-sources.md).
+
+### Colorado (Aug 2026) [CONFIRMED]
+
+SB 26-131 in force: **six deposits per operator gaming day**, credit-card (incl. e-wallet) ban, push alerts only when the app is closed. The introduced **proposition-bet ban** and **winner-limit ban** were **stripped**. Player props / pick'em remain legal in CO unless the gaming commission later restricts a wager type on a governing-body petition. Deposit-count is **per book** with no dollar cap — a CO Hard Rock + FanDuel + UD stack is 18 deposits/day, not 6. `@sources/daily-digest-rss-industry-2026-08-14.md`.
 
 ### NO-GO workflows (hard stop)
 

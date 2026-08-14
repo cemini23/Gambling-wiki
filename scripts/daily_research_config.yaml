@@ -147,5 +147,119 @@ social:
       last 24h
   - tool: twitter-reader
     prompt: dev.fun poker HU sandbox MAFP verifier; NFL DFS FanDuel pydfs; Underdog BBM7 ADP last 24h
+# Free RSS/Atom discovery (2026-08-14). Practitioner + industry + GitHub — papers stay
+# arXiv-only. Do not enable Exa news for this; RSS covers the seasonal gap.
+rss:
+  enabled: true
+  max_age_days: 7
+  max_items_per_feed: 5
+  user_agent: CeminiGambling-RSSDigest/1.0 (+local research wiki)
+  feeds:
+  # --- prediction markets / sportsbook industry (OSINT also polls first three) ---
+  - id: event-horizon
+    name: Event Horizon
+    url: https://nexteventhorizon.substack.com/feed
+    cluster: pm-retail
+    max_items: 5
+  - id: the-closing-line
+    name: The Closing Line
+    url: https://theclosingline.substack.com/feed
+    cluster: sports-betting-industry
+    max_items: 5
+  - id: outlier-weekly
+    name: Outlier Weekly
+    url: https://outlierweekly.substack.com/feed
+    cluster: methodology
+    max_items: 3
+  - id: legal-sports-report
+    name: Legal Sports Report
+    url: https://www.legalsportsreport.com/feed/
+    cluster: us-sports-betting-legal
+    max_items: 5
+  - id: legal-sports-betting
+    name: Legal Sports Betting
+    url: https://www.legalsportsbetting.com/feed/
+    cluster: us-sports-betting-legal
+    max_items: 4
+  - id: sbc-news
+    name: SBC News
+    url: https://sbcnews.co.uk/feed/
+    cluster: sportsbook-industry
+    max_items: 3
+    include_any:
+    - sportsbook
+    - prediction market
+    - Kalshi
+    - Polymarket
+    - DFS
+    - betting
+    - wagering
+  # --- NFL / DFS / best ball (seasonal) ---
+  - id: rotoviz
+    name: RotoViz
+    url: https://www.rotoviz.com/feed
+    cluster: dfs-analytics
+    max_items: 5
+  - id: sharp-football
+    name: Sharp Football Analysis
+    url: https://www.sharpfootballanalysis.com/feed/
+    cluster: nfl-betting
+    max_items: 5
+  - id: rotoballer
+    name: RotoBaller
+    url: https://www.rotoballer.com/feed
+    cluster: fantasy-adp
+    max_items: 4
+    include_any:
+    - football
+    - NFL
+    - DFS
+    - best ball
+    exclude_any:
+    - baseball
+    - pitcher
+    - hitter
+  - id: 4for4
+    name: 4for4
+    url: https://www.4for4.com/rss.xml
+    cluster: best-ball
+    max_items: 5
+    exclude_any:
+    - Why Join
+    - 50% Off
+    - Claim 50
+    - subscription
+  - id: over-the-cap
+    name: Over The Cap
+    url: https://overthecap.com/feed
+    cluster: nfl-contracts
+    max_items: 3
+  - id: pft-injury
+    name: ProFootballTalk (injury/camp filter)
+    url: https://profootballtalk.nbcsports.com/feed/
+    cluster: nfl-injury-camp
+    max_items: 5
+    include_any:
+    - injur
+    - injured reserve
+    - questionable
+    - doubtful
+    - ruled out
+    - out for
+    - depth chart
+    - training camp
+    - preseason
+  # --- data / tooling releases (CeminiDFS) ---
+  - id: nflverse-data
+    name: nflverse-data releases
+    url: https://github.com/nflverse/nflverse-data/releases.atom
+    cluster: cemini-dfs-data
+    max_items: 3
+    # Awareness only — do not wiki-ingest daily tag bumps (schedules/rosters).
+  - id: nflreadpy
+    name: nflreadpy releases
+    url: https://github.com/nflverse/nflreadpy/releases.atom
+    cluster: cemini-dfs-data
+    max_items: 3
 output:
   path_template: wiki/sweeps/{date}-daily.md

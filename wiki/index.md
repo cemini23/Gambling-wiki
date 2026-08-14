@@ -86,6 +86,9 @@ Catalog of all wiki pages. Updated on each ingest.
 | [web-tech-insider-nfl-betting-strategy-2026-06-20](sources/web-tech-insider-nfl-betting-strategy-2026-06-20.md) | validated | Key numbers, CLV, bankroll, live betting |
 | [web-sportsbookreview-hard-rock-bet-2026-06-20](sources/web-sportsbookreview-hard-rock-bet-2026-06-20.md) | validated | Hard Rock Phase-0 — promos, NFL vig, BetVision |
 | [web-dfs-hero-nfl-gpp-strategy-2026-06-20](sources/web-dfs-hero-nfl-gpp-strategy-2026-06-20.md) | validated | NFL GPP stacks, MME pool, FanDuel half-PPR |
+| [sharp-nfl-rb-prop-unders-2026-08-13](sources/sharp-nfl-rb-prop-unders-2026-08-13.md) | validated | Taylor/Hubbard season-long rush unders (volume thesis) |
+| [rotoviz-preseason-paywall-2026-08-14](sources/rotoviz-preseason-paywall-2026-08-14.md) | draft | S18–S22 members-only; TLaw/ROO free ledes |
+| [daily-digest-rss-industry-2026-08-14](sources/daily-digest-rss-industry-2026-08-14.md) | validated | DKeX COMBOS, CFTC/NY emergency, Colorado SB 131 |
 | [poker-strategy-overview](concepts/poker-strategy-overview.md) | validated | Cash, MTT, ICM, zero-to-10k path |
 | [opponent-modeling-imperfect-info](concepts/opponent-modeling-imperfect-info.md) | draft | K95 BBR/consistency — dev.fun arena exploit lane |
 | [poker-hl-analyst-loop](concepts/poker-hl-analyst-loop.md) | validated | HL loop: analyze → LLM patch → preflight → deploy |
@@ -391,6 +394,10 @@ Catalog of all wiki pages. Updated on each ingest.
 - [Klement on Investing — Globalisation in the 2020s](sources/substack-rss-klement-2026-07-07-globalisation-in-the-2020s.md) — cross-wiki stub routed from ingest — `cross-wiki`
 - [Klement on Investing — Momentum crash warnings flash red. Here’s how you might survive](sources/substack-rss-klement-2026-07-07-momentum-crash-warnings-flash-red-heres-how-you.md) — cross-wiki stub routed from ingest — `cross-wiki`
 - [CS-RNR safe opponent exploitation (arXiv:2607.28520)](sources/arxiv-2607-28520-cs-rnr-safe-opponent-exploitation.md) — certified budgeted exploit of diffuse villains (Leduc/Liar's Dice); WATCH code — `paper, poker, opponent-modeling`
+- [Daily digest RSS industry 2026-08-14](sources/daily-digest-rss-industry-2026-08-14.md) — DKeX football + COMBOS; CFTC/NY; Colorado deposit cap
+- [Sharp NFL RB prop unders 2026-08-13](sources/sharp-nfl-rb-prop-unders-2026-08-13.md) — Taylor/Hubbard season-long rush unders
+- [RotoViz preseason paywall 2026-08-14](sources/rotoviz-preseason-paywall-2026-08-14.md) — S18–S22 members-only
+- [Event Horizon — Novig responsible trading](sources/substack-rss-event-horizon-2026-08-13-novig-responsible-trading.md) — cross-wiki stub — `cross-wiki`
 
 ## Meta
 

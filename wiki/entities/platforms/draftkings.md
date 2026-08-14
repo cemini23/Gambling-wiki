@@ -23,9 +23,11 @@ related:
   - sources/daily-digest-news-r1-r12-2026-06-02.md
   - sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md
   - entities/tools/wc2026-agents.md
+  - sources/daily-digest-rss-industry-2026-08-14.md
+  - concepts/parlay-and-correlated-bets.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-07-21
+updated: 2026-08-14
 ---
 
 ## Relations
@@ -35,6 +37,7 @@ updated: 2026-07-21
 - @concepts/sharp-vs-soft-books.md — retail/soft book classification
 - @sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md — K160 used mostly DK opening 1X2 previews as market baseline
 - @entities/tools/wc2026-agents.md — released odds + LLM agent P&L vs DK-priced market
+- @sources/daily-digest-rss-industry-2026-08-14.md — DKeX football 40.2 + COMBOS
 
 ## Raw Concept
 
@@ -44,8 +47,10 @@ Major US legal operator — sportsbook + DFS + casino (+ best ball). Stub pendin
 
 DraftKings operates **sports betting**, **DFS**, **iCasino**, and **best ball** in licensed US states. Classified as **soft/rec retail** for sharp betting purposes — strong promos, account limits for winners possible.
 
-Expand on ingest: state availability, SGP product, rewards program, typical hold vs Pinnacle.
+### DKeX / Railbird (Aug 2026) [CONFIRMED]
+
+DraftKings-owned DCM **Railbird Exchange (DKeX)** self-certified nine football event contracts (win/spread/total/player-or-team stat/outright/award/head-to-head) plus a **COMBOS** product that settles as the **product of component binary YES values**. $1 notional, NCAA included, Reg **40.2** (no CFTC product approval). This is DK’s **in-house PM** path vs routing Predictions volume through partners. Retail: shop DKeX vs Kalshi vs book SGP on the same football questions; COMBOS is still a **joint-implied** price, not a vig-free parlay. Hub: `@sources/daily-digest-rss-industry-2026-08-14.md`, `@concepts/parlay-and-correlated-bets.md`.
 
 ## Snippets
 
-*(pending ingest)*
+> "The COMBOS does not introduce a new underlying… [it] governs only the aggregation of those independently determined results." [Source: DKeX 40.2 filing via @sources/daily-digest-rss-industry-2026-08-14.md]

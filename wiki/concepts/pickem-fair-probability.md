@@ -10,9 +10,10 @@ related:
   - concepts/pickem-payout-and-breakeven.md
   - concepts/pickem-slip-ev-and-correlation.md
   - concepts/diy-nfl-pickem-props-tool-architecture.md
+  - sources/sharp-nfl-rb-prop-unders-2026-08-13.md
 maturity: draft
 created: 2026-07-05
-updated: 2026-07-05
+updated: 2026-08-14
 ---
 
 ## Relations
@@ -22,6 +23,7 @@ updated: 2026-07-05
 - @concepts/pickem-stat-type-mapping.md — which lounge stat types map to which projection outputs
 - @concepts/pickem-payout-and-breakeven.md — fair `p` vs implied breakeven for edge
 - @concepts/diy-nfl-pickem-props-tool-architecture.md — core math layer #1 in pick'em tool
+- @sources/sharp-nfl-rb-prop-unders-2026-08-13.md — season-long rush O/U as P(stat > line) at season horizon
 
 ## Raw Concept
 

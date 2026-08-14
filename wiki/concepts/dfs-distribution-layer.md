@@ -10,9 +10,10 @@ related:
   - entities/tools/pydfs-lineup-optimizer.md
   - concepts/diy-nfl-dfs-model-architecture.md
   - concepts/pickem-fair-probability.md
+  - sources/rotoviz-preseason-paywall-2026-08-14.md
 maturity: draft
 created: 2026-06-20
-updated: 2026-07-05
+updated: 2026-08-14
 ---
 
 ## Relations
@@ -20,6 +21,7 @@ updated: 2026-07-05
 - @concepts/pickem-fair-probability.md — adapt marginals for pick'em `P(over line)`
 - @concepts/dfs-correlation-stacking.md — correlation matrix for sampling
 - @entities/tools/pydfs-lineup-optimizer.md — candidate lineup generator
+- @sources/rotoviz-preseason-paywall-2026-08-14.md — Range of Outcomes tool (paywalled; distribution vs ADP)
 
 ## Raw Concept
 
@@ -36,6 +38,8 @@ Turn median projections into **distributions** for GPP ceiling/floor, contest RO
 | WR/TE | Hurdle-lognormal + hurdle/NB TDs | Zero-mass + 2+ tail |
 
 **Floor/ceiling:** P20 / P90 (not min/max). Parameterize from median via historical quantile ratios by archetype.
+
+RotoViz **Range of Outcomes** (Caban 2026-08, paywalled update) is the same idea as a named tool: risk/reward vs ADP or a point projection. Do not copy their percentiles without membership; keep this layer’s P20/P90 as the wiki default. `@sources/rotoviz-preseason-paywall-2026-08-14.md`.
 
 ### Simulator architecture
 

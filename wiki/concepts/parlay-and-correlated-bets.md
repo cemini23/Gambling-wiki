@@ -20,9 +20,11 @@ related:
   - sources/web-tech-insider-nfl-betting-strategy-2026-06-20.md
   - sources/web-sportsbookreview-hard-rock-bet-2026-06-20.md
   - sources/research-wnba-cold-streak-live-unders-2026-08-13.md
+  - sources/daily-digest-rss-industry-2026-08-14.md
+  - entities/platforms/draftkings.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-08-13
+updated: 2026-08-14
 ---
 
 ## Relations
@@ -35,6 +37,8 @@ updated: 2026-08-13
 - @entities/sports/nfl-betting.md — NFL SGP discipline
 - @entities/sports/wnba-betting.md — both-teams-under-5 last-2:00 is a correlated 2-leg (fair ~+320 overall)
 - @concepts/pickem-slip-ev-and-correlation.md — DFS pick'em lounges (fixed-payout correlated slips)
+- @sources/daily-digest-rss-industry-2026-08-14.md — DKeX COMBOS (product of binary YES)
+- @entities/platforms/draftkings.md — DKeX COMBOS listing
 
 ## Raw Concept
 
@@ -68,6 +72,10 @@ Treat parlay as **single bet** with combined `p` and `b`. Do not full-Kelly each
 ### DFS overlap
 
 DFS lineups are **correlated multi-leg portfolios** — different product but similar correlation thinking; see `@concepts/dfs-strategy-overview.md`. NFL game stacks in FanDuel GPPs are +EV-vs-field when projections support; SGPs are +EV-vs-book only with mispriced correlation.
+
+### Prediction-market COMBOS (DKeX, Aug 2026) [CONFIRMED]
+
+DKeX **COMBOS** settles YES as the **product of independently settled component binaries** — no new underlying, no nested COMBOS, any $0 leg zeros the combo. That is closer to an **independent-leg parlay** than a sportsbook SGP (books embed a correlation model + extra hold). Retail: a COMBOS of correlated football legs (e.g. team win × RB yards) is **mispriced vs true joint** if you pay the product of mids; edge is the same problem as naive SGPs, just with PM fees instead of book juice. Hub: `@sources/daily-digest-rss-industry-2026-08-14.md`.
 
 ### DFS pick'em lounges
 

@@ -40,9 +40,11 @@ related:
   - sources/arxiv-2607.08199-pm-structural-volatility-kalshi-2026-07-10.md
   - concepts/pm-structural-volatility.md
   - sources/research-wnba-cold-streak-live-unders-2026-08-13.md
+  - sources/daily-digest-rss-industry-2026-08-14.md
+  - sources/substack-rss-event-horizon-2026-08-13-novig-responsible-trading.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-08-13
+updated: 2026-08-14
 ---
 
 ## Relations
@@ -53,6 +55,8 @@ updated: 2026-08-13
 - @concepts/prediction-markets-crossover.md — retail vs bot lens
 - @entities/sports/wnba-betting.md — WNBA series inventory (no last-2:00 contract)
 - @osint-wiki/entities/platforms/kalshi.md — Cemini trading stack, regulation, bots
+- @sources/daily-digest-rss-industry-2026-08-14.md — CFTC emergency vs NY AG (Aug 2026)
+- @sources/substack-rss-event-horizon-2026-08-13-novig-responsible-trading.md — incentive-program advisory (cross-wiki)
 
 ## Raw Concept
 
@@ -115,6 +119,10 @@ Retail: live mids **track the game** but **lag full fair-value move** — size d
 ### WNBA sports series (public catalog, 2026-08-13) [CONFIRMED]
 
 Operator catalog pass (no auth): **88** WNBA / Women’s Pro Basketball series. Liquid objects: `KXWNBAGAME`, `KXWNBATOTAL`, `KXWNBASPREAD`, half/quarter totals (`KXWNBA1–4QTOTAL`, `1H`/`2HTOTAL`), `KXWNBATEAMTOTAL`. **No** last-2-minute / each-team-under-5 time-window series (Sports-wide search empty). Live 4Q ladders can be **too wide to fill** even in blowouts; game totals carry most OI. Hub: `@entities/sports/wnba-betting.md`, `@sources/research-wnba-cold-streak-live-unders-2026-08-13.md`.
+
+### CFTC emergency authority vs NY AG (Aug 2026) [CONFIRMED]
+
+CFTC used **emergency powers twice in ~30 days** — LSB: first uses since **1980**, and only **six times** in agency history — instructing KalshiEX to **keep operating** under CEA Core Principles in **Michigan** then **New York**. NY AG suit frames sports event contracts as illegal gambling and seeks up to **$36B** restitution; AG says CFTC cannot manufacture exclusive-jurisdiction conflict. Retail: NY/MI sports-PM access can flip on court papers overnight — do not size Kalshi sports as if state geofence is stable. Hub: `@sources/daily-digest-rss-industry-2026-08-14.md`, `@concepts/kalshi-michigan-sports-injunction-2026-06.md`, `@osint-wiki/concepts/prediction-market-regulation-2026.md`.
 
 ### Macro CPI belief distributions (K135) [TENTATIVE 2026-07-01]
 

@@ -33,10 +33,14 @@ related:
   - sources/fantasylabs-picklabs-launch-2026-07-05.md
   - sources/research-diy-pickem-props-master-plan-2026-07-05.md
   - sources/research-nfl-historical-odds-2026-06-20.md
+  - sources/sharp-nfl-rb-prop-unders-2026-08-13.md
   - "@osint-wiki/concepts/active-project-research-routing.md"
 maturity: draft
 created: 2026-07-05
-updated: 2026-07-05
+updated: 2026-08-14
+---
+
+## Relations
 
 - @concepts/pickem-stat-type-mapping.md — W-STAT-MAP (SA-07)
 - @concepts/pickem-data-sources.md — W-DATA (SA-08)
@@ -48,6 +52,7 @@ updated: 2026-07-05
 - @entities/tools/ceminidfs.md — implementation boundary: **no pick'em code in CeminiDFS** (07-05 triage)
 - @sources/fantasylabs-picklabs-launch-2026-07-05.md — paid-tool landscape signal (PickLabs)
 - @entities/sports/nfl-betting.md — sportsbook player props lane (Hard Rock W8)
+- @sources/sharp-nfl-rb-prop-unders-2026-08-13.md — season-long RB unders as volume-share template
 - @concepts/parlay-and-correlated-bets.md — pick'em slips are correlated multi-leg portfolios
 - @concepts/pickem-payout-and-breakeven.md — W-PAYOUT implied prob + breakeven tables
 - @concepts/pickem-fair-probability.md — W-FAIR-PROB `P(stat > line)` marginals

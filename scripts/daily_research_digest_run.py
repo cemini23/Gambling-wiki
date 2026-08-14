@@ -14,7 +14,7 @@ import subprocess
 import sys
 import urllib.error
 import urllib.request
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 _SCRIPTS = Path(__file__).resolve().parent
@@ -30,6 +30,8 @@ except ImportError:
 from agent_reach_daily_social import run_agent_reach_social_pass  # noqa: E402
 from arxiv_api_search import arxiv_search  # noqa: E402
 from daily_research_fetch import FetchOutcome, fetch_papers  # noqa: E402
+from rss_digest import render_rss_section, run_rss_feeds  # noqa: E402
+from wiki_source_index import build_wiki_index  # noqa: E402
 
 
 def load_exa_key() -> str:
@@ -484,6 +486,26 @@ def main() -> int:
         paper_mode,
         f"Paper lane: {len(paper_defs)} queries (mode={paper_mode}).",
     )
+    rss_cfg = cfg.get("rss") or {}
+    rss_enabled = bool(rss_cfg.get("enabled", False))
+    rss_window = int(rss_cfg.get("max_age_days") or 7)
+    rss_feed_n = len([f for f in (rss_cfg.get("feeds") or []) if f.get("enabled", True)])
+    rss_outcomes = []
+    rss_new = 0
+    if rss_enabled:
+        wiki_idx = build_wiki_index(repo / "wiki" / "sources")
+        rss_cutoff = datetime.now(timezone.utc) - timedelta(days=rss_window)
+        rss_outcomes = run_rss_feeds(
+            cfg,
+            from_date=rss_cutoff,
+            wiki_urls=wiki_idx.get("url"),
+            seen_urls=seen_urls,
+        )
+        rss_lane_note = (
+            f"RSS lane: **{rss_feed_n}** free feeds ({rss_window}d window; discovery-only)."
+        )
+    else:
+        rss_lane_note = "RSS lane: **disabled**."
     if news_enabled:
         news_lane_note = f"News lane: {len(news_defs)} Exa queries (digest only)."
     else:
@@ -496,6 +518,7 @@ def main() -> int:
         "",
         f"Window: `{from_date}` → `{today.isoformat()}` ({window} days). "
         f"{paper_lane_note} "
+        f"{rss_lane_note} "
         f"{news_lane_note}",
         "",
     ]
@@ -582,6 +605,10 @@ def main() -> int:
         lines.append("")
         paper_total += len(results)
 
+    rss_lines, rss_new = render_rss_section(rss_outcomes) if rss_enabled else ([], 0)
+    if rss_enabled:
+        lines.extend(rss_lines)
+
     lines.extend(["---", "", "## News & links (not auto-downloaded)", ""])
     if not news_enabled:
         lines.append(
@@ -655,6 +682,7 @@ def main() -> int:
             f"| arXiv API fallback clusters | {arxiv_fallback_clusters} |",
             f"| PDFs fetched to inbox | {n_fetched} |",
             f"| Dupes skipped | {n_skipped_dup} |",
+            f"| RSS hits (new, not in wiki) | {rss_new} |",
             f"| News hits (digest only) | {news_total} |",
             f"| Inbox files (total) | {len(inbox)} |",
             f"| Gap detect due | {'yes' if gap_due else 'no'} |",
@@ -662,8 +690,9 @@ def main() -> int:
             "### Next steps",
             "",
             "1. Say **full ingest** if inbox has PDFs.",
-            "2. Optional: check news rows `R1`… for URLs worth manual fetch.",
-            "3. Optional: social pass tools above.",
+            "2. Check RSS rows `S1`… for practitioner/industry URLs worth ingesting.",
+            "3. Optional: check news rows `R1`… (Exa news is off unless `exa.news_enabled`).",
+            "4. Optional: social pass tools above.",
             "",
             "### Discard",
             "",
