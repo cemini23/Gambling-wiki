@@ -59,6 +59,7 @@ updated: 2026-08-15
 - @sources/daily-digest-rss-industry-2026-08-14.md — CFTC emergency vs NY AG (Aug 2026)
 - @sources/substack-rss-event-horizon-2026-08-13-novig-responsible-trading.md — incentive-program advisory (cross-wiki)
 - @sources/brief-k222-k231-pm-retail-awareness-2026-08.md — 15-min volume, Utah SJ, FlightAware, NY tax sanity-check
+- @osint-wiki/sources/substack-rss-event-horizon-2026-08-14-kalshi-sports-mention.md — K239 sports mention markets sidelined + WA geofence
 
 ## Raw Concept
 
@@ -125,6 +126,12 @@ Operator catalog pass (no auth): **88** WNBA / Women’s Pro Basketball series. 
 ### Short-horizon crypto + FlightAware (K225 / K231, Aug 2026) [CONFIRMED]
 
 Trailing-7d (Event Horizon / Ticker Tracker): **~$1.5B** Kalshi crypto notional, **~$1.1B** on **BTC 15-min**; gold/silver 15-min added. Treat as casino-velocity products, not long-dated political markets. **FlightAware v. Kalshi** (SDNY): flight-cancellation series named FlightAware as primary settlement source after a free AeroAPI signup; DOT BTS is an alternate — series can delist or change oracle. Hub: `@sources/brief-k222-k231-pm-retail-awareness-2026-08.md`.
+
+### Sports mention markets gone (K239, 2026-08-14) [CONFIRMED]
+
+Kalshi **sidelined sports mention markets** ahead of football (Discord: temporarily; Event Horizon: short-term at least). NPR: federal review of mention markets (announcer/word-choice contracts). NFL/MLB already asked venues not to list easily manipulated events. Mention volume since Kalshi launched sports: **$1.2B**. Polymarket international still lists some. **Do not plan a mention-market bot.** If the category returns, treat as high-manipulation / league-hostile — not an LP lane.
+
+King County **final order** geofences most of Kalshi's mix in Washington (sports, elections, politics, entertainment, culture, tech/science, **mentions**) — Aug 19 IP+residency, Sep 2 multi-source. Hub: `@osint-wiki/sources/substack-rss-event-horizon-2026-08-14-kalshi-sports-mention.md`, brief `../briefs/2026-08-15_k239-gambling-kalshi-sports-mention-gone.md`.
 
 ### CFTC emergency authority vs NY AG (Aug 2026) [CONFIRMED]
 
