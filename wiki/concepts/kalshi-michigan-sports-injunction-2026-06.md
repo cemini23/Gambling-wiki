@@ -11,9 +11,10 @@ related:
   - sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md
   - osint-wiki/sources/substack-rss-event-horizon-2026-06-29-michigan-court-orders-kalshi-to-stop-sports-even.md
   - sources/daily-digest-rss-industry-2026-08-14.md
+  - sources/brief-k222-k231-pm-retail-awareness-2026-08.md
 maturity: validated
 created: 2026-07-05
-updated: 2026-08-14
+updated: 2026-08-15
 ---
 
 ## Relations
@@ -23,6 +24,7 @@ updated: 2026-08-14
 - @sources/substack-rss-event-horizon-2026-06-29-michigan-court-orders-kalshi-to-stop-sports-even.md — primary report
 - @osint-wiki/sources/substack-rss-event-horizon-2026-06-29-michigan-court-orders-kalshi-to-stop-sports-even.md — OSINT provenance
 - @sources/daily-digest-rss-industry-2026-08-14.md — NY CFTC emergency follow-on (Aug 2026)
+- @sources/brief-k222-k231-pm-retail-awareness-2026-08.md — Utah SJ (no CEA preemption) + CT Oliver ruling
 
 ## Raw Concept
 
@@ -51,6 +53,8 @@ Michigan AG (Dana Nessel): Kalshi’s sports contracts are **online sports wager
 | **Precedent** | Template for other states with LSBA-style statutes; NCPG/MGCB membership friction (see EH roundup Jul 3) |
 
 **NY follow-on (Aug 2026):** CFTC used emergency authority again, telling Kalshi to keep operating in New York against an AG suit seeking up to $36B. Same preemption class — not a Michigan-only one-off. `@sources/daily-digest-rss-industry-2026-08-14.md`.
+
+**Utah SJ (Aug 2026):** Judge Shelby — CEA does **not** preempt Utah’s anti-gambling statute against Kalshi sports contracts. CT Judge Vernon D. Oliver separately rejected Kalshi’s major preemption / swaps arguments. Event Horizon counts **eight states** with authority to ban or restrict. `@sources/brief-k222-k231-pm-retail-awareness-2026-08.md`.
 
 ### Cross-wiki
 

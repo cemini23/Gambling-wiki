@@ -20,7 +20,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [pm-copy-trading-retail-risks](concepts/pm-copy-trading-retail-risks.md) | validated | Whale-copy discipline |
 | [pm-whale-conviction-bias-2026-07](concepts/pm-whale-conviction-bias-2026-07.md) | draft | Daleep et al. — whale size vs edge |
 | [kalshi-spotify-oracle-manipulation-2026-07](concepts/kalshi-spotify-oracle-manipulation-2026-07.md) | validated | Stream-botting / chart oracle lag |
-| [kalshi-michigan-sports-injunction-2026-06](concepts/kalshi-michigan-sports-injunction-2026-06.md) | validated | Michigan TRO on sports contracts |
+| [kalshi-michigan-sports-injunction-2026-06](concepts/kalshi-michigan-sports-injunction-2026-06.md) | validated | Michigan TRO; Utah SJ / NY / CT follow-ons |
 | [parlay-and-correlated-bets](concepts/parlay-and-correlated-bets.md) | validated | Parlays, SGP, correlation |
 | [dfs-strategy-overview](concepts/dfs-strategy-overview.md) | validated | GPP, cash, stacking, NFL GPP (W8) |
 | [diy-nfl-dfs-model-architecture](concepts/diy-nfl-dfs-model-architecture.md) | draft | K125 DIY projection pipeline hub |
@@ -339,6 +339,8 @@ Catalog of all wiki pages. Updated on each ingest.
 | [arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12](sources/arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12.md) | skimmed | FTRL / Hedge / FP guided tour (Mertikopoulos) |
 | [arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12](sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md) | skimmed | DTOA supervisor network team-FP (FOSS 404) |
 | [brief-k166-regret-learning-games-shelf-2026-08-12](sources/brief-k166-regret-learning-games-shelf-2026-08-12.md) | deep-read | K166 FTRL/FP + team-FP theory shelf |
+| [brief-k222-k231-pm-retail-awareness-2026-08](sources/brief-k222-k231-pm-retail-awareness-2026-08.md) | read | Aug EH: 15-min, Utah, FlightAware, NY tax, ForecastEx |
+| [brief-k271-redagentbench-arena-eval-2026-08-12](sources/brief-k271-redagentbench-arena-eval-2026-08-12.md) | read | Faithful-agent eval hygiene (wont_wire) |
 | [daily-digest-reject-cluster-k129-2026-06-25](sources/daily-digest-reject-cluster-k129-2026-06-25.md) | skimmed |
 | [arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24](sources/arxiv-2606.21975-irumai-indian-rummy-rl-2026-06-24.md) | skimmed | First RL agent for Indian Rummy |
 | [arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24](sources/arxiv-2606.23995-emagnet-selfplay-regularization-2026-06-24.md) | skimmed | Parameter EMA self-play magnet |
@@ -398,6 +400,8 @@ Catalog of all wiki pages. Updated on each ingest.
 - [Sharp NFL RB prop unders 2026-08-13](sources/sharp-nfl-rb-prop-unders-2026-08-13.md) — Taylor/Hubbard season-long rush unders
 - [RotoViz preseason paywall 2026-08-14](sources/rotoviz-preseason-paywall-2026-08-14.md) — S18–S22 members-only
 - [Event Horizon — Novig responsible trading](sources/substack-rss-event-horizon-2026-08-13-novig-responsible-trading.md) — cross-wiki stub — `cross-wiki`
+- [Briefs K222–K231 PM retail](sources/brief-k222-k231-pm-retail-awareness-2026-08.md) — 15-min / Utah / FlightAware / NY tax / ForecastEx
+- [Brief K271 REDAgentBench](sources/brief-k271-redagentbench-arena-eval-2026-08-12.md) — arena eval hygiene — `poker`
 
 ## Meta
 

@@ -42,9 +42,10 @@ related:
   - sources/research-wnba-cold-streak-live-unders-2026-08-13.md
   - sources/daily-digest-rss-industry-2026-08-14.md
   - sources/substack-rss-event-horizon-2026-08-13-novig-responsible-trading.md
+  - sources/brief-k222-k231-pm-retail-awareness-2026-08.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-08-14
+updated: 2026-08-15
 ---
 
 ## Relations
@@ -57,6 +58,7 @@ updated: 2026-08-14
 - @osint-wiki/entities/platforms/kalshi.md — Cemini trading stack, regulation, bots
 - @sources/daily-digest-rss-industry-2026-08-14.md — CFTC emergency vs NY AG (Aug 2026)
 - @sources/substack-rss-event-horizon-2026-08-13-novig-responsible-trading.md — incentive-program advisory (cross-wiki)
+- @sources/brief-k222-k231-pm-retail-awareness-2026-08.md — 15-min volume, Utah SJ, FlightAware, NY tax sanity-check
 
 ## Raw Concept
 
@@ -119,6 +121,10 @@ Retail: live mids **track the game** but **lag full fair-value move** — size d
 ### WNBA sports series (public catalog, 2026-08-13) [CONFIRMED]
 
 Operator catalog pass (no auth): **88** WNBA / Women’s Pro Basketball series. Liquid objects: `KXWNBAGAME`, `KXWNBATOTAL`, `KXWNBASPREAD`, half/quarter totals (`KXWNBA1–4QTOTAL`, `1H`/`2HTOTAL`), `KXWNBATEAMTOTAL`. **No** last-2-minute / each-team-under-5 time-window series (Sports-wide search empty). Live 4Q ladders can be **too wide to fill** even in blowouts; game totals carry most OI. Hub: `@entities/sports/wnba-betting.md`, `@sources/research-wnba-cold-streak-live-unders-2026-08-13.md`.
+
+### Short-horizon crypto + FlightAware (K225 / K231, Aug 2026) [CONFIRMED]
+
+Trailing-7d (Event Horizon / Ticker Tracker): **~$1.5B** Kalshi crypto notional, **~$1.1B** on **BTC 15-min**; gold/silver 15-min added. Treat as casino-velocity products, not long-dated political markets. **FlightAware v. Kalshi** (SDNY): flight-cancellation series named FlightAware as primary settlement source after a free AeroAPI signup; DOT BTS is an alternate — series can delist or change oracle. Hub: `@sources/brief-k222-k231-pm-retail-awareness-2026-08.md`.
 
 ### CFTC emergency authority vs NY AG (Aug 2026) [CONFIRMED]
 

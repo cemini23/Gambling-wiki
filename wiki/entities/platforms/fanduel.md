@@ -21,9 +21,10 @@ related:
   - sources/web-dfs-hero-nfl-gpp-strategy-2026-06-20.md
   - sources/web-tech-insider-nfl-betting-strategy-2026-06-20.md
   - sweeps/2026-06-20-tier2-w8-nfl.md
+  - sources/brief-k222-k231-pm-retail-awareness-2026-08.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-06-20
+updated: 2026-08-15
 ---
 
 ## Relations
@@ -32,6 +33,7 @@ updated: 2026-06-20
 - @entities/platforms/hard-rock-bet.md — cross-shop sportsbook peer (W8)
 - @concepts/dfs-strategy-overview.md — NFL GPP framework
 - @sources/web-dfs-hero-nfl-gpp-strategy-2026-06-20.md — K124 FanDuel-relevant GPP playbook
+- @sources/brief-k222-k231-pm-retail-awareness-2026-08.md — Predicts sports → Crypto.com (Q2 2026)
 
 ## Raw Concept
 
@@ -42,6 +44,10 @@ Major US legal operator (Flutter-owned). **W8 lanes:** NFL DFS GPP/tournaments +
 ### Sportsbook (CLV cross-shop)
 
 Same **soft book** retail profile as DraftKings. Industry reviews often rank FanDuel among **sharper spread prices** on NFL — use for line shopping even when primary handle is Hard Rock.
+
+### FanDuel Predicts (PM, Aug 2026) [CONFIRMED via EH]
+
+Q2: sports/novelties on **Predicts** move to **Crypto.com**; CME retained for financials. Flutter flagged **~$50M** market-making revenue for 2026 ($6M in Q2). Predicts is **not** the FanDuel sportsbook line — shop it as a third venue (book vs Kalshi vs Predicts/Crypto.com). Hub: `@sources/brief-k222-k231-pm-retail-awareness-2026-08.md`.
 
 ### NFL DFS (operator primary DFS lane)
 

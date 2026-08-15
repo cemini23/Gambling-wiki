@@ -1,5 +1,14 @@
 # Wiki operations log
 
+## [2026-08-15] ingest | Aug briefs catch-up (K222–K231 + K271)
+
+- **Gap** — `briefs/2026-08-04_k222` … `2026-08-11_k231` and `2026-08-12_k271` existed as gitignored briefs; wiki entities never got the retail facts (K225 had a log line only)
+- **Created** — `brief-k222-k231-pm-retail-awareness-2026-08.md`, `brief-k271-redagentbench-arena-eval-2026-08-12.md`
+- **Updated** — kalshi, polymarket, fanduel (Predicts→Crypto.com), prediction-markets-crossover, kalshi-michigan (Utah SJ), poker-hl (eval hygiene), k125, industry 08-14, index
+- **Skipped** — K166 already filed; CeminiDFS briefs are repo implementation plans; arena Aug 13–14 briefs stay private (no decide()/ranks)
+- Sweep `2026-08-15-daily.md` → INGESTED-empty (0 papers; RSS section absent on that run)
+- No FOSS adopt; no sportsbook auto-wager; no prod Kalshi orders
+
 ## [2026-08-14] ingest | RSS lane first full ingest (industry + Sharp + RotoViz stub)
 
 - **Inbox** — empty (no PDFs)

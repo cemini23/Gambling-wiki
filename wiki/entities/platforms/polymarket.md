@@ -47,9 +47,10 @@ related:
   - sources/arxiv-2607.08199-pm-structural-volatility-kalshi-2026-07-10.md
   - entities/bots/predict-raven.md
   - concepts/pm-structural-volatility.md
+  - sources/brief-k222-k231-pm-retail-awareness-2026-08.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-07-10
+updated: 2026-08-15
 ---
 
 ## Relations
@@ -58,6 +59,7 @@ updated: 2026-07-10
 
 - @entities/platforms/kalshi.md — cross-venue comparison
 - @osint-wiki/entities/platforms/polymarket.md — bots, LP rewards, CeminiSuite
+- @sources/brief-k222-k231-pm-retail-awareness-2026-08.md — Yankees / ATP distribution; 5-min crypto still listed Intl
 
 ## Raw Concept
 
@@ -91,7 +93,7 @@ Fee revenue was **zero before Jan 2026**. Post-activation descriptive pattern: l
 
 ### Short-horizon crypto — settlement manipulation (K135) [CONFIRMED 2026-07-01]
 
-@sources/arxiv-2606.31675-settlement-manipulation-prediction-markets-2026-07-01.md: **5-minute BTC** binaries show settlement-time spot pushes, post-close reversals, and **~93%** retail loss share in manipulated cycles. **15-minute** horizon largely clears the signature. **Retail:** NO-GO or minimal size on sub-15-minute asset-price binaries.
+@sources/arxiv-2606.31675-settlement-manipulation-prediction-markets-2026-07-01.md: **5-minute BTC** binaries show settlement-time spot pushes, post-close reversals, and **~93%** retail loss share in manipulated cycles. **15-minute** horizon largely clears the signature. **Retail:** NO-GO or minimal size on sub-15-minute asset-price binaries. Polymarket Intl still listed **5-min crypto** as of Aug 2026; Kalshi’s volume engine is **15-min BTC**. Brand notes (not edges): **NY Yankees** stadium partnership; **ATP** exclusive streaming + Sportradar for US users. `@sources/brief-k222-k231-pm-retail-awareness-2026-08.md`.
 
 ### Research signals
 

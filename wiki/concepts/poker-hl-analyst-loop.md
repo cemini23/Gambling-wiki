@@ -67,9 +67,10 @@ related:
   - sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md
   - sources/daily-digest-batch-k166-2026-08-12.md
   - sources/brief-k166-regret-learning-games-shelf-2026-08-12.md
+  - sources/brief-k271-redagentbench-arena-eval-2026-08-12.md
 maturity: validated
 created: 2026-06-03
-updated: 2026-08-12
+updated: 2026-08-15
 ---
 
 ## Relations
@@ -97,6 +98,7 @@ updated: 2026-08-12
 - @sources/arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12.md — K166 FTRL/FP literacy shelf (no HL import)
 - @sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md — K166 team-FP supervisor shelf (no HL import)
 - @sources/brief-k166-regret-learning-games-shelf-2026-08-12.md — K166 shelf (wont_wire)
+- @sources/brief-k271-redagentbench-arena-eval-2026-08-12.md — faithful eval / harness-tuple (wont_wire)
 - @osint-wiki/concepts/cemini-knowledge-application-architecture.md — brief → verify → deploy (cross-wiki)
 - Private repo: `llm-wiki-by-cemini/agents/devfun-poker-arena/` — HL loop scripts
 
@@ -117,6 +119,10 @@ Operator need: **stop bleeding chips** on dev.fun Playground by closing the loop
 | **Use** | **Fix Playground leaks now** | Tune exploit margins | Not deployed for Cemini |
 
 **Rule:** Self-play is a **deploy gate** (regression corpus + sanity checks) — **not** the objective function. Optimize against **Arena analyze** worst hands, not self-play bb/100. Specific numeric gates live in private preflight config during competition.
+
+### Eval measurement (K271) [REFERENCE]
+
+When comparing agent variants, grade from **durable state** (ledger / chip receipts / API diffs), not the transcript. Report metrics as a `(harness, judging config, evaluation cue, judge backbone)` tuple — the same agent+scenario can swing tens of points from scaffolding alone. Restate the applicable constraint at each action boundary (“says the rule then violates it”). Paper: arXiv:2608.10669. Hub: `@sources/brief-k271-redagentbench-arena-eval-2026-08-12.md`. **wont_wire** — no `decide()` import.
 
 ### Open-spot bug (K107, @3d64r_89 Post 16) [CONFIRMED]
 

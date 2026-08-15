@@ -14,10 +14,11 @@ related:
   - sources/brief-k126-garip-selfplay-pm-forecast-steals-2026-06-23.md
   - sources/brief-k129-celeus-tmax-eval-steals-2026-06-25.md
   - sources/arxiv-2606.20820-celeus-llm-eval-eprocesses-2026-06-25.md
+  - sources/brief-k271-redagentbench-arena-eval-2026-08-12.md
 maturity: validated
 read_status: deep-read
 created: 2026-06-22
-updated: 2026-06-25
+updated: 2026-08-15
 cross-wiki-source: "briefs/2026-06-22_k125-eval-gate-discipline-sandbox-bundle.md"
 ---
 
@@ -25,6 +26,7 @@ cross-wiki-source: "briefs/2026-06-22_k125-eval-gate-discipline-sandbox-bundle.m
 
 - @sources/devfun-researcher-sandbox-bundle-discord-2026-06-20.md — bundle submit + no runtime LLM (K123 Discord)
 - @sources/arxiv-2606.14506-distribution-shift-model-eval-2026-06-22.md — shift/selective-label eval steal
+- @sources/brief-k271-redagentbench-arena-eval-2026-08-12.md — faithful measurement / harness-tuple (K271)
 
 ## Raw Concept
 

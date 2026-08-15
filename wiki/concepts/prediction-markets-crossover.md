@@ -52,11 +52,12 @@ related:
   - sources/substack-rss-event-horizon-2026-07-07-north-carolinas-prediction-market-budget-process.md
   - sources/daily-digest-rss-industry-2026-08-14.md
   - sources/substack-rss-event-horizon-2026-08-13-novig-responsible-trading.md
+  - sources/brief-k222-k231-pm-retail-awareness-2026-08.md
   - @seo-wiki/concepts/outlier-weekly-issue3-world-cup-bot-notes.md
   - @seo-wiki/concepts/generative-engine-optimization.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-08-14
+updated: 2026-08-15
 ---
 
 ## Relations
@@ -74,6 +75,7 @@ updated: 2026-08-14
 - @seo-wiki/concepts/generative-engine-optimization.md — citability for public PM explainers
 - @sources/daily-digest-rss-industry-2026-08-14.md — DKeX COMBOS + CFTC/NY emergency
 - @sources/substack-rss-event-horizon-2026-08-13-novig-responsible-trading.md — Novig responsible-trading + incentive advisory
+- @sources/brief-k222-k231-pm-retail-awareness-2026-08.md — 15-min velocity, FanDuel→Crypto.com, Utah/NY tax/FlightAware
 
 ## Raw Concept
 
@@ -97,7 +99,7 @@ How Kalshi and Polymarket fit the **wagering** knowledge base vs the **trading s
 3. Compare price vs **sportsbook line** (CLV analog)
 4. Size with **fractional Kelly** — `@concepts/kelly-criterion-betting.md` + `@osint-wiki/concepts/kelly-sizing-quarter.md`
 5. Know **jurisdiction** — geoblocks, KYC; state **gambling-license** fights may restrict sports contracts (`@sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md`)
-6. **Horizon + cash-settlement** (K135) — avoid or minimize **short-horizon asset-price** binaries (e.g. 5-min crypto) where spot can be pushed at oracle close; prefer **15-min+** or non-spot-settled events (`@sources/arxiv-2606.31675-settlement-manipulation-prediction-markets-2026-07-01.md`)
+6. **Horizon + cash-settlement** (K135 / K225) — **5-min** asset binaries stay NO-GO (settlement-push). Kalshi **15-min BTC** is now the crypto volume engine (~$1.1B of ~$1.5B crypto / 7d, Aug 2026) — clears the worst K135 signature but is still high-churn casino-velocity, not a political-market substitute (`@sources/arxiv-2606.31675-settlement-manipulation-prediction-markets-2026-07-01.md`, `@sources/brief-k222-k231-pm-retail-awareness-2026-08.md`)
 7. **Third-party chart oracles** — culture markets (Spotify charts) where the data provider **audits after** PM settlement (`@concepts/kalshi-spotify-oracle-manipulation-2026-07.md`)
 8. **State legalization quality** (K149) — light-touch budget inserts (e.g. NC 2026) may mean **low tax + minimal consumer protection** — read venue rules; don't confuse legislative approval with market quality (`@sources/substack-rss-event-horizon-2026-07-07-north-carolinas-prediction-market-budget-process.md`)
 8. **Whale-weighted prices** — large OI holders may be **negative** signal on forecast quality (`@concepts/pm-whale-conviction-bias-2026-07.md`)
@@ -120,7 +122,7 @@ Wharton interview with `@entities/people/rufus-peabody.md` frames **sports-focus
 
 Retail: same checklist as Kalshi/PM — fees, settlement, bankroll. **Bot execution** — requirements on `@concepts/gambling-bot-architecture.md`; prod code on `@osint-wiki`.
 
-**Aug 2026:** Novig published a responsible-trading framework (21+, incentive limits) while CFTC DMO flagged **Reg 40.5/40.6 incentive programs** — treat PM bonuses as compliance-risk. DraftKings **DKeX** listed football binaries + COMBOS (product of component YES). Kalshi vs NY AG: CFTC emergency “keep operating” vs $36B restitution claim. Hubs: `@sources/substack-rss-event-horizon-2026-08-13-novig-responsible-trading.md`, `@sources/daily-digest-rss-industry-2026-08-14.md`, `@osint-wiki/concepts/prediction-market-regulation-2026.md`.
+**Aug 2026:** Novig published a responsible-trading framework (21+, incentive limits) while CFTC DMO flagged **Reg 40.5/40.6 incentive programs** — treat PM bonuses as compliance-risk. DraftKings **DKeX** listed football binaries + COMBOS (product of component YES). Kalshi vs NY AG: CFTC emergency “keep operating” vs $36B restitution claim. Same month: Kalshi **15-min BTC** dominates crypto volume; FanDuel Predicts sports → **Crypto.com**; Utah SJ (no CEA preemption); FlightAware sues over flight-cancellation oracles; NY **$10B/5y** PM-tax headline fails a population-share sanity check. Hubs: `@sources/substack-rss-event-horizon-2026-08-13-novig-responsible-trading.md`, `@sources/daily-digest-rss-industry-2026-08-14.md`, `@sources/brief-k222-k231-pm-retail-awareness-2026-08.md`, `@osint-wiki/concepts/prediction-market-regulation-2026.md`.
 
 ### When to stay in traditional books
 
