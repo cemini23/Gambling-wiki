@@ -17,6 +17,7 @@ related:
   - sources/web-sportsbookreview-hard-rock-bet-2026-06-20.md
   - sources/web-tech-insider-nfl-betting-strategy-2026-06-20.md
   - sweeps/2026-06-20-tier2-w8-nfl.md
+  - concepts/daily-edge-card.md
 maturity: validated
 created: 2026-06-20
 updated: 2026-06-20

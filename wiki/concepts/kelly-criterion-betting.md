@@ -22,6 +22,7 @@ related:
   - sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md
   - concepts/pm-proper-scoring-clob-profitability.md
   - sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md
+  - concepts/daily-edge-card.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-07-05
@@ -32,6 +33,7 @@ updated: 2026-07-05
 - @concepts/pickem-slip-ev-and-correlation.md — fractional Kelly on whole pick'em slip
 - @concepts/gambling-bot-architecture.md — sizing for automated lanes
 - @concepts/bankroll-management.md — Kelly informs unit size; bankroll rules cap Kelly
+- @concepts/daily-edge-card.md — quarter-Kelly on ranked Hard Rock spots
 - @concepts/favorite-longshot-bias.md — mis-estimated `p` breaks full-Kelly
 - @concepts/vig-and-hold.md — edge must exceed vig before Kelly applies
 - @concepts/prediction-markets-crossover.md — PM bot implementations in @osint-wiki

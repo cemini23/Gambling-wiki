@@ -27,6 +27,7 @@ related:
   - sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md
   - sources/arxiv-2607.00164-verifiable-rewards-calibrated-forecasting-2026-07-03.md
   - sources/brief-k137-swe-interact-rlvr-nfl-steals-2026-07-03.md
+  - concepts/daily-edge-card.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-07-03
@@ -37,6 +38,7 @@ updated: 2026-07-03
 - @concepts/sharp-vs-soft-books.md — Pinnacle close as benchmark
 - @entities/platforms/pinnacle.md — sharp reference line
 - @entities/tools/momentum-odds.md — multi-book signal feed (also used for PM routing in @osint-wiki)
+- @concepts/daily-edge-card.md — P0 CLI: de-vig reference vs Hard Rock
 
 ## Raw Concept
 

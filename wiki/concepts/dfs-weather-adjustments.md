@@ -8,9 +8,10 @@ related:
   - concepts/nfl-dfs-data-sources.md
   - concepts/diy-nfl-dfs-model-architecture.md
   - sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md
+  - concepts/free-slate-context.md
 maturity: draft
 created: 2026-06-20
-updated: 2026-06-20
+updated: 2026-08-15
 ---
 
 ## Relations
@@ -21,6 +22,7 @@ updated: 2026-06-20
 - @osint-wiki/entities/tools/visualcrossing-weather.md — deep historical backtest (interpolation caveat)
 - @osint-wiki/entities/tools/wethr-net.md — station-direct METAR bounds (paid)
 - @concepts/team-volume-pace-model.md — pass-rate wind adjustments
+- @concepts/free-slate-context.md — runnable Open-Meteo + MLB Stats CLI for unders
 
 ## Raw Concept
 

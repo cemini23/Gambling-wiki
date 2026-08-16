@@ -1,5 +1,20 @@
 # Wiki operations log
 
+## [2026-08-15] code | free Open-Meteo + MLB Stats unders context
+
+- Wired `scripts/open_meteo.py`, `scripts/mlb_stats.py`, `scripts/venues.py`, `scripts/slate_context.py`
+- `ticket_builder.py --mode unders` prefers weather-lean unders; pitchers/roof on MLB tickets
+- No new paid keys. ESPN JSON still NO-GO. Odds API remains free-tier prices only.
+- Page: `@concepts/free-slate-context.md`
+
+## [2026-08-15] code | daily Hard Rock edge card (P0)
+
+- Super-audit **architecture** FAIL×5 (3 Cursor premium + 2× Ollama qwen3.5:35b): wiki is librarian, not an edge engine
+- Shipped `scripts/odds.py`, `scripts/daily_edge_card.py`, `tests/test_daily_edge_card.py`, `config/hr_lines.example.csv`, `wiki/concepts/daily-edge-card.md`
+- Windows lint: `wiki_lint.py` path keys now POSIX + UTF-8 stdout
+- Closed broken frontmatter on `diy-nfl-pickem-props-tool-architecture.md`
+- **Not** CeminiDFS / K147 / HR scrape / auto-bet
+
 ## [2026-08-13] research | WNBA cold-streak / last-2:00 live unders
 
 - **Created** — `entities/sports/wnba-betting.md` (5-miss no edge; last-2:00 fair odds by margin; Kalshi inventory; OpenCLI social)

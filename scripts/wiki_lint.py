@@ -30,6 +30,8 @@ parser.add_argument(
     help="Exit 1 when local related:/@path links do not resolve (ignores cross-wiki aliases)",
 )
 args = parser.parse_args()
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 TODAY = date.today()
 
 # Resolve WIKI relative to this script (scripts/wiki_lint.py → repo root → wiki/),
@@ -141,7 +143,7 @@ pages = {}                  # rel_path -> frontmatter dict
 all_paths = set()
 
 for p in WIKI.rglob("*.md"):
-    rel = str(p.relative_to(WIKI))
+    rel = p.relative_to(WIKI).as_posix()
     if rel in ("index.md", "log.md", "dashboard.md"):  # navigational, exempt
         continue
     text = p.read_text(errors="replace")

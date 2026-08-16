@@ -20,9 +20,10 @@ related:
   - sources/web-tech-insider-nfl-betting-strategy-2026-06-20.md
   - sources/web-sportsbookreview-hard-rock-bet-2026-06-20.md
   - sources/research-wnba-cold-streak-live-unders-2026-08-13.md
+  - concepts/free-slate-context.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-08-13
+updated: 2026-08-15
 ---
 
 ## Relations
@@ -35,6 +36,7 @@ updated: 2026-08-13
 - @entities/sports/nfl-betting.md — NFL SGP discipline
 - @entities/sports/wnba-betting.md — both-teams-under-5 last-2:00 is a correlated 2-leg (fair ~+320 overall)
 - @concepts/pickem-slip-ev-and-correlation.md — DFS pick'em lounges (fixed-payout correlated slips)
+- @concepts/free-slate-context.md — weather can correlate a whole unders parlay; treat as a screen not independent edges
 
 ## Raw Concept
 

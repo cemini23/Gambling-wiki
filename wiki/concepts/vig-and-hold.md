@@ -9,6 +9,7 @@ related:
   - concepts/kelly-criterion-betting.md
   - concepts/bankroll-management.md
   - concepts/line-shopping-and-clv.md
+  - concepts/daily-edge-card.md
   - concepts/favorite-longshot-bias.md
   - concepts/parlay-and-correlated-bets.md
   - concepts/pickem-payout-and-breakeven.md
@@ -30,6 +31,7 @@ updated: 2026-07-21
 - @concepts/sports-betting-fundamentals.md — how vig appears on tickets
 - @concepts/sharp-vs-soft-books.md — sharp books run lower hold
 - @concepts/line-shopping-and-clv.md — shopping reduces effective vig
+- @concepts/daily-edge-card.md — de-vig reference before ranking Hard Rock
 - @entities/platforms/pinnacle.md — low-hold reference book
 - @sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md — K160 vig-removed 1X2 market baseline (~1.05 overround)
 

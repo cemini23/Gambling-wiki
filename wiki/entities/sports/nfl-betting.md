@@ -35,9 +35,10 @@ related:
   - sweeps/2026-06-20-tier2-w8-nfl.md
   - sources/arxiv-2607.00164-verifiable-rewards-calibrated-forecasting-2026-07-03.md
   - sources/brief-k137-swe-interact-rlvr-nfl-steals-2026-07-03.md
+  - concepts/free-slate-context.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-07-05
+updated: 2026-08-15
 ---
 
 ## Relations
@@ -47,6 +48,7 @@ updated: 2026-07-05
 - @concepts/best-ball-strategy.md — shared player research stack
 - @concepts/dfs-strategy-overview.md — FanDuel/Underdog DFS overlap
 - @sources/web-tech-insider-nfl-betting-strategy-2026-06-20.md — K124 process primer
+- @concepts/free-slate-context.md — Open-Meteo wind/precip for outdoor totals
 
 ## Raw Concept
 
