@@ -22,9 +22,10 @@ related:
   - sources/research-wnba-cold-streak-live-unders-2026-08-13.md
   - sources/daily-digest-rss-industry-2026-08-14.md
   - entities/platforms/draftkings.md
+  - concepts/free-slate-context.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-08-14
+updated: 2026-08-15
 ---
 
 ## Relations
@@ -39,6 +40,7 @@ updated: 2026-08-14
 - @concepts/pickem-slip-ev-and-correlation.md — DFS pick'em lounges (fixed-payout correlated slips)
 - @sources/daily-digest-rss-industry-2026-08-14.md — DKeX COMBOS (product of binary YES)
 - @entities/platforms/draftkings.md — DKeX COMBOS listing
+- @concepts/free-slate-context.md — weather can correlate a whole unders parlay; treat as a screen not independent edges
 
 ## Raw Concept
 

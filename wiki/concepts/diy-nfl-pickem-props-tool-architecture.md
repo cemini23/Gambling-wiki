@@ -37,7 +37,7 @@ related:
   - "@osint-wiki/concepts/active-project-research-routing.md"
 maturity: draft
 created: 2026-07-05
-updated: 2026-08-14
+updated: 2026-08-15
 ---
 
 ## Relations
@@ -58,12 +58,6 @@ updated: 2026-08-14
 - @concepts/pickem-fair-probability.md — W-FAIR-PROB `P(stat > line)` marginals
 - @concepts/pickem-slip-ev-and-correlation.md — W-SLIP-EV / W-KELLY joint EV ranker
 - @sources/research-diy-pickem-props-master-plan-2026-07-05.md — K147 master plan (14 workstreams · 14 subagents · 4 waves)
-- @concepts/pickem-stat-type-mapping.md — W-STAT-MAP
-- @concepts/pickem-data-sources.md — W-DATA
-- @concepts/pickem-legal-and-tos-posture.md — W-LEGAL
-- @concepts/pickem-backtesting-framework.md — W-BACKTEST
-- @concepts/pickem-operator-workflow.md — W-WORKFLOW
-- @concepts/pickem-pipeline-integration-spec.md — W-INTEG
 
 ## Raw Concept
 

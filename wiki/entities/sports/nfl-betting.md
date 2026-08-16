@@ -38,9 +38,10 @@ related:
   - sources/sharp-nfl-rb-prop-unders-2026-08-13.md
   - sources/rotoviz-preseason-paywall-2026-08-14.md
   - sources/daily-digest-rss-industry-2026-08-14.md
+  - concepts/free-slate-context.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-08-14
+updated: 2026-08-15
 ---
 
 ## Relations
@@ -53,6 +54,7 @@ updated: 2026-08-14
 - @sources/sharp-nfl-rb-prop-unders-2026-08-13.md — 2026 season-long RB rushing unders (volume thesis)
 - @sources/rotoviz-preseason-paywall-2026-08-14.md — OL/target-share/ADP titles (paywalled)
 - @sources/daily-digest-rss-industry-2026-08-14.md — DKeX football contracts + Colorado deposit cap
+- @concepts/free-slate-context.md — Open-Meteo wind/precip for outdoor totals
 
 ## Raw Concept
 

@@ -42,6 +42,10 @@ Odds services, copy-trading alerts, and "AI pick" products often market inflated
 
 **Do not publish:** multi-agent probe playbooks, rank/chip targets, or opponent-specific tuning — see competitive-secrecy note in `ROADMAP.md` W6.
 
+## L7 — Wiki math is not an algorithm until it runs (2026-08-15)
+
+**Lesson:** 400+ pages of Kelly/vig/CLV did not produce a daily bet. Super-audit FAIL: no de-vig in `scripts/`. Ship a **market-relative** CLI (`scripts/daily_edge_card.py`) before projection models. Windows: `wiki_lint.py` must use `.as_posix()` and UTF-8 stdout or it reports every page as an orphan.
+
 ## L6 — Playground analyze cadence (2026-06-03)
 
 **Lesson:** After each deploy, pull a fresh Arena analyze sample and patch **one** leak at a time. Wait for ~50 post-patch hands before the next code change. Full bust patterns (−100 lines) usually mean preflop/OOP discipline, not small postflop leaks — but **specific hand classes, seats, and regression spots stay in private briefs**, not here.
