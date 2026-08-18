@@ -11,10 +11,12 @@ related:
   - concepts/opponent-modeling-imperfect-info.md
   - sweeps/2026-07-16-daily.md
   - sources/arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12.md
+  - sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md
+  - sources/brief-k167-sfp-mfg-shelf-2026-08-18.md
 maturity: validated
 read_status: deep-read
 created: 2026-07-16
-updated: 2026-08-12
+updated: 2026-08-18
 cross-wiki-source: "briefs/2026-07-16_k157-fbsde-fictitious-play-shelf.md"
 ---
 
@@ -32,6 +34,7 @@ K157 shelf — continuous FP convergence theory; **do not** retune discrete MAFP
 1. Fully coupled Nash FBSDE fictitious play now has geometric (sometimes super-exponential) convergence proofs.
 2. Empirically confirmed on LQ interbank game (N=2, 20).
 3. For arena: keep K124 MAFP steals; treat this as theory shelf only.
+4. K167 SFP-MFG (`@sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md`) is another continuous FP shelf — same “do not retune discrete MAFP” posture.
 
 ## Sources
 

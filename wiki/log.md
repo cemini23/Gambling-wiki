@@ -1,5 +1,26 @@
 # Wiki operations log
 
+## [2026-08-18] ingest | K167 daily digest
+
+- **Batch K167:** 1 REFERENCE / 0 GO / 0 reject
+  - **2608.15258** Self-fictitious-play for Potential Monotone Ergodic Mean-field Games (Bai, Laurière, Ren, Wang) — **REFERENCE** continuous ergodic MFG SFP theory shelf next to K157 FBSDE-FP / K166 FTRL-FP / K124 MAFP; **FOSS none** (GitHub search 0 repos)
+- Created paper source + batch + shelf brief; updated opponent-modeling, poker-hl, MAFP, K157 source+brief, K166 source+brief+batch, cadence, index
+- K239 wiki source stub filled; K240 NV geofence filed on kalshi.md + kalshi-michigan + wiki brief source; cross-linked @osint-wiki EH 08-14 + 08-17
+- Phase-1: `wont_wire` (REFERENCE; no ADOPT-GO runtime). No FOSS clone. Arena `decide()`/HL NO-GO (continuous torus MFG ≠ discrete HU MAFP)
+- Poker-arena shelf brief (wiki + OSINT `agents/devfun-poker-arena/briefs/`) — no decide()/HL import; no atto / GuruWatcher / CeminiDFS / TipDrop / prod scp
+- Sweep `2026-08-16`/`08-17` → INGESTED-empty; `2026-08-18` → INGESTED (K167)
+- Archived 1 PDF to egress-fi; inbox cleared
+- Dual-ID: gambling digest K167 = this SFP paper; OSINT K167 = Jul 15 Kalshi-flight brief (resolve by file + date)
+
+## [2026-08-18] ops | RSS LaunchAgent payload stale (paper-only until OSINT reinstall)
+
+- `com.cemini.daily-research-digest.gambling` → `~/bin/cemini-daily-research-digest-gambling` → `~/.cemini/launchagent/osint/daily_research_digest_run.py` has **zero** `rss` matches; local `scripts/daily_research_digest_run.py` does (`rss.enabled: true`). Sweeps 08-15…18 have no RSS section; 08-14 RSS ran from the local script that day.
+- Reinstall must come from OSINT after RSS merges into the **canonical OSINT** runner + `PY_BUNDLE`. Until then morning jobs stay paper-only. **Do not** run `sync_federation_digest_bundle.sh` from this repo (would clobber gambling's local RSS runner).
+
+## [2026-08-18] commit | The Odds API entity + env_load fallback pushed (was pending since 08-15)
+
+- Committed `entities/tools/the-odds-api.md`, `scripts/env_load.py` free-tier key fallback, edge-card/ticket-builder deps + tests + related wiki pages. See 08-15 entity entry for content. `.env` untracked (no key values in repo).
+
 ## [2026-08-15] entity | The Odds API (the-odds-api.com)
 
 - **Gap** — live ticket builder + edge-card already call the vendor; no tool entity (only ToS notes on `@concepts/nfl-dfs-data-sources.md`)

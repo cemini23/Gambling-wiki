@@ -66,9 +66,15 @@ related:
   - sweeps/2026-08-03-daily.md
   - sweeps/2026-08-04-daily.md
   - sources/daily-digest-rss-industry-2026-08-14.md
+  - sweeps/2026-08-16-daily.md
+  - sweeps/2026-08-17-daily.md
+  - sweeps/2026-08-18-daily.md
+  - sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md
+  - sources/daily-digest-batch-k167-2026-08-18.md
+  - sources/brief-k167-sfp-mfg-shelf-2026-08-18.md
 maturity: validated
 created: 2026-06-01
-updated: 2026-08-14
+updated: 2026-08-18
 ---
 
 ## Relations
@@ -77,6 +83,9 @@ updated: 2026-08-14
 - @meta/cross-wiki-routing.md — ingest routing vs @osint-wiki
 - @sources/brief-k93-federated-digest-2026-06-01.md — brief provenance
 - @sources/daily-digest-rss-industry-2026-08-14.md — first RSS-lane ingest (industry/legal)
+- @sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md — K167 SFP-MFG shelf (REFERENCE)
+- @sources/daily-digest-batch-k167-2026-08-18.md — K167 batch (1 REFERENCE)
+- @sources/brief-k167-sfp-mfg-shelf-2026-08-18.md — K167 shelf brief (wont_wire)
 
 ## Raw Concept
 
@@ -148,6 +157,10 @@ Manual run from repo root:
 ```bash
 python3 scripts/daily_research_digest_run.py
 ```
+
+### RSS LaunchAgent gap (2026-08-18)
+
+The installed LaunchAgent payload does **not** run the RSS lane: `~/Library/LaunchAgents/com.cemini.daily-research-digest.gambling.plist` → `~/bin/cemini-daily-research-digest-gambling` → `~/.cemini/launchagent/osint/daily_research_digest_run.py`, which has **zero** `rss` matches. The repo-local `scripts/daily_research_digest_run.py` **does** (config `rss.enabled: true`). Sweeps 2026-08-15…18 carry no RSS section; 08-14 RSS worked because that morning ran the local script. **Action:** morning jobs stay paper-only until OSINT merges RSS into the **canonical OSINT** runner + `PY_BUNDLE` and reinstalls — do **not** run `sync_federation_digest_bundle.sh` from this repo (it would overwrite gambling's local RSS runner).
 
 ## Snippets
 

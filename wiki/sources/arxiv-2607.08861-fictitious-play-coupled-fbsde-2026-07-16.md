@@ -11,10 +11,11 @@ related:
   - sources/daily-digest-batch-k157-2026-07-16.md
   - sweeps/2026-07-16-daily.md
   - sources/arxiv-2607.23333-swap-regret-attention-2026-07-29.md
+  - sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md
 maturity: draft
 read_status: skimmed
 created: 2026-07-16
-updated: 2026-07-29
+updated: 2026-08-18
 location: cemini-egress-fi:/opt/cemini-bulk/research/gambling/arxiv-2607.08861-convergence-of-fictitious-play-for-fully-coupled.pdf
 phase_0_verdict: REFERENCE 2026-07-16 — continuous SDG/FBSDE theory; no FOSS; rates do not transfer to discrete NLHE MAFP
 ---
@@ -24,6 +25,7 @@ phase_0_verdict: REFERENCE 2026-07-16 — continuous SDG/FBSDE theory; no FOSS; 
 - @sources/arxiv-2606.19308-mafp-multi-agent-fictitious-play-2026-06-21.md — discrete LLM MAFP (adjacent FP family)
 - @concepts/opponent-modeling-imperfect-info.md — FP as equilibrium-seeking motif
 - @sources/arxiv-2607.23333-swap-regret-attention-2026-07-29.md — attention ≡ smoothed FP shelf (K163)
+- @sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md — another continuous FP shelf (K167 SFP-MFG)
 
 ## Raw Concept
 

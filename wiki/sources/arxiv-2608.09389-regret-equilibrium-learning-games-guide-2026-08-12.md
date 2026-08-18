@@ -14,10 +14,11 @@ related:
   - sources/brief-k152-expert-yardstick-forgetting-regret-steals-2026-07-11.md
   - sources/daily-digest-batch-k166-2026-08-12.md
   - sources/brief-k166-regret-learning-games-shelf-2026-08-12.md
+  - sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md
 maturity: draft
 read_status: skimmed
 created: 2026-08-12
-updated: 2026-08-12
+updated: 2026-08-18
 location: cemini-egress-fi:/opt/cemini-bulk/research/gambling/arxiv-2608.09389-regret-equilibrium-and-learning-in-games-a-guide.pdf
 phase_0_verdict: REFERENCE 2026-08-12 — FTRL/Hedge/FP literacy shelf (Mertikopoulos survey chapter); no FOSS; decide() NO-GO
 wire_status: wont_wire
@@ -31,6 +32,7 @@ wire_status: wont_wire
 - @sources/brief-k163-swap-regret-attention-shelf-2026-07-29.md — smoothed FP / attention regret shelf (K163)
 - @sources/brief-k157-fbsde-fictitious-play-shelf-2026-07-16.md — continuous FP convergence shelf (K157)
 - @sources/brief-k152-expert-yardstick-forgetting-regret-steals-2026-07-11.md — forgetting-factor regret shelf (K152)
+- @sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md — SFP-MFG sibling shelf (K167)
 
 ## Raw Concept
 

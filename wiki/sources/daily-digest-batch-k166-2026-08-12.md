@@ -12,10 +12,12 @@ related:
   - sources/arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12.md
   - sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md
   - sources/brief-k166-regret-learning-games-shelf-2026-08-12.md
+  - sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md
+  - sources/daily-digest-batch-k167-2026-08-18.md
 maturity: validated
 read_status: skimmed
 created: 2026-08-12
-updated: 2026-08-12
+updated: 2026-08-18
 ---
 
 ## Relations
@@ -24,6 +26,8 @@ updated: 2026-08-12
 - @sources/arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12.md — REFERENCE FTRL/FP literacy shelf
 - @sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md — REFERENCE team-FP shelf + FOSS NO-GO
 - @sources/brief-k166-regret-learning-games-shelf-2026-08-12.md — operator shelf brief
+- @sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md — next FP shelf (K167 SFP-MFG)
+- @sources/daily-digest-batch-k167-2026-08-18.md — next digest batch
 
 ## Raw Concept
 

@@ -21,10 +21,12 @@ related:
   - sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md
   - sources/daily-digest-batch-k166-2026-08-12.md
   - sources/brief-k166-regret-learning-games-shelf-2026-08-12.md
+  - sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md
+  - sources/brief-k167-sfp-mfg-shelf-2026-08-18.md
 maturity: draft
 read_status: skimmed
 created: 2026-06-21
-updated: 2026-08-12
+updated: 2026-08-18
 location: cemini-egress-fi:/opt/cemini-bulk/research/gambling/arxiv-2606.19308-enhancing-decision-making-with-large-language-mo.pdf
 phase_0_verdict: REFERENCE 2026-06-21 — game-theoretic MAS for competitive decisions; runtime LLM NO-GO for decide()
 ---
@@ -38,6 +40,8 @@ phase_0_verdict: REFERENCE 2026-06-21 — game-theoretic MAS for competitive dec
 - @sources/arxiv-2607.23333-swap-regret-attention-2026-07-29.md — regret-loss attention ≡ smoothed FP / CE (K163)
 - @sources/arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12.md — FTRL/FP unified literacy (K166)
 - @sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md — team-FP supervisor shelf (K166)
+- @sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md — continuous SFP-MFG shelf (K167); not discrete MAFP
+- @sources/brief-k167-sfp-mfg-shelf-2026-08-18.md — K167 shelf (wont_wire)
 
 ## Raw Concept
 

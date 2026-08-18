@@ -342,6 +342,11 @@ Catalog of all wiki pages. Updated on each ingest.
 | [arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12](sources/arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12.md) | skimmed | FTRL / Hedge / FP guided tour (Mertikopoulos) |
 | [arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12](sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md) | skimmed | DTOA supervisor network team-FP (FOSS 404) |
 | [brief-k166-regret-learning-games-shelf-2026-08-12](sources/brief-k166-regret-learning-games-shelf-2026-08-12.md) | deep-read | K166 FTRL/FP + team-FP theory shelf |
+| [arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18](sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md) | skimmed | SFP-MFG continuous FP theory shelf (REFERENCE, wont_wire) |
+| [daily-digest-batch-k167-2026-08-18](sources/daily-digest-batch-k167-2026-08-18.md) | skimmed | K167 batch (1 REFERENCE) |
+| [brief-k167-sfp-mfg-shelf-2026-08-18](sources/brief-k167-sfp-mfg-shelf-2026-08-18.md) | deep-read | K167 SFP-MFG theory shelf (wont_wire) |
+| [brief-k239-kalshi-sports-mention-2026-08-15](sources/brief-k239-kalshi-sports-mention-2026-08-15.md) | read | K239 sports mention markets gone + WA geofence |
+| [brief-k240-kalshi-nv-geofence-2026-08-17](sources/brief-k240-kalshi-nv-geofence-2026-08-17.md) | read | K240 NV $120k/day + optional-update geofence |
 | [brief-k222-k231-pm-retail-awareness-2026-08](sources/brief-k222-k231-pm-retail-awareness-2026-08.md) | read | Aug EH: 15-min, Utah, FlightAware, NY tax, ForecastEx |
 | [brief-k271-redagentbench-arena-eval-2026-08-12](sources/brief-k271-redagentbench-arena-eval-2026-08-12.md) | read | Faithful-agent eval hygiene (wont_wire) |
 | [daily-digest-reject-cluster-k129-2026-06-25](sources/daily-digest-reject-cluster-k129-2026-06-25.md) | skimmed |

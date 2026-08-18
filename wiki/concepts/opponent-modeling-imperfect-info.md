@@ -66,9 +66,12 @@ related:
   - sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md
   - sources/daily-digest-batch-k166-2026-08-12.md
   - sources/brief-k166-regret-learning-games-shelf-2026-08-12.md
+  - sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md
+  - sources/daily-digest-batch-k167-2026-08-18.md
+  - sources/brief-k167-sfp-mfg-shelf-2026-08-18.md
 maturity: draft
 created: 2026-06-03
-updated: 2026-08-12
+updated: 2026-08-18
 ---
 
 ## Relations
@@ -93,6 +96,8 @@ updated: 2026-08-12
 - @sources/arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12.md — FTRL/FP literacy guided tour (K166)
 - @sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md — team-FP supervisor shelf (K166)
 - @sources/brief-k166-regret-learning-games-shelf-2026-08-12.md — K166 shelf
+- @sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md — SFP-MFG theory shelf (K167); continuous MFG ≠ HU MAFP
+- @sources/brief-k167-sfp-mfg-shelf-2026-08-18.md — K167 shelf
 
 Synthesized from @sources/arxiv-2508-17671-consistent-opponent-modeling.md — how to **exploit suboptimal opponents** in repeated imperfect-information games (poker) using observed play, and why naive Bayesian Best Response (BBR) fails a **consistency** guarantee even against static opponents.
 
@@ -193,6 +198,10 @@ See `@sources/daily-digest-arxiv-batch-2026-06-04.md` and `@entities/bots/poker-
 @sources/arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12.md: Mertikopoulos unified tour of **regularized learning** (FTRL / Hedge / EXP3 / Tsallis-INF) with Brown–Robinson FP (Thm 1), a quantitative zero-sum ergodic Gap bound (Thm 4), and the folk theorem linking NE ↔ attracting points of regularized learning (Thm 5). Literacy shelf next to K163/K157/K152 — explains *why* FP/MAFP equilibrium-seeking converges in zero-sum and where no-regret dynamics land (strict NE attract, mixed NE are avoided by EXP3-style play). **decide() NO-GO.**
 
 @sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md: team-FP over a **supervisor network** with Byzantine misreporting (DTOA / BR-DTOA) — weak adjacency to MAFP; belief-estimation device, not a villain HUD. **FOSS NO-GO** (claimed repo HTTP 404). Shelf only.
+
+### Self-fictitious-play MFG (K167) [REFERENCE]
+
+@sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md: continuous-time **self-fictitious-play** for monotone potential ergodic MFGs — belief updates from the agent's **own occupation measure** (`d m_t = λ (δ_{X_t} − m_t) dt`), not population McKean–Vlasov. Contractive on `T^d`; Wasserstein neighborhood `O(√λ)` of MFG Nash, sharp on LQ. **Continuous MFG ≠ discrete HU MAFP** — do not retune decide() / MAFP from these rates (same posture as K157). No FOSS. `wont_wire`.
 
 ### Play-adequacy / inference coverage (K158) [TENTATIVE]
 

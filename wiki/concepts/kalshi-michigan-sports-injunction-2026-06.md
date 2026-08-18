@@ -12,9 +12,11 @@ related:
   - osint-wiki/sources/substack-rss-event-horizon-2026-06-29-michigan-court-orders-kalshi-to-stop-sports-even.md
   - sources/daily-digest-rss-industry-2026-08-14.md
   - sources/brief-k222-k231-pm-retail-awareness-2026-08.md
+  - sources/brief-k239-kalshi-sports-mention-2026-08-15.md
+  - sources/brief-k240-kalshi-nv-geofence-2026-08-17.md
 maturity: validated
 created: 2026-07-05
-updated: 2026-08-15
+updated: 2026-08-18
 ---
 
 ## Relations
@@ -25,6 +27,8 @@ updated: 2026-08-15
 - @osint-wiki/sources/substack-rss-event-horizon-2026-06-29-michigan-court-orders-kalshi-to-stop-sports-even.md — OSINT provenance
 - @sources/daily-digest-rss-industry-2026-08-14.md — NY CFTC emergency follow-on (Aug 2026)
 - @sources/brief-k222-k231-pm-retail-awareness-2026-08.md — Utah SJ (no CEA preemption) + CT Oliver ruling
+- @sources/brief-k240-kalshi-nv-geofence-2026-08-17.md — NV $120k/day same geolocation-fine class + optional-update geofence
+- @sources/brief-k239-kalshi-sports-mention-2026-08-15.md — WA final order + mentions-gone pair
 
 ## Raw Concept
 
@@ -55,6 +59,8 @@ Michigan AG (Dana Nessel): Kalshi’s sports contracts are **online sports wager
 **NY follow-on (Aug 2026):** CFTC used emergency authority again, telling Kalshi to keep operating in New York against an AG suit seeking up to $36B. Same preemption class — not a Michigan-only one-off. `@sources/daily-digest-rss-industry-2026-08-14.md`.
 
 **Utah SJ (Aug 2026):** Judge Shelby — CEA does **not** preempt Utah’s anti-gambling statute against Kalshi sports contracts. CT Judge Vernon D. Oliver separately rejected Kalshi’s major preemption / swaps arguments. Event Horizon counts **eight states** with authority to ban or restrict. `@sources/brief-k222-k231-pm-retail-awareness-2026-08.md`.
+
+**Nevada follow-on (Aug 2026):** NGCB filing — Kalshi missed the Aug 12 NV deadline and faces the **same $120k/day geolocation-fine class**. InGame notes the MI geofence (like NV) only fully works after an **optional** app update — geofence is residency-spoof / optional-update fragile, not hard venue-down. `@sources/brief-k240-kalshi-nv-geofence-2026-08-17.md`.
 
 ### Cross-wiki
 

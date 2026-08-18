@@ -68,9 +68,12 @@ related:
   - sources/daily-digest-batch-k166-2026-08-12.md
   - sources/brief-k166-regret-learning-games-shelf-2026-08-12.md
   - sources/brief-k271-redagentbench-arena-eval-2026-08-12.md
+  - sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md
+  - sources/daily-digest-batch-k167-2026-08-18.md
+  - sources/brief-k167-sfp-mfg-shelf-2026-08-18.md
 maturity: validated
 created: 2026-06-03
-updated: 2026-08-15
+updated: 2026-08-18
 ---
 
 ## Relations
@@ -98,6 +101,8 @@ updated: 2026-08-15
 - @sources/arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12.md — K166 FTRL/FP literacy shelf (no HL import)
 - @sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md — K166 team-FP supervisor shelf (no HL import)
 - @sources/brief-k166-regret-learning-games-shelf-2026-08-12.md — K166 shelf (wont_wire)
+- @sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md — K167 SFP-MFG theory shelf (no HL import)
+- @sources/brief-k167-sfp-mfg-shelf-2026-08-18.md — K167 shelf (wont_wire)
 - @sources/brief-k271-redagentbench-arena-eval-2026-08-12.md — faithful eval / harness-tuple (wont_wire)
 - @osint-wiki/concepts/cemini-knowledge-application-architecture.md — brief → verify → deploy (cross-wiki)
 - Private repo: `llm-wiki-by-cemini/agents/devfun-poker-arena/` — HL loop scripts
@@ -255,6 +260,8 @@ HL loop fixes **`decide()` policy**; researcher **bundle submit** adds **`arena-
 **Market-baseline three-axis eval** (K160 — @sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md): accuracy-only gates can be a null when agents converge. Pair variants with a hard non-LLM baseline; separately track calibration, policy P&L vs baseline, and reflection/admit-wrong honesty. See @sources/brief-k160-wc2026-agents-market-baseline-steals-2026-07-21.md / @entities/tools/wc2026-agents.md.
 
 **FTRL / FP literacy shelf (K166 — @sources/arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12.md, @sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md):** two REFERENCE papers, `wont_wire`. 09389 (Mertikopoulos) gives the unified regularized-learning story behind FP/MAFP — Brown–Robinson convergence, zero-sum ergodic Gap bound, folk theorem (strict NE attract, mixed NE avoided by EXP3-style play). Read as literacy next to K163/K157/K152, not as a patch source. 09256 (DTOA/BR-DTOA) is team-FP over supervisor beliefs with Byzantine resilience — shelf-only adjacency to MAFP, **no** decide()/HL import. No FOSS for either (09256 claimed repo HTTP 404).
+
+**SFP-MFG theory shelf (K167 — @sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md):** REFERENCE, `wont_wire`. Continuous-time self-fictitious-play on monotone potential ergodic MFGs (own occupation-measure belief; `O(√λ)` to Nash). **No HL / decide() import** — torus MFG ≠ discrete HU MAFP. Same posture as K157.
 
 ## Snippets
 

@@ -13,10 +13,12 @@ related:
   - concepts/opponent-modeling-imperfect-info.md
   - concepts/poker-hl-analyst-loop.md
   - sweeps/2026-08-12-daily.md
+  - sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md
+  - sources/brief-k167-sfp-mfg-shelf-2026-08-18.md
 maturity: validated
 read_status: deep-read
 created: 2026-08-12
-updated: 2026-08-12
+updated: 2026-08-18
 wire_status: wont_wire
 cross-wiki-source: "briefs/2026-08-12_k166-regret-learning-games-shelf.md"
 ---
@@ -36,6 +38,7 @@ K166 shelf — FTRL / Hedge / FP literacy (09389) + team-FP supervisor adjacency
 1. 09389 Mertikopoulos guided tour: unified regularized learning (Hedge/EXP3/Tsallis-INF/FTRL), Brown–Robinson FP (Thm 1), zero-sum ergodic Gap bound (Thm 4), folk theorem NE ↔ attracting points (Thm 5). Theory shelf next to K163/K157/K152.
 2. 09256 DTOA/BR-DTOA: team-FP over supervisor-network beliefs; Byzantine misreporting + identification. Shelf-only adjacency to MAFP; not an HU-poker solver.
 3. No FOSS (09256 repo 404 verified); no atto / GuruWatcher / CeminiDFS / TipDrop / prod scp.
+4. Sibling shelf: K167 SFP-MFG (`@sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md`) — another continuous FP theory page; still `wont_wire`.
 
 ## Sources
 
