@@ -13,6 +13,7 @@ related:
   - entities/sports/nfl-betting.md
   - entities/platforms/pinnacle.md
   - concepts/free-slate-context.md
+  - entities/tools/the-odds-api.md
 maturity: draft
 created: 2026-08-15
 updated: 2026-08-15
@@ -25,6 +26,7 @@ updated: 2026-08-15
 - @concepts/kelly-criterion-betting.md — quarter-Kelly on the single ticket
 - @entities/platforms/hard-rock-bet.md — target book (soft); never treat as fair
 - @concepts/free-slate-context.md — Open-Meteo + MLB pitchers for unders tickets (not EV)
+- @entities/tools/the-odds-api.md — optional live dump; CSV is still the card
 
 ## Raw Concept
 
@@ -47,7 +49,7 @@ python scripts/daily_edge_card.py --csv path/to/today.csv --out briefs/YYYY-MM-D
 Optional live dump (does not replace the CSV):
 
 ```bash
-# THE_ODDS_API_KEY in env only — never commit
+# THE_ODDS_API_KEY from OSINT WORKSPACE/.env (env_load fallback) — never commit
 python scripts/daily_edge_card.py --fetch-odds-api --odds-sport americanfootball_nfl
 ```
 

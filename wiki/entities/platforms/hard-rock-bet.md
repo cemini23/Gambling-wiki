@@ -18,9 +18,10 @@ related:
   - sources/web-tech-insider-nfl-betting-strategy-2026-06-20.md
   - sweeps/2026-06-20-tier2-w8-nfl.md
   - concepts/daily-edge-card.md
+  - entities/tools/the-odds-api.md
 maturity: validated
 created: 2026-06-20
-updated: 2026-06-20
+updated: 2026-08-15
 ---
 
 ## Relations
@@ -28,6 +29,7 @@ updated: 2026-06-20
 - @entities/sports/nfl-betting.md — primary NFL sportsbook lane (W8)
 - @sources/web-sportsbookreview-hard-rock-bet-2026-06-20.md — Phase-0 deep-read (K124)
 - @concepts/line-shopping-and-clv.md — log open/close on primary handle
+- @entities/tools/the-odds-api.md — live `hardrockbet_fl` / `hardrockbet` prices (not a scraper)
 
 ## Raw Concept
 

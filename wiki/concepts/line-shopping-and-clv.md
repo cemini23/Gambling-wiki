@@ -28,9 +28,10 @@ related:
   - sources/arxiv-2607.00164-verifiable-rewards-calibrated-forecasting-2026-07-03.md
   - sources/brief-k137-swe-interact-rlvr-nfl-steals-2026-07-03.md
   - concepts/daily-edge-card.md
+  - entities/tools/the-odds-api.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-07-03
+updated: 2026-08-15
 ---
 
 ## Relations
@@ -39,6 +40,7 @@ updated: 2026-07-03
 - @entities/platforms/pinnacle.md — sharp reference line
 - @entities/tools/momentum-odds.md — multi-book signal feed (also used for PM routing in @osint-wiki)
 - @concepts/daily-edge-card.md — P0 CLI: de-vig reference vs Hard Rock
+- @entities/tools/the-odds-api.md — licensed multi-book prices (free 500 credits/mo)
 
 ## Raw Concept
 

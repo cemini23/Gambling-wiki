@@ -17,6 +17,7 @@ related:
   - sources/research-nfl-dfs-id-mapping-2026-06-20.md
   - sources/research-nfl-historical-odds-2026-06-20.md
   - concepts/free-slate-context.md
+  - entities/tools/the-odds-api.md
 maturity: draft
 created: 2026-06-20
 updated: 2026-08-15
@@ -29,6 +30,7 @@ updated: 2026-08-15
 - @sources/web-nfl-dfs-source-legal-posture-2026-06-20.md — underlying June 2026 ToS / usage scan
 - @sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md — OSINT weather API inventory + sibling wiki matrix
 - @concepts/free-slate-context.md — Open-Meteo + MLB Stats wired into ticket_builder unders mode
+- @entities/tools/the-odds-api.md — licensed live-odds vendor (free 500 credits/mo)
 
 ## Raw Concept
 

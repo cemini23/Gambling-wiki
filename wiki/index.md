@@ -154,6 +154,7 @@ Catalog of all wiki pages. Updated on each ingest.
 |------|----------|
 | [momentum-odds](entities/tools/momentum-odds.md) | draft |
 | [odds-jam](entities/tools/odds-jam.md) | draft |
+| [the-odds-api](entities/tools/the-odds-api.md) | draft | Licensed live-odds REST (https://the-odds-api.com); free 500 credits/mo |
 | [pydfs-lineup-optimizer](entities/tools/pydfs-lineup-optimizer.md) | validated |
 | [CeminiDFS](entities/tools/ceminidfs.md) | validated |
 | [stokastic-dfs](entities/tools/stokastic-dfs.md) | validated |

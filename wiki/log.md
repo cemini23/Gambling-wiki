@@ -1,5 +1,12 @@
 # Wiki operations log
 
+## [2026-08-15] entity | The Odds API (the-odds-api.com)
+
+- **Gap** — live ticket builder + edge-card already call the vendor; no tool entity (only ToS notes on `@concepts/nfl-dfs-data-sources.md`)
+- **Created** — `entities/tools/the-odds-api.md` — GO official REST; stay free-tier 500 credits/mo
+- **Updated** — nfl-dfs-data-sources, pickem-data-sources, daily-edge-card, free-slate-context, line-shopping-and-clv, hard-rock-bet, momentum-odds, web-nfl-dfs-source-legal-posture, index
+- **Key** — `THE_ODDS_API_KEY` already on OSINT laptop `.env`; `scripts/env_load.py` falls back there. Do not duplicate into this repo. No paid upgrade; no HR scrape
+
 ## [2026-08-15] ingest | Aug briefs catch-up (K222–K231 + K271)
 
 - **Gap** — `briefs/2026-08-04_k222` … `2026-08-11_k231` and `2026-08-12_k271` existed as gitignored briefs; wiki entities never got the retail facts (K225 had a log line only)

@@ -5,6 +5,7 @@ tags: [source, dfs, nfl, legal, tos, scraping, rate-limits, w-legal]
 keywords: [nflverse, the-odds-api, fanduel, draftkings, espn, open-meteo, ownership archives, rotogrinders, action network, etr]
 related:
   - concepts/nfl-dfs-data-sources.md
+  - entities/tools/the-odds-api.md
 maturity: validated
 read_status: deep-read
 created: 2026-06-20
@@ -14,6 +15,7 @@ updated: 2026-06-20
 ## Relations
 
 - @concepts/nfl-dfs-data-sources.md — W-LEGAL decision matrix distilled from this scan
+- @entities/tools/the-odds-api.md — vendor entity (quota, free tier, local scripts)
 
 ## Raw Concept
 

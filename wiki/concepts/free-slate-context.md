@@ -9,6 +9,7 @@ related:
   - concepts/daily-edge-card.md
   - entities/sports/nfl-betting.md
   - concepts/parlay-and-correlated-bets.md
+  - entities/tools/the-odds-api.md
 maturity: draft
 created: 2026-08-15
 updated: 2026-08-15
@@ -21,6 +22,7 @@ updated: 2026-08-15
 - @concepts/daily-edge-card.md — market-relative EV card; this page is environment context only
 - @entities/sports/nfl-betting.md — NFL totals / weather as a situational input
 - @concepts/parlay-and-correlated-bets.md — unders parlays are still correlated (weather hits the whole slate)
+- @entities/tools/the-odds-api.md — live HR/DK/FD prices (quota); this page is weather/pitchers only
 
 ## Raw Concept
 

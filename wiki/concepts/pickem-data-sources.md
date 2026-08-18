@@ -16,9 +16,10 @@ related:
   - sources/web-nfl-dfs-source-legal-posture-2026-06-20.md
   - entities/tools/ceminidfs.md
   - entities/sports/nfl-betting.md
+  - entities/tools/the-odds-api.md
 maturity: draft
 created: 2026-07-05
-updated: 2026-07-05
+updated: 2026-08-15
 ---
 
 ## Relations
@@ -26,6 +27,7 @@ updated: 2026-07-05
 - @concepts/nfl-dfs-data-sources.md — parent stack; pick'em inherits GO/NO-GO posture
 - @sources/research-nfl-historical-odds-2026-06-20.md — game-level Vegas history; props extension below
 - @concepts/pickem-legal-and-tos-posture.md — scraper reject list (W-LEGAL)
+- @entities/tools/the-odds-api.md — official REST props/odds benchmark (quota-gated)
 
 ## Raw Concept
 

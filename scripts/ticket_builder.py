@@ -407,7 +407,10 @@ def main() -> int:
 
     key = os.environ.get("THE_ODDS_API_KEY", "").strip()
     if not key:
-        print("Missing THE_ODDS_API_KEY in .env", file=sys.stderr)
+        print(
+            "Missing THE_ODDS_API_KEY (OSINT WORKSPACE/.env or this wiki .env). Never commit it.",
+            file=sys.stderr,
+        )
         return 1
 
     markets = "totals" if args.mode == "unders" else "h2h"

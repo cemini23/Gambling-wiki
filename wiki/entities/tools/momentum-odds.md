@@ -15,9 +15,10 @@ related:
   - concepts/diy-nfl-dfs-model-architecture.md
   - concepts/nfl-dfs-data-sources.md
   - sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md
+  - entities/tools/the-odds-api.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-08-15
 ---
 
 ## Relations
@@ -25,6 +26,7 @@ updated: 2026-05-31
 - @concepts/sportsbook-pm-line-divergence.md — primary retail use case
 - @sources/youtube-sports-pm-retail-batch-2026-05-29.md — Odds channel tutorial (qPRY5ws3h60)
 - @osint-wiki/entities/tools/momentum-odds.md — Kalshi executor bot architecture
+- @entities/tools/the-odds-api.md — official REST odds (quota); this page is a commercial signal feed
 
 ## Raw Concept
 
