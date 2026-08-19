@@ -9,10 +9,11 @@ related:
   - concepts/prediction-markets-crossover.md
   - sources/brief-k222-k231-pm-retail-awareness-2026-08.md
   - sources/brief-k240-kalshi-nv-geofence-2026-08-17.md
+  - sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md
 maturity: validated
 read_status: read
 created: 2026-08-15
-updated: 2026-08-18
+updated: 2026-08-19
 ---
 
 ## Relations
@@ -24,6 +25,7 @@ updated: 2026-08-18
 - @concepts/prediction-markets-crossover.md — retail regulation bullet
 - @sources/brief-k222-k231-pm-retail-awareness-2026-08.md — prior Aug PM retail cluster
 - @sources/brief-k240-kalshi-nv-geofence-2026-08-17.md — NV $120k/day follow-on
+- @sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md — WA geofence day
 
 ## Raw Concept
 

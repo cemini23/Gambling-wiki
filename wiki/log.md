@@ -1,5 +1,11 @@
 # Wiki operations log
 
+## [2026-08-19] ingest | K242 EH PM ban onshore · WA geofence day
+
+- Wiki source stub `@sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md` from OSINT Event Horizon 2026-08-19. Dual-ID: OSINT K242 ≠ Trajectory Sentinel / CCC K242.
+- Bumped `@entities/platforms/kalshi.md` + `@concepts/prediction-markets-crossover.md`. **No pm scp.** Awareness only.
+- Brief (gitignored): `briefs/2026-08-19_k242-eh-pm-ban-onshore.md`
+
 ## [2026-08-18] ingest | K167 daily digest
 
 - **Batch K167:** 1 REFERENCE / 0 GO / 0 reject

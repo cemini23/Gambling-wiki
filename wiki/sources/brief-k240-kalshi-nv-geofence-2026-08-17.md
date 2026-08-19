@@ -8,10 +8,11 @@ related:
   - concepts/kalshi-michigan-sports-injunction-2026-06.md
   - concepts/prediction-markets-crossover.md
   - sources/brief-k239-kalshi-sports-mention-2026-08-15.md
+  - sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md
 maturity: validated
 read_status: read
 created: 2026-08-17
-updated: 2026-08-18
+updated: 2026-08-19
 ---
 
 ## Relations
@@ -22,6 +23,7 @@ updated: 2026-08-18
 - @concepts/kalshi-michigan-sports-injunction-2026-06.md — same **$120k/day** geolocation-fine class; MI also optional-update
 - @concepts/prediction-markets-crossover.md — retail regulation bullet
 - @sources/brief-k239-kalshi-sports-mention-2026-08-15.md — mentions-gone + WA pair
+- @sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md — WA geofence day
 
 ## Raw Concept
 

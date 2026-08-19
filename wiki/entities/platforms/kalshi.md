@@ -45,9 +45,10 @@ related:
   - sources/brief-k222-k231-pm-retail-awareness-2026-08.md
   - sources/brief-k239-kalshi-sports-mention-2026-08-15.md
   - sources/brief-k240-kalshi-nv-geofence-2026-08-17.md
+  - sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-08-18
+updated: 2026-08-19
 ---
 
 ## Relations
@@ -65,6 +66,8 @@ updated: 2026-08-18
 - @sources/brief-k239-kalshi-sports-mention-2026-08-15.md — K239 wiki stub
 - @sources/brief-k240-kalshi-nv-geofence-2026-08-17.md — K240 NV $120k/day + optional-update geofence
 - @osint-wiki/sources/substack-rss-event-horizon-2026-08-17-pm-policy-klein.md — K240 source of record
+- @sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md — K242 WA geofence day; ban ≠ offshore
+- @osint-wiki/sources/substack-rss-event-horizon-2026-08-19-pm-ban-onshore.md — K242 source of record
 
 ## Raw Concept
 
@@ -137,6 +140,10 @@ Trailing-7d (Event Horizon / Ticker Tracker): **~$1.5B** Kalshi crypto notional,
 Kalshi **sidelined sports mention markets** ahead of football (Discord: temporarily; Event Horizon: short-term at least). NPR: federal review of mention markets (announcer/word-choice contracts). NFL/MLB already asked venues not to list easily manipulated events. Mention volume since Kalshi launched sports: **$1.2B**. Polymarket international still lists some. **Do not plan a mention-market bot.** If the category returns, treat as high-manipulation / league-hostile — not an LP lane.
 
 King County **final order** geofences most of Kalshi's mix in Washington (sports, elections, politics, entertainment, culture, tech/science, **mentions**) — Aug 19 IP+residency, Sep 2 multi-source. Hub: `@osint-wiki/sources/substack-rss-event-horizon-2026-08-14-kalshi-sports-mention.md`, brief `../briefs/2026-08-15_k239-gambling-kalshi-sports-mention-gone.md`.
+
+### WA geofence day + ban ≠ offshore (K242, 2026-08-19) [TENTATIVE]
+
+**2026-08-19** is the King County IP+residency geofence date. Event Horizon argues a US ban/limit would **not** relocate all volume offshore (sports-betting legalization created new activity; CFTC already hit US-serving offshore venues). Mentions remain a tiny share under federal review. **No pm-bot scp.** Dual-ID: OSINT K242 ≠ Trajectory Sentinel K242. Hub: `@osint-wiki/sources/substack-rss-event-horizon-2026-08-19-pm-ban-onshore.md`, `@sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md`.
 
 ### Nevada $120k/day + optional-update geofence (K240, 2026-08-17) [CONFIRMED]
 

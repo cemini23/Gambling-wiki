@@ -55,11 +55,12 @@ related:
   - sources/brief-k222-k231-pm-retail-awareness-2026-08.md
   - sources/brief-k239-kalshi-sports-mention-2026-08-15.md
   - sources/brief-k240-kalshi-nv-geofence-2026-08-17.md
+  - sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md
   - @seo-wiki/concepts/outlier-weekly-issue3-world-cup-bot-notes.md
   - @seo-wiki/concepts/generative-engine-optimization.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-08-18
+updated: 2026-08-19
 ---
 
 ## Relations
@@ -80,6 +81,7 @@ updated: 2026-08-18
 - @sources/brief-k222-k231-pm-retail-awareness-2026-08.md — 15-min velocity, FanDuel→Crypto.com, Utah/NY tax/FlightAware
 - @sources/brief-k239-kalshi-sports-mention-2026-08-15.md — mentions-gone + WA geofence
 - @sources/brief-k240-kalshi-nv-geofence-2026-08-17.md — NV $120k/day + optional-update geofence
+- @sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md — WA geofence day; ban ≠ offshore
 
 ## Raw Concept
 
@@ -128,7 +130,7 @@ Retail: same checklist as Kalshi/PM — fees, settlement, bankroll. **Bot execut
 
 **Aug 2026:** Novig published a responsible-trading framework (21+, incentive limits) while CFTC DMO flagged **Reg 40.5/40.6 incentive programs** — treat PM bonuses as compliance-risk. DraftKings **DKeX** listed football binaries + COMBOS (product of component YES). Kalshi vs NY AG: CFTC emergency “keep operating” vs $36B restitution claim. Same month: Kalshi **15-min BTC** dominates crypto volume; FanDuel Predicts sports → **Crypto.com**; Utah SJ (no CEA preemption); FlightAware sues over flight-cancellation oracles; NY **$10B/5y** PM-tax headline fails a population-share sanity check. Hubs: `@sources/substack-rss-event-horizon-2026-08-13-novig-responsible-trading.md`, `@sources/daily-digest-rss-industry-2026-08-14.md`, `@sources/brief-k222-k231-pm-retail-awareness-2026-08.md`, `@osint-wiki/concepts/prediction-market-regulation-2026.md`.
 
-Also Aug: **Nevada GCB** moved to fine Kalshi **$120k/day** for missing its Aug 12 NV deadline; the full geofence works only after an **optional** app update (NV + MI) — treat as residency-spoof fragile, not hard venue-down. Hubs: `@sources/brief-k240-kalshi-nv-geofence-2026-08-17.md`, `@sources/brief-k239-kalshi-sports-mention-2026-08-15.md`.
+Also Aug: **Nevada GCB** moved to fine Kalshi **$120k/day** for missing its Aug 12 NV deadline; the full geofence works only after an **optional** app update (NV + MI) — treat as residency-spoof fragile, not hard venue-down. Hubs: `@sources/brief-k240-kalshi-nv-geofence-2026-08-17.md`, `@sources/brief-k239-kalshi-sports-mention-2026-08-15.md`. **2026-08-19** is the WA IP+residency geofence day; a US ban/limit is not assumed to move all volume offshore (`@sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md`).
 
 ### When to stay in traditional books
 
