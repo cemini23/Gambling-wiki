@@ -8,10 +8,11 @@ related:
   - concepts/prediction-markets-crossover.md
   - sources/brief-k239-kalshi-sports-mention-2026-08-15.md
   - sources/brief-k240-kalshi-nv-geofence-2026-08-17.md
+  - sources/brief-k243-eh-pm-republican-comms-2026-08-20.md
 maturity: validated
 read_status: read
 created: 2026-08-19
-updated: 2026-08-19
+updated: 2026-08-20
 ---
 
 ## Relations
@@ -22,6 +23,7 @@ updated: 2026-08-19
 - @concepts/prediction-markets-crossover.md — ban ≠ full offshore migration
 - @sources/brief-k239-kalshi-sports-mention-2026-08-15.md — WA clock named
 - @sources/brief-k240-kalshi-nv-geofence-2026-08-17.md — NV optional-update pair
+- @sources/brief-k243-eh-pm-republican-comms-2026-08-20.md — GOP-underdog comms follow-on
 
 ## Raw Concept
 

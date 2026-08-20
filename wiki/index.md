@@ -348,6 +348,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [brief-k239-kalshi-sports-mention-2026-08-15](sources/brief-k239-kalshi-sports-mention-2026-08-15.md) | read | K239 sports mention markets gone + WA geofence |
 | [brief-k240-kalshi-nv-geofence-2026-08-17](sources/brief-k240-kalshi-nv-geofence-2026-08-17.md) | read | K240 NV $120k/day + optional-update geofence |
 | [brief-k242-eh-pm-ban-onshore-2026-08-19](sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md) | read | K242 WA geofence day; ban ≠ offshore |
+| [brief-k243-eh-pm-republican-comms-2026-08-20](sources/brief-k243-eh-pm-republican-comms-2026-08-20.md) | read | K243 GOP-underdog comms tail risk |
 | [brief-k222-k231-pm-retail-awareness-2026-08](sources/brief-k222-k231-pm-retail-awareness-2026-08.md) | read | Aug EH: 15-min, Utah, FlightAware, NY tax, ForecastEx |
 | [brief-k271-redagentbench-arena-eval-2026-08-12](sources/brief-k271-redagentbench-arena-eval-2026-08-12.md) | read | Faithful-agent eval hygiene (wont_wire) |
 | [daily-digest-reject-cluster-k129-2026-06-25](sources/daily-digest-reject-cluster-k129-2026-06-25.md) | skimmed |

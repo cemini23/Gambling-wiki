@@ -46,9 +46,10 @@ related:
   - sources/brief-k239-kalshi-sports-mention-2026-08-15.md
   - sources/brief-k240-kalshi-nv-geofence-2026-08-17.md
   - sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md
+  - sources/brief-k243-eh-pm-republican-comms-2026-08-20.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-08-19
+updated: 2026-08-20
 ---
 
 ## Relations
@@ -67,6 +68,7 @@ updated: 2026-08-19
 - @sources/brief-k240-kalshi-nv-geofence-2026-08-17.md — K240 NV $120k/day + optional-update geofence
 - @osint-wiki/sources/substack-rss-event-horizon-2026-08-17-pm-policy-klein.md — K240 source of record
 - @sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md — K242 WA geofence day; ban ≠ offshore
+- @sources/brief-k243-eh-pm-republican-comms-2026-08-20.md — K243 GOP-underdog comms tail risk
 - @osint-wiki/sources/substack-rss-event-horizon-2026-08-19-pm-ban-onshore.md — K242 source of record
 
 ## Raw Concept

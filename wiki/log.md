@@ -1,5 +1,11 @@
 # Wiki operations log
 
+## [2026-08-20] ingest | K243 EH GOP-underdog comms tail risk
+
+- Wiki source stub `@sources/brief-k243-eh-pm-republican-comms-2026-08-20.md` from OSINT Event Horizon 2026-08-20. Dual-ID: OSINT K243 ≠ ACEM / CCC K243.
+- Bumped `@entities/platforms/kalshi.md` + `@concepts/prediction-markets-crossover.md`. **No pm scp.** Awareness only.
+- Brief (gitignored): `briefs/2026-08-20_k243-gambling.md`
+
 ## [2026-08-19] ingest | K242 EH PM ban onshore · WA geofence day
 
 - Wiki source stub `@sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md` from OSINT Event Horizon 2026-08-19. Dual-ID: OSINT K242 ≠ Trajectory Sentinel / CCC K242.
