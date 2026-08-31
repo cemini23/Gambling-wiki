@@ -78,6 +78,8 @@ related:
   - sources/daily-digest-batch-k168-2026-08-31.md
   - sources/brief-k168-nfl-season-paper-rss-2026-08-31.md
   - sources/daily-digest-rss-nfl-week0-2026-08-31.md
+  - sources/brief-k169-nfl-week1-ready-2026-08-31.md
+  - concepts/dfs-injury-and-news-workflow.md
   - sweeps/2026-08-31-daily.md
 maturity: validated
 created: 2026-06-01
@@ -96,6 +98,8 @@ updated: 2026-08-31
 - @sources/daily-digest-batch-k168-2026-08-31.md — K168 NFL-season papers (3 REFERENCE)
 - @sources/daily-digest-rss-nfl-week0-2026-08-31.md — K168 RSS (injury PM / 9th Circuit)
 - @sources/brief-k168-nfl-season-paper-rss-2026-08-31.md — K168 NFL Week-0 steals
+- @sources/brief-k169-nfl-week1-ready-2026-08-31.md — K169 RSS wire + Week-1 roster hub
+- @concepts/dfs-injury-and-news-workflow.md — RotoWire NFL RSS is GO for narrative; NFL.com inactives still T-90
 
 ## Raw Concept
 
@@ -135,13 +139,13 @@ Also: Kalshi/PM retail, sports betting +EV/CLV, World Cup 2026 cross-venue (cros
 
 **RSS lane (2026-08-14):** papers are the wrong daily diet for W8 NFL / W9 DFS. arXiv sports-betting and DFS queries routinely return **0 hits**; Exa news stays **off** (credits). Free RSS/Atom is the seasonal primary: check `S1`… in the sweep, then **full ingest** selected URLs. Does **not** dump HTML into the inbox.
 
-| Cluster | Feeds (live 2026-08-14 probe) | Why |
+| Cluster | Feeds (live 2026-08-31 probe) | Why |
 |---------|-------------------------------|-----|
 | PM / sportsbook industry | Event Horizon, The Closing Line, Outlier Weekly, Legal Sports Report, Legal Sports Betting, SBC News | Product/legal/methodology. First three also polled by OSINT (`cross_wiki: gambling-wiki`) |
-| NFL / DFS / best ball | RotoViz, Sharp Football Analysis, RotoBaller, 4for4 (marketing titles dropped), Over The Cap, PFT injury/camp filter | Usage, props, ADP, contracts, camp news |
+| NFL / DFS / best ball | RotoViz (HTTP 403 — keep, no scrape), Sharp (ranking/projection mill skip), RotoBaller (sleeper mill skip), 4for4, Over The Cap, PFT (loosened PUP/53/waiver/exempt), **RotoWire NFL, ProFootballRumors, CBS NFL roster filter, PFF (no CFB), Read Optional, DK Playbook (NFL-only)** | Usage, props, ADP, contracts, injury/roster |
 | CeminiDFS data | `nflverse-data` + `nflreadpy` GitHub releases.atom | Package/data drops, not papers |
 
-**Rejected as daily RSS** (picks mills, empty, 404, or paywall placeholders): Action Network, BettingPros, Covers, VSiN, Gaming Today, ESPN NFL, ETR feed (locked podcast stub), RotoGrinders, Unabated, OddsJam, PokerNews, Underdog blog.
+**Rejected as daily RSS** (picks mills, empty, 404, or paywall placeholders): Action Network, BettingPros, Covers, VSiN, Gaming Today, ESPN NFL, ETR feed (locked podcast stub), RotoGrinders, Unabated, OddsJam, PokerNews, Underdog blog, Google News CLV, Sports Betting Dime, WagerTalk, PFN, SIS, Pinnacle public RSS (HTML), Open Source Football (stale).
 
 **Keep elsewhere (not this digest):**
 - **OSINT Substack poller** — full EH / Closing Line / Outlier / Klement bodies → OSINT inbox, then cross-wiki stubs

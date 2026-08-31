@@ -9,15 +9,18 @@ related:
   - concepts/dfs-pipeline-integration-spec.md
   - concepts/diy-nfl-dfs-model-architecture.md
   - sources/web-bleacher-report-key-injuries-2026-07-01.md
+  - sources/brief-k169-nfl-week1-ready-2026-08-31.md
+  - meta/daily-research-digest-cadence.md
 maturity: draft
 created: 2026-06-20
-updated: 2026-06-20
+updated: 2026-08-31
 ---
 
 ## Relations
 
 - @concepts/pickem-operator-workflow.md — K147 pick'em shares injury latency patterns
 - @concepts/player-usage-models.md — Q/D/O play-probability priors
+- @sources/brief-k169-nfl-week1-ready-2026-08-31.md — Week-0 53-man snapshot; RotoWire RSS wired
 
 ## Raw Concept
 
@@ -32,6 +35,7 @@ Injury/depth data sources + **late-swap operating procedure** for W-INJ / W-NEWS
 | nflreadr `load_injuries()` | Designations + practice | **GO** |
 | nflreadr `load_depth_charts()` | Weekly depth | **CONDITIONAL-GO** |
 | NFL.com inactives | Canonical ~T-90 | Manual hub |
+| RotoWire NFL RSS | Narrative + PUP/IR/53-man discovery | **GO** (digest `rotowire-nfl`; K169) |
 | X beat writers | Fastest | Manual only (ToS prohibits scrape) |
 
 ### Q/D/O play probability defaults

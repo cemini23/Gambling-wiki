@@ -10,6 +10,7 @@ related:
   - sources/arxiv-2602.19520-pm-domain-calibration-2026-08-31.md
   - sources/arxiv-2604.27865-kellybench-2026-08-31.md
   - sources/daily-digest-rss-nfl-week0-2026-08-31.md
+  - sources/brief-k169-nfl-week1-ready-2026-08-31.md
   - entities/sports/nfl-betting.md
   - concepts/daily-edge-card.md
   - concepts/kelly-criterion-betting.md
@@ -26,6 +27,7 @@ cross-wiki-source: "briefs/2026-08-31_k168-nfl-season-paper-rss.md"
 
 - Gitignored brief: `briefs/2026-08-31_k168-nfl-season-paper-rss.md`
 - Phase-1: `wont_wire` — REFERENCE papers + RSS awareness; no ADOPT-GO runtime
+- @sources/brief-k169-nfl-week1-ready-2026-08-31.md — Week-1 roster hub + RSS wire
 
 ## Raw Concept
 

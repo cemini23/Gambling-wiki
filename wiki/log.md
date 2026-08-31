@@ -1,5 +1,13 @@
 # Wiki operations log
 
+## [2026-08-31] ingest | K169 NFL Week-1 ready (RSS + roster)
+
+- Wired 6 RSS feeds in `scripts/daily_research_config.yaml`: RotoWire NFL, ProFootballRumors, CBS NFL (roster filter), PFF (no CFB), Read Optional, DK Playbook (NFL-only). Loosened PFT include-list. RotoBaller/Sharp ranking mills stay discovery-only.
+- Week-0 53-man snapshot: Jacobs Exempt, Parsons/Charbonnet PUP, Tyson IR-R, Nacua Q, Donald snaps TBD. Kickoff Wed 2026-09-09 SEA vs NE.
+- First slate hub = gitignored `briefs/2026-08-31_k169-nfl-week1-ready.md` until Sep prefetch. YouTube weekly pick shows skipped (GPP process already on dfs-hero).
+- Dual-ID: gambling digest K169 ≠ OSINT K169 (Jul 15 SLM harness steal)
+- Phase-1: `policy_wired` (RSS filters). No scrape. No LLM tickets. No pm scp. No Hard Rock auto-bet
+
 ## [2026-08-31] ingest | K168 NFL season paper + RSS
 
 - Overnight paper lane **0 new PDFs** (08-19…08-31 LaunchAgent hits were K167 poker/MFG dupes). Local RSS digest run (RotoViz 403).

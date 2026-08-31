@@ -200,11 +200,17 @@ rss:
     url: https://www.rotoviz.com/feed
     cluster: dfs-analytics
     max_items: 5
+    # 2026-08-31 probe: HTTP 403 from this laptop. Keep; retry. Do not scrape HTML.
   - id: sharp-football
     name: Sharp Football Analysis
     url: https://www.sharpfootballanalysis.com/feed/
     cluster: nfl-betting
     max_items: 5
+    # Discovery-only for ranking/projection trackers (K168 skip). Keep process titles.
+    exclude_any:
+    - Fantasy Football Rankings
+    - Fantasy Football Projections
+    - How to Draft
   - id: rotoballer
     name: RotoBaller
     url: https://www.rotoballer.com/feed
@@ -219,6 +225,12 @@ rss:
     - baseball
     - pitcher
     - hitter
+    - League-Winners
+    - Must-Have
+    - Must-Avoid
+    - Must-Draft
+    - Busts
+    - Dark-Horse
   - id: 4for4
     name: 4for4
     url: https://www.4for4.com/rss.xml
@@ -249,6 +261,79 @@ rss:
     - depth chart
     - training camp
     - preseason
+    - PUP
+    - physically unable
+    - 53-man
+    - roster
+    - waiver
+    - inactive
+    - practice
+    - trade
+    - exempt
+    - designated to return
+  # --- NFL injury / roster / process (K169, 2026-08-31) ---
+  - id: rotowire-nfl
+    name: RotoWire NFL news
+    url: https://www.rotowire.com/rss/news.php?sport=NFL
+    cluster: nfl-injury-camp
+    max_items: 5
+  - id: profootballrumors
+    name: ProFootballRumors
+    url: https://www.profootballrumors.com/feed
+    cluster: nfl-injury-camp
+    max_items: 5
+    exclude_any:
+    - Arrested
+    - DWI
+    - arrested for
+  - id: cbs-nfl
+    name: CBS Sports NFL headlines
+    url: https://www.cbssports.com/rss/headlines/nfl/
+    cluster: nfl-injury-camp
+    max_items: 4
+    include_any:
+    - roster
+    - waiver
+    - injur
+    - injured reserve
+    - PUP
+    - trade
+    - 53-man
+    - cut
+    - exempt
+    exclude_any:
+    - greatest comebacks
+    - Ranking the
+  - id: pff
+    name: PFF
+    url: https://www.pff.com/feed
+    cluster: nfl-betting
+    max_items: 4
+    include_any:
+    - NFL
+    - Fantasy
+    - DFS
+    - Betting
+    exclude_any:
+    - College Football
+  - id: read-optional
+    name: The Read Optional
+    url: https://readoptional.substack.com/feed
+    cluster: nfl-betting
+    max_items: 3
+  - id: dk-playbook
+    name: DraftKings Playbook
+    url: https://dknetwork.draftkings.com/feed
+    cluster: nfl-betting
+    max_items: 3
+    include_any:
+    - NFL
+    exclude_any:
+    - US Open
+    - MLB
+    - Big Brother
+    - soccer
+    - tennis
   # --- data / tooling releases (CeminiDFS) ---
   - id: nflverse-data
     name: nflverse-data releases

@@ -18,14 +18,16 @@ related:
   - concepts/nfl-offseason-research-cadence.md
   - meta/nfl-offseason-weekly-cadence.md
   - meta/daily-research-digest-cadence.md
+  - sources/brief-k169-nfl-week1-ready-2026-08-31.md
 maturity: draft
 created: 2026-07-05
-updated: 2026-07-05
+updated: 2026-08-31
 ---
 
 ## Relations
 
 - @meta/nfl-slate-prefetch-cadence.md — hourly LaunchAgent + prefetch stubs
+- @sources/brief-k169-nfl-week1-ready-2026-08-31.md — Week-0 hub until first Sep prefetch
 
 - @entities/sports/nfl-betting.md — W8 four-lane operator stack
 - @concepts/dfs-injury-and-news-workflow.md — shared T-90 injury cadence
@@ -34,6 +36,8 @@ updated: 2026-07-05
 ## Raw Concept
 
 **Research once, distribute many.** In **regular season**, operator requests per-slate hub research; in **Jul–Aug offseason**, use weekly camp research instead — @concepts/nfl-offseason-research-cadence.md (pick'em tool not required yet).
+
+**Week 0 → Week 1 (2026-08-31):** use `briefs/2026-08-31_k169-nfl-week1-ready.md` as the first hub until LaunchAgent prefetch lands for **Wed 2026-09-09** SEA vs NE. Do not wait for a `2026-w01-slate-hub-thu.md` file that does not exist yet.
 
 ## Narrative
 

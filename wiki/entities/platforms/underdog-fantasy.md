@@ -25,9 +25,10 @@ related:
   - sources/daily-digest-news-r1-r12-2026-06-01.md
   - sources/daily-digest-news-r1-r12-2026-06-02.md
   - sources/brief-k128-bbm7-draft-copilot-hub-2026-06-24.md
+  - sources/brief-k169-nfl-week1-ready-2026-08-31.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-07-20
+updated: 2026-08-31
 ---
 
 ## Relations
@@ -37,6 +38,7 @@ updated: 2026-07-20
 - @entities/tournaments/best-ball-mania-vii.md — BBM7 official format and bracket
 - @entities/platforms/draftkings.md — competitor best ball product
 - @sources/youtube-operator-batch-wc-bbm-2026-05-31.md — BBM7 operator YouTube batch
+- @sources/brief-k169-nfl-week1-ready-2026-08-31.md — Week-1: Jacobs/Parsons/Tyson delayed; do not panic-add
 
 ## Raw Concept
 
@@ -62,6 +64,10 @@ See @entities/tournaments/best-ball-mania-vii.md for full rules. Summary:
 | Scoring | Half-PPR |
 | Lineup | Auto-optimized weekly from roster |
 | Live since | 2026-04-28 |
+
+### Week 1 2026 (K169)
+
+Most BBM7 drafts are done. Do not panic-add **Jacobs** (Exempt), **Parsons** (PUP, miss first 4), or **Tyson** (IR-R). Remaining drafts: treat those three as out / delayed. Hub: `@sources/brief-k169-nfl-week1-ready-2026-08-31.md`.
 
 ### Product mechanics & Draft Room UI (For Tool Builders)
 

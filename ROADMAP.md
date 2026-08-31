@@ -84,7 +84,7 @@ Steps:
 - [x] Phase-0 Hard Rock — TOS, limits, promo math, casino vs book split
 - [x] Deep-read NFL sportsbook lane — expand `entities/sports/nfl-betting.md` (props, key numbers, injury cadence)
 - [x] FanDuel NFL DFS playbook — GPP/showdown/ownership (expand `entities/platforms/fanduel.md` or dedicated concept)
-- [ ] Operator YouTube / free-guide ingest batch (NFL betting + FD DFS)
+- [ ] Operator YouTube / free-guide ingest batch (NFL betting + FD DFS) — **K169 skip:** weekly pick shows; GPP process already on `@sources/web-dfs-hero-nfl-gpp-strategy-2026-06-20.md` + May Unabated
 - [x] Offseason: weekly camp hub — `bash scripts/install_nfl_offseason_weekly.sh` (@meta/nfl-offseason-weekly-cadence.md)
 - [x] In-season (Sep+): slate **prefetch** LaunchAgent — `bash scripts/install_nfl_slate_prefetch.sh` (@meta/nfl-slate-prefetch-cadence.md)
 - [ ] In-season: weekly **slate hub** briefs in `briefs/` per @concepts/nfl-weekly-slate-hub-workflow.md; CLV journal hook on `@concepts/line-shopping-and-clv.md`
@@ -97,9 +97,9 @@ Steps:
 - [x] **CeminiDFS repo** — phases 0–5 complete ([github.com/cemini23/CeminiDFS](https://github.com/cemini23/CeminiDFS))
 - [x] Morning digest W9 lanes — CeminiDFS co-primary in `scripts/daily_research_config.yaml` + `scripts/active_project_brief_targets.yaml`
 - [ ] Preseason live-slate runs with FanDuel salary exports + calibration briefs in `../CeminiDFS/briefs/`
-- [ ] Operator YouTube / free-guide ingest batch (NFL betting + FD DFS methodology)
+- [ ] Operator YouTube / free-guide ingest batch (NFL betting + FD DFS methodology) — **K169 skip:** same as W8; do not ingest DFS Army / Club Fantasy week tapes
 
-**Digest note:** W9 CeminiDFS, W8 NFL, W6 poker, and **W10 K147 pick'em** are in `active_topics`. **RSS lane (2026-08-14)** is the seasonal primary (practitioner/industry/GitHub); arXiv stays for poker/game-theory. Exa news remains off. **K168 (2026-08-31):** 14-day paper lane empty; 6-month hunt filed 3 REFERENCE papers + Week-0 RSS.
+**Digest note:** W9 CeminiDFS, W8 NFL, W6 poker, and **W10 K147 pick'em** are in `active_topics`. **RSS lane (2026-08-14)** is the seasonal primary (practitioner/industry/GitHub); arXiv stays for poker/game-theory. Exa news remains off. **K168 (2026-08-31):** 14-day paper lane empty; 6-month hunt filed 3 REFERENCE papers + Week-0 RSS. **K169 (2026-08-31):** 6 injury/roster feeds wired; Week-0 roster brief is the first slate hub until Sep 9 prefetch.
 
 ### W10 — K147 DIY NFL pick'em / props tool (active 2026-07-05)
 

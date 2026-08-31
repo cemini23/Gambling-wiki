@@ -14,6 +14,7 @@ related:
   - entities/platforms/draftkings.md
   - entities/platforms/fanduel.md
   - entities/sports/nfl-betting.md
+  - sources/brief-k169-nfl-week1-ready-2026-08-31.md
   - concepts/kalshi-michigan-sports-injunction-2026-06.md
   - concepts/prediction-markets-crossover.md
   - concepts/pickem-legal-and-tos-posture.md
@@ -34,6 +35,7 @@ updated: 2026-08-31
 - @osint-wiki/sources/substack-rss-event-horizon-2026-08-26-kalshi-football-season-data.md — TickerTracker volume
 - @osint-wiki/sources/substack-rss-event-horizon-2026-08-28-ninth-circuit-kalshi-sports.md — 9th Circuit source of record
 - @sources/brief-k168-nfl-season-paper-rss-2026-08-31.md — operator steals
+- @sources/brief-k169-nfl-week1-ready-2026-08-31.md — Week-1 roster snapshot
 
 ## Raw Concept
 

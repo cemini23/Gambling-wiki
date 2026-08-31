@@ -23,6 +23,7 @@ related:
   - sweeps/2026-06-20-tier2-w8-nfl.md
   - sources/brief-k222-k231-pm-retail-awareness-2026-08.md
   - sources/daily-digest-rss-nfl-week0-2026-08-31.md
+  - sources/brief-k169-nfl-week1-ready-2026-08-31.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-08-31
@@ -36,6 +37,7 @@ updated: 2026-08-31
 - @sources/web-dfs-hero-nfl-gpp-strategy-2026-06-20.md — K124 FanDuel-relevant GPP playbook
 - @sources/brief-k222-k231-pm-retail-awareness-2026-08.md — Predicts sports → Crypto.com (Q2 2026)
 - @sources/daily-digest-rss-nfl-week0-2026-08-31.md — NFL official betting partner (with DK / Fanatics)
+- @sources/brief-k169-nfl-week1-ready-2026-08-31.md — Week-1 DFS: Jacobs / Charbonnet / Tyson out; Nacua Q
 
 ## Raw Concept
 
@@ -71,6 +73,10 @@ Q2: sports/novelties on **Predicts** move to **Crypto.com**; CME retained for fi
 5. **Flex** — RB often best on half-PPR; **avoid TE in flex** for GPP ceiling
 6. **Salary** — leave ≤ $500 on table
 7. **MME (150 max)** — 3 game environments × both QBs; 5–10 RBs; 15–30 WRs; 4–6 TEs; 4–8 DST; max 2 off-stack players per team
+
+### Week 1 2026 DFS notes (K169)
+
+Do not treat **Jacobs**, **Charbonnet**, or **Tyson** as starters. Price **Lloyd / Brooks / Kaleb Johnson** (GB), **Jadarian Price** + Holani (SEA vs NE Wed 9/9), and **Olave** as NO WR1. **Nacua** is Questionable for Melbourne TNF 9/10 — wait T-90. Stokastic = member CSV only; do not scrape Sims HTML. Hub: `@sources/brief-k169-nfl-week1-ready-2026-08-31.md`.
 
 ### Bankroll
 

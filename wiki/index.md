@@ -40,7 +40,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [dfs-pipeline-integration-spec](concepts/dfs-pipeline-integration-spec.md) | draft | CSV schema, script backlog |
 | [dfs-foss-tooling-landscape](concepts/dfs-foss-tooling-landscape.md) | draft | FOSS eval, build vs borrow |
 | [dfs-weather-adjustments](concepts/dfs-weather-adjustments.md) | draft | Wind/dome thresholds + OSINT weather API stack |
-| [dfs-injury-and-news-workflow](concepts/dfs-injury-and-news-workflow.md) | draft | Q/D/O, late swap |
+| [dfs-injury-and-news-workflow](concepts/dfs-injury-and-news-workflow.md) | draft | Q/D/O, late swap; RotoWire RSS GO |
 | [dfs-model-orchestration](concepts/dfs-model-orchestration.md) | draft | Weekly run, manifest |
 | [dfs-paid-tool-methodologies](concepts/dfs-paid-tool-methodologies.md) | draft | Paid DFS tool feature map and build-vs-buy notes |
 | [diy-nfl-dfs-model-architecture](concepts/diy-nfl-dfs-model-architecture.md) | draft | Source→projection→optimizer blueprint for a DIY NFL model |
@@ -351,6 +351,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [daily-digest-batch-k168-2026-08-31](sources/daily-digest-batch-k168-2026-08-31.md) | skimmed | K168 batch (3 REFERENCE + RSS) |
 | [brief-k168-nfl-season-paper-rss-2026-08-31](sources/brief-k168-nfl-season-paper-rss-2026-08-31.md) | deep-read | K168 NFL Week-0 steals (wont_wire) |
 | [daily-digest-rss-nfl-week0-2026-08-31](sources/daily-digest-rss-nfl-week0-2026-08-31.md) | read | Injury PM, 9th Circuit, participation pull |
+| [brief-k169-nfl-week1-ready-2026-08-31](sources/brief-k169-nfl-week1-ready-2026-08-31.md) | deep-read | K169 Week-1 roster hub + RSS wire |
 | [brief-k239-kalshi-sports-mention-2026-08-15](sources/brief-k239-kalshi-sports-mention-2026-08-15.md) | read | K239 sports mention markets gone + WA geofence |
 | [brief-k240-kalshi-nv-geofence-2026-08-17](sources/brief-k240-kalshi-nv-geofence-2026-08-17.md) | read | K240 NV $120k/day + optional-update geofence |
 | [brief-k242-eh-pm-ban-onshore-2026-08-19](sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md) | read | K242 WA geofence day; ban ≠ offshore |

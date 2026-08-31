@@ -14,10 +14,11 @@ related:
   - entities/tools/pydfs-lineup-optimizer.md
   - entities/tools/fantasylabs-dfs.md
   - sources/web-dfs-hero-nfl-gpp-strategy-2026-06-20.md
+  - sources/brief-k169-nfl-week1-ready-2026-08-31.md
   - sweeps/2026-06-20-tier2-w8-nfl.md
 maturity: validated
 created: 2026-06-20
-updated: 2026-06-20
+updated: 2026-08-31
 ---
 
 ## Relations
@@ -26,6 +27,7 @@ updated: 2026-06-20
 - @entities/tools/pydfs-lineup-optimizer.md — FOSS lineup gen fed by Stokastic CSV export
 - @entities/tools/fantasylabs-dfs.md — alternate paid tool
 - @concepts/dfs-strategy-overview.md — GPP / ownership framework
+- @sources/brief-k169-nfl-week1-ready-2026-08-31.md — Week-1: CSV export only; do not scrape Sims HTML
 
 ## Raw Concept
 

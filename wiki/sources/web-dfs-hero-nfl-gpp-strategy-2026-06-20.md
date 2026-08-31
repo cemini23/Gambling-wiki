@@ -13,10 +13,11 @@ related:
   - concepts/bankroll-management.md
   - sources/web-tech-insider-nfl-betting-strategy-2026-06-20.md
   - sweeps/2026-06-20-tier2-w8-nfl.md
+  - sources/brief-k169-nfl-week1-ready-2026-08-31.md
 maturity: validated
 read_status: deep-read
 created: 2026-06-20
-updated: 2026-06-20
+updated: 2026-08-31
 ---
 
 ## Relations
@@ -24,6 +25,7 @@ updated: 2026-06-20
 - @concepts/dfs-strategy-overview.md — NFL GPP synthesis home
 - @entities/platforms/fanduel.md — half-PPR flex note applies to FanDuel NFL
 - @sweeps/2026-06-20-tier2-w8-nfl.md — K124 tier-2 sweep
+- @sources/brief-k169-nfl-week1-ready-2026-08-31.md — Week-1 GPP process still this playbook; skip YouTube pick shows
 
 ## Raw Concept
 

@@ -44,6 +44,7 @@ related:
   - sources/arxiv-2604.27865-kellybench-2026-08-31.md
   - sources/daily-digest-rss-nfl-week0-2026-08-31.md
   - sources/brief-k168-nfl-season-paper-rss-2026-08-31.md
+  - sources/brief-k169-nfl-week1-ready-2026-08-31.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-08-31
@@ -65,6 +66,7 @@ updated: 2026-08-31
 - @sources/arxiv-2604.27865-kellybench-2026-08-31.md — LLM betting agents lose (EPL); no Week-1 chatbot tickets
 - @sources/daily-digest-rss-nfl-week0-2026-08-31.md — injury/participation PM + 9th Circuit + NFL book partners
 - @sources/brief-k168-nfl-season-paper-rss-2026-08-31.md — Week-0 operator rules
+- @sources/brief-k169-nfl-week1-ready-2026-08-31.md — Week-1 roster snapshot + RSS wire
 
 ## Raw Concept
 
@@ -149,6 +151,10 @@ Sharp (Hirsch, 2026-08-13): **Taylor Under 1224.5 rush yards (-105)** and **Hubb
 - **Do not** use an LLM to pick NFL sides. KellyBench agents lost money across an EPL season; same pattern as K160 WC agents. Hub: `@sources/arxiv-2604.27865-kellybench-2026-08-31.md`.
 - Kalshi **game** contracts inside a week are near-calibrated (slopes 0.90–1.10). **Season-long** PM futures are not (slope 1.74 past one month). Hub: `@sources/arxiv-2602.19520-pm-domain-calibration-2026-08-31.md`.
 - Polymarket pulled NFL **player-participation** filings after CFTC/NFL pressure. Skip will-play markets as a props substitute. Hub: `@sources/daily-digest-rss-nfl-week0-2026-08-31.md`.
+
+### Week 1 2026 (K169) [CONFIRMED 2026-08-31]
+
+Kickoff **Wed 2026-09-09** SEA vs NE. Do not price **Jacobs** (Commissioner’s Exempt), **Charbonnet** (PUP), **Tyson** (IR-R), or **Parsons** (PUP, miss first 4) as Week-1 starters. **Nacua** and **Donald** are Melbourne TNF questions — wait NFL.com inactives. Hub: `@sources/brief-k169-nfl-week1-ready-2026-08-31.md`.
 
 ### Open-source ML note
 

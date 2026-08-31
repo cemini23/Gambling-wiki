@@ -19,9 +19,10 @@ related:
   - sweeps/2026-06-20-tier2-w8-nfl.md
   - concepts/daily-edge-card.md
   - entities/tools/the-odds-api.md
+  - sources/brief-k169-nfl-week1-ready-2026-08-31.md
 maturity: validated
 created: 2026-06-20
-updated: 2026-08-15
+updated: 2026-08-31
 ---
 
 ## Relations
@@ -30,6 +31,7 @@ updated: 2026-08-15
 - @sources/web-sportsbookreview-hard-rock-bet-2026-06-20.md — Phase-0 deep-read (K124)
 - @concepts/line-shopping-and-clv.md — log open/close on primary handle
 - @entities/tools/the-odds-api.md — live `hardrockbet_fl` / `hardrockbet` prices (not a scraper)
+- @sources/brief-k169-nfl-week1-ready-2026-08-31.md — Week-1: Donald snaps TBD; no LLM tickets
 
 ## Raw Concept
 
@@ -72,6 +74,10 @@ Bonus bets are **not withdrawable** — effective -EV unless deployed at +CLV li
 ### Classification
 
 Retail **soft book** — @concepts/sharp-vs-soft-books.md same class as DraftKings/FanDuel.
+
+### Week 1 2026 (K169)
+
+Keep **multiplicative de-vig**. No chatbot tickets. **Aaron Donald** snaps for Melbourne TNF (Thu 9/10 vs SF) are unknown — two-game roster exemption expires **2026-09-11**. Hub: `@sources/brief-k169-nfl-week1-ready-2026-08-31.md`.
 
 ## Snippets
 
