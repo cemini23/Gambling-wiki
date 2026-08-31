@@ -4,6 +4,10 @@
 Discovery-only: list recent items in the sweep report. Does not write inbox
 files or fetch article bodies (OSINT Substack poller already dumps EH / Closing
 Line / Outlier into the OSINT inbox with cross_wiki: gambling-wiki).
+
+Presence of this file is the federation-sync guard: OSINT
+`sync_federation_digest_bundle.sh` will not overwrite
+`daily_research_digest_run.py` while this module exists.
 """
 
 from __future__ import annotations

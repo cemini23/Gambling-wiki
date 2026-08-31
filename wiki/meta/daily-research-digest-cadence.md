@@ -109,11 +109,11 @@ K93 federated install: morning **discovery-only** loop for sports betting, PM re
 
 | Field | Value |
 |-------|-------|
-| **Cadence** | Daily @ 08:15 local (`com.cemini.daily-research-digest.gambling`) |
+| **Cadence** | Daily @ 08:19 local (`com.cemini.daily-research-digest.gambling`) |
 | **Installed** | 2026-06-01 (K93 brief) |
-| **Last run** | 2026-08-31 (local RSS + 6-month paper hunt; LaunchAgent still paper-only)
+| **Last run** | 2026-08-31 (K169 local RSS). Morning LaunchAgent uses **repo** `scripts/daily_research_digest_run.py` (RSS on). |
 | **Fetch sources** | arXiv PDFs → inbox (sparse). **RSS/Atom** practitioner + industry + GitHub releases → sweep rows `S1`… (2026-08-14). OpenReview unused while `paper_mode: arxiv-only`. |
-| **Script** | `~/bin/cemini-daily-research-digest-gambling` → `scripts/daily_research_digest_run.py` |
+| **Script** | `~/bin/cemini-daily-research-digest-gambling` → **`${WIKI_ROOT}/scripts/daily_research_digest_run.py`** (`rss.enabled: true`). Frozen `~/.cemini/launchagent/osint/` copy is fallback only. |
 | **Deps** | `wiki_source_index.py` + `rss_digest.py` (required alongside digest runner) |
 | **Config** | `scripts/daily_research_config.yaml` (`paper_queries`, `rss.feeds`; Exa news off) |
 | **Report** | `wiki/sweeps/YYYY-MM-DD-daily.md` |
@@ -163,8 +163,16 @@ Also: Kalshi/PM retail, sports betting +EV/CLV, World Cup 2026 cross-venue (cros
 ### LaunchAgent
 
 ```bash
-launchctl load ~/Library/LaunchAgents/com.cemini.daily-research-digest.gambling.plist
+launchctl print "gui/$(id -u)/com.cemini.daily-research-digest.gambling"
 ```
+
+Reload after wrapper edits (from **OSINT**, not this repo):
+
+```bash
+bash "/Users/claudiobarone/Projects/OSINT WORKSPACE/scripts/reinstall_morning_launchagents.sh"
+```
+
+That reinstall copies wrappers from OSINT. It **skips** this wiki's `daily_research_digest_run.py` because `scripts/rss_digest.py` is present. Do **not** run `sync_federation_digest_bundle.sh` from this repo.
 
 Manual run from repo root:
 
@@ -172,9 +180,9 @@ Manual run from repo root:
 python3 scripts/daily_research_digest_run.py
 ```
 
-### RSS LaunchAgent gap (2026-08-18)
+### RSS LaunchAgent (fixed 2026-08-31)
 
-The installed LaunchAgent payload does **not** run the RSS lane: `~/Library/LaunchAgents/com.cemini.daily-research-digest.gambling.plist` → `~/bin/cemini-daily-research-digest-gambling` → `~/.cemini/launchagent/osint/daily_research_digest_run.py`, which has **zero** `rss` matches. The repo-local `scripts/daily_research_digest_run.py` **does** (config `rss.enabled: true`). Sweeps 2026-08-15…18 carry no RSS section; 08-14 RSS worked because that morning ran the local script. **Action:** morning jobs stay paper-only until OSINT merges RSS into the **canonical OSINT** runner + `PY_BUNDLE` and reinstalls — do **not** run `sync_federation_digest_bundle.sh` from this repo (it would overwrite gambling's local RSS runner).
+Morning jobs run this wiki's RSS-capable runner. Wrapper prefers `${WIKI_ROOT}/scripts/daily_research_digest_run.py` over `~/.cemini/launchagent/osint/daily_research_digest_run.py` (paper-only). Federation sync from OSINT leaves the local RSS runner in place.
 
 ## Snippets
 

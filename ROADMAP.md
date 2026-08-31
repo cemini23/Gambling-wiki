@@ -99,7 +99,7 @@ Steps:
 - [ ] Preseason live-slate runs with FanDuel salary exports + calibration briefs in `../CeminiDFS/briefs/`
 - [ ] Operator YouTube / free-guide ingest batch (NFL betting + FD DFS methodology) — **K169 skip:** same as W8; do not ingest DFS Army / Club Fantasy week tapes
 
-**Digest note:** W9 CeminiDFS, W8 NFL, W6 poker, and **W10 K147 pick'em** are in `active_topics`. **RSS lane (2026-08-14)** is the seasonal primary (practitioner/industry/GitHub); arXiv stays for poker/game-theory. Exa news remains off. **K168 (2026-08-31):** 14-day paper lane empty; 6-month hunt filed 3 REFERENCE papers + Week-0 RSS. **K169 (2026-08-31):** 6 injury/roster feeds wired; Week-0 roster brief is the first slate hub until Sep 9 prefetch.
+**Digest note:** W9 CeminiDFS, W8 NFL, W6 poker, and **W10 K147 pick'em** are in `active_topics`. **RSS lane (2026-08-14)** is the seasonal primary (practitioner/industry/GitHub); arXiv stays for poker/game-theory. Exa news remains off. **K168 (2026-08-31):** 14-day paper lane empty; 6-month hunt filed 3 REFERENCE papers + Week-0 RSS. **K169 (2026-08-31):** 6 injury/roster feeds wired; Week-0 roster brief is the first slate hub until Sep 9 prefetch. Morning LaunchAgent now runs the **repo** RSS runner (`com.cemini.daily-research-digest.gambling` @ 08:19).
 
 ### W10 — K147 DIY NFL pick'em / props tool (active 2026-07-05)
 

@@ -1,5 +1,11 @@
 # Wiki operations log
 
+## [2026-08-31] ops | RSS LaunchAgent uses repo runner (K169 follow-on)
+
+- `~/bin/cemini-daily-research-digest-gambling` now prefers `${WIKI_ROOT}/scripts/daily_research_digest_run.py` (RSS on). Frozen `~/.cemini/launchagent/osint/` copy stays paper-only fallback.
+- OSINT `sync_federation_digest_bundle.sh` skips `daily_research_digest_run.py` when `scripts/rss_digest.py` is present. Run that sync from OSINT only.
+- Agent `com.cemini.daily-research-digest.gambling` is loaded @ 08:19. Next morning job writes RSS rows without a manual local run.
+
 ## [2026-08-31] ingest | K169 NFL Week-1 ready (RSS + roster)
 
 - Wired 6 RSS feeds in `scripts/daily_research_config.yaml`: RotoWire NFL, ProFootballRumors, CBS NFL (roster filter), PFF (no CFB), Read Optional, DK Playbook (NFL-only). Loosened PFT include-list. RotoBaller/Sharp ranking mills stay discovery-only.
