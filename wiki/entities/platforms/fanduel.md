@@ -22,9 +22,10 @@ related:
   - sources/web-tech-insider-nfl-betting-strategy-2026-06-20.md
   - sweeps/2026-06-20-tier2-w8-nfl.md
   - sources/brief-k222-k231-pm-retail-awareness-2026-08.md
+  - sources/daily-digest-rss-nfl-week0-2026-08-31.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-08-15
+updated: 2026-08-31
 ---
 
 ## Relations
@@ -34,6 +35,7 @@ updated: 2026-08-15
 - @concepts/dfs-strategy-overview.md — NFL GPP framework
 - @sources/web-dfs-hero-nfl-gpp-strategy-2026-06-20.md — K124 FanDuel-relevant GPP playbook
 - @sources/brief-k222-k231-pm-retail-awareness-2026-08.md — Predicts sports → Crypto.com (Q2 2026)
+- @sources/daily-digest-rss-nfl-week0-2026-08-31.md — NFL official betting partner (with DK / Fanatics)
 
 ## Raw Concept
 

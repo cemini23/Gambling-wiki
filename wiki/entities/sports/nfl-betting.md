@@ -39,9 +39,14 @@ related:
   - sources/rotoviz-preseason-paywall-2026-08-14.md
   - sources/daily-digest-rss-industry-2026-08-14.md
   - concepts/free-slate-context.md
+  - sources/arxiv-2604.17194-odds-conversion-emh-2026-08-31.md
+  - sources/arxiv-2602.19520-pm-domain-calibration-2026-08-31.md
+  - sources/arxiv-2604.27865-kellybench-2026-08-31.md
+  - sources/daily-digest-rss-nfl-week0-2026-08-31.md
+  - sources/brief-k168-nfl-season-paper-rss-2026-08-31.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-08-15
+updated: 2026-08-31
 ---
 
 ## Relations
@@ -55,6 +60,11 @@ updated: 2026-08-15
 - @sources/rotoviz-preseason-paywall-2026-08-14.md — OL/target-share/ADP titles (paywalled)
 - @sources/daily-digest-rss-industry-2026-08-14.md — DKeX football contracts + Colorado deposit cap
 - @concepts/free-slate-context.md — Open-Meteo wind/precip for outdoor totals
+- @sources/arxiv-2604.17194-odds-conversion-emh-2026-08-31.md — keep multiplicative de-vig on the Hard Rock card
+- @sources/arxiv-2602.19520-pm-domain-calibration-2026-08-31.md — Kalshi sports prices near-calibrated inside a week; futures compressed
+- @sources/arxiv-2604.27865-kellybench-2026-08-31.md — LLM betting agents lose (EPL); no Week-1 chatbot tickets
+- @sources/daily-digest-rss-nfl-week0-2026-08-31.md — injury/participation PM + 9th Circuit + NFL book partners
+- @sources/brief-k168-nfl-season-paper-rss-2026-08-31.md — Week-0 operator rules
 
 ## Raw Concept
 
@@ -133,6 +143,12 @@ Sharp (Hirsch, 2026-08-13): **Taylor Under 1224.5 rush yards (-105)** and **Hubb
 - Markets overreact to early TDs; slow starts can improve live unders
 - Do not size live bets larger than pre-game unit — set rules before kickoff
 - **In-game win probability models** (K137 — @sources/arxiv-2607.00164-verifiable-rewards-calibrated-forecasting-2026-07-03.md): public-state WP can match market **calibration** (ECE ~0.027–0.029) without implying +EV — residual market edge is **live information** beyond shared feeds. Benchmark vs closing in-game line; keep **CLV** separate from Brier/ECE checks
+
+### Week-0 2026 (K168) [CONFIRMED papers; TENTATIVE LSR titles]
+
+- **Do not** use an LLM to pick NFL sides. KellyBench agents lost money across an EPL season; same pattern as K160 WC agents. Hub: `@sources/arxiv-2604.27865-kellybench-2026-08-31.md`.
+- Kalshi **game** contracts inside a week are near-calibrated (slopes 0.90–1.10). **Season-long** PM futures are not (slope 1.74 past one month). Hub: `@sources/arxiv-2602.19520-pm-domain-calibration-2026-08-31.md`.
+- Polymarket pulled NFL **player-participation** filings after CFTC/NFL pressure. Skip will-play markets as a props substitute. Hub: `@sources/daily-digest-rss-nfl-week0-2026-08-31.md`.
 
 ### Open-source ML note
 

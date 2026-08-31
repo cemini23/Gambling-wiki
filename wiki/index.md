@@ -345,6 +345,12 @@ Catalog of all wiki pages. Updated on each ingest.
 | [arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18](sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md) | skimmed | SFP-MFG continuous FP theory shelf (REFERENCE, wont_wire) |
 | [daily-digest-batch-k167-2026-08-18](sources/daily-digest-batch-k167-2026-08-18.md) | skimmed | K167 batch (1 REFERENCE) |
 | [brief-k167-sfp-mfg-shelf-2026-08-18](sources/brief-k167-sfp-mfg-shelf-2026-08-18.md) | deep-read | K167 SFP-MFG theory shelf (wont_wire) |
+| [arxiv-2604.17194-odds-conversion-emh-2026-08-31](sources/arxiv-2604.17194-odds-conversion-emh-2026-08-31.md) | skimmed | OO-EPC / FL-GLM de-vig (soccer; REFERENCE) |
+| [arxiv-2602.19520-pm-domain-calibration-2026-08-31](sources/arxiv-2602.19520-pm-domain-calibration-2026-08-31.md) | skimmed | Kalshi sports calibration by horizon (REFERENCE) |
+| [arxiv-2604.27865-kellybench-2026-08-31](sources/arxiv-2604.27865-kellybench-2026-08-31.md) | skimmed | LLM betting agents lose (EPL; REFERENCE) |
+| [daily-digest-batch-k168-2026-08-31](sources/daily-digest-batch-k168-2026-08-31.md) | skimmed | K168 batch (3 REFERENCE + RSS) |
+| [brief-k168-nfl-season-paper-rss-2026-08-31](sources/brief-k168-nfl-season-paper-rss-2026-08-31.md) | deep-read | K168 NFL Week-0 steals (wont_wire) |
+| [daily-digest-rss-nfl-week0-2026-08-31](sources/daily-digest-rss-nfl-week0-2026-08-31.md) | read | Injury PM, 9th Circuit, participation pull |
 | [brief-k239-kalshi-sports-mention-2026-08-15](sources/brief-k239-kalshi-sports-mention-2026-08-15.md) | read | K239 sports mention markets gone + WA geofence |
 | [brief-k240-kalshi-nv-geofence-2026-08-17](sources/brief-k240-kalshi-nv-geofence-2026-08-17.md) | read | K240 NV $120k/day + optional-update geofence |
 | [brief-k242-eh-pm-ban-onshore-2026-08-19](sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md) | read | K242 WA geofence day; ban ≠ offshore |
@@ -409,6 +415,7 @@ Catalog of all wiki pages. Updated on each ingest.
 - [Daily digest RSS industry 2026-08-14](sources/daily-digest-rss-industry-2026-08-14.md) — DKeX football + COMBOS; CFTC/NY; Colorado deposit cap
 - [Sharp NFL RB prop unders 2026-08-13](sources/sharp-nfl-rb-prop-unders-2026-08-13.md) — Taylor/Hubbard season-long rush unders
 - [RotoViz preseason paywall 2026-08-14](sources/rotoviz-preseason-paywall-2026-08-14.md) — S18–S22 members-only
+- [Daily digest RSS NFL week-0 2026-08-31](sources/daily-digest-rss-nfl-week0-2026-08-31.md) — injury PM, 9th Circuit, participation pull
 - [Event Horizon — Novig responsible trading](sources/substack-rss-event-horizon-2026-08-13-novig-responsible-trading.md) — cross-wiki stub — `cross-wiki`
 - [Briefs K222–K231 PM retail](sources/brief-k222-k231-pm-retail-awareness-2026-08.md) — 15-min / Utah / FlightAware / NY tax / ForecastEx
 - [Brief K271 REDAgentBench](sources/brief-k271-redagentbench-arena-eval-2026-08-12.md) — arena eval hygiene — `poker`

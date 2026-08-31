@@ -14,9 +14,11 @@ related:
   - entities/platforms/pinnacle.md
   - concepts/free-slate-context.md
   - entities/tools/the-odds-api.md
+  - sources/arxiv-2604.17194-odds-conversion-emh-2026-08-31.md
+  - sources/brief-k168-nfl-season-paper-rss-2026-08-31.md
 maturity: draft
 created: 2026-08-15
-updated: 2026-08-15
+updated: 2026-08-31
 ---
 
 ## Relations
@@ -27,6 +29,8 @@ updated: 2026-08-15
 - @entities/platforms/hard-rock-bet.md — target book (soft); never treat as fair
 - @concepts/free-slate-context.md — Open-Meteo + MLB pitchers for unders tickets (not EV)
 - @entities/tools/the-odds-api.md — optional live dump; CSV is still the card
+- @sources/arxiv-2604.17194-odds-conversion-emh-2026-08-31.md — keep multiplicative for Week 1
+- @sources/brief-k168-nfl-season-paper-rss-2026-08-31.md — NFL Week-0 steals
 
 ## Raw Concept
 
@@ -62,6 +66,8 @@ python scripts/daily_edge_card.py --fetch-odds-api --odds-sport americanfootball
 5. **BET / WATCH / PASS** — lottery SGPs stay off this card
 
 `fair_p` is **market_fair_p**, not “true” win probability. Tiny edges are often timestamp noise.
+
+K168 (arXiv 2604.17194): multiplicative de-vig assumes equal expected loss per side and fights FLB. **Keep this converter for NFL Week 1.** OO-EPC is a later paired two-way test, not a silent swap. Hub: `@sources/arxiv-2604.17194-odds-conversion-emh-2026-08-31.md`.
 
 ### Operator loop
 

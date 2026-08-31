@@ -32,9 +32,10 @@ related:
   - concepts/world-cup-pm-retail-hygiene.md
   - sources/brief-k148-agent-framework-pm-betting-steals-2026-07-06.md
   - sources/arxiv-2604.21851-betting-on-bets-stochastic-dominance-2026-07-06.md
+  - sources/arxiv-2604.27865-kellybench-2026-08-31.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-07-06
+updated: 2026-08-31
 ---
 
 ## Relations

@@ -20,9 +20,10 @@ related:
   - concepts/world-cup-pm-retail-hygiene.md
   - sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md
   - sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md
+  - sources/arxiv-2604.17194-odds-conversion-emh-2026-08-31.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-07-21
+updated: 2026-08-31
 ---
 
 ## Relations
@@ -34,6 +35,7 @@ updated: 2026-07-21
 - @concepts/daily-edge-card.md — de-vig reference before ranking Hard Rock
 - @entities/platforms/pinnacle.md — low-hold reference book
 - @sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md — K160 vig-removed 1X2 market baseline (~1.05 overround)
+- @sources/arxiv-2604.17194-odds-conversion-emh-2026-08-31.md — OO-EPC vs multiplicative de-vig (soccer panel; do not swap NFL card yet)
 
 ## Raw Concept
 

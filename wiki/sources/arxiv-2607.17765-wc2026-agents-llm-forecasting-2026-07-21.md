@@ -16,10 +16,11 @@ related:
   - sources/brief-k160-wc2026-agents-market-baseline-steals-2026-07-21.md
   - sources/daily-digest-batch-k160-2026-07-21.md
   - sweeps/2026-07-21-daily.md
+  - sources/arxiv-2604.27865-kellybench-2026-08-31.md
 maturity: validated
 read_status: deep-read
 created: 2026-07-21
-updated: 2026-07-21
+updated: 2026-08-31
 location: cemini-egress-fi:/opt/cemini-bulk/research/gambling/arxiv-2607.17765-fifa-world-cup-2026-as-a-contamination-free-benc.pdf
 phase_0_verdict: GO 2026-07-21 — graphuofm/FIFA2026LLM MIT code + CC BY 4.0 data; ~3.5MB shallow
 ---
@@ -31,6 +32,7 @@ phase_0_verdict: GO 2026-07-21 — graphuofm/FIFA2026LLM MIT code + CC BY 4.0 da
 - @concepts/favorite-longshot-bias.md — favorites over-performed; fade-market loses
 - @concepts/gambling-bot-architecture.md — search–act–reflect + market settlement template
 - @concepts/poker-hl-analyst-loop.md — calibration vs decision vs self-knowledge axes (light)
+- @sources/arxiv-2604.27865-kellybench-2026-08-31.md — EPL LLM betting agents also lose (K168)
 
 ## Raw Concept
 

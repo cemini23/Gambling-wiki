@@ -1,5 +1,22 @@
 # Wiki operations log
 
+## [2026-08-31] ingest | K168 NFL season paper + RSS
+
+- Overnight paper lane **0 new PDFs** (08-19…08-31 LaunchAgent hits were K167 poker/MFG dupes). Local RSS digest run (RotoViz 403).
+- **6-month arXiv hunt** (not in 14-day window): 3 REFERENCE papers archived to egress-fi
+  - **2604.17194** OO-EPC / FL-GLM odds conversion (soccer 1X2) — keep multiplicative de-vig on the Hard Rock card
+  - **2602.19520** Kalshi/PM domain calibration — NFL game-week prices near-calibrated; month-plus futures compressed
+  - **2604.27865** KellyBench — frontier LLMs lose money in EPL betting; no Week-1 chatbot tickets
+- **RSS:** EH injury/football-volume/9th Circuit via OSINT bodies; Polymarket participation pull (ESPN); LSR 403 titles
+- Dual-ID: gambling digest K168 ≠ OSINT K168 (Jul 15 GitHub revenue-eval)
+- Phase-1: `wont_wire`. No FOSS clone into prod. No pm scp. No Hard Rock auto-bet
+- Sweep `2026-08-31` → INGESTED (K168); `08-19`…`08-30` → INGESTED-empty (paper dupes)
+
+## [2026-08-20] cross-wiki brief | CS2 / Roblox grey cashout analog
+
+- Brief `briefs/2026-08-20_cs2-roblox-grey-cashout.md` from OSINT Gemini DR / GTA 6 ingest. Skins + DevEx machines; not a Kalshi/PM product. **No pm scp.**
+- OSINT canon: `@osint-wiki/concepts/grey-market-game-economies.md`.
+
 ## [2026-08-20] ingest | K243 EH GOP-underdog comms tail risk
 
 - Wiki source stub `@sources/brief-k243-eh-pm-republican-comms-2026-08-20.md` from OSINT Event Horizon 2026-08-20. Dual-ID: OSINT K243 ≠ ACEM / CCC K243.

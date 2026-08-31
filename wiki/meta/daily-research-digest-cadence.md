@@ -72,9 +72,16 @@ related:
   - sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md
   - sources/daily-digest-batch-k167-2026-08-18.md
   - sources/brief-k167-sfp-mfg-shelf-2026-08-18.md
+  - sources/arxiv-2604.17194-odds-conversion-emh-2026-08-31.md
+  - sources/arxiv-2602.19520-pm-domain-calibration-2026-08-31.md
+  - sources/arxiv-2604.27865-kellybench-2026-08-31.md
+  - sources/daily-digest-batch-k168-2026-08-31.md
+  - sources/brief-k168-nfl-season-paper-rss-2026-08-31.md
+  - sources/daily-digest-rss-nfl-week0-2026-08-31.md
+  - sweeps/2026-08-31-daily.md
 maturity: validated
 created: 2026-06-01
-updated: 2026-08-18
+updated: 2026-08-31
 ---
 
 ## Relations
@@ -86,6 +93,9 @@ updated: 2026-08-18
 - @sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md — K167 SFP-MFG shelf (REFERENCE)
 - @sources/daily-digest-batch-k167-2026-08-18.md — K167 batch (1 REFERENCE)
 - @sources/brief-k167-sfp-mfg-shelf-2026-08-18.md — K167 shelf brief (wont_wire)
+- @sources/daily-digest-batch-k168-2026-08-31.md — K168 NFL-season papers (3 REFERENCE)
+- @sources/daily-digest-rss-nfl-week0-2026-08-31.md — K168 RSS (injury PM / 9th Circuit)
+- @sources/brief-k168-nfl-season-paper-rss-2026-08-31.md — K168 NFL Week-0 steals
 
 ## Raw Concept
 
@@ -97,7 +107,7 @@ K93 federated install: morning **discovery-only** loop for sports betting, PM re
 |-------|-------|
 | **Cadence** | Daily @ 08:15 local (`com.cemini.daily-research-digest.gambling`) |
 | **Installed** | 2026-06-01 (K93 brief) |
-| **Last run** | 2026-08-19 |
+| **Last run** | 2026-08-31 (local RSS + 6-month paper hunt; LaunchAgent still paper-only)
 | **Fetch sources** | arXiv PDFs → inbox (sparse). **RSS/Atom** practitioner + industry + GitHub releases → sweep rows `S1`… (2026-08-14). OpenReview unused while `paper_mode: arxiv-only`. |
 | **Script** | `~/bin/cemini-daily-research-digest-gambling` → `scripts/daily_research_digest_run.py` |
 | **Deps** | `wiki_source_index.py` + `rss_digest.py` (required alongside digest runner) |

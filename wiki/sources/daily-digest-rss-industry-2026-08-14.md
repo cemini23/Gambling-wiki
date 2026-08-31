@@ -15,10 +15,11 @@ related:
   - entities/sports/nfl-betting.md
   - sources/substack-rss-event-horizon-2026-08-13-novig-responsible-trading.md
   - sources/brief-k222-k231-pm-retail-awareness-2026-08.md
+  - sources/daily-digest-rss-nfl-week0-2026-08-31.md
 maturity: validated
 read_status: read
 created: 2026-08-14
-updated: 2026-08-15
+updated: 2026-08-31
 ---
 
 ## Relations
@@ -30,6 +31,7 @@ updated: 2026-08-15
 - @concepts/kalshi-michigan-sports-injunction-2026-06.md — same preemption fight, NY chapter
 - @osint-wiki/concepts/prediction-market-regulation-2026.md — OSINT regulation hub (CFTC/NY/Novig)
 - @sources/brief-k222-k231-pm-retail-awareness-2026-08.md — Aug 4–11 EH catch-up (Utah / 15-min / FlightAware)
+- @sources/daily-digest-rss-nfl-week0-2026-08-31.md — next RSS cluster (NFL week-0)
 
 ## Raw Concept
 

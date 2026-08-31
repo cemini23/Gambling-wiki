@@ -9,10 +9,11 @@ related:
   - sources/daily-digest-batch-k166-2026-08-12.md
   - sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md
   - sources/brief-k167-sfp-mfg-shelf-2026-08-18.md
+  - sources/daily-digest-batch-k168-2026-08-31.md
 maturity: validated
 read_status: skimmed
 created: 2026-08-18
-updated: 2026-08-18
+updated: 2026-08-31
 ---
 
 ## Relations
@@ -20,6 +21,7 @@ updated: 2026-08-18
 - @sweeps/2026-08-18-daily.md — overnight fetch (1 PDF)
 - @sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md — REFERENCE SFP-MFG theory shelf
 - @sources/brief-k167-sfp-mfg-shelf-2026-08-18.md — operator shelf brief
+- @sources/daily-digest-batch-k168-2026-08-31.md — next digest (NFL papers)
 - @sources/daily-digest-batch-k166-2026-08-12.md — prior FP literacy batch
 
 ## Raw Concept

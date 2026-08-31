@@ -15,9 +15,10 @@ related:
   - entities/platforms/underdog-fantasy.md
   - entities/tools/ceminidfs.md
   - sources/daily-digest-rss-industry-2026-08-14.md
+  - sources/daily-digest-rss-nfl-week0-2026-08-31.md
 maturity: draft
 created: 2026-07-05
-updated: 2026-08-14
+updated: 2026-08-31
 ---
 
 ## Relations
@@ -26,6 +27,7 @@ updated: 2026-08-14
 - @entities/tools/ceminidfs.md — BBM extension posture precedent (read-only overlay, no auto-submit)
 - @entities/platforms/underdog-fantasy.md — extension lessons §6–7; pick'em is separate DOM/ToS surface
 - @sources/daily-digest-rss-industry-2026-08-14.md — Colorado SB 26-131: prop ban stripped; 6-deposit cap
+- @sources/daily-digest-rss-nfl-week0-2026-08-31.md — NFL/CFTC hostility to injury-adjacent PM contracts
 
 ## Raw Concept
 

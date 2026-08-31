@@ -47,9 +47,11 @@ related:
   - sources/brief-k240-kalshi-nv-geofence-2026-08-17.md
   - sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md
   - sources/brief-k243-eh-pm-republican-comms-2026-08-20.md
+  - sources/arxiv-2602.19520-pm-domain-calibration-2026-08-31.md
+  - sources/daily-digest-rss-nfl-week0-2026-08-31.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-08-20
+updated: 2026-08-31
 ---
 
 ## Relations
@@ -70,6 +72,8 @@ updated: 2026-08-20
 - @sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md — K242 WA geofence day; ban ≠ offshore
 - @sources/brief-k243-eh-pm-republican-comms-2026-08-20.md — K243 GOP-underdog comms tail risk
 - @osint-wiki/sources/substack-rss-event-horizon-2026-08-19-pm-ban-onshore.md — K242 source of record
+- @sources/arxiv-2602.19520-pm-domain-calibration-2026-08-31.md — sports short-horizon calibration (K168)
+- @sources/daily-digest-rss-nfl-week0-2026-08-31.md — football volume, injury markets, 9th Circuit
 
 ## Raw Concept
 
@@ -170,6 +174,10 @@ Event Horizon / trader Caleb Davies: alleged **stream-botting** resolved a low-p
 ### Michigan sports-contract TRO (2026-06-29) [TENTATIVE]
 
 14-day injunction: no Michigan sports event contracts without sports-betting license; **$120k/day** geolocation fine. Hub: `@concepts/kalshi-michigan-sports-injunction-2026-06.md`.
+
+### NFL 2026 kickoff — volume, injury markets, 9th Circuit (K168) [CONFIRMED via OSINT EH]
+
+TickerTracker: weekday notional **>$1B** (was ~$25M Aug 2025). Football preseason 30× YoY but still a small share of incremental growth vs parlays/crypto. Kalshi listed Week-1 **will-play** markets; CFTC/NFL remain hostile to injury-adjacent contracts. Ninth Circuit 3-0: sports event contracts **likely not CEA swaps** — NV/CA access can flip; Hard Rock stays the W8 book. Sports PM **game** prices inside a week are near-calibrated; month-plus futures are compressed toward 50%. Hub: `@sources/daily-digest-rss-nfl-week0-2026-08-31.md`, `@sources/arxiv-2602.19520-pm-domain-calibration-2026-08-31.md`. **No pm scp.**
 
 ### Whale size-weighting bias (2026-07) [TENTATIVE]
 

@@ -48,9 +48,11 @@ related:
   - entities/bots/predict-raven.md
   - concepts/pm-structural-volatility.md
   - sources/brief-k222-k231-pm-retail-awareness-2026-08.md
+  - sources/arxiv-2602.19520-pm-domain-calibration-2026-08-31.md
+  - sources/daily-digest-rss-nfl-week0-2026-08-31.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-08-15
+updated: 2026-08-31
 ---
 
 ## Relations
@@ -60,6 +62,8 @@ updated: 2026-08-15
 - @entities/platforms/kalshi.md — cross-venue comparison
 - @osint-wiki/entities/platforms/polymarket.md — bots, LP rewards, CeminiSuite
 - @sources/brief-k222-k231-pm-retail-awareness-2026-08.md — Yankees / ATP distribution; 5-min crypto still listed Intl
+- @sources/arxiv-2602.19520-pm-domain-calibration-2026-08-31.md — sports slope ~1.06 on comparable bins
+- @sources/daily-digest-rss-nfl-week0-2026-08-31.md — NFL participation filings pulled 2026-08-26
 
 ## Raw Concept
 
@@ -72,6 +76,10 @@ Polymarket uses **USDC on-chain** settlement with off-chain order book. Sports, 
 ### Sports fees (R1, Mar 2026) [TENTATIVE]
 
 Probability-based **taker fee** on sports (per SI.com ingest): peak **~0.75%** effective at 50¢, tapering toward price extremes; **no taker fee on sells**; **maker fees** on filled limits. Category peaks differ (e.g. crypto up to ~1.8% per secondary summaries). US residents: **geo-blocked** post-CFTC settlement — legal US alternative often cited as Kalshi (`@entities/platforms/kalshi.md`).
+
+### NFL player-participation filings pulled (K168, 2026-08-26) [CONFIRMED]
+
+Polymarket US self-certified Week-1 **will-play** contracts (incl. Mahomes “at least one play”), then withdrew them the next day after CFTC asked operators to drop that class. NFL same week named DK/FanDuel/Fanatics as betting partners and listed injury-adjacent wagers as objectionable. **Do not** treat remaining start-QB templates as a props lane. Hub: `@sources/daily-digest-rss-nfl-week0-2026-08-31.md`.
 
 ### Fee reform timeline (K100, on-chain) [CONFIRMED]
 

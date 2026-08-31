@@ -22,9 +22,11 @@ related:
   - entities/tools/wc2026-agents.md
   - entities/sports/wnba-betting.md
   - sources/research-wnba-cold-streak-live-unders-2026-08-13.md
+  - sources/arxiv-2604.17194-odds-conversion-emh-2026-08-31.md
+  - sources/arxiv-2602.19520-pm-domain-calibration-2026-08-31.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-08-13
+updated: 2026-08-31
 ---
 
 ## Relations
@@ -35,6 +37,8 @@ updated: 2026-08-13
 - @osint-wiki/concepts/favorite-longshot-bias.md — Cemini PM trading monetization (Avellaneda-Stoikov, cross-venue)
 - @sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md — K160: favorites over-performed WC2026; fade-market lost for LLMs
 - @entities/sports/wnba-betting.md — both-under-5 last-2:00 longshot; need odds longer than fair after juice
+- @sources/arxiv-2602.19520-pm-domain-calibration-2026-08-31.md — Kalshi sports FLB is long-horizon (slope 1.74 past 1 month); game week is near-calibrated
+- @sources/arxiv-2604.17194-odds-conversion-emh-2026-08-31.md — FL-GLM fits one FLB parameter on soccer odds
 
 ## Raw Concept
 

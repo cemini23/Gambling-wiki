@@ -29,9 +29,10 @@ related:
   - sources/brief-k137-swe-interact-rlvr-nfl-steals-2026-07-03.md
   - concepts/daily-edge-card.md
   - entities/tools/the-odds-api.md
+  - sources/arxiv-2604.17194-odds-conversion-emh-2026-08-31.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-08-15
+updated: 2026-08-31
 ---
 
 ## Relations
@@ -41,6 +42,7 @@ updated: 2026-08-15
 - @entities/tools/momentum-odds.md — multi-book signal feed (also used for PM routing in @osint-wiki)
 - @concepts/daily-edge-card.md — P0 CLI: de-vig reference vs Hard Rock
 - @entities/tools/the-odds-api.md — licensed multi-book prices (free 500 credits/mo)
+- @sources/arxiv-2604.17194-odds-conversion-emh-2026-08-31.md — OO-EPC vs multiplicative de-vig
 
 ## Raw Concept
 

@@ -59,9 +59,11 @@ related:
   - sources/brief-k243-eh-pm-republican-comms-2026-08-20.md
   - @seo-wiki/concepts/outlier-weekly-issue3-world-cup-bot-notes.md
   - @seo-wiki/concepts/generative-engine-optimization.md
+  - sources/arxiv-2602.19520-pm-domain-calibration-2026-08-31.md
+  - sources/daily-digest-rss-nfl-week0-2026-08-31.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-08-20
+updated: 2026-08-31
 ---
 
 ## Relations
@@ -84,6 +86,8 @@ updated: 2026-08-20
 - @sources/brief-k240-kalshi-nv-geofence-2026-08-17.md — NV $120k/day + optional-update geofence
 - @sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md — WA geofence day; ban ≠ offshore
 - @sources/brief-k243-eh-pm-republican-comms-2026-08-20.md — GOP-underdog comms tail risk
+- @sources/arxiv-2602.19520-pm-domain-calibration-2026-08-31.md — Kalshi sports short-horizon calibration vs compressed futures
+- @sources/daily-digest-rss-nfl-week0-2026-08-31.md — injury markets, 9th Circuit, Polymarket participation pull
 
 ## Raw Concept
 
@@ -135,6 +139,8 @@ Retail: same checklist as Kalshi/PM — fees, settlement, bankroll. **Bot execut
 Also Aug: **Nevada GCB** moved to fine Kalshi **$120k/day** for missing its Aug 12 NV deadline; the full geofence works only after an **optional** app update (NV + MI) — treat as residency-spoof fragile, not hard venue-down. Hubs: `@sources/brief-k240-kalshi-nv-geofence-2026-08-17.md`, `@sources/brief-k239-kalshi-sports-mention-2026-08-15.md`. **2026-08-19** is the WA IP+residency geofence day; a US ban/limit is not assumed to move all volume offshore (`@sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md`).
 
 **K243 (2026-08-20):** a comms tail risk — if Republicans go into the midterms as underdogs, party-aligned comms could turn on prediction markets (and Polymarket's GOP skew) as an attack surface. Awareness only, no pm scp (`@sources/brief-k243-eh-pm-republican-comms-2026-08-20.md`).
+
+**K168 (2026-08-31):** Ninth Circuit says Kalshi sports contracts are likely not CEA swaps (NV/CA access risk). Polymarket pulled NFL will-play filings. Kalshi **game-week** sports prices are near-calibrated; **month-plus** futures are not. Hubs: `@sources/daily-digest-rss-nfl-week0-2026-08-31.md`, `@sources/arxiv-2602.19520-pm-domain-calibration-2026-08-31.md`.
 
 ### When to stay in traditional books
 

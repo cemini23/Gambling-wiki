@@ -13,10 +13,11 @@ related:
   - concepts/poker-hl-analyst-loop.md
   - concepts/custom-agent-methodology.md
   - sweeps/2026-07-21-daily.md
+  - sources/arxiv-2604.27865-kellybench-2026-08-31.md
 maturity: validated
 read_status: deep-read
 created: 2026-07-21
-updated: 2026-07-21
+updated: 2026-08-31
 cross-wiki-source: "briefs/2026-07-21_k160-wc2026-agents-market-baseline-steals.md"
 ---
 
@@ -41,3 +42,4 @@ K160 steals — **market-as-baseline**, **three-axis agent eval** (calibration /
 
 - @sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md
 - @entities/tools/wc2026-agents.md
+- @sources/arxiv-2604.27865-kellybench-2026-08-31.md

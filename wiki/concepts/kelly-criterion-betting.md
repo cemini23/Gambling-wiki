@@ -23,9 +23,11 @@ related:
   - concepts/pm-proper-scoring-clob-profitability.md
   - sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md
   - concepts/daily-edge-card.md
+  - sources/arxiv-2604.27865-kellybench-2026-08-31.md
+  - sources/brief-k168-nfl-season-paper-rss-2026-08-31.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-07-05
+updated: 2026-08-31
 ---
 
 ## Relations
@@ -37,6 +39,8 @@ updated: 2026-07-05
 - @concepts/favorite-longshot-bias.md — mis-estimated `p` breaks full-Kelly
 - @concepts/vig-and-hold.md — edge must exceed vig before Kelly applies
 - @concepts/prediction-markets-crossover.md — PM bot implementations in @osint-wiki
+- @sources/arxiv-2604.27865-kellybench-2026-08-31.md — LLM agents with a growth-rate objective still lose (EPL)
+- @sources/brief-k168-nfl-season-paper-rss-2026-08-31.md — no LLM tickets Week 1
 
 ## Raw Concept
 
