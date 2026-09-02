@@ -1,0 +1,38 @@
+---
+description: Gambling wiki Phase-1 — K246-K253 PM regulatory awareness (no pm scp)
+alwaysApply: true
+---
+
+# Gambling K246–K253 Phase-1 wires
+
+**Briefs:** `briefs/2026-08-25_k246-gambling-cftc-pm-integrity.md` · `briefs/2026-08-26_k247-gambling-kalshi-football-athlete-play.md` · `briefs/2026-08-28_k248-gambling-kalshi-regulatory.md` · `briefs/2026-08-29_k249-gambling-ninth-circuit-kalshi.md` · `briefs/2026-08-31_k252-gambling-injury-markets.md` · `briefs/2026-09-01_k253-gambling-scotus-pm-states.md`
+
+Verdict: **regulatory awareness only. No pm scp. No xsp scp.**
+
+## K246 — CFTC innovation recap
+
+- CFTC Innovation Advisory Committee; election-market posture; PM international vs Kalshi US divergence.
+
+## K247 — Kalshi football + athlete-play
+
+- Football ~30× YoY preseason but small platform slice. Athlete-will-play markets = integrity/manipulation concerns.
+
+## K248 — Connecticut sues Kalshi + 21+ advocacy
+
+- CT sues Kalshi after federal PI loss. 21+ age-floor advocacy thread.
+
+## K249 — Ninth Circuit Kalshi ruling
+
+- 3-0: sports event contracts likely not CEA swaps. Circuit split vs Third Circuit.
+
+## K252 — injury-market asymmetry
+
+- PM withdrew Mahomes self-cert after CFTC contact; Kalshi similar markets may remain live. Document venue asymmetry.
+
+## K253 — PM vs states SCOTUS thread
+
+- EH Episode 30: PM vs states potentially heading to SCOTUS. Awareness only.
+
+## Rules
+
+- **No pm scp. No xsp scp.** No order bots. osint-wiki owns prod bots.
