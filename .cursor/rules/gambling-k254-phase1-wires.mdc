@@ -1,0 +1,15 @@
+---
+description: Gambling wiki Phase-1 — K254 EH Robinhood vs Kalshi awareness
+alwaysApply: true
+---
+
+# Gambling K254 Phase-1 wires
+
+**Brief:** `briefs/2026-09-02_k254-gambling-robinhood-kalshi.md`
+**Wiki:** `@osint-wiki/concepts/k254-gambling-pm-wave.md`
+**Source:** `@osint-wiki/sources/substack-rss-event-horizon-2026-09-02-robinhood-cometh.md`
+
+- Event Horizon **Robinhood Cometh** — Robinhood prediction-market ambition vs **Kalshi** incumbent; Morgan Stanley EPS uplift narrative.
+- **Awareness only** — cross-venue retail PM competition, geofence, and CFTC posture stay wiki/gambling context.
+- **No pm scp** to cemini-prod from this batch. No order bots. No prod `watches.json` changes from newsletter prose.
+- Pairs `@osint-wiki/concepts/k248-gambling-pm-wave.md` Kalshi/geofence threads — do not duplicate prod briefs.
