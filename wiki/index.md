@@ -203,6 +203,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | Page | Maturity |
 |------|----------|
 | [nfl-betting](entities/sports/nfl-betting.md) | validated |
+| [tennis-betting](entities/sports/tennis-betting.md) | draft |
 | [nba-betting](entities/sports/nba-betting.md) | draft |
 | [wnba-betting](entities/sports/wnba-betting.md) | draft |
 | [world-cup-2026-betting](entities/sports/world-cup-2026-betting.md) | validated |
@@ -352,6 +353,13 @@ Catalog of all wiki pages. Updated on each ingest.
 | [brief-k168-nfl-season-paper-rss-2026-08-31](sources/brief-k168-nfl-season-paper-rss-2026-08-31.md) | deep-read | K168 NFL Week-0 steals (wont_wire) |
 | [daily-digest-rss-nfl-week0-2026-08-31](sources/daily-digest-rss-nfl-week0-2026-08-31.md) | read | Injury PM, 9th Circuit, participation pull |
 | [brief-k169-nfl-week1-ready-2026-08-31](sources/brief-k169-nfl-week1-ready-2026-08-31.md) | deep-read | K169 Week-1 roster hub + RSS wire |
+| [daily-digest-batch-k170-2026-09-11](sources/daily-digest-batch-k170-2026-09-11.md) | deep-read | K170 batch (3 papers + docx + RSS) |
+| [arxiv-2609.03660-lugl-lightgbm-game-playing-2026-09-11](sources/arxiv-2609.03660-lugl-lightgbm-game-playing-2026-09-11.md) | skimmed | LUGL LightGBM game playing (REFERENCE) |
+| [arxiv-2609.06739-profit-bias-identity-sports-betting-2026-09-11](sources/arxiv-2609.06739-profit-bias-identity-sports-betting-2026-09-11.md) | skimmed | Profit–bias identity (ADOPT pattern) |
+| [arxiv-2609.07617-live-tennis-forecasting-2026-09-11](sources/arxiv-2609.07617-live-tennis-forecasting-2026-09-11.md) | skimmed | Live tennis Trace hybrid (REFERENCE) |
+| [nfl-betting-dfs-intelligence-week1-2026-09-11](sources/nfl-betting-dfs-intelligence-week1-2026-09-11.md) | skimmed | Week 1 Sunday slate dossier (new docx hash) |
+| [daily-digest-rss-week1-pm-nfl-2026-09-11](sources/daily-digest-rss-week1-pm-nfl-2026-09-11.md) | read | K258/K259 PM + NFL injury RSS |
+| [brief-k170-week1-papers-rss-2026-09-11](sources/brief-k170-week1-papers-rss-2026-09-11.md) | deep-read | K170 operator brief |
 | [brief-k239-kalshi-sports-mention-2026-08-15](sources/brief-k239-kalshi-sports-mention-2026-08-15.md) | read | K239 sports mention markets gone + WA geofence |
 | [brief-k240-kalshi-nv-geofence-2026-08-17](sources/brief-k240-kalshi-nv-geofence-2026-08-17.md) | read | K240 NV $120k/day + optional-update geofence |
 | [brief-k242-eh-pm-ban-onshore-2026-08-19](sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md) | read | K242 WA geofence day; ban ≠ offshore |

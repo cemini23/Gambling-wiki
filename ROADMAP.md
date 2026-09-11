@@ -87,7 +87,8 @@ Steps:
 - [ ] Operator YouTube / free-guide ingest batch (NFL betting + FD DFS) — **K169 skip:** weekly pick shows; GPP process already on `@sources/web-dfs-hero-nfl-gpp-strategy-2026-06-20.md` + May Unabated
 - [x] Offseason: weekly camp hub — `bash scripts/install_nfl_offseason_weekly.sh` (@meta/nfl-offseason-weekly-cadence.md)
 - [x] In-season (Sep+): slate **prefetch** LaunchAgent — `bash scripts/install_nfl_slate_prefetch.sh` (@meta/nfl-slate-prefetch-cadence.md)
-- [ ] In-season: weekly **slate hub** briefs in `briefs/` per @concepts/nfl-weekly-slate-hub-workflow.md; CLV journal hook on `@concepts/line-shopping-and-clv.md`
+- [x] In-season: weekly **slate hub** briefs in `briefs/` per @concepts/nfl-weekly-slate-hub-workflow.md — **K170** `briefs/2026-09-11_nfl-week1-slate-hub.md` (Sun 13-game dossier)
+- [ ] CLV journal hook on `@concepts/line-shopping-and-clv.md`
 - [x] **P0 daily edge card** — `scripts/daily_edge_card.py` + `@concepts/daily-edge-card.md` (de-vig reference vs Hard Rock; 2026-08-15). CLV ledger still open.
 - [x] **Free unders context** — Open-Meteo + MLB Stats API + NFL stadiums (`scripts/slate_context.py`, `ticket_builder --mode unders`; 2026-08-15).
 

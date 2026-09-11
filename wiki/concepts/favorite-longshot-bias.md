@@ -24,9 +24,11 @@ related:
   - sources/research-wnba-cold-streak-live-unders-2026-08-13.md
   - sources/arxiv-2604.17194-odds-conversion-emh-2026-08-31.md
   - sources/arxiv-2602.19520-pm-domain-calibration-2026-08-31.md
+  - sources/arxiv-2609.06739-profit-bias-identity-sports-betting-2026-09-11.md
+  - sources/brief-k170-week1-papers-rss-2026-09-11.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-08-31
+updated: 2026-09-11
 ---
 
 ## Relations
@@ -39,6 +41,7 @@ updated: 2026-08-31
 - @entities/sports/wnba-betting.md — both-under-5 last-2:00 longshot; need odds longer than fair after juice
 - @sources/arxiv-2602.19520-pm-domain-calibration-2026-08-31.md — Kalshi sports FLB is long-horizon (slope 1.74 past 1 month); game week is near-calibrated
 - @sources/arxiv-2604.17194-odds-conversion-emh-2026-08-31.md — FL-GLM fits one FLB parameter on soccer odds
+- @sources/arxiv-2609.06739-profit-bias-identity-sports-betting-2026-09-11.md — public leans favorites; MLB shading not detected (K170)
 
 ## Raw Concept
 
@@ -78,6 +81,10 @@ Retail systematically **overestimates tail outcomes** on Polymarket. Paper: `@so
 ### WC2026 LLM agents (K160) [CONFIRMED]
 
 @sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md: across 104 WC2026 matches, favorites **over-performed** their opening price; a flat-favorite baseline beat four frontier LLM agents in absolute P&L, and **fading the market** was unprofitable for all four. Reinforces favorite-side discipline when LLM “value” narratives point at underdogs without a price-respecting model.
+
+### Levitt shading vs hold (K170) [CONFIRMED MLB panel]
+
+@sources/arxiv-2609.06739-profit-bias-identity-sports-betting-2026-09-11.md: public money **leans toward favorites**, but in 1,139 MLB games the book's realized margin matched **hold** once side-split — no detected matching **price shading**. Do not narrate NFL +EV as "fade the public favorite" without covariance evidence; shading requires both a lean and a shade.
 
 ## Snippets
 

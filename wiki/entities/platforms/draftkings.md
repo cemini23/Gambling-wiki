@@ -26,9 +26,11 @@ related:
   - sources/daily-digest-rss-industry-2026-08-14.md
   - concepts/parlay-and-correlated-bets.md
   - sources/daily-digest-rss-nfl-week0-2026-08-31.md
+  - sources/daily-digest-rss-week1-pm-nfl-2026-09-11.md
+  - sources/nfl-betting-dfs-intelligence-week1-2026-09-11.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-08-31
+updated: 2026-09-11
 ---
 
 ## Relations
@@ -54,6 +56,8 @@ DraftKings operates **sports betting**, **DFS**, **iCasino**, and **best ball** 
 DraftKings-owned DCM **Railbird Exchange (DKeX)** self-certified nine football event contracts (win/spread/total/player-or-team stat/outright/award/head-to-head) plus a **COMBOS** product that settles as the **product of component binary YES values**. $1 notional, NCAA included, Reg **40.2** (no CFTC product approval). This is DK’s **in-house PM** path vs routing Predictions volume through partners. Retail: shop DKeX vs Kalshi vs book SGP on the same football questions; COMBOS is still a **joint-implied** price, not a vig-free parlay. Hub: `@sources/daily-digest-rss-industry-2026-08-14.md`, `@concepts/parlay-and-correlated-bets.md`.
 
 **NFL league partnership (K168, 2026-08-27) [TENTATIVE — LSR title]:** DraftKings, FanDuel, and Fanatics named NFL sports-betting partners; league language covers injury/officiating/knowable-in-advance wagers. Hub: `@sources/daily-digest-rss-nfl-week0-2026-08-31.md`.
+
+**Anti-Kalshi ad campaign (K170, 2026-09-09) [TENTATIVE — LSR]:** New DK ads target Kalshi review complaints — retail PM vs book marketing war during NFL Week 1 ad blitz. Hub: `@sources/daily-digest-rss-week1-pm-nfl-2026-09-11.md`.
 
 ## Snippets
 

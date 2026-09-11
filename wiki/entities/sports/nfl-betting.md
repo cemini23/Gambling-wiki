@@ -45,9 +45,13 @@ related:
   - sources/daily-digest-rss-nfl-week0-2026-08-31.md
   - sources/brief-k168-nfl-season-paper-rss-2026-08-31.md
   - sources/brief-k169-nfl-week1-ready-2026-08-31.md
+  - sources/nfl-betting-dfs-intelligence-week1-2026-09-11.md
+  - sources/daily-digest-rss-week1-pm-nfl-2026-09-11.md
+  - sources/arxiv-2609.06739-profit-bias-identity-sports-betting-2026-09-11.md
+  - sources/brief-k170-week1-papers-rss-2026-09-11.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-08-31
+updated: 2026-09-11
 ---
 
 ## Relations
@@ -155,6 +159,12 @@ Sharp (Hirsch, 2026-08-13): **Taylor Under 1224.5 rush yards (-105)** and **Hubb
 ### Week 1 2026 (K169) [CONFIRMED 2026-08-31]
 
 Kickoff **Wed 2026-09-09** SEA vs NE. Do not price **Jacobs** (Commissioner’s Exempt), **Charbonnet** (PUP), **Tyson** (IR-R), or **Parsons** (PUP, miss first 4) as Week-1 starters. **Nacua** and **Donald** are Melbourne TNF questions — wait NFL.com inactives. Hub: `@sources/brief-k169-nfl-week1-ready-2026-08-31.md`.
+
+### Week 1 Sunday slate (K170) [TENTATIVE — verify live 2026-09-11]
+
+Post-kickoff roster/injury updates and Sunday **13-game** dossier. Sharp signals [TENTATIVE]: **BUF @ HOU** RLM (BUF -1.5 → HOU -1.5 vs 76% BUF tickets); **CHI @ CAR** Over handle 92% vs 43% tickets (total 47.5). Shootout candidates: TB@CIN, NO@DET, CHI@CAR. GPP salary lag: Etienne ($5,900 DK), Lloyd ($4,800), Vele ($3,500).
+
+Injury watch: **A.J. Brown** high-ankle (~4 wk); **Sam Darnold** hip; **Tua** oblique (Cooper Rush may start); **Jake Tonges** MCL. Profit–bias paper (K170): keep **hold-first** edge math — do not assume Levitt-style favorite shading on NFL. Hub: `@sources/nfl-betting-dfs-intelligence-week1-2026-09-11.md`, `@sources/brief-k170-week1-papers-rss-2026-09-11.md`, gitignored `briefs/2026-09-11_nfl-week1-slate-hub.md`.
 
 ### Open-source ML note
 

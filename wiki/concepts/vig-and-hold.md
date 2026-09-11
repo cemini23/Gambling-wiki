@@ -21,9 +21,11 @@ related:
   - sources/brief-k108-gambling-wc-retail-hygiene-2026-06-09.md
   - sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md
   - sources/arxiv-2604.17194-odds-conversion-emh-2026-08-31.md
+  - sources/arxiv-2609.06739-profit-bias-identity-sports-betting-2026-09-11.md
+  - sources/brief-k170-week1-papers-rss-2026-09-11.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-08-31
+updated: 2026-09-11
 ---
 
 ## Relations
@@ -36,6 +38,7 @@ updated: 2026-08-31
 - @entities/platforms/pinnacle.md — low-hold reference book
 - @sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md — K160 vig-removed 1X2 market baseline (~1.05 overround)
 - @sources/arxiv-2604.17194-odds-conversion-emh-2026-08-31.md — OO-EPC vs multiplicative de-vig (soccer panel; do not swap NFL card yet)
+- @sources/arxiv-2609.06739-profit-bias-identity-sports-betting-2026-09-11.md — K170 profit–bias identity; hold-first margin
 
 ## Raw Concept
 
@@ -71,6 +74,12 @@ To estimate fair probability from a two-way market, **remove juice** from sharp 
 2. **Reduced juice promos** (-105/-105) — temporary lower hold
 3. **Sharp books** (Pinnacle) — lower hold, limits winners faster
 4. **Exchange models** (Betfair) — commission on net winnings instead of embedded spread
+
+### Profit–bias identity (K170, arXiv 2609.06739)
+
+Levitt (2004) treats handle share and outcome as **independent**. Dmochowski shows book profit decomposes into **hold**, **shading × public lean**, and **covariance** between bet share and outcome. In 1,139 MLB games, realized margin matched **hold alone** once games were split by book-favored side — pooled handle/outcome correlation was Simpson's paradox.
+
+**Operator rule:** keep hold-first edge-card math for NFL Week 1. Do not assume exploitable "public bias shading" without side-split tests. Hub: `@sources/arxiv-2609.06739-profit-bias-identity-sports-betting-2026-09-11.md`.
 
 ## Snippets
 

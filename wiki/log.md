@@ -1,5 +1,19 @@
 # Wiki operations log
 
+## [2026-09-11] ingest | K170 Week 1 papers + PM/NFL RSS + dossier
+
+- **Batch K170:** 3 inbox papers + 1 docx (new sha256) + RSS PM/NFL rows from `2026-09-11` sweep
+  - **2609.03660** LUGL / LightGBM — REFERENCE; MIT repos; `ssamot/fil` NO-GO; poker arena brief
+  - **2609.06739** profit–bias identity — **ADOPT pattern**; hold-first edge card unchanged
+  - **2609.07617** live tennis Trace — REFERENCE; new `@entities/sports/tennis-betting.md`
+  - **docx** NFL Week 1 Sunday slate dossier — RLM/GPP/pricing lag; gitignored slate hub brief
+  - **RSS** EH K258/K259, LSR ad war, PM injury void asymmetry, Week 1 injuries
+- Phase-1: `policy_wired` (vig/FLB, kalshi, nfl-betting, poker-hl); new rule `gambling-k255-k259-phase1-wires.mdc`
+- Briefs: `briefs/2026-09-11_k170-gambling.md`, `briefs/2026-09-11_nfl-week1-slate-hub.md`, CeminiDFS GPP steals, poker-arena LUGL shelf
+- Dual-ID: gambling digest K170 ≠ OSINT K170 (Jul 15 GitHub revenue-eval)
+- No pm scp. No Hard Rock auto-bet. No FOSS clone of unlicensed `fil`
+- Sweep `2026-09-11` → INGESTED (K170)
+
 ## [2026-08-31] ops | RSS LaunchAgent uses repo runner (K169 follow-on)
 
 - `~/bin/cemini-daily-research-digest-gambling` now prefers `${WIKI_ROOT}/scripts/daily_research_digest_run.py` (RSS on). Frozen `~/.cemini/launchagent/osint/` copy stays paper-only fallback.

@@ -71,9 +71,11 @@ related:
   - sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md
   - sources/daily-digest-batch-k167-2026-08-18.md
   - sources/brief-k167-sfp-mfg-shelf-2026-08-18.md
+  - sources/arxiv-2609.03660-lugl-lightgbm-game-playing-2026-09-11.md
+  - sources/brief-k170-week1-papers-rss-2026-09-11.md
 maturity: validated
 created: 2026-06-03
-updated: 2026-08-18
+updated: 2026-09-11
 ---
 
 ## Relations
@@ -262,6 +264,8 @@ HL loop fixes **`decide()` policy**; researcher **bundle submit** adds **`arena-
 **FTRL / FP literacy shelf (K166 — @sources/arxiv-2608.09389-regret-equilibrium-learning-games-guide-2026-08-12.md, @sources/arxiv-2608.09256-distributed-team-orchestration-supervisor-2026-08-12.md):** two REFERENCE papers, `wont_wire`. 09389 (Mertikopoulos) gives the unified regularized-learning story behind FP/MAFP — Brown–Robinson convergence, zero-sum ergodic Gap bound, folk theorem (strict NE attract, mixed NE avoided by EXP3-style play). Read as literacy next to K163/K157/K152, not as a patch source. 09256 (DTOA/BR-DTOA) is team-FP over supervisor beliefs with Byzantine resilience — shelf-only adjacency to MAFP, **no** decide()/HL import. No FOSS for either (09256 claimed repo HTTP 404).
 
 **SFP-MFG theory shelf (K167 — @sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md):** REFERENCE, `wont_wire`. Continuous-time self-fictitious-play on monotone potential ergodic MFGs (own occupation-measure belief; `O(√λ)` to Nash). **No HL / decide() import** — torus MFG ≠ discrete HU MAFP. Same posture as K157.
+
+**LUGL / LightGBM tabular shelf (K170 — @sources/arxiv-2609.03660-lugl-lightgbm-game-playing-2026-09-11.md):** REFERENCE, `policy_wired`. Local-update/global-learning loop lets gradient-boosted trees train on tabular game states; competitive with DeepCFR on Flop5 Hold'em. MIT repos (`Deep-CFR-2025`, `PokerRL-2025`, `luglrl`) extract-only; **`ssamot/fil` NO-GO** (no license). **No decide() import** without HU validation. Arena brief: `../../OSINT WORKSPACE/agents/devfun-poker-arena/briefs/2026-09-11_lugl-lightgbm-shelf-steals.md`.
 
 ## Snippets
 

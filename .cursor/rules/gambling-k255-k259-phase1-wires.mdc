@@ -1,0 +1,36 @@
+---
+description: Gambling wiki Phase-1 — K255–K259 EH PM wave awareness (Sep 2026)
+alwaysApply: true
+---
+
+# Gambling K255–K259 Phase-1 wires
+
+**Canon:** `@osint-wiki/concepts/k255-gambling-pm-wave.md` … `@osint-wiki/concepts/k259-gambling-pm-wave.md`
+
+Verdict: **regulatory awareness only. No pm scp. No xsp scp.**
+
+## K255 — SCOTUS / NFL objectionable contracts
+
+- NJ/Kalshi SCOTUS Q&A; SCOTUS PM skepticism; NFL letter on objectionable DCM contracts (injuries, mentions).
+
+## K257 — EH Ep 31 + NFL dossier
+
+- LeBron×Polymarket, PM outage refunds, Kalshi MI mis-settle, UK FCA talks.
+- NFL Week 1 slate dossier → CeminiDFS brief only (no auto-lineup).
+
+## K258 — Kalshi federal court losses
+
+- Utah (10th) + Iowa PI; four adverse circuits ≈ 22 states / >40% population.
+- Robinhood routes football to Crypto.com / OG.com from 8 Sep.
+
+## K259 — Sports volume + DGA
+
+- Sports **are** the pie at Kalshi ($160B since Apr; record CFB Saturday).
+- DGA private session with Kalshi + AGA (11 Sep).
+- **PM injury props may not void like sportsbook props** — cross-venue hygiene.
+
+## Rules
+
+- **No pm scp. No xsp scp.** No order bots. osint-wiki owns prod bots.
+- Pairs `@entities/platforms/kalshi.md` + `@concepts/prediction-markets-crossover.md`.
+- Do not duplicate full EH prose — cross-link OSINT source stubs.

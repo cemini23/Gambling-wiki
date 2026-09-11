@@ -61,9 +61,11 @@ related:
   - @seo-wiki/concepts/generative-engine-optimization.md
   - sources/arxiv-2602.19520-pm-domain-calibration-2026-08-31.md
   - sources/daily-digest-rss-nfl-week0-2026-08-31.md
+  - sources/daily-digest-rss-week1-pm-nfl-2026-09-11.md
+  - sources/brief-k170-week1-papers-rss-2026-09-11.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-08-31
+updated: 2026-09-11
 ---
 
 ## Relations
@@ -141,6 +143,8 @@ Also Aug: **Nevada GCB** moved to fine Kalshi **$120k/day** for missing its Aug 
 **K243 (2026-08-20):** a comms tail risk — if Republicans go into the midterms as underdogs, party-aligned comms could turn on prediction markets (and Polymarket's GOP skew) as an attack surface. Awareness only, no pm scp (`@sources/brief-k243-eh-pm-republican-comms-2026-08-20.md`).
 
 **K168 (2026-08-31):** Ninth Circuit says Kalshi sports contracts are likely not CEA swaps (NV/CA access risk). Polymarket pulled NFL will-play filings. Kalshi **game-week** sports prices are near-calibrated; **month-plus** futures are not. Hubs: `@sources/daily-digest-rss-nfl-week0-2026-08-31.md`, `@sources/arxiv-2602.19520-pm-domain-calibration-2026-08-31.md`.
+
+**K170 (2026-09-11):** Kalshi federal losses in UT/IA (K258); sports = core volume not niche slice (K259); DGA session with Kalshi + AGA. **Injury void asymmetry:** NFL injury news may void sportsbook player props but **not** PM contracts the same way — cross-venue shoppers must read settlement rules. DraftKings ran anti-Kalshi review ads (LSR). Hub: `@sources/daily-digest-rss-week1-pm-nfl-2026-09-11.md`. **No pm scp.**
 
 ### When to stay in traditional books
 

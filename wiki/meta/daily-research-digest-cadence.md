@@ -81,9 +81,13 @@ related:
   - sources/brief-k169-nfl-week1-ready-2026-08-31.md
   - concepts/dfs-injury-and-news-workflow.md
   - sweeps/2026-08-31-daily.md
+  - sweeps/2026-09-11-daily.md
+  - sources/daily-digest-batch-k170-2026-09-11.md
+  - sources/brief-k170-week1-papers-rss-2026-09-11.md
+  - sources/daily-digest-rss-week1-pm-nfl-2026-09-11.md
 maturity: validated
 created: 2026-06-01
-updated: 2026-08-31
+updated: 2026-09-11
 ---
 
 ## Relations
@@ -111,7 +115,7 @@ K93 federated install: morning **discovery-only** loop for sports betting, PM re
 |-------|-------|
 | **Cadence** | Daily @ 08:19 local (`com.cemini.daily-research-digest.gambling`) |
 | **Installed** | 2026-06-01 (K93 brief) |
-| **Last run** | 2026-08-31 (K169 local RSS). Morning LaunchAgent uses **repo** `scripts/daily_research_digest_run.py` (RSS on). |
+| **Last run** | 2026-09-11 |
 | **Fetch sources** | arXiv PDFs → inbox (sparse). **RSS/Atom** practitioner + industry + GitHub releases → sweep rows `S1`… (2026-08-14). OpenReview unused while `paper_mode: arxiv-only`. |
 | **Script** | `~/bin/cemini-daily-research-digest-gambling` → **`${WIKI_ROOT}/scripts/daily_research_digest_run.py`** (`rss.enabled: true`). Frozen `~/.cemini/launchagent/osint/` copy is fallback only. |
 | **Deps** | `wiki_source_index.py` + `rss_digest.py` (required alongside digest runner) |

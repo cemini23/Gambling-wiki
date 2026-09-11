@@ -49,9 +49,11 @@ related:
   - sources/brief-k243-eh-pm-republican-comms-2026-08-20.md
   - sources/arxiv-2602.19520-pm-domain-calibration-2026-08-31.md
   - sources/daily-digest-rss-nfl-week0-2026-08-31.md
+  - sources/daily-digest-rss-week1-pm-nfl-2026-09-11.md
+  - sources/brief-k170-week1-papers-rss-2026-09-11.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-08-31
+updated: 2026-09-11
 ---
 
 ## Relations
@@ -182,6 +184,10 @@ TickerTracker: weekday notional **>$1B** (was ~$25M Aug 2025). Football preseaso
 ### Whale size-weighting bias (2026-07) [TENTATIVE]
 
 Daleep et al. via Klement: large bettors show **lower edge** than small — PM prices may mis-weight conviction. Hub: `@concepts/pm-whale-conviction-bias-2026-07.md`.
+
+### Sep 2026 court + volume wave (K258/K259) [TENTATIVE — EH]
+
+**2026-09-09:** Kalshi lost **Utah** emergency injunction (Tenth Circuit) and **Iowa** preliminary injunction — four adverse circuits ≈ 22 states / >40% US population. **2026-09-10:** Event Horizon — sports are the main volume slice ($160B since Apr; record >$2B CFB Saturday); Robinhood SCOTUS cert petition. **2026-09-11:** DGA private session with Kalshi + AGA; 14/24 Dem-governor states in enforcement/litigation. **Injury hygiene:** PM NFL injury contracts may **not void** like sportsbook props. Canon: `@osint-wiki/concepts/k258-gambling-pm-wave.md`, `@osint-wiki/concepts/k259-gambling-pm-wave.md`, `@sources/daily-digest-rss-week1-pm-nfl-2026-09-11.md`. **No pm scp.**
 
 ## Snippets
 

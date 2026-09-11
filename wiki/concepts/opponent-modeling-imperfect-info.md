@@ -69,9 +69,11 @@ related:
   - sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md
   - sources/daily-digest-batch-k167-2026-08-18.md
   - sources/brief-k167-sfp-mfg-shelf-2026-08-18.md
+  - sources/arxiv-2609.03660-lugl-lightgbm-game-playing-2026-09-11.md
+  - sources/brief-k170-week1-papers-rss-2026-09-11.md
 maturity: draft
 created: 2026-06-03
-updated: 2026-08-18
+updated: 2026-09-11
 ---
 
 ## Relations
@@ -202,6 +204,10 @@ See `@sources/daily-digest-arxiv-batch-2026-06-04.md` and `@entities/bots/poker-
 ### Self-fictitious-play MFG (K167) [REFERENCE]
 
 @sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md: continuous-time **self-fictitious-play** for monotone potential ergodic MFGs — belief updates from the agent's **own occupation measure** (`d m_t = λ (δ_{X_t} − m_t) dt`), not population McKean–Vlasov. Contractive on `T^d`; Wasserstein neighborhood `O(√λ)` of MFG Nash, sharp on LQ. **Continuous MFG ≠ discrete HU MAFP** — do not retune decide() / MAFP from these rates (same posture as K157). No FOSS. `wont_wire`.
+
+### LUGL / LightGBM tabular games (K170) [REFERENCE]
+
+@sources/arxiv-2609.03660-lugl-lightgbm-game-playing-2026-09-11.md: **Local Updates, Global Learning** — tabular self-play targets feed batch LightGBM retrain between table resets; competitive with DeepCFR on **Flop5 Hold'em**. MIT FOSS repos for extract-only benchmark replication; **`ssamot/fil` unlicensed**. Not a villain HUD or decide() patch without HU validation. `policy_wired` shelf only.
 
 ### Play-adequacy / inference coverage (K158) [TENTATIVE]
 
