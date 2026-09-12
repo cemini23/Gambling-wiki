@@ -1,5 +1,13 @@
 # Wiki operations log
 
+## [2026-09-12] brief | CeminiDFS GPP optimizer steal board
+
+- Inbox (gitignored): `briefs/2026-09-12_dfs-optimizer-steal-board.md`
+- CeminiDFS shipped stacks/lock/report plus `--no-offense-vs-dst`, `--one-rb-per-team`, `--projection-floor`, `--uniques` on MIT pydfs
+- No LICENSE look-only: chanzer0/NFL-DFS-Tools, nukesim/nuke-dfs-hub, draftfast (K138 reject)
+- Later MIT/BSD: jnederlo/dfs_optimizers (Picking Winners), drmbeledogu/RobustDFS (50/50)
+- No scrape. No auto-enter. No clone of unlicensed source. Operator submits.
+
 ## [2026-09-11] ingest | K170 Week 1 papers + PM/NFL RSS + dossier
 
 - **Batch K170:** 3 inbox papers + 1 docx (new sha256) + RSS PM/NFL rows from `2026-09-11` sweep
