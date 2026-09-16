@@ -1,5 +1,44 @@
 # Wiki operations log
 
+## [2026-09-15] wiki | SoFi weather Off + shared env contract + FOSS rejects
+
+- SoFi weather adj is **Off** in `concepts/dfs-weather-adjustments.md` (`semi_open`, `weather_exposed=false`, wind zeroed — not a dome); `concepts/nfl-weekly-slate-hub-workflow.md` gains the `environment.csv` header contract (Parlays `--environment`; DFS `export-env` and `--from-ceminidfs` named only); `concepts/dfs-foss-tooling-landscape.md` gains NO-GO rows for dynastyprocess/data + ffanalytics (GPL-3.0) and sarartur/oddsapi + jmoore87jr (NO_LICENSE). No source page, no Python, no flags shipped.
+
+## [2026-09-15] hub | Gemini tool-improve (3 reports) → DFS + parlays
+
+- Inbox: `NFL Pipeline Data Integration.docx` (`7cf54284…`) · `NFL DFS Optimization Architecture Research.docx` (`5ae54522…`) · `CeminiParlays Architecture Research.docx` (`2dc839cf…`) → egress-fi `/opt/cemini-bulk/research/gambling/`
+- Extracts: `briefs/deep-research/extracts/`
+- Hub: `briefs/2026-09-15_gemini-tool-improve-hub.md` (`do_not_auto_apply`)
+- Dispatched: `../CeminiDFS/briefs/2026-09-15_gemini-dfs-improve.md` · `../CeminiParlays/briefs/2026-09-15_gemini-parlays-improve.md`
+- Shared env CSV; SoFi stays `semi_open` (not dome); `slate_id` stays `2026-wNN-sun`
+- No wiki source page. No Python. No auto-enter. No salaries. No prop lines
+
+## [2026-09-15] hub | Week 2 Tue injury (Gemini) → DFS + parlays
+
+- Inbox: `NFL Week 2 Injury Research.docx` (NEW, sha256 `bb134b31…`) → egress-fi `/opt/cemini-bulk/research/gambling/`
+- Prompt: `briefs/deep-research/2026-w02-tue-injury-prompt.md`
+- Hub: `briefs/2026-w02-slate-hub-sun.md` (early; injury + nflverse ITT)
+- Dispatched: `../CeminiDFS/briefs/2026-09-15_w02-tue-injury-hub.md` · `../CeminiParlays/briefs/2026-09-15_w02-tue-injury-hub.md`
+- Scratch: Brown / Pacheco / Tyler Smith / Estime / Penix / Jordan / Lane / Hand. Warn: Darnold / Murray / Tua / Kamara / Bowers / Flowers / McConkey
+- Held: Jacobs exempt, Walker KC, Kaelon Black, Higgins/Cooper cites
+- No salaries. No prop lines. No auto-enter. No wiki source page
+
+## [2026-09-12] hub | Week 1 Sunday early prefetch → DFS + parlays
+
+- Prefetch: `briefs/slate-prefetch/2026-w01-sun-early.md` (16:05 ET)
+- Hub: `briefs/2026-w01-slate-hub-sun.md` (gitignored)
+- Dispatched: `../CeminiDFS/briefs/2026-09-12_w01-sun-early-prefetch.md` · `../CeminiParlays/briefs/2026-09-12_w01-sun-early-prefetch.md`
+- ITT from nflverse spread_line (negated); SoFi indoor correction; HOU/IND retractable; Tua/Bowers/Pacheco scratch
+- No salaries invented. No prop lines invented. No auto-enter. SNF/MNF out
+
+## [2026-09-12] brief | CeminiDFS lessons → pick'em / parlay CLI
+
+- Inbox (gitignored): `briefs/2026-09-12_ceminidfs-lessons-pickem-parlay-cli.md`
+- Steal: stages, canonical CSV, operator-submits, copula/PSD, game env (Open-Meteo, roofs, wind/pace/Vegas), injury gate, license/scrape, ID map, report card
+- Discard: pydfs, ownership, FD FPPG, BBM extension
+- Hard Rock: extend `scripts/daily_edge_card.py`; no auto-bet. Pick'em: new repo (K147), not CeminiDFS
+- No scrape. No lounge auto-fill. No repo spawn this note.
+
 ## [2026-09-12] brief | CeminiDFS GPP optimizer steal board
 
 - Inbox (gitignored): `briefs/2026-09-12_dfs-optimizer-steal-board.md`

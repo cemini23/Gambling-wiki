@@ -9,9 +9,10 @@ related:
   - concepts/diy-nfl-dfs-model-architecture.md
   - sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md
   - concepts/free-slate-context.md
+  - concepts/nfl-weekly-slate-hub-workflow.md
 maturity: draft
 created: 2026-06-20
-updated: 2026-08-15
+updated: 2026-09-15
 ---
 
 ## Relations
@@ -23,6 +24,7 @@ updated: 2026-08-15
 - @osint-wiki/entities/tools/wethr-net.md — station-direct METAR bounds (paid)
 - @concepts/team-volume-pace-model.md — pass-rate wind adjustments
 - @concepts/free-slate-context.md — runnable Open-Meteo + MLB Stats CLI for unders
+- @concepts/nfl-weekly-slate-hub-workflow.md — shared `environment.csv` contract; SoFi `semi_open`
 
 ## Raw Concept
 
@@ -56,8 +58,10 @@ Game-time weather → passing/kicking efficiency haircuts. **CONDITIONAL-GO** wi
 |------|-------------|
 | Fixed enclosed | Off |
 | Retractable | Off only after NFL 90-min roof decision |
-| Semi-open (SoFi) | **On** |
+| Semi-open (SoFi) | Off |
 | Open | On |
+
+**SoFi correction (2026-09-15):** the SoFi canopy is `semi_open`, `weather_exposed=false`; this matches CeminiDFS `stadiums.py` / `weather.py` (SoFi wind is zeroed). Do not treat SoFi as a dome.
 
 ### Cited DFS thresholds (unchanged)
 

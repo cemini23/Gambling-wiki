@@ -10,7 +10,7 @@ related:
   - concepts/diy-nfl-dfs-model-architecture.md
 maturity: draft
 created: 2026-06-20
-updated: 2026-06-20
+updated: 2026-09-15
 ---
 
 ## Relations
@@ -40,6 +40,17 @@ Phase-0 audit of FOSS repos for DIY NFL DFS stack. **Build vs borrow** verdicts.
 | jnederlo/dfs_optimizers | MIT | **GO** | Solver formulation ideas |
 | chanzer0/NFL-DFS-Tools | **None** | **NO-GO** code | Sim methodology reference only |
 | draftfast | None | **NO-GO** code | Design reference only |
+
+### Reject / NO-GO (2026-09-15 audit)
+
+| Repo | License | Verdict | Why |
+|------|---------|---------|-----|
+| dynastyprocess/data | GPL-3.0 | **NO-GO** | Do not vendor `db_playerids.csv`; GPL is extract-only |
+| FantasyFootballAnalytics/ffanalytics | GPL-3.0 | **NO-GO** | GPL is extract-only; already have nflreadpy |
+| sarartur/oddsapi | **NO_LICENSE** | **NO-GO** | Use the stdlib Odds API client |
+| jmoore87jr/DFS_ownership_projections | **NO_LICENSE** + scrape | **NO-GO** | No license; scraper violates data bar |
+
+License posture: GPL/AGPL repos are extract-only (read the idea, never copy the code). NO_LICENSE repos are not usable. Check the GitHub LICENSE before any copy — an extract claim is not proof. [Source: briefs/2026-09-15_gemini-tool-improve-hub.md (retrieved 2026-09-15)]
 
 ### Gaps requiring custom build
 

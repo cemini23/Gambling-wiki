@@ -19,9 +19,10 @@ related:
   - meta/nfl-offseason-weekly-cadence.md
   - meta/daily-research-digest-cadence.md
   - sources/brief-k169-nfl-week1-ready-2026-08-31.md
+  - concepts/dfs-weather-adjustments.md
 maturity: draft
 created: 2026-07-05
-updated: 2026-08-31
+updated: 2026-09-15
 ---
 
 ## Relations
@@ -32,6 +33,7 @@ updated: 2026-08-31
 - @entities/sports/nfl-betting.md — W8 four-lane operator stack
 - @concepts/dfs-injury-and-news-workflow.md — shared T-90 injury cadence
 - @entities/tools/ceminidfs.md — FanDuel GPP + BBM (pick'em **not** in repo)
+- @concepts/dfs-weather-adjustments.md — roof enum + SoFi `semi_open` correction
 
 ## Raw Concept
 
@@ -110,6 +112,21 @@ Pull **once** per **slate window** (not necessarily once per calendar week).
 - Optional: append one-line pointer in `wiki/log.md` when hub is materially new
 
 **Data sources (license-cleared):** nflverse schedules, Odds API (if key), Open-Meteo, official injury reports, wiki corpus — same bar as @concepts/nfl-dfs-data-sources.md. No platform scrapers.
+
+### Shared environment file
+
+The hub and its tools share one CSV contract. Headers only:
+
+```
+slate_id,game_id,team,opp,implied_total,spread,roof,weather_exposed,wind_mph,precip_pop
+```
+
+- `slate_id` = `2026-wNN-sun` (or `thu`, `snf`, `mnf`). Do not use `2024_W08_MAIN`.
+- `game_id` = `AWAY@HOME`.
+- `roof` enum = `open|dome|retractable|semi_open`. SoFi stays `semi_open` with `weather_exposed=false` — see @concepts/dfs-weather-adjustments.md. Do not write `roof=dome`.
+- Retractable roofs stay `weather_exposed=true` until the official roof call.
+
+CeminiParlays already reads this file through `--environment`. DFS **exports** the file later (`ceminidfs export-env` is named, not shipped). The bet-time ITT snapshot and `--from-ceminidfs` are sibling work — names only on this page. Contract source: `briefs/2026-09-15_gemini-tool-improve-hub.md`. Every build row there keeps `do_not_auto_apply: true`.
 
 ### Phase B — Tool sessions (one at a time, with operator)
 
