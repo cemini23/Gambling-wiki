@@ -30,7 +30,7 @@ except ImportError:
 from agent_reach_daily_social import run_agent_reach_social_pass  # noqa: E402
 from arxiv_api_search import arxiv_search  # noqa: E402
 from daily_research_fetch import FetchOutcome, fetch_papers  # noqa: E402
-from rss_digest import render_rss_section, run_rss_feeds  # noqa: E402
+from rss_digest import render_rss_section, run_rss_feeds, write_inbox_stubs  # noqa: E402
 from wiki_source_index import build_wiki_index  # noqa: E402
 
 
@@ -491,6 +491,7 @@ def main() -> int:
     rss_window = int(rss_cfg.get("max_age_days") or 7)
     rss_feed_n = len([f for f in (rss_cfg.get("feeds") or []) if f.get("enabled", True)])
     rss_outcomes = []
+    rss_inbox_stubs: list[Path] = []
     rss_new = 0
     if rss_enabled:
         wiki_idx = build_wiki_index(repo / "wiki" / "sources")
@@ -504,6 +505,17 @@ def main() -> int:
         rss_lane_note = (
             f"RSS lane: **{rss_feed_n}** free feeds ({rss_window}d window; discovery-only)."
         )
+        if rss_cfg.get("write_inbox"):
+            rss_inbox_stubs = write_inbox_stubs(
+                repo,
+                rss_outcomes,
+                max_files=int(rss_cfg.get("inbox_max_files") or 8),
+                skip_ids=list(rss_cfg.get("inbox_skip_feed_ids") or []),
+            )
+            rss_lane_note += f" Inbox stubs: **{len(rss_inbox_stubs)}** new."
+            if rss_inbox_stubs:
+                inbox = inbox_files(repo)
+                preingest_out = run_preingest(repo)
     else:
         rss_lane_note = "RSS lane: **disabled**."
     if news_enabled:

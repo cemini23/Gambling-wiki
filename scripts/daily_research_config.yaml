@@ -154,6 +154,11 @@ rss:
   max_age_days: 7
   max_items_per_feed: 5
   user_agent: CeminiGambling-RSSDigest/1.0 (+local research wiki)
+  write_inbox: true
+  inbox_max_files: 8
+  # OSINT Substack poller already writes EH / Closing Line / Outlier to the OSINT
+  # inbox; do not duplicate them here.
+  inbox_skip_feed_ids: [event-horizon, the-closing-line, outlier-weekly]
   feeds:
   # --- prediction markets / sportsbook industry (OSINT also polls first three) ---
   - id: event-horizon

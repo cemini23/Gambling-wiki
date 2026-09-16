@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Free RSS/Atom discovery for the gambling-wiki daily digest.
 
-Discovery-only: list recent items in the sweep report. Does not write inbox
-files or fetch article bodies (OSINT Substack poller already dumps EH / Closing
-Line / Outlier into the OSINT inbox with cross_wiki: gambling-wiki).
+Discovery-only: list recent items in the sweep report. Optional inbox stubs
+(`write_inbox_stubs`) drop one markdown pointer per new item into
+`research to be indexed/`. Never fetches article bodies and never writes HTML
+(OSINT Substack poller already dumps EH / Closing Line / Outlier into the OSINT
+inbox with cross_wiki: gambling-wiki).
 
 Presence of this file is the federation-sync guard: OSINT
 `sync_federation_digest_bundle.sh` will not overwrite
@@ -12,6 +14,7 @@ Presence of this file is the federation-sync guard: OSINT
 
 from __future__ import annotations
 
+import re
 import sys
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass, field
@@ -237,6 +240,66 @@ def run_rss_feeds(
             )
         outcomes.append(outcome)
     return outcomes
+
+
+def slugify_title(text: str, max_len: int = 60) -> str:
+    """ASCII slug for inbox stub filenames (deterministic, no spaces)."""
+    slug = re.sub(r"[^a-z0-9]+", "-", (text or "").lower()).strip("-")
+    slug = slug[:max_len].strip("-")
+    return slug or "untitled"
+
+
+def write_inbox_stubs(
+    repo: Path | str,
+    outcomes: list[FeedOutcome],
+    *,
+    max_files: int = 8,
+    skip_ids: list[str] | set[str] | None = None,
+) -> list[Path]:
+    """Write discovery stubs for new RSS items into `research to be indexed/`.
+
+    One file per item: ``rss-<feed_id>-<YYYY-MM-DD>-<slug>.md``. The body holds
+    title, url, feed, and date only. Do not write article bodies or HTML.
+
+    Skips items already in the wiki, feeds in *skip_ids*, and existing files.
+    Stop after *max_files* new stubs. Return the written paths.
+    """
+    repo = Path(repo)
+    inbox = repo / "research to be indexed"
+    inbox.mkdir(parents=True, exist_ok=True)
+    skip = {str(s) for s in (skip_ids or [])}
+    written: list[Path] = []
+    if max_files <= 0:
+        return written
+    for outcome in outcomes:
+        if outcome.feed_id in skip:
+            continue
+        for item in outcome.items:
+            if item.wiki_hit:
+                continue
+            if len(written) >= max_files:
+                return written
+            day = (item.published or datetime.now(timezone.utc)).date().isoformat()
+            path = inbox / f"rss-{item.feed_id}-{day}-{slugify_title(item.title)}.md"
+            if path.exists():
+                continue
+            stamp = item.published.date().isoformat() if item.published else "unknown"
+            body = "\n".join(
+                [
+                    f"# {item.title}",
+                    "",
+                    f"- Title: {item.title}",
+                    f"- URL: {item.url}",
+                    f"- Feed: {item.feed_name} (`{item.feed_id}`)",
+                    f"- Date: {stamp}",
+                    "",
+                    "Discovery stub — RSS digest pointer; fetch + ingest only if useful.",
+                    "",
+                ]
+            )
+            path.write_text(body, encoding="utf-8")
+            written.append(path)
+    return written
 
 
 def render_rss_section(outcomes: list[FeedOutcome]) -> tuple[list[str], int]:
