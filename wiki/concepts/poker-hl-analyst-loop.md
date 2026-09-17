@@ -73,9 +73,11 @@ related:
   - sources/brief-k167-sfp-mfg-shelf-2026-08-18.md
   - sources/arxiv-2609.03660-lugl-lightgbm-game-playing-2026-09-11.md
   - sources/brief-k170-week1-papers-rss-2026-09-11.md
+  - sources/arxiv-2609.18848-fp-tie-breaking-first-price-auctions-2026-09-17.md
+  - sources/brief-k171-pm-fp-regulatory-2026-09-17.md
 maturity: validated
 created: 2026-06-03
-updated: 2026-09-11
+updated: 2026-09-17
 ---
 
 ## Relations
@@ -266,6 +268,8 @@ HL loop fixes **`decide()` policy**; researcher **bundle submit** adds **`arena-
 **SFP-MFG theory shelf (K167 — @sources/arxiv-2608.15258-self-fictitious-play-mfg-2026-08-18.md):** REFERENCE, `wont_wire`. Continuous-time self-fictitious-play on monotone potential ergodic MFGs (own occupation-measure belief; `O(√λ)` to Nash). **No HL / decide() import** — torus MFG ≠ discrete HU MAFP. Same posture as K157.
 
 **LUGL / LightGBM tabular shelf (K170 — @sources/arxiv-2609.03660-lugl-lightgbm-game-playing-2026-09-11.md):** REFERENCE, `policy_wired`. Local-update/global-learning loop lets gradient-boosted trees train on tabular game states; competitive with DeepCFR on Flop5 Hold'em. MIT repos (`Deep-CFR-2025`, `PokerRL-2025`, `luglrl`) extract-only; **`ssamot/fil` NO-GO** (no license). **No decide() import** without HU validation. Arena brief: `../../OSINT WORKSPACE/agents/devfun-poker-arena/briefs/2026-09-11_lugl-lightgbm-shelf-steals.md`.
+
+**FP tie-breaking shelf (K171 — @sources/arxiv-2609.18848-fp-tie-breaking-first-price-auctions-2026-09-17.md):** REFERENCE, `policy_wired`. In discrete first-price auctions, uniform tie splits can make FP **cycle**; zero-payoff-on-tie restores convergence. Tie rules are part of the game for FP/MAFP eval — not a cosmetic detail. **`BenHey/FP4FPA` NO-GO** (no license). **No decide() import.**
 
 ## Snippets
 

@@ -360,6 +360,10 @@ Catalog of all wiki pages. Updated on each ingest.
 | [nfl-betting-dfs-intelligence-week1-2026-09-11](sources/nfl-betting-dfs-intelligence-week1-2026-09-11.md) | skimmed | Week 1 Sunday slate dossier (new docx hash) |
 | [daily-digest-rss-week1-pm-nfl-2026-09-11](sources/daily-digest-rss-week1-pm-nfl-2026-09-11.md) | read | K258/K259 PM + NFL injury RSS |
 | [brief-k170-week1-papers-rss-2026-09-11](sources/brief-k170-week1-papers-rss-2026-09-11.md) | deep-read | K170 operator brief |
+| [daily-digest-batch-k171-2026-09-17](sources/daily-digest-batch-k171-2026-09-17.md) | deep-read | K171 batch (FP paper + PM RSS) |
+| [arxiv-2609.18848-fp-tie-breaking-first-price-auctions-2026-09-17](sources/arxiv-2609.18848-fp-tie-breaking-first-price-auctions-2026-09-17.md) | skimmed | FP tie-breaking in auctions (REFERENCE) |
+| [daily-digest-rss-pm-regulatory-2026-09-17](sources/daily-digest-rss-pm-regulatory-2026-09-17.md) | skimmed | CT C&D, NCPG, NFL PM partners, harassment |
+| [brief-k171-pm-fp-regulatory-2026-09-17](sources/brief-k171-pm-fp-regulatory-2026-09-17.md) | deep-read | K171 operator brief |
 | [brief-k239-kalshi-sports-mention-2026-08-15](sources/brief-k239-kalshi-sports-mention-2026-08-15.md) | read | K239 sports mention markets gone + WA geofence |
 | [brief-k240-kalshi-nv-geofence-2026-08-17](sources/brief-k240-kalshi-nv-geofence-2026-08-17.md) | read | K240 NV $120k/day + optional-update geofence |
 | [brief-k242-eh-pm-ban-onshore-2026-08-19](sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md) | read | K242 WA geofence day; ban ≠ offshore |

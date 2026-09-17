@@ -85,9 +85,13 @@ related:
   - sources/daily-digest-batch-k170-2026-09-11.md
   - sources/brief-k170-week1-papers-rss-2026-09-11.md
   - sources/daily-digest-rss-week1-pm-nfl-2026-09-11.md
+  - sweeps/2026-09-17-daily.md
+  - sources/daily-digest-batch-k171-2026-09-17.md
+  - sources/brief-k171-pm-fp-regulatory-2026-09-17.md
+  - sources/daily-digest-rss-pm-regulatory-2026-09-17.md
 maturity: validated
 created: 2026-06-01
-updated: 2026-09-16
+updated: 2026-09-17
 ---
 
 ## Relations
@@ -115,7 +119,7 @@ K93 federated install: morning **discovery-only** loop for sports betting, PM re
 |-------|-------|
 | **Cadence** | Daily @ 08:31 local (`com.cemini.daily-research-digest.gambling`; +7min federation stagger) |
 | **Installed** | 2026-06-01 (K93 brief) |
-| **Last run** | 2026-09-16 |
+| **Last run** | 2026-09-17 |
 | **Fetch sources** | arXiv PDFs → inbox (sparse). **RSS/Atom** practitioner + industry + GitHub releases → sweep rows `S1`… (2026-08-14). OpenReview unused while `paper_mode: arxiv-only`. |
 | **Script** | `~/bin/cemini-daily-research-digest-gambling` → **`${WIKI_ROOT}/scripts/daily_research_digest_run.py`** (`rss.enabled: true`). Frozen `~/.cemini/launchagent/osint/` copy is fallback only. |
 | **Deps** | `wiki_source_index.py` + `rss_digest.py` (required alongside digest runner) |

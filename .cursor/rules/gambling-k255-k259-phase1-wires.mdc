@@ -29,8 +29,16 @@ Verdict: **regulatory awareness only. No pm scp. No xsp scp.**
 - DGA private session with Kalshi + AGA (11 Sep).
 - **PM injury props may not void like sportsbook props** — cross-venue hygiene.
 
+## K171 — Sep 12–17 LSR RSS (2026-09-17)
+
+- CT C&D to predictions operators + suppliers; Ohio NCPG exit over Kalshi (MA may follow).
+- NFL wants tighter regulation of “potential” PM partners; leagues push state bettor harassment bans.
+- Underdog CEO: PM handle surge (awareness; pair K177 exchange).
+- FP tie-breaking (2609.18848): uniform ties can break FP convergence — audit tie rules in FP/MAFP eval.
+
 ## Rules
 
 - **No pm scp. No xsp scp.** No order bots. osint-wiki owns prod bots.
 - Pairs `@entities/platforms/kalshi.md` + `@concepts/prediction-markets-crossover.md`.
 - Do not duplicate full EH prose — cross-link OSINT source stubs.
+- LSR RSS claims stay `[TENTATIVE]` until body fetch succeeds.

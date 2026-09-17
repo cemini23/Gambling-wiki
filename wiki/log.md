@@ -1,5 +1,28 @@
 # Wiki operations log
 
+## [2026-09-17] ingest | K171 FP tie-breaking + PM regulatory RSS
+
+- **Batch K171:** 1 arXiv paper + 8 RSS inbox stubs from `2026-09-17` sweep (7 ingested, 1 MLB skip)
+  - **2609.18848** FP tie-breaking in first-price auctions — REFERENCE; uniform ties → limit cycle; zero-payoff ties restore convergence; **`BenHey/FP4FPA` NO-GO** (no license)
+  - **RSS:** CT C&D to predictions operators/suppliers; Underdog CEO PM handle; NFL PM partner regulation; Ohio NCPG/Kalshi exit (MA may follow); league harassment-ban push; NJ Aug revenue −25%; 90% loss-deduction cap bill to committee
+- LSR body fetch blocked (Cloudflare) — claims tagged `[TENTATIVE]` from titles + stub URLs
+- Phase-1: `policy_wired` on poker-hl, kalshi, underdog-fantasy, prediction-markets-crossover, bankroll-management
+- Brief: `briefs/2026-09-17_k171-gambling.md` (gitignored)
+- Dual-ID: gambling digest K171 — resolve by file + date vs OSINT batches
+- No pm scp. No FOSS clone of unlicensed FP4FPA
+- Sweep `2026-09-17` → INGESTED (K171)
+
+## [2026-09-16] hub | Week 2 Wed scheme (Gemini) → DFS + parlays
+
+- Inbox: `NFL Week 2 Slate Research.docx` (NEW, sha256 `0623a4f8…`) → egress-fi `/opt/cemini-bulk/research/gambling/`
+- Prompt: `briefs/deep-research/2026-w02-wed-scheme-prompt.md`
+- Hub: `briefs/2026-w02-slate-hub-sun.md` (Sunday main 1 p.m. + 4 p.m. only)
+- Dispatched: `../CeminiDFS/briefs/2026-09-16_w02-wed-scheme-hub.md` · `../CeminiParlays/briefs/2026-09-16_w02-wed-scheme-hub.md`
+- Flips: Darnold OUT / Lock starts · Higgins IR confirmed · Lane IR · Kamara FP (split) · Tua DNP · Murray LP
+- Stack themes: WAS@DAL · CIN@HOU · MIN+Jefferson after QB. Fades: ATL pass · MIA@SF stacks · PIT@NE
+- Held: roof-will-close lock · Table 11 ARI +4.5 · Jacobs / Kaelon Black / Walker KC
+- No salaries. No prop lines. No auto-enter. No wiki source page
+
 ## [2026-09-15] wiki | SoFi weather Off + shared env contract + FOSS rejects
 
 - SoFi weather adj is **Off** in `concepts/dfs-weather-adjustments.md` (`semi_open`, `weather_exposed=false`, wind zeroed — not a dome); `concepts/nfl-weekly-slate-hub-workflow.md` gains the `environment.csv` header contract (Parlays `--environment`; DFS `export-env` and `--from-ceminidfs` named only); `concepts/dfs-foss-tooling-landscape.md` gains NO-GO rows for dynastyprocess/data + ffanalytics (GPL-3.0) and sarartur/oddsapi + jmoore87jr (NO_LICENSE). No source page, no Python, no flags shipped.

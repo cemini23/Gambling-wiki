@@ -71,9 +71,11 @@ related:
   - sources/brief-k167-sfp-mfg-shelf-2026-08-18.md
   - sources/arxiv-2609.03660-lugl-lightgbm-game-playing-2026-09-11.md
   - sources/brief-k170-week1-papers-rss-2026-09-11.md
+  - sources/arxiv-2609.18848-fp-tie-breaking-first-price-auctions-2026-09-17.md
+  - sources/brief-k171-pm-fp-regulatory-2026-09-17.md
 maturity: draft
 created: 2026-06-03
-updated: 2026-09-11
+updated: 2026-09-17
 ---
 
 ## Relations
@@ -208,6 +210,10 @@ See `@sources/daily-digest-arxiv-batch-2026-06-04.md` and `@entities/bots/poker-
 ### LUGL / LightGBM tabular games (K170) [REFERENCE]
 
 @sources/arxiv-2609.03660-lugl-lightgbm-game-playing-2026-09-11.md: **Local Updates, Global Learning** — tabular self-play targets feed batch LightGBM retrain between table resets; competitive with DeepCFR on **Flop5 Hold'em**. MIT FOSS repos for extract-only benchmark replication; **`ssamot/fil` unlicensed**. Not a villain HUD or decide() patch without HU validation. `policy_wired` shelf only.
+
+### FP tie-breaking (K171) [REFERENCE]
+
+@sources/arxiv-2609.18848-fp-tie-breaking-first-price-auctions-2026-09-17.md: standard uniform tie splits can yield **limit cycles** in minimal first-price auction FP; **zero payoff on ties** restores Nash convergence (ε of original game). Tie-breaking is game definition, not UI polish — audit before trusting FP/MAFP regression gates. **`BenHey/FP4FPA` unlicensed.**
 
 ### Play-adequacy / inference coverage (K158) [TENTATIVE]
 

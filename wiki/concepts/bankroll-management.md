@@ -33,9 +33,11 @@ related:
   - sources/brief-k148-agent-framework-pm-betting-steals-2026-07-06.md
   - sources/arxiv-2604.21851-betting-on-bets-stochastic-dominance-2026-07-06.md
   - sources/arxiv-2604.27865-kellybench-2026-08-31.md
+  - sources/daily-digest-rss-pm-regulatory-2026-09-17.md
+  - sources/brief-k171-pm-fp-regulatory-2026-09-17.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-08-31
+updated: 2026-09-17
 ---
 
 ## Relations
@@ -95,6 +97,10 @@ Track: date, sport/market, line, odds, stake, result, closing line (for CLV). Wi
 | `payouts.py` | Profit, parlay payout, EV |
 | `bankroll.py` | Kelly criterion, unit sizing caps |
 | Phase 2 | Vig, arb detection — spec only until sportsbook API lane is licensed |
+
+### Federal loss-deduction cap (K171) [TENTATIVE — LSR title]
+
+2026-09-16: a bill to **repeal the 90% cap** on gambling-loss tax deductions moved to committee [TENTATIVE]. This is **tax planning**, not wager sizing — keep session bankroll rules separate from IRS deductibility. Hub: `@sources/daily-digest-rss-pm-regulatory-2026-09-17.md`. **[NEEDS VERIFICATION 2026-09-30]** bill text and status.
 
 ## Snippets
 

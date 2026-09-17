@@ -63,9 +63,11 @@ related:
   - sources/daily-digest-rss-nfl-week0-2026-08-31.md
   - sources/daily-digest-rss-week1-pm-nfl-2026-09-11.md
   - sources/brief-k170-week1-papers-rss-2026-09-11.md
+  - sources/daily-digest-rss-pm-regulatory-2026-09-17.md
+  - sources/brief-k171-pm-fp-regulatory-2026-09-17.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-09-11
+updated: 2026-09-17
 ---
 
 ## Relations
@@ -145,6 +147,8 @@ Also Aug: **Nevada GCB** moved to fine Kalshi **$120k/day** for missing its Aug 
 **K168 (2026-08-31):** Ninth Circuit says Kalshi sports contracts are likely not CEA swaps (NV/CA access risk). Polymarket pulled NFL will-play filings. Kalshi **game-week** sports prices are near-calibrated; **month-plus** futures are not. Hubs: `@sources/daily-digest-rss-nfl-week0-2026-08-31.md`, `@sources/arxiv-2602.19520-pm-domain-calibration-2026-08-31.md`.
 
 **K170 (2026-09-11):** Kalshi federal losses in UT/IA (K258); sports = core volume not niche slice (K259); DGA session with Kalshi + AGA. **Injury void asymmetry:** NFL injury news may void sportsbook player props but **not** PM contracts the same way — cross-venue shoppers must read settlement rules. DraftKings ran anti-Kalshi review ads (LSR). Hub: `@sources/daily-digest-rss-week1-pm-nfl-2026-09-11.md`. **No pm scp.**
+
+**K171 (2026-09-17):** CT **C&D** to predictions operators + suppliers; **NFL** wants tighter regulation of “potential” PM partners (CNBC/LSR); leagues/players push **state bettor bans for harassment**; Ohio left **NCPG** over Kalshi (MA may follow). Hub: `@sources/daily-digest-rss-pm-regulatory-2026-09-17.md`. **No pm scp.**
 
 ### When to stay in traditional books
 

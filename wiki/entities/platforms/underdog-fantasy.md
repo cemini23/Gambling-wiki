@@ -26,9 +26,11 @@ related:
   - sources/daily-digest-news-r1-r12-2026-06-02.md
   - sources/brief-k128-bbm7-draft-copilot-hub-2026-06-24.md
   - sources/brief-k169-nfl-week1-ready-2026-08-31.md
+  - sources/daily-digest-rss-pm-regulatory-2026-09-17.md
+  - sources/brief-k171-pm-fp-regulatory-2026-09-17.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-08-31
+updated: 2026-09-17
 ---
 
 ## Relations
@@ -49,6 +51,8 @@ US **daily fantasy + best ball** platform. Flagship large-field tournament: **Be
 ### K177 Context — prediction-market exchange (2026-07)
 
 Jul 2026 Underdog launched its own CFTC-licensed prediction-market exchange (DCM+DCO+FCM stack) after previously routing via Kalshi/Crypto.com partners. See OSINT `@osint-wiki/sources/substack-rss-event-horizon-2026-07-20-underdog-exchange.md` + gambling brief `briefs/2026-07-20_k177-underdog-prediction-exchange.md`. DFS/best-ball product lines unchanged by this Context note.
+
+**K171 (2026-09-11) [TENTATIVE — LSR title]:** CEO cited **surging handle from predictions** — PM exchange traction narrative; verify against public filings before sizing cross-product bankroll. Hub: `@sources/daily-digest-rss-pm-regulatory-2026-09-17.md`. **No pm scp.**
 
 ### Best Ball Mania 7 (2026 season) [CONFIRMED — Underdog help center 2026-04-27]
 
