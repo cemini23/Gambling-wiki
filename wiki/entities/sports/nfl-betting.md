@@ -54,7 +54,7 @@ related:
   - sources/brief-k172-w02-env-rss-2026-09-18.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-09-18
+updated: 2026-09-19
 ---
 
 ## Relations
@@ -169,9 +169,9 @@ Post-kickoff roster/injury updates and Sunday **13-game** dossier. Sharp signals
 
 Injury watch: **A.J. Brown** high-ankle (~4 wk); **Sam Darnold** hip; **Tua** oblique (Cooper Rush may start); **Jake Tonges** MCL. Profit–bias paper (K170): keep **hold-first** edge math — do not assume Levitt-style favorite shading on NFL. Hub: `@sources/nfl-betting-dfs-intelligence-week1-2026-09-11.md`, `@sources/brief-k170-week1-papers-rss-2026-09-11.md`, gitignored `briefs/2026-09-11_nfl-week1-slate-hub.md`.
 
-### Week 2 2026 Sunday main (K172) [TENTATIVE — verify live 2026-09-18]
+### Week 2 2026 Sunday main (K172) [TENTATIVE — verify live 2026-09-19]
 
-**13-game** main slate env + stack hygiene from Friday close. **Keep** WAS@DAL (50.5 total, DAL −4). **Fade stacks:** CIN@HOU (Nico Collins OUT), MIA@SF, PIT@NE. **Jefferson solo** — Murray OUT, Wentz starts. Env: SoFi **semi_open** (LV@LAC); MetLife rain risk; TEN heat index ~108°F. Saturday locks: retractable roofs ATL/HOU/ARI/DAL; Pittman/McConkey Q; Flowers/Bowers doubtful. Hub: `@sources/nfl-week2-slate-env-analysis-2026-09-18.md`, gitignored `briefs/2026-w02-slate-hub-sun.md`.
+**13-game** main slate. **Keep** WAS@DAL (50.5, DAL −4). **Fade stacks:** CIN@HOU (Collins OUT), MIA@SF, PIT@NE. **Jefferson solo** (Wentz). Sat prefetch (Open-Meteo): **MIN@CHI** rain/wind upgrade (14 mph G23, 47% pop); **GB@NYJ** rain screen; SoFi **semi_open** not wind-exposed; TEN heat ~96°F. Roofs HOU/ATL/ARI/DAL uncalled until 90-min. Hub: gitignored `briefs/2026-w02-slate-hub-sun.md`, prefetch `briefs/slate-prefetch/2026-w02-sun-early.md`.
 
 ### Open-source ML note
 

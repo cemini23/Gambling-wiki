@@ -1,5 +1,12 @@
 # Wiki operations log
 
+## [2026-09-19] prefetch | Week 2 Sat sun early → DFS + parlays
+
+- **Prefetch:** manual `2026-w02-sun-early` (~28h to kick; nflverse + Open-Meteo). Key delta: MIN@CHI wind/rain upgrade; GB@NYJ rain screen.
+- **Hub:** `briefs/2026-w02-slate-hub-sun.md` weather table refreshed.
+- **Dispatched:** CeminiDFS `2026-09-19_w02-sat-prefetch.md` · CeminiParlays `2026-09-19_w02-sat-prefetch.md` + `examples/2026-w02-sun-environment.csv`
+- Sunday T-90 + FanDuel salary CSV still operator. No auto-enter.
+
 ## [2026-09-19] ingest | K172 Week 2 env dossier + RSS
 
 - **Batch K172:** 1 docx (Week 2 env/personnel) + 8 RSS inbox files (1 new NFL line, 2 OOD skip, 5 K171 LSR dupes archive-only)
