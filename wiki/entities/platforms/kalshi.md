@@ -53,9 +53,11 @@ related:
   - sources/brief-k170-week1-papers-rss-2026-09-11.md
   - sources/daily-digest-rss-pm-regulatory-2026-09-17.md
   - sources/brief-k171-pm-fp-regulatory-2026-09-17.md
+  - sources/daily-digest-rss-w02-nfl-pm-2026-09-18.md
+  - sources/brief-k172-w02-env-rss-2026-09-18.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-09-17
+updated: 2026-09-18
 ---
 
 ## Relations
@@ -196,6 +198,10 @@ Daleep et al. via Klement: large bettors show **lower edge** than small — PM p
 - **Connecticut** sent cease-and-desist letters to predictions operators and **suppliers** — enforcement broadens beyond the Kalshi suit thread.
 - **Ohio** quietly left **NCPG** over Kalshi; **Massachusetts** may exit next — state responsible-gambling council friction, not a geofence event by itself.
 - Hub: `@sources/daily-digest-rss-pm-regulatory-2026-09-17.md`. **No pm scp.**
+
+### K172 parlay volume (2026-09-14+) [TENTATIVE — EH via OSINT K261]
+
+Event Horizon: Kalshi **$2.42B** notional Sat 12 Sep (record); **parlays 60.9%** of volume; sports **29.8%**. Ep 32 DeNault enforcement interview. Cross-wiki: `@osint-wiki/concepts/k261-gambling-pm-wave.md`. Hub: `@sources/daily-digest-rss-w02-nfl-pm-2026-09-18.md`. **No pm scp.**
 
 ## Snippets
 

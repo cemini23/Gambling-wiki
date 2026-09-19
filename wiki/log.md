@@ -1,5 +1,39 @@
 # Wiki operations log
 
+## [2026-09-19] ingest | K172 Week 2 env dossier + RSS
+
+- **Batch K172:** 1 docx (Week 2 env/personnel) + 8 RSS inbox files (1 new NFL line, 2 OOD skip, 5 K171 LSR dupes archive-only)
+  - **docx** NFL Week 2 Slate Analysis — env card, ITT, stack hygiene (WAS@DAL keep; CIN@HOU/MIA@SF/PIT@NE fade; Jefferson solo)
+  - **RSS** Cowboys −4 Commanders — aligns with dossier
+  - **EH cross-wiki** Kalshi parlay 60.9% / $2.42B Sat — OSINT K261
+- Phase-1: `policy_wired` on nfl-betting, free-slate-context, kalshi
+- Briefs: `briefs/2026-09-19_k172-gambling.md`, CeminiDFS `2026-09-19_w02-fri-env-steals-from-analysis.md`
+- Hub work (Sep 18 log) stays gitignored — wiki source page added for env dossier
+- No pm scp. No auto-enter. No new arXiv (2609.18848 = K171)
+- Sweep `2026-09-18` → INGESTED (K172)
+
+## [2026-09-18] hub | Week 2 Fri env (Gemini) → DFS + parlays
+
+- Inbox: `NFL Week 2 Slate Analysis.docx` (NEW, sha256 `7ae5c80b…`) — laptop copy `briefs/deep-research/`; egress scp **failed** (ssh reset). Inbox copy still present. Retry archive later.
+- Prompt: `briefs/deep-research/2026-w02-fri-env-prompt.md`
+- Hub: `briefs/2026-w02-slate-hub-sun.md` (Sunday main 1 p.m. + 4 p.m. only)
+- Dispatched: `../CeminiDFS/briefs/2026-09-18_w02-fri-env-hub.md` · `../CeminiParlays/briefs/2026-09-18_w02-fri-env-hub.md`
+- OUT: Collins · Murray (Wentz starts) · Fitzpatrick · Omar Cooper Jr. D: Bowers · Flowers. Q: Tua (Rush starts) · Pittman · McConkey · Porter. Kamara Active split
+- Stack: WAS@DAL keep · CIN@HOU fade · Jefferson solo. SoFi semi_open confirmed. Roofs still uncalled
+- Sat prompt: `briefs/deep-research/2026-w02-sat-lock-prompt.md`
+- No salaries. No prop lines. No auto-enter. No wiki source page. RSS stubs in inbox left untouched
+
+## [2026-09-17] hub | Week 2 Thu practice (Gemini) → DFS + parlays
+
+- Inbox: `NFL Main Slate Practice Report.docx` (NEW, sha256 `85572300…`) → egress-fi `/opt/cemini-bulk/research/gambling/`
+- Prompt: `briefs/deep-research/2026-w02-thu-practice-prompt.md`
+- Hub: `briefs/2026-w02-slate-hub-sun.md` (Sunday main 1 p.m. + 4 p.m. only)
+- Dispatched: `../CeminiDFS/briefs/2026-09-17_w02-thu-practice-hub.md` · `../CeminiParlays/briefs/2026-09-17_w02-thu-practice-hub.md`
+- Flips: Collins DNP hamstring · Pittman DNP foot. No flip: Murray LP · Tua DNP · Kamara FP · Bowers / McConkey / Flowers DNP
+- Stack: WAS@DAL keep · CIN@HOU wait · MIN wait. Fades unchanged
+- Held: Hindustan Times / Times of India / PrizePicks-as-primary · Jacobs / Kaelon Black / Walker KC
+- No salaries. No prop lines. No auto-enter. No wiki source page
+
 ## [2026-09-17] ingest | K171 FP tie-breaking + PM regulatory RSS
 
 - **Batch K171:** 1 arXiv paper + 8 RSS inbox stubs from `2026-09-17` sweep (7 ingested, 1 MLB skip)

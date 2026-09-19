@@ -10,9 +10,11 @@ related:
   - entities/sports/nfl-betting.md
   - concepts/parlay-and-correlated-bets.md
   - entities/tools/the-odds-api.md
+  - sources/nfl-week2-slate-env-analysis-2026-09-18.md
+  - sources/brief-k172-w02-env-rss-2026-09-18.md
 maturity: draft
 created: 2026-08-15
-updated: 2026-08-15
+updated: 2026-09-18
 ---
 
 ## Relations
@@ -75,6 +77,10 @@ Score ≥2 → lean under. This is a **screen**, not fair probability. Books alr
 - A run-expectancy or EPA model
 - Auto-bet / scrape of Hard Rock
 - License to treat ESPN scoreboard JSON as a product feed
+
+### Week 2 2026 env card (K172) [TENTATIVE]
+
+@sources/nfl-week2-slate-env-analysis-2026-09-18.md flags for Sunday prefetch: **SoFi semi_open** (LV@LAC, wind zero); **MetLife** rain 70–80% + gusts (GB@NYJ); **Nissan Stadium** heat index ~108°F (PHI@TEN); retractable roofs ATL/HOU/ARI/DAL uncalled until ~90 min pre-kick. Export via `environment.csv` per `@concepts/nfl-weekly-slate-hub-workflow.md`.
 
 ## Snippets
 

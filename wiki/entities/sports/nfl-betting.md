@@ -49,9 +49,12 @@ related:
   - sources/daily-digest-rss-week1-pm-nfl-2026-09-11.md
   - sources/arxiv-2609.06739-profit-bias-identity-sports-betting-2026-09-11.md
   - sources/brief-k170-week1-papers-rss-2026-09-11.md
+  - sources/nfl-week2-slate-env-analysis-2026-09-18.md
+  - sources/daily-digest-rss-w02-nfl-pm-2026-09-18.md
+  - sources/brief-k172-w02-env-rss-2026-09-18.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-09-11
+updated: 2026-09-18
 ---
 
 ## Relations
@@ -165,6 +168,10 @@ Kickoff **Wed 2026-09-09** SEA vs NE. Do not price **Jacobs** (Commissioner’s 
 Post-kickoff roster/injury updates and Sunday **13-game** dossier. Sharp signals [TENTATIVE]: **BUF @ HOU** RLM (BUF -1.5 → HOU -1.5 vs 76% BUF tickets); **CHI @ CAR** Over handle 92% vs 43% tickets (total 47.5). Shootout candidates: TB@CIN, NO@DET, CHI@CAR. GPP salary lag: Etienne ($5,900 DK), Lloyd ($4,800), Vele ($3,500).
 
 Injury watch: **A.J. Brown** high-ankle (~4 wk); **Sam Darnold** hip; **Tua** oblique (Cooper Rush may start); **Jake Tonges** MCL. Profit–bias paper (K170): keep **hold-first** edge math — do not assume Levitt-style favorite shading on NFL. Hub: `@sources/nfl-betting-dfs-intelligence-week1-2026-09-11.md`, `@sources/brief-k170-week1-papers-rss-2026-09-11.md`, gitignored `briefs/2026-09-11_nfl-week1-slate-hub.md`.
+
+### Week 2 2026 Sunday main (K172) [TENTATIVE — verify live 2026-09-18]
+
+**13-game** main slate env + stack hygiene from Friday close. **Keep** WAS@DAL (50.5 total, DAL −4). **Fade stacks:** CIN@HOU (Nico Collins OUT), MIA@SF, PIT@NE. **Jefferson solo** — Murray OUT, Wentz starts. Env: SoFi **semi_open** (LV@LAC); MetLife rain risk; TEN heat index ~108°F. Saturday locks: retractable roofs ATL/HOU/ARI/DAL; Pittman/McConkey Q; Flowers/Bowers doubtful. Hub: `@sources/nfl-week2-slate-env-analysis-2026-09-18.md`, gitignored `briefs/2026-w02-slate-hub-sun.md`.
 
 ### Open-source ML note
 
