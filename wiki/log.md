@@ -1,5 +1,12 @@
 # Wiki operations log
 
+## [2026-09-19] ops | egress-fi rescue + WC teardown + archive
+
+- **Rescue:** enabled for disk surgery; all `cemini-wc-*` units **masked** on disk; normal boot restored
+- **SSH/UFW:** allow `172.58.129.22` + Proton IP; rescue disabled (API: `rescue=false`)
+- **RAM:** ~3.4 GiB free post-reboot (OOM from world-cup-bot stopped)
+- **Archive:** 17 inbox files → `cemini-egress-fi:/opt/cemini-bulk/research/gambling/`; inbox cleared
+
 ## [2026-09-19] prefetch | Week 2 Sat sun early → DFS + parlays
 
 - **Prefetch:** manual `2026-w02-sun-early` (~28h to kick; nflverse + Open-Meteo). Key delta: MIN@CHI wind/rain upgrade; GB@NYJ rain screen.
