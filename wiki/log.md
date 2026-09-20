@@ -1,5 +1,25 @@
 # Wiki operations log
 
+## [2026-09-20] ingest | K173 Week 2 Saturday lock
+
+- **Batch K173:** 1 docx (Sat deltas) + 8 RSS (2 NFL awareness, 3 K171 PM dupes, 2 CFB skip, 1 SBC skip)
+  - **docx** Saturday lock — Pittman/Porter OUT; NWS rain/heat; theme freeze
+  - **RSS** Texans/Bengals Burrow · 49ers −13 Dolphins — hub-aligned stubs
+- Phase-1: `policy_wired` on nfl-betting, free-slate-context
+- Hub/gitignored briefs already dispatched Sep 19; wiki source pages added
+- Papers: 0 new arXiv
+- Sweep `2026-09-19` + `2026-09-20` → INGESTED (K173)
+- No pm scp. No auto-enter.
+
+## [2026-09-19] hub | Week 2 Sat lock (Gemini) → DFS + parlays
+
+- Desktop: `NFL Week 2 Saturday Deltas.docx` (sha256 `346aea1a…`)
+- Hub: `briefs/2026-w02-slate-hub-sun.md` — Pittman OUT · Porter OUT
+- Dispatched: `../CeminiDFS/briefs/2026-09-19_w02-sat-lock-hub.md` · `../CeminiParlays/briefs/2026-09-19_w02-sat-lock-hub.md`
+- Scratch CSV + test: Pittman / Porter added (`config/2026-w02-sun-scratch.csv`)
+- Held: Tee Higgins IR mixup · Kaelon Black
+- Build order: CeminiDFS first, then CeminiParlays. No auto-enter
+
 ## [2026-09-19] ops | egress-fi rescue + WC teardown + archive
 
 - **Rescue:** enabled for disk surgery; all `cemini-wc-*` units **masked** on disk; normal boot restored

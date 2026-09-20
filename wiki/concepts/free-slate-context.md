@@ -12,9 +12,10 @@ related:
   - entities/tools/the-odds-api.md
   - sources/nfl-week2-slate-env-analysis-2026-09-18.md
   - sources/brief-k172-w02-env-rss-2026-09-18.md
+  - sources/nfl-week2-saturday-deltas-2026-09-19.md
 maturity: draft
 created: 2026-08-15
-updated: 2026-09-18
+updated: 2026-09-20
 ---
 
 ## Relations
@@ -78,9 +79,9 @@ Score ≥2 → lean under. This is a **screen**, not fair probability. Books alr
 - Auto-bet / scrape of Hard Rock
 - License to treat ESPN scoreboard JSON as a product feed
 
-### Week 2 2026 env card (K172) [TENTATIVE]
+### Week 2 2026 env card (K173) [TENTATIVE]
 
-@sources/nfl-week2-slate-env-analysis-2026-09-18.md flags for Sunday prefetch: **SoFi semi_open** (LV@LAC, wind zero); **MetLife** rain 70–80% + gusts (GB@NYJ); **Nissan Stadium** heat index ~108°F (PHI@TEN); retractable roofs ATL/HOU/ARI/DAL uncalled until ~90 min pre-kick. Export via `environment.csv` per `@concepts/nfl-weekly-slate-hub-workflow.md`.
+@sources/nfl-week2-saturday-deltas-2026-09-19.md (NWS Sat lock): **MetLife** rain likely; **Soldier Field** 12–14 mph + showers; **Gillette** ~100% rain; **Nissan** heat advisory 105–107°F; **SoFi semi_open** not wind-exposed; retractable roofs ATL/HOU/ARI/DAL uncalled until T-90. Export via `environment.csv` per `@concepts/nfl-weekly-slate-hub-workflow.md`.
 
 ## Snippets
 

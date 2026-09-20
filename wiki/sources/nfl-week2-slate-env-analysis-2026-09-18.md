@@ -10,6 +10,7 @@ related:
   - concepts/nfl-weekly-slate-hub-workflow.md
   - sources/daily-digest-batch-k172-2026-09-18.md
   - sources/brief-k172-w02-env-rss-2026-09-18.md
+  - sources/nfl-week2-saturday-deltas-2026-09-19.md
   - meta/daily-research-digest-cadence.md
 maturity: draft
 read_status: skimmed
