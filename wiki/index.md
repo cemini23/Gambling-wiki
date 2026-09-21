@@ -372,6 +372,9 @@ Catalog of all wiki pages. Updated on each ingest.
 | [nfl-week2-saturday-deltas-2026-09-19](sources/nfl-week2-saturday-deltas-2026-09-19.md) | skimmed | Week 2 Saturday lock dossier |
 | [daily-digest-rss-w02-sat-injury-2026-09-20](sources/daily-digest-rss-w02-sat-injury-2026-09-20.md) | stub | Burrow / MIA@SF RSS |
 | [brief-k173-w02-sat-lock-2026-09-20](sources/brief-k173-w02-sat-lock-2026-09-20.md) | deep-read | K173 operator brief |
+| [daily-digest-batch-k174-2026-09-21](sources/daily-digest-batch-k174-2026-09-21.md) | deep-read | K174 Week 3 injury + inbox close |
+| [daily-digest-rss-w03-injury-2026-09-21](sources/daily-digest-rss-w03-injury-2026-09-21.md) | stub | Week 3 QB injury RSS |
+| [daily-digest-rss-pm-eh-ep33-2026-09-21](sources/daily-digest-rss-pm-eh-ep33-2026-09-21.md) | stub | EH Ep 33 PM hedging cross-ref |
 | [brief-k239-kalshi-sports-mention-2026-08-15](sources/brief-k239-kalshi-sports-mention-2026-08-15.md) | read | K239 sports mention markets gone + WA geofence |
 | [brief-k240-kalshi-nv-geofence-2026-08-17](sources/brief-k240-kalshi-nv-geofence-2026-08-17.md) | read | K240 NV $120k/day + optional-update geofence |
 | [brief-k242-eh-pm-ban-onshore-2026-08-19](sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md) | read | K242 WA geofence day; ban ≠ offshore |

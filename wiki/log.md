@@ -1,5 +1,18 @@
 # Wiki operations log
 
+## [2026-09-21] ingest | K174 Week 3 injury + inbox close
+
+- **Batch K174:** 8 inbox stubs archived (K171/K173 dupes + OOD) + sweep RSS (Week 3 injuries, EH Ep 33, nflverse releases)
+  - **Week 3** Caleb Williams hamstring · Jayden Daniels elbow · Alec Pierce OUT — early lines awareness
+  - **EH Ep 33** PM hedging — cross-wiki stub only
+  - **nflverse** schedules/stats releases → CeminiDFS refresh brief
+- Phase-1: `policy_wired` on nfl-betting, nfl-dfs-data-sources, pm-eh stub
+- Papers: 0 new arXiv (2609.18848 / 2609.07617 dupes)
+- Sweep `2026-09-21` → INGESTED (K174)
+- Skipped: RotoBaller W3 waiver wire (K169 pattern); SBC UK retail; CFB inbox
+- Brief: `../CeminiDFS/briefs/2026-09-21_k174-w03-injury-nflverse-refresh.md`
+- No pm scp. No auto-enter.
+
 ## [2026-09-20] ingest | K173 Week 2 Saturday lock
 
 - **Batch K173:** 1 docx (Sat deltas) + 8 RSS (2 NFL awareness, 3 K171 PM dupes, 2 CFB skip, 1 SBC skip)

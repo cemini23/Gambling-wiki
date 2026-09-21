@@ -491,8 +491,9 @@ def main() -> int:
     rss_window = int(rss_cfg.get("max_age_days") or 7)
     rss_feed_n = len([f for f in (rss_cfg.get("feeds") or []) if f.get("enabled", True)])
     rss_outcomes = []
-    rss_inbox_stubs: list[Path] = []
     rss_new = 0
+    rss_inbox_written: list[Path] = []
+    rss_write_inbox = bool(rss_cfg.get("write_inbox", False))
     if rss_enabled:
         wiki_idx = build_wiki_index(repo / "wiki" / "sources")
         rss_cutoff = datetime.now(timezone.utc) - timedelta(days=rss_window)
@@ -502,20 +503,25 @@ def main() -> int:
             wiki_urls=wiki_idx.get("url"),
             seen_urls=seen_urls,
         )
-        rss_lane_note = (
-            f"RSS lane: **{rss_feed_n}** free feeds ({rss_window}d window; discovery-only)."
-        )
-        if rss_cfg.get("write_inbox"):
-            rss_inbox_stubs = write_inbox_stubs(
+        if rss_write_inbox:
+            skip_ids = [str(x) for x in (rss_cfg.get("inbox_skip_feed_ids") or [])]
+            max_files = int(rss_cfg.get("inbox_max_files") or 8)
+            rss_inbox_written = write_inbox_stubs(
                 repo,
                 rss_outcomes,
-                max_files=int(rss_cfg.get("inbox_max_files") or 8),
-                skip_ids=list(rss_cfg.get("inbox_skip_feed_ids") or []),
+                max_files=max_files,
+                skip_ids=skip_ids,
             )
-            rss_lane_note += f" Inbox stubs: **{len(rss_inbox_stubs)}** new."
-            if rss_inbox_stubs:
-                inbox = inbox_files(repo)
-                preingest_out = run_preingest(repo)
+            inbox = inbox_files(repo)
+            preingest_out = run_preingest(repo) if inbox else ""
+        stub_note = (
+            f"{len(rss_inbox_written)} inbox stub(s)"
+            if rss_write_inbox
+            else "discovery-only"
+        )
+        rss_lane_note = (
+            f"RSS lane: **{rss_feed_n}** free feeds ({rss_window}d window; {stub_note})."
+        )
     else:
         rss_lane_note = "RSS lane: **disabled**."
     if news_enabled:
@@ -617,7 +623,15 @@ def main() -> int:
         lines.append("")
         paper_total += len(results)
 
-    rss_lines, rss_new = render_rss_section(rss_outcomes) if rss_enabled else ([], 0)
+    rss_lines, rss_new = (
+        render_rss_section(
+            rss_outcomes,
+            inbox_stub_count=len(rss_inbox_written),
+            write_inbox=rss_write_inbox,
+        )
+        if rss_enabled
+        else ([], 0)
+    )
     if rss_enabled:
         lines.extend(rss_lines)
 
@@ -717,6 +731,8 @@ def main() -> int:
     print(f"Report: {report}")
     if n_fetched:
         print(f"Inbox: {n_fetched} new PDF(s) in research to be indexed/")
+    if rss_inbox_written:
+        print(f"Inbox: {len(rss_inbox_written)} RSS stub(s) in research to be indexed/")
 
     meta = repo / "wiki" / "meta" / "daily-research-digest-cadence.md"
     if meta.is_file():

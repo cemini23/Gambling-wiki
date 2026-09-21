@@ -10,10 +10,12 @@ related:
   - concepts/diy-nfl-dfs-model-architecture.md
   - sources/web-bleacher-report-key-injuries-2026-07-01.md
   - sources/brief-k169-nfl-week1-ready-2026-08-31.md
+  - sources/daily-digest-rss-w03-injury-2026-09-21.md
+  - sources/daily-digest-batch-k174-2026-09-21.md
   - meta/daily-research-digest-cadence.md
 maturity: draft
 created: 2026-06-20
-updated: 2026-08-31
+updated: 2026-09-21
 ---
 
 ## Relations

@@ -55,9 +55,11 @@ related:
   - sources/brief-k171-pm-fp-regulatory-2026-09-17.md
   - sources/daily-digest-rss-w02-nfl-pm-2026-09-18.md
   - sources/brief-k172-w02-env-rss-2026-09-18.md
+  - sources/daily-digest-rss-pm-eh-ep33-2026-09-21.md
+  - sources/daily-digest-batch-k174-2026-09-21.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-09-18
+updated: 2026-09-21
 ---
 
 ## Relations

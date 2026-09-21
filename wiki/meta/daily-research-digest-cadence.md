@@ -129,7 +129,7 @@ K93 federated install: morning **discovery-only** loop for sports betting, PM re
 |-------|-------|
 | **Cadence** | Daily @ 08:31 local (`com.cemini.daily-research-digest.gambling`; +7min federation stagger) |
 | **Installed** | 2026-06-01 (K93 brief) |
-| **Last run** | 2026-09-20 |
+| **Last run** | 2026-09-21 |
 | **Fetch sources** | arXiv PDFs → inbox (sparse). **RSS/Atom** practitioner + industry + GitHub releases → sweep rows `S1`… (2026-08-14). OpenReview unused while `paper_mode: arxiv-only`. |
 | **Script** | `~/bin/cemini-daily-research-digest-gambling` → **`${WIKI_ROOT}/scripts/daily_research_digest_run.py`** (`rss.enabled: true`). Frozen `~/.cemini/launchagent/osint/` copy is fallback only. |
 | **Deps** | `wiki_source_index.py` + `rss_digest.py` (required alongside digest runner) |

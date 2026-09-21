@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 """Free RSS/Atom discovery for the gambling-wiki daily digest.
 
-Discovery-only: list recent items in the sweep report. Optional inbox stubs
-(`write_inbox_stubs`) drop one markdown pointer per new item into
-`research to be indexed/`. Never fetches article bodies and never writes HTML
-(OSINT Substack poller already dumps EH / Closing Line / Outlier into the OSINT
-inbox with cross_wiki: gambling-wiki).
+Writes markdown discovery stubs into `research to be indexed/` for NEW
+practitioner items (cap via rss.inbox_max_files). Does not fetch article
+bodies. Skips feeds OSINT already dumps (event-horizon, the-closing-line,
+outlier-weekly).
 
 Presence of this file is the federation-sync guard: OSINT
 `sync_federation_digest_bundle.sh` will not overwrite
@@ -18,10 +17,10 @@ import re
 import sys
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
-from typing import Any
+from typing import Any, Iterable
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
@@ -242,74 +241,90 @@ def run_rss_feeds(
     return outcomes
 
 
-def slugify_title(text: str, max_len: int = 60) -> str:
-    """ASCII slug for inbox stub filenames (deterministic, no spaces)."""
-    slug = re.sub(r"[^a-z0-9]+", "-", (text or "").lower()).strip("-")
-    slug = slug[:max_len].strip("-")
-    return slug or "untitled"
+def inbox_slug(title: str, *, max_len: int = 60) -> str:
+    raw = (title or "").lower()
+    slug = re.sub(r"[^a-z0-9]+", "-", raw).strip("-")
+    if len(slug) > max_len:
+        slug = slug[:max_len].rstrip("-")
+    return slug or "item"
 
 
 def write_inbox_stubs(
-    repo: Path | str,
-    outcomes: list[FeedOutcome],
+    repo: Path,
+    outcomes: Iterable[FeedOutcome],
     *,
     max_files: int = 8,
-    skip_ids: list[str] | set[str] | None = None,
+    skip_ids: Iterable[str] | None = None,
 ) -> list[Path]:
-    """Write discovery stubs for new RSS items into `research to be indexed/`.
+    """Write markdown discovery stubs for NEW practitioner RSS items.
 
-    One file per item: ``rss-<feed_id>-<YYYY-MM-DD>-<slug>.md``. The body holds
-    title, url, feed, and date only. Do not write article bodies or HTML.
-
-    Skips items already in the wiki, feeds in *skip_ids*, and existing files.
-    Stop after *max_files* new stubs. Return the written paths.
+    Skips wiki hits, skip-listed feed ids, and filenames that already exist.
+    Does not scrape HTML. Stops after ``max_files`` new files.
     """
-    repo = Path(repo)
     inbox = repo / "research to be indexed"
     inbox.mkdir(parents=True, exist_ok=True)
-    skip = {str(s) for s in (skip_ids or [])}
+    skip = {str(x) for x in (skip_ids or [])}
+    cap = max(0, int(max_files))
     written: list[Path] = []
-    if max_files <= 0:
+    if cap <= 0:
         return written
+
     for outcome in outcomes:
         if outcome.feed_id in skip:
             continue
         for item in outcome.items:
+            if len(written) >= cap:
+                return written
             if item.wiki_hit:
                 continue
-            if len(written) >= max_files:
-                return written
-            day = (item.published or datetime.now(timezone.utc)).date().isoformat()
-            path = inbox / f"rss-{item.feed_id}-{day}-{slugify_title(item.title)}.md"
+            day = (
+                item.published.date().isoformat()
+                if item.published is not None
+                else date.today().isoformat()
+            )
+            name = f"rss-{item.feed_id}-{day}-{inbox_slug(item.title)}.md"
+            path = inbox / name
             if path.exists():
                 continue
-            stamp = item.published.date().isoformat() if item.published else "unknown"
-            body = "\n".join(
-                [
-                    f"# {item.title}",
-                    "",
-                    f"- Title: {item.title}",
-                    f"- URL: {item.url}",
-                    f"- Feed: {item.feed_name} (`{item.feed_id}`)",
-                    f"- Date: {stamp}",
-                    "",
-                    "Discovery stub — RSS digest pointer; fetch + ingest only if useful.",
-                    "",
-                ]
+            title = (item.title or "(no title)").strip()
+            body = (
+                f"# {title}\n\n"
+                f"- url: {item.url}\n"
+                f"- feed: {item.feed_name} (`{item.feed_id}`)\n"
+                f"- date: {day}\n\n"
+                "discovery stub — fetch body at ingest\n"
             )
             path.write_text(body, encoding="utf-8")
             written.append(path)
     return written
 
 
-def render_rss_section(outcomes: list[FeedOutcome]) -> tuple[list[str], int]:
+def render_rss_section(
+    outcomes: list[FeedOutcome],
+    *,
+    inbox_stub_count: int = 0,
+    write_inbox: bool = False,
+) -> tuple[list[str], int]:
+    if write_inbox:
+        heading = "## RSS & practitioner feeds"
+        blurb = (
+            "_Free RSS/Atom — no Exa credits. Practitioner NEW items write markdown "
+            f"stubs to `research to be indexed/` (**{inbox_stub_count}** this morning). "
+            "Event Horizon / Closing Line / Outlier are **not** auto-downloaded here "
+            "(OSINT poller already dumps those)._"
+        )
+    else:
+        heading = "## RSS & practitioner feeds (not auto-downloaded)"
+        blurb = (
+            "_Free RSS/Atom — no Exa credits. Discovery-only; check a row then **full ingest**. "
+            "Event Horizon / Closing Line / Outlier also land in the OSINT inbox (`cross_wiki: gambling-wiki`)._"
+        )
     lines = [
         "---",
         "",
-        "## RSS & practitioner feeds (not auto-downloaded)",
+        heading,
         "",
-        "_Free RSS/Atom — no Exa credits. Discovery-only; check a row then **full ingest**. "
-        "Event Horizon / Closing Line / Outlier also land in the OSINT inbox (`cross_wiki: gambling-wiki`)._",
+        blurb,
         "",
     ]
     total = 0

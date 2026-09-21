@@ -18,9 +18,10 @@ related:
   - sources/research-nfl-historical-odds-2026-06-20.md
   - concepts/free-slate-context.md
   - entities/tools/the-odds-api.md
+  - sources/daily-digest-batch-k174-2026-09-21.md
 maturity: draft
 created: 2026-06-20
-updated: 2026-08-15
+updated: 2026-09-21
 ---
 
 ## Relations
@@ -100,6 +101,10 @@ Prefer the stack in this order:
 **Python loader:** **nflreadpy** GO (replaces deprecated nfl_data_py). **ID join:** gsis_id via `load_players()` + `load_ff_playerids()`; RapidFuzz fallback for FD/DK salary names.
 
 **Gaps:** salaries (manual FD/DK export), ownership (paid export or custom model), in-season route data (snap share proxy).
+
+### nflverse release refresh (K174, 2026-09-21)
+
+GitHub releases tagged **schedules**, **stats_team**, and **stats_player** on 2026-09-21. CeminiDFS should refresh cached pulls after Week 2 completes — do not rely on stale pre-W2 snapshots for Week 3 projection runs. Hub: `@sources/daily-digest-batch-k174-2026-09-21.md`.
 
 ### Cross-wiki complements
 

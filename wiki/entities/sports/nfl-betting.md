@@ -54,9 +54,12 @@ related:
   - sources/brief-k172-w02-env-rss-2026-09-18.md
   - sources/nfl-week2-saturday-deltas-2026-09-19.md
   - sources/brief-k173-w02-sat-lock-2026-09-20.md
+  - sources/daily-digest-batch-k174-2026-09-21.md
+  - sources/daily-digest-rss-w03-injury-2026-09-21.md
+  - sources/daily-digest-rss-pm-eh-ep33-2026-09-21.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-09-20
+updated: 2026-09-21
 ---
 
 ## Relations
@@ -174,6 +177,18 @@ Injury watch: **A.J. Brown** high-ankle (~4 wk); **Sam Darnold** hip; **Tua** ob
 ### Week 2 2026 Sunday main (K173 lock) [TENTATIVE — T-90 Sunday]
 
 **13-game** main slate. **Keep** WAS@DAL · **Jefferson solo**. **Fade:** CIN@HOU · MIA@SF stacks · PIT@NE · ATL pass. **Sat adds:** Pittman **OUT** · Porter **OUT** (PIT@NE fade hardens). **NWS Sat:** GB@NYJ rain · CHI 12–14 mph · NE ~100% rain · TEN heat advisory 105–107°F. Roofs HOU/ATL/ARI/DAL uncalled. Hub: `briefs/2026-w02-slate-hub-sun.md` · source `@sources/nfl-week2-saturday-deltas-2026-09-19.md`.
+
+### Week 3 2026 early (K174) [TENTATIVE — verify Wed practice]
+
+Post–Week 2 QB injuries drive early lines:
+
+| Player | Team | Injury | Week 3 note |
+|--------|------|--------|-------------|
+| **Caleb Williams** | CHI | Hamstring — carted off W2 | PHI road fav vs CHI in early odds; wait Wed/Fri |
+| **Jayden Daniels** | WAS | Left elbow dislocation W2 | X-rays reportedly no fracture; downgrade WAS stacks until Fri |
+| **Alec Pierce** | IND | Heel — OUT SNF | Prop void / refund hygiene (books vs PM — K259) |
+
+Start Week 3 hub when Tue practice docx drops. Hub: `@sources/daily-digest-rss-w03-injury-2026-09-21.md` · batch `@sources/daily-digest-batch-k174-2026-09-21.md`.
 
 ### Open-source ML note
 
