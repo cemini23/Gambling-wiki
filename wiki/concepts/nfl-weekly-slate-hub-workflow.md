@@ -20,9 +20,11 @@ related:
   - meta/daily-research-digest-cadence.md
   - sources/brief-k169-nfl-week1-ready-2026-08-31.md
   - concepts/dfs-weather-adjustments.md
+  - concepts/dfs-dart-opposing-looks.md
+  - meta/nfl-gemini-weekday-prompt-addendum.md
 maturity: draft
 created: 2026-07-05
-updated: 2026-09-15
+updated: 2026-09-22
 ---
 
 ## Relations
@@ -34,6 +36,8 @@ updated: 2026-09-15
 - @concepts/dfs-injury-and-news-workflow.md — shared T-90 injury cadence
 - @entities/tools/ceminidfs.md — FanDuel GPP + BBM (pick'em **not** in repo)
 - @concepts/dfs-weather-adjustments.md — roof enum + SoFi `semi_open` correction
+- @concepts/dfs-dart-opposing-looks.md — dart ceiling method; no one-week retunes
+- @meta/nfl-gemini-weekday-prompt-addendum.md — standing weekday blocks for Gemini prompts
 
 ## Raw Concept
 
@@ -201,6 +205,19 @@ updated: {ISO date} · main slate: {Sun/SNF/MNF}
 3. **Do not** run pydfs or CeminiDFS CLI from gambling-wiki unless operator explicitly wants a single-folder session
 4. **Route** pick'em/props ingest to K147 pages — not CeminiDFS ROADMAP
 5. **End hub session** with: suggested tool order + what's still tool-specific
+
+### Week 2 lessons (do not auto-apply)
+
+- No one-week stack badge.
+- No one-week defense boost.
+- No Purdy prior.
+- Seat actuals must exist before a dart KPI.
+- The exposure cap includes a later lock file.
+- An SNF leg stays off an afternoon ticket.
+- Two legs maximum of one market.
+- A weather warning is not a scratch.
+
+These commits already shipped — do not re-implement: CeminiDFS `d084f40` and `ec0d45f`, CeminiParlays `e3abb49`. See @concepts/dfs-dart-opposing-looks.md and @meta/nfl-gemini-weekday-prompt-addendum.md for the research method and standing prompt blocks.
 
 ## Snippets
 

@@ -1,5 +1,12 @@
 # Wiki operations log
 
+## [2026-09-22] hub | Week 2 recap lessons
+
+- New concept: @concepts/dfs-dart-opposing-looks.md — dart ceiling method; opposing look by role; no mixture constant; seat actuals before KPI; exposure cap includes lock file
+- New meta page: @meta/nfl-gemini-weekday-prompt-addendum.md — standing blocks for Tue injury, Wed dart opposing-look, Thu role confirm, Fri weather by market, Sat parlay caps and no-retune rule
+- Updated: hub workflow, weather adjustments, parlay page, Hard Rock page, index
+- No product edit. No commit. Commits already shipped: CeminiDFS d084f40, ec0d45f; CeminiParlays e3abb49
+
 ## [2026-09-21] ingest | K174 Week 3 injury + inbox close
 
 - **Batch K174:** 8 inbox stubs archived (K171/K173 dupes + OOD) + sweep RSS (Week 3 injuries, EH Ep 33, nflverse releases)

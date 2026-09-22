@@ -20,9 +20,10 @@ related:
   - concepts/daily-edge-card.md
   - entities/tools/the-odds-api.md
   - sources/brief-k169-nfl-week1-ready-2026-08-31.md
+  - meta/nfl-gemini-weekday-prompt-addendum.md
 maturity: validated
 created: 2026-06-20
-updated: 2026-08-31
+updated: 2026-09-22
 ---
 
 ## Relations
@@ -32,6 +33,7 @@ updated: 2026-08-31
 - @concepts/line-shopping-and-clv.md — log open/close on primary handle
 - @entities/tools/the-odds-api.md — live `hardrockbet_fl` / `hardrockbet` prices (not a scraper)
 - @sources/brief-k169-nfl-week1-ready-2026-08-31.md — Week-1: Donald snaps TBD; no LLM tickets
+- @meta/nfl-gemini-weekday-prompt-addendum.md — Saturday block: two legs of one market; no same-game first_td; SNF off afternoon ticket; displayed American is grade; boost is note
 
 ## Raw Concept
 
@@ -78,6 +80,10 @@ Retail **soft book** — @concepts/sharp-vs-soft-books.md same class as DraftKin
 ### Week 1 2026 (K169)
 
 Keep **multiplicative de-vig**. No chatbot tickets. **Aaron Donald** snaps for Melbourne TNF (Thu 9/10 vs SF) are unknown — two-game roster exemption expires **2026-09-11**. Hub: `@sources/brief-k169-nfl-week1-ready-2026-08-31.md`.
+
+### Week 2 lesson (2026-09-22)
+
+Cap any recommended ticket at two legs of one market. No same-game `first_td` legs. SNF legs stay off the afternoon parlay ticket. Grade uses the displayed American. A profit-boost percent is a note only. See @meta/nfl-gemini-weekday-prompt-addendum.md Saturday block. Do not change Kelly math.
 
 ## Snippets
 

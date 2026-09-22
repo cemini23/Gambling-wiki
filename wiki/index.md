@@ -53,6 +53,8 @@ Catalog of all wiki pages. Updated on each ingest.
 | [bbm7-playoff-week-construction](concepts/bbm7-playoff-week-construction.md) | validated | W15–17 byes, game stacks, advance cliffs |
 | [best-ball-draft-timing](concepts/best-ball-draft-timing.md) | validated | When to draft — July–August sweet spot, portfolio split |
 | [nfl-weekly-slate-hub-workflow](concepts/nfl-weekly-slate-hub-workflow.md) | draft | W8 in-season — research once, distribute to tools |
+| [dfs-dart-opposing-looks](concepts/dfs-dart-opposing-looks.md) | draft | Dart ceiling method; opposing look by role; no one-week retunes |
+| [nfl-gemini-weekday-prompt-addendum](meta/nfl-gemini-weekday-prompt-addendum.md) | draft | Standing weekday blocks for Gemini prompts; no retunes |
 | [nfl-offseason-research-cadence](concepts/nfl-offseason-research-cadence.md) | draft | Jul–Aug weekly camp / K147 planning hub |
 | [nfl-offseason-weekly-cadence](meta/nfl-offseason-weekly-cadence.md) | draft | Sunday LaunchAgent for offseason prefetch |
 | [nfl-slate-prefetch-cadence](meta/nfl-slate-prefetch-cadence.md) | draft | Sep+ hourly TNF/Sun/SNF/MNF prefetch |

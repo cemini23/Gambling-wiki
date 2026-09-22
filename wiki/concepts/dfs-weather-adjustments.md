@@ -10,9 +10,10 @@ related:
   - sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md
   - concepts/free-slate-context.md
   - concepts/nfl-weekly-slate-hub-workflow.md
+  - meta/nfl-gemini-weekday-prompt-addendum.md
 maturity: draft
 created: 2026-06-20
-updated: 2026-09-15
+updated: 2026-09-22
 ---
 
 ## Relations
@@ -25,6 +26,7 @@ updated: 2026-09-15
 - @concepts/team-volume-pace-model.md — pass-rate wind adjustments
 - @concepts/free-slate-context.md — runnable Open-Meteo + MLB Stats CLI for unders
 - @concepts/nfl-weekly-slate-hub-workflow.md — shared `environment.csv` contract; SoFi `semi_open`
+- @meta/nfl-gemini-weekday-prompt-addendum.md — Friday block: market-specific weather review; not a new wind cutoff; SoFi unchanged
 
 ## Raw Concept
 
@@ -84,3 +86,7 @@ Game-time weather → passing/kicking efficiency haircuts. **CONDITIONAL-GO** wi
 > "Use NWS as resolution-truth cross-check when ensemble members disagree on US stadiums." [Source: @osint-wiki/entities/data-sources/nws-weather-gov.md]
 
 > "Getting wethr logic=nws vs logic=wu wrong = silent bias." [Source: @osint-wiki/entities/tools/wethr-net.md]
+
+### Week 2 lesson (2026-09-22)
+
+Weather review is market-specific. Do not invent a new wind cutoff. SoFi stays `semi_open` and is not a wind fade. See @meta/nfl-gemini-weekday-prompt-addendum.md Friday block.

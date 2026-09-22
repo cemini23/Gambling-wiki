@@ -23,9 +23,10 @@ related:
   - sources/daily-digest-rss-industry-2026-08-14.md
   - entities/platforms/draftkings.md
   - concepts/free-slate-context.md
+  - meta/nfl-gemini-weekday-prompt-addendum.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-08-15
+updated: 2026-09-22
 ---
 
 ## Relations
@@ -41,6 +42,7 @@ updated: 2026-08-15
 - @sources/daily-digest-rss-industry-2026-08-14.md — DKeX COMBOS (product of binary YES)
 - @entities/platforms/draftkings.md — DKeX COMBOS listing
 - @concepts/free-slate-context.md — weather can correlate a whole unders parlay; treat as a screen not independent edges
+- @meta/nfl-gemini-weekday-prompt-addendum.md — Saturday block: two legs of one market; no same-game first_td; SNF off afternoon ticket; displayed American is grade; boost is note
 
 ## Raw Concept
 
@@ -91,6 +93,10 @@ PrizePicks-style **pick'em slips** are fixed-multiplier parlays on player stat O
 | Sizing | Kelly on combined ticket | Fractional Kelly on **whole slip** — @concepts/pickem-slip-ev-and-correlation.md |
 
 **Tool path (K147):** joint `P(all legs hit)` via copula (reuse @concepts/dfs-correlation-stacking.md priors), rank slips by `EV = P_joint × M − 1`, size with quarter-Kelly on the slip. Full math: @concepts/pickem-slip-ev-and-correlation.md. Architecture hub: @concepts/diy-nfl-pickem-props-tool-architecture.md.
+
+### Week 2 lesson (2026-09-22)
+
+Cap any recommended ticket at two legs of one market. No same-game `first_td` legs. SNF legs stay off the afternoon parlay ticket. Grade uses the displayed American. A profit-boost percent is a note only. This is not a new same-game parlay product. See @meta/nfl-gemini-weekday-prompt-addendum.md Saturday block.
 
 ## Snippets
 
