@@ -64,6 +64,8 @@ related:
   - sources/daily-digest-rss-week1-pm-nfl-2026-09-11.md
   - sources/brief-k170-week1-papers-rss-2026-09-11.md
   - sources/daily-digest-rss-pm-regulatory-2026-09-17.md
+  - sources/daily-digest-rss-pm-regulatory-2026-09-23.md
+  - sources/daily-digest-batch-k175-2026-09-23.md
   - sources/brief-k171-pm-fp-regulatory-2026-09-17.md
 maturity: validated
 created: 2026-05-31
@@ -149,6 +151,8 @@ Also Aug: **Nevada GCB** moved to fine Kalshi **$120k/day** for missing its Aug 
 **K170 (2026-09-11):** Kalshi federal losses in UT/IA (K258); sports = core volume not niche slice (K259); DGA session with Kalshi + AGA. **Injury void asymmetry:** NFL injury news may void sportsbook player props but **not** PM contracts the same way — cross-venue shoppers must read settlement rules. DraftKings ran anti-Kalshi review ads (LSR). Hub: `@sources/daily-digest-rss-week1-pm-nfl-2026-09-11.md`. **No pm scp.**
 
 **K171 (2026-09-17):** CT **C&D** to predictions operators + suppliers; **NFL** wants tighter regulation of “potential” PM partners (CNBC/LSR); leagues/players push **state bettor bans for harassment**; Ohio left **NCPG** over Kalshi (MA may follow). Hub: `@sources/daily-digest-rss-pm-regulatory-2026-09-17.md`. **No pm scp.**
+
+**K175 (2026-09-17–18):** **NFL approves all ads** sportsbook partners may run during games (books expand inventory) while PM partners stay under tighter league scrutiny (K171). **Genius/Legend** launches B2B **predictions comparison** platform — shop/display tooling, not a retail wager lane. **Missouri AG** stop order + **second 9th Circuit** tribal appeal vs Kalshi — state/tribal enforcement stack. Hub: `@sources/daily-digest-rss-pm-regulatory-2026-09-23.md`. **No pm scp.**
 
 ### When to stay in traditional books
 

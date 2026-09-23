@@ -1,5 +1,16 @@
 # Wiki operations log
 
+## [2026-09-23] ingest | K175 PM regulatory + Week 3 lines
+
+- **Batch K175:** 16 inbox stubs archived; sweeps 2026-09-22 and 2026-09-23 closed
+  - **PM:** Missouri AG · second 9th Circuit CA tribal appeal · Genius comparison · NFL sportsbook in-game ads · Polymarket EU (SBC)
+  - **NFL:** Penix TNF · futures board awareness
+  - **Dupes:** K171 LSR archived only
+- Phase-1: policy_wired on kalshi, polymarket, crossover, nfl-betting
+- Papers: 0 new (2609.18848 dupe)
+- Brief: ../CeminiDFS/briefs/2026-09-23_k175-w03-wed-gemini-discipline.md
+- Pairs Sep 22 dart-opposing-look hub; no product edit
+
 ## [2026-09-22] hub | Week 2 recap lessons
 
 - New concept: @concepts/dfs-dart-opposing-looks.md — dart ceiling method; opposing look by role; no mixture constant; seat actuals before KPI; exposure cap includes lock file

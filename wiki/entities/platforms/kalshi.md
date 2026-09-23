@@ -57,9 +57,11 @@ related:
   - sources/brief-k172-w02-env-rss-2026-09-18.md
   - sources/daily-digest-rss-pm-eh-ep33-2026-09-21.md
   - sources/daily-digest-batch-k174-2026-09-21.md
+  - sources/daily-digest-rss-pm-regulatory-2026-09-23.md
+  - sources/daily-digest-batch-k175-2026-09-23.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-09-21
+updated: 2026-09-23
 ---
 
 ## Relations
@@ -204,6 +206,12 @@ Daleep et al. via Klement: large bettors show **lower edge** than small — PM p
 ### K172 parlay volume (2026-09-14+) [TENTATIVE — EH via OSINT K261]
 
 Event Horizon: Kalshi **$2.42B** notional Sat 12 Sep (record); **parlays 60.9%** of volume; sports **29.8%**. Ep 32 DeNault enforcement interview. Cross-wiki: `@osint-wiki/concepts/k261-gambling-pm-wave.md`. Hub: `@sources/daily-digest-rss-w02-nfl-pm-2026-09-18.md`. **No pm scp.**
+
+### K175 regulatory follow-on (2026-09-17–18) [TENTATIVE — LSR titles]
+
+- **Second Ninth Circuit loss (CA tribes win appeal)** — stacks tribal/state pressure on western sports-contract access (pairs Aug 2026 9th Circuit swap ruling).
+- **Missouri AG** ordered prediction markets to stop operating — Midwest AG lane distinct from CFTC federal thread.
+- Hub: `@sources/daily-digest-rss-pm-regulatory-2026-09-23.md`. **No pm scp.**
 
 ## Snippets
 

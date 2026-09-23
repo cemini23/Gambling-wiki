@@ -57,9 +57,12 @@ related:
   - sources/daily-digest-batch-k174-2026-09-21.md
   - sources/daily-digest-rss-w03-injury-2026-09-21.md
   - sources/daily-digest-rss-pm-eh-ep33-2026-09-21.md
+  - sources/daily-digest-batch-k175-2026-09-23.md
+  - sources/daily-digest-rss-nfl-w03-lines-2026-09-23.md
+  - meta/nfl-gemini-weekday-prompt-addendum.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-09-21
+updated: 2026-09-23
 ---
 
 ## Relations
@@ -189,6 +192,8 @@ Post–Week 2 QB injuries drive early lines:
 | **Alec Pierce** | IND | Heel — OUT SNF | Prop void / refund hygiene (books vs PM — K259) |
 
 Start Week 3 hub when Tue practice docx drops. Hub: `@sources/daily-digest-rss-w03-injury-2026-09-21.md` · batch `@sources/daily-digest-batch-k174-2026-09-21.md`.
+
+**TNF ATL@GB (K175):** Penix trending toward start Thu at Green Bay [TENTATIVE]. Confirm Wed practice before showdown builds. **Wed Gemini:** dart opposing-look block only — `@meta/nfl-gemini-weekday-prompt-addendum.md`; do not retune Week 2 means/stacks. Lines stub: `@sources/daily-digest-rss-nfl-w03-lines-2026-09-23.md`.
 
 ### Open-source ML note
 

@@ -50,9 +50,10 @@ related:
   - sources/brief-k222-k231-pm-retail-awareness-2026-08.md
   - sources/arxiv-2602.19520-pm-domain-calibration-2026-08-31.md
   - sources/daily-digest-rss-nfl-week0-2026-08-31.md
+  - sources/daily-digest-rss-pm-regulatory-2026-09-23.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-08-31
+updated: 2026-09-23
 ---
 
 ## Relations
@@ -130,6 +131,10 @@ Week ending **2026-05-24**: **~29%** of combined US PM notional on Polymarket (*
 ### Human–AI hybrid forecasting (K148) [TENTATIVE]
 
 @sources/arxiv-2607.02467-human-capital-pm-hybrid-forecasting-2026-07-06.md: Polymarket-resolved pilot — hybrid outcomes are **trimodal** (defer to model, rubber-stamp worse than model, complementary match/beat market). **Collaborative traits** predict complementary mode more than frontier model choice. Retail: avoid rubber-stamping LLM-suggested prices without adding information.
+
+### European lobbying (K175, 2026-09-22) [TENTATIVE — SBC title]
+
+Polymarket public push for **European acceptance** of prediction markets (SBC News RSS stub). US retail still geo-blocked on main CLOB; treat as international regulatory awareness only. Hub: `@sources/daily-digest-rss-pm-regulatory-2026-09-23.md`.
 
 ## Snippets
 
