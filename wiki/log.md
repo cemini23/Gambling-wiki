@@ -1,5 +1,16 @@
 # Wiki operations log
 
+## [2026-09-24] ingest | K176 Week 3 docx trio + inbox
+
+- **Batch K176:** 3 Gemini docx (injury · Thu practice · scheme) + 8 RSS archived
+  - **Week 3 Sun main:** IR/scratch table · Thu flip table · scheme themes (fade WAS, TEN@NYG)
+  - **RSS:** OOD non-NFL + SBC industry stub; Fliff K175 dupe
+- Phase-1: policy_wired on nfl-betting, dfs-injury-and-news-workflow
+- Papers: 0 new (2609.18848 dupe)
+- Sweep `2026-09-24` → INGESTED (K176)
+- Briefs: CeminiDFS + CeminiParlays `2026-09-24_w03-thu-practice-hub.md`
+- Fri env next (Collins, Bowers, Jones, Flowers, Dowdle). Scratch CSV still operator.
+
 ## [2026-09-23] ingest | K175 PM regulatory + Week 3 lines
 
 - **Batch K175:** 16 inbox stubs archived; sweeps 2026-09-22 and 2026-09-23 closed

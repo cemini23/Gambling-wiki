@@ -60,9 +60,13 @@ related:
   - sources/daily-digest-batch-k175-2026-09-23.md
   - sources/daily-digest-rss-nfl-w03-lines-2026-09-23.md
   - meta/nfl-gemini-weekday-prompt-addendum.md
+  - sources/daily-digest-batch-k176-2026-09-24.md
+  - sources/nfl-week3-injury-research-2026-09-23.md
+  - sources/nfl-week3-practice-reports-2026-09-24.md
+  - sources/nfl-week3-scheme-breakdown-2026-09-23.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-09-23
+updated: 2026-09-24
 ---
 
 ## Relations
@@ -191,9 +195,20 @@ Post–Week 2 QB injuries drive early lines:
 | **Jayden Daniels** | WAS | Left elbow dislocation W2 | X-rays reportedly no fracture; downgrade WAS stacks until Fri |
 | **Alec Pierce** | IND | Heel — OUT SNF | Prop void / refund hygiene (books vs PM — K259) |
 
-Start Week 3 hub when Tue practice docx drops. Hub: `@sources/daily-digest-rss-w03-injury-2026-09-21.md` · batch `@sources/daily-digest-batch-k174-2026-09-21.md`.
+Hub chain: `@sources/daily-digest-rss-w03-injury-2026-09-21.md` (K174) → `@sources/nfl-week3-injury-research-2026-09-23.md` (K176) → `@sources/nfl-week3-practice-reports-2026-09-24.md` (Thu) → `@sources/nfl-week3-scheme-breakdown-2026-09-23.md` (scheme card). Gitignored hub: `briefs/2026-w03-slate-hub-sun.md`.
 
-**TNF ATL@GB (K175):** Penix trending toward start Thu at Green Bay [TENTATIVE]. Confirm Wed practice before showdown builds. **Wed Gemini:** dart opposing-look block only — `@meta/nfl-gemini-weekday-prompt-addendum.md`; do not retune Week 2 means/stacks. Lines stub: `@sources/daily-digest-rss-nfl-w03-lines-2026-09-23.md`.
+**TNF ATL@GB (K175):** Penix starter [TENTATIVE]; not on Sunday main card.
+
+**Week 3 Sun main (K176) [TENTATIVE — Fri designations]:**
+
+| Lane | Note |
+|------|------|
+| **Scratch / IR** | Pierce · Brooks · Dart · Daniels (Mariota) · Onwenu — see injury source |
+| **Thu hold** | Collins hamstring · Bowers LP · Aaron Jones DNP · Jenkins · Campbell — no Thu flip |
+| **Themes** | Fade WAS pass · fade TEN@NYG · keep BAL@DAL · BUF pass · LV@NO hints |
+| **Discipline** | No Week 2 retune · dart only ≤ $5,500 salary · `@concepts/dfs-dart-opposing-looks.md` |
+
+**Fri Gemini:** Collins, Bowers, Jones, Flowers, Dowdle — `@meta/nfl-gemini-weekday-prompt-addendum.md` weather-by-market block. Scratch CSV still operator.
 
 ### Open-source ML note
 

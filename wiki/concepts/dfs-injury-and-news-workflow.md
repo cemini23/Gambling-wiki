@@ -12,10 +12,13 @@ related:
   - sources/brief-k169-nfl-week1-ready-2026-08-31.md
   - sources/daily-digest-rss-w03-injury-2026-09-21.md
   - sources/daily-digest-batch-k174-2026-09-21.md
+  - sources/nfl-week3-injury-research-2026-09-23.md
+  - sources/nfl-week3-practice-reports-2026-09-24.md
+  - sources/daily-digest-batch-k176-2026-09-24.md
   - meta/daily-research-digest-cadence.md
 maturity: draft
 created: 2026-06-20
-updated: 2026-09-21
+updated: 2026-09-24
 ---
 
 ## Relations

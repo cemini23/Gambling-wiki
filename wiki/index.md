@@ -380,6 +380,11 @@ Catalog of all wiki pages. Updated on each ingest.
 | [daily-digest-batch-k175-2026-09-23](sources/daily-digest-batch-k175-2026-09-23.md) | deep-read | K175 PM regulatory + W3 lines |
 | [daily-digest-rss-pm-regulatory-2026-09-23](sources/daily-digest-rss-pm-regulatory-2026-09-23.md) | skimmed | MO AG, 9th Circuit, Genius, NFL ads |
 | [daily-digest-rss-nfl-w03-lines-2026-09-23](sources/daily-digest-rss-nfl-w03-lines-2026-09-23.md) | stub | Penix TNF + futures RSS |
+| [daily-digest-batch-k176-2026-09-24](sources/daily-digest-batch-k176-2026-09-24.md) | deep-read | K176 Week 3 docx + inbox |
+| [nfl-week3-injury-research-2026-09-23](sources/nfl-week3-injury-research-2026-09-23.md) | skimmed | Week 3 IR / OUT table |
+| [nfl-week3-practice-reports-2026-09-24](sources/nfl-week3-practice-reports-2026-09-24.md) | skimmed | Thu practice flips |
+| [nfl-week3-scheme-breakdown-2026-09-23](sources/nfl-week3-scheme-breakdown-2026-09-23.md) | skimmed | Week 3 scheme card |
+| [daily-digest-rss-industry-2026-09-24](sources/daily-digest-rss-industry-2026-09-24.md) | stub | SBC industry OOD |
 | [brief-k239-kalshi-sports-mention-2026-08-15](sources/brief-k239-kalshi-sports-mention-2026-08-15.md) | read | K239 sports mention markets gone + WA geofence |
 | [brief-k240-kalshi-nv-geofence-2026-08-17](sources/brief-k240-kalshi-nv-geofence-2026-08-17.md) | read | K240 NV $120k/day + optional-update geofence |
 | [brief-k242-eh-pm-ban-onshore-2026-08-19](sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md) | read | K242 WA geofence day; ban ≠ offshore |
