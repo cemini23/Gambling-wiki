@@ -19,6 +19,7 @@ related:
   - concepts/dfs-pipeline-integration-spec.md
   - concepts/dfs-foss-tooling-landscape.md
   - concepts/dfs-weather-adjustments.md
+  - concepts/nfl-dfs-field-edge-priors.md
   - concepts/dfs-injury-and-news-workflow.md
   - concepts/dfs-model-orchestration.md
   - concepts/line-shopping-and-clv.md
@@ -40,7 +41,7 @@ related:
   - "@osint-wiki/concepts/nfl-coherence-risk-features.md"
 maturity: draft
 created: 2026-06-20
-updated: 2026-06-26
+updated: 2026-09-27
 ---
 
 ## Relations
@@ -52,6 +53,7 @@ updated: 2026-06-26
 - @entities/tools/ceminidfs.md — implementation repo (K125/W9)
 - @entities/tools/pydfs-lineup-optimizer.md — lineup generation downstream
 - @concepts/diy-nfl-pickem-props-tool-architecture.md — sibling K147 pick'em tool (shares projection layers only)
+- @concepts/nfl-dfs-field-edge-priors.md — 2026-09-27 field-edge ranking; CPOE stays a residual
 - @sources/research-diy-pickem-props-master-plan-2026-07-05.md — K147 master plan (14 workstreams)
 
 ## Raw Concept

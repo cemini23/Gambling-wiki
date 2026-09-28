@@ -9,14 +9,16 @@ related:
   - entities/sports/nfl-betting.md
   - concepts/nfl-dfs-data-sources.md
   - sources/research-diy-dfs-model-master-plan-2026-06-20.md
+  - concepts/nfl-dfs-field-edge-priors.md
 maturity: draft
 created: 2026-06-20
-updated: 2026-06-20
+updated: 2026-09-27
 ---
 
 ## Relations
 
 - @entities/sports/nfl-betting.md — spread/total fundamentals
+- @concepts/nfl-dfs-field-edge-priors.md — implied team total is a DFS mean input; parlays keep the closing total
 - @concepts/team-volume-pace-model.md — volume layer downstream
 - @concepts/nfl-dfs-data-sources.md — Vegas via nflreadr or The Odds API
 

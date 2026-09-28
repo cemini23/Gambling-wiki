@@ -32,6 +32,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [team-volume-pace-model](concepts/team-volume-pace-model.md) | draft | Plays, PROE, pass/run split |
 | [player-usage-models](concepts/player-usage-models.md) | draft | Target/carry/snap shares |
 | [dfs-stat-projection-engine](concepts/dfs-stat-projection-engine.md) | draft | Efficiency → counting stats |
+| [nfl-dfs-field-edge-priors](concepts/nfl-dfs-field-edge-priors.md) | draft | CPOE is a residual; volume, goal line, wind, rookie prior |
 | [fd-dk-scoring-conversion](concepts/fd-dk-scoring-conversion.md) | draft | Site scoring rules |
 | [dfs-distribution-layer](concepts/dfs-distribution-layer.md) | draft | Monte Carlo, ceiling/floor |
 | [dfs-correlation-stacking](concepts/dfs-correlation-stacking.md) | draft | Correlation matrix, pydfs stacks |
@@ -385,6 +386,12 @@ Catalog of all wiki pages. Updated on each ingest.
 | [nfl-week3-practice-reports-2026-09-24](sources/nfl-week3-practice-reports-2026-09-24.md) | skimmed | Thu practice flips |
 | [nfl-week3-scheme-breakdown-2026-09-23](sources/nfl-week3-scheme-breakdown-2026-09-23.md) | skimmed | Week 3 scheme card |
 | [daily-digest-rss-industry-2026-09-24](sources/daily-digest-rss-industry-2026-09-24.md) | stub | SBC industry OOD |
+| [daily-digest-batch-k177-2026-09-28](sources/daily-digest-batch-k177-2026-09-28.md) | deep-read | K177 W3 Sat lock + paper |
+| [nfl-week3-saturday-deltas-2026-09-26](sources/nfl-week3-saturday-deltas-2026-09-26.md) | skimmed | Sat wind/roof/T-90 |
+| [nfl-week3-dfs-research-2026-09-26](sources/nfl-week3-dfs-research-2026-09-26.md) | skimmed | Fri ITT + stack card |
+| [arxiv-2609.31473-game-arena-strategic-llm-evaluation-2026-09-28](sources/arxiv-2609.31473-game-arena-strategic-llm-evaluation-2026-09-28.md) | skimmed | Game Arena LLM eval |
+| [daily-digest-rss-nfl-w03-lock-2026-09-28](sources/daily-digest-rss-nfl-w03-lock-2026-09-28.md) | stub | LSB lock-week RSS |
+| [daily-digest-rss-industry-2026-09-28](sources/daily-digest-rss-industry-2026-09-28.md) | stub | SBC Sep 24–28 |
 | [brief-k239-kalshi-sports-mention-2026-08-15](sources/brief-k239-kalshi-sports-mention-2026-08-15.md) | read | K239 sports mention markets gone + WA geofence |
 | [brief-k240-kalshi-nv-geofence-2026-08-17](sources/brief-k240-kalshi-nv-geofence-2026-08-17.md) | read | K240 NV $120k/day + optional-update geofence |
 | [brief-k242-eh-pm-ban-onshore-2026-08-19](sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md) | read | K242 WA geofence day; ban ≠ offshore |

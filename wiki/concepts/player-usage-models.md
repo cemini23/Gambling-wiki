@@ -10,14 +10,16 @@ related:
   - concepts/diy-nfl-dfs-model-architecture.md
   - sources/sharp-nfl-rb-prop-unders-2026-08-13.md
   - sources/rotoviz-preseason-paywall-2026-08-14.md
+  - concepts/nfl-dfs-field-edge-priors.md
 maturity: draft
 created: 2026-06-20
-updated: 2026-08-14
+updated: 2026-09-27
 ---
 
 ## Relations
 
 - @concepts/team-volume-pace-model.md — team volume denominator
+- @concepts/nfl-dfs-field-edge-priors.md — goal-line share is the missing usage column; air yards already count
 - @concepts/dfs-injury-and-news-workflow.md — injury reallocation
 - @sources/sharp-nfl-rb-prop-unders-2026-08-13.md — season-long rush unders as carry-share bets
 - @sources/rotoviz-preseason-paywall-2026-08-14.md — OL continuity / target-share titles (paywalled)

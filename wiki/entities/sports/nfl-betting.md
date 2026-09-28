@@ -64,9 +64,13 @@ related:
   - sources/nfl-week3-injury-research-2026-09-23.md
   - sources/nfl-week3-practice-reports-2026-09-24.md
   - sources/nfl-week3-scheme-breakdown-2026-09-23.md
+  - sources/nfl-week3-saturday-deltas-2026-09-26.md
+  - sources/nfl-week3-dfs-research-2026-09-26.md
+  - sources/daily-digest-batch-k177-2026-09-28.md
+  - sources/daily-digest-rss-nfl-w03-lock-2026-09-28.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-09-24
+updated: 2026-09-28
 ---
 
 ## Relations
@@ -199,16 +203,20 @@ Hub chain: `@sources/daily-digest-rss-w03-injury-2026-09-21.md` (K174) → `@sou
 
 **TNF ATL@GB (K175):** Penix starter [TENTATIVE]; not on Sunday main card.
 
-**Week 3 Sun main (K176) [TENTATIVE — Fri designations]:**
+**Week 3 Sun main (K177 Sat lock) [TENTATIVE — T-90 Sunday]:**
+
+Hub chain through `@sources/nfl-week3-saturday-deltas-2026-09-26.md` (Sat weather/roof) + `@sources/nfl-week3-dfs-research-2026-09-26.md` (Fri ITT/stacks).
 
 | Lane | Note |
 |------|------|
-| **Scratch / IR** | Pierce · Brooks · Dart · Daniels (Mariota) · Onwenu — see injury source |
-| **Thu hold** | Collins hamstring · Bowers LP · Aaron Jones DNP · Jenkins · Campbell — no Thu flip |
-| **Themes** | Fade WAS pass · fade TEN@NYG · keep BAL@DAL · BUF pass · LV@NO hints |
-| **Discipline** | No Week 2 retune · dart only ≤ $5,500 salary · `@concepts/dfs-dart-opposing-looks.md` |
+| **Scratch / IR** | Pierce · Brooks · Dart · Daniels · Onwenu · **Collins** · **Dowdle** · **Jenkins** |
+| **Sat weather** | **TEN@NYG** wind gusts ~47 mph + rain — rush lean; bar deep pass / first-TD props |
+| **Roof** | **HOU@IND** Lucas Oil **OPEN**; **BAL@DAL** uncalled |
+| **T-90** | Pittman · Coleman · Spears · Campbell · Bowers · Flowers |
+| **Six themes** | Keep BAL@DAL · BUF+LAC · LV@NO (no Bowers) · fade WAS pass · TEN@NYG · PIT pass |
+| **Discipline** | 13-game main only · CeminiDFS before Parlays · ≤2 parlay legs/market · no Week 2 retune |
 
-**Fri Gemini:** Collins, Bowers, Jones, Flowers, Dowdle — `@meta/nfl-gemini-weekday-prompt-addendum.md` weather-by-market block. Scratch CSV still operator.
+Salary export archived as `week 3.csv` (batch K177). Scratch CSV still operator.
 
 ### Open-source ML note
 

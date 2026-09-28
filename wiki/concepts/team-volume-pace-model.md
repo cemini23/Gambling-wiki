@@ -8,14 +8,16 @@ related:
   - concepts/player-usage-models.md
   - concepts/dfs-weather-adjustments.md
   - concepts/diy-nfl-dfs-model-architecture.md
+  - concepts/nfl-dfs-field-edge-priors.md
 maturity: draft
 created: 2026-06-20
-updated: 2026-06-20
+updated: 2026-09-27
 ---
 
 ## Relations
 
 - @concepts/implied-team-totals-dfs.md — ITT and spread inputs
+- @concepts/nfl-dfs-field-edge-priors.md — pace and implied total already beat CPOE as a mean
 - @concepts/player-usage-models.md — usage shares multiply team volume
 
 ## Raw Concept

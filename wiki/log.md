@@ -1,5 +1,24 @@
 # Wiki operations log
 
+## [2026-09-28] ingest | K177 Week 3 Sat lock + Game Arena
+
+- **Batch K177:** 2 docx (Sat deltas · Fri DFS) + `week 3.csv` + zips + 26 RSS + arXiv 2609.31473 archived
+  - **Sun main:** TEN@NYG wind ~47 mph gusts · HOU@IND roof open · six theme freeze · T-90 list
+  - **Paper:** Game Arena — eval harness awareness (W6); wont_wire betting
+  - **RSS:** LSB NFL stubs; Sharp/Roto skipped; SBC industry OOD
+- Phase-1: policy_wired on nfl-betting; paper wont_wire
+- Sweeps 2026-09-25 … 2026-09-28 → INGESTED (K177)
+- Briefs: CeminiDFS + CeminiParlays `2026-09-28_w03-sat-lock-hub.md`
+- Scratch CSV + seat actuals still operator. No auto-enter.
+
+## [2026-09-27] query | NFL DFS field edge and rookie priors
+
+- New concept: @concepts/nfl-dfs-field-edge-priors.md — CPOE and closing speed stay residuals; volume, air yards, goal line, implied total, pace, and outdoor wind set the mean; rookie prior is draft capital plus dominator, breakout age, and career YPRR; CFL stays out
+- Brief (gitignored): briefs/2026-09-27_k274-dfs-projection-edge.md
+- Linked: stat engine, DIY architecture, weather, parlays, usage, pace, implied totals
+- OpenCLI Reddit, X, and YouTube on 2026-09-27. No new formula. No product edit. No clone.
+
+
 ## [2026-09-24] ingest | K176 Week 3 docx trio + inbox
 
 - **Batch K176:** 3 Gemini docx (injury · Thu practice · scheme) + 8 RSS archived

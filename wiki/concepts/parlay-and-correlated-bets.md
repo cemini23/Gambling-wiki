@@ -24,14 +24,16 @@ related:
   - entities/platforms/draftkings.md
   - concepts/free-slate-context.md
   - meta/nfl-gemini-weekday-prompt-addendum.md
+  - concepts/nfl-dfs-field-edge-priors.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-09-22
+updated: 2026-09-27
 ---
 
 ## Relations
 
 - @concepts/favorite-longshot-bias.md — parlays amplify longshot bias
+- @concepts/nfl-dfs-field-edge-priors.md — calibrate on closing spread and total; do not add CPOE to the total
 - @concepts/vig-and-hold.md — parlay hold compounds
 - @entities/platforms/hard-rock-bet.md — SGP Max / Flex Parlay product (W8)
 - @entities/platforms/underdog-pickem.md — pick'em lounge adjusts payouts for correlated legs

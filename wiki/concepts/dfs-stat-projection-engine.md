@@ -10,9 +10,10 @@ related:
   - concepts/diy-nfl-dfs-model-architecture.md
   - concepts/dfs-foss-tooling-landscape.md
   - concepts/pickem-fair-probability.md
+  - concepts/nfl-dfs-field-edge-priors.md
 maturity: draft
 created: 2026-06-20
-updated: 2026-07-05
+updated: 2026-09-27
 ---
 
 ## Relations
@@ -20,6 +21,7 @@ updated: 2026-07-05
 - @concepts/pickem-fair-probability.md — counting-stat medians feed pick'em marginals
 - @concepts/player-usage-models.md — volume × usage inputs
 - @concepts/fd-dk-scoring-conversion.md — counting stats → site points
+- @concepts/nfl-dfs-field-edge-priors.md — CPOE is a residual; volume, air yards, goal line, and wind set the mean
 
 ## Raw Concept
 
@@ -63,3 +65,5 @@ fantasy_pts = scoring_function(counting_stat, site=FD|DK)
 ## Snippets
 
 > "Trust volume to drive the projection; let efficiency only bend it." [Source: K125 W-STATPROJ synthesis, 2026-06-20]
+
+CPOE sits in that efficiency bend. The 2026-09-27 field-edge page keeps its live coefficient at zero. See @concepts/nfl-dfs-field-edge-priors.md.
