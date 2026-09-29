@@ -51,9 +51,11 @@ related:
   - sources/arxiv-2602.19520-pm-domain-calibration-2026-08-31.md
   - sources/daily-digest-rss-nfl-week0-2026-08-31.md
   - sources/daily-digest-rss-pm-regulatory-2026-09-23.md
+  - sources/daily-digest-rss-pm-regulatory-2026-09-29.md
+  - sources/daily-digest-batch-k178-2026-09-29.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-09-23
+updated: 2026-09-29
 ---
 
 ## Relations

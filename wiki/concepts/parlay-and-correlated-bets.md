@@ -25,9 +25,10 @@ related:
   - concepts/free-slate-context.md
   - meta/nfl-gemini-weekday-prompt-addendum.md
   - concepts/nfl-dfs-field-edge-priors.md
+  - sources/eagles-bears-parlay-research-2026-09-28.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-09-27
+updated: 2026-09-29
 ---
 
 ## Relations

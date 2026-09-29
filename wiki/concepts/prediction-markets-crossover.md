@@ -66,6 +66,8 @@ related:
   - sources/daily-digest-rss-pm-regulatory-2026-09-17.md
   - sources/daily-digest-rss-pm-regulatory-2026-09-23.md
   - sources/daily-digest-batch-k175-2026-09-23.md
+  - sources/daily-digest-rss-pm-regulatory-2026-09-29.md
+  - sources/daily-digest-batch-k178-2026-09-29.md
   - sources/brief-k171-pm-fp-regulatory-2026-09-17.md
 maturity: validated
 created: 2026-05-31

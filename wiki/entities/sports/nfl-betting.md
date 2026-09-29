@@ -68,9 +68,11 @@ related:
   - sources/nfl-week3-dfs-research-2026-09-26.md
   - sources/daily-digest-batch-k177-2026-09-28.md
   - sources/daily-digest-rss-nfl-w03-lock-2026-09-28.md
+  - sources/eagles-bears-parlay-research-2026-09-28.md
+  - sources/daily-digest-batch-k178-2026-09-29.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-09-28
+updated: 2026-09-29
 ---
 
 ## Relations
@@ -217,6 +219,8 @@ Hub chain through `@sources/nfl-week3-saturday-deltas-2026-09-26.md` (Sat weathe
 | **Discipline** | 13-game main only · CeminiDFS before Parlays · ≤2 parlay legs/market · no Week 2 retune |
 
 Salary export archived as `week 3.csv` (batch K177). Scratch CSV still operator.
+
+**Week 3 MNF PHI@CHI (K178) [TENTATIVE]:** separate from Sun main — Keenum starts (Williams OUT); prop bars in `@sources/eagles-bears-parlay-research-2026-09-28.md`. Rush/ATD lanes only per dossier.
 
 ### Open-source ML note
 

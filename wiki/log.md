@@ -1,5 +1,16 @@
 # Wiki operations log
 
+## [2026-09-29] ingest | K178 MNF parlay + PM RSS + RSD-Poker
+
+- **Batch K178:** PHI@CHI parlay docx + arXiv 2609.33669 + 8 RSS archived
+  - **MNF:** Keenum start; rush/ATD supported; pass/rec/first_td multi-leg barred
+  - **PM:** CFTC mention memo · NCPG · Trump Jr. probe · DK narrative · PM download share [TENTATIVE]
+  - **Paper:** RSD-Poker — W6 wont_wire
+  - **OOD:** LSB MLB/WNBA
+- Phase-1: policy_wired kalshi/crossover/parlay; no pm scp
+- Sweep 2026-09-29 → INGESTED (K178)
+- Brief: CeminiParlays `2026-09-29_phi-chi-mnf-parlay-hub.md`
+
 ## [2026-09-28] ingest | K177 Week 3 Sat lock + Game Arena
 
 - **Batch K177:** 2 docx (Sat deltas · Fri DFS) + `week 3.csv` + zips + 26 RSS + arXiv 2609.31473 archived

@@ -49,6 +49,7 @@ related:
   - sources/arxiv-2606.20785-fara-computer-use-agents-2026-06-27.md
   - sources/arxiv-2606.26027-tool-rl-collapse-supervisory-signals-2026-07-02.md
   - sources/arxiv-2609.31473-game-arena-strategic-llm-evaluation-2026-09-28.md
+  - sources/arxiv-2609.33669-rsd-poker-shift-robust-2026-09-29.md
   - sources/arxiv-2607.02389-steerability-constraints-coding-agents-2026-07-06.md
   - sources/arxiv-2607.02453-oss-agent-framework-ecosystem-health-2026-07-06.md
   - sources/arxiv-2606.26807-karla-kb-augmented-retrieval-2026-07-06.md

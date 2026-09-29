@@ -392,6 +392,10 @@ Catalog of all wiki pages. Updated on each ingest.
 | [arxiv-2609.31473-game-arena-strategic-llm-evaluation-2026-09-28](sources/arxiv-2609.31473-game-arena-strategic-llm-evaluation-2026-09-28.md) | skimmed | Game Arena LLM eval |
 | [daily-digest-rss-nfl-w03-lock-2026-09-28](sources/daily-digest-rss-nfl-w03-lock-2026-09-28.md) | stub | LSB lock-week RSS |
 | [daily-digest-rss-industry-2026-09-28](sources/daily-digest-rss-industry-2026-09-28.md) | stub | SBC Sep 24–28 |
+| [daily-digest-batch-k178-2026-09-29](sources/daily-digest-batch-k178-2026-09-29.md) | deep-read | K178 MNF parlay + PM RSS |
+| [eagles-bears-parlay-research-2026-09-28](sources/eagles-bears-parlay-research-2026-09-28.md) | skimmed | PHI@CHI MNF prop bars |
+| [arxiv-2609.33669-rsd-poker-shift-robust-2026-09-29](sources/arxiv-2609.33669-rsd-poker-shift-robust-2026-09-29.md) | skimmed | RSD-Poker W6 eval |
+| [daily-digest-rss-pm-regulatory-2026-09-29](sources/daily-digest-rss-pm-regulatory-2026-09-29.md) | stub | CFTC mention · NCPG |
 | [brief-k239-kalshi-sports-mention-2026-08-15](sources/brief-k239-kalshi-sports-mention-2026-08-15.md) | read | K239 sports mention markets gone + WA geofence |
 | [brief-k240-kalshi-nv-geofence-2026-08-17](sources/brief-k240-kalshi-nv-geofence-2026-08-17.md) | read | K240 NV $120k/day + optional-update geofence |
 | [brief-k242-eh-pm-ban-onshore-2026-08-19](sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md) | read | K242 WA geofence day; ban ≠ offshore |
