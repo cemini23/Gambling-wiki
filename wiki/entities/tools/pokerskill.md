@@ -17,7 +17,7 @@ related:
   - concepts/opponent-modeling-imperfect-info.md
 maturity: draft
 created: 2026-06-01
-updated: 2026-06-04
+updated: 2026-09-30
 ---
 
 ## Relations
@@ -53,9 +53,11 @@ At each decision: engine labels board texture, hand class, action line, SPR, pre
 
 | Check | Result |
 |-------|--------|
-| License | Verify on GitHub before prod use [NEEDS VERIFICATION 2026-06-01] |
+| License | **NOASSERTION** — no SPDX license detected. `gh api repos/lbn187/PokerSkill`, 2026-09-30. Repo active (last push 2026-06-04, 38 stars, not archived). **No license grant → do not copy code or weights.** [CONFIRMED] |
 | Retail online poker | **NO-GO** — ToS / bot detection; study tool only |
 | Gambling-bot program | **REFERENCE** — skill-library + LLM grounding pattern for future **study assistants**, not account automation |
+
+**Phase-0 closed 2026-09-30.** Verdict: **REFERENCE (read-only)**. The paper's method is readable; the repository is not usable. Treat the pattern, not the artifact.
 
 ### Design lesson for wiki
 

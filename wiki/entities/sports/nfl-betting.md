@@ -70,9 +70,10 @@ related:
   - sources/daily-digest-rss-nfl-w03-lock-2026-09-28.md
   - sources/eagles-bears-parlay-research-2026-09-28.md
   - sources/daily-digest-batch-k178-2026-09-29.md
+  - entities/sports/nhl-betting.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-09-29
+updated: 2026-09-30
 ---
 
 ## Relations

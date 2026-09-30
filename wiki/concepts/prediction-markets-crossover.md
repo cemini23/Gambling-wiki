@@ -69,9 +69,15 @@ related:
   - sources/daily-digest-rss-pm-regulatory-2026-09-29.md
   - sources/daily-digest-batch-k178-2026-09-29.md
   - sources/brief-k171-pm-fp-regulatory-2026-09-17.md
+  - sources/rss-lsr-cftc-mention-market-advisory-2026-09-23.md
+  - sources/rss-lsr-ncpg-functionally-gambling-2026-09-23.md
+  - sources/rss-lsr-nfl-app-downloads-pm-share-2026-09-24.md
+  - sources/rss-sbc-summit-lisbon-2026-09-29.md
+  - sources/daily-digest-batch-k179-2026-09-30.md
+  - sources/rss-eh-kalshi-curry-geofence-2026-09-25.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-09-17
+updated: 2026-09-30
 ---
 
 ## Relations
@@ -124,6 +130,18 @@ How Kalshi and Polymarket fit the **wagering** knowledge base vs the **trading s
 8. **State legalization quality** (K149) — light-touch budget inserts (e.g. NC 2026) may mean **low tax + minimal consumer protection** — read venue rules; don't confuse legislative approval with market quality (`@sources/substack-rss-event-horizon-2026-07-07-north-carolinas-prediction-market-budget-process.md`)
 8. **Whale-weighted prices** — large OI holders may be **negative** signal on forecast quality (`@concepts/pm-whale-conviction-bias-2026-07.md`)
 9. **Macro ladders** — on Kalshi CPI thresholds, read **tail distribution** not point mean alone (`@sources/arxiv-2606.30040-kalshi-macro-belief-distributions-2026-07-01.md`)
+10. **Mention/attendance/interaction contracts (K179)** — the CFTC now treats these as **presumptively manipulable**. The outcome sits with one person, so a single actor can move settlement. Avoid holding them; expect new listings to stop (`@sources/rss-lsr-cftc-mention-market-advisory-2026-09-23.md`)
+
+### Two framings no longer line up (K179, 2026-09)
+
+The Sep 2026 record shows the **legal** and **functional** framings diverging:
+
+- **Legal:** Kalshi and Polymarket still argue they are not sports betting. The CFTC regulates them as DCMs under the CEA.
+- **Functional:** the **NCPG** declared event contracts "functionally gambling" and lost Ohio, Michigan, Nevada, and the Evergreen council over its Kalshi partnership (a **$2M** donation). A Harris Poll it commissioned found **85%** of Americans see addiction risk and **84%** want gambling-style consumer protections.
+
+For retail sizing this changes nothing. For **jurisdiction** screening it matters: state regulators who call the product illegal gambling are the same bodies whose members left the NCPG. See `@sources/rss-lsr-ncpg-functionally-gambling-2026-09-23.md` and `@sources/rss-sbc-summit-lisbon-2026-09-29.md`.
+
+**Pricing note (K179):** Kalshi's pre-fee implied-vig edge on moneyline and totals **reverses on parlays** — 26.4% on favourite+Over combos versus 23.9% at DraftKings. Combos are now **53%** of Kalshi notional volume. Net the fee before claiming any cross-venue edge (`@sources/rss-lsr-nfl-app-downloads-pm-share-2026-09-24.md`).
 
 ### Tools spanning both wikis
 

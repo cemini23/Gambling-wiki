@@ -24,9 +24,10 @@ related:
   - sources/brief-k222-k231-pm-retail-awareness-2026-08.md
   - sources/daily-digest-rss-nfl-week0-2026-08-31.md
   - sources/brief-k169-nfl-week1-ready-2026-08-31.md
+  - sources/rss-lsr-nfl-app-downloads-pm-share-2026-09-24.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-08-31
+updated: 2026-09-30
 ---
 
 ## Relations

@@ -30,9 +30,10 @@ related:
   - concepts/daily-edge-card.md
   - entities/tools/the-odds-api.md
   - sources/arxiv-2604.17194-odds-conversion-emh-2026-08-31.md
+  - entities/sports/nhl-betting.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-08-31
+updated: 2026-09-30
 ---
 
 ## Relations

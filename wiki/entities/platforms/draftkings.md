@@ -28,9 +28,13 @@ related:
   - sources/daily-digest-rss-nfl-week0-2026-08-31.md
   - sources/daily-digest-rss-week1-pm-nfl-2026-09-11.md
   - sources/nfl-betting-dfs-intelligence-week1-2026-09-11.md
+  - sources/rss-lsr-nfl-app-downloads-pm-share-2026-09-24.md
+  - sources/rss-sbc-summit-lisbon-2026-09-29.md
+  - sources/daily-digest-batch-k179-2026-09-30.md
+  - entities/sports/nhl-betting.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-09-11
+updated: 2026-09-30
 ---
 
 ## Relations

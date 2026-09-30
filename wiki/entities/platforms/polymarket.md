@@ -53,9 +53,13 @@ related:
   - sources/daily-digest-rss-pm-regulatory-2026-09-23.md
   - sources/daily-digest-rss-pm-regulatory-2026-09-29.md
   - sources/daily-digest-batch-k178-2026-09-29.md
+  - sources/rss-lsr-cftc-mention-market-advisory-2026-09-23.md
+  - sources/rss-lsr-nfl-app-downloads-pm-share-2026-09-24.md
+  - sources/daily-digest-batch-k179-2026-09-30.md
+  - sources/rss-eh-kalshi-curry-geofence-2026-09-25.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-09-29
+updated: 2026-09-30
 ---
 
 ## Relations

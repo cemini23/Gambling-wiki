@@ -1,5 +1,5 @@
 ---
-description: Gambling wiki Phase-1 — K255–K259 EH PM wave awareness (Sep 2026)
+description: Gambling wiki Phase-1 — K255–K259 EH PM wave and K175–K179 batches (Sep 2026)
 alwaysApply: true
 ---
 
@@ -28,6 +28,16 @@ Verdict: **regulatory awareness only. No pm scp. No xsp scp.**
 - Sports **are** the pie at Kalshi ($160B since Apr; record CFB Saturday).
 - DGA private session with Kalshi + AGA (11 Sep).
 - **PM injury props may not void like sportsbook props** — cross-venue hygiene.
+
+## K179 — CFTC mention advisory + NCPG + PM share + SBC + NHL (2026-09-30)
+
+- Inbox 8 stubs → 5 source pages + new `entities/sports/nhl-betting.md`. Bodies fetched (LSR + SBC 403 direct → Brave LLM Context).
+- **CFTC Letter 26-27 (2026-09-22):** mention / attendance / interaction contracts **presumptively** manipulable under Core Principle 3. Four-factor DCM showing. **Not a ban, not enforcement** — do not model as a delisting event.
+- **NCPG (2026-09-22):** PMs "functionally gambling"; Ohio / Michigan / Nevada / Evergreen exits over the Kalshi **$2M**; two staff resignations. Responsible-gambling context only — **not** a legal trigger.
+- **PM share (2026-09-24):** Kalshi + Polymarket **1.33M of 2.8M** Week 2 NFL downloads (~47.5%). Pre-fee ML/totals vig edge **reverses on parlays** (26.4% vs 23.9% DK). Net the fee before any cross-venue claim.
+- **SBC Lisbon:** Jordan / Robins / Koerl keynote; Brazil Lula ban pledge. **OOD** — wont_wire.
+- **NHL:** research-only vertical. No auto-enter; re-check starters at puck drop.
+- **Linux boxes / operator:** scratch CSV + seat actuals still open from K177.
 
 ## K178 — MNF parlay + PM RSS + RSD-Poker (2026-09-29)
 

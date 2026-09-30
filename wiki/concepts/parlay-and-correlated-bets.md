@@ -26,9 +26,11 @@ related:
   - meta/nfl-gemini-weekday-prompt-addendum.md
   - concepts/nfl-dfs-field-edge-priors.md
   - sources/eagles-bears-parlay-research-2026-09-28.md
+  - entities/sports/nhl-betting.md
+  - sources/rss-lsr-nfl-app-downloads-pm-share-2026-09-24.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-09-29
+updated: 2026-09-30
 ---
 
 ## Relations

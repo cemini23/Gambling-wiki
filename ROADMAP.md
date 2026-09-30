@@ -89,6 +89,7 @@ Steps:
 - [x] In-season (Sep+): slate **prefetch** LaunchAgent — `bash scripts/install_nfl_slate_prefetch.sh` (@meta/nfl-slate-prefetch-cadence.md)
 - [x] In-season: weekly **slate hub** briefs in `briefs/` per @concepts/nfl-weekly-slate-hub-workflow.md — **K170** `briefs/2026-09-11_nfl-week1-slate-hub.md` (Sun 13-game dossier) · **W2** `briefs/2026-w02-slate-hub-sun.md` (Tue–Fri Gemini; Sunday main 1 p.m. + 4 p.m. only)
   - **2026-09-22:** Gemini addendum @meta/nfl-gemini-weekday-prompt-addendum.md now holds Week 2 recap lessons; one-week retunes stay off
+  - **2026-09-23:** W3 hub `briefs/2026-w03-slate-hub-sun.md` (Tue injury + Wed scheme). Sunday main only.
 
 - [ ] CLV journal hook on `@concepts/line-shopping-and-clv.md`
 - [x] **P0 daily edge card** — `scripts/daily_edge_card.py` + `@concepts/daily-edge-card.md` (de-vig reference vs Hard Rock; 2026-08-15). CLV ledger still open.
@@ -163,6 +164,7 @@ Priority ingest lanes once sources arrive:
 | **Poker** | preflop charts, ICM, bankroll by stake, solver study workflow |
 | **Casino** | basic strategy, comp optimization, table selection |
 | **Prediction markets (retail)** | fee math, FLB on Kalshi vs PM, cross-venue shopping |
+| **NHL** | **Seeded 2026-09-30** — `@wiki/entities/sports/nhl-betting.md`. Research-only; no bankroll lane until a CLV sample exists |
 
 ### W5 — Federated daily digest (K93)
 
@@ -216,6 +218,7 @@ Steps:
 
 | Date | Item |
 |------|------|
+| 2026-09-30 | K179 — CFTC Letter 26-27 mention-market advisory; NCPG exits; PM download share + parlay-vig reversal; **new NHL entity**; Phase-0 closed on 5 tools |
 | 2026-08-13 | WNBA betting entity + cold-streak/last-2:00 research source; Kalshi WNBA series note; alert-only bot posture |
 | 2026-06-07 | Competition scrub — redacted public wiki/LESSONS; bot code → private osint; GitHub history squashed to single commit |
 | 2026-06-04 | Playground W6 — S1a build mode in ROADMAP; prod pace tuned (details private) |

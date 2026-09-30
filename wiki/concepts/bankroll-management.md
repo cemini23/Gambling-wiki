@@ -35,9 +35,10 @@ related:
   - sources/arxiv-2604.27865-kellybench-2026-08-31.md
   - sources/daily-digest-rss-pm-regulatory-2026-09-17.md
   - sources/brief-k171-pm-fp-regulatory-2026-09-17.md
+  - entities/sports/nhl-betting.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-09-17
+updated: 2026-09-30
 ---
 
 ## Relations

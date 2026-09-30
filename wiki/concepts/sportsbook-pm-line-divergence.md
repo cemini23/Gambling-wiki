@@ -26,9 +26,11 @@ related:
   - sources/youtube-wsj-kalshi-polymarket-valuations-2026-06-01.md
   - concepts/pm-live-belief-updating.md
   - sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md
+  - sources/rss-lsr-nfl-app-downloads-pm-share-2026-09-24.md
+  - sources/daily-digest-batch-k179-2026-09-30.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-06-09
+updated: 2026-09-30
 ---
 
 ## Relations
@@ -37,6 +39,7 @@ updated: 2026-06-09
 - @concepts/line-shopping-and-clv.md — CLV on books; divergence is cross-venue CLV analog
 - @entities/tools/momentum-odds.md — commercial multi-book + PM routing feed
 - @concepts/world-cup-books-vs-pm-divergence.md — WC-specific nation-level gaps
+- @sources/rss-lsr-nfl-app-downloads-pm-share-2026-09-24.md — K179 measured vig: Kalshi wins on ML/totals, loses on parlays
 
 ## Raw Concept
 
@@ -57,6 +60,22 @@ Kalshi / Polymarket contract mid
         ↓ if gap > fees + model uncertainty
 Consider bet on cheaper venue (or pass)
 ```
+
+### Measured hold by market type (K179, 2026-09-24) [TENTATIVE]
+
+Citizens, on a Week 2 NFL sample, measured Kalshi implied vig **below** both major books on moneyline and totals — but **above** them on parlays:
+
+| Market | Kalshi | FanDuel | DraftKings |
+|--------|--------|---------|------------|
+| Moneyline / totals (30 obs, 2026-09-18) | **4.22%** | 4.43% | 4.50% |
+| Favourite + Over combos (15 obs) | **26.4%** | — | 23.9% |
+
+Two rules follow:
+
+1. **Net the fee first.** Kalshi's quoted vig **excludes transaction fees**. A pre-fee edge is not an edge.
+2. **The venue is not uniformly cheap.** Kalshi's structural advantage is on the plain two-sided market. On combos it is the **expensive** venue. Combos are **53%** of its notional volume.
+
+Source: `@sources/rss-lsr-nfl-app-downloads-pm-share-2026-09-24.md`.
 
 ### Structural vig gap (R2, 2026-06-01)
 

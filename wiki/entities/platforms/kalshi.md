@@ -61,9 +61,14 @@ related:
   - sources/daily-digest-batch-k175-2026-09-23.md
   - sources/daily-digest-rss-pm-regulatory-2026-09-29.md
   - sources/daily-digest-batch-k178-2026-09-29.md
+  - sources/rss-lsr-cftc-mention-market-advisory-2026-09-23.md
+  - sources/rss-lsr-ncpg-functionally-gambling-2026-09-23.md
+  - sources/rss-lsr-nfl-app-downloads-pm-share-2026-09-24.md
+  - sources/daily-digest-batch-k179-2026-09-30.md
+  - sources/rss-eh-kalshi-curry-geofence-2026-09-25.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-09-29
+updated: 2026-09-30
 ---
 
 ## Relations
@@ -86,6 +91,9 @@ updated: 2026-09-29
 - @osint-wiki/sources/substack-rss-event-horizon-2026-08-19-pm-ban-onshore.md — K242 source of record
 - @sources/arxiv-2602.19520-pm-domain-calibration-2026-08-31.md — sports short-horizon calibration (K168)
 - @sources/daily-digest-rss-nfl-week0-2026-08-31.md — football volume, injury markets, 9th Circuit
+- @sources/rss-lsr-cftc-mention-market-advisory-2026-09-23.md — CFTC Letter 26-27; mention markets presumptively manipulable (K179)
+- @sources/rss-lsr-ncpg-functionally-gambling-2026-09-23.md — NCPG "functionally gambling" + member exits over the Kalshi donation (K179)
+- @sources/rss-lsr-nfl-app-downloads-pm-share-2026-09-24.md — 47.5% of Week 2 NFL downloads; pre-fee vig edge reverses on parlays (K179)
 
 ## Raw Concept
 
@@ -130,6 +138,18 @@ Structural drivers cited: **USD bank on-ramp** vs PM USDC friction, **order-book
 **June 2026 watch:** NBA Finals from **2026-06-03** — game-level Kalshi prices reportedly tracked **Pinnacle** within **1–2¢** implied on NBA game contracts [TENTATIVE]. Thesis breaks if PM US sports product closes gap, sportsbook handle flat, or adverse **CFTC / state** rulings.
 
 Hub: `@sources/daily-digest-news-r1-r12-2026-06-02.md`.
+
+### Mention markets under CFTC presumption (K179, 2026-09) [CONFIRMED]
+
+CFTC Staff Letter No. 26-27 (2026-09-22) tells DCMs that **mention markets** are "presumptively readily susceptible to manipulation" under Core Principle 3. Kalshi had **paused sports-broadcast mention markets** in August 2026 during the federal review. Four factors a DCM must address: independent obligations, external pressure, verifiability/public scrutiny, and surveillance safeguards.
+
+This is **staff guidance, not a ban and not an enforcement action**. It creates no new binding rule and no no-action position. Treat it as a deterrent to new listings, not a delisting trigger. Details: `@sources/rss-lsr-cftc-mention-market-advisory-2026-09-23.md`.
+
+### Retail share and parlay pricing (K179, 2026-09-24)
+
+Sensor Tower data quoted by Citizens: Kalshi and Polymarket took **1.33M of 2.8M** NFL app downloads in Week 2 (**~47.5%**). Kalshi alone: 706k in Week 2, 1.31M over two weeks.
+
+Pricing caveat that matters for shopping: Kalshi's implied vig beat DraftKings and FanDuel on **moneyline and totals** (~**4.22%** vs 4.43% / 4.50%, pre-fee), but **lost on parlays** — **26.4%** implied vig on favourite+Over combos vs **23.9%** at DraftKings. Kalshi combos were **$26B** of notional volume over 30 days, **53%** of its total. See `@sources/rss-lsr-nfl-app-downloads-pm-share-2026-09-24.md`.
 
 ### Live NBA belief updating (arXiv 2606.07811, 2026-06-09) [CONFIRMED]
 

@@ -13,7 +13,7 @@ related:
   - entities/tools/pickfinder.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-09-30
 ---
 
 ## Relations
@@ -38,15 +38,27 @@ updated: 2026-05-31
 
 Presenter Jack: ex-**blackjack** card counter → sports bettor [Source: EQt2sq0_s64] — aligns with `@concepts/casino-game-house-edge.md` crossover discipline.
 
-### Phase-0 checklist [NEEDS VERIFICATION 2026-06-07]
+### Phase-0 checklist — closed 2026-09-30
 
-1. Confirm current product suite (free vs paid), pricing, state restrictions
-2. Verify whether they publish independent CLV track record vs education-only
-3. Compare vs OddsJam +EV scanner overlap
+| Check | Result |
+|-------|--------|
+| **Free tier** | **None.** Paid only. A 5-day trial runs **$15** (reported free with a promo code) [TENTATIVE] |
+| **Props+ / Essentials** | **$99/mo** or **$83/mo** billed annually [TENTATIVE — one source quotes $67/$49] |
+| **Premium** | **$199/mo** or **$132–$167/mo** billed annually. Adds the Unabated Line (vig-free fair odds), live bets, futures simulators [TENTATIVE] |
+| **Add-ons** | NBA $199/mo · Edge Rusher **$250/week** · WNBA $199/mo · College Football $149/mo · CFL $99/mo · Tennisform $55/mo · Concierge $799/mo (requires Premium) |
+| **API / enterprise** | **$3,000/mo** — WebSocket, sales call required, no free tier |
+| **Refund** | Trial-gated; no published money-back guarantee found [NEEDS VERIFICATION 2026-09-30] |
+| **Jurisdiction** | US sharp-bettor market. **No prediction-market coverage** — sportsbook fair-odds only |
+| **CLV track record** | The "**Unabated Line**" is a vig-free consensus built from books that reach the closing line fastest. It is a fair-odds benchmark, **not** a published bet-by-bet CLV ledger [TENTATIVE] |
+| **Overlap vs OddsJam** | Same price band (~$199/mo premium) but a different philosophy: Unabated does **fair-odds modelling**, OddsJam does **+EV/promo alerts**. Neither scans prediction markets |
 
 ### Verdict
 
-**REFERENCE** for sharp betting literacy — strong fit for `@concepts/sports-betting-fundamentals.md` and `@concepts/kelly-criterion-betting.md`; not a sportsbook.
+**REFERENCE / CONDITIONAL-GO** — sharp betting literacy and a de-vig benchmark, at a real price. Fits `@concepts/sports-betting-fundamentals.md`, `@concepts/vig-and-hold.md`, and `@concepts/kelly-criterion-betting.md`. **Not a sportsbook and not a PM scanner.**
+
+Phase-0 closed 2026-09-30. Buy decision belongs to the operator: $83–$199/mo is significant, and the program already has free de-vig tooling in `@scripts/daily_edge_card.py` + `@concepts/daily-edge-card.md`. Do not subscribe without a CLV-ledger plan to measure whether it pays for itself.
+
+**Marketing caution:** the vendor claim that "96% of members become winning bettors" is unverifiable. Ignore it.
 
 ## Snippets
 

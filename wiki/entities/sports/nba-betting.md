@@ -20,9 +20,10 @@ related:
   - concepts/pm-live-belief-updating.md
   - sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md
   - sources/research-wnba-cold-streak-live-unders-2026-08-13.md
+  - entities/sports/nhl-betting.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-08-13
+updated: 2026-09-30
 ---
 
 ## Relations

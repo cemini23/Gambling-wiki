@@ -1,5 +1,22 @@
 # Wiki operations log
 
+## [2026-09-30] ingest | K179 PM regulatory + SBC + NHL opening night
+
+- **Batch K179:** 8 inbox RSS → 6 source pages + 1 new sport entity (+ sweep S4 follow-on)
+  - **CFTC:** Letter 26-27 (2026-09-22) — mention markets "presumptively readily susceptible to manipulation"; four-factor DCM showing; Kalshi paused sports mention markets in Aug
+  - **NCPG:** "functionally gambling" (2026-09-22); Ohio/Michigan/Nevada/Evergreen exits over Kalshi **$2M**; Harris Poll 85% / 84%; two staff resignations
+  - **PM share:** Kalshi + Polymarket **1.33M of 2.8M** Week 2 NFL downloads (~47.5%); pre-fee vig edge on ML/totals **reverses on parlays** (26.4% vs 23.9%)
+  - **SBC Lisbon:** Jordan/Robins/Koerl keynote; Brazil Lula ban pledge — OOD
+  - **NHL:** 4 opening-night cards → new `entities/sports/nhl-betting.md` (research only, no auto-enter)
+  - **EH S4 follow-on:** Kalshi self-certified Curry next-team markets despite league objections; NY AG sued Polymarket (09-25); Kalshi's first voluntary CA tribal geofence (9th Cir. PI 09-16); FMF trademark suit; bonus program Core Principle 2 concern
+- **Phase-0 closed (5 tools):** `pokerskill` **NOASSERTION** → no code reuse; `fredbet` MIT; `georgedouzas/sports-betting` MIT (803★); `unabated` $83–199/mo, no PM coverage; `pickfinder` domain is **pickfinder.app**, $14.99–19.99/mo + Pro $299.99/yr
+- Updated: `kalshi`, `polymarket`, `draftkings`, `fanduel`, `hard-rock-bet`, `prediction-markets-crossover`, `sportsbook-pm-line-divergence`, `vig-and-hold`, `parlay-and-correlated-bets`, `bankroll-management`, `line-shopping-and-clv`, `nfl-betting`, `nba-betting`, 5 tool pages
+- Phase-1: policy_wired kalshi / crossover / divergence / vig; SBC `wont_wire`
+- No arXiv in window — 14-day paper lane empty
+- **Archive blocked:** egress-fi SSH denied by session sandbox; 8 inbox files left in place for manual archive
+- Note: K178 had stubbed 5 of these as titles only; this batch fetched bodies (LSR + SBC 403 direct → Brave LLM Context)
+- Briefs: none new
+
 ## [2026-09-29] ingest | K178 MNF parlay + PM RSS + RSD-Poker
 
 - **Batch K178:** PHI@CHI parlay docx + arXiv 2609.33669 + 8 RSS archived

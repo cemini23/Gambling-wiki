@@ -23,9 +23,11 @@ related:
   - sources/arxiv-2604.17194-odds-conversion-emh-2026-08-31.md
   - sources/arxiv-2609.06739-profit-bias-identity-sports-betting-2026-09-11.md
   - sources/brief-k170-week1-papers-rss-2026-09-11.md
+  - sources/rss-lsr-nfl-app-downloads-pm-share-2026-09-24.md
+  - entities/platforms/kalshi.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-09-11
+updated: 2026-09-30
 ---
 
 ## Relations
@@ -39,6 +41,7 @@ updated: 2026-09-11
 - @sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md — K160 vig-removed 1X2 market baseline (~1.05 overround)
 - @sources/arxiv-2604.17194-odds-conversion-emh-2026-08-31.md — OO-EPC vs multiplicative de-vig (soccer panel; do not swap NFL card yet)
 - @sources/arxiv-2609.06739-profit-bias-identity-sports-betting-2026-09-11.md — K170 profit–bias identity; hold-first margin
+- @sources/rss-lsr-nfl-app-downloads-pm-share-2026-09-24.md — K179 measured hold: PM cheap on ML/totals, dear on parlays
 
 ## Raw Concept
 
@@ -54,6 +57,17 @@ On a two-sided market at **-110** each side:
 - Sum: **104.76%** → **4.76% overround** (book hold ≈ 4.5%)
 
 Breakeven win rate at -110: **52.38%** — you need >52.38% to be +EV before accounting for model error.
+
+### Hold is not one number per venue (K179, 2026-09-24) [TENTATIVE]
+
+Measured implied vig, Week 2 NFL, Citizens via Sensor Tower sample:
+
+| Market | Kalshi | FanDuel | DraftKings |
+|--------|--------|---------|------------|
+| Moneyline / totals | **4.22%** | 4.43% | 4.50% |
+| Favourite + Over combos | **26.4%** | — | 23.9% |
+
+A prediction market can be the **cheapest** venue on a two-sided market and the **dearest** on a parlay. Kalshi's combos are **53%** of its notional volume. Always compare hold **per market type**, never per brand. Source: `@sources/rss-lsr-nfl-app-downloads-pm-share-2026-09-24.md`.
 
 ### Hold vs overround
 

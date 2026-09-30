@@ -10,7 +10,7 @@ related:
   - entities/platforms/pinnacle.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-09-30
 cross-wiki-source: "@osint-wiki/sources/multi-wiki-tool-eval-v6-k90-2026-05-31.md"
 ---
 
@@ -48,16 +48,23 @@ Python **sports betting data + backtesting library** — historical odds loading
 - No prod sportsbook API integration; stale-line risk if used naively for live betting
 - Patterns belong in gambling-wiki study workflows, not CeminiSuite execution
 
-### Phase-0 checklist [NEEDS VERIFICATION 2026-06-07]
+### Phase-0 checklist — closed 2026-09-30
 
-1. Pin version; verify data source freshness and jurisdiction coverage
-2. Backtest with **Pinnacle closing lines** as CLV benchmark (`@entities/platforms/pinnacle.md`)
-3. Account for vig in ROI calculations (`@concepts/vig-and-hold.md`)
-4. Compare vs paid data feeds before sizing real bankroll
+| Check | Result |
+|-------|--------|
+| **License** | **MIT** [CONFIRMED — `gh api repos/georgedouzas/sports-betting`, 2026-09-30] |
+| **Maintenance** | Active — last push **2026-09-24**, **803 stars**, not archived [CONFIRMED] |
+| **Scope** | "Collection of sports betting AI tools" — dataloaders, backtesting, scikit-learn models |
+| **CLV benchmark** | Backtest with **Pinnacle closing lines** (`@entities/platforms/pinnacle.md`) |
+| **Vig accounting** | Model hold explicitly in ROI (`@concepts/vig-and-hold.md`) |
+| **Data freshness** | Football/soccer-heavy dataloaders; **verify league + jurisdiction coverage per event** before use [OPEN] |
+| **Vs paid feeds** | Compare against paid data feeds before sizing a real bankroll [OPEN] |
 
 ### Verdict
 
-**STEAL-FROM** — reference implementation for historical odds backtesting; **CONDITIONAL-GO** for personal research; **NO-GO** for unattended live betting.
+**STEAL-FROM / CONDITIONAL-GO** — MIT and well-maintained, so the backtest harness and model scaffolding are reusable for **personal research**. **NO-GO** for unattended live betting.
+
+Phase-0 closed 2026-09-30. The license and maintenance checks pass; the data-coverage and feed-comparison checks stay open by design — they are per-event, not one-time.
 
 ## Snippets
 

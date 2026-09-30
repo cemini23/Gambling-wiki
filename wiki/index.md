@@ -208,6 +208,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [nfl-betting](entities/sports/nfl-betting.md) | validated |
 | [tennis-betting](entities/sports/tennis-betting.md) | draft |
 | [nba-betting](entities/sports/nba-betting.md) | draft |
+| [nhl-betting](entities/sports/nhl-betting.md) | draft |
 | [wnba-betting](entities/sports/wnba-betting.md) | draft |
 | [world-cup-2026-betting](entities/sports/world-cup-2026-betting.md) | validated |
 
@@ -396,6 +397,13 @@ Catalog of all wiki pages. Updated on each ingest.
 | [eagles-bears-parlay-research-2026-09-28](sources/eagles-bears-parlay-research-2026-09-28.md) | skimmed | PHI@CHI MNF prop bars |
 | [arxiv-2609.33669-rsd-poker-shift-robust-2026-09-29](sources/arxiv-2609.33669-rsd-poker-shift-robust-2026-09-29.md) | skimmed | RSD-Poker W6 eval |
 | [daily-digest-rss-pm-regulatory-2026-09-29](sources/daily-digest-rss-pm-regulatory-2026-09-29.md) | stub | CFTC mention · NCPG |
+| [rss-lsr-cftc-mention-market-advisory-2026-09-23](sources/rss-lsr-cftc-mention-market-advisory-2026-09-23.md) | deep-read | CFTC Letter 26-27 — mention markets presumptively manipulable |
+| [rss-lsr-ncpg-functionally-gambling-2026-09-23](sources/rss-lsr-ncpg-functionally-gambling-2026-09-23.md) | deep-read | NCPG "functionally gambling"; member exits over Kalshi $2M |
+| [rss-lsr-nfl-app-downloads-pm-share-2026-09-24](sources/rss-lsr-nfl-app-downloads-pm-share-2026-09-24.md) | deep-read | PM 47.5% of Week 2 NFL downloads; combo vig reverses |
+| [rss-sbc-summit-lisbon-2026-09-29](sources/rss-sbc-summit-lisbon-2026-09-29.md) | deep-read | SBC Lisbon — Jordan keynote, Brazil ban, DK on PMs |
+| [rss-lsb-nhl-opening-night-props-2026-09-29](sources/rss-lsb-nhl-opening-night-props-2026-09-29.md) | deep-read | 4 NHL opening-night cards; special-teams + shot-volume math |
+| [rss-eh-kalshi-curry-geofence-2026-09-25](sources/rss-eh-kalshi-curry-geofence-2026-09-25.md) | deep-read | Kalshi Curry self-cert · NY v Polymarket · CA tribal geofence |
+| [daily-digest-batch-k179-2026-09-30](sources/daily-digest-batch-k179-2026-09-30.md) | deep-read | K179 batch hub (6 sources + NHL entity) |
 | [brief-k239-kalshi-sports-mention-2026-08-15](sources/brief-k239-kalshi-sports-mention-2026-08-15.md) | read | K239 sports mention markets gone + WA geofence |
 | [brief-k240-kalshi-nv-geofence-2026-08-17](sources/brief-k240-kalshi-nv-geofence-2026-08-17.md) | read | K240 NV $120k/day + optional-update geofence |
 | [brief-k242-eh-pm-ban-onshore-2026-08-19](sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md) | read | K242 WA geofence day; ban ≠ offshore |

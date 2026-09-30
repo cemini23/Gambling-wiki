@@ -11,7 +11,7 @@ related:
   - sources/youtube-operator-batch-sports-betting-research-2026-05-31.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-09-30
 ---
 
 ## Relations
@@ -30,16 +30,26 @@ updated: 2026-05-31
 - Filter/stat views to narrow bet candidates
 - Positioned as workflow accelerator — **not** a substitute for EV math or CLV logging
 
-### Phase-0 checklist [NEEDS VERIFICATION 2026-06-07]
+### Phase-0 checklist — closed 2026-09-30
 
-1. Pricing, TOS, refund policy, geoblock
-2. Data sources for odds (latency vs books)
-3. Independent proof of +EV if marketed as such
-4. Compare vs Action Network, OddsJam, free aggregators
+| Check | Result |
+|-------|--------|
+| **Canonical domain** | **`pickfinder.app`** — `pickfinder.com` is **not** the vendor. Correct any earlier reference. |
+| **Premium** | **$19.99/mo** ($14.99/mo web-exclusive), **$39.99**/quarter, **$149.99**/year |
+| **Pro** | **$299.99**/year. Adds the **Arbitrage finder**, **Middles board**, and **EV+ board** |
+| **Refund** | Refund request accepted **within 3 days** of first purchase. **No free trial** for Premium; Premium members get a one-time 3-day Pro trial |
+| **Coverage** | 14 sports + esports · 25+ books and DFS apps — includes **PrizePicks, Underdog, Sleeper**, DraftKings, FanDuel |
+| **Odds latency** | Vendor claims "within seconds"; unverified against book feeds [NEEDS VERIFICATION 2026-09-30] |
+| **+EV proof** | The **EV+ board** is priced against a **de-vigged fair line**. That is a method, not a track record. No independent CLV audit found [TENTATIVE] |
+| **Boards overlap** | EV+/arb/middles boards overlap `@entities/tools/odds-jam.md`. PickFinder competes on **price**, not depth |
 
 ### Verdict
 
-**CONDITIONAL-GO** — research UI only; pair with `@concepts/line-shopping-and-clv.md` discipline; no validated edge claims from single creator tutorial.
+**CONDITIONAL-GO** — cheap props-research UI, and the only low-cost option found that covers **FS/pick'em books** (PrizePicks, Underdog, Sleeper) alongside traditional sportsbooks. Pair with `@concepts/line-shopping-and-clv.md` discipline. No edge claim is validated by the vendor's own marketing.
+
+Phase-0 closed 2026-09-30. At ~$12.50–$20/mo it is the lowest-commitment paid tool in `entities/tools/`. The 3-day refund window is the only risk control — test it against a real slate inside that window.
+
+**Note:** the earlier stub referenced a single creator tutorial. Pricing above is from the vendor site plus third-party reviews; treat exact tier prices as [TENTATIVE] until seen in-app.
 
 ## Snippets
 
