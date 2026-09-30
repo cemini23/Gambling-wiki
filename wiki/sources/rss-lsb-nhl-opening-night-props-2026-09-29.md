@@ -44,6 +44,15 @@ URLs:
 | C | NHL Best Bet: Golden Knights Puck Line Vs. Bedard-Less Hawks | `.../best-bet-golden-knights-puck-line-vs-bedard-less-hawks-09-29-2026/` |
 | D | Rangers-Bruins Opener Is A Coin Flip At -110 Apiece | `.../rangers-bruins-opener-is-a-coin-flip-at-110-apiece-09-29-2026/` |
 
+**Location** (`cemini-egress-fi:/opt/cemini-bulk/research/gambling/`):
+
+| # | Archived file |
+|---|---------------|
+| A | `rss-legal-sports-betting-2026-09-29-cole-caufield-props-canadiens-visit-leafs-on-opening-night.md` |
+| B | `rss-legal-sports-betting-2026-09-29-connor-mcdavid-props-oilers-pp-meets-nhl-s-worst-pk.md` |
+| C | `rss-legal-sports-betting-2026-09-29-nhl-best-bet-golden-knights-puck-line-vs-bedard-less-hawks.md` |
+| D | `rss-legal-sports-betting-2026-09-29-rangers-bruins-opener-is-a-coin-flip-at-110-apiece.md` |
+
 ## Narrative
 
 Four opening-night cards for the **2026-27 NHL season**, all published 2026-09-29. The valuable part is the **mechanism**, not the picks: each card ties a prop price to a repeatable input — shot volume, special-teams mismatch, or divisional market pricing.

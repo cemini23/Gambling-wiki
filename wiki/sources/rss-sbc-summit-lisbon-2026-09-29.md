@@ -34,6 +34,8 @@ wire_status: wont_wire
 | **Event** | SBC Summit Lisbon, 2026-09-28 → 2026-09-30 |
 | **Body access** | SBC returns HTTP 403 to direct fetch; recovered via Brave LLM Context (Gambling Insider, ON360, Yogonet, Global Gaming Insider) |
 
+**Location:** `cemini-egress-fi:/opt/cemini-bulk/research/gambling/rss-sbc-news-2026-09-29-sbc-summit-lisbon-2026-brazil-betting-ban-drives-discourse.md`
+
 ## Narrative
 
 ### Keynote — "Leadership in Sports Business"

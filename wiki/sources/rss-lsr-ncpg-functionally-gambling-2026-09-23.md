@@ -33,6 +33,8 @@ wire_status: policy_wired
 | **Published** | 2026-09-23 (statement 2026-09-22) |
 | **Body access** | LSR returns HTTP 403 to direct fetch; recovered via Brave LLM Context + CardPlayer, iGamingToday, World Casino Directory |
 
+**Location:** `cemini-egress-fi:/opt/cemini-bulk/research/gambling/rss-legal-sports-report-2026-09-23-ncpg-calls-prediction-markets-functionally-gambling-amid-mem.md`
+
 ## Narrative
 
 The **National Council on Problem Gambling (NCPG)** declared that prediction markets are **"functionally gambling"** regardless of how they are "currently legally defined." Board President **Derek Longmeier** issued the statement on Tuesday, 2026-09-23. It lands about two weeks after the **Massachusetts Gaming Commission** discussed leaving the NCPG over its **Kalshi** partnership, announced in May 2026.

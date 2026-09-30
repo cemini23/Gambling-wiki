@@ -39,6 +39,8 @@ wire_status: policy_wired
 | **Underlying data** | Sensor Tower downloads, quoted by Citizens (analyst firm) |
 | **Body access** | Recovered via Brave LLM Context (LSR 403s direct fetch) |
 
+**Location:** `cemini-egress-fi:/opt/cemini-bulk/research/gambling/rss-legal-sports-report-2026-09-24-nfl-betting-app-downloads-grow-but-prediction-markets-extend.md`
+
 ## Narrative
 
 NFL betting-app downloads rose **28% year over year in Week 2**. Prediction markets drove most of the growth while traditional sportsbooks kept losing customer-acquisition ground.

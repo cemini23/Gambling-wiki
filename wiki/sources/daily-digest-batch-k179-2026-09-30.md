@@ -50,5 +50,5 @@ Eight inbox stubs from the 2026-09-23 → 2026-09-29 RSS window. The K178 close 
 
 ## Notes
 
-- **Archive blocked.** The egress host (`cemini-egress-fi`) is unreachable from this session (SSH denied by sandbox). The 8 inbox files remain in `research to be indexed/` and must be archived manually.
+- **Archived.** All 8 inbox files copied to `cemini-egress-fi:/opt/cemini-bulk/research/gambling/` and the local copies removed. Per-page paths are in each source page's `Location` field.
 - **LSR and SBC block direct fetch** (HTTP 403). Bodies came through Brave LLM Context plus corroborating outlets. Every number sourced that way is marked `[TENTATIVE]` on the child page.

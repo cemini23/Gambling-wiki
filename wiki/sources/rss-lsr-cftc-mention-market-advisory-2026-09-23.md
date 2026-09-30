@@ -37,6 +37,8 @@ wire_status: policy_wired
 | **Primary document** | CFTC Staff Letter No. 26-27, Division of Market Oversight (DMO), dated 2026-09-22, signed by Acting Director Duncan Hennes |
 | **Body access** | LSR returns HTTP 403 to direct fetch; body recovered via Brave LLM Context + corroborating sources |
 
+**Location:** `cemini-egress-fi:/opt/cemini-bulk/research/gambling/rss-legal-sports-report-2026-09-23-cftc-sends-memo-on-potential-mention-market-manipulation.md`
+
 ## Narrative
 
 The CFTC's Division of Market Oversight told every designated contract market (DCM) that **"mention markets" are presumptively susceptible to manipulation**. The advisory shifts the burden of proof from traders to the exchanges that list the contracts.

@@ -13,7 +13,8 @@
 - Updated: `kalshi`, `polymarket`, `draftkings`, `fanduel`, `hard-rock-bet`, `prediction-markets-crossover`, `sportsbook-pm-line-divergence`, `vig-and-hold`, `parlay-and-correlated-bets`, `bankroll-management`, `line-shopping-and-clv`, `nfl-betting`, `nba-betting`, 5 tool pages
 - Phase-1: policy_wired kalshi / crossover / divergence / vig; SBC `wont_wire`
 - No arXiv in window — 14-day paper lane empty
-- **Archive blocked:** egress-fi SSH denied by session sandbox; 8 inbox files left in place for manual archive
+- **Archived:** all 8 inbox files → `cemini-egress-fi:/opt/cemini-bulk/research/gambling/`; inbox drained
+- **Repo hygiene:** removed 45 foreign `.cursor/skills/` dirs and 3 OSINT hook scripts (bulk sync from CCC wiki); reverted the matching federation edits on 7 tracked skill files. Canonical copies stay in CCC.
 - Note: K178 had stubbed 5 of these as titles only; this batch fetched bodies (LSR + SBC 403 direct → Brave LLM Context)
 - Briefs: none new
 
