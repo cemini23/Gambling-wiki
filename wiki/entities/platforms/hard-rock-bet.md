@@ -86,6 +86,14 @@ Keep **multiplicative de-vig**. No chatbot tickets. **Aaron Donald** snaps for M
 
 Cap any recommended ticket at two legs of one market. No same-game `first_td` legs. SNF legs stay off the afternoon parlay ticket. Grade uses the displayed American. A profit-boost percent is a note only. See @meta/nfl-gemini-weekday-prompt-addendum.md Saturday block. Do not change Kelly math.
 
+### Injury bonus (operator, 2026-09-30) [CONFIRMED]
+
+If the only missed leg is a player who is hurt before halftime, Hard Rock pays a bonus bet equal to the original stake. It is not cash. Week 3: Justin Jefferson's $5 ticket was the only miss, he left with an ankle injury, and that $5 bonus was used Monday. Jalen McMillan left on the third play, but other legs on that ticket also missed, so that ticket does not fit this rule. No public rule page was fetched. Do not build a void or a cashout.
+
+### Week 4 lotto
+
+The $3 and $2 tickets are 2-leg anytime-touchdown parlays. They are not 3-leg first-touchdown parlays. The two touchdowns are in different games.
+
 ## Snippets
 
 > "Hard Rock's quality of NFL odds – 20-cent vig on standard markets and 30-cent vig on secondary opportunities – are in line with industry standards." [Source: @sources/web-sportsbookreview-hard-rock-bet-2026-06-20.md]

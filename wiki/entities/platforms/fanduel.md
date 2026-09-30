@@ -79,6 +79,16 @@ Q2: sports/novelties on **Predicts** move to **Crypto.com**; CME retained for fi
 
 Do not treat **Jacobs**, **Charbonnet**, or **Tyson** as starters. Price **Lloyd / Brooks / Kaleb Johnson** (GB), **Jadarian Price** + Holani (SEA vs NE Wed 9/9), and **Olave** as NO WR1. **Nacua** is Questionable for Melbourne TNF 9/10 — wait T-90. Stokastic = member CSV only; do not scrape Sims HTML. Hub: `@sources/brief-k169-nfl-week1-ready-2026-08-31.md`.
 
+### Sunday Million min-cash (operator app, 2026-09-30)
+
+| Week | Min-cash | Note |
+|------|----------|------|
+| 1 | not in the app | Do not invent it |
+| 2 | 113.78 | A 120 would have cashed |
+| 3 | 130.3 | Best lineup was 126.26, short by 4.04 |
+
+Do not store 130.3 as a projection weight. The line moved 16.5 points in one week.
+
 ### Bankroll
 
 GPP = high variance — size entries per @concepts/bankroll-management.md; separate from Hard Rock sportsbook roll and Underdog BBM7 draft budget.
