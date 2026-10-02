@@ -53,4 +53,4 @@ wire_status: policy_wired
 ## Notes
 
 - **LSR 403s direct fetch.** All five LSR bodies came through Brave LLM Context plus corroborating outlets (CDC Gaming, DefiRate, Casino.org, CryptoSlate, Gambling Insider). Numbers are marked `[TENTATIVE]` on the child page.
-- **Archive pending** — see @meta/daily-research-digest-cadence.md for the egress step.
+- **Archived.** All 12 inbox files copied to `cemini-egress-fi:/opt/cemini-bulk/research/gambling/` and the local copies removed. Per-page paths are in each source page's `Location` field.

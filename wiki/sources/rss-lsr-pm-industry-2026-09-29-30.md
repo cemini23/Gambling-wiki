@@ -44,6 +44,16 @@ wire_status: policy_wired
 | D | Fluharty: Predictions Are 'Moonshine' To Sports Betting's Fine Wine | `279547/fluharty-predictions-are-moonshine-to-sports-bettings-fine-wine` |
 | E | MGM, Caesars Not Risking Casino Licenses For Prediction Markets | `279685/mgm-caesars-not-risking-casino-licenses-for-prediction-markets` |
 
+**Location** (`cemini-egress-fi:/opt/cemini-bulk/research/gambling/`):
+
+| # | Archived file |
+|---|---------------|
+| A | `rss-legal-sports-report-2026-09-30-volume-rewards-program-on-kalshi-set-to-end-nearly-a-year-ea.md` |
+| B | `rss-legal-sports-report-2026-09-29-fanduel-parent-s-stock-hits-record-low-as-global-troubles-mo.md` |
+| C | `rss-legal-sports-report-2026-09-29-michigan-regulators-reviewing-issues-raised-in-draftkings-ai.md` |
+| D | `rss-legal-sports-report-2026-09-30-fluharty-predictions-are-moonshine-to-sports-betting-s-fine.md` |
+| E | `rss-legal-sports-report-2026-09-30-mgm-caesars-not-risking-casino-licenses-for-prediction-marke.md` |
+
 ## Narrative
 
 ### A — Kalshi ends its Volume Incentive Program early

@@ -39,6 +39,14 @@ wire_status: policy_wired
 | B | Kamario Taylor Props: Heisman Contender Hosts Alabama | `kamario-taylor-props-heisman-contender-hosts-alabama-10-01-2026` |
 | C | Washington-USC Best Bet: Under 59 In Bounce-Back Battle | `washington-usc-best-bet-under-59-in-bounce-back-battle-10-01-2026` |
 
+**Location** (`cemini-egress-fi:/opt/cemini-bulk/research/gambling/`):
+
+| # | Archived file |
+|---|---------------|
+| A | `rss-legal-sports-betting-2026-10-01-clemson-17-best-bet-swinney-s-first-double-digit-home-dog.md` |
+| B | `rss-legal-sports-betting-2026-10-01-kamario-taylor-props-heisman-contender-hosts-alabama.md` |
+| C | `rss-legal-sports-betting-2026-10-01-washington-usc-best-bet-under-59-in-bounce-back-battle.md` |
+
 ## Narrative
 
 ### A — No. 4 Miami @ Clemson, Sat 19:30 ET (ABC)
