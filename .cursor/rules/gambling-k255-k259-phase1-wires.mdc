@@ -1,5 +1,5 @@
 ---
-description: Gambling wiki Phase-1 — K255–K259 EH PM wave and K175–K179 batches (Sep 2026)
+description: Gambling wiki Phase-1 — K255–K259 EH PM wave and K175–K180 batches (Sep–Oct 2026)
 alwaysApply: true
 ---
 
@@ -28,6 +28,18 @@ Verdict: **regulatory awareness only. No pm scp. No xsp scp.**
 - Sports **are** the pie at Kalshi ($160B since Apr; record CFB Saturday).
 - DGA private session with Kalshi + AGA (11 Sep).
 - **PM injury props may not void like sportsbook props** — cross-venue hygiene.
+
+## K180 — Week 4 docx quartet + CFB cards + PM industry (2026-10-02)
+
+- Inbox 12 → 6 source pages + new `entities/sports/cfb-betting.md`. LSR 403 direct → Brave LLM Context.
+- **W4 slate:** keep JAC@CIN (51.5) · BUF pass (NE line gutted) · KC@LV (dome, Bowers cleared). Fade MIN/CHI/TB passing. Williams, Jefferson, Collins **OUT**. TB **25 mph** · BAL **81% precip** · ARI@NYG **swung 4 pts** · NRG roof uncalled.
+- **TNF PIT@CLE: both operator tickets LOST (−$10).** Three durable rules now on `@wiki/entities/sports/nfl-betting.md`: (1) an anytime-TD leg needs a **cited goal-line rate** — a backfield vacancy is not goal-line work; (2) a line opening at **40+ is a bar**, buying it down does not fix it; (3) two totals on one player are **two bets**. See `@wiki/sources/nfl-week4-tnf-result-postmortem-2026-10-02.md`.
+- **CFB (new vertical):** research only. No bankroll lane without a CLV sample. No auto-enter.
+- **Kalshi:** Volume Incentive Program terminates no earlier than **2026-10-13**; CFTC reviewing incentive programs across platforms. Promo credit is never bankroll.
+- **DraftKings AI/VIP:** MI + MA reviewing. Responsible-gambling signal, not an edge.
+- **MGM/Caesars refuse PM** on licensing risk. Reeg: PM contracts lack insider restrictions — treat corporate-event markets like mention markets.
+- **Citation discipline:** Nico Collins OUT and the Mariota naming are **DraftEdge-only**. TB and CHI starting QBs stay **unnamed**. Do not ticket those cells.
+- **No pm scp.** Operator tickets only, human-entered.
 
 ## K179 — CFTC mention advisory + NCPG + PM share + SBC + NHL (2026-09-30)
 
