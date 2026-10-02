@@ -62,3 +62,14 @@ agents/**/.env
 *.tmp
 .scratch/
 .playwright-mcp/
+
+# --- Operator audit packs (local research output) -----------------------------
+reports/
+
+# --- Cursor skills -----------------------------------------------------------
+# Federation-synced from the CCC wiki by
+# `CCC/scripts/sync_federation_cursor_skills.sh` (runs on CCC post-commit).
+# Canon for these skills lives in the CCC / OSINT / SEO wikis, so this public
+# repo tracks only its own domain skill. The files stay on disk for Cursor.
+.cursor/skills/*
+!.cursor/skills/nfl-fanduel-slate-prep/
