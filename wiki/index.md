@@ -209,6 +209,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [tennis-betting](entities/sports/tennis-betting.md) | draft |
 | [nba-betting](entities/sports/nba-betting.md) | draft |
 | [nhl-betting](entities/sports/nhl-betting.md) | draft |
+| [cfb-betting](entities/sports/cfb-betting.md) | draft |
 | [wnba-betting](entities/sports/wnba-betting.md) | draft |
 | [world-cup-2026-betting](entities/sports/world-cup-2026-betting.md) | validated |
 
@@ -404,6 +405,14 @@ Catalog of all wiki pages. Updated on each ingest.
 | [rss-lsb-nhl-opening-night-props-2026-09-29](sources/rss-lsb-nhl-opening-night-props-2026-09-29.md) | deep-read | 4 NHL opening-night cards; special-teams + shot-volume math |
 | [rss-eh-kalshi-curry-geofence-2026-09-25](sources/rss-eh-kalshi-curry-geofence-2026-09-25.md) | deep-read | Kalshi Curry self-cert · NY v Polymarket · CA tribal geofence |
 | [daily-digest-batch-k179-2026-09-30](sources/daily-digest-batch-k179-2026-09-30.md) | deep-read | K179 batch hub (6 sources + NHL entity) |
+| [nfl-week4-research-plan-2026-10-01](sources/nfl-week4-research-plan-2026-10-01.md) | deep-read | W4 injury ledger + 13-game scheme card |
+| [nfl-week4-practice-reports-2026-10-01](sources/nfl-week4-practice-reports-2026-10-01.md) | deep-read | W4 Thursday practice flips + stack-theme check |
+| [nfl-week4-slate-env-2026-10-02](sources/nfl-week4-slate-env-2026-10-02.md) | deep-read | W4 Friday env card, ITT, designation deltas |
+| [steelers-browns-tnf-metaplan-2026-10-01](sources/steelers-browns-tnf-metaplan-2026-10-01.md) | deep-read | PIT@CLE prop market support/bar list |
+| [rss-lsb-cfb-week6-cards-2026-10-01](sources/rss-lsb-cfb-week6-cards-2026-10-01.md) | deep-read | 3 CFB cards; seeds the CFB vertical |
+| [rss-lsr-pm-industry-2026-09-29-30](sources/rss-lsr-pm-industry-2026-09-29-30.md) | deep-read | Flutter low · DK AI probe · Kalshi rewards end · MGM/Caesars |
+| [nfl-week4-tnf-result-postmortem-2026-10-02](sources/nfl-week4-tnf-result-postmortem-2026-10-02.md) | deep-read | TNF both tickets lost — goal-line inference rule |
+| [daily-digest-batch-k180-2026-10-02](sources/daily-digest-batch-k180-2026-10-02.md) | deep-read | K180 batch hub (6 sources + CFB entity) |
 | [brief-k239-kalshi-sports-mention-2026-08-15](sources/brief-k239-kalshi-sports-mention-2026-08-15.md) | read | K239 sports mention markets gone + WA geofence |
 | [brief-k240-kalshi-nv-geofence-2026-08-17](sources/brief-k240-kalshi-nv-geofence-2026-08-17.md) | read | K240 NV $120k/day + optional-update geofence |
 | [brief-k242-eh-pm-ban-onshore-2026-08-19](sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md) | read | K242 WA geofence day; ban ≠ offshore |

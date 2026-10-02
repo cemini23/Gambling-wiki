@@ -22,6 +22,7 @@ related:
   - sources/brief-k169-nfl-week1-ready-2026-08-31.md
   - meta/nfl-gemini-weekday-prompt-addendum.md
   - entities/sports/nhl-betting.md
+  - entities/sports/cfb-betting.md
 maturity: validated
 created: 2026-06-20
 updated: 2026-09-30

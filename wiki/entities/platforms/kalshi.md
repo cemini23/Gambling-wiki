@@ -66,9 +66,11 @@ related:
   - sources/rss-lsr-nfl-app-downloads-pm-share-2026-09-24.md
   - sources/daily-digest-batch-k179-2026-09-30.md
   - sources/rss-eh-kalshi-curry-geofence-2026-09-25.md
+  - sources/rss-lsr-pm-industry-2026-09-29-30.md
+  - sources/daily-digest-batch-k180-2026-10-02.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-09-30
+updated: 2026-10-02
 ---
 
 ## Relations
@@ -138,6 +140,20 @@ Structural drivers cited: **USD bank on-ramp** vs PM USDC friction, **order-book
 **June 2026 watch:** NBA Finals from **2026-06-03** — game-level Kalshi prices reportedly tracked **Pinnacle** within **1–2¢** implied on NBA game contracts [TENTATIVE]. Thesis breaks if PM US sports product closes gap, sportsbook handle flat, or adverse **CFTC / state** rulings.
 
 Hub: `@sources/daily-digest-news-r1-r12-2026-06-02.md`.
+
+### Volume incentive program terminated early (K180, 2026-09-30) [CONFIRMED]
+
+Kalshi filed a **2026-09-28** CFTC self-certification to end its **Volume Incentive Program**, effective **no earlier than 2026-10-13** — nearly a year before its 2026-10-01-2027 scheduled end. No reason given.
+
+How it worked: a fixed reward per eligible market over up to 31 days, split among traders by share of volume. Only CLOT trades priced **$0.03–$0.97** counted (perps exempt); event-contract rewards capped at **$0.005 per contract**.
+
+**Context the filing avoids:** the CFTC's **2026-08-12** advisory warned that volume-threshold incentives raise wash-trading and prearranged-trade risk, and the *WSJ* reported **~1 million near-identical trades worth >$5B** through Kalshi's **ether perpetual** market since August.
+
+**Replacement:** a **Deposit and Trading Reward Incentive Program** (received 2026-09-25). Time-limited promotions, **3–90 days**, targeted by account age, funding, activity, inactivity, geography, and contract category. Up to **$2,500 per participant** per promotion; **$5,000** total per person over the program's two-year life. Transactions under inquiry for self-matching, wash trading, or prearranged trading are excluded.
+
+**The separate Liquidity Incentive Program is unaffected** — it pays for qualifying resting orders, which need not become completed trades.
+
+**Retail read:** the volume subsidy was never an edge to the trader, and its removal does not change contract pricing. But the CFTC is reviewing incentive programs **across** platforms, and Chairman Selig may act. Treat promotional credit as temporary, never as part of a bankroll plan. Hub: `@sources/rss-lsr-pm-industry-2026-09-29-30.md`.
 
 ### Mention markets under CFTC presumption (K179, 2026-09) [CONFIRMED]
 

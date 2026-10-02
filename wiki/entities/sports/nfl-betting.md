@@ -71,9 +71,15 @@ related:
   - sources/eagles-bears-parlay-research-2026-09-28.md
   - sources/daily-digest-batch-k178-2026-09-29.md
   - entities/sports/nhl-betting.md
+  - entities/sports/cfb-betting.md
+  - sources/nfl-week4-research-plan-2026-10-01.md
+  - sources/nfl-week4-practice-reports-2026-10-01.md
+  - sources/nfl-week4-slate-env-2026-10-02.md
+  - sources/steelers-browns-tnf-metaplan-2026-10-01.md
+  - sources/daily-digest-batch-k180-2026-10-02.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-09-30
+updated: 2026-10-02
 ---
 
 ## Relations
@@ -137,6 +143,16 @@ See @sources/web-tech-insider-nfl-betting-strategy-2026-06-20.md for situational
 | SGP | Correlation priced — see @concepts/parlay-and-correlated-bets.md | Usually -EV unless correlated edge |
 | Futures | Division, SB — capital locked months | Low frequency |
 | Live | Fast moves on drives | Supplement pre-game; pre-set rules |
+
+### Prop bars — three ruled checks (K180, 2026-10-02) [CONFIRMED]
+
+Recorded after both Week 4 TNF tickets lost. See @sources/nfl-week4-tnf-result-postmortem-2026-10-02.md.
+
+1. **An anytime-touchdown leg needs a cited goal-line carry rate.** A backfield vacancy is **not** goal-line work. When a lead back is ruled out, the goal-line carries may go to a fullback, a third receiver, or a back not on the depth chart. Require the rate, or pass the leg.
+2. **A line that opens at 40+ is the market's bar, not an error.** Buying a tight-end receiving total down from the 40s to the mid-30s moves the price, not the distribution. One strong week does not justify relocating a number.
+3. **Two totals on one player in one game are two bets.** A receiver can clear 14.5 and miss 19.5 in the same game. Do not treat the pair as redundant, and do not size them as one position.
+
+**Corollary:** bar `pass_yds` on a quarterback behind a line missing both starting interior linemen, in wind above 8–11 mph at an open-air venue. The same game's rushing legs remain structurally insulated below 12 mph.
 
 ### Process (season-long) [CONFIRMED]
 

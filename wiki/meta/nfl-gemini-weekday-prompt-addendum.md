@@ -11,7 +11,7 @@ related:
   - entities/platforms/hard-rock-bet.md
 maturity: draft
 created: 2026-09-22
-updated: 2026-09-22
+updated: 2026-10-02
 ---
 
 ## Relations
@@ -57,6 +57,12 @@ Questionable players stay. Do not retune means, stack badges, defense weights, o
 Do not state a FanDuel net. Grade uses the displayed American. A profit-boost percent is a note only.
 
 Tool order: CeminiDFS first, then CeminiParlays. The CLIs do not read Gemini unless the operator passes the hub, the scratch CSV, the salary CSV, and the environment CSV.
+
+### Anytime touchdown and a moved receiving line (2026-10-02)
+
+An anytime touchdown needs a cited goal-line rate. Another back being out is not that rate. PIT @ CLE: Warren rushed for 93 yards and scored 0. The goal-line carries went to Wilson and a second back. The second name was not recorded. The research had called the goal-line work uncontested because Dowdle was out.
+
+A tight-end receiving line that opens in the 40s is a bar. Buying the number down does not fix it. Fannin opened in the 40s, the ticket used 34.5, and he finished at 27. One good week is not the sample. Do not ticket the over when the quarterback and the tight end are not enough for that number.
 
 ## Snippets
 

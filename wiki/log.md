@@ -1,5 +1,22 @@
 # Wiki operations log
 
+## [2026-10-02] ingest | K180 Week 4 docx quartet + CFB cards + PM industry
+
+- **Batch K180:** 12 inbox files → 6 source pages + 1 new sport entity (all 12 NEW)
+  - **W4 research plan:** Dart/McMillan IR; Mayfield, Dowdle, both Jenkins OUT; Jefferson ankle GTD; 13-game scheme card
+  - **W4 practice (Thu):** Godwin upgraded FP; Bowers cleared report; Van Roten → IR; Cosmi OUT; MIN/CHI/TB pass fades
+  - **W4 env (Fri):** TB **25 mph** and BAL **81% precip** dominate; **ARI@NYG swung 4 points**; Williams/Jefferson/Collins all **OUT**; NRG roof uncalled
+  - **TNF metaplan:** Warren bellcow with Dowdle out; Fannin + Freiermuth supported; pass_yds barred both QBs
+  - **CFB (new vertical):** Clemson first double-digit home dog in Swinney's 245 games; Taylor TD price vs usage mismatch; WAS-USC under
+  - **PM industry:** Kalshi ends Volume Incentive Program early (eff. ≥ 2026-10-13); Flutter record low on Brazil; MI + MA review DK AI/VIP; MGM/Caesars refuse PM on licensing risk
+  - **TNF postmortem:** both operator tickets lost (−$10). Goal-line inference from Dowdle's absence failed. Three durable rules recorded on `nfl-betting`.
+- New: `entities/sports/cfb-betting.md`, `sources/nfl-week4-tnf-result-postmortem-2026-10-02.md`
+- Updated: `kalshi`, `draftkings`, `fanduel`, `prediction-markets-crossover`, `nfl-betting`, index, log
+- Phase-1: policy_wired nfl-w8 / kalshi / crossover; CFB GO (research)
+- Briefs: W4 slate pipeline already existed (`2026-w04-slate-hub-sun.md`, `tnf-card`, `tue-wed`, `thu-practice`, `fri-env`). Wiki pages aligned to the hub's citation rulings.
+
+## [2026-09-30] ingest | K179 PM regulatory + SBC + NHL opening night
+
 ## [2026-09-30] ingest | K179 PM regulatory + SBC + NHL opening night
 
 - **Batch K179:** 8 inbox RSS → 6 source pages + 1 new sport entity (+ sweep S4 follow-on)

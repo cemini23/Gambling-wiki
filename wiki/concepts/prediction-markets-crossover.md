@@ -75,9 +75,11 @@ related:
   - sources/rss-sbc-summit-lisbon-2026-09-29.md
   - sources/daily-digest-batch-k179-2026-09-30.md
   - sources/rss-eh-kalshi-curry-geofence-2026-09-25.md
+  - sources/rss-lsr-pm-industry-2026-09-29-30.md
+  - sources/daily-digest-batch-k180-2026-10-02.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-09-30
+updated: 2026-10-02
 ---
 
 ## Relations
@@ -142,6 +144,29 @@ The Sep 2026 record shows the **legal** and **functional** framings diverging:
 For retail sizing this changes nothing. For **jurisdiction** screening it matters: state regulators who call the product illegal gambling are the same bodies whose members left the NCPG. See `@sources/rss-lsr-ncpg-functionally-gambling-2026-09-23.md` and `@sources/rss-sbc-summit-lisbon-2026-09-29.md`.
 
 **Pricing note (K179):** Kalshi's pre-fee implied-vig edge on moneyline and totals **reverses on parlays** — 26.4% on favourite+Over combos versus 23.9% at DraftKings. Combos are now **53%** of Kalshi notional volume. Net the fee before claiming any cross-venue edge (`@sources/rss-lsr-nfl-app-downloads-pm-share-2026-09-24.md`).
+
+### The land-based casinos refused to play (K180, 2026-09-30)
+
+At **G2E Las Vegas**, **MGM** and **Caesars** both said they will not enter prediction markets. The reason is licensing, not conviction.
+
+> "Nevada regulators have absolutely said to us, 'If you stretch out and do this, it's going to impact your licensing.'" — Bill Hornbuckle, MGM CEO
+
+The **Nevada Gaming Control Board** warned licensees that offering sports event contracts **in other states** could affect their suitability in Nevada. MGM considered entering in early 2025 and backed away; Caesars is prepared to enter **only** if it can do so without risking licenses.
+
+**The clearest structural read of the whole PM debate came from Caesars CEO Tom Reeg:**
+
+> "But there was nowhere in their rules that said I couldn't place a bet." — on a Kalshi contract covering whether Caesars would be sold in 2026, where he held inside knowledge
+
+> "These are not swaps. They're not miraculously finding the other side of a 5-team parlay at the same time one side comes in."
+
+Separately, West Virginia Delegate **Shawn Fluharty** (Play'n Go) framed the split at the same conference — licensed sports betting as "a fine bottle of wine," prediction markets as West Virginia **"moonshine."**
+
+**Why this matters to the wiki:** it is the first time the **land-based operators**, not regulators or problem-gambling groups, articulate the conflict-of-interest case from the inside. Two things follow for retail:
+
+1. **Licensing risk is real and asymmetric.** A book with a casino licence faces a cost a pure PM exchange does not. Expect the casino-backed books to stay out or to enter only under an explicit regulatory safe harbour.
+2. **Reeg's insider point is about market integrity, not legality.** A contract on a corporate event, listed without insider restrictions, is a manipulation surface. Treat such markets as you would a mention market (`@sources/rss-lsr-cftc-mention-market-advisory-2026-09-23.md`).
+
+Details: `@sources/rss-lsr-pm-industry-2026-09-29-30.md`.
 
 ### Tools spanning both wikis
 

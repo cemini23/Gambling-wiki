@@ -25,9 +25,11 @@ related:
   - sources/daily-digest-rss-nfl-week0-2026-08-31.md
   - sources/brief-k169-nfl-week1-ready-2026-08-31.md
   - sources/rss-lsr-nfl-app-downloads-pm-share-2026-09-24.md
+  - sources/rss-lsr-pm-industry-2026-09-29-30.md
+  - sources/daily-digest-batch-k180-2026-10-02.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-09-30
+updated: 2026-10-02
 ---
 
 ## Relations
@@ -53,6 +55,19 @@ Same **soft book** retail profile as DraftKings. Industry reviews often rank Fan
 ### FanDuel Predicts (PM, Aug 2026) [CONFIRMED via EH]
 
 Q2: sports/novelties on **Predicts** move to **Crypto.com**; CME retained for financials. Flutter flagged **~$50M** market-making revenue for 2026 ($6M in Q2). Predicts is **not** the FanDuel sportsbook line — shop it as a third venue (book vs Kalshi vs Predicts/Crypto.com). Hub: `@sources/brief-k222-k231-pm-retail-awareness-2026-08.md`.
+
+### Flutter parent — record low (K180, 2026-09-29) [TENTATIVE]
+
+Flutter Entertainment, FanDuel's parent, hit an **all-time low** after **Brazil banned online betting** — days before CEO Peter Jackson departed. Shares fell **more than 7%** from Friday's close into Monday's open, and Flutter has lost roughly **three-quarters of its value** since peaking above **$313 in August 2025**.
+
+| Driver | Impact |
+|--------|--------|
+| **Brazil ban** | Betting + iCasino suspended ahead of an **Oct. 6** deadline; ~**$70M** revenue and ~**$20M** adj. EBITDA lost if the shutdown runs through 2026. Paid ~**$350M** for a **56%** NSX stake in 2025 |
+| **India ban** | ~**$250M** revenue lost in 2026 and **$310M** in 2027; Junglee paid operations shut in August after a **$237M** investment |
+| **US performance** | FanDuel held a leading **39%** of U.S. sportsbook GGR in Q2, but sportsbook revenue fell **15% YoY** and U.S. adj. EBITDA dropped **70%** to **$119M** |
+| **Promo rebuild** | Flutter under-reinvested 2025 NFL winnings into promotions; ~**$270M** committed to rebuilding momentum, +**$40M** in higher state taxes |
+
+**Operator relevance:** FanDuel is the operator's **primary DFS lane**. A parent under margin pressure can cut promotions or tighten DFS overlays. Watch promo generosity through the season rather than assuming the prior baseline. Hub: `@sources/rss-lsr-pm-industry-2026-09-29-30.md`.
 
 ### NFL DFS (operator primary DFS lane)
 

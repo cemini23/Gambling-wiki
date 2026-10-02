@@ -25,6 +25,7 @@ related:
   - sources/brief-k170-week1-papers-rss-2026-09-11.md
   - sources/rss-lsr-nfl-app-downloads-pm-share-2026-09-24.md
   - entities/platforms/kalshi.md
+  - entities/sports/cfb-betting.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-09-30

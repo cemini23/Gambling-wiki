@@ -28,6 +28,8 @@ related:
   - sources/eagles-bears-parlay-research-2026-09-28.md
   - entities/sports/nhl-betting.md
   - sources/rss-lsr-nfl-app-downloads-pm-share-2026-09-24.md
+  - entities/sports/cfb-betting.md
+  - sources/nfl-week4-tnf-result-postmortem-2026-10-02.md
 maturity: validated
 created: 2026-05-31
 updated: 2026-09-30

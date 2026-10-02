@@ -32,9 +32,12 @@ related:
   - sources/rss-sbc-summit-lisbon-2026-09-29.md
   - sources/daily-digest-batch-k179-2026-09-30.md
   - entities/sports/nhl-betting.md
+  - entities/sports/cfb-betting.md
+  - sources/rss-lsr-pm-industry-2026-09-29-30.md
+  - sources/daily-digest-batch-k180-2026-10-02.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-09-30
+updated: 2026-10-02
 ---
 
 ## Relations
@@ -62,6 +65,16 @@ DraftKings-owned DCM **Railbird Exchange (DKeX)** self-certified nine football e
 **NFL league partnership (K168, 2026-08-27) [TENTATIVE — LSR title]:** DraftKings, FanDuel, and Fanatics named NFL sports-betting partners; league language covers injury/officiating/knowable-in-advance wagers. Hub: `@sources/daily-digest-rss-nfl-week0-2026-08-31.md`.
 
 **Anti-Kalshi ad campaign (K170, 2026-09-09) [TENTATIVE — LSR]:** New DK ads target Kalshi review complaints — retail PM vs book marketing war during NFL Week 1 ad blitz. Hub: `@sources/daily-digest-rss-week1-pm-nfl-2026-09-11.md`.
+
+### AI/VIP promotion scrutiny (K180, 2026-09-29) [CONFIRMED]
+
+**Michigan** (MGCB) and **Massachusetts** regulators are both **reviewing** issues raised in *New York Times* and *ProPublica* reports on DraftKings' use of AI and machine learning in promotions and its VIP program. A proposed **class action** followed; the plaintiff argues DK breached its own privacy-notice commitment to use customer data for responsible-play assessment.
+
+The underlying allegation: a machine-learning model on customer betting records predicted how promotions would affect individual users' eventual wins and losses, and the company then targeted users most likely to lose money or leave.
+
+**Michigan consumer rules do not address AI directly.** The state requires a responsible-gaming logo, a helpline page, a disassociated-persons list, and an internet-gaming responsible-gaming database.
+
+**Operator relevance:** this is a **responsible-gambling and platform-risk** signal, not an edge. It does not change DK's pricing or DFS product. Hub: `@sources/rss-lsr-pm-industry-2026-09-29-30.md`.
 
 ## Snippets
 

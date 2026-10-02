@@ -40,9 +40,10 @@ related:
   - sources/arxiv-kalshi-live-belief-updating-2606.07811-2026-06-09.md
   - sources/arxiv-2607.17765-wc2026-agents-llm-forecasting-2026-07-21.md
   - sources/research-wnba-cold-streak-live-unders-2026-08-13.md
+  - entities/sports/cfb-betting.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-08-13
+updated: 2026-10-02
 ---
 
 ## Relations
