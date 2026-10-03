@@ -92,7 +92,7 @@ This wiki documents **+EV discipline and risk management**. Wager only where leg
 ## Related
 
 - Methodology newsletter: [Outlier Weekly](https://outlierweekly.substack.com) · [Issue 3 — World Cup Bot](https://outlierweekly.substack.com/p/i-open-sourced-the-world-cup-lp-bot)
-- YouTube: [@Cemini23](https://www.youtube.com/@Cemini23)
+- X: [@Cemini23](https://x.com/Cemini23)
 - Wiki federation hub: [cemini-claude-code-CCC](https://github.com/cemini23/cemini-claude-code-CCC)
 - **World Cup LP bot (automation):** [world-cup-bot](https://github.com/cemini23/world-cup-bot) — shadow-first Polymarket LP + Kalshi gap alerts; pairs with `@gambling-wiki/entities/sports/world-cup-2026-betting.md`
 - Tooling: [wikilint](https://github.com/cemini23/wikilint) · [vet](https://github.com/cemini23/vet)
@@ -109,7 +109,6 @@ Thank you for reading, starring, forking, or otherwise supporting Cemini open re
 | **Outlier Weekly** | [outlierweekly.substack.com](https://outlierweekly.substack.com) | Methodology newsletter (trading, bots, research notes) |
 | **Atto** | [youratto.com](https://youratto.com) | Desktop organizer for Italian family / citizenship documents |
 | **GuruWatcher** | [guruwatcher.com](https://guruwatcher.com) | Local Discord alerts for newsletter price levels (alert-only) |
-| **YouTube** | [@Cemini23](https://www.youtube.com/@Cemini23) | Build logs and walkthroughs |
 
 Voluntary tips fund open research and tooling. **Donation-only addresses** — not trading or production wallets. Canonical copy: [CCC SUPPORT.md](https://github.com/cemini23/cemini-claude-code-CCC/blob/main/SUPPORT.md).
 
