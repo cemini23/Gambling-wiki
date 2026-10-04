@@ -19,10 +19,11 @@ related:
   - sources/brief-k128-bbm7-draft-copilot-hub-2026-06-24.md
   - sources/research-nfl-dfs-id-mapping-2026-06-20.md
   - sources/research-nfl-historical-odds-2026-06-20.md
+  - meta/research-input-pipeline.md
   - "@osint-wiki/concepts/active-project-research-routing.md"
 maturity: validated
 created: 2026-06-20
-updated: 2026-06-26
+updated: 2026-10-04
 ---
 
 ## Relations

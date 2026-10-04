@@ -5,7 +5,7 @@ tags: [concept, dfs, nfl, dart, opposing-look, fanDuel, weekly-prep]
 keywords: [dart, ceiling, cheap-player, salary-cut, opposing-coverage, box-count, pre-lock-usage, exposure-cap]
 related:
   - concepts/nfl-weekly-slate-hub-workflow.md
-  - meta/nfl-gemini-weekday-prompt-addendum.md
+  - meta/research-input-pipeline.md
 maturity: draft
 created: 2026-09-22
 updated: 2026-09-22
@@ -14,7 +14,7 @@ updated: 2026-09-22
 ## Relations
 
 - @concepts/nfl-weekly-slate-hub-workflow.md — weekly hub references this method for Wednesday scheme and Thursday practice
-- @meta/nfl-gemini-weekday-prompt-addendum.md — Wednesday block asks for dart opposing look by role; Friday block is weather by market; Saturday block caps parlay legs and forbids retunes
+- @meta/research-input-pipeline.md — the weekly status file carries the dart roles; team opinions stay soft fades, never removals
 
 ## Raw Concept
 

@@ -4,15 +4,16 @@ type: concept
 tags: [meta, nfl, gemini, prompt, weekly-prep, operator]
 keywords: [gemini-prompt, tuesday, wednesday, thursday, friday, saturday, slate-hub, fanDuel, hard-rock]
 related:
-  - concepts/dfs-dart-opposing-looks.md
-  - concepts/nfl-weekly-slate-hub-workflow.md
-  - concepts/dfs-weather-adjustments.md
-  - concepts/parlay-and-correlated-bets.md
-  - entities/platforms/hard-rock-bet.md
+  - meta/research-input-pipeline.md
 maturity: draft
 created: 2026-09-22
-updated: 2026-10-02
+updated: 2026-10-04
 ---
+
+> **[RETIRED] 2026-10-04 — superseded by @meta/research-input-pipeline.md.**
+> Gemini is removed from the weekly research process. The standing rules moved to
+> the pipeline page. Keep this page for history only. Do not start a new Gemini
+> weekday prompt.
 
 ## Relations
 

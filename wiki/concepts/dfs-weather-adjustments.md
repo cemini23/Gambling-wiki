@@ -10,11 +10,11 @@ related:
   - sources/cross-wiki-k125-diy-dfs-sweep-2026-06-20.md
   - concepts/free-slate-context.md
   - concepts/nfl-weekly-slate-hub-workflow.md
-  - meta/nfl-gemini-weekday-prompt-addendum.md
+  - meta/research-input-pipeline.md
   - concepts/nfl-dfs-field-edge-priors.md
 maturity: draft
 created: 2026-06-20
-updated: 2026-09-27
+updated: 2026-10-04
 ---
 
 ## Relations
@@ -28,7 +28,7 @@ updated: 2026-09-27
 - @concepts/nfl-dfs-field-edge-priors.md — outdoor passing-yards mean is the remaining haircut; do not stack a second pass-rate cut
 - @concepts/free-slate-context.md — runnable Open-Meteo + MLB Stats CLI for unders
 - @concepts/nfl-weekly-slate-hub-workflow.md — shared `environment.csv` contract; SoFi `semi_open`
-- @meta/nfl-gemini-weekday-prompt-addendum.md — Friday block: market-specific weather review; not a new wind cutoff; SoFi unchanged
+- @meta/research-input-pipeline.md — the generated `environment.csv` carries wind and precip per market; no new wind cutoff; SoFi unchanged
 
 ## Raw Concept
 
@@ -91,4 +91,4 @@ Game-time weather → passing/kicking efficiency haircuts. **CONDITIONAL-GO** wi
 
 ### Week 2 lesson (2026-09-22)
 
-Weather review is market-specific. Do not invent a new wind cutoff. SoFi stays `semi_open` and is not a wind fade. See @meta/nfl-gemini-weekday-prompt-addendum.md Friday block.
+Weather review is market-specific. Do not invent a new wind cutoff. SoFi stays `semi_open` and is not a wind fade. See @meta/research-input-pipeline.md.

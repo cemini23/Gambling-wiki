@@ -91,6 +91,9 @@ Steps:
   - **2026-09-22:** Gemini addendum @meta/nfl-gemini-weekday-prompt-addendum.md now holds Week 2 recap lessons; one-week retunes stay off
   - **2026-09-23:** W3 hub `briefs/2026-w03-slate-hub-sun.md` (Tue injury + Wed scheme). Sunday main only.
   - **2026-10-02:** W4 hub `briefs/2026-w04-slate-hub-sun.md` (research plan + Thu practice + Fri env). TB 25 mph / BAL 81% precip. **TNF PIT@CLE: both tickets lost — goal-line inference rule now standing** (`@wiki/sources/nfl-week4-tnf-result-postmortem-2026-10-02.md`)
+  - **2026-10-04:** **Gemini removed from the research process.** The weekday prompt cadence is retired; @meta/nfl-gemini-weekday-prompt-addendum.md is history only. Replacement: @meta/research-input-pipeline.md — generated `environment.csv` + status CSV from nflverse / NWS / Odds API, a validator gate, and no LLM in the input path. W4 defect list: `CeminiDFS/briefs/2026-10-04_w04-build-postmortem.md`.
+- [ ] In-season: build the research generators — `ceminidfs research-export {env,status,validate}` (@meta/research-input-pipeline.md)
+- [ ] In-season: K283 coverage report + `--keep-team-dart` + soft fade; K282 `--premium-mode market` on
 
 - [ ] CLV journal hook on `@concepts/line-shopping-and-clv.md`
 - [x] **P0 daily edge card** — `scripts/daily_edge_card.py` + `@concepts/daily-edge-card.md` (de-vig reference vs Hard Rock; 2026-08-15). CLV ledger still open.

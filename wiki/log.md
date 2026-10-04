@@ -1279,3 +1279,14 @@ Cross-wiki stub routed from `@osint-wiki/sources/substack-rss-klement-2026-07-07
 
 Cross-wiki stub routed from `@image-gen-wiki/sources/arxiv-2607-28520-cs-rnr-opponent-exploit-routed.md`.
 - Created wiki/sources/arxiv-2607-28520-cs-rnr-safe-opponent-exploitation.md (stub)
+
+## [2026-10-04] process change | Gemini removed from the research pipeline
+
+**Decision:** remove Gemini from the weekly research process. The tools consume fields, not prose.
+
+- Created `wiki/meta/research-input-pipeline.md` — the contract (`environment.csv` + status CSV), the four-layer pipeline, and the standing rules
+- Retired `wiki/meta/nfl-gemini-weekday-prompt-addendum.md` (history only; superseded-by link added)
+- Re-pointed `related:` + inline links in `nfl-weekly-slate-hub-workflow`, `dfs-dart-opposing-looks`, `dfs-weather-adjustments`, `parlay-and-correlated-bets`, `ceminidfs`
+- Updated `wiki/index.md`, `ROADMAP.md` W8
+- Rationale and evidence: `briefs/2026-10-04_w05-research-plan.md`; `CeminiDFS/briefs/2026-10-04_w04-build-postmortem.md`; `CeminiDFS/briefs/handoffs/2026-10-04_k283-team-coverage-darts.md`
+- W4 postmortem **P2 closed** — false positive. nflverse pbp puts Kenneth Walker III on KC and Isaiah Likely on NYG for weeks 1–3

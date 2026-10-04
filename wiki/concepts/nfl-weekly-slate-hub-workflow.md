@@ -21,10 +21,10 @@ related:
   - sources/brief-k169-nfl-week1-ready-2026-08-31.md
   - concepts/dfs-weather-adjustments.md
   - concepts/dfs-dart-opposing-looks.md
-  - meta/nfl-gemini-weekday-prompt-addendum.md
+  - meta/research-input-pipeline.md
 maturity: draft
 created: 2026-07-05
-updated: 2026-09-22
+updated: 2026-10-04
 ---
 
 ## Relations
@@ -37,7 +37,7 @@ updated: 2026-09-22
 - @entities/tools/ceminidfs.md — FanDuel GPP + BBM (pick'em **not** in repo)
 - @concepts/dfs-weather-adjustments.md — roof enum + SoFi `semi_open` correction
 - @concepts/dfs-dart-opposing-looks.md — dart ceiling method; no one-week retunes
-- @meta/nfl-gemini-weekday-prompt-addendum.md — standing weekday blocks for Gemini prompts
+- @meta/research-input-pipeline.md — the two generated input files; no LLM in the input path
 
 ## Raw Concept
 
@@ -217,7 +217,7 @@ updated: {ISO date} · main slate: {Sun/SNF/MNF}
 - Two legs maximum of one market.
 - A weather warning is not a scratch.
 
-These commits already shipped — do not re-implement: CeminiDFS `d084f40` and `ec0d45f`, CeminiParlays `e3abb49`. See @concepts/dfs-dart-opposing-looks.md and @meta/nfl-gemini-weekday-prompt-addendum.md for the research method and standing prompt blocks.
+These commits already shipped — do not re-implement: CeminiDFS `d084f40` and `ec0d45f`, CeminiParlays `e3abb49`. See @concepts/dfs-dart-opposing-looks.md and @meta/research-input-pipeline.md for the research method and the standing rules.
 
 ## Snippets
 

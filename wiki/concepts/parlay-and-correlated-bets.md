@@ -23,7 +23,7 @@ related:
   - sources/daily-digest-rss-industry-2026-08-14.md
   - entities/platforms/draftkings.md
   - concepts/free-slate-context.md
-  - meta/nfl-gemini-weekday-prompt-addendum.md
+  - meta/research-input-pipeline.md
   - concepts/nfl-dfs-field-edge-priors.md
   - sources/eagles-bears-parlay-research-2026-09-28.md
   - entities/sports/nhl-betting.md
@@ -49,7 +49,7 @@ updated: 2026-09-30
 - @sources/daily-digest-rss-industry-2026-08-14.md — DKeX COMBOS (product of binary YES)
 - @entities/platforms/draftkings.md — DKeX COMBOS listing
 - @concepts/free-slate-context.md — weather can correlate a whole unders parlay; treat as a screen not independent edges
-- @meta/nfl-gemini-weekday-prompt-addendum.md — Saturday block: two legs of one market; no same-game first_td; SNF off afternoon ticket; displayed American is grade; boost is note
+- @meta/research-input-pipeline.md — two legs of one market; no same-game first_td; SNF off the afternoon ticket; displayed American is the grade; boost is a note
 
 ## Raw Concept
 
@@ -103,7 +103,7 @@ PrizePicks-style **pick'em slips** are fixed-multiplier parlays on player stat O
 
 ### Week 2 lesson (2026-09-22)
 
-Cap any recommended ticket at two legs of one market. No same-game `first_td` legs. SNF legs stay off the afternoon parlay ticket. Grade uses the displayed American. A profit-boost percent is a note only. This is not a new same-game parlay product. See @meta/nfl-gemini-weekday-prompt-addendum.md Saturday block.
+Cap any recommended ticket at two legs of one market. No same-game `first_td` legs. SNF legs stay off the afternoon parlay ticket. Grade uses the displayed American. A profit-boost percent is a note only. This is not a new same-game parlay product. See @meta/research-input-pipeline.md.
 
 ## Snippets
 
