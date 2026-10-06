@@ -68,9 +68,11 @@ related:
   - sources/rss-eh-kalshi-curry-geofence-2026-09-25.md
   - sources/rss-lsr-pm-industry-2026-09-29-30.md
   - sources/daily-digest-batch-k180-2026-10-02.md
+  - sources/rss-sbc-pm-europe-2026-10-01-05.md
+  - sources/daily-digest-batch-k181-2026-10-06.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-10-02
+updated: 2026-10-06
 ---
 
 ## Relations
@@ -154,6 +156,16 @@ How it worked: a fixed reward per eligible market over up to 31 days, split amon
 **The separate Liquidity Incentive Program is unaffected** — it pays for qualifying resting orders, which need not become completed trades.
 
 **Retail read:** the volume subsidy was never an edge to the trader, and its removal does not change contract pricing. But the CFTC is reviewing incentive programs **across** platforms, and Chairman Selig may act. Treat promotional credit as temporary, never as part of a bankroll plan. Hub: `@sources/rss-lsr-pm-industry-2026-09-29-30.md`.
+
+### Europe closes its doors — Czech block effective 2026-10-15 (K181) [CONFIRMED]
+
+The **Czech Ministry of Finance** added Kalshi to its register of unauthorised gambling operators on **2026-09-30**. ISPs must block within **15 days**, so conventional access ends **2026-10-15**. It follows the July 2026 order against **Polymarket**.
+
+The Czech position — brought to authorities by the **IPRH**, which represents >90% of the regulated domestic sector — is that prediction markets are **betting marketed as investment**. Belgium, France, Romania, Spain, and Germany take the same line; Spain sued both platforms in May 2026.
+
+**Gibraltar is the European exception**, running a separate framework, with its Gambling Commissioner arguing it is "much better to regulate" than to block.
+
+**Retail read:** the CFTC's DCM status **does not travel**. A US-regulated contract is unlicensed gambling in much of Europe. Any cross-venue plan must be jurisdiction-scoped. Hub: `@sources/rss-sbc-pm-europe-2026-10-01-05.md`.
 
 ### Mention markets under CFTC presumption (K179, 2026-09) [CONFIRMED]
 

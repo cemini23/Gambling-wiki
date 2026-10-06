@@ -77,9 +77,15 @@ related:
   - sources/nfl-week4-slate-env-2026-10-02.md
   - sources/steelers-browns-tnf-metaplan-2026-10-01.md
   - sources/daily-digest-batch-k180-2026-10-02.md
+  - sources/nfl-week4-saturday-lock-2026-10-03.md
+  - sources/rss-lsb-week4-game-cards-2026-10-02.md
+  - sources/rss-sharp-football-week4-2026-10-03-04.md
+  - sources/rss-rotoballer-w5-rb-waiver-2026-10-05.md
+  - sources/daily-digest-batch-k181-2026-10-06.md
+  - meta/research-input-pipeline.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-10-02
+updated: 2026-10-06
 ---
 
 ## Relations
@@ -153,6 +159,18 @@ Recorded after both Week 4 TNF tickets lost. See @sources/nfl-week4-tnf-result-p
 3. **Two totals on one player in one game are two bets.** A receiver can clear 14.5 and miss 19.5 in the same game. Do not treat the pair as redundant, and do not size them as one position.
 
 **Corollary:** bar `pass_yds` on a quarterback behind a line missing both starting interior linemen, in wind above 8–11 mph at an open-air venue. The same game's rushing legs remain structurally insulated below 12 mph.
+
+### Status source hierarchy (K181, 2026-10-06) [CONFIRMED]
+
+Week 4 exposed a repeatable failure: **Nico Collins was carried as OUT all week on a third-party aggregator cite (DraftEdge)**, then cleared the club's own game-status report on Saturday and played. The wiki had already recorded the same class of error on Baker Mayfield (aggregator "Questionable" vs a club headline saying 3+ weeks).
+
+**The rule:**
+
+1. **A club filing beats an aggregator.** Rotowire, DraftEdge, and similar are downstream. If the club page and the aggregator disagree, the club page wins.
+2. **"Not on the report" is a status.** Collins was cleared by *omission* from the Texans' report, not by a positive "active" line. Read the absence.
+3. **Record the citation strength on the page.** A status sourced only to an aggregator is `[TENTATIVE]`; one from a club page is `[CONFIRMED]`.
+
+This is the failure mode that retired the Gemini prose layer — see @meta/research-input-pipeline.md.
 
 ### Process (season-long) [CONFIRMED]
 

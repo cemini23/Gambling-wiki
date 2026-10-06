@@ -57,9 +57,11 @@ related:
   - sources/rss-lsr-nfl-app-downloads-pm-share-2026-09-24.md
   - sources/daily-digest-batch-k179-2026-09-30.md
   - sources/rss-eh-kalshi-curry-geofence-2026-09-25.md
+  - sources/rss-sbc-pm-europe-2026-10-01-05.md
+  - sources/daily-digest-batch-k181-2026-10-06.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-09-30
+updated: 2026-10-06
 ---
 
 ## Relations
@@ -141,6 +143,18 @@ Week ending **2026-05-24**: **~29%** of combined US PM notional on Polymarket (*
 ### European lobbying (K175, 2026-09-22) [TENTATIVE — SBC title]
 
 Polymarket public push for **European acceptance** of prediction markets (SBC News RSS stub). US retail still geo-blocked on main CLOB; treat as international regulatory awareness only. Hub: `@sources/daily-digest-rss-pm-regulatory-2026-09-23.md`.
+
+### Dutch appeal — €420,000 penalty to The Hague (K181, 2026-10-05) [CONFIRMED]
+
+Polymarket is challenging the Dutch regulator **Kansspelautoriteit (KSA)** in **The Hague** over a **€420,000** penalty.
+
+Timeline: the KSA blacklisted Polymarket in January 2026 and ordered access blocked by **2026-02-17**. Polymarket complied on **2026-02-18** — **one day late** — which the KSA ruled sufficient to trigger the full penalty (expressed as €420,000/week, capped at €840,000). An earlier appeal was rejected in June: the KSA held that **blockchain and crypto payments do not change the legal nature of the activity**.
+
+**Polymarket's argument:** its contracts are **financial derivatives**, which would move oversight to the Dutch Authority for Financial Markets.
+
+**The critique to record:** if Polymarket wants financial-instrument status, the closest European analogue is **binary options — already banned for retail sale in most of Europe**. The same tension runs through the CFTC's own framing (`@sources/rss-lsr-cftc-mention-market-advisory-2026-09-23.md`).
+
+Dutch users reportedly wagered **>$30M** on Polymarket around the November 2025 parliamentary election. A motion to create a separate Dutch prediction-market framework was rejected by the State Secretary. Hub: `@sources/rss-sbc-pm-europe-2026-10-01-05.md`.
 
 ## Snippets
 

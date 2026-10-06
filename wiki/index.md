@@ -111,6 +111,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [brief-k135-pm-settlement-macro-beliefs-steals-2026-07-01](sources/brief-k135-pm-settlement-macro-beliefs-steals-2026-07-01.md) | deep-read | PM settlement manipulation + Kalshi CPI beliefs |
 | [brief-k136-tool-rl-collapse-steals-2026-07-02](sources/brief-k136-tool-rl-collapse-steals-2026-07-02.md) | deep-read | Tool-RL structural collapse + interleaved SFT steals |
 | [casino-game-house-edge](concepts/casino-game-house-edge.md) | validated | Edge by game, smart-bet ranking |
+| [season-long-fantasy-waiver-wire](concepts/season-long-fantasy-waiver-wire.md) | draft | Waiver tiers, handcuff logic, usage reads |
 | [prediction-markets-crossover](concepts/prediction-markets-crossover.md) | validated | Kalshi/Polymarket retail lens |
 | [pm-live-belief-updating](concepts/pm-live-belief-updating.md) | validated | Live PM underreaction, salience×liquidity |
 | [pm-agent-cognitive-monoculture](concepts/pm-agent-cognitive-monoculture.md) | validated | K114 Nous — LLM ensemble correlation, prompt injection dead-end |
@@ -159,6 +160,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [momentum-odds](entities/tools/momentum-odds.md) | draft |
 | [odds-jam](entities/tools/odds-jam.md) | draft |
 | [the-odds-api](entities/tools/the-odds-api.md) | draft | Licensed live-odds REST (https://the-odds-api.com); free 500 credits/mo |
+| [sharp-football-analysis](entities/tools/sharp-football-analysis.md) | draft | Free NFL stats hub — PROE, ITT, coverage, referees; DFS tier paywalled |
 | [pydfs-lineup-optimizer](entities/tools/pydfs-lineup-optimizer.md) | validated |
 | [CeminiDFS](entities/tools/ceminidfs.md) | validated |
 | [stokastic-dfs](entities/tools/stokastic-dfs.md) | validated |
@@ -414,6 +416,12 @@ Catalog of all wiki pages. Updated on each ingest.
 | [rss-lsr-pm-industry-2026-09-29-30](sources/rss-lsr-pm-industry-2026-09-29-30.md) | deep-read | Flutter low · DK AI probe · Kalshi rewards end · MGM/Caesars |
 | [nfl-week4-tnf-result-postmortem-2026-10-02](sources/nfl-week4-tnf-result-postmortem-2026-10-02.md) | deep-read | TNF both tickets lost — goal-line inference rule |
 | [daily-digest-batch-k180-2026-10-02](sources/daily-digest-batch-k180-2026-10-02.md) | deep-read | K180 batch hub (6 sources + CFB entity) |
+| [nfl-week4-saturday-lock-2026-10-03](sources/nfl-week4-saturday-lock-2026-10-03.md) | deep-read | W4 Sat lock; TB/NYG caution lifted; **Collins cleared** |
+| [rss-lsb-week4-game-cards-2026-10-02](sources/rss-lsb-week4-game-cards-2026-10-02.md) | deep-read | 4 LSB W4 cards — JAX@CIN total, DET@CAR props |
+| [rss-sharp-football-week4-2026-10-03-04](sources/rss-sharp-football-week4-2026-10-03-04.md) | deep-read | PROE, free stats tools; 7 of 9 paywalled |
+| [rss-sbc-pm-europe-2026-10-01-05](sources/rss-sbc-pm-europe-2026-10-01-05.md) | deep-read | Czech blocks Kalshi; Dutch Polymarket appeal |
+| [rss-rotoballer-w5-rb-waiver-2026-10-05](sources/rss-rotoballer-w5-rb-waiver-2026-10-05.md) | deep-read | W5 RB waiver tiers + handcuff logic |
+| [daily-digest-batch-k181-2026-10-06](sources/daily-digest-batch-k181-2026-10-06.md) | deep-read | K181 batch hub (5 sources + tool + concept) |
 | [brief-k239-kalshi-sports-mention-2026-08-15](sources/brief-k239-kalshi-sports-mention-2026-08-15.md) | read | K239 sports mention markets gone + WA geofence |
 | [brief-k240-kalshi-nv-geofence-2026-08-17](sources/brief-k240-kalshi-nv-geofence-2026-08-17.md) | read | K240 NV $120k/day + optional-update geofence |
 | [brief-k242-eh-pm-ban-onshore-2026-08-19](sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md) | read | K242 WA geofence day; ban ≠ offshore |

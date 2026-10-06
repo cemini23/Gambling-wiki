@@ -1,5 +1,21 @@
 # Wiki operations log
 
+## [2026-10-06] ingest | K181 W4 Saturday lock + Sharp Football + SBC Europe + W5 waivers
+
+- **Batch K181:** 25 inbox files → 5 source pages + 1 tool entity + 1 concept; **5 LSR stubs were duplicates** and archived without re-ingest
+  - **W4 Saturday lock:** TB wind 25→6–8 mph and MetLife 11→9 mph — **pass cautions lifted**; BAL precip 81%→40–60%. **Nico Collins CLEARED** (Friday card had him OUT on a DraftEdge-only cite). Final Gemini artifact before the 2026-10-04 retirement
+  - **LSB W4 cards:** JAX@CIN 51.5 Under case (scoring midpoint vs total); DET@CAR corner attrition (both starting CBs to IR); SEA@LAC "take the 7 not 7.5"; MIA@MIN backdoor at −10.5
+  - **Sharp Football:** PROE rankings + free stats-tools directory free; **7 of 9 pages paywalled** (method only)
+  - **SBC Europe:** Czech blocks Kalshi effective **2026-10-15**; Polymarket appeals **€420K** Dutch penalty in The Hague; European Lotteries on substance-vs-label; Betsson rebrands betFIRST
+  - **RotoBaller:** W5 RB waiver tiers — handcuff vs lead-role distinction
+- New: `entities/tools/sharp-football-analysis.md`, `concepts/season-long-fantasy-waiver-wire.md`
+- Updated: `nfl-betting` (status-source hierarchy rule), `kalshi` (Czech), `polymarket` (Dutch appeal), `prediction-markets-crossover` (Atlantic split)
+- **Preingest gap recorded:** K180 batched 5 LSR articles into one page, so the title-based duplicate check cannot match the individual stubs — they re-entered the inbox and reported NEW
+- Phase-1: policy_wired nfl-w8 / kalshi / polymarket / crossover
+- Briefs: none new (W4 pipeline closed)
+
+## [2026-10-02] ingest | K180 Week 4 docx quartet + CFB cards + PM industry
+
 ## [2026-10-02] ingest | K180 Week 4 docx quartet + CFB cards + PM industry
 
 - **Batch K180:** 12 inbox files → 6 source pages + 1 new sport entity (all 12 NEW)

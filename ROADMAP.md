@@ -91,6 +91,8 @@ Steps:
   - **2026-09-22:** Gemini addendum @meta/nfl-gemini-weekday-prompt-addendum.md now holds Week 2 recap lessons; one-week retunes stay off
   - **2026-09-23:** W3 hub `briefs/2026-w03-slate-hub-sun.md` (Tue injury + Wed scheme). Sunday main only.
   - **2026-10-02:** W4 hub `briefs/2026-w04-slate-hub-sun.md` (research plan + Thu practice + Fri env). TB 25 mph / BAL 81% precip. **TNF PIT@CLE: both tickets lost — goal-line inference rule now standing** (`@wiki/sources/nfl-week4-tnf-result-postmortem-2026-10-02.md`)
+  - **2026-10-04:** **Gemini retired from the weekly research** — the tools consume fields, not prose. New contract @wiki/meta/research-input-pipeline.md. No more Tue/Wed/Thu/Fri/Sat Deep Research prompts
+  - **2026-10-06:** W4 Sat lock ingested (`@wiki/sources/nfl-week4-saturday-lock-2026-10-03.md`) — TB/MetLife pass cautions lifted; **Collins cleared from a DraftEdge-only OUT**. Status-source hierarchy rule added to `@wiki/entities/sports/nfl-betting.md`
   - **2026-10-04:** **Gemini removed from the research process.** The weekday prompt cadence is retired; @meta/nfl-gemini-weekday-prompt-addendum.md is history only. Replacement: @meta/research-input-pipeline.md — generated `environment.csv` + status CSV from nflverse / NWS / Odds API, a validator gate, and no LLM in the input path. W4 defect list: `CeminiDFS/briefs/2026-10-04_w04-build-postmortem.md`.
 - [ ] In-season: build the research generators — `ceminidfs research-export {env,status,validate}` (@meta/research-input-pipeline.md)
 - [ ] In-season: K283 coverage report + `--keep-team-dart` + soft fade; K282 `--premium-mode market` on
@@ -222,6 +224,8 @@ Steps:
 
 | Date | Item |
 |------|------|
+| 2026-10-06 | K181 — W4 Saturday lock, Sharp Football (PROE + free tools), SBC Europe (Czech Kalshi block), W5 waivers; **new tool + concept**; status-source hierarchy rule |
+| 2026-10-04 | Gemini retired from the weekly research; `meta/research-input-pipeline.md` replaces the weekday prompt cadence |
 | 2026-10-02 | K180 — NFL W4 docx quartet + CFB cards + PM industry; **new CFB entity**; TNF postmortem with 3 durable prop rules |
 | 2026-09-30 | K179 — CFTC Letter 26-27 mention-market advisory; NCPG exits; PM download share + parlay-vig reversal; **new NHL entity**; Phase-0 closed on 5 tools |
 | 2026-08-13 | WNBA betting entity + cold-streak/last-2:00 research source; Kalshi WNBA series note; alert-only bot posture |

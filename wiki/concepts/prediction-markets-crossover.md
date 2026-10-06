@@ -77,9 +77,11 @@ related:
   - sources/rss-eh-kalshi-curry-geofence-2026-09-25.md
   - sources/rss-lsr-pm-industry-2026-09-29-30.md
   - sources/daily-digest-batch-k180-2026-10-02.md
+  - sources/rss-sbc-pm-europe-2026-10-01-05.md
+  - sources/daily-digest-batch-k181-2026-10-06.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-10-02
+updated: 2026-10-06
 ---
 
 ## Relations
@@ -167,6 +169,24 @@ Separately, West Virginia Delegate **Shawn Fluharty** (Play'n Go) framed the spl
 2. **Reeg's insider point is about market integrity, not legality.** A contract on a corporate event, listed without insider restrictions, is a manipulation surface. Treat such markets as you would a mention market (`@sources/rss-lsr-cftc-mention-market-advisory-2026-09-23.md`).
 
 Details: `@sources/rss-lsr-pm-industry-2026-09-29-30.md`.
+
+### The Atlantic split hardened (K181, 2026-10)
+
+By early October the US and Europe had settled into opposite classifications, and Europe's was the one that mattered for access.
+
+**Europe treats them as gambling.** The **Czech Ministry of Finance** added Kalshi to its unauthorised-operator register on 2026-09-30, with ISP blocking effective **2026-10-15** — following Polymarket in July. Belgium, France, Romania, Spain, and Germany take the same view; Spain sued both platforms in May. Polymarket is in **The Hague** appealing a **€420,000** Dutch penalty.
+
+**The argument that decides it** came from **European Lotteries**, and it is the cleanest statement of the European position:
+
+> "Qualification as a financial instrument does not, in itself, create an exemption from otherwise applicable national gambling legislation."
+
+That aligns with **ESMA**, which recognised in 2026 that event contracts may also constitute betting under national gambling law. Under **MiFID II**, a product that fails the financial-instrument test falls to the relevant national gambling framework — and EL's ask is that regulators judge **substance and risk, not label or technology**.
+
+**The classification trap for the platforms:** to escape gambling law they must be financial instruments. But the closest European analogue to an event contract is **binary options**, which are **already banned for retail sale** across most of the EU. Winning the classification argument would not obviously improve retail access.
+
+**The one European opening** is Gibraltar, which built a separate framework. At SBC Summit's Global Prediction Markets Forum, Malta's Gaming Authority CEO said operators "are applying" and there is "huge interest," and Kalshi's Chief Risk Officer said it is "talking to regulators across the pond like ESMA."
+
+**What follows for retail:** a US-regulated contract is **unlicensed gambling in much of Europe**. Any cross-venue or bot plan must be **jurisdiction-scoped**, and EU access can close on a two-week ISP notice. Details: `@sources/rss-sbc-pm-europe-2026-10-01-05.md`.
 
 ### Tools spanning both wikis
 
