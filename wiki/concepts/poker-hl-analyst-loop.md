@@ -75,9 +75,10 @@ related:
   - sources/brief-k170-week1-papers-rss-2026-09-11.md
   - sources/arxiv-2609.18848-fp-tie-breaking-first-price-auctions-2026-09-17.md
   - sources/brief-k171-pm-fp-regulatory-2026-09-17.md
+  - sources/arxiv-2610-fictitious-play-trio-2026-10-07.md
 maturity: validated
 created: 2026-06-03
-updated: 2026-09-17
+updated: 2026-10-07
 ---
 
 ## Relations
@@ -270,6 +271,13 @@ HL loop fixes **`decide()` policy**; researcher **bundle submit** adds **`arena-
 **LUGL / LightGBM tabular shelf (K170 — @sources/arxiv-2609.03660-lugl-lightgbm-game-playing-2026-09-11.md):** REFERENCE, `policy_wired`. Local-update/global-learning loop lets gradient-boosted trees train on tabular game states; competitive with DeepCFR on Flop5 Hold'em. MIT repos (`Deep-CFR-2025`, `PokerRL-2025`, `luglrl`) extract-only; **`ssamot/fil` NO-GO** (no license). **No decide() import** without HU validation. Arena brief: `../../OSINT WORKSPACE/agents/devfun-poker-arena/briefs/2026-09-11_lugl-lightgbm-shelf-steals.md`.
 
 **FP tie-breaking shelf (K171 — @sources/arxiv-2609.18848-fp-tie-breaking-first-price-auctions-2026-09-17.md):** REFERENCE, `policy_wired`. In discrete first-price auctions, uniform tie splits can make FP **cycle**; zero-payoff-on-tie restores convergence. Tie rules are part of the game for FP/MAFP eval — not a cosmetic detail. **`BenHey/FP4FPA` NO-GO** (no license). **No decide() import.**
+
+**FP convergence-rate shelf (K182 — @sources/arxiv-2610-fictitious-play-trio-2026-10-07.md):** REFERENCE, `wont_wire`. Three October 2026 papers on fictitious play:
+- **2610.08768** (Abernethy, Lazarsfeld, Wibisono) — FP can converge at **arbitrarily slow polynomial rates** in two-player zero-sum games: for every **k ≥ 2** there is a game with **(k+1)²−5 actions per player** whose duality gap decays as **Θ(t^(−1/k))**. Counterexamples to **Karlin's O(t^(−1/2))** conjecture for k ≥ 3; extends Wang (2025). **Bounds the method, not the operator's games** — the construction is adversarial, built from rock-paper-scissors recursively.
+- **2610.06292** (Charles) — FP variant that updates on **observed controls** (not payoff estimates) converges for a wide class of **potential MFGs of controls**, including with common noise. Relevant because the HL loop logs **opponent actions**, not payoffs.
+- **2610.07686** (**BluffJAX**) — the only adoptable artifact: a **GPU/JAX** imperfect-information suite (Limit + **No-Limit Hold'Em**, Kuhn, Leduc, Five Card Draw, Seven Card Stud, Goofspiel, Werewolf, Bluff, Kemps) reporting **hundreds of millions of samples/sec**. Direct alternative to the CPU `@entities/tools/rlcard.md` baseline. **Licence unverified — check before any use.** [NEEDS VERIFICATION 2026-10-07]
+
+**No decide() import** from any of the three. BluffJAX is a **simulator**, not a solver: it supplies self-play volume, not strategy.
 
 ## Snippets
 

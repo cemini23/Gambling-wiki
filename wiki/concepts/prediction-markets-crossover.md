@@ -79,9 +79,11 @@ related:
   - sources/daily-digest-batch-k180-2026-10-02.md
   - sources/rss-sbc-pm-europe-2026-10-01-05.md
   - sources/daily-digest-batch-k181-2026-10-06.md
+  - sources/rss-lsb-cftc-rules-ohio-cd-2026-10-06.md
+  - sources/daily-digest-batch-k182-2026-10-07.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-10-06
+updated: 2026-10-07
 ---
 
 ## Relations
@@ -187,6 +189,24 @@ That aligns with **ESMA**, which recognised in 2026 that event contracts may als
 **The one European opening** is Gibraltar, which built a separate framework. At SBC Summit's Global Prediction Markets Forum, Malta's Gaming Authority CEO said operators "are applying" and there is "huge interest," and Kalshi's Chief Risk Officer said it is "talking to regulators across the pond like ESMA."
 
 **What follows for retail:** a US-regulated contract is **unlicensed gambling in much of Europe**. Any cross-venue or bot plan must be **jurisdiction-scoped**, and EU access can close on a two-week ISP notice. Details: `@sources/rss-sbc-pm-europe-2026-10-01-05.md`.
+
+### The federal and state tracks are both live (K182, 2026-10-06)
+
+Two actions on the same day showed the question is still open on both sides.
+
+**The federal claim.** The CFTC sent two rules to the White House. **RIN 3038-AF82** would add event contracts to the **"swap" definition** — asserting that prediction-market contracts are federally regulated derivatives. **RIN 3038-AF81**, an **Interim Final Rule**, would block **casino-style games** (slots, blackjack, craps). Neither is in force.
+
+The pairing is deliberate: **the CFTC gives up the casino category and claims the sports category.** That matches the industry's own framing — sports contracts are said to carry informational value, casino games plainly do not. The mechanism is post-Santos/post-Perez housekeeping.
+
+**The state claim.** The **Ohio Casino Control Commission** ordered **ten** operators to stop sports event contracts by **2026-10-16** — Underdog, Gemini Titan, Coinbase, Prophet X, Novig, Robinhood, Polymarket, Plus500, Moomoo, Webull. **Kalshi is absent** only because it is already in a different case, following the **Sixth Circuit's rejection** of its federal-only argument. The letters state the conduct is a **felony**.
+
+**What to hold in mind for jurisdiction screening:**
+
+1. **"CFTC-regulated" is not a defence in state court.** It did not stop Ohio, and it does not travel to Europe either (`@sources/rss-sbc-pm-europe-2026-10-01-05.md`).
+2. **If states prevail, the product shrinks to a sportsbook shape** — a 21+ minimum and no college player props are the named consequences.
+3. **Neither track has resolved.** Do not model either as settled.
+
+Details: `@sources/rss-lsb-cftc-rules-ohio-cd-2026-10-06.md`.
 
 ### Tools spanning both wikis
 

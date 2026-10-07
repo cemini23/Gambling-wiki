@@ -36,6 +36,13 @@ wire_status: policy_wired
 
 **Location** (`cemini-egress-fi:/opt/cemini-bulk/research/gambling/`): the 5 archived `rss-sbc-news-2026-10-0{1,2,5}-*.md` files.
 
+**Article URLs** (required for batch pages — `preingest_check.py` matches on these):
+https://sbcnews.co.uk/europe/2026/10/01/european-lotteries-predictions/
+https://sbcnews.co.uk/events/2026/10/01/sbc-summmit-lisbon-portugal/
+https://sbcnews.co.uk/europe/2026/10/02/kalshi-czech-republic/
+https://sbcnews.co.uk/sportsbook/2026/10/05/betsson-belgium-launch/
+https://sbcnews.co.uk/europe/2026/10/05/polymarket-netherlands/
+
 ## Narrative
 
 ### Czech Republic blocks Kalshi — effective 2026-10-15

@@ -59,9 +59,11 @@ related:
   - sources/rss-eh-kalshi-curry-geofence-2026-09-25.md
   - sources/rss-sbc-pm-europe-2026-10-01-05.md
   - sources/daily-digest-batch-k181-2026-10-06.md
+  - sources/rss-lsb-cftc-rules-ohio-cd-2026-10-06.md
+  - sources/daily-digest-batch-k182-2026-10-07.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-10-06
+updated: 2026-10-07
 ---
 
 ## Relations
@@ -143,6 +145,12 @@ Week ending **2026-05-24**: **~29%** of combined US PM notional on Polymarket (*
 ### European lobbying (K175, 2026-09-22) [TENTATIVE — SBC title]
 
 Polymarket public push for **European acceptance** of prediction markets (SBC News RSS stub). US retail still geo-blocked on main CLOB; treat as international regulatory awareness only. Hub: `@sources/daily-digest-rss-pm-regulatory-2026-09-23.md`.
+
+### Ohio cease-and-desist (K182, 2026-10-06) [CONFIRMED]
+
+Polymarket is one of **ten** operators the **Ohio Casino Control Commission** ordered to stop offering sports event contracts in Ohio by **2026-10-16**. The letters cite unlicensed sports betting and bookmaking, demand written compliance within 14 days, and state the conduct is a **felony** in Ohio. Kalshi was absent — it is in separate litigation. No operator has responded.
+
+Polymarket is simultaneously appealing a **€420,000** Dutch penalty **and** facing the Ohio order — the US state track and the EU track are running against it in parallel. Hub: `@sources/rss-lsb-cftc-rules-ohio-cd-2026-10-06.md`.
 
 ### Dutch appeal — €420,000 penalty to The Hague (K181, 2026-10-05) [CONFIRMED]
 

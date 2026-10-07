@@ -14,6 +14,7 @@ related:
   - entities/platforms/hard-rock-bet.md
   - entities/platforms/draftkings.md
   - sources/rss-lsb-nhl-opening-night-props-2026-09-29.md
+  - sources/rss-lsb-week5-cards-2026-10-05-06.md
 maturity: draft
 created: 2026-09-30
 updated: 2026-09-30

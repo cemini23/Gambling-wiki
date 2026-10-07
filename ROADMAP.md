@@ -224,6 +224,7 @@ Steps:
 
 | Date | Item |
 |------|------|
+| 2026-10-07 | K182 — CFTC swap rules to White House, Ohio C&D to 10 operators, arXiv FP trio (slow FP convergence + BluffJAX), LSB cards; **preingest batch-page URL gap fixed** |
 | 2026-10-06 | K181 — W4 Saturday lock, Sharp Football (PROE + free tools), SBC Europe (Czech Kalshi block), W5 waivers; **new tool + concept**; status-source hierarchy rule |
 | 2026-10-04 | Gemini retired from the weekly research; `meta/research-input-pipeline.md` replaces the weekday prompt cadence |
 | 2026-10-02 | K180 — NFL W4 docx quartet + CFB cards + PM industry; **new CFB entity**; TNF postmortem with 3 durable prop rules |

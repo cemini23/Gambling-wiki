@@ -1,5 +1,21 @@
 # Wiki operations log
 
+## [2026-10-07] ingest | K182 CFTC swap rules + Ohio C&D + arXiv FP trio + LSB cards
+
+- **Batch K182:** 19 inbox files → 5 source pages; **5 LSR stubs were duplicates** (archived)
+  - **CFTC:** two rules to the White House — **RIN 3038-AF82** adds event contracts to the "swap" definition (proposed); **RIN 3038-AF81** blocks casino-style games as an **Interim Final Rule** (immediate on approval). Neither in force
+  - **Ohio:** OCCC cease-and-desist to **10 operators** (Underdog, Gemini Titan, Coinbase, Prophet X, Novig, Robinhood, Polymarket, Plus500, Moomoo, Webull) by **2026-10-16**; **felony** exposure stated. Kalshi absent — separate litigation
+  - **arXiv trio:** FP can converge **arbitrarily slowly** (Θ(t^−1/k), kills Karlin's O(t^−1/2)); FP on observed **controls** converges for potential MFGs; **BluffJAX** GPU/JAX poker suite (licence unverified)
+  - **LSB cards:** NHL Sharks-Stars Under 6.5 (shot volume + SH% regression); MNF Falcons-Saints; Browns +2500→**+1500** AFC North; Super Bowl 61 Rams reclaim top
+  - **SBC:** CEE "another Brazil" fear; Merkur/EveryMatrix Denmark omnichannel
+  - **Sharp W5 worksheets:** both half-paywalled — QB sections only; now **9 of 11** Sharp pages paywalled
+- Updated: `kalshi`, `polymarket`, `prediction-markets-crossover`, `poker-hl-analyst-loop` (FP shelf), `nhl-betting`
+- **Preingest gap FIXED:** batch pages must list each article's **full URL** in Raw Concept — `preingest_check.py` scans frontmatter + Raw Concept for URLs. K180 page updated; the 5 LSR stubs now report LIKELY instead of NEW
+- Phase-1: policy_wired kalshi / polymarket / crossover; arXiv trio `wont_wire`
+- Briefs: none new
+
+## [2026-10-06] ingest | K181 W4 Saturday lock + Sharp Football + SBC Europe + W5 waivers
+
 ## [2026-10-06] ingest | K181 W4 Saturday lock + Sharp Football + SBC Europe + W5 waivers
 
 - **Batch K181:** 25 inbox files → 5 source pages + 1 tool entity + 1 concept; **5 LSR stubs were duplicates** and archived without re-ingest

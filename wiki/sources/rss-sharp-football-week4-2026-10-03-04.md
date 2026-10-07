@@ -37,6 +37,17 @@ wire_status: policy_wired
 
 **Location** (`cemini-egress-fi:/opt/cemini-bulk/research/gambling/`): the 9 archived `rss-sharp-football-2026-10-0{3,4}-*.md` files.
 
+**Article URLs** (required for batch pages — `preingest_check.py` matches on these):
+https://www.sharpfootballanalysis.com/stats-nfl/nfl-pass-rate-over-expected/
+https://www.sharpfootballanalysis.com/stats-nfl/nfl-stats-tools/
+https://www.sharpfootballanalysis.com/fantasy/dfs-stacks-week-4-2026/
+https://www.sharpfootballanalysis.com/fantasy/core-dfs-picks-week-4-2026/
+https://www.sharpfootballanalysis.com/fantasy/tournament-dfs-picks-week-4-2026/
+https://www.sharpfootballanalysis.com/fantasy/the-worksheet/
+https://www.sharpfootballanalysis.com/betting/nfl-odds-picks-predictions/
+https://www.sharpfootballanalysis.com/betting/nfl-player-props-odds-picks-predictions/
+https://www.sharpfootballanalysis.com/fantasy/fantasy-football-live-q-and-a-rich-hribar/
+
 | # | Article | Access |
 |---|---------|--------|
 | 1 | NFL Pass Rate Over Expected rankings | **FREE** |

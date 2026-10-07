@@ -422,6 +422,12 @@ Catalog of all wiki pages. Updated on each ingest.
 | [rss-sbc-pm-europe-2026-10-01-05](sources/rss-sbc-pm-europe-2026-10-01-05.md) | deep-read | Czech blocks Kalshi; Dutch Polymarket appeal |
 | [rss-rotoballer-w5-rb-waiver-2026-10-05](sources/rss-rotoballer-w5-rb-waiver-2026-10-05.md) | deep-read | W5 RB waiver tiers + handcuff logic |
 | [daily-digest-batch-k181-2026-10-06](sources/daily-digest-batch-k181-2026-10-06.md) | deep-read | K181 batch hub (5 sources + tool + concept) |
+| [rss-lsb-cftc-rules-ohio-cd-2026-10-06](sources/rss-lsb-cftc-rules-ohio-cd-2026-10-06.md) | deep-read | CFTC swap rules to White House; Ohio C&D to 10 operators |
+| [arxiv-2610-fictitious-play-trio-2026-10-07](sources/arxiv-2610-fictitious-play-trio-2026-10-07.md) | skimmed | Mean-field FP, BluffJAX GPU suite, slow FP convergence |
+| [rss-lsb-week5-cards-2026-10-05-06](sources/rss-lsb-week5-cards-2026-10-05-06.md) | deep-read | NHL under · MNF props · AFC North · MLB props · SB 61 |
+| [rss-sbc-cee-merkur-2026-10-07](sources/rss-sbc-cee-merkur-2026-10-07.md) | deep-read | CEE market-entry caution; Merkur/EveryMatrix Denmark |
+| [rss-sharp-football-week5-worksheets-2026-10-06](sources/rss-sharp-football-week5-worksheets-2026-10-06.md) | skimmed | Browns/Jets + Giants/Commanders — QB sections only |
+| [daily-digest-batch-k182-2026-10-07](sources/daily-digest-batch-k182-2026-10-07.md) | deep-read | K182 batch hub (5 sources) |
 | [brief-k239-kalshi-sports-mention-2026-08-15](sources/brief-k239-kalshi-sports-mention-2026-08-15.md) | read | K239 sports mention markets gone + WA geofence |
 | [brief-k240-kalshi-nv-geofence-2026-08-17](sources/brief-k240-kalshi-nv-geofence-2026-08-17.md) | read | K240 NV $120k/day + optional-update geofence |
 | [brief-k242-eh-pm-ban-onshore-2026-08-19](sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md) | read | K242 WA geofence day; ban ≠ offshore |

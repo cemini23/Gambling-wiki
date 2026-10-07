@@ -36,6 +36,12 @@ wire_status: policy_wired
 
 **Location** (`cemini-egress-fi:/opt/cemini-bulk/research/gambling/`):
 
+**Article URLs** (required for batch pages — `preingest_check.py` matches on these):
+https://www.legalsportsbetting.com/news/jaguars-bengals-total-at-51-5-is-week-4-s-highest-10-02-2026/
+https://www.legalsportsbetting.com/news/lions-panthers-snf-props-attacking-carolina-s-secondary-10-02-2026/
+https://www.legalsportsbetting.com/news/seahawks-chargers-odds-seattle-favored-by-7-10-02-2026/
+https://www.legalsportsbetting.com/news/vikings-favored-by-10-5-can-winless-miami-cover-10-02-2026/
+
 | # | Archived file |
 |---|---------------|
 | A | `rss-legal-sports-betting-2026-10-02-jaguars-bengals-total-at-51-5-is-week-4-s-highest.md` |

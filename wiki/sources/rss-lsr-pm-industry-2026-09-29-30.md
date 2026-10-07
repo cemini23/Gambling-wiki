@@ -36,13 +36,15 @@ wire_status: policy_wired
 | **Articles** | 5 |
 | **Body access** | LSR returns 403 to direct fetch; bodies via Brave LLM Context + CDC Gaming, DefiRate, Casino.org, CryptoSlate, Gambling Insider |
 
-| # | Title | Slug |
-|---|-------|------|
-| A | Volume Rewards Program On Kalshi Set To End Nearly A Year Early | `279648/volume-rewards-program-on-kalshi-set-to-end-nearly-a-year-early` |
-| B | FanDuel Parent's Stock Hits Record Low As Global Troubles Mount | `279564/fanduel-parents-stock-hits-record-low-as-global-troubles-mount` |
-| C | Michigan Regulators Reviewing Issues Raised In DraftKings AI, VIP Reports | `279553/michigan-regulators-reviewing-issues-raised-in-draftkings-ai-vip-reports` |
-| D | Fluharty: Predictions Are 'Moonshine' To Sports Betting's Fine Wine | `279547/fluharty-predictions-are-moonshine-to-sports-bettings-fine-wine` |
-| E | MGM, Caesars Not Risking Casino Licenses For Prediction Markets | `279685/mgm-caesars-not-risking-casino-licenses-for-prediction-markets` |
+| # | Title | URL |
+|---|-------|-----|
+| A | Volume Rewards Program On Kalshi Set To End Nearly A Year Early | https://www.legalsportsreport.com/279648/volume-rewards-program-on-kalshi-set-to-end-nearly-a-year-early/ |
+| B | FanDuel Parent's Stock Hits Record Low As Global Troubles Mount | https://www.legalsportsreport.com/279564/fanduel-parents-stock-hits-record-low-as-global-troubles-mount/ |
+| C | Michigan Regulators Reviewing Issues Raised In DraftKings AI, VIP Reports | https://www.legalsportsreport.com/279553/michigan-regulators-reviewing-issues-raised-in-draftkings-ai-vip-reports/ |
+| D | Fluharty: Predictions Are 'Moonshine' To Sports Betting's Fine Wine | https://www.legalsportsreport.com/279547/fluharty-predictions-are-moonshine-to-sports-bettings-fine-wine/ |
+| E | MGM, Caesars Not Risking Casino Licenses For Prediction Markets | https://www.legalsportsreport.com/279685/mgm-caesars-not-risking-casino-licenses-for-prediction-markets/ |
+
+**Batch-page convention (added 2026-10-07):** a page that batches several articles **must list each article's full URL** in the Raw Concept section. `scripts/preingest_check.py` scans frontmatter + Raw Concept for URLs, so this is what lets the morning sweep recognise those articles as already ingested. Slugs alone do not match.
 
 **Location** (`cemini-egress-fi:/opt/cemini-bulk/research/gambling/`):
 

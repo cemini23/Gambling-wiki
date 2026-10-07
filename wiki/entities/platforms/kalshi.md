@@ -70,9 +70,11 @@ related:
   - sources/daily-digest-batch-k180-2026-10-02.md
   - sources/rss-sbc-pm-europe-2026-10-01-05.md
   - sources/daily-digest-batch-k181-2026-10-06.md
+  - sources/rss-lsb-cftc-rules-ohio-cd-2026-10-06.md
+  - sources/daily-digest-batch-k182-2026-10-07.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-10-06
+updated: 2026-10-07
 ---
 
 ## Relations
@@ -156,6 +158,29 @@ How it worked: a fixed reward per eligible market over up to 31 days, split amon
 **The separate Liquidity Incentive Program is unaffected** — it pays for qualifying resting orders, which need not become completed trades.
 
 **Retail read:** the volume subsidy was never an edge to the trader, and its removal does not change contract pricing. But the CFTC is reviewing incentive programs **across** platforms, and Chairman Selig may act. Treat promotional credit as temporary, never as part of a bankroll plan. Hub: `@sources/rss-lsr-pm-industry-2026-09-29-30.md`.
+
+### Two federal rules sent to the White House (K182, 2026-10-06) [CONFIRMED]
+
+The CFTC sent **two rules to the White House** that would settle what prediction markets may offer nationwide. Both further define **"swap."**
+
+| RIN | Type | Effect |
+|-----|------|--------|
+| **3038-AF82** | Proposed | **Adds event contracts to the "swap" definition** — the lead proposal, and the one that would confirm CFTC oversight of Kalshi's sports contracts |
+| **3038-AF81** | **Interim Final Rule** | Blocks **casino-style games** (slots, blackjack, craps) on prediction markets. Takes effect **immediately** on approval, with **no comment period** |
+
+**Neither is in force.** AF82 needs finalisation; AF81 needs White House approval. If AF82 stalls, states are expected to keep enforcing.
+
+**Note the second rule's design:** it concedes the casino category to prohibition while (via AF82) claiming the sports category as swaps. That is the industry's own preferred line — sports contracts have an information case; slots do not.
+
+### Ohio orders ten operators to stop (K182, 2026-10-06)
+
+The **Ohio Casino Control Commission** sent cease-and-desist letters to **ten** operators — **Underdog, Gemini Titan, Coinbase, Prophet X, Novig, Robinhood, Polymarket, Plus500, Moomoo, Webull** — requiring them to stop sports event contracts in Ohio by **2026-10-16**, with written notice of compliance within 14 days.
+
+**Kalshi is absent from the list** because it received an earlier 2025 letter and is in **separate litigation**. The batch follows the **Sixth Circuit rejecting Kalshi's** argument that its contracts fall only under CFTC regulation.
+
+The letters state unlicensed sports betting in Ohio is a **felony**, and the OCCC says it may impose a civil penalty equal to the value unlawfully obtained. **No operator has responded.**
+
+**Retail read:** the federal and state tracks are still unresolved. The CFTC is claiming the product; Ohio is enforcing regardless. If states prevail, the expected shape is a **21+ minimum** and a **college player-prop ban**. Hub: `@sources/rss-lsb-cftc-rules-ohio-cd-2026-10-06.md`.
 
 ### Europe closes its doors — Czech block effective 2026-10-15 (K181) [CONFIRMED]
 
