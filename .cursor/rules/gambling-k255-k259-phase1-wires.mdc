@@ -1,5 +1,5 @@
 ---
-description: Gambling wiki Phase-1 — K255–K259 EH PM wave and K175–K180 batches (Sep–Oct 2026)
+description: Gambling wiki Phase-1 — K255–K259 EH PM wave and K175–K182 batches (Sep–Oct 2026)
 alwaysApply: true
 ---
 
@@ -28,6 +28,20 @@ Verdict: **regulatory awareness only. No pm scp. No xsp scp.**
 - Sports **are** the pie at Kalshi ($160B since Apr; record CFB Saturday).
 - DGA private session with Kalshi + AGA (11 Sep).
 - **PM injury props may not void like sportsbook props** — cross-venue hygiene.
+
+## K182 — CFTC swap rules + Ohio C&D + arXiv FP trio (2026-10-07)
+
+- Inbox 19 → 5 source pages. **5 LSR stubs were duplicates** (see the fix below).
+- **CFTC → White House:** **RIN 3038-AF82** would add event contracts to the **"swap" definition** (proposed, not final). **RIN 3038-AF81** would block **casino-style games** as an **Interim Final Rule** — effective on approval, **no comment period**. The pairing gives up the casino category and claims the sports category. **Neither is in force.**
+- **Ohio C&D:** OCCC ordered **10 operators** (Underdog, Gemini Titan, Coinbase, Prophet X, Novig, Robinhood, Polymarket, Plus500, Moomoo, Webull) to stop sports event contracts by **2026-10-16**; letters state **felony** exposure. **Kalshi absent** — separate litigation, after the Sixth Circuit rejected its federal-only argument.
+- **"CFTC-regulated" is not a defence in state court**, and does not travel to the EU either. Keep every cross-venue plan **jurisdiction-scoped**.
+- **arXiv trio** (`@wiki/sources/arxiv-2610-fictitious-play-trio-2026-10-07.md`) — `wont_wire` all three:
+  - FP converges **arbitrarily slowly** — Θ(t^−1/k) for every k, counterexample to **Karlin's O(t^−1/2)**. Bounds the method, not the operator's games.
+  - FP on **observed controls** converges for potential MFGs incl. common noise — relevant because the HL loop logs **actions**, not payoffs.
+  - **BluffJAX** GPU/JAX suite (NLHE, Kuhn, Leduc, Bluff, Kemps) is the one adoptable artifact. **Licence unverified — check before use.**
+- **Sharp Football now 9 of 11 pages paywalled.** Free tier is the stats directory only.
+- **Preingest fix:** batch pages **must list each article's full URL in Raw Concept** — the matcher scans frontmatter + Raw Concept for URLs, and slugs alone do not match. K180 and K181 pages backfilled.
+- **No pm scp.**
 
 ## K180 — Week 4 docx quartet + CFB cards + PM industry (2026-10-02)
 
