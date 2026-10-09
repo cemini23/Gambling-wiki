@@ -1,5 +1,5 @@
 ---
-description: Gambling wiki Phase-1 — K255–K259 EH PM wave and K175–K182 batches (Sep–Oct 2026)
+description: Gambling wiki Phase-1 — K255–K259 EH PM wave and K175–K183 batches (Sep–Oct 2026)
 alwaysApply: true
 ---
 
@@ -28,6 +28,18 @@ Verdict: **regulatory awareness only. No pm scp. No xsp scp.**
 - Sports **are** the pie at Kalshi ($160B since Apr; record CFB Saturday).
 - DGA private session with Kalshi + AGA (11 Sep).
 - **PM injury props may not void like sportsbook props** — cross-venue hygiene.
+
+## K183 — NFL vs prediction markets + operator scrutiny (2026-10-09)
+
+- Inbox 17 → 6 source pages. **Zero duplicates** — the batch-page URL convention is holding.
+- **NFL amicus (2026-10-08)** backing New Jersey against Kalshi; **39 states + DC** urge cert. NFL's points: single-actor markets manipulable, age **18→21**, CFTC **543 staff** vs ~400 in Nevada alone. **Gensler and Chris Dodd** also filed for the states. Kalshi responds **2026-11-09**; **cert unlikely before December.**
+- **Leagues split:** NFL against PMs (partners: DK/FD/Fanatics); **NHL** partners with Kalshi **and** Polymarket; **MLB** with Polymarket. Kalshi: "All but the NFL have been willing to share data."
+- **Seminole Tribe v DraftKings** — 72-page Broward complaint on **IGRA + compact**, NOT the CEA. Best evidence is DK's own **"1-800-GAMBLER"** ad disclosure. Different legal hook from the state cases.
+- **State retreat:** Michigan (Coinbase by 10/10), Connecticut (3 of 9 exited: Webull/Gemini/ProphetX), Missouri (PrizePicks suspended). **Blocked: NV/MI/WA. Cleared to enforce: CT/IA/MD/NY/OH/TN/UT.** 10 pending.
+- **Operator scrutiny:** Congress demands every FanDuel VIP video by **2026-10-20**; DK AI review now **NY + MA + ME**, NY moving to **rulemaking** that would bar AI for personalized bonuses/promotions/bet suggestions (**not enacted**). Macquarie trims 7 targets (Flutter $150→$128).
+- **arXiv 2610.09244** — risk-averse multi-population MFG; risk-averse FP has exploitability→0. **`wont_wire`** (continuous-time mean-field, no code).
+- **Sharp Football now 12 of 14 pages paywalled.** Free tier is the stats directory only. Pressure-split QB profiles are the reusable bit.
+- **No pm scp.**
 
 ## K182 — CFTC swap rules + Ohio C&D + arXiv FP trio (2026-10-07)
 
