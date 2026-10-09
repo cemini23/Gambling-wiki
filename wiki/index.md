@@ -428,6 +428,14 @@ Catalog of all wiki pages. Updated on each ingest.
 | [rss-sbc-cee-merkur-2026-10-07](sources/rss-sbc-cee-merkur-2026-10-07.md) | deep-read | CEE market-entry caution; Merkur/EveryMatrix Denmark |
 | [rss-sharp-football-week5-worksheets-2026-10-06](sources/rss-sharp-football-week5-worksheets-2026-10-06.md) | skimmed | Browns/Jets + Giants/Commanders — QB sections only |
 | [daily-digest-batch-k182-2026-10-07](sources/daily-digest-batch-k182-2026-10-07.md) | deep-read | K182 batch hub (5 sources) |
+| [rss-pm-legal-2026-10-07-09](sources/rss-pm-legal-2026-10-07-09.md) | deep-read | NFL + 39 states vs Kalshi; SCOTUS briefs; 3-state retreat; Seminole v DK |
+| [rss-operator-scrutiny-2026-10-07-08](sources/rss-operator-scrutiny-2026-10-07-08.md) | deep-read | FanDuel VIP videos; DK AI in 3 states; Macquarie targets |
+| [rss-lsb-state-markets-2026-10-07](sources/rss-lsb-state-markets-2026-10-07.md) | deep-read | Kentucky growth; Delaware parlay-card hold |
+| [rss-lsb-cfb-texas-oklahoma-2026-10-07](sources/rss-lsb-cfb-texas-oklahoma-2026-10-07.md) | deep-read | Red River card — first-half split market |
+| [arxiv-2610.09244-risk-averse-multi-population-mfg-2026-10-09](sources/arxiv-2610.09244-risk-averse-multi-population-mfg-2026-10-09.md) | skimmed | Risk-averse multi-population MFG |
+| [rss-sbc-nfl-midnite-everton-2026-10-08-09](sources/rss-sbc-nfl-midnite-everton-2026-10-08-09.md) | deep-read | NFL/Midnite UK deal; Everton Sherif fine |
+| [rss-sharp-football-week5-worksheets-2026-10-07](sources/rss-sharp-football-week5-worksheets-2026-10-07.md) | skimmed | SF/SEA, DEN/LAC, DET/ARI — QB sections only |
+| [daily-digest-batch-k183-2026-10-09](sources/daily-digest-batch-k183-2026-10-09.md) | deep-read | K183 batch hub (6 sources) |
 | [brief-k239-kalshi-sports-mention-2026-08-15](sources/brief-k239-kalshi-sports-mention-2026-08-15.md) | read | K239 sports mention markets gone + WA geofence |
 | [brief-k240-kalshi-nv-geofence-2026-08-17](sources/brief-k240-kalshi-nv-geofence-2026-08-17.md) | read | K240 NV $120k/day + optional-update geofence |
 | [brief-k242-eh-pm-ban-onshore-2026-08-19](sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md) | read | K242 WA geofence day; ban ≠ offshore |

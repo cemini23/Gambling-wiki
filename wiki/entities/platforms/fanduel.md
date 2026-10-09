@@ -27,9 +27,11 @@ related:
   - sources/rss-lsr-nfl-app-downloads-pm-share-2026-09-24.md
   - sources/rss-lsr-pm-industry-2026-09-29-30.md
   - sources/daily-digest-batch-k180-2026-10-02.md
+  - sources/rss-operator-scrutiny-2026-10-07-08.md
+  - sources/daily-digest-batch-k183-2026-10-09.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-10-02
+updated: 2026-10-09
 ---
 
 ## Relations
@@ -55,6 +57,20 @@ Same **soft book** retail profile as DraftKings. Industry reviews often rank Fan
 ### FanDuel Predicts (PM, Aug 2026) [CONFIRMED via EH]
 
 Q2: sports/novelties on **Predicts** move to **Crypto.com**; CME retained for financials. Flutter flagged **~$50M** market-making revenue for 2026 ($6M in Q2). Predicts is **not** the FanDuel sportsbook line — shop it as a third venue (book vs Kalshi vs Predicts/Crypto.com). Hub: `@sources/brief-k222-k231-pm-retail-awareness-2026-08.md`.
+
+### VIP video letter from Congress (K183, 2026-10-08) [CONFIRMED]
+
+**Sen. Richard Blumenthal** (CT), **Rep. Paul Tonko** (NY), and **Rep. Valerie Foushee** (NC) wrote to FanDuel President **Christian Genetski**, replying to FanDuel's own 2026-09-24 letter — which said the company sent VIP bettors **"approximately 30 such videos of athletes and entertainers over the last two years"** as loyalty rewards.
+
+The lawmakers argue that **contradicts** FanDuel's position that it does not encourage continued gambling.
+
+**The named case:** **Terry Thompson** allegedly lost **$1.5M** and received a personalized **Bryce Harper** video. Harper said he "did not know what the purpose of the video he created was." Thompson is suing FanDuel and DraftKings, claiming they "preyed on him despite a clear gambling addiction."
+
+**Demanded by 2026-10-20:** every personalized VIP video; per-video bet amounts, problem-gambling resource requests, recipient-selection rationale, and VIP-host steps to avoid problem gambling; athlete/entertainer awareness; and FanDuel's problem-gambling screening tools.
+
+**Why it matters:** the request is for the **decision records** behind each video, not the marketing. Hub: `@sources/rss-operator-scrutiny-2026-10-07-08.md`.
+
+**Analyst note (same batch):** Macquarie's Chad Beynon trimmed the **Flutter target to $128** (from $150) alongside six other gaming names, citing lower sports betting hold and **higher predictions investment** — the books spending to compete with the markets they want regulated.
 
 ### Flutter parent — record low (K180, 2026-09-29) [TENTATIVE]
 

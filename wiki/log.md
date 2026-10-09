@@ -1,5 +1,22 @@
 # Wiki operations log
 
+## [2026-10-09] ingest | K183 PM legal wave + operator scrutiny + state markets + arXiv
+
+- **Batch K183:** 17 inbox files → 6 source pages; **zero duplicates** (batch-page URL convention holding)
+  - **PM legal:** **NFL amicus brief (2026-10-08)** backing New Jersey + **39 states + DC** urging cert. NFL's points: single-actor markets manipulable, age 18→21, CFTC has 543 staff vs ~400 in Nevada alone. Gensler and Chris Dodd also filed for the states. Kalshi responds **2026-11-09**; cert unlikely before **December**. NFL-related volume on opening Sunday: **$1.8B of $3.3B**
+  - **State retreat:** Michigan (Coinbase by 10/10), Connecticut (3 of 9 exited), Missouri (PrizePicks). Blocked in **NV/MI/WA**; 7 more cleared to enforce; 10 pending
+  - **Seminole Tribe v DraftKings:** 72-page Broward complaint on **IGRA + compact**, not the CEA. Best evidence is DK's own **"1-800-GAMBLER"** ad disclosure
+  - **Operator scrutiny:** FanDuel VIP video letter (Blumenthal/Tonko/Foushee, due 10/20); DK AI review now in **NY + MA + ME**, NY moving to rulemaking on banning AI for promotions; Macquarie trims 7 gaming targets incl. Flutter $150→**$128**
+  - **State markets:** Kentucky duopoly **70.2%→64.8%** on flat handle; Delaware parlay cards took **46.2%** of state share on **14%** of handle at **24.7¢/dollar**
+  - **CFB:** Texas-Oklahoma — first-half **7.5** as its own market
+  - **arXiv 2610.09244:** risk-averse multi-population MFG; risk-averse FP has exploitability→0. `wont_wire`
+  - **SBC:** NFL licenses **Midnite** for UK/Ireland (3yr to 2029-03-31) the same week it sues to keep PMs out of US sports; Everton's Sherif fined **£5,000** for **facilitating** 61 third-party bets
+- Updated: `kalshi`, `draftkings`, `fanduel`, `prediction-markets-crossover` (league split), `poker-hl-analyst-loop` (risk-averse shelf), `cfb-betting`, `sharp-football-analysis`
+- Phase-1: policy_wired kalshi / dk / fanduel / crossover / cfb; arXiv + SBC `wont_wire`
+- Briefs: none new
+
+## [2026-10-07] ingest | K182 CFTC swap rules + Ohio C&D + arXiv FP trio + LSB cards
+
 ## [2026-10-07] ingest | K182 CFTC swap rules + Ohio C&D + arXiv FP trio + LSB cards
 
 - **Batch K182:** 19 inbox files → 5 source pages; **5 LSR stubs were duplicates** (archived)

@@ -12,9 +12,11 @@ related:
   - entities/tools/ceminidfs.md
   - sources/rss-sharp-football-week4-2026-10-03-04.md
   - sources/daily-digest-batch-k181-2026-10-06.md
+  - sources/rss-sharp-football-week5-worksheets-2026-10-07.md
+  - sources/daily-digest-batch-k183-2026-10-09.md
 maturity: draft
 created: 2026-10-06
-updated: 2026-10-06
+updated: 2026-10-09
 ---
 
 ## Relations
@@ -53,6 +55,14 @@ Free NFL advanced-stats and tooling hub (Warren Sharp / Rich Hribar). The **stat
 | **Fantasy** | The Worksheet · **Expected Fantasy Points Tool** · Expected FP Allowed · **Implied Team Totals** | ITT cross-check against `@concepts/implied-team-totals-dfs.md` |
 | **Betting** | Odds and Lines · Player Prop Odds · **Weather** · **Referee Assignments** · ATS Records | Weather + referee keys; referee data is rare elsewhere in this wiki |
 | **Injury/schedule** | Practice Reports · IR Tracker · Strength of Schedule · Rest Disparity | Injury cadence (`@concepts/dfs-injury-and-news-workflow.md`) |
+
+### Paywall rate is rising (K183, 2026-10-09)
+
+Through three batches the pattern is stable and getting worse: **12 of 14 pages paywalled**. The weekly Worksheet columns consistently free only the **matchup data, team notes, and quarterback previews** before cutting off at the running-back section.
+
+**What that still gives us:** the matchup table (spread, implied totals, per-team scoring, EPA, plays/game, rush/pass splits) and the **pressure-split QB profiles** — e.g. Darnold at **16.8 rating under pressure vs 138.0 clean**, Brissett at **38.2 pressured**. That split is a reusable check: a quarterback's value flips on the opponent's pressure rate.
+
+**Decision point:** the free tier is the **stats directory** (PROE, ITT, coverage, referees). The columns deliver framing, not picks — weigh whether they are worth the ingest effort.
 
 ### PROE — the one to use
 

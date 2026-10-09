@@ -14,9 +14,11 @@ related:
   - entities/platforms/draftkings.md
   - sources/rss-lsb-cfb-week6-cards-2026-10-01.md
   - sources/daily-digest-batch-k180-2026-10-02.md
+  - sources/rss-lsb-cfb-texas-oklahoma-2026-10-07.md
+  - sources/daily-digest-batch-k183-2026-10-09.md
 maturity: draft
 created: 2026-10-02
-updated: 2026-10-02
+updated: 2026-10-09
 ---
 
 ## Relations
@@ -42,6 +44,12 @@ College football betting — spreads, totals, player props, and Heisman futures.
 - **Blowout risk is the core hazard.** Backdoor covers and garbage-time scoring swing totals and spreads. Game script is less stable than in the NFL.
 - **Sample sizes are short and opponent quality varies wildly.** Early-season defensive numbers are inflated by FCS and Group-of-5 opponents. Always check the schedule behind the rating.
 - **Availability reports are late.** The Big Ten, for example, publishes its final report **two hours before kickoff**. Injury-driven line movement can arrive very late.
+
+### Split markets exist (K183, 2026-10-07)
+
+A college card in the 2026-10-07 batch priced a **first-half team total as its own market** — Oklahoma first-half under **7.5 (−165)** — separate from the 39-point game total. The case rested on a **half-split**: Oklahoma had scored a combined **seven first-half points across three games**, all against New Mexico, and **none against a Power Four opponent**.
+
+**The transferable point:** college games offer half and quarter markets where an offense's **start script** differs sharply from its full-game output. Check whether the split is a genuine pattern or a small-sample artifact before paying deep juice for it.
 
 ### Market notes
 

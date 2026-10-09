@@ -35,9 +35,12 @@ related:
   - entities/sports/cfb-betting.md
   - sources/rss-lsr-pm-industry-2026-09-29-30.md
   - sources/daily-digest-batch-k180-2026-10-02.md
+  - sources/rss-pm-legal-2026-10-07-09.md
+  - sources/rss-operator-scrutiny-2026-10-07-08.md
+  - sources/daily-digest-batch-k183-2026-10-09.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-10-02
+updated: 2026-10-09
 ---
 
 ## Relations
@@ -65,6 +68,37 @@ DraftKings-owned DCM **Railbird Exchange (DKeX)** self-certified nine football e
 **NFL league partnership (K168, 2026-08-27) [TENTATIVE — LSR title]:** DraftKings, FanDuel, and Fanatics named NFL sports-betting partners; league language covers injury/officiating/knowable-in-advance wagers. Hub: `@sources/daily-digest-rss-nfl-week0-2026-08-31.md`.
 
 **Anti-Kalshi ad campaign (K170, 2026-09-09) [TENTATIVE — LSR]:** New DK ads target Kalshi review complaints — retail PM vs book marketing war during NFL Week 1 ad blitz. Hub: `@sources/daily-digest-rss-week1-pm-nfl-2026-09-11.md`.
+
+### Seminole Tribe sues over DKeX and Pick6 (K183, 2026-10-08) [CONFIRMED]
+
+The **Seminole Tribe of Florida sued DraftKings** in Broward County — a **72-page** complaint naming **DraftKings Inc., CEO Jason Robins, and GUS III LLC** (DraftKings Predictions). The Tribe holds **exclusive** online sports betting rights under the 2021 compact.
+
+**The argument runs on the IGRA and the compact, not the Commodity Exchange Act** — a different hook from the state cases.
+
+**The evidence is DraftKings' own material:**
+
+- **"1-800-GAMBLER" on DraftKings' advertisements.** "The warning is DraftKings' own admission, printed on its own advertisements, that the Super App sportsbook is a gambling product and not a financial market."
+- The Florida page is **identical** to a licensed state's page apart from the label "prediction betting."
+- DraftKings **separates** its sports page from other predictions.
+- The Tribe alleges DraftKings **"secretly funded"** lawsuits attacking the compact.
+
+**Relief:** injunction, damages, costs, and all Florida revenue — for problem-gambling programs. Robins is also accused of violating Florida's **anti-racketeering act**.
+
+**DraftKings' response:** prediction markets "operate in accordance with applicable law"; Pick6 is "a peer-to-peer fantasy sports variant… not sports betting."
+
+**Why only DraftKings?** A quoted observer suggests it may be "because then you're going after the instrumentality that has the full-throated support of the White House." Hub: `@sources/rss-pm-legal-2026-10-07-09.md`.
+
+### AI scrutiny now spans three states (K183, 2026-10-08) [CONFIRMED]
+
+The K180 review has widened from Michigan and Massachusetts to include **New York** and **Maine**:
+
+| State | Action |
+|-------|--------|
+| **New York** | Gaming Commission took up two proposals on **2026-10-09**: "Use of artificial intelligence for wagering purposes" — which would **bar AI for personalized bonuses, promotions, or bet suggestions** — and "Safeguards for at-risk mobile sports wagering patrons" |
+| **Massachusetts** | Chair Jordan Maynard asked the Executive Director to investigate AI/ML use by in-state sportsbooks |
+| **Maine** | Gambling Control Unit monitoring |
+
+The **NY proposals predate** the NYT exposé and are **not enacted**. Penalty exposure if targeting is found: fines, suspensions, or **licence revocation**. Details: `@sources/rss-operator-scrutiny-2026-10-07-08.md`.
 
 ### AI/VIP promotion scrutiny (K180, 2026-09-29) [CONFIRMED]
 

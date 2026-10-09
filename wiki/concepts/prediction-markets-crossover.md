@@ -81,9 +81,11 @@ related:
   - sources/daily-digest-batch-k181-2026-10-06.md
   - sources/rss-lsb-cftc-rules-ohio-cd-2026-10-06.md
   - sources/daily-digest-batch-k182-2026-10-07.md
+  - sources/rss-pm-legal-2026-10-07-09.md
+  - sources/daily-digest-batch-k183-2026-10-09.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-10-07
+updated: 2026-10-09
 ---
 
 ## Relations
@@ -207,6 +209,29 @@ The pairing is deliberate: **the CFTC gives up the casino category and claims th
 3. **Neither track has resolved.** Do not model either as settled.
 
 Details: `@sources/rss-lsb-cftc-rules-ohio-cd-2026-10-06.md`.
+
+### The leagues split (K183, 2026-10-08)
+
+The sports leagues are no longer aligned, and the split maps onto their commercial interests.
+
+| League | Position |
+|--------|----------|
+| **NFL** | **Against prediction markets.** Filed an amicus brief backing New Jersey, arguing states should regulate. Partners with DraftKings, FanDuel, Fanatics |
+| **NHL** | Partners with **both Kalshi and Polymarket** |
+| **MLB** | Partners with **Polymarket** |
+| **UFC, MLS** | Polymarket ties |
+
+Kalshi's spokeswoman noted the contrast directly: "All but the NFL have been willing to share data and collaborate to protect game integrity."
+
+**The NFL's three substantive points, which are worth separating from its commercial position:**
+
+1. **Single-actor markets are a real integrity surface.** "A player can alter his performance, a coach can change his team's lineup or an official can make (or not make) certain calls." That is the same concern the CFTC raised in Letter 26-27 on mention markets (`@sources/rss-lsr-cftc-mention-market-advisory-2026-09-23.md`) — arriving from a different direction.
+2. **Age.** Kalshi allows **18**; the NFL wants **21**, matching state sportsbook rules.
+3. **Regulatory capacity.** The CFTC has **543 employees** nationally against "close to 400" in Nevada alone.
+
+**The same week, the NFL licensed Midnite** as its official UK and Ireland betting partner — the league is not opposed to sportsbook money, only to the federal-derivatives route to it (`@sources/rss-sbc-nfl-midnite-everton-2026-10-08-09.md`).
+
+**Where this leaves the wiki's position:** the federal-vs-state question is now before the Supreme Court in substance, with **39 states + DC** and **Gary Gensler** and **Chris Dodd** on the states' side, the **CFTC** and the exchanges on the other, and the **NFL** breaking from the other leagues. Kalshi responds by **2026-11-09**; cert is unlikely before December.
 
 ### Tools spanning both wikis
 

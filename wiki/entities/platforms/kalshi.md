@@ -72,9 +72,11 @@ related:
   - sources/daily-digest-batch-k181-2026-10-06.md
   - sources/rss-lsb-cftc-rules-ohio-cd-2026-10-06.md
   - sources/daily-digest-batch-k182-2026-10-07.md
+  - sources/rss-pm-legal-2026-10-07-09.md
+  - sources/daily-digest-batch-k183-2026-10-09.md
 maturity: draft
 created: 2026-05-31
-updated: 2026-10-07
+updated: 2026-10-09
 ---
 
 ## Relations
@@ -158,6 +160,34 @@ How it worked: a fixed reward per eligible market over up to 31 days, split amon
 **The separate Liquidity Incentive Program is unaffected** — it pays for qualifying resting orders, which need not become completed trades.
 
 **Retail read:** the volume subsidy was never an edge to the trader, and its removal does not change contract pricing. But the CFTC is reviewing incentive programs **across** platforms, and Chairman Selig may act. Treat promotional credit as temporary, never as part of a bankroll plan. Hub: `@sources/rss-lsr-pm-industry-2026-09-29-30.md`.
+
+### The NFL files against it; 39 states join (K183, 2026-10-08) [CONFIRMED]
+
+The **NFL filed an amicus brief** backing New Jersey against Kalshi, arguing **states are better positioned** to regulate sports contracts. **39 states plus DC** — bipartisan, led by Ohio AG Andy Wilson — separately urged SCOTUS to take the case.
+
+**The league's three complaints about CFTC oversight:** markets manipulable by a single player, coach, or official; a **18** age floor where the NFL wants **21**; and staffing — "state regulatory bodies have hundreds of employees… Nevada and Pennsylvania, for instance, have close to **400 employees each**. The Commission, meanwhile, has only **543 employees** covering the entire country."
+
+**The volume figure:** on the season's first Sunday, **$1.8B of $3.3B** in total prediction-market trading was NFL-related.
+
+**Kalshi is isolated among leagues.** It partners with the **NHL and MLB**; the NFL is the only major league on the other side.
+
+**Also filing for the states:** former CFTC chair **Gary Gensler** and former Senator **Chris Dodd**, sponsor of the act the CFTC relies on. Dodd: his bill "did not set out to authorize nationwide sports betting through derivatives markets or displace decades of state and tribal primacy."
+
+**The CFTC's reply:** it offered the NFL a **memorandum of understanding**, which the league declined.
+
+**Timeline:** Kalshi's response is due **2026-11-09**; a cert decision is not expected before **December**.
+
+### States keep pulling back (K183, 2026-10-07/08) [CONFIRMED]
+
+| State | Development |
+|-------|-------------|
+| **Michigan** | **Coinbase** to stop new sports event contracts by **2026-10-10** and close positions. Michigan has now halted **Coinbase, Robinhood, and Kalshi** |
+| **Connecticut** | Of nine operators served, **Webull, Gemini, ProphetX** exited; **Polymarket, Coinbase, Crypto.com, Robinhood, Novig, Underdog** remain. ~30 subpoenas issued to payment processors, app stores, media |
+| **Missouri** | **PrizePicks** suspended sports prediction markets |
+
+**The map (2026-10-07):** courts have **blocked** prediction markets in **Nevada, Michigan, Washington**. A court has **cleared enforcement** in **Connecticut, Iowa, Maryland, New York, Ohio, Tennessee, Utah**. In **ten more**, a suit, order, or threat is pending. **44 state AGs** told the CFTC in July it has no authority over sports prediction markets.
+
+Hub: `@sources/rss-pm-legal-2026-10-07-09.md`.
 
 ### Two federal rules sent to the White House (K182, 2026-10-06) [CONFIRMED]
 

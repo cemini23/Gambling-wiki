@@ -76,9 +76,10 @@ related:
   - sources/arxiv-2609.18848-fp-tie-breaking-first-price-auctions-2026-09-17.md
   - sources/brief-k171-pm-fp-regulatory-2026-09-17.md
   - sources/arxiv-2610-fictitious-play-trio-2026-10-07.md
+  - sources/arxiv-2610.09244-risk-averse-multi-population-mfg-2026-10-09.md
 maturity: validated
 created: 2026-06-03
-updated: 2026-10-07
+updated: 2026-10-09
 ---
 
 ## Relations
@@ -278,6 +279,10 @@ HL loop fixes **`decide()` policy**; researcher **bundle submit** adds **`arena-
 - **2610.07686** (**BluffJAX**) — the only adoptable artifact: a **GPU/JAX** imperfect-information suite (Limit + **No-Limit Hold'Em**, Kuhn, Leduc, Five Card Draw, Seven Card Stud, Goofspiel, Werewolf, Bluff, Kemps) reporting **hundreds of millions of samples/sec**. Direct alternative to the CPU `@entities/tools/rlcard.md` baseline. **Licence unverified — check before any use.** [NEEDS VERIFICATION 2026-10-07]
 
 **No decide() import** from any of the three. BluffJAX is a **simulator**, not a solver: it supplies self-play volume, not strategy.
+
+**Risk-averse MFG shelf (K183 — @sources/arxiv-2610.09244-risk-averse-multi-population-mfg-2026-10-09.md):** REFERENCE, `wont_wire`. **Risk-averse multi-population mean-field games** — each population optimises a **worst-case expected reward over ambiguity sets** of the other populations' mean-field flows, rather than best-responding to one believed distribution. Proves existence of a risk-averse equilibrium; the fixed-point operator is **contractive under entropy regularisation**; and their **risk-averse fictitious-play scheme has exploitability decaying to zero** despite the worst-case objective.
+
+**Why it is on this shelf:** it is the formal version of the lane's own **risk-spectrum** idea (K156) — optimising against a *set* of plausible opponents rather than a point read. **But the setting is continuous-time mean-field over occupation measures**, not discrete HU NLHE. Same posture as K157/K167: **literacy, not a patch source.** No code. [TENTATIVE — 52-page preprint, skimmed]
 
 ## Snippets
 
