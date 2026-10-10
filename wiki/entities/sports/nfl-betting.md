@@ -78,6 +78,8 @@ related:
   - sources/steelers-browns-tnf-metaplan-2026-10-01.md
   - sources/daily-digest-batch-k180-2026-10-02.md
   - sources/nfl-week4-saturday-lock-2026-10-03.md
+  - sources/nfl-week4-tnf-result-postmortem-2026-10-02.md
+  - sources/nfl-week4-result-postmortem-2026-10-09.md
   - sources/rss-lsb-week4-game-cards-2026-10-02.md
   - sources/rss-sharp-football-week4-2026-10-03-04.md
   - sources/rss-rotoballer-w5-rb-waiver-2026-10-05.md
@@ -85,7 +87,7 @@ related:
   - meta/research-input-pipeline.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-10-06
+updated: 2026-10-09
 ---
 
 ## Relations
@@ -171,6 +173,15 @@ Week 4 exposed a repeatable failure: **Nico Collins was carried as OUT all week 
 3. **Record the citation strength on the page.** A status sourced only to an aggregator is `[TENTATIVE]`; one from a club page is `[CONFIRMED]`.
 
 This is the failure mode that retired the Gemini prose layer — see @meta/research-input-pipeline.md.
+
+### Week 4 Sunday rules (2026-10-09) [CONFIRMED]
+
+Recorded after FanDuel cash **−$6.95** and Hard Rock cash **−$40.09** (Thursday included). Week cash **−$47.04**. See @sources/nfl-week4-result-postmortem-2026-10-09.md.
+
+1. **An open quarterback cell cannot be rostered.** The Saturday lock left Chicago unassigned between Bagent and Keenum. A lineup rostered Keenum. He scored 0.00.
+2. **A receiving total at 50 or higher is a bar.** This extends rule 2 above from the 40s to any receiving total at 50+. Kincaid 50.5 finished at 7. Moore 50.5 finished at 11. The same two names were on two FanDuel lineups.
+3. **The same tight end and the same defense go on one lineup.** Kincaid and the Raiders scored 2.20 on both lineups that used them.
+4. **A first-touchdown leg stays off a game the scheme card marked "none."**
 
 ### Process (season-long) [CONFIRMED]
 

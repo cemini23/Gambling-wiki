@@ -1,5 +1,14 @@
 # Wiki operations log
 
+## [2026-10-09] result | NFL Week 4 FanDuel + Hard Rock
+
+- Operator recap zips graded 2026-10-09. FanDuel **−$6.95** (1 of 4 cashed). Hard Rock Sunday + Monday cash **−$30.09**. Thursday tickets already on the 2026-10-02 page are **−$10**. Week cash **−$47.04**
+- The compose card went 0-4. Kincaid (7 vs 50.5) and Moore (11 vs 50.5) lost both books. Collins 30.30 was the cash. Keenum scored 0.00 against an open quarterback cell
+- Four rules on `@entities/sports/nfl-betting.md`: open QB cell stays off the lineup; a receiving total at 50+ is a bar; one lineup per tight-end + defense pair; no first-touchdown leg on a game marked none
+- New: `sources/nfl-week4-result-postmortem-2026-10-09.md`
+- Updated: `nfl-betting`, `parlay-and-correlated-bets`, TNF postmortem, Saturday lock
+- Desktop zips were not copied to egress
+
 ## [2026-10-09] ingest | K183 PM legal wave + operator scrutiny + state markets + arXiv
 
 - **Batch K183:** 17 inbox files → 6 source pages; **zero duplicates** (batch-page URL convention holding)

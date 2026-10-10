@@ -30,9 +30,10 @@ related:
   - sources/rss-lsr-nfl-app-downloads-pm-share-2026-09-24.md
   - entities/sports/cfb-betting.md
   - sources/nfl-week4-tnf-result-postmortem-2026-10-02.md
+  - sources/nfl-week4-result-postmortem-2026-10-09.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-09-30
+updated: 2026-10-09
 ---
 
 ## Relations
@@ -50,6 +51,8 @@ updated: 2026-09-30
 - @entities/platforms/draftkings.md — DKeX COMBOS listing
 - @concepts/free-slate-context.md — weather can correlate a whole unders parlay; treat as a screen not independent edges
 - @meta/research-input-pipeline.md — two legs of one market; no same-game first_td; SNF off the afternoon ticket; displayed American is the grade; boost is a note
+- @sources/nfl-week4-tnf-result-postmortem-2026-10-02.md — goal-line rate, a 40+ open is a bar, two totals are two bets
+- @sources/nfl-week4-result-postmortem-2026-10-09.md — the compose card went 0-4; a receiving total at 50+ is a bar
 
 ## Raw Concept
 
@@ -64,6 +67,8 @@ Independent legs multiply implied probabilities — and **vig compounds**. A 3-l
 > "Each added leg increases the sportsbook's hold, so parlays are a high-variance, low-expected-value play rather than a core strategy." [Source: @sources/web-tech-insider-nfl-betting-strategy-2026-06-20.md]
 
 **W8 rule:** parlays are entertainment or promo-conversion vehicles — not core NFL +EV process on Hard Rock.
+
+**Week 4 played result (2026-10-09):** the compose card went 0-4. On-card cash was −$28. A receiving total at 50+ is a bar (Kincaid 7 vs 50.5, Moore 11 vs 50.5). A first-touchdown leg stays off a game the scheme card marked "none." See @sources/nfl-week4-result-postmortem-2026-10-09.md.
 
 ### Same-game parlays (SGP)
 

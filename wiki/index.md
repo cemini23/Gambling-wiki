@@ -417,6 +417,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [nfl-week4-tnf-result-postmortem-2026-10-02](sources/nfl-week4-tnf-result-postmortem-2026-10-02.md) | deep-read | TNF both tickets lost — goal-line inference rule |
 | [daily-digest-batch-k180-2026-10-02](sources/daily-digest-batch-k180-2026-10-02.md) | deep-read | K180 batch hub (6 sources + CFB entity) |
 | [nfl-week4-saturday-lock-2026-10-03](sources/nfl-week4-saturday-lock-2026-10-03.md) | deep-read | W4 Sat lock; TB/NYG caution lifted; **Collins cleared** |
+| [nfl-week4-result-postmortem-2026-10-09](sources/nfl-week4-result-postmortem-2026-10-09.md) | deep-read | W4 FanDuel −$6.95 + Hard Rock −$40.09; four rules |
 | [rss-lsb-week4-game-cards-2026-10-02](sources/rss-lsb-week4-game-cards-2026-10-02.md) | deep-read | 4 LSB W4 cards — JAX@CIN total, DET@CAR props |
 | [rss-sharp-football-week4-2026-10-03-04](sources/rss-sharp-football-week4-2026-10-03-04.md) | deep-read | PROE, free stats tools; 7 of 9 paywalled |
 | [rss-sbc-pm-europe-2026-10-01-05](sources/rss-sbc-pm-europe-2026-10-01-05.md) | deep-read | Czech blocks Kalshi; Dutch Polymarket appeal |

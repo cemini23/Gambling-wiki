@@ -10,10 +10,11 @@ related:
   - sources/nfl-week4-tnf-result-postmortem-2026-10-02.md
   - meta/research-input-pipeline.md
   - sources/daily-digest-batch-k181-2026-10-06.md
+  - sources/nfl-week4-result-postmortem-2026-10-09.md
 maturity: draft
 read_status: deep-read
 created: 2026-10-06
-updated: 2026-10-06
+updated: 2026-10-09
 location: cemini-egress-fi:/opt/cemini-bulk/research/gambling/NFL Saturday Lock-Day Deltas Research.docx
 phase_0_verdict: REFERENCE — final Gemini Deep Research artifact before the 2026-10-04 retirement
 wire_status: policy_wired
@@ -24,6 +25,7 @@ wire_status: policy_wired
 - @entities/sports/nfl-betting.md — W8 season lane
 - @sources/nfl-week4-slate-env-2026-10-02.md — Friday card this page corrects
 - @meta/research-input-pipeline.md — the pipeline this artifact was retired in favour of
+- @sources/nfl-week4-result-postmortem-2026-10-09.md — Keenum was rostered against the open cell; Collins scored 30.30
 - Gitignored hub: `briefs/2026-w04-slate-hub-sun.md`
 
 ## Raw Concept

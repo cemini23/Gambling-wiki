@@ -11,10 +11,11 @@ related:
   - concepts/line-shopping-and-clv.md
   - concepts/daily-edge-card.md
   - sources/daily-digest-batch-k180-2026-10-02.md
+  - sources/nfl-week4-result-postmortem-2026-10-09.md
 maturity: draft
 read_status: deep-read
 created: 2026-10-02
-updated: 2026-10-02
+updated: 2026-10-09
 phase_0_verdict: REFERENCE — realized result; three transferable rules
 wire_status: policy_wired
 ---
@@ -26,6 +27,7 @@ wire_status: policy_wired
 - @concepts/parlay-and-correlated-bets.md — leg construction
 - @concepts/line-shopping-and-clv.md — buying a number down
 - @entities/sports/nfl-betting.md — W8 season lane
+- @sources/nfl-week4-result-postmortem-2026-10-09.md — the Sunday packet's unread +230 and +929 headers are these two tickets
 
 ## Raw Concept
 
