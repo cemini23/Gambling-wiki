@@ -1,0 +1,4 @@
+ticket_id,placed_at,event,sport,market,outcome,book,price_taken,stake,close_book,close_yes,close_no,ticket_kind
+EX-BEAT-CLOSE,2026-01-01T18:00:00Z,Example Away at Example Home,nfl,ml,Example Away,hard-rock,+100,10,pinnacle,-130,+110,straight
+EX-LOSE-TO-CLOSE,2026-01-01T18:05:00Z,Example Away at Example Home,nfl,spread,Example Home -3.5,hard-rock,-150,,pinnacle,-110,-110,straight
+EX-OPEN,2026-01-01T18:10:00Z,Sample City at Sample Town,nfl,total,Over 44.5,hard-rock,-110,,,,,straight

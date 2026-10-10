@@ -99,8 +99,8 @@ Steps:
 - [x] In-season: K283 coverage report + `--keep-team-dart` + soft fade. The report is `python -m ceminidfs.pipeline.fade_coverage`. `--keep-team-dart` stays off by default. Weeks 1–3 faded-and-produced counts are 3, 2, and 4.
 - [ ] K282 `--premium-mode market` stays off until a later slate measures the coverage report.
 
-- [ ] CLV journal hook on `@concepts/line-shopping-and-clv.md`
-- [x] **P0 daily edge card** — `scripts/daily_edge_card.py` + `@concepts/daily-edge-card.md` (de-vig reference vs Hard Rock; 2026-08-15). CLV ledger still open.
+- [x] CLV journal hook on `@concepts/line-shopping-and-clv.md` — `scripts/clv_journal.py` grades a manual CSV against the de-vigged close (2026-10-10). No live odds. Boosts stay out.
+- [x] **P0 daily edge card** — `scripts/daily_edge_card.py` + `@concepts/daily-edge-card.md` (de-vig reference vs Hard Rock; 2026-08-15). CLV ledger is `scripts/clv_journal.py`.
 - [x] **Free unders context** — Open-Meteo + MLB Stats API + NFL stadiums (`scripts/slate_context.py`, `ticket_builder --mode unders`; 2026-08-15).
 
 **K125 — DIY NFL DFS projection model (research complete 2026-06-20; implementation shipped):**

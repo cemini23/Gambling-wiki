@@ -14,7 +14,7 @@ Catalog of all wiki pages. Updated on each ingest.
 | [vig-and-hold](concepts/vig-and-hold.md) | validated | Juice, overround, breakeven |
 | [favorite-longshot-bias](concepts/favorite-longshot-bias.md) | validated | FLB general + PM cross-ref |
 | [sports-betting-fundamentals](concepts/sports-betting-fundamentals.md) | validated | Spreads, ML, totals, research workflow |
-| [line-shopping-and-clv](concepts/line-shopping-and-clv.md) | validated | CLV, steam, shopping |
+| [line-shopping-and-clv](concepts/line-shopping-and-clv.md) | validated | CLV, steam, shopping, manual close journal |
 | [daily-edge-card](concepts/daily-edge-card.md) | draft | Hard Rock vs de-vigged reference CLI |
 | [free-slate-context](concepts/free-slate-context.md) | draft | Open-Meteo + MLB Stats unders screen (no paid APIs) |
 | [sharp-vs-soft-books](concepts/sharp-vs-soft-books.md) | draft | Pinnacle vs DK/FD |

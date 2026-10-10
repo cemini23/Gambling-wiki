@@ -18,7 +18,7 @@ related:
   - sources/brief-k168-nfl-season-paper-rss-2026-08-31.md
 maturity: draft
 created: 2026-08-15
-updated: 2026-08-31
+updated: 2026-10-10
 ---
 
 ## Relations
@@ -74,7 +74,7 @@ K168 (arXiv 2604.17194): multiplicative de-vig assumes equal expected loss per s
 1. Type today’s Pinnacle (or best sharp) **and** Hard Rock two-sided prices into the CSV.
 2. Run the card. Verify the HR number still live.
 3. Place **manually**.
-4. Next day: grade CLV vs close (ledger not shipped yet — P1).
+4. Next day: grade CLV vs the close with `scripts/clv_journal.py`. Keep boosts out of that CSV. The grade uses the same multiplicative de-vig. See `@concepts/line-shopping-and-clv.md`.
 
 ### What this is not
 

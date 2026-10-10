@@ -219,7 +219,7 @@ def render_markdown(cands: list[Candidate], *, bankroll: float, source: str, gen
         "",
         "1. Confirm each BET price still live on Hard Rock.",
         "2. Place manually.",
-        "3. Tomorrow: record close vs your price (CLV ledger — P1).",
+        "3. Tomorrow: grade the close with scripts/clv_journal.py. Keep boosts out of that CSV.",
         "",
     ]
     return "\n".join(lines)

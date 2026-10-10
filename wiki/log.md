@@ -1,5 +1,12 @@
 # Wiki operations log
 
+## [2026-10-10] tool | CLV journal
+
+- `scripts/clv_journal.py` grades a manual CSV. CLV is the EV of the price taken against the multiplicative de-vig of the close. `close_yes` is the side you bet
+- The script does not place a bet and does not call an odds API. A boost, SGP, or parlay row is refused. An open close stays ungraded
+- Example: `config/clv_journal.example.csv`. Real rows go in `briefs/clv-journal.csv` (gitignored)
+- Updated: `line-shopping-and-clv`, `daily-edge-card`, `ROADMAP.md`
+
 ## [2026-10-09] result | NFL Week 4 FanDuel + Hard Rock
 
 - Operator recap zips graded 2026-10-09. FanDuel **−$6.95** (1 of 4 cashed). Hard Rock Sunday + Monday cash **−$30.09**. Thursday tickets already on the 2026-10-02 page are **−$10**. Week cash **−$47.04**

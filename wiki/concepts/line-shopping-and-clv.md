@@ -34,7 +34,7 @@ related:
   - entities/sports/cfb-betting.md
 maturity: validated
 created: 2026-05-31
-updated: 2026-09-30
+updated: 2026-10-10
 ---
 
 ## Relations
@@ -66,7 +66,24 @@ Same bet at -105 vs -110 is **material** over hundreds of bets. Maintain account
 CLV ≈ (your_implied_prob − closing_implied_prob) × stake_equivalent
 ```
 
-[TENTATIVE — multiple CLV calculation conventions exist; standardize in ingest]
+[TENTATIVE — multiple CLV calculation conventions exist; the journal below is the ledger grade]
+
+### CLV journal
+
+The ledger is a CSV you fill by hand. `scripts/clv_journal.py` grades that file. Copy `config/clv_journal.example.csv` to `briefs/clv-journal.csv` for real tickets. `briefs/` stays out of git.
+
+```bash
+python scripts/clv_journal.py --csv config/clv_journal.example.csv
+python scripts/clv_journal.py --csv briefs/clv-journal.csv --out briefs/YYYY-MM-DD_clv-grade.md
+```
+
+For a closed straight ticket the grade is:
+
+`CLV = fair_close_p × decimal(price_taken) − 1`
+
+`fair_close_p` is the multiplicative de-vig of the closing two-way. `close_yes` is the side you bet. `close_no` is the other side. This is the same converter as `@concepts/daily-edge-card.md`. A blank close stays open. One close side is an error.
+
+Keep a boost, an SGP, and a parlay out of this file. The script refuses those rows. Place any bet yourself. The script does not call an odds API. A positive grade means the price taken beat the de-vigged close. The grade is not a win/loss result and it is not a bankroll sample.
 
 ### Steam and RLM
 
