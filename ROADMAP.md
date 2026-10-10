@@ -95,8 +95,9 @@ Steps:
   - **2026-10-06:** W4 Sat lock ingested (`@wiki/sources/nfl-week4-saturday-lock-2026-10-03.md`) — TB/MetLife pass cautions lifted; **Collins cleared from a DraftEdge-only OUT**. Status-source hierarchy rule added to `@wiki/entities/sports/nfl-betting.md`
   - **2026-10-09:** W4 played result `@wiki/sources/nfl-week4-result-postmortem-2026-10-09.md`. FanDuel **−$6.95**. Hard Rock **−$40.09** with Thursday. Week cash **−$47.04**. Four rules: open QB cell, receiving total at 50+ is a bar, one TE+DST pair, no first-TD leg on a "none" game
   - **2026-10-04:** **Gemini removed from the research process.** The weekday prompt cadence is retired; @meta/nfl-gemini-weekday-prompt-addendum.md is history only. Replacement: @meta/research-input-pipeline.md — generated `environment.csv` + status CSV from nflverse / NWS / Odds API, a validator gate, and no LLM in the input path. W4 defect list: `CeminiDFS/briefs/2026-10-04_w04-build-postmortem.md`.
-- [ ] In-season: build the research generators — `ceminidfs research-export {env,status,validate}` (@meta/research-input-pipeline.md)
-- [ ] In-season: K283 coverage report + `--keep-team-dart` + soft fade; K282 `--premium-mode market` on
+- [x] In-season: build the research generators — `ceminidfs research-export {env,status,validate}` (@meta/research-input-pipeline.md). Shipped in CeminiDFS `4652a73`. Validate rejects a missing salary team and a blank wind or precip cell on an exposed roof.
+- [x] In-season: K283 coverage report + `--keep-team-dart` + soft fade. The report is `python -m ceminidfs.pipeline.fade_coverage`. `--keep-team-dart` stays off by default. Weeks 1–3 faded-and-produced counts are 3, 2, and 4.
+- [ ] K282 `--premium-mode market` stays off until a later slate measures the coverage report.
 
 - [ ] CLV journal hook on `@concepts/line-shopping-and-clv.md`
 - [x] **P0 daily edge card** — `scripts/daily_edge_card.py` + `@concepts/daily-edge-card.md` (de-vig reference vs Hard Rock; 2026-08-15). CLV ledger still open.
