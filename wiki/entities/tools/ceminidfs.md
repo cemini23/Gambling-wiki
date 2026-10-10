@@ -23,7 +23,7 @@ related:
   - "@osint-wiki/concepts/active-project-research-routing.md"
 maturity: validated
 created: 2026-06-20
-updated: 2026-10-04
+updated: 2026-10-10
 ---
 
 ## Relations
@@ -56,6 +56,11 @@ Implementation repo for K125 DIY NFL DFS projection pipeline. Phases 0–5 compl
 - Ownership sim + copula rerank for MME pools
 - Late-swap pydfs integration after team lock
 - FanDuel slate GPP strategy (stacking, correlation, leverage)
+
+### Flags that stay off (2026-10-10)
+
+- `--premium-mode` is on `project` and `run` (CeminiDFS `bf30495`). Choices are `off`, `baseline`, and `market`. The default is `off`. `off` returns the same projection rows. `market` stays off until a later slate measures the coverage report.
+- `--keep-team-dart` stays off. The coverage report is `python -m ceminidfs.pipeline.fade_coverage`.
 
 ### Cross-wiki boundary
 

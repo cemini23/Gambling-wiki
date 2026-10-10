@@ -1,5 +1,11 @@
 # Wiki operations log
 
+## [2026-10-10] docs | premium mode stays off
+
+- `@meta/research-input-pipeline.md` no longer tells the operator to pass `--premium-mode market`. The default is `off` (CeminiDFS `bf30495`)
+- `@entities/tools/ceminidfs.md` records the same flag. `--keep-team-dart` stays off
+- CeminiDFS `README.md`, `docs/SUNDAY.md`, and `docs/GPP-WORKFLOW.md` say the same
+
 ## [2026-10-10] tool | K282 premium mode
 
 - CeminiDFS `bf30495` adds `--premium-mode` on `project` and `run`. Choices are `off`, `baseline`, and `market`. The default is `off`. `off` returns the same projection rows

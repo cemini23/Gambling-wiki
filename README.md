@@ -56,7 +56,7 @@ Gambling-wiki/
     sources/
     meta/                   # cadence pages, ingest rubrics
     sweeps/                 # daily research digests
-  scripts/                  # wiki_lint.py, preingest_check.py, digest runners
+  scripts/                  # wiki_lint.py, daily_edge_card.py, clv_journal.py, digest runners
 ```
 
 ## Cemini wiki federation

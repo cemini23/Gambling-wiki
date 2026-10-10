@@ -12,7 +12,7 @@ related:
   - meta/nfl-gemini-weekday-prompt-addendum.md
 maturity: draft
 created: 2026-10-04
-updated: 2026-10-04
+updated: 2026-10-10
 ---
 
 ## Relations
@@ -79,11 +79,11 @@ slate_id, game_id, team, opp, implied_total, spread, roof, weather_exposed, wind
 - Tool order: CeminiDFS first, then CeminiParlays. The CLIs read nothing unless the operator passes the hub, the status CSV, the salary CSV, and the environment CSV.
 - Grade uses the displayed American. A profit-boost percent is a note only.
 - An anytime touchdown needs a cited goal-line rate. A tight-end line that opens in the 40s is a bar.
-- Order the premium band by the market (`--premium-mode market`); the model covers the cheap roles (K282).
+- `--premium-mode` is on `project` and `run` (CeminiDFS `bf30495`). The default is `off`. `off` leaves the projections unchanged. Do not pass `market` until a later slate measures the coverage report.
 
 ### Feedback loop
 
-Run the K283 coverage report after the slate. Turn on `--keep-team-dart` and log how often it fires. A team that is faded and produces in three of four weeks is a research defect, not a bad break.
+Run the K283 coverage report after the slate. `--keep-team-dart` stays off. Pass it only for a measured week, and log how often it fires. A team that is faded and produces in three of four weeks is a research defect, not a bad break.
 
 ## Snippets
 
