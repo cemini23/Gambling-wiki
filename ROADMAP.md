@@ -97,6 +97,7 @@ Steps:
   - **2026-10-04:** **Gemini removed from the research process.** The weekday prompt cadence is retired; @meta/nfl-gemini-weekday-prompt-addendum.md is history only. Replacement: @meta/research-input-pipeline.md — generated `environment.csv` + status CSV from nflverse / NWS / Odds API, a validator gate, and no LLM in the input path. W4 defect list: `CeminiDFS/briefs/2026-10-04_w04-build-postmortem.md`.
 - [x] In-season: build the research generators — `ceminidfs research-export {env,status,validate}` (@meta/research-input-pipeline.md). Shipped in CeminiDFS `4652a73`. Validate rejects a missing salary team and a blank wind or precip cell on an exposed roof.
 - [x] In-season: K283 coverage report + `--keep-team-dart` + soft fade. The report is `python -m ceminidfs.pipeline.fade_coverage`. `--keep-team-dart` stays off by default. Weeks 1–3 faded-and-produced counts are 3, 2, and 4.
+- [x] K282 `--premium-mode` is on CeminiDFS main (`bf30495`). The default is `off`.
 - [ ] K282 `--premium-mode market` stays off until a later slate measures the coverage report.
 
 - [x] CLV journal hook on `@concepts/line-shopping-and-clv.md` — `scripts/clv_journal.py` grades a manual CSV against the de-vigged close (2026-10-10). No live odds. Boosts stay out.

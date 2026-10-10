@@ -1,5 +1,10 @@
 # Wiki operations log
 
+## [2026-10-10] tool | K282 premium mode
+
+- CeminiDFS `bf30495` adds `--premium-mode` on `project` and `run`. Choices are `off`, `baseline`, and `market`. The default is `off`. `off` returns the same projection rows
+- `market` stays off until a later slate measures the coverage report
+
 ## [2026-10-10] tool | CLV journal
 
 - `scripts/clv_journal.py` grades a manual CSV. CLV is the EV of the price taken against the multiplicative de-vig of the close. `close_yes` is the side you bet
