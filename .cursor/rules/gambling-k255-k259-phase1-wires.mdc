@@ -37,7 +37,7 @@ Verdict: **regulatory awareness only. No pm scp. No xsp scp.**
 - **Handcuff value scales with team quality** (RotoBaller) — same role behind a lead back is worth less on a bad offense. Feeds `@wiki/concepts/season-long-fantasy-waiver-wire.md`.
 - **Two ingest defects to watch:**
   1. **Cross-feed story duplicates are invisible to preingest** — it indexes URLs and titles, so a second feed reporting the same event reports NEW. Merge the detail rather than making a second page.
-  2. **Sharp Football RSS stub URLs all 404.** The canonical paths differ from the poller's stored link. Reconstruct the URL from the site before fetching.
+  2. **~~Sharp Football RSS stub URLs all 404.~~ RETRACTED 2026-10-12** — the poller is correct. Stub **filenames** are title slugs, not URLs; read the `url:` field. No change needed.
 - SBC + MLB `wont_wire`. **No pm scp.**
 
 ## K183 — NFL vs prediction markets + operator scrutiny (2026-10-09)

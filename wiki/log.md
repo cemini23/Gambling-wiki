@@ -10,7 +10,7 @@
   - **RotoBaller W6:** Woody Marks RB1 after **Montgomery groin**; Lloyd (2 TD, Brooks on IR); **handcuff value scales with team quality** (Robinson startable when ATL favoured vs Allgeier on a bad ARI team)
   - **MLB AL pennant:** Rays −105→**−180** on a sweep; price tracks October form not season margin
   - **Seminole (merged into K183):** five counts, **no breach-of-compact count**, filed 17th Circuit Broward, Pick6 Jan 2026 / sports tab Jun 2026, compact payments $1.04B FY26
-- **Two process defects recorded:** (1) **cross-feed story duplicates** are invisible to preingest — it indexes URLs and titles, so a second feed on the same event reports NEW; (2) **Sharp Football RSS stub URLs 404** — the canonical paths differ from the poller's stored link
+- **Two process defects recorded:** (1) **cross-feed story duplicates** are invisible to preingest — it indexes URLs and titles, so a second feed on the same event reports NEW; (2) ~~Sharp Football RSS stub URLs 404~~ **RETRACTED 2026-10-12** — the poller is correct; stub filenames are title slugs, not URLs. Read the `url:` field. **No poller change needed**
 - Phase-1: policy_wired sharp / rotoballer; SBC + MLB `wont_wire`
 - Briefs: none new
 

@@ -33,7 +33,7 @@ wire_status: policy_wired
 | **Articles** | 11 — **best bets, injuries and leader-odds free; DFS picks paywalled** |
 | **Canonical URLs** | https://www.sharpfootballanalysis.com/betting/best-bets-picks-nfl-week-5-2026/ · https://www.sharpfootballanalysis.com/betting/nfl-injury-betting-impact/ · https://www.sharpfootballanalysis.com/betting/nfl-rushing-yards-leader-odds/ · https://www.sharpfootballanalysis.com/fantasy/dfs-stacks-week-5-2026/ · https://www.sharpfootballanalysis.com/fantasy/nfl-dfs-picks/ · https://www.sharpfootballanalysis.com/betting/nfl-passing-yards-leader-odds/ · https://www.sharpfootballanalysis.com/betting/nfl-receiving-yards-leader-odds/ · https://www.sharpfootballanalysis.com/betting/nfl-player-props-picks-week-5-2026/ |
 
-**Note — the RSS stubs carried stale slugs.** Every stub URL returned **404**; the real canonical paths differ (e.g. stub `…/week-5-nfl-best-bets-against-the-spread-game-total-picks/` → real `…/best-bets-picks-nfl-week-5-2026/`). The fetched URLs above are the correct ones.
+**Note on stub filenames (corrected 2026-10-12).** An earlier version of this page claimed the stub URLs were stale and 404'd. **That was wrong, and the error was mine, not the poller's.** Each stub carries a correct `url:` field; the stub **filename** is a title-derived slug (`inbox_slug(title)` in `scripts/rss_digest.py`), not a URL. I built URLs from the filenames instead of reading the `url:` line, so the three I tested were invented and 404'd. Re-checked: every Sharp stub URL resolves. No poller change is needed.
 
 **Location** (`cemini-egress-fi:/opt/cemini-bulk/research/gambling/`): the eleven archived `rss-sharp-football-2026-10-{09,10,11}-*.md` files.
 
@@ -82,7 +82,7 @@ The stacks and core/tournament picks are behind the All-Access wall — **only t
 
 ## Dead Ends
 
-- **The RSS stubs' URLs are wrong.** All 404. Use the canonical paths above; do not trust the stub slug for Sharp Football.
+- **Read the stub's `url:` field — do not infer a URL from its filename.** The filename is a title slug. An earlier note here wrongly called the poller's Sharp URLs stale; they are correct.
 - **The DFS picks are paywalled** — the same split as the previous three batches. The free tier here is best bets, injuries, and leader odds.
 - **The rushing-leader page was truncated mid-sentence** in the shortlist section; the top pick and longshot were captured, the tail was not.
 - **Do not auto-enter.**

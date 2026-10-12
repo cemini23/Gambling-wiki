@@ -45,7 +45,7 @@ wire_status: policy_wired
 
 **Handled by merging:** the LSB version added the **five counts**, the **absent breach-of-claim**, the product launch dates, and the compact economics. That detail is now on `@sources/rss-pm-legal-2026-10-07-09.md` rather than in a second page.
 
-**2. Sharp Football's RSS stubs carry URLs that 404.** All eleven stub URLs returned 404; the canonical paths differ in shape (`…/week-5-nfl-best-bets-against-the-spread-game-total-picks/` → `…/best-bets-picks-nfl-week-5-2026/`). Fetching required reconstructing the real URLs.
+**2. ~~Sharp Football's RSS stubs carry URLs that 404.~~ RETRACTED 2026-10-12.** I reported this defect wrongly. Every stub carries a correct `url:` field; the 404s came from URLs I built out of the stub **filenames**, which are title slugs (`inbox_slug(title)`), not links. Re-checked: all Sharp stub URLs resolve. **No poller change needed** — the lesson is procedural: read the `url:` field.
 
 **Consequence:** the poller is storing a URL that cannot be fetched. Worth checking whether `rss_digest.py` normalises the link or takes a canonical hint.
 
