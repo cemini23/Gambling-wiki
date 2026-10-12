@@ -1,5 +1,5 @@
 ---
-description: Gambling wiki Phase-1 — K255–K259 EH PM wave and K175–K183 batches (Sep–Oct 2026)
+description: Gambling wiki Phase-1 — K255–K259 EH PM wave and K175–K184 batches (Sep–Oct 2026)
 alwaysApply: true
 ---
 
@@ -28,6 +28,17 @@ Verdict: **regulatory awareness only. No pm scp. No xsp scp.**
 - Sports **are** the pie at Kalshi ($160B since Apr; record CFB Saturday).
 - DGA private session with Kalshi + AGA (11 Sep).
 - **PM injury props may not void like sportsbook props** — cross-venue hygiene.
+
+## K184 — Stake Brazil + Sharp W5 final + RotoBaller W6 (2026-10-12)
+
+- Inbox 24 → 4 source pages. **1 cross-feed duplicate** (Seminole lawsuit in both LSB and LSR) merged into K183 with the new detail: five counts, **no breach-of-compact count**, Broward 17th Circuit, compact payments $1.04B FY26.
+- **Stake Brazil:** injunction 2026-10-08 (licence preserved to 10-25) **suspended one day later** as unequal treatment. Dark from 10-10. **Fux won't rule before the 10-25 runoff.** Recorded as awareness only — **no operator holds Brazil exposure**.
+- **Sharp Football free tier confirmed again:** best bets, injuries, leader odds free; **DFS picks paywalled**. Keep using the free ones. **Rushing volume rule:** 15 of 15 2025 weekly leaders came from winning teams; through four weeks **no back topped 100 yards on fewer than 17 carries**.
+- **Handcuff value scales with team quality** (RotoBaller) — same role behind a lead back is worth less on a bad offense. Feeds `@wiki/concepts/season-long-fantasy-waiver-wire.md`.
+- **Two ingest defects to watch:**
+  1. **Cross-feed story duplicates are invisible to preingest** — it indexes URLs and titles, so a second feed reporting the same event reports NEW. Merge the detail rather than making a second page.
+  2. **Sharp Football RSS stub URLs all 404.** The canonical paths differ from the poller's stored link. Reconstruct the URL from the site before fetching.
+- SBC + MLB `wont_wire`. **No pm scp.**
 
 ## K183 — NFL vs prediction markets + operator scrutiny (2026-10-09)
 

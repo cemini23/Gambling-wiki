@@ -227,6 +227,7 @@ Steps:
 
 | Date | Item |
 |------|------|
+| 2026-10-12 | K184 — Stake's Brazil injunction reversed in a day; Sharp W5 best bets/injuries; RotoBaller W6 waivers; MLB AL pennant repricing; Seminole five counts merged into K183 |
 | 2026-10-09 | K183 — NFL + 39 states vs Kalshi at SCOTUS; Seminole Tribe sues DraftKings on IGRA; FanDuel VIP video letter; DK AI review in 3 states; state retreats (MI/CT/MO); arXiv risk-averse MFG |
 | 2026-10-07 | K182 — CFTC swap rules to White House, Ohio C&D to 10 operators, arXiv FP trio (slow FP convergence + BluffJAX), LSB cards; **preingest batch-page URL gap fixed** |
 | 2026-10-06 | K181 — W4 Saturday lock, Sharp Football (PROE + free tools), SBC Europe (Czech Kalshi block), W5 waivers; **new tool + concept**; status-source hierarchy rule |

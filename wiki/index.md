@@ -437,6 +437,11 @@ Catalog of all wiki pages. Updated on each ingest.
 | [rss-sbc-nfl-midnite-everton-2026-10-08-09](sources/rss-sbc-nfl-midnite-everton-2026-10-08-09.md) | deep-read | NFL/Midnite UK deal; Everton Sherif fine |
 | [rss-sharp-football-week5-worksheets-2026-10-07](sources/rss-sharp-football-week5-worksheets-2026-10-07.md) | skimmed | SF/SEA, DEN/LAC, DET/ARI — QB sections only |
 | [daily-digest-batch-k183-2026-10-09](sources/daily-digest-batch-k183-2026-10-09.md) | deep-read | K183 batch hub (6 sources) |
+| [rss-sbc-brazil-stake-2026-10-09-12](sources/rss-sbc-brazil-stake-2026-10-09-12.md) | deep-read | Stake Brazil injunction reversed; Betfred/Sky Bet/Flutter |
+| [rss-sharp-football-week5-final-2026-10-09-11](sources/rss-sharp-football-week5-final-2026-10-09-11.md) | skimmed | Best bets, injuries, leader odds free; DFS paywalled |
+| [rss-rotoballer-week5-6-2026-10-11-12](sources/rss-rotoballer-week5-6-2026-10-11-12.md) | deep-read | W6 waiver board; handcuff value vs team quality |
+| [rss-lsb-mlb-al-pennant-2026-10-09](sources/rss-lsb-mlb-al-pennant-2026-10-09.md) | deep-read | AL pennant repricing after the Rays sweep |
+| [daily-digest-batch-k184-2026-10-12](sources/daily-digest-batch-k184-2026-10-12.md) | deep-read | K184 batch hub (4 sources) |
 | [brief-k239-kalshi-sports-mention-2026-08-15](sources/brief-k239-kalshi-sports-mention-2026-08-15.md) | read | K239 sports mention markets gone + WA geofence |
 | [brief-k240-kalshi-nv-geofence-2026-08-17](sources/brief-k240-kalshi-nv-geofence-2026-08-17.md) | read | K240 NV $120k/day + optional-update geofence |
 | [brief-k242-eh-pm-ban-onshore-2026-08-19](sources/brief-k242-eh-pm-ban-onshore-2026-08-19.md) | read | K242 WA geofence day; ban ≠ offshore |

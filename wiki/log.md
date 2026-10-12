@@ -1,5 +1,21 @@
 # Wiki operations log
 
+## [2026-10-12] ingest | K184 Stake Brazil + Sharp W5 final + RotoBaller W6 + MLB pennant
+
+- **Batch K184:** 24 inbox files → 4 source pages; **1 cross-feed duplicate** merged into K183
+  - **Stake Brazil:** injunction granted 2026-10-08 (Judge Santos, 9th Federal Civil Court SP) preserving its licence to 10-25 — **suspended one day later** by Judge di Salvo (Federal Regional Court, 3rd Region) as unequal treatment. Dark again from 10-10. **Fux will not rule before the 10-25 runoff.** Stake paid R$30M (~US$6M) for a licence to 2029
+  - **Betfred FY25/26:** turnover **£995.6M** (52 weeks vs a prior 78-week period — not comparable); online **£451.6M (45%)**; post-tax £39.6M; **132 more shops closing**; duties >£200M
+  - **Sky Bet:** Neil Banbury new MD (ex-Kindred); Flutter share price **−63% YoY**; Dan Taylor became Group CEO 10-01
+  - **Sharp W5 final:** best bets (Steelers −2.5, Jets under 20.5), injuries (Barkley/Bigsby, D.J. Moore, Diggs/McLaurin), rushing leader (**Swift +2000**). **DFS picks paywalled**
+  - **RotoBaller W6:** Woody Marks RB1 after **Montgomery groin**; Lloyd (2 TD, Brooks on IR); **handcuff value scales with team quality** (Robinson startable when ATL favoured vs Allgeier on a bad ARI team)
+  - **MLB AL pennant:** Rays −105→**−180** on a sweep; price tracks October form not season margin
+  - **Seminole (merged into K183):** five counts, **no breach-of-compact count**, filed 17th Circuit Broward, Pick6 Jan 2026 / sports tab Jun 2026, compact payments $1.04B FY26
+- **Two process defects recorded:** (1) **cross-feed story duplicates** are invisible to preingest — it indexes URLs and titles, so a second feed on the same event reports NEW; (2) **Sharp Football RSS stub URLs 404** — the canonical paths differ from the poller's stored link
+- Phase-1: policy_wired sharp / rotoballer; SBC + MLB `wont_wire`
+- Briefs: none new
+
+## [2026-10-10] docs | premium mode stays off
+
 ## [2026-10-10] docs | premium mode stays off
 
 - `@meta/research-input-pipeline.md` no longer tells the operator to pass `--premium-mode market`. The default is `off` (CeminiDFS `bf30495`)
