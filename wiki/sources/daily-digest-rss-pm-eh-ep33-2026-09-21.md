@@ -21,7 +21,7 @@ wire_status: policy_wired
 
 - @entities/platforms/kalshi.md — retail PM product context
 - @concepts/prediction-markets-crossover.md — cross-venue hygiene
-- @osint-wiki/sources/substack-rss-event-horizon-2026-09-21-episode-33.md — full EH prose (private)
+- @osint-wiki/sources/substack-rss-event-horizon-2026-09-21-ep33-prediction-markets-2026-09-21.md — full EH prose (private)
 
 ## Raw Concept
 
